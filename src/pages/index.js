@@ -36,14 +36,14 @@ class Home extends React.Component {
                       <p>
                         I am <strong>Jonas Oppenlaender</strong>,
                         an Early-Stage Researcher
-                        at the Human-Centered Computing group at FU Berlin
+                        at the <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/">Human-Centered Computing</a> group at FU Berlin
                         working towards a PhD in Business Informatics (Information Science).
                       </p>
 
                       <p>
                         I studied Industrial Engineering in Germany and Sweden
                         and hold a MSc degree in Computer Science
-                        from the University of Southampton, UK.
+                        from the <a href="https://www.southampton.ac.uk/">University of Southampton</a>, UK.
                         <br />
                         Presently, I am in the process of identifying topics and finding a supervisor for my PhD thesis.
                         Two possible topics that particularly interest me are the application of crowdsourcing in order to solve problems in the context of the semantic web
@@ -53,8 +53,10 @@ class Home extends React.Component {
                       <Header size="tiny" style={{...styles.nobottommargin, ...styles.notopmargin}}>Address</Header>
 
                       <p>
-                          Human-Centered Computing Group, Institute of Computer Science<br />
-                          Department of Mathematics and Computer Science, Freie Universit&auml;t Berlin<br />
+                          Human-Centered Computing Group<br />
+                          Institute of Computer Science<br />
+                          {/*Department of Mathematics and Computer Science,<br />*/}
+                          Freie Universit&auml;t Berlin<br />
                           K&ouml;nigin-Luise-Str. 24-26, 14195 Berlin, Germany<br />
                           Room 115<br />
                           E-Mail: {'{'}firstname.lastname{'}'}@fu-berlin.de<br />
