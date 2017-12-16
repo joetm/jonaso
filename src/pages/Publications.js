@@ -7,8 +7,6 @@ import { Item } from 'semantic-ui-react'
 import { List } from 'semantic-ui-react'
 import { Header } from 'semantic-ui-react'
 
-import Nav from "./Nav.js"
-
 const styles = {
   spacer: {
     height: '5em',
@@ -23,10 +21,6 @@ class Publications extends React.Component {
     render() {
         return (
             <div>
-
-              <Nav />
-
-
               <Container>
 
 

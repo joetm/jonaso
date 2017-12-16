@@ -11,8 +11,8 @@ import { Icon } from 'semantic-ui-react'
 import { Button } from 'semantic-ui-react'
 import { Label } from 'semantic-ui-react'
 
-import Nav from "./Nav.js"
 
+const _PORTFOLIO_URL = 'http://www.jonaso.de/portfolio/'
 
 const styles = {
   datum: {
@@ -28,12 +28,12 @@ const styles = {
 }
 
 class CV extends React.Component {
+    redirectToPortfolio = () => {
+      window.location = _PORTFOLIO_URL
+    }
     render() {
         return (
             <div>
-
-              <Nav />
-
               <Container>
 
                 <Header id="education" size="large">Education</Header>
@@ -443,7 +443,7 @@ class CV extends React.Component {
 
                 <Header id="technical-skills" size="large">Technical Skills</Header>
 
-                  <Button primary>&rarr; &nbsp; Visit my Web Development Portfolio</Button>
+                  <Button onClick={this.redirectToPortfolio} primary>&rarr; &nbsp; Visit my Web Development Portfolio</Button>
 
 
                 <Header id="certificates" size="large">Certificates</Header>

@@ -3,10 +3,6 @@ import 'semantic-ui-css/semantic.min.css'
 import Link from "gatsby-link"
 import { Label, Header, Grid, Divider, Image, Container, Icon } from 'semantic-ui-react'
 
-import Nav from "./Nav.js"
-import EmbeddedImage from "../EmbeddedImage.js"
-
-
 const styles = {
     nobottommargin: {
         marginBottom: 0,
@@ -31,9 +27,6 @@ class Home extends React.Component {
     render() {
         return (
             <div>
-
-              <Nav />
-
               <Container>
 
                 <Grid>
@@ -86,7 +79,8 @@ class Home extends React.Component {
                 </Grid.Column>
                 <Grid.Column  width={6}>
 
-                  <EmbeddedImage />
+                  <Image src='static/img/opp_mini.jpg' size='medium' rounded />
+
 
                   <Header size="tiny" style={{...styles.nobold, ...styles.nobottommargin}}>My <strong>primary research interests</strong> are:</Header>
                   <p>
