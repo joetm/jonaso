@@ -11,7 +11,7 @@ const styles = {
 
 export default class Nav extends Component {
   state = {
-    activeItem: 'home'
+    activeItem: window.location.pathname.replace(/\//g, '') || 'home'
   }
   handleItemClick = (e, { name }) => {
     this.setState({activeItem: name})
