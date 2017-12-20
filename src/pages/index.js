@@ -1,5 +1,4 @@
 import React from "react"
-import 'semantic-ui-css/semantic.min.css'
 import Link from "gatsby-link"
 import { Label, Header, Grid, Divider, Image, Container, Icon } from 'semantic-ui-react'
 
@@ -65,7 +64,7 @@ class Home extends React.Component {
                       </p>
 
                       <p>
-                          <strong>Consultation hour</strong>: <i>on demand</i> - just send me an email and we arrange a meeting
+                          <strong>Consultation hour</strong>: <i>on demand</i> - just send me an email and we&apos;ll arrange a meeting
                       </p>
 
                       <p>
