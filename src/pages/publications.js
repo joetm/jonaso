@@ -33,6 +33,11 @@ class Publications extends React.Component {
                       <Item>
                         <Item.Content>
                           <Item.Header>Oppenlaender, J., Benjamin, J.J., M&uuml;ller-Birn, C. (forthcoming): Towards Sociotechnical Management of Intra-Organisational Knowledge Transfer. Multikonferenz Wirtschaftsinformatik (MKWI), Lüneburg, Germany, March 2018</Item.Header>
+                          <Item.Extra>
+                            <List>
+                              <List.Item><a href="https://www.researchgate.net/publication/321418554_Towards_Sociotechnical_Management_of_Intra-Organisational_Knowledge_Transfer"><Icon title="pdf" name='file pdf outline' /></a></List.Item>
+                            </List>
+                          </Item.Extra>
                         </Item.Content>
                       </Item>
                       </Grid.Column>
@@ -67,7 +72,12 @@ class Publications extends React.Component {
                       <Grid.Column width={14}>
                       <Item>
                         <Item.Content>
-                          <Item.Header>Oppenl&auml;nder, J., Gl&ouml;ckler, F., Hoffmann, J., M&uuml;ller-Birn, C. (2017): Bewertung von Reifegradmodellen f&uuml;r ein integriertes Forschungsdatenmanagement für multidisziplin&auml;re Forschungsorganisationen. E-Science-Tage 2017, Heidelberg, Germany</Item.Header>
+                          <Item.Header>Oppenl&auml;nder, J., Gl&ouml;ckler, F., Hoffmann, J., M&uuml;ller-Birn, C. (2017): Bewertung von Reifegradmodellen f&uuml;r ein integriertes Forschungsdatenmanagement für multidisziplin&auml;re Forschungsorganisationen. In: Kratzke, J. und Heuveline, V. (Hrsg.): E-Science-Tage 2017: Forschungsdaten managen, Heidelberg: heiBOOKS, <a href="http://dx.doi.org/10.11588/heibooks.285.377">10.11588/heibooks.285.377</a></Item.Header>
+                          <Item.Extra>
+                            <List>
+                              <List.Item><a href="http://books.ub.uni-heidelberg.de/heibooks/reader/download/285/285-4-79963-1-10-20171219.pdf"><Icon title="pdf" name='file pdf outline' /></a></List.Item>
+                            </List>
+                          </Item.Extra>
                         </Item.Content>
                       </Item>
                       </Grid.Column>

@@ -15,6 +15,7 @@ const styles = {
   },
   nonbold: {
     fontWeight: 'normal',
+    fontSize: '1em',
   },
 }
 
@@ -234,7 +235,7 @@ class CV extends React.Component {
                         <Item.Header><a href="http://radovis.gov.mk/">Radoviš Municipality</a></Item.Header>
                         <Item.Meta>Radoviš, Macedonia</Item.Meta>
                         <Item.Description>
-                          Volunteer in Local Economic Development Department
+                          Volunteer at Local Economic Development Department
                         </Item.Description>
                       </Item.Content>
                     </Item>
@@ -432,6 +433,36 @@ class CV extends React.Component {
 
                   </Item.Group>
 
+                <Header id="languages" size="large">Languages</Header>
+
+                  <Item.Group>
+
+                    <Item>
+                      <div style={styles.datum}>German</div>
+                      <Item.Content>
+                        <Item.Header style={styles.nonbold}>mother tongue</Item.Header>
+                      </Item.Content>
+                    </Item>
+                    <Item>
+                      <div style={styles.datum}>English</div>
+                      <Item.Content>
+                        <Item.Header style={styles.nonbold}>business fluent</Item.Header>
+                      </Item.Content>
+                    </Item>
+                    <Item>
+                      <div style={styles.datum}>French</div>
+                      <Item.Content>
+                        <Item.Header style={styles.nonbold}>basic knowledge</Item.Header>
+                      </Item.Content>
+                    </Item>
+                    <Item>
+                      <div style={styles.datum}>Spanish</div>
+                      <Item.Content>
+                        <Item.Header style={styles.nonbold}>basic knowledge</Item.Header>
+                      </Item.Content>
+                    </Item>
+
+                  </Item.Group>
 
                 <Header id="technical-skills" size="large">Technical Skills</Header>
 
