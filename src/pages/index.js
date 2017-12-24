@@ -143,11 +143,9 @@ class Home extends React.Component {
                     <Icon title="GitHub" link={true} color="grey" size="big" name='github square' />
                 </a>
 
-                {/*
                 <a href="https://twitter.com/Duesynapse" target="_blank">
                     <Icon title="Twitter" link={true} color="grey" size="big" name='twitter square' />
                 </a>
-                */}
 
                 <a href="https://scholar.google.com/citations?hl=de&user=ucO_QYQAAAAJ" target="_blank">
                     <i style={styles.academicon} title="Google Scholar" className="ai ai-google-scholar-square ai-2x"></i>
