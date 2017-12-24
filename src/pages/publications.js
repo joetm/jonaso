@@ -14,11 +14,10 @@ const styles = {
 
 
 class Publications extends React.Component {
-    render() {
-        return (
+  render() {
+    return (
             <div>
               <Container>
-
 
                   <Grid>
 
@@ -169,8 +168,8 @@ class Publications extends React.Component {
 
               </Container>
             </div>
-        )
-    }
+    )
+  }
 }
 
 export default Publications

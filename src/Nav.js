@@ -11,7 +11,7 @@ const styles = {
 
 export default class Nav extends Component {
   state = {
-    activeItem: window.location.pathname.replace(/\//g, '') || 'home'
+    activeItem: 'home'
   }
   handleItemClick = (e, { name }) => {
     this.setState({activeItem: name})
@@ -20,6 +20,9 @@ export default class Nav extends Component {
     } else {
       navigateTo(`/${name}`)
     }
+  }
+  componentDidMount() {
+    this.setState({activeItem: window.location.pathname.replace(/\//g, '') || 'home'})
   }
   render() {
     const { activeItem } = this.state

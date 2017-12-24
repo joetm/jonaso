@@ -2,6 +2,11 @@ import React from "react"
 import Link from "gatsby-link"
 import { Label, Header, Grid, Divider, Image, Container, Icon } from 'semantic-ui-react'
 
+import "../../libs/academicons/css/academicons.min.css"
+
+import img from "../img/opp.jpg"
+
+
 const styles = {
     nobottommargin: {
         marginBottom: 0,
@@ -18,7 +23,26 @@ const styles = {
     },
     nobold: {
         fontWeight: 'normal',
-    }
+    },
+    academicon: {
+        lineHeight: 1,
+        verticalAlign: 'middle',
+        fontSize: '2em',
+        cursor: 'pointer',
+        opacity: .8,
+        transition: 'opacity .1s ease',
+        display: 'inline-block',
+        margin: '0 .25rem 0 0',
+        width: '1.18em',
+        height: '1em',
+        fontStyle: 'normal',
+        fontWeight: 400,
+        textDecoration: 'inherit',
+        textAlign: 'center',
+        speak: 'none',
+        backfaceVisibility: 'hidden',
+        color: '#767676',
+    },
 }
 
 
@@ -26,7 +50,7 @@ class Home extends React.Component {
     render() {
         return (
             <div>
-              <Container>
+              <Container style={{marginBottom: '14px'}}>
 
                 <Grid>
                   <Grid.Row columns={2}>
@@ -80,7 +104,7 @@ class Home extends React.Component {
                 </Grid.Column>
                 <Grid.Column  width={6}>
 
-                  <Image src='static/img/opp_mini.jpg' size='medium' rounded />
+                  <Image src={img} size='medium' rounded />
 
 
                   <Header size="tiny" style={{...styles.nobold, ...styles.nobottommargin}}>My <strong>primary research interests</strong> are:</Header>
@@ -119,12 +143,18 @@ class Home extends React.Component {
                     <Icon title="GitHub" link={true} color="grey" size="big" name='github square' />
                 </a>
 
+                {/*
                 <a href="https://twitter.com/Duesynapse" target="_blank">
                     <Icon title="Twitter" link={true} color="grey" size="big" name='twitter square' />
                 </a>
+                */}
+
+                <a href="https://scholar.google.com/citations?hl=de&user=ucO_QYQAAAAJ" target="_blank">
+                    <i style={styles.academicon} title="Google Scholar" className="ai ai-google-scholar-square ai-2x"></i>
+                </a>
 
                 <a href="https://www.researchgate.net/profile/Jonas_Oppenlaender" target="_blank">
-                    <Icon title="Researchgate" link={true} color="grey" size="big" name='external' />
+                    <i style={styles.academicon} title="Researchgate" className="ai ai-researchgate-square ai-2x"></i>
                 </a>
 
               </p>

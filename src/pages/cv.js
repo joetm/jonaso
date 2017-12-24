@@ -18,6 +18,7 @@ const styles = {
   },
 }
 
+
 class CV extends React.Component {
     redirectToPortfolio = () => {
       window.location = _PORTFOLIO_URL
@@ -37,7 +38,7 @@ class CV extends React.Component {
                         <Item.Header><a href="https://soton.ac.uk/">University of Southampton</a></Item.Header>
                         <Item.Meta>
                           <List>
-                            <List.Item><a href="http://www.wais.ecs.soton.ac.uk/">Web and Internet Science Research Group</a> (WAIS) {/*, Electronics and Computer Science (ECS)*/}</List.Item>
+                            <List.Item><a href="http://www.wais.ecs.soton.ac.uk/">Web and Internet Science (WAIS)</a> Research Group</List.Item>
                           </List>
                         </Item.Meta>
                         <Item.Description>
@@ -113,9 +114,9 @@ class CV extends React.Component {
                           <List>
                             <List.Item>Research Associate</List.Item>
                             <List.Item id="idlab">Project: <i><a href="https://www.interdisciplinary-laboratory.hu-berlin.de/en/content/idlab/">ID+Lab</a></i>, Cluster of Excellence &quot;Image Knowledge Gestaltung&quot;, Humboldt University, Berlin:</List.Item>
-                            <List.Item>Design of a Linked Data-backed publication platform of interdisciplinary research projects</List.Item>
+                            <List.Item>Linked Data-backed enhanced publication platform for interdisciplinary research projects</List.Item>
                             <List.Item id="ikon">Project: <i><a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/projects/ikon/index.html">IKON</a></i>, Natural History Museum, Berlin:</List.Item>
-                            <List.Item>Design and implementation of a Linked Open Data research project information system and visualization</List.Item>
+                            <List.Item>Ontology engineering, data integration and implementation of a Linked Open Data platform for research project information</List.Item>
                           </List>
                         </Item.Description>
                         {/*<Item.Extra>Additional Details</Item.Extra>*/}
@@ -136,8 +137,8 @@ class CV extends React.Component {
                           <List>
                             <List.Item>Data Scientist and Web Developer</List.Item>
                             <List.Item>Project: <i><a href="http://www.skillsplanner.net/">SkillsPlanner</a></i></List.Item>
-                            <List.Item>SkillsPlanner is an ambitious Linked Data research project, funded with &pound;1.3 mio. by InnovateUK and partners, involving heterogeneous data contributed by partners in London&apos;s construction industry</List.Item>
-                            <List.Item>Project: <i><a href="https://github.com/seme4/sameAs-Lite">SameAs-Lite</a></i></List.Item>
+                            <List.Item>SkillsPlanner is an ambitious Linked Data research project, funded with &pound;1.3 mio. by InnovateUK, involving heterogeneous data contributed by partners in London&apos;s construction industry</List.Item>
+                            <List.Item>Project: <i><a href="https://github.com/seme4/sameAs-Lite">SameAs-Lite</a></i> (web service system for co-reference resolution and management)</List.Item>
                             <List.Item>Project: <i>MakeRDF</i> (conversion of tabular data into RDF/XML)</List.Item>
                             <List.Item>Project: <i>Data Cube</i> pivot table and visualisation components</List.Item>
                           </List>
