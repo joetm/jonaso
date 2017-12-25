@@ -6,12 +6,13 @@
     "dev": "yarn pubjson && yarn develop",
     "develop": "gatsby develop",
     "build": "yarn pubjson && gatsby build",
-    "pubjson": "./src/bibliography/createbib.sh",
+    "pubjson": "./createbib.sh",
     "serve": "gatsby serve"
   },
   "dependencies": {
     "gatsby": "^1.9.135",
     "gatsby-link": "^1.6.32",
+    "isomorphic-fetch": "^2.2.1",
     "semantic-ui-css": "^2.2.12",
     "semantic-ui-react": "^0.77.1"
   }
