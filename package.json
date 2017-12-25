@@ -3,9 +3,10 @@
   "description": "Gatsby hello world starter",
   "license": "MIT",
   "scripts": {
-    "dev": "yarn develop",
+    "dev": "yarn pubjson && yarn develop",
     "develop": "gatsby develop",
-    "build": "gatsby build",
+    "build": "yarn pubjson && gatsby build",
+    "pubjson": "./src/bibliography/createbib.sh",
     "serve": "gatsby serve"
   },
   "dependencies": {
