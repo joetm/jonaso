@@ -2,6 +2,8 @@ import React from "react"
 import Link from "gatsby-link"
 import { Header, List, Item, Icon, Grid, Container } from 'semantic-ui-react'
 
+import "isomorphic-fetch"
+
 
 const styles = {
   spacer: {
@@ -44,7 +46,7 @@ class Publications extends React.Component {
     references: {},
   }
   componentWillMount = () => {
-    fetch('/static/references.json')
+    fetch('http://jonaso.de/static/references.json')
     .then(response => response.json())
     .then(refs => {
       const categorizedRefs = categorizeList(refs)
