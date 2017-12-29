@@ -178,6 +178,10 @@ class CV extends React.Component {
                           <List>
                             <List.Item>Full-Stack Web Developer</List.Item>
                             <List.Item>Agile development of web-based Open Data and e-Government solutions</List.Item>
+                            <List.Item>Project: <i>Pilot Open Data Platform Public Transport Switzerland</i>, <a href="https://www.sbb.ch/" target="_blank">Swiss Federal Railways (SBB)</a></List.Item>
+                            <List.Item>Role: CKAN Developer (Python)</List.Item>
+                            <List.Item>Project: <i>Eurapco Trend Monitoring Platform</i>, <a href="https://www.mobiliar.ch/" target="_blank">Swiss Mobiliar</a></List.Item>
+                            <List.Item>Role: Full-Stack Web Developer (Python/Django, JavaScript)</List.Item>
                           </List>
                         </Item.Description>
                         {/*<Item.Extra>Additional Details</Item.Extra>*/}
