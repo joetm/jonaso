@@ -74,6 +74,7 @@ class Home extends React.Component {
                       </p>
 
                       <Header size="tiny" style={{...styles.nobottommargin, ...styles.notopmargin}}>Office Address:</Header>
+                      <p>
                           Human-Centered Computing Group<br />
                           Room 115<br />
                           Institute of Computer Science, Freie Universit&auml;t Berlin<br />
@@ -81,6 +82,7 @@ class Home extends React.Component {
                           E-Mail: {'{'}firstname.lastname{'}'}@fu-berlin.de<br />
                           Telephone: +49 30 838-61565<br />
                           Fax: +49 30 838-475233<br />
+                      </p>
 
                       <p>
                           <strong>Consultation hour</strong>: <i>on demand</i> - just send me an email and we&apos;ll arrange a meeting
@@ -94,10 +96,13 @@ class Home extends React.Component {
                       <strong>Upcoming Travel:</strong>
                       <List>
                         <List.Item>
-                            <List.Icon name='checkmark' title="confirmed" /> MKWI&apos;18 (confirmed)
+                            <List.Icon name='calendar' title="planned" /> HCOMP&apos;18, 5.7.-8.7.2018, Z&uuml;rich
                         </List.Item>
                         <List.Item>
-                            <List.Icon name='calendar' title="planned" /> HCOMP&apos;18 (planned)
+                            <List.Icon name='checkmark' title="confirmed" /> MKWI&apos;18, 6.3.-9.3.2018, L&uuml;neburg
+                        </List.Item>
+                        <List.Item>
+                            <List.Icon name='checkmark' title="confirmed" /> GI-Symposium, 29.1.2018, Berlin
                         </List.Item>
                       </List>
 
