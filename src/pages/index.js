@@ -1,6 +1,6 @@
 import React from "react"
 import Link from "gatsby-link"
-import { Label, Header, Grid, Divider, Image, Container, Icon } from 'semantic-ui-react'
+import { Label, Header, List, Grid, Divider, Image, Container, Icon } from 'semantic-ui-react'
 
 import "../../libs/academicons/css/academicons.min.css"
 
@@ -73,19 +73,14 @@ class Home extends React.Component {
                         and tackling the broader problem of providing better working conditions and fair compensation to crowdworkers.
                       </p>
 
-                      <Header size="tiny" style={{...styles.nobottommargin, ...styles.notopmargin}}>Address</Header>
-
-                      <p>
+                      <Header size="tiny" style={{...styles.nobottommargin, ...styles.notopmargin}}>Office Address:</Header>
                           Human-Centered Computing Group<br />
-                          Institute of Computer Science<br />
-                          {/*Department of Mathematics and Computer Science,<br />*/}
-                          Freie Universit&auml;t Berlin<br />
-                          K&ouml;nigin-Luise-Str. 24-26, 14195 Berlin, Germany<br />
                           Room 115<br />
+                          Institute of Computer Science, Freie Universit&auml;t Berlin<br />
+                          K&ouml;nigin-Luise-Str. 24-26, 14195 Berlin, Germany<br />
                           E-Mail: {'{'}firstname.lastname{'}'}@fu-berlin.de<br />
                           Telephone: +49 30 838-61565<br />
                           Fax: +49 30 838-475233<br />
-                      </p>
 
                       <p>
                           <strong>Consultation hour</strong>: <i>on demand</i> - just send me an email and we&apos;ll arrange a meeting
@@ -96,36 +91,36 @@ class Home extends React.Component {
                           <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/theses/open/index.html">Open BSc and MSc theses</a>
                       </p>
 
-                      <p>
-                          <Icon as="i" link={true} color="grey" size="large" name='hand outline right' />
-                          Meet me @ <Link to="CV#conferences">MKWI&apos;18</Link> and (possibly) @ <Link to="CV#conferences">HCOMP&apos;18</Link>
-                      </p>
+                      <strong>Upcoming Travel:</strong>
+                      <List>
+                        <List.Item>
+                            <List.Icon name='checkmark' title="confirmed" /> MKWI&apos;18 (confirmed)
+                        </List.Item>
+                        <List.Item>
+                            <List.Icon name='calendar' title="planned" /> HCOMP&apos;18 (planned)
+                        </List.Item>
+                      </List>
 
                 </Grid.Column>
                 <Grid.Column  width={6}>
 
                   <Image src={img} size='medium' rounded />
 
-
                   <Header size="tiny" style={{...styles.nobold, ...styles.nobottommargin}}>My <strong>primary research interests</strong> are:</Header>
-                  <p>
                     collaborative ontology engineering,
                     semantic web,
                     linked data,
                     crowdsourcing,
                     human computation,
                     collective intelligence
-                  </p>
 
                   <Header size="tiny" style={{...styles.nobold, ...styles.nobottommargin}}><strong>Further research interests</strong> include:</Header>
-                  <p>
                     social machines,
                     knowledge transfer,
                     computer supported collaborative work,
                     e-science,
                     hypertext and hypermedia,
                     online communities
-                  </p>
 
                 </Grid.Column>
               </Grid.Row>
@@ -133,29 +128,25 @@ class Home extends React.Component {
 
               <Divider />
 
-              <p>
+              <a href="https://www.linkedin.com/in/jonasopp/" target="_blank">
+                  <Icon title="LinkedIn" link={true} color="grey" size="big" name='linkedin square' />
+              </a>
 
-                <a href="https://www.linkedin.com/in/jonasopp/" target="_blank">
-                    <Icon title="LinkedIn" link={true} color="grey" size="big" name='linkedin square' />
-                </a>
+              <a href="https://github.com/joetm" target="_blank">
+                  <Icon title="GitHub" link={true} color="grey" size="big" name='github square' />
+              </a>
 
-                <a href="https://github.com/joetm" target="_blank">
-                    <Icon title="GitHub" link={true} color="grey" size="big" name='github square' />
-                </a>
+              <a href="https://twitter.com/Duesynapse" target="_blank">
+                  <Icon title="Twitter" link={true} color="grey" size="big" name='twitter square' />
+              </a>
 
-                <a href="https://twitter.com/Duesynapse" target="_blank">
-                    <Icon title="Twitter" link={true} color="grey" size="big" name='twitter square' />
-                </a>
+              <a href="https://scholar.google.com/citations?hl=de&user=ucO_QYQAAAAJ" target="_blank">
+                  <i style={styles.academicon} title="Google Scholar" className="ai ai-google-scholar-square ai-2x"></i>
+              </a>
 
-                <a href="https://scholar.google.com/citations?hl=de&user=ucO_QYQAAAAJ" target="_blank">
-                    <i style={styles.academicon} title="Google Scholar" className="ai ai-google-scholar-square ai-2x"></i>
-                </a>
-
-                <a href="https://www.researchgate.net/profile/Jonas_Oppenlaender" target="_blank">
-                    <i style={styles.academicon} title="Researchgate" className="ai ai-researchgate-square ai-2x"></i>
-                </a>
-
-              </p>
+              <a href="https://www.researchgate.net/profile/Jonas_Oppenlaender" target="_blank">
+                  <i style={styles.academicon} title="Researchgate" className="ai ai-researchgate-square ai-2x"></i>
+              </a>
 
               </Container>
             </div>

@@ -1,6 +1,6 @@
 import React from "react"
 import Link from "gatsby-link"
-import { Header, List, Item, Icon, Grid, Container } from 'semantic-ui-react'
+import { Responsive, Header, List, Item, Icon, Grid, Container } from 'semantic-ui-react'
 
 import "isomorphic-fetch"
 
@@ -68,27 +68,41 @@ class Publications extends React.Component {
                           <Header size="large">{year}</Header>
                         </Grid.Row>
                         {
-                          references[year].map((item, index) => (
-                            <Grid.Row key={index}>
-                              <Grid.Column width={2}>
-                                  <Icon color="grey" size="huge" name='file text outline' />
-                              </Grid.Column>
-                              <Grid.Column width={14}>
-                              <Item>
-                                <Item.Content>
-                                  <Item.Header dangerouslySetInnerHTML={item}></Item.Header>
-                                  {/*
-                                  <Item.Extra>
-                                    <List>
-                                      <List.Item><a href="https://www.researchgate.net/publication/321418554_Towards_Sociotechnical_Management_of_Intra-Organisational_Knowledge_Transfer"><Icon title="pdf" name='file pdf outline' /></a></List.Item>
-                                    </List>
-                                  </Item.Extra>
-                                  */}
-                                </Item.Content>
-                              </Item>
-                              </Grid.Column>
-                            </Grid.Row>
-                          ))
+                          references[year].map((item, index) => {
+                            let icostr = 'file text outline'
+                            if (item.__html.indexOf('.pdf') === -1) {
+                              icostr = 'file outline'
+                            }
+                            return (
+                              <Grid.Row key={index}>
+                                <Grid.Column width={2}>
+                                  <Responsive maxWidth={768}>
+                                    <Icon color="grey" size="large" name={icostr} />
+                                  </Responsive>
+                                  <Responsive minWidth={769} maxWidth={990}>
+                                    <Icon color="grey" size="huge" name={icostr} />
+                                  </Responsive>
+                                  <Responsive minWidth={992}>
+                                    <Icon color="grey" size="big" name={icostr} />
+                                  </Responsive>
+                                </Grid.Column>
+                                <Grid.Column width={14}>
+                                <Item>
+                                  <Item.Content>
+                                    <Item.Header dangerouslySetInnerHTML={item}></Item.Header>
+                                    {/*
+                                    <Item.Extra>
+                                      <List>
+                                        <List.Item><a href="https://www.researchgate.net/publication/321418554_Towards_Sociotechnical_Management_of_Intra-Organisational_Knowledge_Transfer"><Icon title="pdf" name='file pdf outline' /></a></List.Item>
+                                      </List>
+                                    </Item.Extra>
+                                    */}
+                                  </Item.Content>
+                                </Item>
+                                </Grid.Column>
+                              </Grid.Row>
+                            )
+                          })
                         }
                     </Grid>
                   )
