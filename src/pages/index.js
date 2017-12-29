@@ -1,6 +1,6 @@
 import React from "react"
 import Link from "gatsby-link"
-import { Label, Header, List, Grid, Divider, Image, Container, Icon } from 'semantic-ui-react'
+import { Responsive, Label, Header, List, Grid, Divider, Image, Container, Icon } from 'semantic-ui-react'
 
 import "../../libs/academicons/css/academicons.min.css"
 
@@ -53,8 +53,9 @@ class Home extends React.Component {
               <Container style={{marginBottom: '14px'}}>
 
                 <Grid>
-                  <Grid.Row columns={2}>
-                    <Grid.Column>
+                  <Grid.Row>
+
+                    <Grid.Column mobile={8} tablet={8} computer={8} widescreen={8} largeScreen={8}>
 
                       <p>
                         I am <strong>Jonas Oppenlaender</strong>,
@@ -107,9 +108,16 @@ class Home extends React.Component {
                       </List>
 
                 </Grid.Column>
-                <Grid.Column  width={6}>
 
-                  <Image src={img} size='medium' rounded />
+                <Grid.Column mobile={8} tablet={8} computer={6}>
+
+                  <Responsive minWidth={768}>
+                    <Image src={img} size='medium' rounded />
+                  </Responsive>
+
+                  <Responsive maxWidth={769}>
+                    <Image src={img} rounded fluid />
+                  </Responsive>
 
                   <Header size="tiny" style={{...styles.nobold, ...styles.nobottommargin}}>My <strong>primary research interests</strong> are:</Header>
                     collaborative ontology engineering,
