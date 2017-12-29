@@ -354,20 +354,6 @@ class CV extends React.Component {
                     <Item>
                       <div style={styles.datum}>2018</div>
                       <Item.Content>
-                        <Item.Header><a href="https://www.humancomputation.com/2018/">6<sup>th</sup> AAAI Conf. on Human Computation and Crowdsourcing (HCOMP)</a></Item.Header>
-                        <Item.Meta>
-                          <List>
-                            <List.Item><Label><Icon name='calendar' /> planned</Label></List.Item>
-                            <List.Item>Z&uuml;rich, Switzerland</List.Item>
-                            <List.Item>July 5-8, 2018</List.Item>
-                          </List>
-                        </Item.Meta>
-                      </Item.Content>
-                    </Item>
-
-                    <Item>
-                      <div style={styles.datum}></div>
-                      <Item.Content>
                         <Item.Header><a href="http://mkwi2018.leuphana.de/">Multikonferenz Wirtschaftsinformatik (MKWI)</a></Item.Header>
                         <Item.Meta>
                           <List>

@@ -2,6 +2,7 @@
 <IfModule mod_headers.c>
     Header set Access-Control-Allow-Origin http://www.jonaso.de
     Header set Access-Control-Allow-Origin http://jonaso.de
+    Header set Access-Control-Allow-Origin http://localhost:8000
 </IfModule>
 
 # ------------------------------------------------------------------------------
