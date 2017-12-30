@@ -3,8 +3,19 @@ import Link from "gatsby-link"
 import { Responsive, Label, Header, List, Grid, Divider, Image, Container, Icon } from 'semantic-ui-react'
 
 import "../../libs/academicons/css/academicons.min.css"
-
 import img from "../img/opp.jpg"
+
+
+const travel = {
+  upcoming: [
+    { event: "HCOMP'18, 5.7.-8.7.2018, Zürich", status: "planned" },
+    { event: "MKWI'18, 6.3.-9.3.2018, Lüneburg", status: "confirmed" },
+    { event: "GI-Symposium, 29.1.2018, Berlin", status: "confirmed" },
+  ],
+  past: [
+    { event: "HCOMP'17, 24.10.-26.10.2017, Quebec", status: "confirmed" },
+  ],
+}
 
 
 const styles = {
@@ -61,7 +72,7 @@ class Home extends React.Component {
                         I am <strong>Jonas Oppenlaender</strong>,
                         an Early-Stage Researcher
                         at the <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/">Human-Centered Computing</a> group at FU Berlin
-                        working towards a PhD in Business Informatics (Information Science).
+                        working towards a PhD in Computer Science or Business Informatics (Information Science).
                       </p>
 
                       <p>
@@ -96,15 +107,17 @@ class Home extends React.Component {
 
                       <strong>Upcoming Travel:</strong>
                       <List>
-                        <List.Item>
-                            <List.Icon name='calendar' title="planned" /> HCOMP&apos;18, 5.7.-8.7.2018, Z&uuml;rich
-                        </List.Item>
-                        <List.Item>
-                            <List.Icon name='checkmark' title="confirmed" /> MKWI&apos;18, 6.3.-9.3.2018, L&uuml;neburg
-                        </List.Item>
-                        <List.Item>
-                            <List.Icon name='checkmark' title="confirmed" /> GI-Symposium, 29.1.2018, Berlin
-                        </List.Item>
+                        {
+                          travel.upcoming.map(item => (
+                            <List.Item>
+                                {item.status === 'confirmed' ?
+                                  <List.Icon name='checkmark' title="confirmed" /> :
+                                  <List.Icon name='calendar' title="planned" />
+                                }
+                                {item.event}
+                            </List.Item>
+                          ))
+                        }
                       </List>
 
                 </Grid.Column>
