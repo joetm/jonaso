@@ -1,6 +1,7 @@
 ENV
 venv
 dist/*.tar.gz
+*.pyc
 
 # Logs
 logs
