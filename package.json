@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "yarn pubjson && yarn develop",
-    "develop": "gatsby develop",
+    "develop": "gatsby develop --open",
     "build": "yarn pubjson && gatsby build",
     "pubjson": "./createbib.sh",
     "serve": "gatsby serve",
