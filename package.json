@@ -6,7 +6,7 @@
     "dev": "yarn pubjson && yarn develop",
     "develop": "gatsby develop --open",
     "build": "yarn pubjson && gatsby build",
-    "pubjson": "./createbib.sh",
+    "pubjson": "make refs",
     "serve": "gatsby serve",
     "bundle-map": "bundle-buddy public/*.map"
   },
