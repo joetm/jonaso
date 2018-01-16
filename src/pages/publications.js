@@ -1,18 +1,12 @@
 import React from "react"
 import Link from "gatsby-link"
 import { Responsive, Header, List, Item, Icon, Grid, Container } from 'semantic-ui-react'
-
 import "isomorphic-fetch"
 
+import { spacer } from "../common"
 
-const styles = {
-  spacer: {
-    height: '5em',
-  },
-  nonbold: {
-    fontWeight: 'normal',
-  },
-}
+
+const _REFERENCES = "http://jonaso.de/static/references.json"
 
 
 /**
@@ -46,7 +40,7 @@ class Publications extends React.Component {
     references: {},
   }
   componentWillMount = () => {
-    fetch('http://jonaso.de/static/references.json')
+    fetch(_REFERENCES)
     .then(response => response.json())
     .then(refs => {
       const categorizedRefs = categorizeList(refs)
@@ -110,7 +104,7 @@ class Publications extends React.Component {
               }
 
 
-            <div style={styles.spacer}></div>
+            <div style={spacer}></div>
 
         </Container>
       </div>

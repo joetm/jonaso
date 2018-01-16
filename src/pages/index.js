@@ -4,12 +4,16 @@ import { Responsive, Label, Header, List, Grid, Divider, Image, Container, Icon 
 
 import "../../libs/academicons/css/academicons.min.css"
 import img from "../img/opp.jpg"
+import { nobottommargin, notopmargin, nobold } from "../common"
 
 
 const travel = {
   upcoming: [
-    { event: "HCOMP'18, 5.-8. July 2018, Zürich", status: "planned" },
+    // { event: "HCOMP'18, 5.-8. July 2018, Zürich", status: "planned" },
+    { event: "HILDA'18 Workshop, 10. June 2018, Houston, TX", status: "planned" },
     { event: "Future of Work and Innovation Symposium, 15. May 2018, Berlin", status: "planned" },
+    { event: "WWW'18, 23.-27. April 2018, Lyon", status: "planned" },
+    // ---
     { event: "MKWI'18, 6.-9. March 2018, Lüneburg", status: "confirmed" },
     { event: "GI-Symposium, 29. January 2018, Berlin", status: "confirmed" },
   ],
@@ -38,21 +42,10 @@ const keywords = {
 }
 
 const styles = {
-    nobottommargin: {
-        marginBottom: 0,
-        paddingBottom: 0,
-    },
-    notopmargin: {
-        marginTop: 0,
-        paddingTop: 0,
-    },
     tag: {
         marginTop: '0.2em',
         marginBottom: '0.2em',
         cursor: 'default',
-    },
-    nobold: {
-        fontWeight: 'normal',
     },
     academicon: {
         lineHeight: 1,
@@ -91,7 +84,7 @@ class Home extends React.Component {
                   I am <strong>Jonas Oppenlaender</strong>,
                   an Early-Stage Researcher
                   at the <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/">Human-Centered Computing</a> group at FU Berlin
-                  working towards a PhD in Computer Science.
+                  working towards a PhD in Applied Computer Science.
                 </p>
 
                 <p>
@@ -107,7 +100,7 @@ class Home extends React.Component {
                   <br />
                   This exploratory, open-ended approach to research is conducted in the context of
                   Business Informatics (BI), a research discipline that originated in Germany.
-                  Unlike Information Science, BI tends towards constructing and evaluating prototypical artifacts (Design Science Research).
+                  Unlike Information Science, BI tends towards constructing and evaluating prototypical artefacts (Design Science Research).
                 </p>
 
                 <p>
@@ -116,14 +109,14 @@ class Home extends React.Component {
                   and tackling the broader problem of providing better working conditions and fair compensation to crowdworkers.
                 </p>
 
-                <Header size="tiny" style={{...styles.nobold, ...styles.notopmargin, ...styles.nobottommargin}}>My <strong>primary research interests</strong> are:</Header>
+                <Header size="tiny" style={{...nobold, ...notopmargin, ...nobottommargin}}>My <strong>primary research interests</strong> are:</Header>
                   { keywords.primary.join(", ") }
 
-                <Header size="tiny" style={{...styles.nobold, ...styles.notopmargin, ...styles.nobottommargin}}><strong>Further research interests</strong> include:</Header>
+                <Header size="tiny" style={{...nobold, ...notopmargin, ...nobottommargin}}><strong>Further research interests</strong> include:</Header>
                   { keywords.secondary.join(", ") }
 
 
-                <Header size="tiny" style={styles.nobottommargin}>Upcoming Travel</Header>
+                <Header size="tiny" style={nobottommargin}>Upcoming Travel</Header>
                 <List>
                   {
                     travel.upcoming.map(item => (
@@ -151,7 +144,7 @@ class Home extends React.Component {
                 </Responsive>
 
 
-                <Header size="tiny" style={styles.nobottommargin}>Office Address:</Header>
+                <Header size="tiny" style={nobottommargin}>Office Address:</Header>
                 <p>
                     Human-Centered Computing Group<br />
                     Room 115<br />
@@ -195,6 +188,10 @@ class Home extends React.Component {
 
           <a href="https://www.researchgate.net/profile/Jonas_Oppenlaender" target="_blank">
               <i style={styles.academicon} title="Researchgate" className="ai ai-researchgate-square ai-2x"></i>
+          </a>
+
+          <a href="https://orcid.org/0000-0002-2342-1540">
+              <i style={styles.academicon} title="ORCID" className="ai ai-orcid-square ai-2x"></i>
           </a>
 
         </Container>
