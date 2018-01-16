@@ -2,6 +2,8 @@ import React from "react"
 import Link from "gatsby-link"
 import { Label, Button, Icon, Header, Divider, List, Item, Image, Container } from 'semantic-ui-react'
 
+import { spacer } from "../common"
+
 
 const _PORTFOLIO_URL = 'http://www.jonaso.de/portfolio/'
 
@@ -9,9 +11,6 @@ const styles = {
   datum: {
     paddingRight: '2em',
     minWidth: '120px',
-  },
-  spacer: {
-    height: '5em',
   },
   nonbold: {
     fontWeight: 'normal',
@@ -108,7 +107,7 @@ class CV extends React.Component {
                         <Item.Meta>
                           <List>
                             <List.Item><a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/">Human-Centered Computing Group</a>, Institute of Computer Science</List.Item>
-                            <List.Item>Group Lead: <a href="https://www.clmb.de/" target="_blank">Junior-Prof. Dr. Claudia Müller-Birn</a></List.Item>
+                            <List.Item>Group Lead: <a href="https://www.clmb.de/" target="_blank">Assistant Prof. Dr. Claudia M&uuml;ller-Birn</a></List.Item>
                           </List>
                         </Item.Meta>
                         <Item.Description>
@@ -529,7 +528,21 @@ class CV extends React.Component {
                   </Item.Group>
 
 
-                  <div style={styles.spacer}></div>
+                <Header id="associations" size="large">Membership in Scientific Associations</Header>
+
+                  <Item.Group>
+
+                    <Item>
+                      <div style={styles.datum}></div>
+                      <Item.Content>
+                        <Item.Header style={styles.nonbold}>Association for Computing Machinery (ACM)</Item.Header>
+                      </Item.Content>
+                    </Item>
+
+                  </Item.Group>
+
+
+                  <div style={spacer}></div>
 
               </Container>
             </div>
