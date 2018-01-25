@@ -1,9 +1,8 @@
 import React from "react"
 import Link from "gatsby-link"
-import { Label, Button, Icon, Header, Divider, List, Item, Image, Container } from 'semantic-ui-react'
+import { Icon, Label, Button, Header, Divider, List, Item, Image, Container } from 'semantic-ui-react'
 
 import { spacer } from "../common"
-
 
 const _PORTFOLIO_URL = 'http://www.jonaso.de/portfolio/'
 
@@ -20,12 +19,13 @@ const styles = {
 
 
 class CV extends React.Component {
-    redirectToPortfolio = () => {
-      window.location = _PORTFOLIO_URL
-    }
-    render() {
+  redirectToPortfolio = () => {
+    window.location = _PORTFOLIO_URL
+  }
+  render() {
         return (
             <div>
+
               <Container>
 
                 <Header id="education" size="large">Education</Header>
@@ -50,7 +50,6 @@ class CV extends React.Component {
                             <List.Item>Distinction (84)</List.Item>
                           </List>
                         </Item.Description>
-                        {/*<Item.Extra>Additional Details</Item.Extra>*/}
                       </Item.Content>
                     </Item>
 
@@ -119,7 +118,6 @@ class CV extends React.Component {
                             <List.Item>Ontology engineering, data integration and implementation of a Linked Open Data platform for research project information</List.Item>
                           </List>
                         </Item.Description>
-                        {/*<Item.Extra>Additional Details</Item.Extra>*/}
                       </Item.Content>
                     </Item>
 
@@ -143,7 +141,6 @@ class CV extends React.Component {
                             <List.Item>Project: <i>Data Cube</i> pivot table and visualisation components</List.Item>
                           </List>
                         </Item.Description>
-                        {/*<Item.Extra>Additional Details</Item.Extra>*/}
                       </Item.Content>
                     </Item>
 
@@ -183,7 +180,6 @@ class CV extends React.Component {
                             <List.Item>Role: Full-Stack Web Developer (Python/Django, JavaScript)</List.Item>
                           </List>
                         </Item.Description>
-                        {/*<Item.Extra>Additional Details</Item.Extra>*/}
                       </Item.Content>
                     </Item>
 
@@ -198,7 +194,6 @@ class CV extends React.Component {
                             <List.Item>IT process and service design; IT service catalogue management; Beta testing of IT service website</List.Item>
                           </List>
                         </Item.Description>
-                        {/*<Item.Extra>Additional Details</Item.Extra>*/}
                       </Item.Content>
                     </Item>
 
@@ -213,7 +208,6 @@ class CV extends React.Component {
                             <List.Item>Improvement of the idea management system; Migration of the Power Business division intranet to SharePoint; Support of the strategic planning</List.Item>
                           </List>
                         </Item.Description>
-                        {/*<Item.Extra>Additional Details</Item.Extra>*/}
                       </Item.Content>
                     </Item>
 
@@ -228,7 +222,6 @@ class CV extends React.Component {
                             <List.Item>Online Community Administration</List.Item>
                           </List>
                         </Item.Description>
-                        {/*<Item.Extra>Additional Details</Item.Extra>*/}
                       </Item.Content>
                     </Item>
 
@@ -267,12 +260,6 @@ class CV extends React.Component {
                       <Item.Content>
                         <Item.Header>Distinction (84)</Item.Header>
                         <Item.Meta>MSc Computer Science, University of Southampton</Item.Meta>
-                        {/*
-                        <Item.Description>
-                          xxx
-                        </Item.Description>
-                        */}
-                        {/*<Item.Extra>Additional Details</Item.Extra>*/}
                       </Item.Content>
                     </Item>
 
@@ -547,7 +534,7 @@ class CV extends React.Component {
               </Container>
             </div>
         )
-    }
+  }
 }
 
 export default CV
