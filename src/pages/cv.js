@@ -106,7 +106,7 @@ class CV extends React.Component {
                         <Item.Meta>
                           <List>
                             <List.Item><a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/">Human-Centered Computing Group</a>, Institute of Computer Science</List.Item>
-                            <List.Item>Group Lead: <a href="https://www.clmb.de/" target="_blank">Assistant Prof. Dr. Claudia M&uuml;ller-Birn</a></List.Item>
+                            <List.Item>Group Lead: <a href="https://www.clmb.de/" target="_blank">Junior-Prof. Dr. Claudia M&uuml;ller-Birn</a></List.Item>
                           </List>
                         </Item.Meta>
                         <Item.Description>
@@ -320,8 +320,7 @@ class CV extends React.Component {
                         <Item.Meta>German Federal Ministry of Education and Research</Item.Meta>
                         <Item.Description>
                            &quot;int.FDM - An integrated maturity model for research data management&quot;<br />
-                           together with
-                           <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/members/professor/mueller-birn.html" target="_blank">Junior-Prof. Dr. Claudia M&uuml;ller Birn</a> and <a href="https://www.naturkundemuseum.berlin/einblicke/mitarbeiter/jana.hoffmann">Dr. Jana Hofmann</a>, <a href="https://www.naturkundemuseum.berlin/de/einblicke/mitarbeiter/falko.gloeckler">Falko Gl&ouml;ckler</a> (Natural History Museum, Berlin) and <a href="http://www.aip.de/mitglieder/henke">Dr. Harry Enke</a> (Supercomputing and E-Science, Leibniz Institute for Astrophysics Potsdam)
+                           in collaboration with <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/members/professor/mueller-birn.html" target="_blank">Junior-Prof. Dr. Claudia M&uuml;ller Birn</a> and <a href="https://www.naturkundemuseum.berlin/einblicke/mitarbeiter/jana.hoffmann">Dr. Jana Hofmann</a>, <a href="https://www.naturkundemuseum.berlin/de/einblicke/mitarbeiter/falko.gloeckler">Falko Gl&ouml;ckler</a> (Natural History Museum, Berlin) and <a href="http://www.aip.de/mitglieder/henke">Dr. Harry Enke</a> (Supercomputing and E-Science, Leibniz Institute for Astrophysics Potsdam)
                         </Item.Description>
                       </Item.Content>
                     </Item>
@@ -344,13 +343,19 @@ class CV extends React.Component {
                     <Item>
                       <div style={styles.datum}>2018</div>
                       <Item.Content>
-                        <Item.Header><a href="http://mkwi2018.leuphana.de/">Multikonferenz Wirtschaftsinformatik (MKWI)</a></Item.Header>
+                        <Item.Header><a href="http://mkwi2018.leuphana.de/">Multikonferenz Wirtschaftsinformatik (MKWI)</a> <Label><Icon name='checkmark' /> confirmed</Label></Item.Header>
                         <Item.Meta>
-                          <List>
-                            <List.Item><Label><Icon name='checkmark' /> confirmed</Label></List.Item>
-                            <List.Item>L&uuml;neburg, Germany</List.Item>
-                            <List.Item>March 6-9, 2018</List.Item>
-                          </List>
+                            March 6-9, 2018 &ndash; L&uuml;neburg, Germany
+                        </Item.Meta>
+                      </Item.Content>
+                    </Item>
+
+                    <Item>
+                      <div style={styles.datum}></div>
+                      <Item.Content>
+                        <Item.Header><a href="https://gi.de/veranstaltung/mensch-computer-interaktion-die-arbeitswelten-der-zukunft-gestalten/">GI Symposium</a> <span style={styles.nonbold}>&ndash; Mensch-Computer Interaktion: Die Arbeitswelten der Zukunft gestalten!</span></Item.Header>
+                        <Item.Meta>
+                            January 29, 2018 &ndash; Berlin, Germany
                         </Item.Meta>
                       </Item.Content>
                     </Item>
@@ -360,10 +365,7 @@ class CV extends React.Component {
                       <Item.Content>
                         <Item.Header><a href="https://www.humancomputation.com/2017/">5<sup>th</sup> AAAI Conf. on Human Computation and Crowdsourcing (HCOMP)</a></Item.Header>
                         <Item.Meta>
-                          <List>
-                            <List.Item>Quebec City, Quebec, Canada</List.Item>
-                            <List.Item>Oct 24-26, 2017</List.Item>
-                          </List>
+                            Oct 25-26, 2017 &ndash; Quebec City, Quebec, Canada
                         </Item.Meta>
                       </Item.Content>
                     </Item>
@@ -373,10 +375,7 @@ class CV extends React.Component {
                       <Item.Content>
                         <Item.Header><a href="https://www.humancomputation.com/2017/crowdcamp.html">CrowdCamp Workshop</a></Item.Header>
                         <Item.Meta>
-                          <List>
-                            <List.Item>Quebec City, Quebec, Canada</List.Item>
-                            <List.Item>Oct 24, 2017</List.Item>
-                          </List>
+                            Oct 24, 2017 &ndash; Quebec City, Quebec, Canada
                         </Item.Meta>
                       </Item.Content>
                     </Item>
@@ -386,10 +385,7 @@ class CV extends React.Component {
                       <Item.Content>
                         <Item.Header>Wikidata Workshop</Item.Header>
                         <Item.Meta>
-                          <List>
-                            <List.Item>DIGIS, Zuse Institute, Berlin, Germany</List.Item>
-                            <List.Item>June 9, 2017</List.Item>
-                          </List>
+                            June 9, 2017 &ndash; DIGIS, Zuse Institute, Berlin, Germany
                         </Item.Meta>
                       </Item.Content>
                     </Item>
@@ -397,12 +393,19 @@ class CV extends React.Component {
                     <Item>
                       <div style={styles.datum}>2016</div>
                       <Item.Content>
-                        <Item.Header>#DKT16 - Smart Technologies for Knowledge Workers</Item.Header>
+                        <Item.Header>#DKT16 <span style={styles.nonbold}> &ndash; Smart Technologies for Knowledge Workers</span></Item.Header>
                         <Item.Meta>
-                          <List>
-                            <List.Item>Berlin, Germany</List.Item>
-                            <List.Item>Oct 11, 2016</List.Item>
-                          </List>
+                            Oct 11, 2016 &ndash; Berlin, Germany
+                        </Item.Meta>
+                      </Item.Content>
+                    </Item>
+
+                    <Item>
+                      <div style={styles.datum}>2015</div>
+                      <Item.Content>
+                        <Item.Header>1<sup>st</sup> Open Data Camp</Item.Header>
+                        <Item.Meta>
+                            Feb 2015 &ndash; Winchester, Hampshire, UK
                         </Item.Meta>
                       </Item.Content>
                     </Item>

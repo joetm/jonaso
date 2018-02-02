@@ -9,13 +9,13 @@ import { nobottommargin, notopmargin, nobold } from "../common"
 
 const travel = {
   upcoming: [
-    // { event: "HCOMP'18, 5.-8. July 2018, Zürich", status: "planned" },
-    { event: "HILDA'18 Workshop, 10. June 2018, Houston, TX", status: "planned" },
+    { event: "CI/HCOMP'18, 5.-8. July 2018, Zürich", status: "planned" },
+    // { event: "HILDA'18 Workshop, 10. June 2018, Houston, TX", status: "planned" },
     { event: "Future of Work and Innovation Symposium, 15. May 2018, Berlin", status: "planned" },
-    { event: "WWW'18, 23.-27. April 2018, Lyon", status: "planned" },
+    // { event: "WWW'18, 23.-27. April 2018, Lyon", status: "planned" },
     // ---
     { event: "MKWI'18, 6.-9. March 2018, Lüneburg", status: "confirmed" },
-    { event: "GI-Symposium, 29. January 2018, Berlin", status: "confirmed" },
+    { event: "GI-Symposium: Arbeitswelten der Zukunft, 29. January 2018, Berlin", status: "confirmed" },
   ],
   past: [
     { event: "HCOMP'17, 24.10.-26.10.2017, Quebec", status: "confirmed" },
@@ -83,7 +83,7 @@ class Home extends React.Component {
                 <p>
                   I am <strong>Jonas Oppenlaender</strong>,
                   an Early-Stage Researcher
-                  at the <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/">Human-Centered Computing</a> group at FU Berlin
+                  at the <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/">Human-Centered Computing</a> group at Freie Universit&auml;t Berlin
                   working towards a PhD in Applied Computer Science.
                 </p>
 

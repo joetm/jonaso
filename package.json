@@ -8,6 +8,7 @@
     "build": "yarn pubjson && gatsby build",
     "pubjson": "make refs",
     "serve": "gatsby serve",
+    "prod": "yarn build && yarn serve",
     "bundle-map": "bundle-buddy public/*.map"
   },
   "dependencies": {
