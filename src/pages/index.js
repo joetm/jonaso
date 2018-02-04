@@ -66,6 +66,9 @@ const styles = {
         backfaceVisibility: 'hidden',
         color: '#767676',
     },
+    defaultcursor: {
+    	cursor: 'default',
+    },
 }
 
 
@@ -97,16 +100,20 @@ class Home extends React.Component {
                   I am interested in building web-based socio-technical systems
                   in which the human and technological elements play the role of participant machinery
                   in order to perform complex tasks better than either human or machine could independently.
-                  <br />
-                  This exploratory, open-ended approach to research is conducted in the context of
-                  Business Informatics (BI), a research discipline that originated in Germany.
-                  Unlike Information Science, BI tends towards constructing and evaluating prototypical artefacts (Design Science Research).
+				  {/*
+                    <br />
+                    This exploratory, open-ended approach to research is conducted in the context of
+                    Business Informatics (BI), a research discipline that originated in Germany.
+                    Unlike Information Science, BI tends towards constructing and evaluating prototypical artefacts (Design Science Research).
+				  */}
                 </p>
 
                 <p>
                   Presently, I am in the process of identifying topics and finding a supervisor for my PhD thesis.
+                  {/*
                   Two possible topics that particularly interest me are the application of crowdsourcing in order to solve problems in the context of the semantic web
                   and tackling the broader problem of providing better working conditions and fair compensation to crowdworkers.
+				  */}
                 </p>
 
                 <Header size="tiny" style={{...nobold, ...notopmargin, ...nobottommargin}}>My <strong>primary research interests</strong> are:</Header>
@@ -120,11 +127,8 @@ class Home extends React.Component {
                 <List>
                   {
                     travel.upcoming.map(item => (
-                      <List.Item>
-                          {item.status === 'confirmed' ?
-                            <List.Icon name='checkmark' title="confirmed" /> :
-                            <List.Icon name='calendar' title="planned" />
-                          }
+                      <List.Item title={item.status} style={styles.defaultcursor}>
+                          <List.Icon name={item.status === 'confirmed' ? 'checkmark' : 'calendar'} />
                           {item.event}
                       </List.Item>
                     ))
