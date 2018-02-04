@@ -9,16 +9,17 @@ import { nobottommargin, notopmargin, nobold } from "../common"
 
 const travel = {
   upcoming: [
-    { event: "CI/HCOMP'18, 5.-8. July 2018, Zürich", status: "planned" },
-    // { event: "HILDA'18 Workshop, 10. June 2018, Houston, TX", status: "planned" },
-    { event: "Future of Work and Innovation Symposium, 15. May 2018, Berlin", status: "planned" },
-    // { event: "WWW'18, 23.-27. April 2018, Lyon", status: "planned" },
+    { event: "CI/HCOMP'18", date: "5.-8. July 2018", location: "Zürich", status: "planned" },
+    // { event: "HILDA'18 Workshop", date: "10. June 2018", location: "Houston, TX", status: "planned" },
+    { event: "WebSci'18", date: "28.-29. May 2018", location: "Amsterdam", status: "planned" },
+    { event: "Future of Work and Innovation Symposium", date: "15. May 2018", location: "Berlin", status: "planned" },
+    // { event: "WWW'18", date: "23.-27. April 2018", location: "Lyon", status: "planned" },
     // ---
-    { event: "MKWI'18, 6.-9. March 2018, Lüneburg", status: "confirmed" },
-    { event: "GI-Symposium: Arbeitswelten der Zukunft, 29. January 2018, Berlin", status: "confirmed" },
+    { event: "MKWI'18", date: "6.-9. March 2018", location: "Lüneburg", status: "confirmed" },
   ],
   past: [
-    { event: "HCOMP'17, 24.10.-26.10.2017, Quebec", status: "confirmed" },
+    { event: "GI-Symposium: Arbeitswelten der Zukunft", date: "29. January 2018", location: "Berlin", status: "confirmed" },
+    { event: "HCOMP'17", date: "24.10.-26.10.2017", location: "Quebec, QC", status: "confirmed" },
   ],
 }
 
@@ -129,7 +130,7 @@ class Home extends React.Component {
                     travel.upcoming.map(item => (
                       <List.Item title={item.status} style={styles.defaultcursor}>
                           <List.Icon name={item.status === 'confirmed' ? 'checkmark' : 'calendar'} />
-                          {item.event}
+                          {[item.event,item.date,item.location].join(", ")}
                       </List.Item>
                     ))
                   }
