@@ -31,6 +31,7 @@ const keywords = {
     "crowdsourcing",
     "human computation",
     "collective intelligence",
+    "web science",
   ],
   secondary: [
     "social machines",
