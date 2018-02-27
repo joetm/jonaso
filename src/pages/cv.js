@@ -515,6 +515,13 @@ class CV extends React.Component {
                       </Item.Content>
                     </Item>
 
+                    <Item>
+                      <div style={styles.datum}>2009</div>
+                      <Item.Content>
+                        <Item.Header style={styles.nonbold}>Business English Certificate Higher</Item.Header>
+                      </Item.Content>
+                    </Item>
+
                   </Item.Group>
 
 
