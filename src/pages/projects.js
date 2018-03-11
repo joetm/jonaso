@@ -10,6 +10,7 @@ import img_ikon  from "../img/ikon.png"
 import crowdui   from "../img/crowdui-vision.jpg"
 import prodxml   from "../img/prodxml.jpg"
 import kano      from "../img/kano-variation.jpg"
+import sns       from "../img/sns-analysis.png"
 
 
 const CustomImage = ({image}) => {
@@ -189,6 +190,32 @@ const projects = [
       alt: "",
       title: "",
     },
+  },
+  {
+    title: "Business Concept for a Social Network based on Peer-to-Peer Technology",
+    type: "studienarbeit",
+    lang: "de",
+    description: {__html: "<p>Amidst the raging battle of the big social networks at the time (MySpace and Facebook), the KOM Multimedia Lab commissioned a student research project to investigate the possibilities for launching a new type of social network based on peer-to-peer technology. The seminal paper was sponsored by the Dr.-Otto-Röhm endowed chair for Entrepreneurship (Prof. Dr. Geschka).</p><p>The project empirically investigated a number of important entrepreneurial decisions: <i>How to make money as a social network startup company? What are the competitors’ strategies? What should be offered to the users? How to reach the critical mass of users?</i> The study was conducted in the form of an empirical survey (n=247), including an analysis of product features with a Conjoint Analysis. While we know today who won the race for the dominance of social networks (the winner takes all), this final presentation contains some important and interesting contemporary quotes and graphs from this exciting time of early social networks.</p>"},
+    date: "2009",
+    organisation: "KOM - Multimedia Communications Lab, Technische Universität Darmstadt",
+    organisation_href: "https://www.kom.tu-darmstadt.de/kom-multimedia-communications-lab/",
+    url: null,
+    img: {
+      src: sns,
+      alt: "",
+      title: "",
+    },
+    presentations: [
+      {
+        title: "Final Presentation",
+        year: 2009,
+        month: "January",
+        day: 29,
+        conference: "Technische Universität Darmstadt",
+        location: "Darmstadt, Germany",
+        url: "http://www.jonaso.de/docs/SNS_2009-01-29_opp.pdf",
+      },
+    ]
   },
 ]
 
