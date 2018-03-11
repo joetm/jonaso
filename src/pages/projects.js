@@ -177,25 +177,10 @@ const projects = [
     ],
   },
   {
-  	title: "Entwicklung einer XML-basierten Beschreibungssprache für Produktentwicklungsinhalte",
-  	type: "studienarbeit",
-  	lang: "de",
-  	description: {__html: "<p>Zu den Grundaufgaben von Universitäten gehört die Lehre, und damit auch die Erstellung von Lernmaterialien und Vermittlung von Wissen. Im Zuge der sich verstärkenden Vernetzung und der mit dem Internet verbundenen Möglichkeiten wird der Einsatz digitaler Lehr- und Lernmaterialien an Bedeutung zunehmen. Um Inhalte digital verfügbar zu machen, bedarf es einer Interpretation der Lehrmaterialien. Erst durch die Beschreibung der Struktur und Bedeutung der Daten kann eine Weiterverarbeitung vorgenommen werden.</p><p>Ziel dieser Arbeit war die Entwicklung einer Beschreibungssprache für Wissen aus dem Bereich der Produktentwicklung (PE). Als Ausgangsbasis diente eine intensive Analyse der Inhaltsarten der Produktentwicklung. Die Inhalte der PE wurden klassifiziert und in ein allgemeingültiges Schema übersetzt. Die zu entwickelnde Beschreibungssprache sollte vor allem im Bereich der universitären Lehre zur Anwendung kommen. Jedoch sind auch andere Benutzergruppen denkbar, wie beispielsweise Produktentwickler in Unternehmen. Die Anforderungen, die sich aus dieser Zielsetzung ergeben, machen deutlich, dass ein modularer Aufbau der Inhaltseinheiten die bestmöglichen Resultate zeigt. Verteilt gespeicherte Einheiten erlauben nicht nur die einfache Aktualisierung von Inhalten, sondern auch die situationsbedingte Präsentation der Inhalte beim Benutzer in verschiedenen Formaten."},
-  	date: "2008",
-  	organisation: "Technische Universität Darmstadt",
-  	organisation_href: "https://www.tu-darmstadt.de/",
-  	url: null,
-    img: {
-      src: prodxml,
-      alt: "",
-      title: "",
-    },
-  },
-  {
     title: "Business Concept for a Social Network based on Peer-to-Peer Technology",
     type: "studienarbeit",
     lang: "de",
-    description: {__html: "<p>Amidst the raging battle of the big social networks at the time (MySpace and Facebook), the KOM Multimedia Lab commissioned a student research project to investigate the possibilities for launching a new type of social network based on peer-to-peer technology. The seminal paper was sponsored by the Dr.-Otto-Röhm endowed chair for Entrepreneurship (Prof. Dr. Geschka).</p><p>The project empirically investigated a number of important entrepreneurial decisions: <i>How to make money as a social network startup company? What are the competitors’ strategies? What should be offered to the users? How to reach the critical mass of users?</i> The study was conducted in the form of an empirical survey (n=247), including an analysis of product features with a Conjoint Analysis. While we know today who won the race for the dominance of social networks (the winner takes all), this final presentation contains some important and interesting contemporary quotes and graphs from this exciting time of early social networks.</p>"},
+    description: {__html: "<p>Amidst the raging battle of the big social networks at the time (MySpace and Facebook), the KOM Multimedia Lab commissioned a student research project to investigate the possibilities for launching a new type of social network based on peer-to-peer technology. The seminal paper was sponsored by the Dr.-Otto-Röhm endowed chair for Entrepreneurship (Prof. Dr. Geschka).</p><p>The project empirically investigated a number of important entrepreneurial decisions: <i>How to make money as a social network startup company? What are the competitors’ strategies? What should be offered to the users? How to reach the critical mass of users?</i> The study was conducted in the form of an empirical survey (n=247), including an analysis of product features with a Conjoint Analysis. While we know today who won the race for the dominance of social networks (the winner takes all), the project's final presentation contains some important and interesting contemporary quotes and graphs from this exciting time of early social networks.</p>"},
     date: "2009",
     organisation: "KOM - Multimedia Communications Lab, Technische Universität Darmstadt",
     organisation_href: "https://www.kom.tu-darmstadt.de/kom-multimedia-communications-lab/",
@@ -216,6 +201,21 @@ const projects = [
         url: "http://www.jonaso.de/docs/SNS_2009-01-29_opp.pdf",
       },
     ]
+  },
+  {
+  	title: "Entwicklung einer XML-basierten Beschreibungssprache für Produktentwicklungsinhalte",
+  	type: "studienarbeit",
+  	lang: "de",
+  	description: {__html: "<p>Zu den Grundaufgaben von Universitäten gehört die Lehre, und damit auch die Erstellung von Lernmaterialien und Vermittlung von Wissen. Im Zuge der sich verstärkenden Vernetzung und der mit dem Internet verbundenen Möglichkeiten wird der Einsatz digitaler Lehr- und Lernmaterialien an Bedeutung zunehmen. Um Inhalte digital verfügbar zu machen, bedarf es einer Interpretation der Lehrmaterialien. Erst durch die Beschreibung der Struktur und Bedeutung der Daten kann eine Weiterverarbeitung vorgenommen werden.</p><p>Ziel dieser Arbeit war die Entwicklung einer Beschreibungssprache für Wissen aus dem Bereich der Produktentwicklung (PE). Als Ausgangsbasis diente eine intensive Analyse der Inhaltsarten der Produktentwicklung. Die Inhalte der PE wurden klassifiziert und in ein allgemeingültiges Schema übersetzt. Die zu entwickelnde Beschreibungssprache sollte vor allem im Bereich der universitären Lehre zur Anwendung kommen. Jedoch sind auch andere Benutzergruppen denkbar, wie beispielsweise Produktentwickler in Unternehmen. Die Anforderungen, die sich aus dieser Zielsetzung ergeben, machen deutlich, dass ein modularer Aufbau der Inhaltseinheiten die bestmöglichen Resultate zeigt. Verteilt gespeicherte Einheiten erlauben nicht nur die einfache Aktualisierung von Inhalten, sondern auch die situationsbedingte Präsentation der Inhalte beim Benutzer in verschiedenen Formaten."},
+  	date: "2008",
+  	organisation: "Technische Universität Darmstadt",
+  	organisation_href: "https://www.tu-darmstadt.de/",
+  	url: null,
+    img: {
+      src: prodxml,
+      alt: "",
+      title: "",
+    },
   },
 ]
 
