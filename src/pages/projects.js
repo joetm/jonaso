@@ -51,8 +51,17 @@ const projects = [
         conference: "Multikonferenz Wirtschaftsinformatik (MKWI)",
         location: "Lüneburg, Germany",
         doi: "10.6084/m9.figshare.5951932",
+      },
+      {
+        title: "Towards Sociotechnical Management of Intra-Organisational Knowledge Transfer",
+        year: 2018,
+        month: "March",
+        day: 7,
+        conference: "Multikonferenz Wirtschaftsinformatik (MKWI)",
+        location: "Lüneburg, Germany",
+        doi: "10.6084/m9.figshare.5918698",
         url: "http://www.jonaso.de/docs/mkwi2018-poster-final.pdf",
-        note: "Poster, Multikonferenz Wirtschaftsinformatik (MKWI)",
+        note: "Poster",
       },
       {
         title: "Socio-technical Revelation of Knowledge Transfer Potentials",
@@ -63,7 +72,34 @@ const projects = [
         location: "Quebec City, Quebec, Canada",
         doi: "10.6084/m9.figshare.5844921",
         url: "http://www.jonaso.de/docs/hcomp-poster-final.pdf",
-        note: "Poster, 5th AAAI Conference on Human Computation and Crowdsourcing (HCOMP)",
+        note: "Poster",
+      },
+      {
+        title: "Research Seminar Presentation",
+        year: 2017,
+        month: "December",
+        day: 14,
+        conference: "Freie Universität Berlin",
+        location: "Berlin, Germany",
+        url: "http://www.jonaso.de/docs/ikon-research-seminar-14.12.2017.pdf",
+      },
+      {
+        title: "Research Seminar Presentation",
+        year: 2017,
+        month: "May",
+        day: 11,
+        conference: "Freie Universität Berlin",
+        location: "Berlin, Germany",
+        url: "http://www.jonaso.de/docs/ikon-research-seminar-11.5.2017.pdf",
+      },
+      {
+        title: "Project Kick-Off Presentation",
+        year: 2017,
+        month: "April",
+        day: 11,
+        conference: "Museum für Naturkunde",
+        location: "Berlin, Germany",
+        url: "http://www.jonaso.de/docs/ikon-kickoff-11.04.2017.pdf",
       },
     ],
   },
@@ -127,6 +163,17 @@ const projects = [
       alt: "",
       title: "",
     },
+    presentations: [
+      {
+        title: "Schematische Kurzzusammenfassung",
+        year: 2009,
+        conference: "Technische Universität Darmstadt",
+        location: "Darmstadt, Germany",
+        doi: null,
+        url: "http://www.jonaso.de/docs/diplomarbeit_poster.pdf",
+        note: "Thesis poster.",
+      },
+    ],
   },
   {
   	title: "Entwicklung einer XML-basierten Beschreibungssprache für Produktentwicklungsinhalte",
@@ -144,6 +191,9 @@ const projects = [
     },
   },
 ]
+
+
+const joinIfNotNull = (arr) => arr.filter(val => val ? val : undefined).join(', ')
 
 
 const Banner = (src, alt, title) => <img style={{width:'100%'}} src={src} alt={alt} title={title} />
@@ -223,7 +273,7 @@ class Projects extends React.Component {
                                         </List.Content>
                                       </List.Item>
                                       <List.Item>
-                                        <List.Content>{pres.conference} {pres.location}, {pres.month} {pres.year}</List.Content>
+                                        <List.Content>{joinIfNotNull([pres.note, pres.conference, pres.location])}, {pres.month} {pres.year}</List.Content>
                                       </List.Item>
                                     </List>
                                 )
