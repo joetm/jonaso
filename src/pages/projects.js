@@ -13,7 +13,6 @@ import kano      from "../img/kano-variation.jpg"
 
 
 const CustomImage = ({image}) => {
-	console.log(image)
 	return <Image
 				style={{
 					padding:'0 0 20px 0',
@@ -43,6 +42,30 @@ const projects = [
       alt: "",
       title: "",
     },
+    presentations: [
+      {
+        title: "Towards Sociotechnical Management of Intra-Organisational Knowledge Transfer",
+        year: 2018,
+        month: "March",
+        day: 7,
+        conference: "Multikonferenz Wirtschaftsinformatik (MKWI)",
+        location: "Lüneburg, Germany",
+        doi: "10.6084/m9.figshare.5951932",
+        url: "http://www.jonaso.de/docs/mkwi2018-poster-final.pdf",
+        note: "Poster, Multikonferenz Wirtschaftsinformatik (MKWI)",
+      },
+      {
+        title: "Socio-technical Revelation of Knowledge Transfer Potentials",
+        year: 2017,
+        month: "October",
+        day: 25,
+        conference: "5th AAAI Conference on Human Computation and Crowdsourcing (HCOMP)",
+        location: "Quebec City, Quebec, Canada",
+        doi: "10.6084/m9.figshare.5844921",
+        url: "http://www.jonaso.de/docs/hcomp-poster-final.pdf",
+        note: "Poster, 5th AAAI Conference on Human Computation and Crowdsourcing (HCOMP)",
+      },
+    ],
   },
   {
   	title: "ID+Lab",
@@ -76,6 +99,19 @@ const projects = [
       alt: "",
       title: "",
     },
+    presentations: [
+      {
+        title: "CrowdUI - A Tool to Remotely Source and Evaluate User Interface Adaptations",
+        year: 2015,
+        month: "October",
+        day: 5,
+        conference: "",
+        location: "Southampton, UK",
+        doi: null,
+        url: "http://crowdui.com/screen-recordings/crowdui-presentation.pdf",
+        note: "MSc final presentation",
+      },
+    ],
   },
   {
   	title: "Anwendung des Kano-Modells zur Analyse und Charakterisierung gesellschaftlicher Anforderungen an Produkte",
@@ -130,6 +166,7 @@ class Projects extends React.Component {
               {
                 projects.map(project => {
                 	const { title, subtitle, description, date, organisation, organisation_href, funding, img } = project
+                  const { presentations = [] } = project
                   return (
                     <Grid key={`grid_${title}`} style={{marginBottom:'20px'}}>
 
@@ -165,11 +202,40 @@ class Projects extends React.Component {
                             <Item.Extra>
                             	<p>{funding}</p>
                             </Item.Extra>
+
+                            {
+                              presentations.length > 0 &&
+                                <Header size="small">Presentations</Header>
+                            }
+                            {
+                              presentations.map((pres, i) => {
+                                const url = pres.doi ? `http://doi.org/${pres.doi}` : pres.url || null
+                                return (
+                                    <List key={`presi_${i}`}>
+                                      <List.Item>
+                                        <List.Icon name='newspaper' />
+                                        <List.Content>{
+                                          url ?
+                                            <a href={url}>{pres.title}</a>
+                                            :
+                                            `${pres.title}`
+                                        }
+                                        </List.Content>
+                                      </List.Item>
+                                      <List.Item>
+                                        <List.Content>{pres.conference} {pres.location}, {pres.month} {pres.year}</List.Content>
+                                      </List.Item>
+                                    </List>
+                                )
+                              })
+                            }
+
                           </Item.Content>
 
                         </Item>
                         </Grid.Column>
                       </Grid.Row>
+
 
                     </Grid>
                   )

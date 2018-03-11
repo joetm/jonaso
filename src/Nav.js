@@ -35,6 +35,11 @@ export default class Nav extends Component {
         <Menu.Item name='publications' active={activeItem === 'publications'} onClick={this.handleItemClick}>
           Publications
         </Menu.Item>
+        {/*
+        <Menu.Item name='presentations' active={activeItem === 'presentations'} onClick={this.handleItemClick}>
+          Presentations
+        </Menu.Item>
+        */}
         <Menu.Item name='projects' active={activeItem === 'projects'} onClick={this.handleItemClick}>
           Projects
         </Menu.Item>
