@@ -85,7 +85,7 @@ class Presentations extends React.Component {
                         </Grid.Row>
                         {
                           presentations[year].map((item, index) => {
-                            let icostr = 'newspaper outline'
+                            let icostr = 'newspaper'
                             return (
                               <Grid.Row key={index}>
                                 <Grid.Column width={2}>
