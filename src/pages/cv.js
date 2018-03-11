@@ -258,7 +258,7 @@ class CV extends React.Component {
                     <Item>
                       <div style={styles.datum}>2015</div>
                       <Item.Content>
-                        <Item.Header>Distinction (84)</Item.Header>
+                        <Item.Header>Distinction</Item.Header>
                         <Item.Meta>MSc Computer Science, University of Southampton</Item.Meta>
                       </Item.Content>
                     </Item>
@@ -340,10 +340,12 @@ class CV extends React.Component {
 
                   <Item.Group>
 
+					{/*<Label><Icon name='checkmark' /> confirmed</Label>*/}
+
                     <Item>
                       <div style={styles.datum}>2018</div>
                       <Item.Content>
-                        <Item.Header><a href="http://mkwi2018.leuphana.de/">Multikonferenz Wirtschaftsinformatik (MKWI)</a> <Label><Icon name='checkmark' /> confirmed</Label></Item.Header>
+                        <Item.Header><a href="http://mkwi2018.leuphana.de/">Multikonferenz Wirtschaftsinformatik (MKWI)</a></Item.Header>
                         <Item.Meta>
                             March 6-9, 2018 &ndash; L&uuml;neburg, Germany
                         </Item.Meta>
