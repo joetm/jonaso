@@ -11,6 +11,7 @@ import crowdui   from "../img/crowdui-vision.jpg"
 import prodxml   from "../img/prodxml.jpg"
 import kano      from "../img/kano-variation.jpg"
 import sns       from "../img/sns-analysis.png"
+import skillsplanner from "../img/skillsplanner.png"
 
 
 const CustomImage = ({image}) => {
@@ -117,6 +118,21 @@ const projects = [
   	url: "https://www.interdisciplinary-laboratory.hu-berlin.de/en/content/idlab/",
     img: {
       src: img_idlab,
+      alt: "",
+      title: "",
+    },
+  },
+  {
+  	title: "SkillsPlanner",
+  	lang: "en",
+  	description: {__html: "<p>SkillsPlanner is a £1.3 million project envisioned to reduce the skills shortage in the UK’s construction industry. Partly funded by Innovate UK, the Open Data based platform aims to integrate and interpret data generated from sources provided by industry project partners in the UK such as Crossrail, Tideway and High Speed 2. The partners self-dependently upload their data into the CKAN storage. On upload, a series of tools executes the conversion into Linked Data and publishes selected data from the staging environment to the public server. The tools interact with the CKAN storage and the Linked Data platform via a RESTful API.</p><p>My role in this project was to self-responsibly develop the backend infrastructure and related data management and conversion tools. Further tasks were the documentation of the infrastructure, design and implementation of visualisation and pivot table components based on the Data Cube vocabulary, functional improvement of the MakeRDF tool, and the re-design and improvement of the SameAs-Lite co-reference resolution service.</p>"},
+  	funding: "",
+  	date: "2015-2016",
+  	organisation: "Seme4 Ltd.",
+  	organisation_href: "http://www.seme4.com/",
+  	url: "http://www.skillsplanner.net/",
+    img: {
+      src: skillsplanner,
       alt: "",
       title: "",
     },
