@@ -95,6 +95,15 @@ const projects = [
         url: "http://www.jonaso.de/docs/ikon-research-seminar-11.5.2017.pdf",
       },
       {
+        title: "Project Poster",
+        year: 2017,
+        month: "April",
+        day: null,
+        conference: null, // "Freie Universität Berlin",
+        location: "Berlin, Germany",
+        url: "http://www.jonaso.de/docs/IKON_poster_A0.pdf",
+      },
+      {
         title: "Project Kick-Off Presentation",
         year: 2017,
         month: "April",
