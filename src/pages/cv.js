@@ -296,8 +296,8 @@ class CV extends React.Component {
                         <Item.Meta>&quot;Picture Identification Challenge&quot;</Item.Meta>
                         <Item.Description>
                           Topic: Game with a Purpose for collaborative annotation
-                          of digitised images of the dia archive of the Institute
-                          for Art and Visual History, Humboldt University Berlin
+                          of digitised images of the Institute for Art and Visual History,
+                          Humboldt University Berlin
                         </Item.Description>
                       </Item.Content>
                     </Item>
