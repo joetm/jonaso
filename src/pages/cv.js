@@ -96,17 +96,16 @@ class CV extends React.Component {
 
                 <Header id="research-experience" size="large">Research Experience</Header>
 
-
                   <Item.Group>
 
                     <Item>
-                      <div style={styles.datum}>since 2016</div>
+                      <div style={styles.datum}>2016 - 2018</div>
                       <Item.Content>
                         <Item.Header><a href="http://www.fu-berlin.de/">Freie Universit&auml;t Berlin</a></Item.Header>
                         <Item.Meta>
                           <List>
                             <List.Item><a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/">Human-Centered Computing Group</a>, Institute of Computer Science</List.Item>
-                            <List.Item>Group Lead: <a href="https://www.clmb.de/" target="_blank">Junior-Prof. Dr. Claudia M&uuml;ller-Birn</a></List.Item>
+                            <List.Item>Group Lead: <a href="https://www.clmb.de/" target="_blank" rel="nofollow">Prof. Dr. Claudia M&uuml;ller-Birn</a></List.Item>
                           </List>
                         </Item.Meta>
                         <Item.Description>
@@ -320,7 +319,7 @@ class CV extends React.Component {
                         <Item.Meta>German Federal Ministry of Education and Research</Item.Meta>
                         <Item.Description>
                            &quot;int.FDM - An integrated maturity model for research data management&quot;<br />
-                           in collaboration with <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/members/professor/mueller-birn.html" target="_blank">Junior-Prof. Dr. Claudia M&uuml;ller Birn</a> and <a href="https://www.naturkundemuseum.berlin/einblicke/mitarbeiter/jana.hoffmann">Dr. Jana Hofmann</a>, <a href="https://www.naturkundemuseum.berlin/de/einblicke/mitarbeiter/falko.gloeckler">Falko Gl&ouml;ckler</a> (Natural History Museum, Berlin) and <a href="http://www.aip.de/mitglieder/henke">Dr. Harry Enke</a> (Supercomputing and E-Science, Leibniz Institute for Astrophysics Potsdam)
+                           in collaboration with <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/members/professor/mueller-birn.html" target="_blank" rel="nofollow">Prof. Dr. Claudia M&uuml;ller Birn</a> and <a href="https://www.naturkundemuseum.berlin/einblicke/mitarbeiter/jana.hoffmann">Dr. Jana Hofmann</a>, <a href="https://www.naturkundemuseum.berlin/de/einblicke/mitarbeiter/falko.gloeckler">Falko Gl&ouml;ckler</a> (Natural History Museum, Berlin) and <a href="http://www.aip.de/mitglieder/henke">Dr. Harry Enke</a> (Supercomputing and E-Science, Leibniz Institute for Astrophysics Potsdam)
                         </Item.Description>
                       </Item.Content>
                     </Item>

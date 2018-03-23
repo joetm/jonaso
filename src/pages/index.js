@@ -87,14 +87,12 @@ class Home extends React.Component {
                 <p>
                   I am <strong>Jonas Oppenlaender</strong>,
                   an Early-Stage Researcher
-                  at the <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/">Human-Centered Computing</a> group at Freie Universit&auml;t Berlin
+                  at the <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/">Human-Centered Computing</a> group
+                  at Freie Universit&auml;t Berlin
                   working towards a PhD in Applied Computer Science.
-                </p>
-
-                <p>
-                  I studied Industrial Engineering in Germany and Sweden
-                  and hold a MSc degree in Computer Science
-                  from the <a href="https://www.southampton.ac.uk/">University of Southampton</a>, UK.
+                  I hold a MSc degree in Computer Science
+                  from the <a href="https://www.southampton.ac.uk/">University of Southampton</a>, UK,
+                  and studied Industrial Engineering in Germany and Sweden.
                 </p>
 
                 <p>
@@ -109,13 +107,13 @@ class Home extends React.Component {
 				  */}
                 </p>
 
+                {/*
                 <p>
                   Presently, I am in the process of identifying topics and finding a supervisor for my PhD thesis.
-                  {/*
                   Two possible topics that particularly interest me are the application of crowdsourcing in order to solve problems in the context of the semantic web
                   and tackling the broader problem of providing better working conditions and fair compensation to crowdworkers.
-				  */}
                 </p>
+	  		    */}
 
                 <Header size="tiny" style={{...nobold, ...notopmargin, ...nobottommargin}}>My <strong>primary research interests</strong> are:</Header>
                   { keywords.primary.join(", ") }
