@@ -35,7 +35,7 @@ class CV extends React.Component {
                     <Item>
                       <div style={styles.datum}>2014 - 2015</div>
                       <Item.Content>
-                        <Item.Header><a href="https://soton.ac.uk/">University of Southampton</a></Item.Header>
+                        <Item.Header><a href="https://www.southampton.ac.uk/">University of Southampton</a></Item.Header>
                         <Item.Meta>
                           <List>
                             <List.Item><a href="http://www.wais.ecs.soton.ac.uk/">Web and Internet Science (WAIS)</a> Research Group</List.Item>
