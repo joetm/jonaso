@@ -11,8 +11,8 @@ const travel = {
   upcoming: [
     { event: "CI/HCOMP'18", date: "5.-8. July 2018", location: "Zürich", status: "planned" },
     { event: "WebSci'18", date: "28.-29. May 2018", location: "Amsterdam", status: "planned" },
-    { event: "Future of Work and Innovation Symposium", date: "15. May 2018", location: "Berlin", status: "planned" },
     { event: "UBISS", date: "4.-9. June 2018", location: "Oulu", status: "confirmed" },
+    // { event: "Future of Work and Innovation Symposium", date: "15. May 2018", location: "Berlin", status: "planned" },
     // { event: "WWW'18", date: "23.-27. April 2018", location: "Lyon", status: "planned" },
   ],
   past: [
