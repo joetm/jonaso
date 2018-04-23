@@ -12,7 +12,7 @@ const travel = {
     { event: "CI/HCOMP'18", date: "5.-8. July 2018", location: "Zürich", status: "planned" },
     { event: "WebSci'18", date: "28.-29. May 2018", location: "Amsterdam", status: "planned" },
     { event: "UBISS", date: "4.-9. June 2018", location: "Oulu", status: "confirmed" },
-    // { event: "Future of Work and Innovation Symposium", date: "15. May 2018", location: "Berlin", status: "planned" },
+    { event: "Oulu, Finland", date: "April 2018", location: "Oulu", status: "confirmed" },
     // { event: "WWW'18", date: "23.-27. April 2018", location: "Lyon", status: "planned" },
   ],
   past: [
@@ -85,11 +85,21 @@ class Home extends React.Component {
               <Grid.Column mobile={8} tablet={8} computer={8} widescreen={8} largeScreen={8}>
 
                 <p>
-                  I am <strong>Jonas Oppenlaender</strong>,
-                  an Early-Stage Researcher
+                  I am <strong>Jonas Oppenlaender</strong>, a research assistant (early-stage researcher)
                   at the <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/">Human-Centered Computing</a> group
-                  at Freie Universit&auml;t Berlin
+                  at Freie Universit&auml;t Berlin.
+                  {/*
+                  a doctoral student at the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a>,
+                  University of Oulu, Finland.
                   working towards a PhD in Applied Computer Science.
+                  {" "}
+                  Previously, I was a research assistant (early-stage researcher)
+                  at the <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/">Human-Centered Computing</a> group
+                  at Freie Universit&auml;t Berlin.
+                  */}
+                </p>
+
+                <p>
                   I hold a MSc degree in Computer Science
                   from the <a href="https://www.southampton.ac.uk/">University of Southampton</a>, UK,
                   and studied Industrial Engineering in Germany and Sweden.
@@ -162,10 +172,12 @@ class Home extends React.Component {
                     <strong>Consultation hour</strong>: <i>on demand</i> - just send me an email and we&apos;ll arrange a meeting
                 </p>
 
+				{/*
                 <p>
                     <Icon as="i" link={true} size="large" name='hand outline right' />
                     <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/theses/open/index.html">Open BSc and MSc theses</a>
                 </p>
+	            */}
 
               </Grid.Column>
             </Grid.Row>
