@@ -46,6 +46,16 @@ const projects = [
     },
     presentations: [
       {
+        title: "IKON Handover Presentation",
+        year: 2018,
+        month: "April",
+        day: 9,
+        conference: "Freie Universität Berlin",
+        location: "Berlin, Germany",
+        doi: null,
+        url: "http://jonaso.de/docs/ikon-final-09.04.2018.pdf"
+      },
+      {
         title: "Towards Sociotechnical Management of Intra-Organisational Knowledge Transfer",
         year: 2018,
         month: "March",
