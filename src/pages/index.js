@@ -160,13 +160,13 @@ class Home extends React.Component {
 
                 <Header size="tiny" style={nobottommargin}>Office Address:</Header>
                 <p>
-                    Human-Centered Computing Group<br />
-                    Room 115<br />
-                    Institute of Computer Science, Freie Universit&auml;t Berlin<br />
-                    K&ouml;nigin-Luise-Str. 24-26, 14195 Berlin, Germany<br />
+                    University of Oulu<br />
+                    [details TBA]
+                    {/*
                     E-Mail: {'{'}firstname.lastname{'}'}@fu-berlin.de<br />
                     Telephone: +49 30 838-61565<br />
-                    Fax: +49 30 838-475233<br />
+                    Fax: +49 30 838-475233
+					*/}
                 </p>
 
                 <p>
