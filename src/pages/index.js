@@ -11,7 +11,7 @@ const travel = {
   upcoming: [
     { event: "Int. SemWeb Research Summer School", date: "1.-7. July 2018", location: "Bertinoro", status: "planned" },
     { event: "UBISS", date: "4.-9. June 2018", location: "Oulu", status: "confirmed" },
-    { event: "Oulu, Finland", date: "April 2018", location: "Oulu", status: "confirmed" },
+    // { event: "Oulu, Finland", date: "April 2018", location: "Oulu", status: "confirmed" },
     // { event: "WWW'18", date: "23.-27. April 2018", location: "Lyon", status: "planned" },
   ],
   past: [
