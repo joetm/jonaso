@@ -9,15 +9,15 @@ import { nobottommargin, notopmargin, nobold } from "../common"
 
 const travel = {
   upcoming: [
-    { event: "CI/HCOMP'18", date: "5.-8. July 2018", location: "Zürich", status: "planned" },
     { event: "Int. SemWeb Research Summer School", date: "1.-7. July 2018", location: "Bertinoro", status: "planned" },
-    { event: "WebSci'18", date: "28.-29. May 2018", location: "Amsterdam", status: "planned" },
     { event: "UBISS", date: "4.-9. June 2018", location: "Oulu", status: "confirmed" },
     { event: "Oulu, Finland", date: "April 2018", location: "Oulu", status: "confirmed" },
     // { event: "WWW'18", date: "23.-27. April 2018", location: "Lyon", status: "planned" },
   ],
   past: [
 	{ event: "MKWI'18", date: "6.-9. March 2018", location: "Lüneburg", status: "confirmed" },
+    // { event: "CI/HCOMP'18", date: "5.-8. July 2018", location: "Zürich", status: "planned" },
+    // { event: "WebSci'18", date: "28.-29. May 2018", location: "Amsterdam", status: "planned" },
     { event: "GI-Symposium: Arbeitswelten der Zukunft", date: "29. January 2018", location: "Berlin", status: "confirmed" },
     { event: "HCOMP'17", date: "24.10.-26.10.2017", location: "Quebec, QC", status: "confirmed" },
   ],
@@ -25,13 +25,13 @@ const travel = {
 
 const keywords = {
   primary: [
-    "collaborative ontology engineering",
-    "semantic web",
-    "linked data",
     "crowdsourcing",
     "human computation",
     "collective intelligence",
     "web science",
+    "collaborative ontology engineering",
+    "semantic web",
+    "linked data",
   ],
   secondary: [
     "social machines",
@@ -83,21 +83,16 @@ class Home extends React.Component {
           <Grid>
             <Grid.Row>
 
-              <Grid.Column mobile={8} tablet={8} computer={8} widescreen={8} largeScreen={8}>
+              <Grid.Column mobile={9} tablet={9} computer={9} widescreen={9} largeScreen={9}>
 
                 <p>
-                  I am <strong>Jonas Oppenlaender</strong>, a research assistant (early-stage researcher)
-                  at the <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/">Human-Centered Computing</a> group
-                  at Freie Universit&auml;t Berlin.
-                  {/*
-                  a doctoral student at the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a>,
-                  University of Oulu, Finland.
-                  working towards a PhD in Applied Computer Science.
+                  I am <strong>Jonas Oppenlaender</strong>,
+                  a doctoral student at the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a>, <a href="http://www.oulu.fi/university/">University of Oulu</a>, Finland.
+                  {/* working towards a PhD in Applied Computer Science. */}
                   {" "}
                   Previously, I was a research assistant (early-stage researcher)
-                  at the <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/">Human-Centered Computing</a> group
+                  at the <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/" rel="nofollow">Human-Centered Computing</a> group
                   at Freie Universit&auml;t Berlin.
-                  */}
                 </p>
 
                 <p>
@@ -110,28 +105,19 @@ class Home extends React.Component {
                   I am interested in building web-based socio-technical systems
                   in which the human and technological elements play the role of participant machinery
                   in order to perform complex tasks better than either human or machine could independently.
-				  {/*
+          				  {/*
                     <br />
                     This exploratory, open-ended approach to research is conducted in the context of
                     Business Informatics (BI), a research discipline that originated in Germany.
                     Unlike Information Science, BI tends towards constructing and evaluating prototypical artefacts (Design Science Research).
-				  */}
+				            */}
                 </p>
-
-                {/*
-                <p>
-                  Presently, I am in the process of identifying topics and finding a supervisor for my PhD thesis.
-                  Two possible topics that particularly interest me are the application of crowdsourcing in order to solve problems in the context of the semantic web
-                  and tackling the broader problem of providing better working conditions and fair compensation to crowdworkers.
-                </p>
-	  		    */}
 
                 <Header size="tiny" style={{...nobold, ...notopmargin, ...nobottommargin}}>My <strong>primary research interests</strong> are:</Header>
                   { keywords.primary.join(", ") }
 
                 <Header size="tiny" style={{...nobold, ...notopmargin, ...nobottommargin}}><strong>Further research interests</strong> include:</Header>
                   { keywords.secondary.join(", ") }
-
 
                 <Header size="tiny" style={nobottommargin}>Upcoming Travel</Header>
                 <List>
@@ -147,21 +133,25 @@ class Home extends React.Component {
 
               </Grid.Column>
 
-              <Grid.Column mobile={8} tablet={8} computer={6}>
+              <Grid.Column mobile={7} tablet={7} computer={5}>
 
+{/*
                 <Responsive minWidth={768}>
                   <Image src={img} size='medium' rounded />
                 </Responsive>
-
                 <Responsive maxWidth={769}>
                   <Image src={img} rounded fluid />
                 </Responsive>
-
+*/}
+                <Image src={img} rounded fluid />
 
                 <Header size="tiny" style={nobottommargin}>Office Address:</Header>
                 <p>
                     University of Oulu<br />
-                    [details TBA]
+                    Erkki Koiso-Kanttilan katu 3, door E<br />
+                    Room TS369<br />
+                    P.O Box 4500<br />
+                    FI-90014 University of Oulu
                     {/*
                     E-Mail: {'{'}firstname.lastname{'}'}@fu-berlin.de<br />
                     Telephone: +49 30 838-61565<br />
