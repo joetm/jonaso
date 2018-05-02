@@ -369,10 +369,19 @@ class CV extends React.Component {
                     <Item>
                       <div style={styles.datum}>2016</div>
                       <Item.Content>
+                        <Item.Header>CSCW&apos;18 (Second Cycle)</Item.Header>
+                      </Item.Content>
+                    </Item>
+
+                    <Item>
+                      <div style={styles.datum}>2016</div>
+                      <Item.Content>
                         <Item.Header>ESCW&apos;17</Item.Header>
+                        {/*
                         <Item.Description>
                           Topic: Semantic Web, Information Extraction, Ontology Learning
                         </Item.Description>
+                        */}
                       </Item.Content>
                     </Item>
 
