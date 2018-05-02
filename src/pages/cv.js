@@ -367,16 +367,23 @@ class CV extends React.Component {
                   <Item.Group>
 
                     <Item>
-                      <div style={styles.datum}>2016</div>
+                      <div style={styles.datum}>2018</div>
                       <Item.Content>
-                        <Item.Header>CSCW&apos;18 (Second Cycle)</Item.Header>
+                        <Item.Header><a href="https://cscw.acm.org/2018/">CSCW&apos;18</a> <span style={{...styles.nonbold, fontSize: '0.6em'}}>(2<sup>nd</sup> Cycle)</span></Item.Header>
+                      </Item.Content>
+                    </Item>
+
+                    <Item>
+                      <div style={styles.datum}>2018</div>
+                      <Item.Content>
+                        <Item.Header><a href="http://skill.informatik.uni-leipzig.de/">SKILL-18</a></Item.Header>
                       </Item.Content>
                     </Item>
 
                     <Item>
                       <div style={styles.datum}>2016</div>
                       <Item.Content>
-                        <Item.Header>ESCW&apos;17</Item.Header>
+                        <Item.Header><a href="https://2017.eswc-conferences.org/">ESCW&apos;17</a></Item.Header>
                         {/*
                         <Item.Description>
                           Topic: Semantic Web, Information Extraction, Ontology Learning
