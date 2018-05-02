@@ -292,7 +292,7 @@ class CV extends React.Component {
                       <div style={styles.datum}>2015</div>
                       <Item.Content>
                         <Item.Header>Distinction</Item.Header>
-                        <Item.Meta>MSc Computer Science, University of Southampton</Item.Meta>
+                        <Item.Description>MSc Computer Science, University of Southampton</Item.Description>
                       </Item.Content>
                     </Item>
 
@@ -300,7 +300,7 @@ class CV extends React.Component {
                       <div style={styles.datum}>2005 - 2006</div>
                       <Item.Content>
                         <Item.Header>Erasmus Mundus Scholarship</Item.Header>
-                        <Item.Meta>German Academic Exchange Service (DAAD)</Item.Meta>
+                        <Item.Description>German Academic Exchange Service (DAAD)</Item.Description>
                       </Item.Content>
                     </Item>
 
@@ -331,12 +331,12 @@ class CV extends React.Component {
                       <div style={styles.datum}>2016 - 2017</div>
                       <Item.Content>
                         <Item.Header>MSc Thesis Supervision</Item.Header>
-                        <Item.Description>
-                          <a href="https://www.linkedin.com/in/immanuel-pelzer-408505133/">Immanuel Pelzer</a>
-                        </Item.Description>
                         <Item.Meta>
-                          Topic: Linked Data Conversion and Visualisation
+                          <a href="https://www.linkedin.com/in/immanuel-pelzer-408505133/">Immanuel Pelzer</a>
                         </Item.Meta>
+                        <Item.Description>
+                          Topic: Linked Data Conversion and Visualisation
+                        </Item.Description>
                       </Item.Content>
                     </Item>
 
@@ -356,7 +356,9 @@ class CV extends React.Component {
                       <div style={styles.datum}>2006 - 2007</div>
                       <Item.Content>
                         <Item.Header>Teaching Assistant (Excercise Tutor)</Item.Header>
-                        <Item.Meta>Undergraduate Mathematics and Engineering Mechanics</Item.Meta>
+                        <Item.Description>
+                          Undergraduate Mathematics and Engineering Mechanics
+                        </Item.Description>
                       </Item.Content>
                     </Item>
 
@@ -369,7 +371,7 @@ class CV extends React.Component {
                     <Item>
                       <div style={styles.datum}>2018</div>
                       <Item.Content>
-                        <Item.Header><a href="https://cscw.acm.org/2018/">CSCW&apos;18</a> <span style={{...styles.nonbold, fontSize: '0.6em'}}>(2<sup>nd</sup> Cycle)</span></Item.Header>
+                        <Item.Header><a href="https://cscw.acm.org/2018/">CSCW&apos;18</a></Item.Header>
                       </Item.Content>
                     </Item>
 
