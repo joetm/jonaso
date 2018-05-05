@@ -371,13 +371,6 @@ class CV extends React.Component {
                     <Item>
                       <div style={styles.datum}>2018</div>
                       <Item.Content>
-                        <Item.Header><a href="https://cscw.acm.org/2018/">CSCW&apos;18</a></Item.Header>
-                      </Item.Content>
-                    </Item>
-
-                    <Item>
-                      <div style={styles.datum}>2018</div>
-                      <Item.Content>
                         <Item.Header><a href="http://skill.informatik.uni-leipzig.de/">SKILL-18</a></Item.Header>
                       </Item.Content>
                     </Item>
