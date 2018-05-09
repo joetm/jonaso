@@ -309,9 +309,24 @@ class CV extends React.Component {
 
                 <Header id="service" size="large">Academic Service</Header>
 
-	              <Header id="service" size="medium">Program Committee Memberships</Header>
+	              <Header id="oc-memberships" size="medium">Organizing Committee</Header>
 
-                  <Item.Group>
+                    <Item.Group>
+
+	                  <Item>
+	                    <div style={styles.datum}>2018</div>
+	                    <Item.Content>
+	                      <Item.Header><a href="http://ubicomp.oulu.fi/ubiss/">9<sup>th</sup> International UBI Summer School 2018 (UBISS 2018)</a></Item.Header>
+	                      <Item.Meta>Oulu, Finland</Item.Meta>
+	                    </Item.Content>
+	                  </Item>
+
+	                </Item.Group>
+
+
+	              <Header id="pc-memberships" size="medium">Program Committee</Header>
+
+                    <Item.Group>
 
 	                  <Item>
 	                    <div style={styles.datum}>2018</div>
@@ -378,7 +393,7 @@ class CV extends React.Component {
                     <Item>
                       <div style={styles.datum}>2016</div>
                       <Item.Content>
-                        <Item.Header><a href="https://2017.eswc-conferences.org/">ESCW&apos;17</a></Item.Header>
+                        <Item.Header><a href="https://2017.eswc-conferences.org/">ESWC&apos;17</a></Item.Header>
                         {/*
                         <Item.Description>
                           Topic: Semantic Web, Information Extraction, Ontology Learning
