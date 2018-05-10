@@ -1,6 +1,6 @@
 import React from "react"
 import Link from "gatsby-link"
-import { Responsive, Label, Header, List, Grid, Divider, Image, Container, Icon } from 'semantic-ui-react'
+import { Label, Header, List, Grid, Divider, Image, Container, Icon } from 'semantic-ui-react'
 
 import "../../libs/academicons/css/academicons.min.css"
 import img from "../img/opp.jpg"
@@ -87,12 +87,11 @@ class Home extends React.Component {
 
                 <p>
                   I am <strong>Jonas Oppenlaender</strong>,
-                  a doctoral student at the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a>, <a href="http://www.oulu.fi/university/">University of Oulu</a>, Finland.
+                  a doctoral student at the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a>, <a href="http://www.oulu.fi/university/">University of Oulu</a>, <a href="https://www.theatlantic.com/entertainment/archive/2012/03/world-map-metal-band-population-density/329913/">Finland</a>.
                   {/* working towards a PhD in Applied Computer Science. */}
                   {" "}
                   Previously, I was a research assistant (early-stage researcher)
-                  at the <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/" rel="nofollow">Human-Centered Computing</a> group
-                  at Freie Universit&auml;t Berlin.
+                  at the <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/" rel="nofollow">Human-Centered Computing</a> group, Freie Universit&auml;t Berlin.
                 </p>
 
                 <p>
@@ -135,14 +134,6 @@ class Home extends React.Component {
 
               <Grid.Column mobile={7} tablet={7} computer={5}>
 
-{/*
-                <Responsive minWidth={768}>
-                  <Image src={img} size='medium' rounded />
-                </Responsive>
-                <Responsive maxWidth={769}>
-                  <Image src={img} rounded fluid />
-                </Responsive>
-*/}
                 <Image src={img} rounded fluid />
 
                 <Header size="tiny" style={nobottommargin}>Office Address:</Header>
@@ -151,7 +142,7 @@ class Home extends React.Component {
                     Erkki Koiso-Kanttilan katu 3<br />
                     Room TS369<br />
                     P.O. Box 4500<br />
-                    FI-90014 University of Oulu
+                    FI-90014 University of Oulu<br />
                     E-Mail: {'{'}firstname.lastname{'}'}@oulu.fi<br />
                     {/*
                     Telephone: +49 30 838-61565<br />
