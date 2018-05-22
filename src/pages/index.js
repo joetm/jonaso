@@ -90,7 +90,9 @@ class Home extends React.Component {
                   a doctoral student
                   in the Community Instrumentation and Awareness research group
                   at the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a>,
+                  {" "}
                   <a href="http://www.oulu.fi/university/">University of Oulu</a>,
+                  {" "}
                   <a href="https://www.theatlantic.com/entertainment/archive/2012/03/world-map-metal-band-population-density/329913/">Finland</a>.
                   {/* working towards a PhD in Applied Computer Science. */}
                   {" "}
