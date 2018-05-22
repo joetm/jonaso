@@ -87,7 +87,11 @@ class Home extends React.Component {
 
                 <p>
                   I am <strong>Jonas Oppenlaender</strong>,
-                  a doctoral student at the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a>, <a href="http://www.oulu.fi/university/">University of Oulu</a>, <a href="https://www.theatlantic.com/entertainment/archive/2012/03/world-map-metal-band-population-density/329913/">Finland</a>.
+                  a doctoral student
+                  in the Community Instrumentation and Awareness research group
+                  at the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a>,
+                  <a href="http://www.oulu.fi/university/">University of Oulu</a>,
+                  <a href="https://www.theatlantic.com/entertainment/archive/2012/03/world-map-metal-band-population-density/329913/">Finland</a>.
                   {/* working towards a PhD in Applied Computer Science. */}
                   {" "}
                   Previously, I was a research assistant (early-stage researcher)
@@ -142,7 +146,7 @@ class Home extends React.Component {
                     Erkki Koiso-Kanttilan katu 3<br />
                     Room TS369<br />
                     P.O. Box 4500<br />
-                    FI-90014 University of Oulu<br />
+                    FI-90014 Oulu<br />
                     E-Mail: {'{'}firstname.lastname{'}'}@oulu.fi<br />
                     {/*
                     Telephone: +49 30 838-61565<br />
