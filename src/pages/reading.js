@@ -1,3 +1,7 @@
+/*
+  DEV: this is supposed to become an up-to-date reading list synced from my PC
+*/
+
 import React from "react"
 import Link from "gatsby-link"
 import { Responsive, Header, List, Item, Icon, Grid, Container } from 'semantic-ui-react'

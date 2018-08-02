@@ -343,9 +343,22 @@ class CV extends React.Component {
                   <Item.Group>
 
                     <Item>
+                      <div style={styles.datum}>2018</div>
+                      <Item.Content>
+                        <Item.Header>Summer internship project</Item.Header>
+                        <Item.Meta>
+                          Antonio Kongjonaj
+                        </Item.Meta>
+                        <Item.Description>
+                          Topic: Increasing trust in scientific news articles
+                        </Item.Description>
+                      </Item.Content>
+                    </Item>
+
+                    <Item>
                       <div style={styles.datum}>2016 - 2017</div>
                       <Item.Content>
-                        <Item.Header>MSc Thesis Supervision</Item.Header>
+                        <Item.Header>MSc Thesis</Item.Header>
                         <Item.Meta>
                           <a href="https://www.linkedin.com/in/immanuel-pelzer-408505133/">Immanuel Pelzer</a>
                         </Item.Meta>
@@ -382,6 +395,27 @@ class CV extends React.Component {
                 <Header id="service" size="medium">Peer Review</Header>
 
                   <Item.Group>
+
+                    <Item>
+                      <div style={styles.datum}>2018</div>
+                      <Item.Content>
+                        <Item.Header><a href="http://cscw.acm.org/2018/">CSCW'18</a></Item.Header>
+                      </Item.Content>
+                    </Item>
+
+                    <Item>
+                      <div style={styles.datum}>2018</div>
+                      <Item.Content>
+                        <Item.Header><a href="https://chiplay.acm.org/2018/">CHI PLAY 2018</a></Item.Header>
+                      </Item.Content>
+                    </Item>
+
+                    <Item>
+                      <div style={styles.datum}>2018</div>
+                      <Item.Content>
+                        <Item.Header><a href="http://hicss.hawaii.edu/">HICSS-52</a></Item.Header>
+                      </Item.Content>
+                    </Item>
 
                     <Item>
                       <div style={styles.datum}>2018</div>
@@ -428,7 +462,13 @@ class CV extends React.Component {
 
                   <Item.Group>
 
-                    {/*<Label><Icon name='checkmark' /> confirmed</Label>*/}
+                    <Item>
+	                    <div style={styles.datum}>2018</div>
+	                    <Item.Content>
+	                      <Item.Header><a href="http://ubicomp.oulu.fi/ubiss/">9<sup>th</sup> International UBI Summer School (UBISS 2018)</a></Item.Header>
+	                      <Item.Meta>June 4-9, 2018 &ndash; Oulu, Finland</Item.Meta>
+	                    </Item.Content>
+                    </Item>
 
                     <Item>
                       <div style={styles.datum}>2018</div>
