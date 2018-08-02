@@ -58,7 +58,7 @@ handle_pdf () {
    numPages=$( echo ${numPagesline##*:} | sed -e 's/\r//g')
 
    # echo "$fname, $dir" >> readinglist.csv 
-   echo "$fname | $title | $author | $keywords | $numPages | $dir | $1" >> readinglist.csv
+   echo "$fname|$title|$author|$keywords|$numPages|$dir|$1" >> readinglist.csv
 
    return 0
 }
