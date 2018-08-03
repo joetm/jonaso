@@ -6,8 +6,7 @@ import "isomorphic-fetch"
 import { spacer } from "../common"
 
 
-// http://jonaso.de
-const _REFERENCES = "/static/references.json"
+const _REFERENCES = "http://jonaso.de/static/references.json"
 
 
 /**

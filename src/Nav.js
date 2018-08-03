@@ -39,7 +39,7 @@ export default class Nav extends Component {
         <Menu.Item name='teaching' active={activeItem === 'teaching'} onClick={this.handleItemClick}>
           Teaching
         </Menu.Item>
-	    */}
+  	    */}
         <Menu.Item name='projects' active={activeItem === 'projects'} onClick={this.handleItemClick}>
           Projects
         </Menu.Item>
@@ -47,10 +47,10 @@ export default class Nav extends Component {
           CV
         </Menu.Item>
         {/*
-          <Menu.Item name='reading' active={activeItem === 'reading'} onClick={this.handleItemClick}>
-            Reading
-          </Menu.Item>
-        */}
+        <Menu.Item name='reading' active={activeItem === 'reading'} onClick={this.handleItemClick}>
+          Reading
+        </Menu.Item>
+  	    */}
         {/*
           <Menu.Menu position='right'>
             <Menu.Item>
