@@ -3,8 +3,8 @@
 import json
 import os
 import requests
+import time
 from fnmatch import fnmatch
-from operator import attrgetter
 
 
 root = '/some/directory'
@@ -15,8 +15,7 @@ BASEPATHS = ["/home/jonas/OULU/Literatur/", "/home/jonas/FU/IKON/Literatur", "/h
 
 
 PATTERN_TOREAD = "+*.pdf"
-PATTERN_READ1 = "!*.pdf"
-PATTERN_READ2 = "-*.pdf"
+PATTERN_READ = "[!|-]*.pdf"
 
 
 print("Mining pdfs")
@@ -60,9 +59,7 @@ def extractMetadata(fullpath):
 
 
 # reading list
-# with open('readinglist.json', 'w') as LISTFILE:
 #     documents = []
-
 #     for root in BASEPATHS:
 #         for path, subdirs, files in os.walk(root):
 #             for name in files:
@@ -75,28 +72,36 @@ def extractMetadata(fullpath):
 #                     metadata['keywords'] = keywords
 #                     metadata['priority'] = 1
 #                     documents.append(metadata)
-
+# with open('readinglist.json', 'w') as LISTFILE:
 #     json.dump(documents, LISTFILE, indent=4)
 
+
 # read list
+documents = []
+
+for root in BASEPATHS:
+    for path, subdirs, files in os.walk(root):
+        for name in files:
+            if fnmatch(name, PATTERN_READ):
+                keywords = path.replace(root, '').replace('/',' > ')
+                fullpath = "%s/%s" % (path, name)
+                metadata = extractMetadata(fullpath)
+                if not metadata:
+                    continue
+                metadata['keywords'] = keywords
+                metadata['priority'] = 0 if name.startswith('-') else 1
+                if metadata['priority'] > 0:
+                    metadata['priority'] = len(name) - len(name.lstrip('!'))
+                documents.append(metadata)
+
+# sort by modified data
+documents.sort(key=lambda x: x['modified'], reverse=True)
+
+output = {
+    'modified': int(time.time()),
+    'documents': documents
+}
+
 with open('readlist.json', 'w') as LISTFILE:
-    documents = []
+    json.dump(output, LISTFILE, indent=4)
 
-    for root in BASEPATHS:
-        for path, subdirs, files in os.walk(root):
-            for name in files:
-                if fnmatch(name, PATTERN_READ1) or fnmatch(name, PATTERN_READ2):
-                    keywords = path.replace(root, '').replace('/',' > ')
-                    fullpath = "%s/%s" % (path, name)
-                    metadata = extractMetadata(fullpath)
-                    if not metadata:
-                        continue
-                    metadata['keywords'] = keywords
-                    metadata['priority'] = 0 if name.startswith('-') else 1
-                    documents.append(metadata)
-
-
-    # sort by modified data
-    documents.sort(key = attrgetter('modified'), reverse = True)
-
-    json.dump(documents, LISTFILE, indent=4)
