@@ -18,15 +18,25 @@ class ReadingList extends React.Component {
   }
   componentWillMount = () => {
     fetch(_URL)
-    .then(function(response) {
+    .then(response => {
       if (response.status >= 400) {
         throw new Error("Bad response from server")
       }
       return response.json()
     })
-    .then(function(documents) {
+    .then(documents => {
+      // console.log(documents);
       this.setState({documents})
     })
+  }
+  getDate(timestamp) {
+    const d = new Date(timestamp * 1000)
+    const year = d.getFullYear()
+    const month = d.getMonth()
+    const day = d.getDate()
+    const hour = d.getHours()
+    const min = d.getMinutes()
+    return `${year}-${month}-${day} ${hour}:${min}`
   }
   render() {
     const { documents } = this.state
@@ -34,26 +44,30 @@ class ReadingList extends React.Component {
       <div>
         <Container>
 
-            <Header size="large">Reading List</Header>
+            <Header size="large">Recently Read Papers</Header>
 
-            <Table celled>
+            <Table padded collapsing={false}>
               <Table.Header>
                 <Table.Row>
-                  <Table.HeaderCell>Authors</Table.HeaderCell>
-                  <Table.HeaderCell>Year</Table.HeaderCell>
                   <Table.HeaderCell>Title</Table.HeaderCell>
+                  <Table.HeaderCell collapsing>Author(s)</Table.HeaderCell>
+                  <Table.HeaderCell collapsing>Year</Table.HeaderCell>
                   <Table.HeaderCell>Keywords</Table.HeaderCell>
+                  <Table.HeaderCell>Relevance</Table.HeaderCell>
+                  <Table.HeaderCell>Read</Table.HeaderCell>
                 </Table.Row>
               </Table.Header>
               <Table.Body>
                 {
-                  documents.map(doc => {
+                  documents.map((doc, idx) => {
                     return (
-                      <Table.Row key={id}>
-                        <Table.Cell textAlign="left">{doc.authors.join(', ')}</Table.Cell>
-                        <Table.Cell textAlign="left" width="two">{doc.year}</Table.Cell>
-                        <Table.Cell textAlign="left" width="one"><Label>{doc.title}</Label></Table.Cell>
-                        <Table.Cell textAlign="left" width="two">{doc.keywords}</Table.Cell>
+                      <Table.Row key={`id_${idx}`}>
+                        <Table.Cell textAlign="left">{doc.title}</Table.Cell>
+                        <Table.Cell width={2} textAlign="left">{doc.authors.join(', ')}</Table.Cell>
+                        <Table.Cell textAlign="left">{doc.year}</Table.Cell>
+                        <Table.Cell textAlign="left">{doc.keywords}</Table.Cell>
+                        <Table.Cell textAlign="center">{doc.priority}</Table.Cell>
+                        <Table.Cell textAlign="left">{this.getDate(doc.modified)}</Table.Cell>
                       </Table.Row>
                     )
                   })

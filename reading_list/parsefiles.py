@@ -4,6 +4,8 @@ import json
 import os
 import requests
 from fnmatch import fnmatch
+from operator import attrgetter
+
 
 root = '/some/directory'
 
@@ -92,5 +94,9 @@ with open('readlist.json', 'w') as LISTFILE:
                     metadata['keywords'] = keywords
                     metadata['priority'] = 0 if name.startswith('-') else 1
                     documents.append(metadata)
+
+
+    # sort by modified data
+    documents.sort(key = attrgetter('modified'), reverse = True)
 
     json.dump(documents, LISTFILE, indent=4)

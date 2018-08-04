@@ -46,11 +46,9 @@ export default class Nav extends Component {
         <Menu.Item name='cv' active={activeItem === 'cv'} onClick={this.handleItemClick}>
           CV
         </Menu.Item>
-        {/*
         <Menu.Item name='reading' active={activeItem === 'reading'} onClick={this.handleItemClick}>
-          Reading
+          Reading List
         </Menu.Item>
-  	    */}
         {/*
           <Menu.Menu position='right'>
             <Menu.Item>
