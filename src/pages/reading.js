@@ -9,7 +9,7 @@ require('es6-promise').polyfill();
 import "isomorphic-fetch"
 import { spacer } from "../common"
 
-const _URL = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/readlist.json'
+const _URL = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/readlist-latest.json'
 
 const styles = {
   lastupdate: {
@@ -57,7 +57,7 @@ class ReadingList extends React.Component {
         <Container>
 
             <Header size="large">
-              Recently Read Papers
+              100 Recently Read Papers
               <div style={styles.lastupdate}>Last updated: <span>{modified}</span></div>
             </Header>
 
@@ -68,7 +68,7 @@ class ReadingList extends React.Component {
                   <Table.HeaderCell collapsing>Author(s)</Table.HeaderCell>
                   <Table.HeaderCell collapsing>Year</Table.HeaderCell>
                   <Table.HeaderCell>Keywords</Table.HeaderCell>
-                  <Table.HeaderCell>Relevance</Table.HeaderCell>
+                  <Table.HeaderCell title="Relevance to my past a current research [0 = not relevant or interesting at the time of reading]">Relevance*</Table.HeaderCell>
                   <Table.HeaderCell>Read</Table.HeaderCell>
                 </Table.Row>
               </Table.Header>

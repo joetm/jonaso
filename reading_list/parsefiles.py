@@ -10,12 +10,12 @@ from fnmatch import fnmatch
 root = '/some/directory'
 
 # the folders to search for
-BASEPATHS = ["/home/jonas/OULU/Literatur/", "/home/jonas/FU/IKON/Literatur", "/home/jonas/FU/Misc/"]
+BASEPATHS = ["/home/jonas/OULU/Literatur/", "/home/jonas/FU/IKON/Literatur/", "/home/jonas/FU/Academic Working/", "/home/jonas/FU/Misc/"]
 # BASEPATHS = ["/home/jonas/OULU/Literatur/"]
 
 
-PATTERN_TOREAD = "+*.pdf"
-PATTERN_READ = "[!|-]*.pdf"
+PATTERN_TOREAD = "\+*.pdf"
+PATTERN_READ = "[\!|\-]*.pdf"
 
 
 print("Mining pdfs")
@@ -42,16 +42,16 @@ def extractMetadata(fullpath):
         if not 'authors' in rawdata:
             rawdata['authors'] = False
         metadata = {
-            'id': rawdata['id'],
+            # 'id': rawdata['id'],
             'title': rawdata['title'],
             'year': rawdata['year'],
             'authors': [] if not rawdata['authors'] else [x['name'] for x in rawdata['authors']],
             'modified': int(os.path.getmtime(fullpath)),
-            'created': int(os.path.getctime(fullpath)),
+            # 'created': int(os.path.getctime(fullpath)),
             # 'abstractText': rawdata['abstractText'],
             # 'references': rawdata['references'],
         }
-        print(metadata['id'], ' - ', metadata['title'])
+        print(rawdata['id'], ' - ', metadata['title'])
 
         return metadata
     else:
@@ -79,6 +79,7 @@ def extractMetadata(fullpath):
 # read list
 documents = []
 
+counter = 0
 for root in BASEPATHS:
     for path, subdirs, files in os.walk(root):
         for name in files:
@@ -88,6 +89,8 @@ for root in BASEPATHS:
                 metadata = extractMetadata(fullpath)
                 if not metadata:
                     continue
+                counter = counter + 1
+                print (counter)
                 metadata['keywords'] = keywords
                 metadata['priority'] = 0 if name.startswith('-') else 1
                 if metadata['priority'] > 0:
@@ -101,7 +104,15 @@ output = {
     'modified': int(time.time()),
     'documents': documents
 }
+with open('readlist-full.json', 'w') as LISTFILE:
+    json.dump(output, LISTFILE, indent=4)
 
-with open('readlist.json', 'w') as LISTFILE:
+
+del documents[100:]
+output = {
+    'modified': int(time.time()),
+    'documents': documents
+}
+with open('readlist-latest.json', 'w') as LISTFILE:
     json.dump(output, LISTFILE, indent=4)
 
