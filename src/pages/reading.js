@@ -11,10 +11,19 @@ import { spacer } from "../common"
 
 const _URL = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/readlist.json'
 
+const styles = {
+  lastupdate: {
+    fontWeight: 'normal',
+    fontSize: '0.6em',
+    textAlign: 'right',
+    float: 'right',
+  }
+}
 
 class ReadingList extends React.Component {
   state = {
     documents: [],
+    modified: 'loading',
   }
   componentWillMount = () => {
     fetch(_URL)
@@ -26,7 +35,10 @@ class ReadingList extends React.Component {
     })
     .then(documents => {
       // console.log(documents);
-      this.setState({documents})
+      this.setState({
+        modified: this.getDate(documents.modified),
+        documents: documents.documents
+      })
     })
   }
   getDate(timestamp) {
@@ -39,12 +51,15 @@ class ReadingList extends React.Component {
     return `${year}-${month}-${day} ${hour}:${min}`
   }
   render() {
-    const { documents } = this.state
+    const { documents, modified } = this.state
     return (
       <div>
         <Container>
 
-            <Header size="large">Recently Read Papers</Header>
+            <Header size="large">
+              Recently Read Papers
+              <div style={styles.lastupdate}>Last updated: <span>{modified}</span></div>
+            </Header>
 
             <Table padded collapsing={false}>
               <Table.Header>
