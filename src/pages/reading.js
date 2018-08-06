@@ -57,7 +57,7 @@ class ReadingList extends React.Component {
         <Container>
 
             <Header size="large">
-              100 Recently Read Papers
+              100 Recently Read Publications
               <div style={styles.lastupdate}>Last updated: <span>{modified}</span></div>
             </Header>
 

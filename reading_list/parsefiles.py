@@ -4,7 +4,28 @@ import json
 import os
 import requests
 import time
+import sqlite3
+import hashlib
 from fnmatch import fnmatch
+
+# BUF_SIZE is totally arbitrary, change for your app!
+BUF_SIZE = 65536  # lets read stuff in 64kb chunks!
+# md5 = hashlib.md5()
+sha1 = hashlib.sha1()
+
+
+# caching
+conn = sqlite3.connect('cache.db')
+c = conn.cursor()
+
+
+
+# -----------------
+# first-time setup
+# c.execute('''CREATE TABLE documents (hash text, json text)''')
+# conn.commit()
+# -----------------
+
 
 
 root = '/some/directory'
@@ -84,17 +105,49 @@ for root in BASEPATHS:
     for path, subdirs, files in os.walk(root):
         for name in files:
             if fnmatch(name, PATTERN_READ):
+
+                counter = counter + 1
+
+                fullpath = os.path.join(path, name)
+
+                # calculate hash
+                with open(fullpath, 'rb') as f:
+                    while True:
+                        data = f.read(BUF_SIZE)
+                        if not data:
+                            break
+                        # md5.update(data)
+                        sha1.update(data)
+
+                # print("MD5: {0}".format(md5.hexdigest()))
+                # print("SHA1: {0}".format(sha1.hexdigest()))
+                thehash = sha1.hexdigest()
+
+                # cache check
+                c.execute('SELECT * FROM documents WHERE hash=?', (thehash,))
+                res = c.fetchone()
+
+                # cached?
+                if res != None:
+                    print ('cache hit', counter, ": ",  thehash)
+                    documents.append(json.loads(res[1]))
+                    continue
+
                 keywords = path.replace(root, '').replace('/',' > ')
-                fullpath = "%s/%s" % (path, name)
                 metadata = extractMetadata(fullpath)
                 if not metadata:
                     continue
-                counter = counter + 1
-                print (counter)
+                print (counter, ": ",  thehash)
                 metadata['keywords'] = keywords
                 metadata['priority'] = 0 if name.startswith('-') else 1
                 if metadata['priority'] > 0:
                     metadata['priority'] = len(name) - len(name.lstrip('!'))
+
+                # save cache
+                # print("INSERT INTO documents VALUES ('%s','%s')" % (thehash, json.dumps(metadata, ensure_ascii=True)))
+                c.execute("INSERT INTO documents VALUES (?,?)", (thehash, json.dumps(metadata, ensure_ascii=True)))
+                conn.commit()
+
                 documents.append(metadata)
 
 # sort by modified data
@@ -116,3 +169,5 @@ output = {
 with open('readlist-latest.json', 'w') as LISTFILE:
     json.dump(output, LISTFILE, indent=4)
 
+
+conn.close()
