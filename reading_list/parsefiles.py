@@ -106,7 +106,7 @@ for root in BASEPATHS:
 
                 counter = counter + 1
 
-				sha1 = hashlib.sha1()
+                sha1 = hashlib.sha1()
 
                 fullpath = os.path.join(path, name)
 
