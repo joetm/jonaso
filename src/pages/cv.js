@@ -406,6 +406,13 @@ class CV extends React.Component {
                     <Item>
                       <div style={styles.datum}>2018</div>
                       <Item.Content>
+                        <Item.Header><a href="http://hicss.hawaii.edu/">HICSS-52</a></Item.Header>
+                      </Item.Content>
+                    </Item>
+
+                    <Item>
+                      <div style={styles.datum}>2018</div>
+                      <Item.Content>
                         <Item.Header><a href="https://chiplay.acm.org/2018/">CHI PLAY 2018</a></Item.Header>
                       </Item.Content>
                     </Item>
@@ -413,7 +420,7 @@ class CV extends React.Component {
                     <Item>
                       <div style={styles.datum}>2018</div>
                       <Item.Content>
-                        <Item.Header><a href="http://hicss.hawaii.edu/">HICSS-52</a></Item.Header>
+                        <Item.Header><a href="http://icmi.acm.org/2018/">ICMI'18</a></Item.Header>
                       </Item.Content>
                     </Item>
 
