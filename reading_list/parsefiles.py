@@ -29,7 +29,12 @@ c = conn.cursor()
 root = '/some/directory'
 
 # the folders to search for
-BASEPATHS = ["/home/jonas/OULU/Literatur/", "/home/jonas/FU/IKON/Literatur/", "/home/jonas/FU/Academic Working/Methods/", "/home/jonas/FU/Misc/"]
+BASEPATHS = [
+    "/home/jonas/OULU/Literatur/",
+    "/home/jonas/FU/IKON/Literatur/",
+    "/home/jonas/FU/Academic Working/",
+    "/home/jonas/FU/Misc/"
+]
 # BASEPATHS = ["/home/jonas/OULU/Literatur/"]
 
 
