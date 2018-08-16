@@ -9,7 +9,6 @@ import { nobottommargin, notopmargin, nobold } from "../common"
 
 const travel = {
   upcoming: [
-    { event: "CSCW'18", date: "3.-7. November 2018", location: "New York", status: "planned" },
     { event: "UbiComp'18", date: "9.-11. October 2018", location: "Singapore", status: "confirmed" },
     { event: "Mobile Human Contributions workshop (MHC'18)", date: "8. October 2018", location: "Singapore", status: "confirmed" },
   ],

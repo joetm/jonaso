@@ -3,6 +3,8 @@ import Link from "gatsby-link"
 import { Icon, Label, Button, Header, Divider, List, Item, Image, Container } from 'semantic-ui-react'
 
 import { spacer } from "../common"
+// import "../print.css"
+
 
 const _PORTFOLIO_URL = 'http://www.jonaso.de/portfolio/'
 
