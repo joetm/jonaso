@@ -8,9 +8,6 @@ import sqlite3
 import hashlib
 from fnmatch import fnmatch
 
-# BUF_SIZE is totally arbitrary, change for your app!
-BUF_SIZE = 65536  # lets read stuff in 64kb chunks!
-
 
 # caching
 conn = sqlite3.connect('cache.db')

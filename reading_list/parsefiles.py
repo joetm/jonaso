@@ -61,93 +61,95 @@ def extractMetadata(fullpath):
         return False
 
 
-def main():
-    print("Mining pdfs")
+# def main():
+print("Mining pdfs")
 
-    # establish a connection for caching
-    conn = sqlite3.connect('cache.db')
-    c = conn.cursor()
+# establish a connection for caching
+conn = sqlite3.connect('cache.db')
+c = conn.cursor()
 
-    # read list
-    documents = []
+# read list
+documents = []
 
-    counter = 0
-    for root in BASEPATHS:
-        for path, subdirs, files in os.walk(root):
-            for name in files:
-                if fnmatch(name, PATTERN_READ):
+counter = 0
+for root in BASEPATHS:
+    for path, subdirs, files in os.walk(root):
+        for name in files:
+            if fnmatch(name, PATTERN_READ):
 
-                    counter = counter + 1
+                counter = counter + 1
 
-                    sha1 = hashlib.sha1()
+                sha1 = hashlib.sha1()
 
-                    fullpath = os.path.join(path, name)
+                fullpath = os.path.join(path, name)
 
-                    # calculate hash
-                    with open(fullpath, 'rb') as f:
-                        while True:
-                            data = f.read(BUF_SIZE)
-                            if not data:
-                                break
-                            # md5.update(data)
-                            sha1.update(data)
+                # calculate hash
+                with open(fullpath, 'rb') as f:
+                    while True:
+                        data = f.read(BUF_SIZE)
+                        if not data:
+                            break
+                        # md5.update(data)
+                        sha1.update(data)
 
-                    # print("SHA1: {0}".format(sha1.hexdigest()))
-                    thehash = sha1.hexdigest()
+                # print("SHA1: {0}".format(sha1.hexdigest()))
+                thehash = sha1.hexdigest()
 
-                    # cache check
-                    c.execute('SELECT * FROM documents WHERE hash=?', (thehash,))
-                    res = c.fetchone()
+                # cache check
+                c.execute('SELECT * FROM documents WHERE hash=?', (thehash,))
+                res = c.fetchone()
 
-                    # cached?
-                    if res != None:
-                        print ('cache hit', counter, ": ",  thehash)
-                        documents.append(json.loads(res[1]))
-                        continue
+                # cached?
+                if res != None:
+                    print ('cache hit', counter, ": ",  thehash)
+                    documents.append(json.loads(res[2]))
+                    continue
 
-                    metadata = extractMetadata(fullpath)
-                    if not metadata:
-                        continue
+                metadata = extractMetadata(fullpath)
+                if not metadata:
+                    continue
 
-                    print (counter, ": ",  thehash)
+                print (counter, ": ",  thehash)
 
-                    # get my keywords (not the author keywords)
-                    keywords = path.replace(root, '').replace('/',' > ')
-                    metadata['keywords'] = keywords
+                # get my keywords (not the author keywords)
+                keywords = path.replace(root, '').replace('/',' > ')
+                metadata['keywords'] = keywords
 
-                    # calculate the priority rating
-                    metadata['priority'] = 0 if name.startswith('-') else 1
-                    if metadata['priority'] > 0:
-                        metadata['priority'] = len(name) - len(name.lstrip('!'))
+                # calculate the priority rating
+                metadata['priority'] = 0 if name.startswith('-') else 1
+                if metadata['priority'] > 0:
+                    metadata['priority'] = len(name) - len(name.lstrip('!'))
 
-                    # save cache
-                    c.execute("INSERT INTO documents VALUES (?,?,?)", (thehash, int(time.time()), json.dumps(metadata, ensure_ascii=True)))
-                    conn.commit()
+                # save cache
+                c.execute("INSERT INTO documents VALUES (?,?,?)", (thehash, int(time.time()), json.dumps(metadata, ensure_ascii=True)))
+                conn.commit()
 
-                    documents.append(metadata)
+                documents.append(metadata)
 
-    # sort by modified data
-    documents.sort(key=lambda x: x['modified'], reverse=True)
+# sort by modified data
+documents.sort(key=lambda x: x['modified'], reverse=True)
 
-    # write the full list
-    with open('readlist-full.json', 'w') as LISTFILE:
-        json.dump({
-            'modified': int(time.time()),
-            'documents': documents
-        }, LISTFILE, indent=4)
+# write the full list
+out = {
+        'modified': int(time.time()),
+        'documents': documents
+    }
+with open('readlist-full.json', 'w') as LISTFILE:
+    json.dump(out, LISTFILE, indent=4)
 
-    # write the latest-100 list
-    del documents[100:]
-    with open('readlist-latest.json', 'w') as LISTFILE:
-        json.dump(output = {
-           'modified': int(time.time()),
-            'documents': documents
-        }, LISTFILE, indent=4)
+# write the latest-100 list
+del documents[100:]
+out = {
+       'modified': int(time.time()),
+        'documents': documents
+    }
+with open('readlist-latest.json', 'w') as LISTFILE:
+    json.dump(out, LISTFILE, indent=4)
 
-    # close sqlite connection
-    conn.close()
+# close sqlite connection
+conn.close()
 
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
 

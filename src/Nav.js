@@ -28,6 +28,7 @@ export default class Nav extends Component {
     const { activeItem } = this.state
     // console.log('activeItem:', activeItem)
     return (
+      <header>
       <Menu fluid pointing stackable secondary widths="6" style={styles.navSpacer}>
         <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick}>
           Home
@@ -57,6 +58,7 @@ export default class Nav extends Component {
           </Menu.Menu>
         */}
       </Menu>
+      </header>
     )
   }
 }
