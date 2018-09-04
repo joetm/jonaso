@@ -2,7 +2,7 @@
 
 START_TIME=$SECONDS
 
-./start-docker.sh &
+# ./start-docker.sh &
 
 ./parsefiles.py
 
