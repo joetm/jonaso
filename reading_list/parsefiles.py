@@ -9,8 +9,8 @@ import hashlib
 from fnmatch import fnmatch
 
 # BUF_SIZE is totally arbitrary
-# read stuff in 64kb chunks
-BUF_SIZE = 65536
+# read stuff in 64kb chunks -> 65536
+BUF_SIZE = 131072
 
 # the folders to search for
 BASEPATHS = [
@@ -107,6 +107,9 @@ for root in BASEPATHS:
 
                 metadata = extractMetadata(fullpath)
                 if not metadata:
+	                # speed up future processing for these misses
+	                c.execute("INSERT INTO documents VALUES (?,?,?)", (thehash, int(time.time()), '{}'))
+	                conn.commit()
                     continue
 
                 print (counter, ": ",  thehash)
