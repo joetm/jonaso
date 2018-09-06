@@ -102,14 +102,16 @@ for root in BASEPATHS:
                 # cached?
                 if res != None:
                     print ('cache hit', counter, ": ",  thehash)
-                    documents.append(json.loads(res[2]))
+                    parseJSON = json.loads(res[2])
+                    if parseJSON:
+                        documents.append(parseJSON)
                     continue
 
                 metadata = extractMetadata(fullpath)
                 if not metadata:
-	                # speed up future processing for these misses
-	                c.execute("INSERT INTO documents VALUES (?,?,?)", (thehash, int(time.time()), '{}'))
-	                conn.commit()
+                    # speed up future processing for these misses
+                    c.execute("INSERT INTO documents VALUES (?,?,?)", (thehash, int(time.time()), '{}'))
+                    conn.commit()
                     continue
 
                 print (counter, ": ",  thehash)
