@@ -291,6 +291,14 @@ class CV extends React.Component {
                   <Item.Group>
 
                     <Item>
+                      <div style={styles.datum}>2018</div>
+                      <Item.Content>
+                        <Item.Header>Student Travel Grant</Item.Header>
+                        <Item.Description>UbiComp/ISWC 2018</Item.Description>
+                      </Item.Content>
+                    </Item>
+
+                    <Item>
                       <div style={styles.datum}>2015</div>
                       <Item.Content>
                         <Item.Header>Distinction</Item.Header>
@@ -339,6 +347,7 @@ class CV extends React.Component {
 	                  </Item>
 
 	                </Item.Group>
+
 
                 <Header id="service" size="medium">Supervisions</Header>
 
@@ -394,6 +403,21 @@ class CV extends React.Component {
 
                   </Item.Group>
 
+
+                <Header id="service" size="medium">Student Volunteering</Header>
+
+                  <Item.Group>
+
+                    <Item>
+                      <div style={styles.datum}>2018</div>
+                      <Item.Content>
+                        <Item.Header><a href="http://ubicomp.org/ubicomp2018/">UbiComp 2018</a></Item.Header>
+                      </Item.Content>
+                    </Item>
+
+                  </Item.Group>
+
+
                 <Header id="service" size="medium">Peer Review</Header>
 
                   <Item.Group>
@@ -409,6 +433,13 @@ class CV extends React.Component {
                       <div style={styles.datum}>2018</div>
                       <Item.Content>
                         <Item.Header><a href="http://hicss.hawaii.edu/">HICSS-52</a></Item.Header>
+                      </Item.Content>
+                    </Item>
+
+                    <Item>
+                      <div style={styles.datum}>2018</div>
+                      <Item.Content>
+                        <Item.Header><a href="https://imwut.acm.org/">IMWUT'18</a></Item.Header>
                       </Item.Content>
                     </Item>
 
