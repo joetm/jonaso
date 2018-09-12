@@ -1,28 +1,77 @@
 {
-    "modified": 1536600713,
+    "modified": 1536775253,
     "documents": [
         {
+            "authors": [
+                "Peter Pirolli"
+            ],
+            "keywords": "Information Foraging",
+            "year": 2004,
+            "title": "Information Foraging",
+            "priority": 3,
+            "modified": 1536772860
+        },
+        {
+            "authors": [
+                "Andy Boucher",
+                "Dean Brown",
+                "Liliana Ovalle",
+                "Andy Sheen",
+                "Mike Vanis",
+                "William Odom",
+                "Doenja Oogjes",
+                "William Gaver"
+            ],
+            "keywords": "Design, HCI, UI, UX > Cultural Probes",
+            "year": 2018,
+            "title": "TaskCam: Designing and Testing an Open Tool for Cultural Probes Studies",
+            "priority": 1,
+            "modified": 1536772155
+        },
+        {
+            "authors": [
+                "Evgeny Krivosheev",
+                "Fabio Casati",
+                "Boualem Benatallah"
+            ],
+            "keywords": "Crowd, Human Computation, GWAP > Applications > Research > Literature review, paper screening",
+            "year": 2018,
+            "title": "Crowd-based Multi-Predicate Screening of Papers in Literature Reviews",
+            "priority": 1,
+            "modified": 1536688136
+        },
+        {
+            "authors": [
+                "John R. Hayes",
+                "Linda Flower"
+            ],
+            "keywords": "Writing",
+            "year": 2008,
+            "title": "A Cognitive Process Theory of Writing",
+            "priority": 3,
+            "modified": 1536680047
+        },
+        {
             "title": "Searcher\u2019s Assessments of Task Complexity for Web Searching",
-            "modified": 1536428807,
             "keywords": "Search > Task Complexity",
             "year": 2004,
             "authors": [
                 "David J. Bell",
                 "Ian Ruthven"
             ],
-            "priority": 3
+            "priority": 3,
+            "modified": 1536428807
         },
         {
             "title": "AI Atlas AI Now",
-            "modified": 1536397728,
             "keywords": "Algorithms > Algorithm Awareness",
             "year": 2018,
             "authors": [],
-            "priority": 0
+            "priority": 0,
+            "modified": 1536397728
         },
         {
             "title": "Community-based Crowdsourcing",
-            "modified": 1536395257,
             "keywords": "Crowd, Human Computation, GWAP > Communitysourcing",
             "year": 2014,
             "authors": [
@@ -31,55 +80,52 @@
                 "Andrea Mauri",
                 "Riccardo Volonterio"
             ],
-            "priority": 1
+            "priority": 1,
+            "modified": 1536395257
         },
         {
             "title": "What Is Sleep: A Dynamic Activity",
-            "modified": 1536391293,
             "keywords": "Sleep, Dreaming",
             "year": 2018,
             "authors": [],
-            "priority": 0
+            "priority": 0,
+            "modified": 1536391293
         },
         {
-            "title": "Taking Control of Work-Life Balance with Microboundaries",
-            "modified": 1536342795,
-            "keywords": "Work-Life Balance > Microboundaries",
-            "year": 2017,
             "authors": [
                 "Marta Cecchinato"
             ],
-            "priority": 1
+            "keywords": "Work-Life Balance > Microboundaries",
+            "year": 2017,
+            "title": "Taking Control of Work-Life Balance with Microboundaries",
+            "priority": 1,
+            "modified": 1536342795
         },
         {
-            "title": "CrowdQ: Crowdsourced Query Understanding",
-            "modified": 1536326931,
-            "keywords": "Crowd, Human Computation, GWAP > Applications > Search, Querying",
-            "year": 2012,
             "authors": [
                 "Gianluca Demartini",
                 "Beth Trushkowsky",
                 "Tim Kraska",
                 "Michael J. Franklin"
             ],
-            "priority": 2
+            "keywords": "Crowd, Human Computation, GWAP > Applications > Search, Querying",
+            "year": 2012,
+            "title": "CrowdQ: Crowdsourced Query Understanding",
+            "priority": 2,
+            "modified": 1536326931
         },
         {
-            "title": "The Anatomy of a Large-Scale Social Search Engine",
-            "modified": 1536323264,
-            "keywords": "Search > Social Search > Aardvark",
-            "year": 2010,
             "authors": [
                 "Damon Horowitz",
                 "Sepandar D. Kamvar"
             ],
-            "priority": 3
+            "keywords": "Search > Social Search > Aardvark",
+            "year": 2010,
+            "title": "The Anatomy of a Large-Scale Social Search Engine",
+            "priority": 3,
+            "modified": 1536323264
         },
         {
-            "title": "Human-Assisted Graph Search: It\u2019s Okay to Ask Questions",
-            "modified": 1536321713,
-            "keywords": "Crowd, Human Computation, GWAP > Applications > Search, Querying > Graph Search",
-            "year": 2010,
             "authors": [
                 "Aditya Parameswaran",
                 "Anish Das Sarma",
@@ -87,13 +133,13 @@
                 "Neoklis Polyzotis",
                 "Jennifer Widom"
             ],
-            "priority": 0
+            "keywords": "Crowd, Human Computation, GWAP > Applications > Search, Querying > Graph Search",
+            "year": 2010,
+            "title": "Human-Assisted Graph Search: It\u2019s Okay to Ask Questions",
+            "priority": 0,
+            "modified": 1536321713
         },
         {
-            "title": "CrowdDB: Answering Queries with Crowdsourcing",
-            "modified": 1536317771,
-            "keywords": "Crowd, Human Computation, GWAP > Applications > Database",
-            "year": 2011,
             "authors": [
                 "Michael J. Franklin",
                 "Donald Kossmann",
@@ -101,35 +147,38 @@
                 "Sukriti Ramesh",
                 "Reynold Xin"
             ],
-            "priority": 3
+            "keywords": "Crowd, Human Computation, GWAP > Applications > Database",
+            "year": 2011,
+            "title": "CrowdDB: Answering Queries with Crowdsourcing",
+            "priority": 3,
+            "modified": 1536317771
         },
         {
-            "title": "Some Exploratory Discourse on Metadiscourse",
-            "modified": 1536310232,
-            "keywords": "Writing > Exploratory Writing > Metadiscourse",
-            "year": 2018,
             "authors": [
                 "William J. Vande Kopple",
                 "on Metadiscourse"
             ],
-            "priority": 1
+            "keywords": "Writing > Exploratory Writing > Metadiscourse",
+            "year": 2018,
+            "title": "Some Exploratory Discourse on Metadiscourse",
+            "priority": 1,
+            "modified": 1536310232
         },
         {
-            "title": "Crisis in Venezuela",
-            "modified": 1536239213,
-            "keywords": "Migration, Asylum, Immigration",
-            "year": 2018,
             "authors": [
                 "Paola Ram\u00edrez",
                 "Soldados de Franelas",
                 "Leopoldo L\u00f3pez",
                 "Freddy Guevara"
             ],
-            "priority": 0
+            "keywords": "Migration, Asylum, Immigration",
+            "year": 2018,
+            "title": "Crisis in Venezuela",
+            "priority": 0,
+            "modified": 1536239213
         },
         {
             "title": "Can you Trust the Trend? Discovering Simpson\u2019s Paradoxes in Social Data",
-            "modified": 1536211358,
             "keywords": "Communities, Networks > Bias > Simpson's Paradox",
             "year": 2018,
             "authors": [
@@ -138,11 +187,11 @@
                 "Peter G. Fennell",
                 "Kristina Lerman"
             ],
-            "priority": 0
+            "priority": 0,
+            "modified": 1536211358
         },
         {
             "title": "The Worst Passwords You Can Use",
-            "modified": 1536166317,
             "keywords": "Web Architecture",
             "year": 2018,
             "authors": [
@@ -154,43 +203,40 @@
                 "EMILY DREYFUSS",
                 "GET OUR NEWSLETTER"
             ],
-            "priority": 0
+            "priority": 0,
+            "modified": 1536166317
         },
         {
-            "title": "Human\u2013Information Interaction with Complex Information for Decision-Making",
-            "modified": 1536134918,
-            "keywords": "Search > Human Information Interaction",
-            "year": 2015,
             "authors": [
                 "Michael J. Albers"
             ],
-            "priority": 3
+            "keywords": "Search > Human Information Interaction",
+            "year": 2015,
+            "title": "Human\u2013Information Interaction with Complex Information for Decision-Making",
+            "priority": 3,
+            "modified": 1536134918
         },
         {
-            "title": "Ensuring you do tomorrow what you commit to today",
-            "modified": 1536132465,
+            "authors": [],
             "keywords": "Psychology > Commitment > Commitment Device",
             "year": 2018,
-            "authors": [],
-            "priority": 1
+            "title": "Ensuring you do tomorrow what you commit to today",
+            "priority": 1,
+            "modified": 1536132465
         },
         {
-            "title": "Crowdsourcing for Search and Data Mining",
-            "modified": 1536130059,
-            "keywords": "Search > Crowdsourced Search",
-            "year": "N/A",
             "authors": [
                 "Matthew Lease",
                 "Vitor R. Carvalho",
                 "Emine Yilmaz"
             ],
-            "priority": 0
+            "keywords": "Search > Crowdsourced Search",
+            "year": "N/A",
+            "title": "Crowdsourcing for Search and Data Mining",
+            "priority": 0,
+            "modified": 1536130059
         },
         {
-            "title": "\"Satisfaction with Failure\" or \"Unsatisfied Success\": Investigating the Relationship between Search Success and User Satisfaction",
-            "modified": 1536129715,
-            "keywords": "Search > Search Success, Satisfaction",
-            "year": 2018,
             "authors": [
                 "Mengyang Liu",
                 "Yiqun Liu",
@@ -199,24 +245,24 @@
                 "Min Zhang",
                 "Shaoping Ma"
             ],
-            "priority": 1
+            "keywords": "Search > Search Success, Satisfaction",
+            "year": 2018,
+            "title": "\"Satisfaction with Failure\" or \"Unsatisfied Success\": Investigating the Relationship between Search Success and User Satisfaction",
+            "priority": 1,
+            "modified": 1536129715
         },
         {
-            "title": "Searching Data Portals \u2013 More Complex Than We Thought?",
-            "modified": 1536129336,
-            "keywords": "Search > Data Search, Dataset Search",
-            "year": 2017,
             "authors": [
                 "Laura M Koesten",
                 "Jaspreet Singh"
             ],
-            "priority": 0
-        },
-        {
-            "title": "A Query Log Analysis of Dataset Search",
-            "modified": 1536129064,
             "keywords": "Search > Data Search, Dataset Search",
             "year": 2017,
+            "title": "Searching Data Portals \u2013 More Complex Than We Thought?",
+            "priority": 0,
+            "modified": 1536129336
+        },
+        {
             "authors": [
                 "Emilia Kacprzak",
                 "2(B",
@@ -225,100 +271,100 @@
                 "Elena Simperl",
                 "Jeni Tennison"
             ],
-            "priority": 0
+            "keywords": "Search > Data Search, Dataset Search",
+            "year": 2017,
+            "title": "A Query Log Analysis of Dataset Search",
+            "priority": 0,
+            "modified": 1536129064
         },
         {
-            "title": "Inferring the Mood of a Community From Their Walking Speed: A Preliminary Study",
-            "modified": 1536087128,
-            "keywords": "Affect, Kansei Engineering, Affective Computing > Detecting Mood",
-            "year": 2018,
             "authors": [
                 "Oludamilare Matthews"
             ],
-            "priority": 0
+            "keywords": "Affect, Kansei Engineering, Affective Computing > Detecting Mood",
+            "year": 2018,
+            "title": "Inferring the Mood of a Community From Their Walking Speed: A Preliminary Study",
+            "priority": 0,
+            "modified": 1536087128
         },
         {
-            "title": "What Do Laboratory Experiments Measuring Social Preferences Reveal about the Real World?",
-            "modified": 1536085515,
-            "keywords": "Methods > Laboratory Experiment",
-            "year": 2008,
             "authors": [
                 "Steven D. Levitt",
                 "John A. List"
             ],
-            "priority": 3
+            "keywords": "Methods > Laboratory Experiment",
+            "year": 2008,
+            "title": "What Do Laboratory Experiments Measuring Social Preferences Reveal about the Real World?",
+            "priority": 3,
+            "modified": 1536085515
         },
         {
-            "title": "Framework Analysis: A Qualitative Methodology for Applied Policy Research",
-            "modified": 1536080906,
-            "keywords": "Methods > Qualitative > Framework Analysis",
-            "year": 2010,
             "authors": [
                 "Aashish Srivastava",
                 "S. Bruce Thomson"
             ],
-            "priority": 1
+            "keywords": "Methods > Qualitative > Framework Analysis",
+            "year": 2010,
+            "title": "Framework Analysis: A Qualitative Methodology for Applied Policy Research",
+            "priority": 1,
+            "modified": 1536080906
         },
         {
-            "title": "How To Get Kids To Do Chores: Does The Maya Method Work?",
-            "modified": 1536042890,
+            "authors": [],
             "keywords": "Parenting",
             "year": 2018,
-            "authors": [],
-            "priority": 0
+            "title": "How To Get Kids To Do Chores: Does The Maya Method Work?",
+            "priority": 0,
+            "modified": 1536042890
         },
         {
-            "title": "Amazon Sets Its Sights on the $88 Billion Online Ad Market",
-            "modified": 1536042328,
+            "authors": [],
             "keywords": "Amazon",
             "year": 2018,
-            "authors": [],
-            "priority": 0
+            "title": "Amazon Sets Its Sights on the $88 Billion Online Ad Market",
+            "priority": 0,
+            "modified": 1536042328
         },
         {
-            "title": "ModelDB: A Database to Support Computational Neuroscience",
-            "modified": 1536037707,
-            "keywords": "Neuroscience > Computational Neuroscience",
-            "year": 2004,
             "authors": [
                 "MICHAEL L. HINES"
             ],
-            "priority": 0
+            "keywords": "Neuroscience > Computational Neuroscience",
+            "year": 2004,
+            "title": "ModelDB: A Database to Support Computational Neuroscience",
+            "priority": 0,
+            "modified": 1536037707
         },
         {
-            "title": "Boeing Launches Info War on the Navy\u2019s F-35 THIS WEEK: Defense stocks slide; Heritage\u2019s budget recs; and more. DHS Looks to Reboot Relationship with Election Officials Border-Guard Dogs to Get Health-Monitoring Collars Lockheed to Move F-16 Production to South Carolina New Free eBook: Cyber Warfare",
-            "modified": 1535998601,
-            "keywords": "Fake News, Credibility",
-            "year": 2017,
             "authors": [
                 "Joel Garreau"
             ],
-            "priority": 0
+            "keywords": "Fake News, Credibility",
+            "year": 2017,
+            "title": "Boeing Launches Info War on the Navy\u2019s F-35 THIS WEEK: Defense stocks slide; Heritage\u2019s budget recs; and more. DHS Looks to Reboot Relationship with Election Officials Border-Guard Dogs to Get Health-Monitoring Collars Lockheed to Move F-16 Production to South Carolina New Free eBook: Cyber Warfare",
+            "priority": 0,
+            "modified": 1535998601
         },
         {
-            "title": "floatio : Floating Tangible User Interface Based on Animacy Perception",
-            "modified": 1535951576,
-            "keywords": "Design, HCI, UI, UX > Tangible UI, TUI",
-            "year": 2016,
             "authors": [
                 "Toshiya Yui",
                 "Tomoko Hashida"
             ],
-            "priority": 0
+            "keywords": "Design, HCI, UI, UX > Tangible UI, TUI",
+            "year": 2016,
+            "title": "floatio : Floating Tangible User Interface Based on Animacy Perception",
+            "priority": 0,
+            "modified": 1535951576
         },
         {
-            "title": "BY MAKAYLA LEAZOTT HOME BROOKE BURKE MUST HAVE RECALLS CONTRIBUTORS CONTESTS & TWITTER PARTIES BECOME AN INSIDER MODERNMOM STORE PARENTING COOKING AROUND THE HOUSE CAREER LIVING HEALTHY CELEBRATE TECH ENTERTAINMENT HOT TOPICS GAMES Share",
-            "modified": 1535907876,
+            "authors": [],
             "keywords": "Healthcare > Delayed Drowning",
             "year": 2018,
-            "authors": [],
-            "priority": 0
+            "title": "BY MAKAYLA LEAZOTT HOME BROOKE BURKE MUST HAVE RECALLS CONTRIBUTORS CONTESTS & TWITTER PARTIES BECOME AN INSIDER MODERNMOM STORE PARENTING COOKING AROUND THE HOUSE CAREER LIVING HEALTHY CELEBRATE TECH ENTERTAINMENT HOT TOPICS GAMES Share",
+            "priority": 0,
+            "modified": 1535907876
         },
         {
-            "title": "Interactive Guidance Techniques for Improving Creative Feedback",
-            "modified": 1535904696,
-            "keywords": "Creativity > Feedback",
-            "year": 2018,
             "authors": [
                 "Tricia J. Ngoon",
                 "Ailie Fraser",
@@ -326,26 +372,27 @@
                 "Mira Dontcheva",
                 "Scott Klemmer"
             ],
-            "priority": 3
+            "keywords": "Creativity > Feedback",
+            "year": 2018,
+            "title": "Interactive Guidance Techniques for Improving Creative Feedback",
+            "priority": 3,
+            "modified": 1535904696
         },
         {
             "title": "The Trials and Tribulations of Working with Structured Data - a Study on Information Seeking Behaviour",
-            "modified": 1535899192,
-            "keywords": "Search > WDAqua",
-            "year": 2017,
             "authors": [
                 "Laura M Koesten",
                 "Emilia Kacprzak",
                 "Jenifer F A Tennison",
                 "Elena Simperl"
             ],
-            "priority": 2
+            "year": 2017,
+            "keywords": "Search > WDAqua",
+            "priority": 2,
+            "modified": 1535899192
         },
         {
             "title": "Pocket Transfers: Interaction Techniques for Transferring Content from Situated Displays to Mobile Devices",
-            "modified": 1535889565,
-            "keywords": "Crowdsourcing > Situated Crowdsourcing > Mobile Content Transfer",
-            "year": 2018,
             "authors": [
                 "Ville M\u00e4kel\u00e4",
                 "Mohamed Khamis",
@@ -354,33 +401,33 @@
                 "Markku Turunen",
                 "Florian Alt"
             ],
-            "priority": 2
+            "year": 2018,
+            "keywords": "Crowdsourcing > Situated Crowdsourcing > Mobile Content Transfer",
+            "priority": 2,
+            "modified": 1535889565
         },
         {
             "title": "Repeated Measures ANOVA using R",
-            "modified": 1535887924,
-            "keywords": "Methods > Statistics > ANOVA, MANOVA > Repeated Measures, WIthin-Subject",
-            "year": 2018,
             "authors": [
                 "Paul Gribble"
             ],
-            "priority": 0
+            "year": 2018,
+            "keywords": "Methods > Statistics > ANOVA, MANOVA > Repeated Measures, WIthin-Subject",
+            "priority": 0,
+            "modified": 1535887924
         },
         {
             "title": "An Ambient Awareness Tool for Supporting Supervised Collaborative Problem Solving",
-            "modified": 1535825390,
-            "keywords": "CSCW > Ambient Awareness",
-            "year": 2012,
             "authors": [
                 "Hamed S. Alavi"
             ],
-            "priority": 2
+            "year": 2012,
+            "keywords": "CSCW > Ambient Awareness",
+            "priority": 2,
+            "modified": 1535825390
         },
         {
             "title": "CrowdPickUp: Crowdsourcing Task Pickup in the Wild",
-            "modified": 1535822074,
-            "keywords": "Crowdsourcing > Situated Crowdsourcing > Systems > CrowdPickup",
-            "year": 2017,
             "authors": [
                 "JORGE GONCALVES",
                 "SIMO HOSIO",
@@ -388,34 +435,34 @@
                 "FURQAN AHMED",
                 "VASSILIS KOSTAKOS"
             ],
-            "priority": 3
+            "year": 2017,
+            "keywords": "Crowdsourcing > Situated Crowdsourcing > Systems > CrowdPickup",
+            "priority": 3,
+            "modified": 1535822074
         },
         {
             "title": "Use a bus stop touchscreen to kill me \u2013 and help out",
-            "modified": 1535820825,
-            "keywords": "Crowdsourcing > Situated Crowdsourcing > General",
-            "year": 2018,
             "authors": [],
-            "priority": 1
+            "year": 2018,
+            "keywords": "Crowdsourcing > Situated Crowdsourcing > General",
+            "priority": 1,
+            "modified": 1535820825
         },
         {
             "title": "Inspiring AWE: Transforming Clinic Waiting Rooms into Informal Learning Environments with Active Waiting Education-.7em",
-            "modified": 1535820621,
-            "keywords": "Crowdsourcing > Situated Crowdsourcing",
-            "year": 2018,
             "authors": [
                 "Zeina Atrash Leong",
                 "Michael S. Horn",
                 "Lisa Thaniel",
                 "Emily Meier"
             ],
-            "priority": 1
+            "year": 2018,
+            "keywords": "Crowdsourcing > Situated Crowdsourcing",
+            "priority": 1,
+            "modified": 1535820621
         },
         {
             "title": "The Future of Crowd Work",
-            "modified": 1535814051,
-            "keywords": "Future of Work > Microtasks, Crowdsourcing",
-            "year": 2012,
             "authors": [
                 "Aniket Kittur",
                 "Jeffrey V. Nickerson",
@@ -426,11 +473,13 @@
                 "Matthew Lease",
                 "John J. Horton"
             ],
-            "priority": 3
+            "year": 2012,
+            "keywords": "Future of Work > Microtasks, Crowdsourcing",
+            "priority": 3,
+            "modified": 1535814051
         },
         {
             "title": "Surviving the Information Explosion: How People Find Their Electronic Information",
-            "modified": 1535802967,
             "keywords": "Search > Search Strategies",
             "year": 2003,
             "authors": [
@@ -439,75 +488,72 @@
                 "Mark S. Ackerman",
                 "David Karger"
             ],
-            "priority": 3
+            "priority": 3,
+            "modified": 1535802967
         },
         {
-            "title": "THE DESIGN OF BROWSING AND BERRYPICKING TECHNIQUES FOR THE ONLINE SEARCH INTERFACE",
-            "modified": 1535799021,
-            "keywords": "Search > Berrypicking",
-            "year": 2018,
             "authors": [
                 "Marcia J. Bates"
             ],
-            "priority": 3
+            "keywords": "Search > Berrypicking",
+            "year": 2018,
+            "title": "THE DESIGN OF BROWSING AND BERRYPICKING TECHNIQUES FOR THE ONLINE SEARCH INTERFACE",
+            "priority": 3,
+            "modified": 1535799021
         },
         {
-            "title": "CO2 - der wichtigste Indikator fu\u0308r die Luftqualita\u0308t",
-            "modified": 1535793481,
+            "authors": [],
             "keywords": "Air quality",
             "year": 2018,
-            "authors": [],
-            "priority": 0
+            "title": "CO2 - der wichtigste Indikator fu\u0308r die Luftqualita\u0308t",
+            "priority": 0,
+            "modified": 1535793481
         },
         {
-            "title": "Super-Human AI for Strategic Reasoning: Beating Top Pros in Heads-Up No-Limit Texas Hold'em",
-            "modified": 1535777547,
-            "keywords": "Machine Learning > Applications > Poker",
-            "year": 2017,
             "authors": [
                 "Tuomas Sandholm"
             ],
-            "priority": 0
+            "keywords": "Machine Learning > Applications > Poker",
+            "year": 2017,
+            "title": "Super-Human AI for Strategic Reasoning: Beating Top Pros in Heads-Up No-Limit Texas Hold'em",
+            "priority": 0,
+            "modified": 1535777547
         },
         {
-            "title": "What do we mean by style?",
-            "modified": 1535722496,
             "keywords": "Writing > Words, Phrases to avoid",
-            "year": 2018,
             "authors": [],
-            "priority": 2
+            "year": 2018,
+            "title": "What do we mean by style?",
+            "priority": 2,
+            "modified": 1535722496
         },
         {
-            "title": "Design Thinking Methods: A nity Diagrams",
-            "modified": 1535693970,
             "keywords": "Methods > Affinity Diagramming",
-            "year": 2018,
             "authors": [],
-            "priority": 1
+            "year": 2018,
+            "title": "Design Thinking Methods: A nity Diagrams",
+            "priority": 1,
+            "modified": 1535693970
         },
         {
-            "title": "Goodbye, Ello? Searches for new social network collapse",
-            "modified": 1535543934,
             "keywords": "Social Networks",
-            "year": 2018,
             "authors": [
                 "Charles Arthur"
             ],
-            "priority": 0
+            "year": 2018,
+            "title": "Goodbye, Ello? Searches for new social network collapse",
+            "priority": 0,
+            "modified": 1535543934
         },
         {
-            "title": "SAPM: Course Blog",
-            "modified": 1535543878,
             "keywords": "Software Development > User-Driven Development, UDD",
-            "year": 2018,
             "authors": [],
-            "priority": 0
+            "year": 2018,
+            "title": "SAPM: Course Blog",
+            "priority": 0,
+            "modified": 1535543878
         },
         {
-            "title": "LBSLab: A User Data Collection System in Mobile Environments",
-            "modified": 1535526997,
-            "keywords": "Mobile Phones > MHC'18",
-            "year": 2018,
             "authors": [
                 "Qingyuan Gong",
                 "Xinlei He",
@@ -521,81 +567,70 @@
                 "Xiaoming Fu",
                 "Xin Wang"
             ],
-            "priority": 0
+            "title": "LBSLab: A User Data Collection System in Mobile Environments",
+            "keywords": "Mobile Phones > MHC'18",
+            "priority": 0,
+            "year": 2018,
+            "modified": 1535526997
         },
         {
-            "title": "Improving Accuracy in Mobile Human Contributions: An Overview",
-            "modified": 1535525737,
-            "keywords": "Mobile Phones > MHC'18",
-            "year": 2018,
             "authors": [],
-            "priority": 2
+            "title": "Improving Accuracy in Mobile Human Contributions: An Overview",
+            "keywords": "Mobile Phones > MHC'18",
+            "priority": 2,
+            "year": 2018,
+            "modified": 1535525737
         },
         {
-            "title": "Challenges and Lessons from Working with Data Collected by Crowdfunding in the Wild",
-            "modified": 1535523321,
-            "keywords": "Mobile Phones > MHC'18",
-            "year": 2018,
             "authors": [
                 "Anja Exler",
                 "Andrea Schankin"
             ],
-            "priority": 2
-        },
-        {
-            "title": "Leveraging Multi-modal User-labeled Data for Improved Accuracy in Interpretation of ECG Recordings",
-            "modified": 1535520767,
             "keywords": "Mobile Phones > MHC'18",
             "year": 2018,
+            "title": "Challenges and Lessons from Working with Data Collected by Crowdfunding in the Wild",
+            "priority": 2,
+            "modified": 1535523321
+        },
+        {
             "authors": [
                 "Raju Maharjan",
                 "Per B\u00e6kgaard",
                 "Jakob E. Bardram"
             ],
-            "priority": 0
-        },
-        {
-            "title": "Experience Sampling as Information Transmission: Perspective and Implications",
-            "modified": 1535520554,
             "keywords": "Mobile Phones > MHC'18",
             "year": 2018,
+            "title": "Leveraging Multi-modal User-labeled Data for Improved Accuracy in Interpretation of ECG Recordings",
+            "priority": 0,
+            "modified": 1535520767
+        },
+        {
             "authors": [
                 "Daniel Buschek"
             ],
-            "priority": 0
+            "keywords": "Mobile Phones > MHC'18",
+            "year": 2018,
+            "title": "Experience Sampling as Information Transmission: Perspective and Implications",
+            "priority": 0,
+            "modified": 1535520554
         },
         {
-            "title": "1. Knowledge Organization Systems: An Overview",
-            "modified": 1535382824,
+            "authors": [],
             "keywords": "Knowledge > knowledge bases > Knowledge Organization, Knowledge Organisation Systems, KOS",
             "year": 2017,
-            "authors": [],
-            "priority": 0
+            "title": "1. Knowledge Organization Systems: An Overview",
+            "priority": 0,
+            "modified": 1535382824
         },
         {
-            "title": "EXPLORATORY BEHAVIOR IN THE DEVELOPMENT OF PERCEIVING, ACTING, AND THE ACQUIRING OF KNOWLEDGE",
-            "modified": 1535382326,
+            "authors": [],
             "keywords": "Knowledge > knowledge acquisition",
             "year": 2002,
-            "authors": [],
-            "priority": 0
+            "title": "EXPLORATORY BEHAVIOR IN THE DEVELOPMENT OF PERCEIVING, ACTING, AND THE ACQUIRING OF KNOWLEDGE",
+            "priority": 0,
+            "modified": 1535382326
         },
         {
-            "title": "A Cognitive Process Theory of Writing",
-            "modified": 1535379675,
-            "keywords": "Writing",
-            "year": 2008,
-            "authors": [
-                "John R. Hayes",
-                "Linda Flower"
-            ],
-            "priority": 3
-        },
-        {
-            "title": "UCSF Chimera\u2014A Visualization System for Exploratory Research and Analysis",
-            "modified": 1535351452,
-            "keywords": "Visualisation > Exploratory Research",
-            "year": 2004,
             "authors": [
                 "ERIC F. PETTERSEN",
                 "THOMAS D. GODDARD",
@@ -605,13 +640,13 @@
                 "ELAINE C. MENG",
                 "THOMAS E. FERRIN"
             ],
-            "priority": 0
+            "keywords": "Visualisation > Exploratory Research",
+            "year": 2004,
+            "title": "UCSF Chimera\u2014A Visualization System for Exploratory Research and Analysis",
+            "priority": 0,
+            "modified": 1535351452
         },
         {
-            "title": "Crowdsourcing Treatments for Low Back Pain",
-            "modified": 1535307529,
-            "keywords": "Crowdsourcing > Decision Support > AnswerBot > Back Pain",
-            "year": 2018,
             "authors": [
                 "Simo Johannes Hosio",
                 "Jaro Karppinen",
@@ -622,24 +657,24 @@
                 "Shin\u2019ichi Konomi",
                 "Vassilis Kostakos"
             ],
-            "priority": 2
-        },
-        {
-            "title": "COVER FEATURE MOBILE COACHING IN HEALTHCARE",
-            "modified": 1535304485,
             "keywords": "Crowdsourcing > Decision Support > AnswerBot > Back Pain",
             "year": 2018,
+            "title": "Crowdsourcing Treatments for Low Back Pain",
+            "priority": 2,
+            "modified": 1535307529
+        },
+        {
             "authors": [
                 "Simo Hosio",
                 "Niels van Berkel"
             ],
-            "priority": 3
+            "keywords": "Crowdsourcing > Decision Support > AnswerBot > Back Pain",
+            "year": 2018,
+            "title": "COVER FEATURE MOBILE COACHING IN HEALTHCARE",
+            "priority": 3,
+            "modified": 1535304485
         },
         {
-            "title": "The lobbying is fast and furious as gig companies seek relief from pro-labor Supreme Court ruling",
-            "modified": 1535211920,
-            "keywords": "Future of Work > Gig Economy",
-            "year": 2018,
             "authors": [
                 "Antoinette Siu",
                 "Edhuar Arellano",
@@ -648,120 +683,120 @@
                 "Allan Zaremberg",
                 "Caitlin Vega"
             ],
-            "priority": 0
+            "keywords": "Future of Work > Gig Economy",
+            "year": 2018,
+            "title": "The lobbying is fast and furious as gig companies seek relief from pro-labor Supreme Court ruling",
+            "priority": 0,
+            "modified": 1535211920
         },
         {
             "title": "SPIKE IN ONLINE GIG WORK: FLASH IN THE PAN OR FUTURE OF EMPLOYMENT?",
-            "modified": 1535183909,
-            "keywords": "Future of Work > Gig Economy",
-            "year": 2018,
             "authors": [
                 "Siddharth Suri",
                 "Mary L. Gray"
             ],
-            "priority": 0
+            "year": 2018,
+            "keywords": "Future of Work > Gig Economy",
+            "priority": 0,
+            "modified": 1535183909
         },
         {
             "title": "Local Standards for Sample Size at CHI",
-            "modified": 1535125222,
-            "keywords": "Methods > Statistics > Sampling > Sample Size",
-            "year": 2018,
             "authors": [
                 "Kelly Caine"
             ],
-            "priority": 3
+            "year": 2018,
+            "keywords": "Methods > Statistics > Sampling > Sample Size",
+            "priority": 3,
+            "modified": 1535125222
         },
         {
             "title": "Rapidly expanding fact-checking movement faces growing pains",
-            "modified": 1535033963,
-            "keywords": "Fake News, Credibility",
-            "year": 2018,
             "authors": [],
-            "priority": 0
+            "year": 2018,
+            "keywords": "Fake News, Credibility",
+            "priority": 0,
+            "modified": 1535033963
         },
         {
-            "title": "Exploiting the Digitization of Leisure Time: Casual Work and Additional Earnings for Individuals on Crowdworking Platforms",
-            "modified": 1534788317,
-            "keywords": "Future of Work > Casual Work",
-            "year": 2018,
             "authors": [
                 "Volkmar Mrass"
             ],
-            "priority": 0
+            "keywords": "Future of Work > Casual Work",
+            "year": 2018,
+            "title": "Exploiting the Digitization of Leisure Time: Casual Work and Additional Earnings for Individuals on Crowdworking Platforms",
+            "priority": 0,
+            "modified": 1534788317
         },
         {
-            "title": "PeerStudio: Rapid Peer Feedback Emphasizes Revision and Improves Performance",
-            "modified": 1534781631,
-            "keywords": "Learning > Peer Review, Feedback, Critique, Formative Assessment",
-            "year": 2015,
             "authors": [
                 "Chinmay Kulkarni",
                 "Michael S. Bernstein",
                 "Scott Klemmer"
             ],
-            "priority": 3
+            "keywords": "Learning > Peer Review, Feedback, Critique, Formative Assessment",
+            "year": 2015,
+            "title": "PeerStudio: Rapid Peer Feedback Emphasizes Revision and Improves Performance",
+            "priority": 3,
+            "modified": 1534781631
         },
         {
-            "title": "Common Mistakes Made by Creative Writers How to Master Clarity in Writing",
-            "modified": 1534772326,
-            "keywords": "Writing > Creative Writing",
-            "year": 2018,
             "authors": [
                 "WRITERS' TREASURE"
             ],
-            "priority": 0
+            "keywords": "Writing > Creative Writing",
+            "year": 2018,
+            "title": "Common Mistakes Made by Creative Writers How to Master Clarity in Writing",
+            "priority": 0,
+            "modified": 1534772326
         },
         {
-            "title": "Constructing a Desiring User: Discourse, Rurality, and Design in Location-Based Social Networks",
-            "modified": 1534695532,
-            "keywords": "Communities, Networks > Location-based",
-            "year": 2016,
             "authors": [
                 "Jean Hardy",
                 "Silvia Lindtner"
             ],
-            "priority": 0
+            "keywords": "Communities, Networks > Location-based",
+            "year": 2016,
+            "title": "Constructing a Desiring User: Discourse, Rurality, and Design in Location-Based Social Networks",
+            "priority": 0,
+            "modified": 1534695532
         },
         {
-            "title": "Understanding IT-Culture Conflicts to Drive Successful Technochange Projects \u2013 a Case Study",
-            "modified": 1534666152,
-            "keywords": "Change Management > Technochange",
-            "year": 2017,
             "authors": [
                 "Andreas Janson",
                 "Jan Marco Leimeister",
                 "Christoph Peters"
             ],
-            "priority": 1
+            "keywords": "Change Management > Technochange",
+            "year": 2017,
+            "title": "Understanding IT-Culture Conflicts to Drive Successful Technochange Projects \u2013 a Case Study",
+            "priority": 1,
+            "modified": 1534666152
         },
         {
-            "title": "Where to Wear It: Functional, Technical, and Social Considerations in On-Body Location for Wearable Technology 20 Years of Designing for Wearability",
-            "modified": 1534665107,
-            "keywords": "Ubiquitous Computing",
-            "year": 2017,
             "authors": [
                 "Clint Zeagler",
                 "Francine Gemperle",
                 "Chris Kasabach"
             ],
-            "priority": 0
+            "keywords": "Ubiquitous Computing",
+            "year": 2017,
+            "title": "Where to Wear It: Functional, Technical, and Social Considerations in On-Body Location for Wearable Technology 20 Years of Designing for Wearability",
+            "priority": 0,
+            "modified": 1534665107
         },
         {
-            "title": "Self-Critical Perfectionism, Coping, Hassles, and Current Distress: A Structural Equation Modeling Approach",
-            "modified": 1534663360,
             "keywords": "Psychology > Perfectionism",
-            "year": 2000,
             "authors": [
                 "David M. Dunkley",
                 "Kirk R. Blankstein"
             ],
-            "priority": 0
+            "year": 2000,
+            "title": "Self-Critical Perfectionism, Coping, Hassles, and Current Distress: A Structural Equation Modeling Approach",
+            "priority": 0,
+            "modified": 1534663360
         },
         {
-            "title": "Shifting the Balance Between Goals and Habits: Five Failures in Experimental Habit Induction",
-            "modified": 1534662172,
-            "keywords": "Learning > Habit Induction",
-            "year": 2018,
             "authors": [
                 "Sanne de Wit",
                 "Merel Kindt",
@@ -771,90 +806,91 @@
                 "Hira Mirza",
                 "Claire M. Gillan"
             ],
-            "priority": 0
+            "keywords": "Learning > Habit Induction",
+            "year": 2018,
+            "title": "Shifting the Balance Between Goals and Habits: Five Failures in Experimental Habit Induction",
+            "priority": 0,
+            "modified": 1534662172
         },
         {
-            "title": "A Mathematical Theory of Communication",
-            "modified": 1534617910,
-            "keywords": "Knowledge > general concepts > Information Theory",
-            "year": 1998,
             "authors": [
                 "By C. E. SHANNON"
             ],
-            "priority": 0
+            "keywords": "Knowledge > general concepts > Information Theory",
+            "year": 1998,
+            "title": "A Mathematical Theory of Communication",
+            "priority": 0,
+            "modified": 1534617910
         },
         {
-            "title": "Is the staggeringly profitable business of scientific publishing bad for science? | Science | The Guardian",
-            "modified": 1534616477,
-            "keywords": "Open Science, e-Science, e-Research, Research Data, Citizen Science",
-            "year": 2017,
             "authors": [
                 "Claudio Aspesi"
             ],
-            "priority": 0
+            "keywords": "Open Science, e-Science, e-Research, Research Data, Citizen Science",
+            "year": 2017,
+            "title": "Is the staggeringly profitable business of scientific publishing bad for science? | Science | The Guardian",
+            "priority": 0,
+            "modified": 1534616477
         },
         {
-            "title": "Assessing dimensions of perceived visual aesthetics of web sites",
-            "modified": 1534575348,
-            "keywords": "Aesthetics > Scales",
-            "year": 2004,
             "authors": [
                 "Talia Lavie",
                 "Noam Tractinsky"
             ],
-            "priority": 3
+            "keywords": "Aesthetics > Scales",
+            "year": 2004,
+            "title": "Assessing dimensions of perceived visual aesthetics of web sites",
+            "priority": 3,
+            "modified": 1534575348
         },
         {
-            "title": "What Can You Do with a Rock? Affordance Extraction via Word Embeddings",
-            "modified": 1534527645,
             "keywords": "Machine Learning > Applications > Affordance detection",
-            "year": 2017,
             "authors": [
                 "Nancy Fulda",
                 "Daniel Ricks",
                 "Ben Murdoch",
                 "David Wingate"
             ],
-            "priority": 0
+            "year": 2017,
+            "title": "What Can You Do with a Rock? Affordance Extraction via Word Embeddings",
+            "priority": 0,
+            "modified": 1534527645
         },
         {
-            "title": "Are you hooked on competence porn?",
-            "modified": 1534526942,
-            "keywords": "0 Begriffserklaerungen",
-            "year": 2018,
             "authors": [
                 "Lewis Dartnell"
             ],
-            "priority": 0
+            "keywords": "0 Begriffserklaerungen",
+            "year": 2018,
+            "title": "Are you hooked on competence porn?",
+            "priority": 0,
+            "modified": 1534526942
         },
         {
-            "title": "MICROWORKERS VS. FACEBOOK: THE IMPACT OF CROWDSOURCING PLATFORM CHOICE ON EXPERIMENTAL RESULTS",
-            "modified": 1534518833,
             "keywords": "Crowd, Human Computation, GWAP > Platforms",
-            "year": 2012,
             "authors": [
                 "B. Gardlo",
                 "M. Ries",
                 "T. Ho\u00dffeld",
                 "R. Schatz"
             ],
-            "priority": 1
+            "year": 2012,
+            "title": "MICROWORKERS VS. FACEBOOK: THE IMPACT OF CROWDSOURCING PLATFORM CHOICE ON EXPERIMENTAL RESULTS",
+            "priority": 1,
+            "modified": 1534518833
         },
         {
-            "title": "GIZMODO THE A.V. CLUB DEADSPIN JALOPNIK JEZEBEL KOTAKU LIFEHACKER SPLINTER THE TAKEOUT THE ROOT THE ONION CLICKH",
-            "modified": 1534498181,
             "keywords": "Crowd, Human Computation, GWAP > Issues",
-            "year": 2018,
             "authors": [
                 "Eric Limer"
             ],
-            "priority": 0
+            "year": 2018,
+            "title": "GIZMODO THE A.V. CLUB DEADSPIN JALOPNIK JEZEBEL KOTAKU LIFEHACKER SPLINTER THE TAKEOUT THE ROOT THE ONION CLICKH",
+            "priority": 0,
+            "modified": 1534498181
         },
         {
-            "title": "Mining Reliable Information from Crowdsourced Data",
-            "modified": 1534497723,
             "keywords": "Crowd, Human Computation, GWAP > Issues > Reproducability",
-            "year": 2018,
             "authors": [
                 "Jing Gao",
                 "Houping Xiao",
@@ -868,13 +904,13 @@
                 "Lu Su",
                 "Wenjun Jiang"
             ],
-            "priority": 0
+            "year": 2018,
+            "title": "Mining Reliable Information from Crowdsourced Data",
+            "priority": 0,
+            "modified": 1534497723
         },
         {
-            "title": "When the Crowd Challenges the Lab: Lessons Learnt from Subjective Studies on Image Aesthetic Appeal",
-            "modified": 1534443214,
             "keywords": "Crowd, Human Computation, GWAP > Applications > Art, Design",
-            "year": 2015,
             "authors": [
                 "Judith Redi",
                 "Ernestasia Siahaan",
@@ -882,47 +918,46 @@
                 "Julian Habigt",
                 "Tobias Hossfeld"
             ],
-            "priority": 2
+            "year": 2015,
+            "title": "When the Crowd Challenges the Lab: Lessons Learnt from Subjective Studies on Image Aesthetic Appeal",
+            "priority": 2,
+            "modified": 1534443214
         },
         {
-            "title": "The Scope and Importance of Human Interruption in Human\u2013Computer Interaction Design",
-            "modified": 1534440959,
             "keywords": "Design, HCI, UI, UX > Human Interruption",
-            "year": 2002,
             "authors": [
                 "Daniel C. McFarlane",
                 "Kara A. Latorella"
             ],
-            "priority": 1
+            "year": 2002,
+            "title": "The Scope and Importance of Human Interruption in Human\u2013Computer Interaction Design",
+            "priority": 1,
+            "modified": 1534440959
         },
         {
-            "title": "How to Protest Alex Jones on Twitter by Blocking Fortune 500 Companies",
-            "modified": 1534357756,
-            "keywords": "Twitter > Blocking Alex Jones",
-            "year": 2018,
             "authors": [
                 "Alex Jones",
                 "Donald Trump",
                 "Shannon Coulter"
             ],
-            "priority": 0
+            "keywords": "Twitter > Blocking Alex Jones",
+            "year": 2018,
+            "title": "How to Protest Alex Jones on Twitter by Blocking Fortune 500 Companies",
+            "priority": 0,
+            "modified": 1534357756
         },
         {
-            "title": "Ten simple rules for structuring papers",
-            "modified": 1534356782,
-            "keywords": "Writing > Structure",
-            "year": 2017,
             "authors": [
                 "Brett Mensh",
                 "Konrad Kording"
             ],
-            "priority": 3
+            "keywords": "Writing > Structure",
+            "year": 2017,
+            "title": "Ten simple rules for structuring papers",
+            "priority": 3,
+            "modified": 1534356782
         },
         {
-            "title": "The Dynamics of Micro-Task Crowdsourcing The Case of Amazon MTurk",
-            "modified": 1534324440,
-            "keywords": "Crowd, Human Computation, GWAP > Process, Workflow, Worker Selection, Task Design > Dynamics",
-            "year": 2015,
             "authors": [
                 "Djellel Eddine Difallah",
                 "Michele Catasta",
@@ -930,51 +965,51 @@
                 "Panagiotis G. Ipeirotis",
                 "Philippe Cudr\u00e9-Mauroux"
             ],
-            "priority": 1
+            "keywords": "Crowd, Human Computation, GWAP > Process, Workflow, Worker Selection, Task Design > Dynamics",
+            "year": 2015,
+            "title": "The Dynamics of Micro-Task Crowdsourcing The Case of Amazon MTurk",
+            "priority": 1,
+            "modified": 1534324440
         },
         {
-            "title": "Community heuristics for user interface evaluation of crowdsourcing platforms",
-            "modified": 1534315348,
             "keywords": "Crowd, Human Computation, GWAP > Evaluation",
-            "year": 2018,
+            "title": "Community heuristics for user interface evaluation of crowdsourcing platforms",
             "authors": [
                 "Simon \u00e0 Campo",
                 "Konstantinos Papangelis",
                 "Panos Markopoulos"
             ],
-            "priority": 3
+            "priority": 3,
+            "year": 2018,
+            "modified": 1534315348
         },
         {
-            "title": "Improving Paid Microtasks through Gamification and Adaptive Furtherance Incentives",
-            "modified": 1534267970,
-            "keywords": "Crowd, Human Computation, GWAP > Motivation, Incentives",
-            "year": 2014,
             "authors": [
                 "Oluwaseyi Feyisetan",
                 "Elena Simperl",
                 "Max Van Kleek",
                 "Nigel Shadbolt"
             ],
-            "priority": 1
-        },
-        {
-            "title": "Development and Validation of Extrinsic Motivation Scale for Crowdsourcing Micro-task Platforms",
-            "modified": 1534267970,
             "keywords": "Crowd, Human Computation, GWAP > Motivation, Incentives",
             "year": 2014,
+            "title": "Improving Paid Microtasks through Gamification and Adaptive Furtherance Incentives",
+            "priority": 1,
+            "modified": 1534267970
+        },
+        {
             "authors": [
                 "Babak Naderi",
                 "Ina Wechsung",
                 "Tim Polzehl",
                 "Sebastian M\u00f6ller"
             ],
-            "priority": 1
+            "keywords": "Crowd, Human Computation, GWAP > Motivation, Incentives",
+            "year": 2014,
+            "title": "Development and Validation of Extrinsic Motivation Scale for Crowdsourcing Micro-task Platforms",
+            "priority": 1,
+            "modified": 1534267970
         },
         {
-            "title": "Zensors: Adaptive, Rapidly Deployable, Human-Intelligent Sensor Feeds",
-            "modified": 1534254919,
-            "keywords": "Human Sensor",
-            "year": 2015,
             "authors": [
                 "Gierad Laput",
                 "Walter S. Lasecki",
@@ -983,13 +1018,13 @@
                 "Jeffrey P. Bigham",
                 "Chris Harrison"
             ],
-            "priority": 1
+            "keywords": "Human Sensor",
+            "year": 2015,
+            "title": "Zensors: Adaptive, Rapidly Deployable, Human-Intelligent Sensor Feeds",
+            "priority": 1,
+            "modified": 1534254919
         },
         {
-            "title": "Towards Gadget-Free Internet Services: A Roadmap of the Naked World",
-            "modified": 1534243441,
-            "keywords": "UbiComp > Naked World, Naked Approach",
-            "year": 2017,
             "authors": [
                 "Tanesh Kumar",
                 "Timo Koskela",
@@ -1002,62 +1037,62 @@
                 "Juha- Pekka Soininen",
                 "Jyrki Huusko"
             ],
-            "priority": 0
+            "keywords": "UbiComp > Naked World, Naked Approach",
+            "year": 2017,
+            "title": "Towards Gadget-Free Internet Services: A Roadmap of the Naked World",
+            "priority": 0,
+            "modified": 1534243441
         },
         {
-            "title": "Large-scale Interaction Deployment: Approaches and Challenges",
-            "modified": 1534242721,
-            "keywords": "UbiComp > Naked World, Naked Approach",
-            "year": 2015,
             "authors": [
                 "Bashar Altakrouri",
                 "Andreas Schrader",
                 "Simo Hosio",
                 "Martin Christof Kindsm\u00fcller"
             ],
-            "priority": 0
+            "keywords": "UbiComp > Naked World, Naked Approach",
+            "year": 2015,
+            "title": "Large-scale Interaction Deployment: Approaches and Challenges",
+            "priority": 0,
+            "modified": 1534242721
         },
         {
-            "title": "Living Laboratories: The Ideal Setting for Measuring the Impact of Biophilic Design",
-            "modified": 1534242020,
+            "authors": [],
             "keywords": "Living Lab > Biophilic Design",
             "year": 2018,
-            "authors": [],
-            "priority": 0
+            "title": "Living Laboratories: The Ideal Setting for Measuring the Impact of Biophilic Design",
+            "priority": 0,
+            "modified": 1534242020
         },
         {
-            "title": "Future of Human-Building Interaction",
-            "modified": 1534241808,
+            "authors": [
+                "Hamed S. Alavi"
+            ],
             "keywords": "Living Lab > Human-Building Interaction",
             "year": 2015,
+            "title": "Future of Human-Building Interaction",
+            "priority": 0,
+            "modified": 1534241808
+        },
+        {
             "authors": [
                 "Hamed S. Alavi"
             ],
-            "priority": 0
-        },
-        {
+            "keywords": "Living Lab > Human-Building Interaction",
+            "year": 2018,
             "title": "Space-Use Behavior Studies in the Swiss \u201cSmart Living Lab\u201d",
-            "modified": 1534241436,
-            "keywords": "Living Lab > Human-Building Interaction",
-            "year": 2018,
-            "authors": [
-                "Hamed S. Alavi"
-            ],
-            "priority": 0
+            "priority": 0,
+            "modified": 1534241436
         },
         {
-            "title": "\u201cWhat are your thoughts on this place?\u201d: A Novel Approach to Living Lab Engagement and Evaluation",
-            "modified": 1534240681,
-            "keywords": "Living Lab > Human-Building Interaction",
-            "year": 2018,
             "authors": [],
-            "priority": 0
+            "keywords": "Living Lab > Human-Building Interaction",
+            "year": 2018,
+            "title": "\u201cWhat are your thoughts on this place?\u201d: A Novel Approach to Living Lab Engagement and Evaluation",
+            "priority": 0,
+            "modified": 1534240681
         },
         {
-            "title": "From School Food to Skate Parks in a few Clicks: Using Public Displays to Bootstrap Civic Engagement of the Young",
-            "modified": 1534236503,
-            "keywords": "Public Displays > Social Networking",
-            "year": 2012,
             "authors": [
                 "Simo Hosio",
                 "Vassilis Kostakos",
@@ -1066,100 +1101,63 @@
                 "Jukka Riekki",
                 "Timo Ojala"
             ],
-            "priority": 1
+            "keywords": "Public Displays > Social Networking",
+            "year": 2012,
+            "title": "From School Food to Skate Parks in a few Clicks: Using Public Displays to Bootstrap Civic Engagement of the Young",
+            "priority": 1,
+            "modified": 1534236503
         },
         {
-            "title": "Optimizing Open-Ended Crowdsourcing: The Next Frontier in Crowdsourced Data Management",
-            "modified": 1534233250,
-            "keywords": "Crowd, Human Computation, GWAP > Process, Workflow, Worker Selection, Task Design > Aggregation",
-            "year": 2016,
             "authors": [
                 "Aditya Parameswaran",
                 "Akash Das Sarma",
                 "Vipul Venkataraman"
             ],
-            "priority": 0
+            "keywords": "Crowd, Human Computation, GWAP > Process, Workflow, Worker Selection, Task Design > Aggregation",
+            "year": 2016,
+            "title": "Optimizing Open-Ended Crowdsourcing: The Next Frontier in Crowdsourced Data Management",
+            "priority": 0,
+            "modified": 1534233250
         },
         {
-            "title": "Making it happen",
-            "modified": 1534224894,
-            "keywords": "Design of Experiments > Misc",
-            "year": 2018,
             "authors": [
                 "Matthew J. Salganik"
             ],
-            "priority": 0
+            "keywords": "Design of Experiments > Misc",
+            "year": 2018,
+            "title": "Making it happen",
+            "priority": 0,
+            "modified": 1534224894
         },
         {
-            "title": "Understanding How Critiquing Others Influences Sensemaking",
-            "modified": 1534152424,
-            "keywords": "Crowd, Human Computation, GWAP > Applications > Art, Design > Critique, Feedback",
-            "year": 2018,
             "authors": [
                 "Elizabeth M. Gerber"
             ],
-            "priority": 3
+            "keywords": "Crowd, Human Computation, GWAP > Applications > Art, Design > Critique, Feedback",
+            "year": 2018,
+            "title": "Understanding How Critiquing Others Influences Sensemaking",
+            "priority": 3,
+            "modified": 1534152424
         },
         {
-            "title": "Making Sense of Data Workers\u2019 Sense Making Practices",
-            "modified": 1534147293,
-            "keywords": "Sensemaking > Research Questions",
-            "year": 2018,
             "authors": [
                 "Jiali Liu"
             ],
-            "priority": 1
+            "keywords": "Sensemaking > Research Questions",
+            "year": 2018,
+            "title": "Making Sense of Data Workers\u2019 Sense Making Practices",
+            "priority": 1,
+            "modified": 1534147293
         },
         {
-            "title": "American Political\u2010Party Affiliation as a Predictor of Usage of an Adultery Website",
-            "modified": 1534145732,
-            "keywords": "Privacy > Ethics",
-            "year": 2018,
             "authors": [
                 "Kodi B. Arfer1 \u00b7 Jason J. Jones"
             ],
-            "priority": 0
-        },
-        {
-            "title": "The Ethics of Research on Leaked Data: Ashley Madison",
-            "modified": 1534144582,
             "keywords": "Privacy > Ethics",
             "year": 2018,
-            "authors": [],
-            "priority": 0
-        },
-        {
-            "title": "Theoretical and technological building blocks for an innovation accelerator",
-            "modified": 1534139103,
-            "keywords": "Knowledge Accelerator",
-            "year": 2012,
-            "authors": [
-                "F. van Harmelen",
-                "G. Kampis",
-                "K. B\u00f6rner",
-                "P. van den Besselaar",
-                "E. Schultes",
-                "C. Goble",
-                "P. Groth",
-                "B. Mons",
-                "S. Anderson",
-                "S. Decker",
-                "C. Hayes",
-                "T. Buecheler",
-                "D. Helbing"
-            ],
-            "priority": 0
-        },
-        {
-            "title": "A Pattern Approach to Interaction Design ~",
-            "modified": 1534101206,
-            "keywords": "Design, HCI, UI, UX > Interaction Design > Patterns",
-            "year": 2005,
-            "authors": [
-                "Jan O. Borchers",
-                "J.O. Borchers"
-            ],
-            "priority": 1
+            "title": "American Political\u2010Party Affiliation as a Predictor of Usage of an Adultery Website",
+            "priority": 0,
+            "modified": 1534145732
         }
     ]
 }
