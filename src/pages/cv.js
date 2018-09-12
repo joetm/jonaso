@@ -498,9 +498,25 @@ class CV extends React.Component {
 
 
 
-                <Header id="conferences" size="large">Conference Attendance</Header>
+                <Header id="conferences" size="large">Conference and Workshop Attendance</Header>
 
                   <Item.Group>
+
+                    <Item>
+	                    <div style={styles.datum}>2018</div>
+	                    <Item.Content>
+	                      <Item.Header><a href="http://ubicomp.org/ubicomp2018/">UbiComp 2018</a></Item.Header>
+	                      <Item.Meta>June 9-11, 2018 &ndash; Singapore</Item.Meta>
+	                    </Item.Content>
+                    </Item>
+
+                    <Item>
+	                    <div style={styles.datum}>2018</div>
+	                    <Item.Content>
+	                      <Item.Header><a href="http://mhc2018.wordpress.com/">Mobile Human Contributions Workshop (MHC'18)</a></Item.Header>
+	                      <Item.Meta>June 8, 2018 &ndash; Singapore</Item.Meta>
+	                    </Item.Content>
+                    </Item>
 
                     <Item>
 	                    <div style={styles.datum}>2018</div>
