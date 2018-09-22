@@ -80,6 +80,26 @@ class CV extends React.Component {
                     </Item>
 
                     <Item>
+                      <div style={styles.datum}>2013</div>
+                      <Item.Content>
+                        <Item.Header>
+	                        <a href="https://www.utoronto.ca/">University of Toronto</a>
+                    	</Item.Header>
+                        <Item.Meta>
+                          <List>
+                            <List.Item><a href="https://learn.utoronto.ca/">School of Continuing Studies</a></List.Item>
+                            <List.Item>Toronto, Canada</List.Item>
+                          </List>
+                        </Item.Meta>
+                        <Item.Description>
+                          <List>
+                            <List.Item>Certificate: <i>Business Analysis</i></List.Item>
+                          </List>
+                        </Item.Description>
+                      </Item.Content>
+                    </Item>
+
+                    <Item>
                       <div style={styles.datum}>2002 - 2011</div>
                       <Item.Content>
                         <Item.Header><a href="https://www.tu-darmstadt.de/">Technical University of Darmstadt</a></Item.Header>
@@ -309,7 +329,7 @@ class CV extends React.Component {
                     <Item>
                       <div style={styles.datum}>2005 - 2006</div>
                       <Item.Content>
-                        <Item.Header>Erasmus Mundus Scholarship</Item.Header>
+                        <Item.Header>Erasmus Sokrates Scholarship</Item.Header>
                         <Item.Description>German Academic Exchange Service (DAAD)</Item.Description>
                       </Item.Content>
                     </Item>
@@ -506,20 +526,20 @@ class CV extends React.Component {
 	                    <div style={styles.datum}>2018</div>
 	                    <Item.Content>
 	                      <Item.Header><a href="http://ubicomp.org/ubicomp2018/">UbiComp 2018</a></Item.Header>
-	                      <Item.Meta>June 9-11, 2018 &ndash; Singapore</Item.Meta>
+	                      <Item.Meta>October 9-11, 2018 &ndash; Singapore</Item.Meta>
 	                    </Item.Content>
                     </Item>
 
                     <Item>
-	                    <div style={styles.datum}>2018</div>
+	                    <div style={styles.datum}></div>
 	                    <Item.Content>
 	                      <Item.Header><a href="http://mhc2018.wordpress.com/">Mobile Human Contributions Workshop (MHC'18)</a></Item.Header>
-	                      <Item.Meta>June 8, 2018 &ndash; Singapore</Item.Meta>
+	                      <Item.Meta>October 8, 2018 &ndash; Singapore</Item.Meta>
 	                    </Item.Content>
                     </Item>
 
                     <Item>
-	                    <div style={styles.datum}>2018</div>
+	                    <div style={styles.datum}></div>
 	                    <Item.Content>
 	                      <Item.Header><a href="http://ubicomp.oulu.fi/ubiss/">9<sup>th</sup> International UBI Summer School (UBISS 2018)</a></Item.Header>
 	                      <Item.Meta>June 4-9, 2018 &ndash; Oulu, Finland</Item.Meta>
@@ -527,7 +547,7 @@ class CV extends React.Component {
                     </Item>
 
                     <Item>
-                      <div style={styles.datum}>2018</div>
+                      <div style={styles.datum}></div>
                       <Item.Content>
                         <Item.Header><a href="http://mkwi2018.leuphana.de/">Multikonferenz Wirtschaftsinformatik (MKWI)</a></Item.Header>
                         <Item.Meta>

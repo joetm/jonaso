@@ -17,6 +17,7 @@ BASEPATHS = [
     "/home/jonas/OULU/Literatur/",
     "/home/jonas/FU/IKON/Literatur/",
     "/home/jonas/FU/Academic Working/",
+    "/home/jonas/FU/ID+LAB/Literatur/",
     "/home/jonas/FU/Misc/"
 ]
 
