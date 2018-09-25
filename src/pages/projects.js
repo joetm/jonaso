@@ -179,7 +179,7 @@ const projects = [
   	lang: "en",
   	subtitle: "A Remote Tool to Crowdsource and Evaluate User Interface Adaptions",
   	description: {__html: "<p>CrowdUI is the prototype of a tool that can be added to a website by the website's webmaster. The tool enables the users of the website to re-arrange any parts of the website's user interface (UI). The interface adaptions are stored and loaded for evaluation by a control group of users. The integrated survey can flexibly be adapted to different usability measurement instruments. A comprehensive survey of usability measurement methods was also part of this thesis.</p><p>The tool was tested in a field study (158 users completing phase 1 and 49 users completing the subsequent survey). In total, 62 UI adaptations were sourced, of which 15 were rated. The work also included a new method of ranking and selecting items from a pool of rated UI adaptations.</p>"},
-  	date: "2015",
+  	date: "2015, 2018",
   	organisation: "University of Southampton",
   	organisation_href: "https://www.southampton.ac.uk/",
   	url: "http://www.crowdui.com/",
