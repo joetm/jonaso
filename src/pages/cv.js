@@ -1,6 +1,6 @@
 import React from "react"
 import Link from "gatsby-link"
-import { Icon, Label, Button, Header, Divider, List, Item, Image, Container } from 'semantic-ui-react'
+import { Icon, Label, Header, Divider, List, Item, Image, Container } from 'semantic-ui-react'
 
 import { spacer } from "../common"
 // import "../print.css"
@@ -10,12 +10,46 @@ const _PORTFOLIO_URL = 'http://www.jonaso.de/portfolio/'
 
 const styles = {
   datum: {
-    paddingRight: '2em',
-    minWidth: '120px',
+    // paddingRight: '2em',
+    minWidth: '200px',
   },
   nonbold: {
     fontWeight: 'normal',
     fontSize: '1em',
+  },
+  headline: {
+  	maxWidth: '180px',
+  	fontWeight: 'normal',
+  	textTransform: 'uppercase',
+  	fontSize: '1em',
+  },
+  //rowspan2: {
+  //  flex: '1 1 100%',
+  //},
+  table: {
+    display: 'flex',
+  },
+  row: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    marginBottom: '1.5em',
+  },
+  leftCol: {
+    flex: 1,
+    verticalAlign: 'top',
+  },
+  mainCol: {
+    flex: 3,
+    verticalAlign: 'top',
+  },
+  rightCol: {
+    flex: 1,
+    verticalAlign: 'top',
+    textAlign: 'right',
+  },
+  nomarginTop: {
+  	marginTop: 0,
   },
 }
 
@@ -30,494 +64,618 @@ class CV extends React.Component {
 
               <Container>
 
-                <Header id="education" size="large">Education</Header>
 
+<div style={styles.row}>
+  <div style={styles.leftCol}>
+                <Header id="contact" style={styles.headline} size="large">Contact Information</Header>
+  </div>
+  <div style={styles.mainCol}>
                   <Item.Group>
-
                     <Item>
-                      <div style={styles.datum}>since 2018</div>
-                      <Item.Content>
-                        <Item.Header>
-                          <a href="http://www.oulu.fi/university/">
-                            University of Oulu
-                          </a>
-                        </Item.Header>
-                        <Item.Meta>
+                        <Item.Description style={styles.nomarginTop}>
                           <List>
                             <List.Item><a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a></List.Item>
-                            <List.Item>Oulu, Finland</List.Item>
+                            <List.Item><a href="http://www.oulu.fi/university/">University of Oulu</a></List.Item>
+                            <List.Item>Erkki Koiso-Kanttilan katu 3</List.Item>
+                            <List.Item>Room TS371</List.Item>
+                            <List.Item>P.O. Box 4500</List.Item>
+                            <List.Item>90014 Oulu, Finland</List.Item>
                           </List>
-                        </Item.Meta>
-                        <Item.Description>
+                        </Item.Description>
+                    </Item>
+                  </Item.Group>
+  </div>
+  <div style={styles.rightCol}>
+                  <Item.Group>
+                    <Item>
+                        <Item.Description style={styles.nomarginTop}>
                           <List>
-                            <List.Item>Doctoral student</List.Item>
+                            <List.Item>E-Mail: {'{'}firstname.lastname{'}'}@oulu.fi</List.Item>
+                            <List.Item>www: jonaso.de</List.Item>
+                          </List>
+                        </Item.Description>
+                    </Item>
+                  </Item.Group>
+  </div>
+</div>
+
+
+<div style={styles.row}>
+  <div style={styles.leftCol}>
+                <Header id="interests" style={styles.headline} size="large">Research Interests</Header>
+  </div>
+  <div style={{...styles.mainCol, ...styles.rowspan2}}>
+                  <Item.Group>
+                    <Item>
+                        <Item.Description style={styles.nomarginTop}>
+                          <List>
+                            <List.Item>
+								Crowdsourcing; human computation; collective intelligence; web science; semantic web; social machines; computer supported collaborative work; {/*e-science;*/} hypertext and hypermedia; internet culture
+                            </List.Item>
+                          </List>
+                        </Item.Description>
+                    </Item>
+                  </Item.Group>
+  </div>
+  <div style={styles.rightCol}>
+  </div>
+</div>
+
+
+<div style={styles.row}>
+  <div style={styles.leftCol}>
+                <Header id="education" style={styles.headline} size="large">Education</Header>
+  </div>
+  <div style={styles.mainCol}>
+                  <Item.Group>
+                    <Item>
+                        <Item.Description style={styles.nomarginTop}>
+                          <List>
+                            <List.Item><a href="http://www.oulu.fi/university/">University of Oulu</a>, Oulu, Finland</List.Item>
+                            <List.Item>Ph.D. Candidate</List.Item>
                             <List.Item>Supervisor: <a href="http://simohosio.com/">Adjunct Prof. Dr. Simo Hosio</a></List.Item>
                           </List>
                         </Item.Description>
-                      </Item.Content>
                     </Item>
-
+                  </Item.Group>
+  </div>
+  <div style={styles.rightCol}>since 2018</div>
+</div>
+<div style={styles.row}>
+  <div style={styles.leftCol}></div>
+  <div style={styles.mainCol}>
+                  <Item.Group>
                     <Item>
-                      <div style={styles.datum}>2014 - 2015</div>
-                      <Item.Content>
-                        <Item.Header><a href="https://www.southampton.ac.uk/">University of Southampton</a></Item.Header>
-                        <Item.Meta>
-                          <List>
-                            <List.Item><a href="http://www.wais.ecs.soton.ac.uk/">Web and Internet Science (WAIS)</a> Research Group</List.Item>
-                            <List.Item>Southampton, United Kingdom</List.Item>
-                          </List>
-                        </Item.Meta>
                         <Item.Description>
                           <List>
-                            <List.Item>Degree: <i>MSc in Computer Science</i></List.Item>
-                            <List.Item>Specialisation: Semantic Web Technologies, Web Development</List.Item>
-                            <List.Item>Thesis: <i><a href="http://crowdui.com/">CrowdUI</a> - A Remote Tool to Crowdsource and Evaluate User Interface Adaptions</i></List.Item>
+                            <List.Item><a href="https://www.southampton.ac.uk/">University of Southampton</a>, Southampton, United Kingdom</List.Item>
+                            <List.Item>M.Sc. Computer Science</List.Item>
                             <List.Item>Supervisor: <a href="https://www.ecs.soton.ac.uk/people/tt2">Dr. Thanassis Tiropanis</a></List.Item>
-                            <List.Item>Distinction (84)</List.Item>
                           </List>
                         </Item.Description>
-                      </Item.Content>
                     </Item>
-
+                  </Item.Group>
+  </div>
+  <div style={styles.rightCol}>2014 - 2015</div>
+</div>
+<div style={styles.row}>
+  <div style={styles.leftCol}></div>
+  <div style={styles.mainCol}>
+                  <Item.Group>
                     <Item>
-                      <div style={styles.datum}>2013</div>
-                      <Item.Content>
-                        <Item.Header>
-	                        <a href="https://www.utoronto.ca/">University of Toronto</a>
-                    	</Item.Header>
-                        <Item.Meta>
-                          <List>
-                            <List.Item><a href="https://learn.utoronto.ca/">School of Continuing Studies</a></List.Item>
-                            <List.Item>Toronto, Canada</List.Item>
-                          </List>
-                        </Item.Meta>
                         <Item.Description>
                           <List>
-                            <List.Item>Certificate: <i>Business Analysis</i></List.Item>
+                            <List.Item><a href="https://learn.utoronto.ca/">School of Continuing Studies</a>,{' '}
+                            <a href="https://www.utoronto.ca/">University of Toronto</a></List.Item>
+                            <List.Item>Certificate in Business Analysis</List.Item>
                           </List>
                         </Item.Description>
-                      </Item.Content>
                     </Item>
-
+                  </Item.Group>
+  </div>
+  <div style={styles.rightCol}>2013</div>
+</div>
+<div style={styles.row}>
+  <div style={styles.leftCol}></div>
+  <div style={styles.mainCol}>
+                  <Item.Group>
                     <Item>
-                      <div style={styles.datum}>2002 - 2011</div>
-                      <Item.Content>
-                        <Item.Header><a href="https://www.tu-darmstadt.de/">Technical University of Darmstadt</a></Item.Header>
-                        <Item.Meta>
-                          <List>
-                            <List.Item><a href="http://www.pmd.tu-darmstadt.de/">Institute for Product Development and Machine Elements</a> (pmd)</List.Item>
-                            <List.Item>Darmstadt, Germany</List.Item>
-                          </List>
-                        </Item.Meta>
                         <Item.Description>
                           <List>
-                            <List.Item>Degree: <i>Diplom-Wirtschaftsingenieur</i> (equivalent to a MSc degree in Industrial Engineering)</List.Item>
-                            <List.Item>Specialisation: Business Informatics, Product Development, Logistics</List.Item>
-                            <List.Item>Thesis: <i>Applying Kano&apos;s Theory to Analyse and Characterise Social Product Requirements</i></List.Item>
+                            <List.Item><a href="https://www.tu-darmstadt.de/">Technical University of Darmstadt</a>, Darmstadt, Germany</List.Item>
+                            <List.Item><i>Diplom-Wirtschaftsingenieur</i> (equivalent to a M.Sc. degree in Industrial Engineering)</List.Item>
                             <List.Item>Supervisor: Dr.-Ing. Dirk Hanusch</List.Item>
                           </List>
                         </Item.Description>
-                      </Item.Content>
                     </Item>
-
+                  </Item.Group>
+  </div>
+  <div style={styles.rightCol}>2002 - 2011</div>
+</div>
+<div style={styles.row}>
+  <div style={styles.leftCol}></div>
+  <div style={styles.mainCol}>
+                  <Item.Group>
                     <Item>
-                      <div style={styles.datum}>2000</div>
-                      <Item.Content>
-                        <Item.Header><a href="http://www.gad-vs.de/">Gymnasium am Deutenberg</a></Item.Header>
-                        <Item.Meta>
-                          <List>
-                            <List.Item>Villingen-Schwenningen, Germany</List.Item>
-                          </List>
-                        </Item.Meta>
                         <Item.Description>
                           <List>
-                            <List.Item>University Entrance Qualification (Abitur)</List.Item>
+                            <List.Item><a href="http://www.gad-vs.de/">Gymnasium am Deutenberg</a>, Villingen-Schwenningen, Germany</List.Item>
+                            <List.Item>University Entrance Qualification (<i>Abitur</i>)</List.Item>
                             <List.Item>Majors: English, Arts</List.Item>
                           </List>
                         </Item.Description>
-                      </Item.Content>
                     </Item>
-
                   </Item.Group>
+  </div>
+  <div style={styles.rightCol}>2000</div>
+</div>
 
-                <Header id="research-experience" size="large">Research Experience</Header>
+<div style={styles.row}>
+  <div style={styles.leftCol}>
+                <Header id="current-research" style={styles.headline} size="large">Current Research</Header>
+  </div>
+  <div style={styles.mainCol}>
 
+  </div>
+  <div style={styles.rightCol}>
+  </div>
+</div>
+
+<div style={styles.row}>
+  <div style={styles.leftCol}>
+                <Header id="research-exerience" style={styles.headline} size="large">Research Experience</Header>
+  </div>
+  <div style={styles.mainCol}>
                   <Item.Group>
 
                     <Item>
-                      <div style={styles.datum}>2016 - 2018</div>
-                      <Item.Content>
-                        <Item.Header><a href="http://www.fu-berlin.de/">Freie Universit&auml;t Berlin</a></Item.Header>
-                        <Item.Meta>
+                        <Item.Description style={styles.nomarginTop}>
                           <List>
                             <List.Item><a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/">Human-Centered Computing Group</a>, Institute of Computer Science</List.Item>
-                            <List.Item>Berlin, Germany</List.Item>
-                          </List>
-                        </Item.Meta>
-                        <Item.Description>
-                          <List>
+                            <List.Item><a href="http://www.fu-berlin.de/">Freie Universit&auml;t Berlin</a>, Berlin, Germany</List.Item>
                             <List.Item>Research Assistant</List.Item>
-                            {/*
-                            <List.Item>Group Lead: <a href="https://www.clmb.de/" target="_blank" rel="nofollow">Prof. Dr. Claudia M&uuml;ller-Birn</a></List.Item>
-                              <List.Item id="idlab">Project: <i><a href="https://www.interdisciplinary-laboratory.hu-berlin.de/en/content/idlab/">ID+Lab</a></i>, Cluster of Excellence &quot;Image Knowledge Gestaltung&quot;, Humboldt University, Berlin:</List.Item>
-                              <List.Item>Linked Data-backed enhanced publication platform for interdisciplinary research projects</List.Item>
-                              <List.Item id="ikon">Project: <i><a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/projects/ikon/index.html">IKON</a></i>, Natural History Museum, Berlin:</List.Item>
-                              <List.Item>Ontology engineering, data integration and implementation of a Linked Open Data platform for research project information</List.Item>
-                            */}
                           </List>
                         </Item.Description>
-                      </Item.Content>
                     </Item>
-
+                  </Item.Group>
+  </div>
+  <div style={styles.rightCol}>2016 - 2018</div>
+</div>
+<div style={styles.row}>
+  <div style={styles.leftCol}></div>
+  <div style={styles.mainCol}>
+                  <Item.Group>
                     <Item>
-                      <div style={styles.datum}>2015 - 2016</div>
-                      <Item.Content>
-                        <Item.Header><a href="http://www.seme4.com/">Seme 4 Ltd.</a></Item.Header>
-                        <Item.Meta>
-                          <List>
-                            <List.Item>Southampton, United Kingdom</List.Item>
-                          </List>
-                        </Item.Meta>
                         <Item.Description>
                           <List>
+                            <List.Item><a href="http://www.seme4.com/">Seme 4 Ltd.</a>, Southampton, United Kingdom</List.Item>
                             <List.Item>Data Scientist and Web Developer</List.Item>
                             <List.Item>Supervisors: <a href="http://www.seme4.com/team/ian-millard/">Dr. Ian Millard</a>, <a href="http://www.seme4.com/team/hugh-glaser/">Dr. Hugh Glaser</a></List.Item>
-                            {/*
-                              <List.Item>Project: <i><a href="http://www.skillsplanner.net/">SkillsPlanner</a></i></List.Item>
-                              <List.Item>SkillsPlanner is an ambitious Linked Data research project, funded with &pound;1.3 mio. by InnovateUK, involving heterogeneous data contributed by partners in London&apos;s construction industry</List.Item>
-                              <List.Item>Project: <i><a href="https://github.com/seme4/sameAs-Lite">SameAs-Lite</a></i> (web service system for co-reference resolution and management)</List.Item>
-                              <List.Item>Project: <i>MakeRDF</i> (conversion of tabular data into RDF/XML)</List.Item>
-                              <List.Item>Project: <i>Data Cube</i> pivot table and visualisation components</List.Item>
-                            */}
                           </List>
                         </Item.Description>
-                      </Item.Content>
                     </Item>
-
+                  </Item.Group>
+  </div>
+  <div style={styles.rightCol}>2015 - 2016</div>
+</div>
+<div style={styles.row}>
+  <div style={styles.leftCol}></div>
+  <div style={styles.mainCol}>
+                  <Item.Group>
                     <Item>
-                      <div style={styles.datum}>2005 - 2006</div>
-                      <Item.Content>
-                        <Item.Header><a href="https://liu.se/">Link&ouml;ping University</a></Item.Header>
-                        <Item.Meta>
-                          <List>
-                            <List.Item><a href="https://www.lith.liu.se/">Institute of Technology, Faculty of Science and Engineering</a></List.Item>
-                            <List.Item>Link&ouml;ping, Sweden</List.Item>
-                          </List>
-                        </Item.Meta>
                         <Item.Description>
                           <List>
+                            <List.Item><a href="https://liu.se/">Link&ouml;ping University</a>, Link&ouml;ping, Sweden</List.Item>
                             <List.Item>Graduate exchange student (two semesters)</List.Item>
                           </List>
                         </Item.Description>
-                      </Item.Content>
                     </Item>
-
                   </Item.Group>
+  </div>
+  <div style={styles.rightCol}>2005 - 2006</div>
+</div>
 
-                <Header id="work-experience" size="large">Other Work Experience</Header>
+<div style={styles.row}>
+  <div style={styles.leftCol}>
+                <Header id="other-exerience" style={styles.headline} size="large">Other Work Experience</Header>
+  </div>
+  <div style={styles.mainCol}>
 
                   <Item.Group>
 
                     <Item>
-                      <div style={styles.datum}>2016</div>
-                      <Item.Content>
-                        <Item.Header><a href="https://www.liip.ch/">Liip AG</a></Item.Header>
-                        <Item.Meta>Bern, Switzerland</Item.Meta>
-                        <Item.Description>
+                        <Item.Description style={styles.nomarginTop}>
                           <List>
+                            <List.Item><a href="https://www.liip.ch/">Liip AG</a>, Bern, Switzerland</List.Item>
                             <List.Item>Full-Stack Web Developer</List.Item>
-                            {/*
-                              <List.Item>Agile development of web-based Open Data and e-Government solutions</List.Item>
-                              <List.Item>Project: <i>Pilot Open Data Platform Public Transport Switzerland</i>, <a href="https://www.sbb.ch/" target="_blank">Swiss Federal Railways (SBB)</a></List.Item>
-                              <List.Item>Role: CKAN Developer (Python)</List.Item>
-                              <List.Item>Project: <i>Eurapco Trend Monitoring Platform</i>, <a href="https://www.mobiliar.ch/" target="_blank">Swiss Mobiliar</a></List.Item>
-                              <List.Item>Role: Full-Stack Web Developer (Python/Django, JavaScript)</List.Item>
-                            */}
                           </List>
                         </Item.Description>
-                      </Item.Content>
                     </Item>
-
+                  </Item.Group>
+  </div>
+  <div style={styles.rightCol}>2016</div>
+</div>
+<div style={styles.row}>
+  <div style={styles.leftCol}></div>
+  <div style={styles.mainCol}>
+                  <Item.Group>
                     <Item>
-                      <div style={styles.datum}>2013 - 2014</div>
-                      <Item.Content>
-                        <Item.Header><a href="http://www.alstom.com/">Alstom IS&amp;T</a></Item.Header>
-                        <Item.Meta>La Défense, Paris, France</Item.Meta>
                         <Item.Description>
                           <List>
+                            <List.Item><a href="http://www.alstom.com/">Alstom IS&amp;T</a>, La Défense, Paris, France</List.Item>
                             <List.Item>IT Business Analyst</List.Item>
-                            <List.Item>IT process and service design; IT service catalogue management; Beta testing of IT service website</List.Item>
                           </List>
                         </Item.Description>
-                      </Item.Content>
                     </Item>
-
+                  </Item.Group>
+  </div>
+  <div style={styles.rightCol}>2014 - 2015</div>
+</div>
+<div style={styles.row}>
+  <div style={styles.leftCol}></div>
+  <div style={styles.mainCol}>
+                  <Item.Group>
                     <Item>
-                      <div style={styles.datum}>2011 - 2012</div>
-                      <Item.Content>
-                        <Item.Header><a href="https://www.gepower.com/steam">Alstom Power</a></Item.Header>
-                        <Item.Meta>Baden, Switzerland</Item.Meta>
                         <Item.Description>
                           <List>
+                            <List.Item><a href="https://www.gepower.com/steam">Alstom Power</a>, Baden, Switzerland</List.Item>
                             <List.Item>Strategy Analyst (Trainee)</List.Item>
-                            <List.Item>Improvement of the idea management system; Migration of the Power Business division intranet to SharePoint; Support of the strategic planning</List.Item>
                           </List>
                         </Item.Description>
-                      </Item.Content>
                     </Item>
-
+                  </Item.Group>
+  </div>
+  <div style={styles.rightCol}>2011 - 2012</div>
+</div>
+<div style={styles.row}>
+  <div style={styles.leftCol}></div>
+  <div style={styles.mainCol}>
+                  <Item.Group>
                     <Item>
-                      <div style={styles.datum}>2008 - 2013</div>
-                      <Item.Content>
-                        <Item.Header><a href="http://www.jonaso.de/portfolio/">Freelance Web Developer</a></Item.Header>
-                        <Item.Meta>Darmstadt, Germany</Item.Meta>
                         <Item.Description>
                           <List>
+                            <List.Item><a href="http://www.jonaso.de/portfolio/">Freelance Web Developer</a>, Darmstadt, Germany</List.Item>
                             <List.Item>Full-Stack Web Development</List.Item>
-                            <List.Item>Online Community Administration</List.Item>
                           </List>
                         </Item.Description>
-                      </Item.Content>
                     </Item>
-
+                  </Item.Group>
+  </div>
+  <div style={styles.rightCol}>2006 - 2013</div>
+</div>
+<div style={styles.row}>
+  <div style={styles.leftCol}></div>
+  <div style={styles.mainCol}>
+                  <Item.Group>
                     <Item>
-                      <div style={styles.datum}>2010</div>
-                      <Item.Content>
-                        <Item.Header><a href="http://radovis.gov.mk/">Radoviš Municipality</a></Item.Header>
-                        <Item.Meta>Radoviš, Macedonia</Item.Meta>
                         <Item.Description>
-                          Volunteer at Local Economic Development Department
+                          <List>
+                            <List.Item><a href="http://radovis.gov.mk/">Radoviš Municipality</a>, Radoviš, Macedonia</List.Item>
+                            <List.Item>Volunteer at Local Economic Development Department</List.Item>
+                          </List>
                         </Item.Description>
-                      </Item.Content>
                     </Item>
-
+                  </Item.Group>
+  </div>
+  <div style={styles.rightCol}>2010</div>
+</div>
+<div style={styles.row}>
+  <div style={styles.leftCol}></div>
+  <div style={styles.mainCol}>
+                  <Item.Group>
                     <Item>
-                      <div style={styles.datum}>2000 - 2002</div>
-                      <Item.Content>
-                        <Item.Header><a href="https://en.wikipedia.org/wiki/Franco-German_Brigade">Franco-German Brigade</a></Item.Header>
-                        <Item.Meta>Donaueschingen, Germany</Item.Meta>
                         <Item.Description>
-                          Military service in 292nd Light Infantry Battalion
+                          <List>
+                            <List.Item><a href="https://en.wikipedia.org/wiki/Franco-German_Brigade">Franco-German Brigade</a>, Donaueschingen, Germany</List.Item>
+                            <List.Item>Military service in 292nd Light Infantry Battalion</List.Item>
+                          </List>
                         </Item.Description>
-                      </Item.Content>
                     </Item>
 
                   </Item.Group>
+  </div>
+  <div style={styles.rightCol}>2000 - 2002</div>
+</div>
 
+<div style={styles.row}>
+  <div style={styles.leftCol}>
+                <Header id="publications" style={styles.headline} size="large">Publications</Header>
+  </div>
+  <div style={styles.mainCol}>
+  </div>
+  <div style={styles.rightCol}>
+  </div>
+</div>
 
-
-                <Header id="awards" size="large">Awards and Scholarships</Header>
-
+<div style={styles.row}>
+  <div style={styles.leftCol}>
+                <Header id="awards" style={styles.headline} size="large">Honors &amp; Awards</Header>
+  </div>
+  <div style={styles.mainCol}>
                   <Item.Group>
 
                     <Item>
-                      <div style={styles.datum}>2018</div>
-                      <Item.Content>
-                        <Item.Header>Student Travel Grant</Item.Header>
-                        <Item.Description>UbiComp/ISWC 2018</Item.Description>
-                      </Item.Content>
-                    </Item>
-
-                    <Item>
-                      <div style={styles.datum}>2015</div>
-                      <Item.Content>
-                        <Item.Header>Distinction</Item.Header>
-                        <Item.Description>MSc Computer Science, University of Southampton</Item.Description>
-                      </Item.Content>
-                    </Item>
-
-                    <Item>
-                      <div style={styles.datum}>2005 - 2006</div>
-                      <Item.Content>
-                        <Item.Header>Erasmus Sokrates Scholarship</Item.Header>
-                        <Item.Description>German Academic Exchange Service (DAAD)</Item.Description>
-                      </Item.Content>
+                      <List>
+                        <List.Item>Student Travel Grant, UbiComp/ISWC 2018</List.Item>
+                        <List.Item>Distinction, M.Sc. Computer Science, University of Southampton</List.Item>
+                        <List.Item>Erasmus Sokrates Scholarship, German Academic Exchange Service (DAAD)</List.Item>
+                      </List>
                     </Item>
 
                   </Item.Group>
+  </div>
+  <div style={styles.rightCol}>
+  </div>
+</div>
 
+<div style={styles.row}>
+  <div style={styles.leftCol}>
+                <Header id="technical-skills" style={styles.headline} size="large">Technical Skills</Header>
+  </div>
+  <div style={styles.mainCol}>
+                  <a href="javascript:void();" onClick={this.redirectToPortfolio}>&rarr; &nbsp; Visit my Web Development Portfolio</a>
+  </div>
+  <div style={styles.rightCol}>
+  </div>
+</div>
 
-                <Header id="service" size="large">Academic Service</Header>
+<div style={styles.row}>
+  <div style={styles.leftCol}>
+                <Header id="teaching" style={styles.headline} size="large">Teaching Experience</Header>
+  </div>
+  <div style={styles.mainCol}>
+              <Item.Group>
+                <Item>
+                  <List>
+                    <List.Item>Teaching Assistant (Excercise Tutor), Undergraduate Mathematics and Engineering Mechanics</List.Item>
+                  </List>
+                </Item>
+              </Item.Group>
+  </div>
+  <div style={styles.rightCol}>2006 - 2007</div>
+</div>
 
-	              <Header id="oc-memberships" size="medium">Organizing Committee</Header>
+<div style={styles.row}>
+  <div style={styles.leftCol}>
+                <Header id="peer-review" style={styles.headline} size="large">Reviewer Experience</Header>
+  </div>
+  <div style={styles.mainCol}>
+                  <Item.Group>
+
+                    <Item>
+                          <List>
+                            <List.Item>
+                            	<a href="https://chi2019.acm.org/">CHI&apos;19</a>,{' '}
+                            	<a href="http://cscw.acm.org/2018/">CSCW&apos;18</a>,{' '}
+                            	<a href="http://hicss.hawaii.edu/">HICSS-52</a>,{' '}
+                            	<a href="https://imwut.acm.org/">IMWUT&apos;18</a>,{' '}
+                            	<a href="https://chiplay.acm.org/2018/">CHI PLAY 2018</a>,{' '}
+                            	<a href="http://icmi.acm.org/2018/">ICMI&apos;18</a>,{' '}
+                            	<a href="http://skill.informatik.uni-leipzig.de/">SKILL-18</a>,{' '}
+                            	<a href="https://2017.eswc-conferences.org/">ESWC&apos;17</a>
+                            </List.Item>
+                          </List>
+                    </Item>
+
+                  </Item.Group>
+  </div>
+  <div style={styles.rightCol}>
+  </div>
+</div>
+
+<div style={styles.row}>
+  <div style={styles.leftCol}>
+                <Header id="service" style={styles.headline} size="large">Service</Header>
+  </div>
+  <div style={styles.mainCol}>
 
                     <Item.Group>
 
 	                  <Item>
-	                    <div style={styles.datum}>2018</div>
-	                    <Item.Content>
-	                      <Item.Header><a href="http://ubicomp.oulu.fi/ubiss/">9<sup>th</sup> International UBI Summer School 2018 (UBISS 2018)</a></Item.Header>
-	                      <Item.Meta>Oulu, Finland</Item.Meta>
-	                    </Item.Content>
+                          <List>
+                            <List.Item>
+	                            Organizing Committee, <a href="http://ubicomp.oulu.fi/ubiss/">9<sup>th</sup> International UBI Summer School 2018 (UBISS 2018)</a>, Oulu, Finland
+                            </List.Item>
+                          </List>
 	                  </Item>
-
-	                </Item.Group>
-
-
-	              <Header id="pc-memberships" size="medium">Program Committee</Header>
-
-                    <Item.Group>
 
 	                  <Item>
-	                    <div style={styles.datum}>2018</div>
-	                    <Item.Content>
-	                      <Item.Header><a href="http://skill.informatik.uni-leipzig.de/">Studierendenkonferenz Informatik (SKILL)</a></Item.Header>
-	                      <Item.Meta>Berlin, Germany</Item.Meta>
-	                    </Item.Content>
+                          <List>
+                            <List.Item>
+	                            Program Committee, <a href="http://skill.informatik.uni-leipzig.de/">Studierendenkonferenz Informatik (SKILL)</a>, Berlin, Germany
+                            </List.Item>
+                          </List>
+	                  </Item>
+
+	                  <Item>
+                          <List>
+                            <List.Item>
+	                            Student Volunteer, <a href="http://ubicomp.org/ubicomp2018/" target="_blank">UbiComp 2018</a>
+                            </List.Item>
+                          </List>
 	                  </Item>
 
 	                </Item.Group>
 
+  </div>
+  <div style={styles.rightCol}>
+  </div>
+</div>
 
-                <Header id="service" size="medium">Supervisions</Header>
-
-                  <Item.Group>
-
-                    <Item>
-                      <div style={styles.datum}>2018</div>
-                      <Item.Content>
-                        <Item.Header>Summer internship project</Item.Header>
-                        <Item.Meta>
-                          Antonio Kongjonaj
-                        </Item.Meta>
-                        <Item.Description>
-                          Topic: Increasing trust in scientific news articles
-                        </Item.Description>
-                      </Item.Content>
-                    </Item>
-
-                    <Item>
-                      <div style={styles.datum}>2016 - 2017</div>
-                      <Item.Content>
-                        <Item.Header>MSc Thesis</Item.Header>
-                        <Item.Meta>
-                          <a href="https://www.linkedin.com/in/immanuel-pelzer-408505133/">Immanuel Pelzer</a>
-                        </Item.Meta>
-                        <Item.Description>
-                          Topic: Linked Data Conversion and Visualisation
-                        </Item.Description>
-                      </Item.Content>
-                    </Item>
-
-                    <Item>
-                      <div style={styles.datum}>2016 - 2017</div>
-                      <Item.Content>
-                        <Item.Header>Software Project</Item.Header>
-                        <Item.Description>
-                          Topic: Web-based Game with a Purpose (GWAP) for collaboratively annotating
-                          digitised images of the Institute for Art and Visual History,
-                          Humboldt University Berlin
-                        </Item.Description>
-                      </Item.Content>
-                    </Item>
-
-                    <Item>
-                      <div style={styles.datum}>2006 - 2007</div>
-                      <Item.Content>
-                        <Item.Header>Teaching Assistant (Excercise Tutor)</Item.Header>
-                        <Item.Description>
-                          Undergraduate Mathematics and Engineering Mechanics
-                        </Item.Description>
-                      </Item.Content>
-                    </Item>
-
-                  </Item.Group>
-
-
-                <Header id="service" size="medium">Student Volunteering</Header>
+<div style={styles.row}>
+  <div style={styles.leftCol}>
+                <Header id="certificates" style={styles.headline} size="large">Certificates</Header>
+  </div>
+  <div style={styles.mainCol}>
 
                   <Item.Group>
 
                     <Item>
-                      <div style={styles.datum}>2018</div>
-                      <Item.Content>
-                        <Item.Header><a href="http://ubicomp.org/ubicomp2018/">UbiComp 2018</a></Item.Header>
-                      </Item.Content>
+                      {/*<div style={styles.datum}>2014</div>
+	                    <Item.Header style={styles.nonbold}>Certified ScrumMaster (Scrum Alliance)</Item.Header>
+                    </Item>
+
+                    <Item>
+                      {/*<div style={styles.datum}>2014</div>*/}
+                        <Item.Header style={styles.nonbold}>Certified Associate in Project Management (PMI)</Item.Header>
+                    </Item>
+
+                    <Item>
+                      {/*<div style={styles.datum}>2014</div>*/}
+                        <Item.Header style={styles.nonbold}>ITIL v3 Foundation (Axelos)</Item.Header>
+                    </Item>
+
+                    <Item>
+                      {/*<div style={styles.datum}>2013</div>*/}
+                        <Item.Header style={styles.nonbold}>Certificate in Business Analysis (University of Toronto)</Item.Header>
+                    </Item>
+
+                    <Item>
+                      {/*<div style={styles.datum}>2013</div>*/}
+                        <Item.Header style={styles.nonbold}>Qualit&auml;tsmanagement-Beauftragter (DAkkS)</Item.Header>
+                    </Item>
+
+                    <Item>
+                      {/*<div style={styles.datum}>2013</div>*/}
+                        <Item.Header style={styles.nonbold}>SAP Certified - Associate Business Foundation &amp; Integration with SAP ERP 6.0 EHP5</Item.Header>
+                    </Item>
+
+                    <Item>
+                      {/*<div style={styles.datum}>2013</div>*/}
+                        <Item.Header style={styles.nonbold}>Integrated Business Processes with SAP ERP (TERP10)</Item.Header>
+                    </Item>
+
+                    <Item>
+                      {/*<div style={styles.datum}>2010</div>*/}
+                        <Item.Header style={styles.nonbold}>Zend Certified Engineer (PHP 5)</Item.Header>
+                    </Item>
+
+                    <Item>
+                      {/*<div style={styles.datum}>2009</div>*/}
+                        <Item.Header style={styles.nonbold}>Qualit&auml;tsmanagement-Fachkraft (T&uuml;v S&uuml;d Akademie)</Item.Header>
+                    </Item>
+
+                    <Item>
+                      {/*<div style={styles.datum}>2009</div>*/}
+                        <Item.Header style={styles.nonbold}>Business English Certificate Higher</Item.Header>
                     </Item>
 
                   </Item.Group>
 
+  </div>
+  <div style={styles.rightCol}>
+  </div>
+</div>
 
-                <Header id="service" size="medium">Peer Review</Header>
+<div style={styles.row}>
+  <div style={styles.leftCol}>
+                <Header id="supervisions" style={styles.headline} size="large">Student Supervisions</Header>
+  </div>
+  <div style={styles.mainCol}>
+                  <Item.Group>
+                  <Item>
+                      <List>
+                        <List.Item>
+                          Summer internship project, Antonio Kongjonaj
+                        </List.Item>
+                      </List>
+                  </Item>
+                  </Item.Group>
+  </div>
+  <div style={styles.rightCol}>2018</div>
+</div>
+<div style={styles.row}>
+  <div style={styles.leftCol}></div>
+  <div style={styles.mainCol}>
+                  <Item.Group>
+                  <Item>
+                      <List>
+                        <List.Item>
+                          M.Sc. Thesis, <a href="https://www.linkedin.com/in/immanuel-pelzer-408505133/">Immanuel Pelzer</a>
+                        </List.Item>
+                      </List>
+                  </Item>
+                  </Item.Group>
+  </div>
+  <div style={styles.rightCol}>2016 - 2017</div>
+</div>
+<div style={styles.row}>
+  <div style={styles.leftCol}></div>
+  <div style={styles.mainCol}>
+                  <Item>
+                      <List>
+                        <List.Item>
+                          Software Project
+                        </List.Item>
+                      </List>
+                  </Item>
+  </div>
+  <div style={styles.rightCol}>2016 - 2017</div>
+</div>
 
+
+<div style={styles.row}>
+  <div style={styles.leftCol}>
+                <Header id="memberships" style={styles.headline} size="large">Memberships in Scientific Associations</Header>
+  </div>
+  <div style={styles.mainCol}>
                   <Item.Group>
 
                     <Item>
-                      <div style={styles.datum}>2018</div>
                       <Item.Content>
-                        <Item.Header><a href="http://cscw.acm.org/2018/">CSCW'18</a></Item.Header>
+                        <Item.Header style={styles.nonbold}>Association for Computing Machinery (ACM)</Item.Header>
                       </Item.Content>
                     </Item>
 
                     <Item>
-                      <div style={styles.datum}>2018</div>
                       <Item.Content>
-                        <Item.Header><a href="http://hicss.hawaii.edu/">HICSS-52</a></Item.Header>
-                      </Item.Content>
-                    </Item>
-
-                    <Item>
-                      <div style={styles.datum}>2018</div>
-                      <Item.Content>
-                        <Item.Header><a href="https://imwut.acm.org/">IMWUT'18</a></Item.Header>
-                      </Item.Content>
-                    </Item>
-
-                    <Item>
-                      <div style={styles.datum}>2018</div>
-                      <Item.Content>
-                        <Item.Header><a href="https://chiplay.acm.org/2018/">CHI PLAY 2018</a></Item.Header>
-                      </Item.Content>
-                    </Item>
-
-                    <Item>
-                      <div style={styles.datum}>2018</div>
-                      <Item.Content>
-                        <Item.Header><a href="http://icmi.acm.org/2018/">ICMI'18</a></Item.Header>
-                      </Item.Content>
-                    </Item>
-
-                    <Item>
-                      <div style={styles.datum}>2018</div>
-                      <Item.Content>
-                        <Item.Header><a href="http://skill.informatik.uni-leipzig.de/">SKILL-18</a></Item.Header>
-                      </Item.Content>
-                    </Item>
-
-                    <Item>
-                      <div style={styles.datum}>2016</div>
-                      <Item.Content>
-                        <Item.Header><a href="https://2017.eswc-conferences.org/">ESWC&apos;17</a></Item.Header>
-                        {/*
-                        <Item.Description>
-                          Topic: Semantic Web, Information Extraction, Ontology Learning
-                        </Item.Description>
-                        */}
+                        <Item.Header style={styles.nonbold}>Association for Information Systems (AIS)</Item.Header>
                       </Item.Content>
                     </Item>
 
                   </Item.Group>
+  </div>
+  <div style={styles.rightCol}>
+  </div>
+</div>
 
-                <Header id="service" size="medium">Funding Proposals</Header>
 
+<div style={styles.row}>
+  <div style={styles.leftCol}>
+                <Header id="languages" style={styles.headline} size="large">Languages</Header>
+  </div>
+  <div style={styles.mainCol}>
                   <Item.Group>
 
                     <Item>
-                      <div style={styles.datum}>2016</div>
                       <Item.Content>
-                        <Item.Header>&quot;int.FDM - An integrated maturity model for research data management&quot;</Item.Header>
-                        <Item.Meta>German Federal Ministry of Education and Research</Item.Meta>
-                        <Item.Description>
-                           with <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/members/professor/mueller-birn.html" target="_blank" rel="nofollow">Prof. Dr. Claudia M&uuml;ller Birn</a>, <a href="https://www.naturkundemuseum.berlin/einblicke/mitarbeiter/jana.hoffmann">Dr. Jana Hofmann</a>, <a href="https://www.naturkundemuseum.berlin/de/einblicke/mitarbeiter/falko.gloeckler">Falko Gl&ouml;ckler</a> (Natural History Museum, Berlin) and <a href="http://www.aip.de/mitglieder/henke">Dr. Harry Enke</a> (Supercomputing and E-Science, Leibniz Institute for Astrophysics Potsdam)
-                        </Item.Description>
+                        <Item.Header style={styles.nonbold}>German (mother tongue)</Item.Header>
+                      </Item.Content>
+                    </Item>
+                    <Item>
+                      <Item.Content>
+                        <Item.Header style={styles.nonbold}>English (business fluent)</Item.Header>
+                      </Item.Content>
+                    </Item>
+                    <Item>
+                      <Item.Content>
+                        <Item.Header style={styles.nonbold}>French (basic knowledge)</Item.Header>
+                      </Item.Content>
+                    </Item>
+                    <Item>
+                      <Item.Content>
+                        <Item.Header style={styles.nonbold}>Spanish (basic knowledge)</Item.Header>
                       </Item.Content>
                     </Item>
 
                   </Item.Group>
+  </div>
+  <div style={styles.rightCol}>
+  </div>
+</div>
 
 
-
-
+{/*
                 <Header id="conferences" size="large">Conference and Workshop Attendance</Header>
 
                   <Item.Group>
@@ -617,139 +775,7 @@ class CV extends React.Component {
                     </Item>
 
                   </Item.Group>
-
-                <Header id="languages" size="large">Languages</Header>
-
-                  <Item.Group>
-
-                    <Item>
-                      <div style={styles.datum}>German</div>
-                      <Item.Content>
-                        <Item.Header style={styles.nonbold}>mother tongue</Item.Header>
-                      </Item.Content>
-                    </Item>
-                    <Item>
-                      <div style={styles.datum}>English</div>
-                      <Item.Content>
-                        <Item.Header style={styles.nonbold}>business fluent</Item.Header>
-                      </Item.Content>
-                    </Item>
-                    <Item>
-                      <div style={styles.datum}>French</div>
-                      <Item.Content>
-                        <Item.Header style={styles.nonbold}>basic knowledge</Item.Header>
-                      </Item.Content>
-                    </Item>
-                    <Item>
-                      <div style={styles.datum}>Spanish</div>
-                      <Item.Content>
-                        <Item.Header style={styles.nonbold}>basic knowledge</Item.Header>
-                      </Item.Content>
-                    </Item>
-
-                  </Item.Group>
-
-                <Header id="technical-skills" size="large">Technical Skills</Header>
-
-                  <Button onClick={this.redirectToPortfolio} primary>&rarr; &nbsp; Visit my Web Development Portfolio</Button>
-
-
-                <Header id="certificates" size="large">Certificates</Header>
-
-                  <Item.Group>
-
-                    <Item>
-                      <div style={styles.datum}>2014</div>
-                      <Item.Content>
-                        <Item.Header style={styles.nonbold}>Certified ScrumMaster (Scrum Alliance)</Item.Header>
-                      </Item.Content>
-                    </Item>
-
-                    <Item>
-                      <div style={styles.datum}>2014</div>
-                      <Item.Content>
-                        <Item.Header style={styles.nonbold}>Certified Associate in Project Management (PMI)</Item.Header>
-                      </Item.Content>
-                    </Item>
-
-                    <Item>
-                      <div style={styles.datum}>2014</div>
-                      <Item.Content>
-                        <Item.Header style={styles.nonbold}>ITIL v3 Foundation (Axelos)</Item.Header>
-                      </Item.Content>
-                    </Item>
-
-                    <Item>
-                      <div style={styles.datum}>2013</div>
-                      <Item.Content>
-                        <Item.Header style={styles.nonbold}>Certificate in Business Analysis (University of Toronto)</Item.Header>
-                      </Item.Content>
-                    </Item>
-
-                    <Item>
-                      <div style={styles.datum}>2013</div>
-                      <Item.Content>
-                        <Item.Header style={styles.nonbold}>Qualit&auml;tsmanagement-Beauftragter (DAkkS)</Item.Header>
-                      </Item.Content>
-                    </Item>
-
-                    <Item>
-                      <div style={styles.datum}>2013</div>
-                      <Item.Content>
-                        <Item.Header style={styles.nonbold}>SAP Certified - Associate Business Foundation &amp; Integration with SAP ERP 6.0 EHP5</Item.Header>
-                      </Item.Content>
-                    </Item>
-
-                    <Item>
-                      <div style={styles.datum}>2013</div>
-                      <Item.Content>
-                        <Item.Header style={styles.nonbold}>Integrated Business Processes with SAP ERP (TERP10)</Item.Header>
-                      </Item.Content>
-                    </Item>
-
-                    <Item>
-                      <div style={styles.datum}>2010</div>
-                      <Item.Content>
-                        <Item.Header style={styles.nonbold}>Zend Certified Engineer (PHP 5)</Item.Header>
-                      </Item.Content>
-                    </Item>
-
-                    <Item>
-                      <div style={styles.datum}>2009</div>
-                      <Item.Content>
-                        <Item.Header style={styles.nonbold}>Qualit&auml;tsmanagement-Fachkraft (T&uuml;v S&uuml;d Akademie)</Item.Header>
-                      </Item.Content>
-                    </Item>
-
-                    <Item>
-                      <div style={styles.datum}>2009</div>
-                      <Item.Content>
-                        <Item.Header style={styles.nonbold}>Business English Certificate Higher</Item.Header>
-                      </Item.Content>
-                    </Item>
-
-                  </Item.Group>
-
-
-                <Header id="associations" size="large">Membership in Scientific Associations</Header>
-
-                  <Item.Group>
-
-                    <Item>
-                      <div style={styles.datum}></div>
-                      <Item.Content>
-                        <Item.Header style={styles.nonbold}>Association for Computing Machinery (ACM)</Item.Header>
-                      </Item.Content>
-                    </Item>
-
-                    <Item>
-                      <div style={styles.datum}></div>
-                      <Item.Content>
-                        <Item.Header style={styles.nonbold}>Association for Information Systems (AIS)</Item.Header>
-                      </Item.Content>
-                    </Item>
-
-                  </Item.Group>
+*/}
 
 
                   <div style={spacer}></div>
