@@ -150,7 +150,7 @@ class Home extends React.Component {
                 <p>
                     University of Oulu<br />
                     Erkki Koiso-Kanttilan katu 3<br />
-                    Room TS369<br />
+                    Room TS371<br />
                     P.O. Box 4500<br />
                     FI-90014 Oulu<br />
                     E-Mail: {'{'}firstname.lastname{'}'}@oulu.fi<br />

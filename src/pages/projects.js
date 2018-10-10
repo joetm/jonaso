@@ -7,7 +7,7 @@ import { spacer } from "../common"
 
 import img_idlab from "../img/idlab.jpg"
 import img_ikon  from "../img/ikon.png"
-import crowdui   from "../img/crowdui-vision.jpg"
+//import crowdui   from "../img/crowdui-vision.jpg"
 import prodxml   from "../img/prodxml.jpg"
 import kano      from "../img/kano-variation.jpg"
 import sns       from "../img/sns-analysis.png"
@@ -173,6 +173,7 @@ const projects = [
       title: "",
     },
   },
+/*
   {
   	title: "CrowdUI",
   	type: "thesis",
@@ -202,6 +203,7 @@ const projects = [
       },
     ],
   },
+*/
   {
   	title: "Anwendung des Kano-Modells zur Analyse und Charakterisierung gesellschaftlicher Anforderungen an Produkte",
   	type: "thesis",
