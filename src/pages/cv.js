@@ -58,6 +58,9 @@ class CV extends React.Component {
   redirectToPortfolio = () => {
     window.location = _PORTFOLIO_URL
   }
+  redirectToPublications = () => {
+    window.location = '/publications/'
+  }
   render() {
         return (
             <div>
@@ -210,6 +213,7 @@ class CV extends React.Component {
   <div style={styles.rightCol}>2000</div>
 </div>
 
+{/*
 <div style={styles.row}>
   <div style={styles.leftCol}>
                 <Header id="current-research" style={styles.headline} size="large">Current Research</Header>
@@ -220,6 +224,7 @@ class CV extends React.Component {
   <div style={styles.rightCol}>
   </div>
 </div>
+*/}
 
 <div style={styles.row}>
   <div style={styles.leftCol}>
@@ -382,6 +387,7 @@ class CV extends React.Component {
                 <Header id="publications" style={styles.headline} size="large">Publications</Header>
   </div>
   <div style={styles.mainCol}>
+                <a href="javascript:void();" onClick={this.redirectToPublications}>&rarr; &nbsp; See Publications</a>
   </div>
   <div style={styles.rightCol}>
   </div>
