@@ -340,7 +340,7 @@ class CV extends React.Component {
                         <Item.Description>
                           <List>
                             <List.Item><a href="http://www.jonaso.de/portfolio/">Freelance Web Developer</a>, Darmstadt, Germany</List.Item>
-                            <List.Item>Full-Stack Web Development</List.Item>
+                            <List.Item>Full-Stack Web Developer</List.Item>
                           </List>
                         </Item.Description>
                     </Item>
