@@ -433,6 +433,20 @@ class CV extends React.Component {
               <Item.Group>
                 <Item>
                   <List>
+                    <List.Item>Teaching Assistant, Human Computer Interaction</List.Item>
+                  </List>
+                </Item>
+              </Item.Group>
+  </div>
+  <div style={styles.rightCol}>2018</div>
+</div>
+<div style={styles.row}>
+  <div style={styles.leftCol}>
+  </div>
+  <div style={styles.mainCol}>
+              <Item.Group>
+                <Item>
+                  <List>
                     <List.Item>Teaching Assistant (Excercise Tutor), Undergraduate Mathematics and Engineering Mechanics</List.Item>
                   </List>
                 </Item>
@@ -480,6 +494,22 @@ class CV extends React.Component {
 	                  <Item>
                           <List>
                             <List.Item>
+	                            Associate Chair, <a href="https://chi2019.acm.org/" target="_blank">CHI&apos;19 Late Breaking Work</a>
+                            </List.Item>
+                          </List>
+	                  </Item>
+
+	                  <Item>
+                          <List>
+                            <List.Item>
+	                            Student Volunteer, <a href="http://ubicomp.org/ubicomp2018/" target="_blank">UbiComp 2018</a>
+                            </List.Item>
+                          </List>
+	                  </Item>
+
+	                  <Item>
+                          <List>
+                            <List.Item>
 	                            Organizing Committee, <a href="http://ubicomp.oulu.fi/ubiss/">9<sup>th</sup> International UBI Summer School 2018 (UBISS 2018)</a>, Oulu, Finland
                             </List.Item>
                           </List>
@@ -489,14 +519,6 @@ class CV extends React.Component {
                           <List>
                             <List.Item>
 	                            Program Committee, <a href="http://skill.informatik.uni-leipzig.de/">Studierendenkonferenz Informatik (SKILL)</a>, Berlin, Germany
-                            </List.Item>
-                          </List>
-	                  </Item>
-
-	                  <Item>
-                          <List>
-                            <List.Item>
-	                            Student Volunteer, <a href="http://ubicomp.org/ubicomp2018/" target="_blank">UbiComp 2018</a>
                             </List.Item>
                           </List>
 	                  </Item>
