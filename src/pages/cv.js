@@ -403,7 +403,17 @@ class CV extends React.Component {
                     <Item>
                       <List>
                         <List.Item>Student Travel Grant, UbiComp/ISWC 2018</List.Item>
+                      </List>
+                    </Item>
+
+                    <Item>
+                      <List>
                         <List.Item>Distinction, M.Sc. Computer Science, University of Southampton</List.Item>
+                      </List>
+                    </Item>
+
+                    <Item>
+                      <List>
                         <List.Item>Erasmus Sokrates Scholarship, German Academic Exchange Service (DAAD)</List.Item>
                       </List>
                     </Item>
@@ -413,6 +423,8 @@ class CV extends React.Component {
   <div style={styles.rightCol}>
   </div>
 </div>
+
+
 
 <div style={styles.row}>
   <div style={styles.leftCol}>
@@ -479,8 +491,7 @@ class CV extends React.Component {
 
                   </Item.Group>
   </div>
-  <div style={styles.rightCol}>
-  </div>
+  <div style={styles.rightCol}></div>
 </div>
 
 <div style={styles.row}>
