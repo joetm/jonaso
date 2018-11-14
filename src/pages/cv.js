@@ -402,6 +402,12 @@ class CV extends React.Component {
 
                     <Item>
                       <List>
+                        <List.Item>SIGCHI Travel Grant [conditional acceptance], C&amp;C 2019</List.Item>
+                      </List>
+                    </Item>
+
+                    <Item>
+                      <List>
                         <List.Item>Student Travel Grant, UbiComp/ISWC 2018</List.Item>
                       </List>
                     </Item>
