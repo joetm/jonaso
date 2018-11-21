@@ -443,12 +443,30 @@ class CV extends React.Component {
   </div>
 </div>
 
+{/*
 <div style={styles.row}>
   <div style={styles.leftCol}>
                 <Header id="teaching" style={styles.headline} size="large">Teaching Experience</Header>
   </div>
   <div style={styles.mainCol}>
               <Item.Group>
+                <Item>
+                  <List>
+                    <List.Item>Teaching Assistant, Social Computing</List.Item>
+                  </List>
+                </Item>
+              </Item.Group>
+  </div>
+  <div style={styles.rightCol}>2019</div>
+</div>
+*/}
+<div style={styles.row}>
+  <div style={styles.leftCol}>
+                <Header id="teaching" style={styles.headline} size="large">Teaching Experience</Header>
+  </div>
+  <div style={styles.mainCol}>
+              <Item.Group>
+
                 <Item>
                   <List>
                     <List.Item>Teaching Assistant, Human Computer Interaction</List.Item>
@@ -458,6 +476,7 @@ class CV extends React.Component {
   </div>
   <div style={styles.rightCol}>2018</div>
 </div>
+
 <div style={styles.row}>
   <div style={styles.leftCol}>
   </div>
