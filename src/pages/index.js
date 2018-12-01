@@ -12,7 +12,7 @@ const travel = {
     { event: "INTERACT'19", date: "2.-6. Sept 2019", location: "Paphos", status: "planned" },
     { event: "C&C'19", date: "23.-26. June 2019", location: "San Diego", status: "planned" },
     { event: "PerDis'19", date: "12.-14. June 2019", location: "Palermo", status: "planned" },
-    // { event: "CHI'19", date: "4.-9. May 2019", location: "Glasgow", status: "planned" },
+    { event: "CHI'19", date: "4.-9. May 2019", location: "Glasgow", status: "confirmed" },
     { event: "IUI'19", date: "17.-20. March 2019", location: "Los Angeles", status: "planned" },
   ],
   past: [
