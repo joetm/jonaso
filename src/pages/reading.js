@@ -9,7 +9,8 @@ require('es6-promise').polyfill();
 import "isomorphic-fetch"
 import { spacer } from "../common"
 
-const _URL = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/readlist-latest.json'
+const _LIST_URL = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/readlist-latest.json'
+const _INFLUENCER = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/influencer.json'
 
 const styles = {
   lastupdate: {
@@ -23,10 +24,12 @@ const styles = {
 class ReadingList extends React.Component {
   state = {
     documents: [],
+    influencer: [],
     modified: 'loading',
   }
   componentWillMount = () => {
-    fetch(_URL)
+    // get reading list
+    fetch(_LIST_URL)
     .then(response => {
       if (response.status >= 400) {
         throw new Error("Bad response from server")
@@ -40,6 +43,20 @@ class ReadingList extends React.Component {
         documents: documents.documents
       })
     })
+    // get influencer
+    fetch(_INFLUENCER)
+    .then(response => {
+      if (response.status >= 400) {
+        throw new Error("Bad response from server")
+      }
+      return response.json()
+    })
+    .then(people => {
+      // console.log(people);
+      this.setState({
+        influencer: people
+      })
+    })
   }
   getDate(timestamp) {
     const d = new Date(timestamp * 1000)
@@ -51,7 +68,7 @@ class ReadingList extends React.Component {
     return `${year}-${month}-${day} ${hour}:${min}`
   }
   render() {
-    const { documents, modified } = this.state
+    const { documents, modified, influencer } = this.state
     return (
       <div>
         <Container>
