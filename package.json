@@ -12,12 +12,14 @@
     "bundle-map": "bundle-buddy public/*.map"
   },
   "dependencies": {
-    "es6-promise": "^4.2.4",
-    "gatsby": "^1.9.135",
+    "es6-promise": "^4.2.5",
+    "gatsby": "^1.9.279",
     "gatsby-link": "^1.6.32",
     "gatsby-plugin-no-sourcemaps": "^1.0.5",
     "gatsby-plugin-nprogress": "^1.0.14",
+    "hoist-non-react-statics": "^3.2.1",
     "isomorphic-fetch": "^2.2.1",
+    "recharts": "^1.4.1",
     "rimraf": "^2.6.2",
     "semantic-ui-css": "^2.2.12",
     "semantic-ui-react": "^0.77.1"
