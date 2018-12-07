@@ -133,8 +133,8 @@ class Home extends React.Component {
                 <Header size="tiny" style={nobottommargin}>Upcoming Travel</Header>
                 <List>
                   {
-                    travel.upcoming.map(item => (
-                      <List.Item title={item.status} style={styles.defaultcursor}>
+                    travel.upcoming.map((item,index) => (
+                      <List.Item key={index} title={item.status} style={styles.defaultcursor}>
                           <List.Icon name={item.status === 'confirmed' ? 'checkmark' : 'calendar'} />
                           {[item.event,item.date,item.location].join(", ")}
                       </List.Item>
