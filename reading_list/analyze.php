@@ -59,10 +59,14 @@ while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 
 			$author = ucwords(strtolower(trim($author)));
 
+			if (strtolower($author) == 'simo hosio' && $jsondoc->priority > 0) {
+				echo $author . ' ' . $jsondoc->priority . "\n";
+			}
+
 			if (isset($authors[$author][$jsondoc->priority])) {
 				$authors[$author][$jsondoc->priority] = $authors[$author][$jsondoc->priority] + 1;
 			} else {
-				$authors[$author] = [ $jsondoc->priority => 1 ];
+				$authors[$author][$jsondoc->priority] = 1;
 			}
 		}
 
