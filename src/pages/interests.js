@@ -51,7 +51,7 @@ class ReadingList extends React.Component {
             <Keywords keywords={filtered_keywords} />
 
             <Influencer influencer={influencer} />
-
+            
             <div style={spacer}></div>
 
         </Container>
