@@ -372,7 +372,7 @@ class CV extends React.Component {
                         <Item.Description>
                           <List>
                             <List.Item><a href="https://en.wikipedia.org/wiki/Franco-German_Brigade">Franco-German Brigade</a>, Donaueschingen, Germany</List.Item>
-                            <List.Item>Military service in 292nd Light Infantry Battalion</List.Item>
+                            <List.Item>Military service in 292<sup>nd</sup> Light Infantry Battalion</List.Item>
                           </List>
                         </Item.Description>
                     </Item>
@@ -443,7 +443,6 @@ class CV extends React.Component {
   </div>
 </div>
 
-{/*
 <div style={styles.row}>
   <div style={styles.leftCol}>
                 <Header id="teaching" style={styles.headline} size="large">Teaching Experience</Header>
@@ -452,24 +451,37 @@ class CV extends React.Component {
               <Item.Group>
                 <Item>
                   <List>
-                    <List.Item>Teaching Assistant, Social Computing</List.Item>
+                    <List.Item>Co-Teacher, Social Computing (521044A), University of Oulu</List.Item>
                   </List>
                 </Item>
               </Item.Group>
   </div>
   <div style={styles.rightCol}>2019</div>
 </div>
-*/}
 <div style={styles.row}>
   <div style={styles.leftCol}>
-                <Header id="teaching" style={styles.headline} size="large">Teaching Experience</Header>
   </div>
   <div style={styles.mainCol}>
               <Item.Group>
 
                 <Item>
                   <List>
-                    <List.Item>Teaching Assistant, Human Computer Interaction</List.Item>
+                    <List.Item>Teaching Assistant, Human Computer Interaction (521145A), University of Oulu</List.Item>
+                  </List>
+                </Item>
+              </Item.Group>
+  </div>
+  <div style={styles.rightCol}>2018</div>
+</div>
+<div style={styles.row}>
+  <div style={styles.leftCol}>
+  </div>
+  <div style={styles.mainCol}>
+              <Item.Group>
+
+                <Item>
+                  <List>
+                    <List.Item>Teaching Assistant, Applied Computing Project I (521152S), University of Oulu</List.Item>
                   </List>
                 </Item>
               </Item.Group>
@@ -484,7 +496,7 @@ class CV extends React.Component {
               <Item.Group>
                 <Item>
                   <List>
-                    <List.Item>Teaching Assistant (Excercise Tutor), Undergraduate Mathematics and Engineering Mechanics</List.Item>
+                    <List.Item>Teaching Assistant (Excercise Tutor), Undergraduate Mathematics and Engineering Mechanics, Technical University of Darmstadt</List.Item>
                   </List>
                 </Item>
               </Item.Group>
@@ -526,6 +538,14 @@ class CV extends React.Component {
   <div style={styles.mainCol}>
 
                     <Item.Group>
+
+                    <Item>
+                          <List>
+                            <List.Item>
+                              Organizer, <a href="https://dc2s2.github.io/2019/">DC<sup>2</sup>S<sup>2</sup> Workshop on Designing Crowd-powered Creativity Support Systems</a>, CHI&apos;19
+                            </List.Item>
+                          </List>
+                    </Item>
 
 	                  <Item>
                           <List>

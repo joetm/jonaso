@@ -5,7 +5,7 @@
 import React from "react"
 import { Container, Label} from 'semantic-ui-react'
 import { spacer } from "../common"
-import { ResponsiveContainer, BarChart, Bar, Tooltip, XAxis, YAxis, CartesianGrid } from 'recharts'
+import { ResponsiveContainer, Treemap, BarChart, Bar, Tooltip, XAxis, YAxis, CartesianGrid } from 'recharts'
 
 const styles = {
 }
@@ -23,7 +23,29 @@ class Keywords extends React.Component {
         <Container>
           <h2>Research Interests</h2>
 
-          <ResponsiveContainer width="100%" height={1000}>
+{/* 
+          <div style={{marginBottom:'1.5em'}}>
+            <ResponsiveContainer width="100%" height={400}>
+            <Treemap
+              width={730}
+              height={250}
+              animationDuration={1500}
+              data={keywords}
+              dataKey="num"
+              ratio={4 / 3}
+              stroke="#fff"
+              fill="#82ca9d"
+            >
+              <Tooltip
+                separator=" "
+                formatter={(value, name, props) => (<span>{props.payload.name}: {value} publications</span>)}
+              />
+            </Treemap>
+            </ResponsiveContainer>
+          </div>
+*/}
+
+          <ResponsiveContainer width="100%" height={960}>
                     <BarChart layout="vertical" data={keywords}>
                       <CartesianGrid strokeDasharray="3 3" />
                       <XAxis
