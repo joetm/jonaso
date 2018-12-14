@@ -451,7 +451,10 @@ class CV extends React.Component {
               <Item.Group>
                 <Item>
                   <List>
-                    <List.Item>Co-Teacher, Social Computing (521044A), University of Oulu</List.Item>
+                    <List.Item>
+                    	Co-Teacher, Social Computing (521044A), University of Oulu<br />
+                        (5 ECTS, Bachelor level)
+                    </List.Item>
                   </List>
                 </Item>
               </Item.Group>
@@ -466,7 +469,10 @@ class CV extends React.Component {
 
                 <Item>
                   <List>
-                    <List.Item>Teaching Assistant, Human Computer Interaction (521145A), University of Oulu</List.Item>
+                    <List.Item>
+                    	Teaching Assistant, Human Computer Interaction (521145A), University of Oulu<br />
+                    	(164 students, 5 ECTS, Bachelor level)
+                    </List.Item>
                   </List>
                 </Item>
               </Item.Group>
@@ -481,7 +487,10 @@ class CV extends React.Component {
 
                 <Item>
                   <List>
-                    <List.Item>Teaching Assistant, Applied Computing Project I (521152S), University of Oulu</List.Item>
+                    <List.Item>
+                    	Teaching Assistant, Applied Computing Project I (521152S), University of Oulu<br />
+                    	(Group of three students, 10 ECTS, Bachelor level)
+                    </List.Item>
                   </List>
                 </Item>
               </Item.Group>
