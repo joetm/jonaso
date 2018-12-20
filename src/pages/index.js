@@ -11,10 +11,10 @@ const travel = {
   upcoming: [
     { event: "INTERACT'19", date: "2.-6. Sept 2019", location: "Paphos", status: "planned" },
     { event: "C&C'19", date: "23.-26. June 2019", location: "San Diego", status: "planned" },
+    { event: "PerDis'19", date: "12.-14. June 2019", location: "Palermo", status: "planned" },
     { event: "CHI'19", date: "4.-9. May 2019", location: "Glasgow", status: "confirmed" },
   ],
   past: [
-    // { event: "PerDis'19", date: "12.-14. June 2019", location: "Palermo", status: "planned" },
     // { event: "IUI'19", date: "17.-20. March 2019", location: "Los Angeles", status: "planned" },
     { event: "UbiComp'18", date: "9.-11. October 2018", location: "Singapore", status: "confirmed" },
     { event: "Mobile Human Contributions workshop (MHC'18)", date: "8. October 2018", location: "Singapore", status: "confirmed" },
