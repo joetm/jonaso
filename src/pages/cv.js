@@ -542,7 +542,7 @@ class CV extends React.Component {
 
 <div style={styles.row}>
   <div style={styles.leftCol}>
-                <Header id="service" style={styles.headline} size="large">Service</Header>
+                <Header id="service" style={styles.headline} size="large">Academic Service</Header>
   </div>
   <div style={styles.mainCol}>
 
