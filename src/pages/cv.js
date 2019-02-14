@@ -524,6 +524,7 @@ class CV extends React.Component {
                           <List>
                             <List.Item>
                             	<a href="https://chi2019.acm.org/">CHI&apos;19</a>,{' '}
+                            	<a href="https://interact2019.org/">INTERACT&apos;19</a>,{' '}
                             	<a href="http://cscw.acm.org/2018/">CSCW&apos;18</a>,{' '}
                             	<a href="http://hicss.hawaii.edu/">HICSS-52</a>,{' '}
                             	<a href="https://imwut.acm.org/">IMWUT&apos;18</a>,{' '}
