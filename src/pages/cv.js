@@ -523,9 +523,10 @@ class CV extends React.Component {
                     <Item>
                           <List>
                             <List.Item>
-                            	<a href="https://chi2019.acm.org/">CHI&apos;19</a>,{' '}
-                            	<a href="https://interact2019.org/">INTERACT&apos;19</a>,{' '}
-                            	<a href="http://cscw.acm.org/2018/">CSCW&apos;18</a>,{' '}
+                            	<a href="https://chi2019.acm.org/" title="ACM CHI Conference on Human Factors in Computing Systems">CHI&apos;19</a>,{' '}
+                            	<a href="https://interact2019.org/" title="IFIP TC.13 International Conference on Human-Computer Interaction">INTERACT&apos;19</a>,{' '}
+                            	<a href="http://cc.acm.org/2019/" title="Creativity &amp; Cognition">C&amp;C&apos;19</a>,{' '}
+                            	<a href="http://cscw.acm.org/2018/" title="ACM Conference on Computer-Supported Cooperative Work and Social Computing">CSCW&apos;18</a>,{' '}
                             	<a href="http://hicss.hawaii.edu/">HICSS-52</a>,{' '}
                             	<a href="https://imwut.acm.org/">IMWUT&apos;18</a>,{' '}
                             	<a href="https://chiplay.acm.org/2018/">CHI PLAY 2018</a>,{' '}
