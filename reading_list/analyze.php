@@ -139,7 +139,28 @@ while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 
 		foreach ($jsondoc->authors as $author) {
 
-			// var_dump($jsondoc);
+			// var_dump($jsondoc)
+			// object(stdClass)#2 (6) {
+			//   ["keywords"]=>
+			//   string(29) "Mobile Phones > Advertisement"
+			//   ["priority"]=>
+			//   int(0)
+			//   ["title"]=>
+			//   string(86) "Exploring Mobile Ad Formats to Increase Brand Recollection and Enhance User Experience"
+			//   ["year"]=>
+			//   int(2017)
+			//   ["authors"]=>
+			//   array(3) {
+			//     [0]=>
+			//     string(10) "Aku Visuri"
+			//     [1]=>
+			//     string(10) "Simo Hosio"
+			//     [2]=>
+			//     string(15) "Denzil Ferreira"
+			//   }
+			//   ["modified"]=>
+			//   int(1543650036)
+			// }
 
 			$author = trim($author);
 
@@ -162,10 +183,14 @@ while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 
 			// store the title in the respective author details
 			// var_dump($author, $jsondoc->title);
+			$thetitle_arr = array(
+						"title" => $jsondoc->title,
+						"priority" => $jsondoc->priority,
+						);
 			if (!isset($details[$author])) {
-				$details[$author] = array($jsondoc->title);
+				$details[$author] = array($thetitle_arr);
 			} else {
-				$details[$author][] = $jsondoc->title;
+				$details[$author][] = $thetitle_arr;
 			}
 		}
 
@@ -189,7 +214,7 @@ while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 	$done++;
 	show_status($done, $total, $size=20);
 
-	// DEV
+	// // DEV
 	// if ($i > 10) {
 	// 	break;
 	// }
