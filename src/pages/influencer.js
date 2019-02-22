@@ -59,7 +59,7 @@ class AuthorList extends React.Component {
     })
   }
   render () {
-    const { list } = this.props
+    const { list, priority } = this.props
     const { details } = this.state
     // console.log('list',list)
     if (!list) {
@@ -82,7 +82,9 @@ class AuthorList extends React.Component {
                 </Label>
                 {details[author.id] &&
                   <div style={styles.details}>{
-                    details[author.id].map((item) => (<div key={item}>{item}</div>))
+                    details[author.id].filter(item => item.priority === priority).map(item => (
+                        <div key={item.title}>{item.title}</div>
+                    ))
                   }</div>
                 }
               </div>
@@ -109,15 +111,15 @@ class Influencer extends React.Component {
           <h2>Influencers</h2>
           <div style={styles.clear}>
             <h3>Highly influential</h3>
-            <AuthorList list={influencer[3]} />
+            <AuthorList priority={3} list={influencer[3]} />
           </div>
           <div style={styles.clear}>
             <h3>Influential</h3>
-            <AuthorList list={influencer[2]} />
+            <AuthorList priority={2} list={influencer[2]} />
           </div>
           <div style={styles.clear}>
             <h3>Relevant</h3>
-            <AuthorList list={influencer[1]} />
+            <AuthorList priority={1} list={influencer[1]} />
           </div>
           <div style={styles.clear}></div>
         </Container>
