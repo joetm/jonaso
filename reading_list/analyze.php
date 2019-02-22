@@ -106,6 +106,7 @@ $db = new MyDB();
 
 $authors = array();
 $keywords = array();
+$details = array();
 
 // for progress bar
 $result = $db->query('SELECT count(json) AS `cnt` FROM `documents`');
@@ -115,7 +116,10 @@ $done = 0;
 
 $result = $db->query('SELECT `json` FROM `documents`');
 
+$i = 0;
 while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
+
+	$i++;
 
 	// var_dump($doc);
 
@@ -135,6 +139,8 @@ while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 
 		foreach ($jsondoc->authors as $author) {
 
+			// var_dump($jsondoc);
+
 			$author = trim($author);
 
 			// reduce to "firstname lastname"
@@ -145,12 +151,21 @@ while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 			}
 
 			// FIRST LAST -> First Last
-			$author = ucwords(strtolower($author));
+			$author = trim(ucwords(strtolower($author)), "\n");
 
+			// increase publication counter for this author
 			if (isset($authors[$author][$jsondoc->priority])) {
 				$authors[$author][$jsondoc->priority] = $authors[$author][$jsondoc->priority] + 1;
 			} else {
 				$authors[$author][$jsondoc->priority] = 1;
+			}
+
+			// store the title in the respective author details
+			// var_dump($author, $jsondoc->title);
+			if (!isset($details[$author])) {
+				$details[$author] = array($jsondoc->title);
+			} else {
+				$details[$author][] = $jsondoc->title;
 			}
 		}
 
@@ -173,6 +188,11 @@ while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 
 	$done++;
 	show_status($done, $total, $size=20);
+
+	// DEV
+	// if ($i > 10) {
+	// 	break;
+	// }
 
 }
 
@@ -207,6 +227,7 @@ foreach ($authors as $name => $arr) {
 			array_push($priorities[$i], [
 				'name' => $name,
 				'num' => $arr[$i],
+				'id' => md5($name),
 			]);
 		}
 	}
@@ -236,3 +257,11 @@ fclose($fp);
 $fp = fopen('keywords.json', 'w');
 fwrite($fp, json_encode($kws));
 fclose($fp);
+
+// write out the author details
+// chdir('./influencers/');
+foreach ($details as $author => $array_of_titles) {
+	$fp = fopen('./influencers/' . md5($author) . '.json', 'w');
+	fwrite($fp, json_encode($array_of_titles));
+	fclose($fp);
+}
