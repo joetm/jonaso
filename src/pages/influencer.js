@@ -13,32 +13,85 @@ const styles = {
   },
   label: {
     marginBottom: '0.5em',
-    cursor: 'default',
+    cursor: 'pointer',
     float:'left',
     marginRight: '1em',
   },
+  details: {
+    clear: 'both',
+  },
 }
 
-const AuthorList = ({list}) => {
-  // console.log('list',list)
-  if (!list) {
-    return null;
+
+class AuthorList extends React.Component {
+  state = {
+    details: {},
+    activeid: null,
   }
-  return (<div>
-    {
-      list.map((author, index) => {
-        if (author.num <= 1) { return null }
-        return (
-                <div key={index}>
-                  <Label style={styles.label} title={author.num > 1 ? author.num + ' publications' : author.num + ' publication'}>
-                    {author.name}
-                    <Label.Detail>{author.num}</Label.Detail>
-                  </Label>
-                </div>
-        )
+  getAuthorDetails = (id) => {
+    // remove
+    if (id == this.state.activeid) {
+      const details = this.state.details
+      delete details[id];
+      this.setState({
+        activeid: null,
+        details,
       })
+      return
     }
-    </div>)
+    // add
+    const url = `https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/influencers/${id}.json`
+    fetch(url)
+    .then(response => {
+      if (response.status >= 400) {
+        throw new Error("Bad response from server")
+      }
+      return response.json()
+    })
+    .then(documents => {
+      console.info(documents)
+      const details = this.state.details
+      details[id] = documents
+      this.setState({
+        activeid: id,
+        details,
+      })
+    })
+  }
+  render () {
+    const { list } = this.props
+    const { details } = this.state
+    // console.log('list',list)
+    if (!list) {
+      return null
+    }
+    return (
+      <div>
+        {
+          list.map((author, index) => {
+            if (author.num <= 1) { return null }
+            return (
+              <div key={index} id={author.id}>
+                <Label
+                  style={styles.label}
+                  title={author.num > 1 ? author.num + ' publications' : author.num + ' publication'}
+                  onClick={() => this.getAuthorDetails(author.id)}
+                >
+                  {author.name}
+                  <Label.Detail>{author.num}</Label.Detail>
+                </Label>
+                {details[author.id] &&
+                  <div style={styles.details}>{
+                    details[author.id].map((item) => (<div key={item}>{item}</div>))
+                  }</div>
+                }
+              </div>
+            )
+          })
+        }
+      </div>
+    )
+  }
 }
 
 
