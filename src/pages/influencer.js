@@ -49,7 +49,7 @@ class AuthorList extends React.Component {
       return response.json()
     })
     .then(documents => {
-      console.info(documents)
+      // console.info(documents)
       const details = this.state.details
       details[id] = documents
       this.setState({
@@ -71,7 +71,7 @@ class AuthorList extends React.Component {
           list.map((author, index) => {
             if (author.num <= 1) { return null }
             return (
-              <div key={index} id={author.id}>
+              <div key={`${index}_${author.id}`} id={author.id}>
                 <Label
                   style={styles.label}
                   title={author.num > 1 ? author.num + ' publications' : author.num + ' publication'}
@@ -81,9 +81,9 @@ class AuthorList extends React.Component {
                   <Label.Detail>{author.num}</Label.Detail>
                 </Label>
                 {details[author.id] &&
-                  <div style={styles.details}>{
+                  <div style={styles.details} key={`a${author.id}`}>{
                     details[author.id].filter(item => item.priority === priority).map(item => (
-                        <div key={item.title}>{item.title}</div>
+                        <div key={`t${author.id}${item.priority}${item.title}`}>{item.title}</div>
                     ))
                   }</div>
                 }
