@@ -612,7 +612,7 @@ class CV extends React.Component {
                   <Item.Group>
 
                     <Item>
-                      {/*<div style={styles.datum}>2014</div>
+                      {/*<div style={styles.datum}>2014</div>*/}
 	                    <Item.Header style={styles.nonbold}>Certified ScrumMaster (Scrum Alliance)</Item.Header>
                     </Item>
 

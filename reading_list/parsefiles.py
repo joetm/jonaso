@@ -15,6 +15,7 @@ BUF_SIZE = 131072
 # the folders to search for
 BASEPATHS = [
     "/home/jonas/OULU/Literatur/",
+    "/home/jonas/OULU/Courses/",
     "/home/jonas/FU/IKON/Literatur/",
     "/home/jonas/FU/Academic Working/",
     "/home/jonas/FU/ID+LAB/Literatur/",
