@@ -24,10 +24,8 @@ class ReadingList extends React.Component {
       }
       return response.json()
     })
-    .then(people => {
-      this.setState({
-        influencer: people
-      })
+    .then(influencer => {
+      this.setState({influencer})
     })
     // get keywords
     fetch(_KEYWORDS)
