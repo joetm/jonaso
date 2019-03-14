@@ -60,7 +60,7 @@ class AuthorList extends React.Component {
   }
   render () {
     const { list, priority } = this.props
-    const { details } = this.state
+    const { details, activeid } = this.state
     // console.log('list',list)
     if (!list) {
       return null
@@ -74,6 +74,7 @@ class AuthorList extends React.Component {
               <div key={`${index}_${author.id}`} id={author.id}>
                 <Label
                   style={styles.label}
+                  color={activeid === author.id ? 'red' : null}
                   title={author.num > 1 ? author.num + ' publications' : author.num + ' publication'}
                   onClick={() => this.getAuthorDetails(author.id)}
                 >
