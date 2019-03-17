@@ -24,26 +24,26 @@ class Keywords extends React.Component {
         <Container>
           <h2>Research Interests</h2>
           <ResponsiveContainer width="100%" height={960}>
-                    <BarChart layout="vertical" data={keywords}>
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis
-                        type="number"
-                        dataKey="num"
-                      />
-                      <YAxis
-                        type="category"
-                        dataKey="name"
-                        width={200}
-                      />
-                      <Tooltip
-                        separator=" "
-                        formatter={(value, name, props) => (<span>Publications: {value}</span>)}
-                      />
-                      <Bar
-                        dataKey="num"
-                        fill="#82ca9d"
-                      />
-                    </BarChart>
+            <BarChart layout="vertical" data={keywords}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis
+                type="number"
+                dataKey="num"
+              />
+              <YAxis
+                type="category"
+                dataKey="name"
+                width={200}
+              />
+              <Tooltip
+                separator=" "
+                formatter={(value, name, props) => (<span>Publications: {value}</span>)}
+              />
+              <Bar
+                dataKey="num"
+                fill="#82ca9d"
+              />
+            </BarChart>
           </ResponsiveContainer>
 
         </Container>
