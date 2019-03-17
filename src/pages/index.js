@@ -11,7 +11,7 @@ const travel = {
   upcoming: [
     { event: "C&C'19", date: "23.-26. June 2019", location: "San Diego", status: "planned" },
     { event: "PerDis'19", date: "12.-14. June 2019", location: "Palermo", status: "planned" },
-    { event: "ECSCW'19", date: "8.-12. June 2019", location: "Salzburg", status: "planned" },
+    // { event: "ECSCW'19", date: "8.-12. June 2019", location: "Salzburg", status: "planned" },
     { event: "CHI'19", date: "4.-9. May 2019", location: "Glasgow", status: "confirmed" },
   ],
   past: [

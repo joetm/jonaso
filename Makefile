@@ -11,10 +11,6 @@ default:
 	##   make push   		push to github
 	##
 
-tests:
-	# checking ontology
-	# TODO
-
 build:
 	yarn build
 
@@ -24,7 +20,7 @@ dev:
 refs:
 	# _dir="$(pwd)/src/bibliography"
 	# create bibliography html
-	bibtex2html -noheader -nofooter "src/bibliography/publications.bib"
+	bibtex2html -noheader -nofooter --style "SIGCHI-Reference-Format" "src/bibliography/publications.bib"
 	# convert html to json
 	php ./parse.php
 	# move json file to public folder
