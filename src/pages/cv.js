@@ -728,11 +728,13 @@ class CV extends React.Component {
                       </Item.Content>
                     </Item>
 
+{/*
                     <Item>
                       <Item.Content>
                         <Item.Header style={styles.nonbold}>Association for Information Systems (AIS)</Item.Header>
                       </Item.Content>
                     </Item>
+*/}
 
                   </Item.Group>
   </div>
