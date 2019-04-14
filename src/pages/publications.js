@@ -52,7 +52,7 @@ class Publications extends React.Component {
     const keys = Object.keys(references).reverse()
     return (
       <div>
-        <Container>
+        <Container id="publications">
 
               {
                 keys.map(year => {
@@ -63,6 +63,7 @@ class Publications extends React.Component {
                         </Grid.Row>
                         {
                           references[year].map((item, index) => {
+                            item.__html = item.__html.replace('Jonas Oppenlaender', '<strong>Jonas Oppenlaender</strong>')
                             let icostr = 'file text outline'
                             if (item.__html.indexOf('.pdf') === -1) {
                               icostr = 'file outline'
