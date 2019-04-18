@@ -402,13 +402,13 @@ class CV extends React.Component {
 
                     <Item>
                       <List>
-                        <List.Item>SIGCHI Travel Grant, C&amp;C 2019</List.Item>
+                        <List.Item>SIGCHI Travel Grant, C&amp;C &apos;19</List.Item>
                       </List>
                     </Item>
 
                     <Item>
                       <List>
-                        <List.Item>University of Oulu UniOGS Travel Grant, CHI&apos;19</List.Item>
+                        <List.Item>University of Oulu UniOGS Travel Grant, CHI &apos;19</List.Item>
                       </List>
                     </Item>
 
@@ -530,7 +530,7 @@ class CV extends React.Component {
                     <Item>
                           <List>
                             <List.Item>
-                              Organizer, <a href="https://creativity-workshops.github.io/cc19/">Workshop on Crowd-Powered Interfaces for Creative Design Thinking</a>, C&amp;C&apos;19
+                              Organizer, <a href="https://creativity-workshops.github.io/cc19/">Workshop on Crowd-Powered Interfaces for Creative Design Thinking</a>, C&amp;C &apos;19
                             </List.Item>
                           </List>
                     </Item>
@@ -538,7 +538,7 @@ class CV extends React.Component {
                     <Item>
                           <List>
                             <List.Item>
-                              Organizer, <a href="https://dc2s2.github.io/2019/">Workshop on Designing Crowd-powered Creativity Support Systems</a>, CHI&apos;19
+                              Organizer, <a href="https://dc2s2.github.io/2019/">Workshop on Designing Crowd-powered Creativity Support Systems</a>, CHI &apos;19
                             </List.Item>
                           </List>
                     </Item>
@@ -546,7 +546,7 @@ class CV extends React.Component {
 	                  <Item>
                           <List>
                             <List.Item>
-	                            Associate Chair, <a href="https://chi2019.acm.org/" target="_blank">CHI&apos;19 Late Breaking Work</a>
+	                            Associate Chair, <a href="https://chi2019.acm.org/" target="_blank">CHI &apos;19 Late Breaking Work</a>
                             </List.Item>
                           </List>
 	                  </Item>
@@ -592,16 +592,16 @@ class CV extends React.Component {
                     <Item>
                           <List>
                             <List.Item>
-                            	<a href="https://chi2019.acm.org/" title="ACM CHI Conference on Human Factors in Computing Systems">CHI&apos;19</a>,{' '}
-                            	<a href="http://cc.acm.org/2019/" title="Creativity &amp; Cognition">C&amp;C&apos;19</a>,{' '}
-                            	<a href="https://interact2019.org/" title="IFIP TC.13 International Conference on Human-Computer Interaction">INTERACT&apos;19</a>,{' '}
-                            	<a href="http://cscw.acm.org/2018/" title="ACM Conference on Computer-Supported Cooperative Work and Social Computing">CSCW&apos;18</a>,{' '}
-                            	<a href="http://hicss.hawaii.edu/">HICSS-52</a>,{' '}
-                            	<a href="https://imwut.acm.org/">IMWUT&apos;18</a>,{' '}
-                            	<a href="https://chiplay.acm.org/2018/">CHI PLAY 2018</a>,{' '}
-                            	<a href="http://icmi.acm.org/2018/">ICMI&apos;18</a>,{' '}
-                            	<a href="http://skill.informatik.uni-leipzig.de/">SKILL-18</a>,{' '}
-                            	<a href="https://2017.eswc-conferences.org/">ESWC&apos;17</a>
+                            	<a href="http://cscw.acm.org/" title="ACM Conference on Computer-Supported Cooperative Work and Social Computing">CSCW 2018, 2019</a><br />
+                            	<a href="https://chi2019.acm.org/" title="ACM CHI Conference on Human Factors in Computing Systems">CHI 2019</a><br />
+                            	<a href="http://cc.acm.org/2019/" title="Creativity &amp; Cognition">C&amp;C 2019</a><br />
+                            	<a href="https://interact2019.org/" title="IFIP TC.13 International Conference on Human-Computer Interaction">INTERACT 2019</a><br />
+                            	<a href="http://hicss.hawaii.edu/">HICSS-52</a><br />
+                            	<a href="https://imwut.acm.org/">IMWUT 2018</a><br />
+                            	<a href="https://chiplay.acm.org/2018/">CHI PLAY 2018</a><br />
+                            	<a href="http://icmi.acm.org/2018/">ICMI 2018</a><br />
+                            	<a href="http://skill.informatik.uni-leipzig.de/">SKILL-18</a><br />
+                            	<a href="https://2017.eswc-conferences.org/">ESWC 2017</a>
                             </List.Item>
                           </List>
                     </Item>
