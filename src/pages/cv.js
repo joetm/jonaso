@@ -736,6 +736,12 @@ class CV extends React.Component {
                       </Item.Content>
                     </Item>
 
+                    <Item>
+                      <Item.Content>
+                        <Item.Header style={styles.nonbold}>ACM Special Interest Group on Computer-Human Interaction (SIGCHI)</Item.Header>
+                      </Item.Content>
+                    </Item>
+
 {/*
                     <Item>
                       <Item.Content>
