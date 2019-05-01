@@ -205,6 +205,10 @@ class Home extends React.Component {
               <i style={styles.academicon} title="ORCID" className="ai ai-orcid-square ai-2x"></i>
           </a>
 
+          <a href="https://dblp.uni-trier.de/pers/hd/o/Oppenlaender:Jonas">
+              <i style={styles.academicon} title="DBLP" className="ai ai-dblp-square ai-2x"></i>
+          </a>
+
         </Container>
       </div>
     )
