@@ -30,7 +30,11 @@ refs:
 	mv "./publications_bib.html" ./public/static/
 	# copy bib file to public folder
 	cp "src/bibliography//publications.bib" ./public/static/
-	rm publications.html
+	# rm publications.html
+
+	# create detailed references json
+# 	python3 ./pyparse.py
+# 	mv references-detail.json ./public/static/
 
 push:
 	# push to github
