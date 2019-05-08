@@ -33,12 +33,10 @@ refs:
 
 	# create detailed references json
 	python3 ./pyparse.py
+	php ./parsePerType.php
 	mv references-detail.json ./public/static/
 
-# TODO
-# 	php ./parsePerType.php
-
-	# rm publications.html
+	rm publications.html
 
 push:
 	# push to github
