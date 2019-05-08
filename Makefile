@@ -38,7 +38,7 @@ refs:
 # TODO
 # 	php ./parsePerType.php
 
-	rm publications.html
+	# rm publications.html
 
 push:
 	# push to github

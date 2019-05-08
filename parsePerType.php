@@ -25,31 +25,41 @@ $classname = "bibtexitem";
 $doc = new DOMDocument();
 $doc->loadHTML($html);
 
-$xpath = new DOMXpath($doc);
+$finder = new DomXPath($doc);
 
-$elements = $xpath->query("//*[@id]");
-var_dump($elements);
-die;
+$rows = $finder->query("//*[contains(@class, '$classname')]");
+// $rows = $doc->getElementsByTagName('td');
 
-// $finder = new DomXPath($doc);
-// $rows = $finder->query("//*[contains(@class, '$classname')]");
 
-$rows = $doc->getElementsByTagName('tr');
+// load the details json
+$string = file_get_contents("./public/static/references-detail.json");
+$json = json_decode($string, true);
+// var_dump($json);
 
 $references = [];
 
 foreach ($rows as $bibitem) {
-	// get the id of the entry
+        $id = $bibitem->parentNode->getElementsByTagName('a')[0]->attributes[0]->nodeValue;
+        // echo $id . "\r\n";
 
-	// get the text of the entry
+        $type = false;
+        // use the $id to look up the type
+        foreach ($json as $ref) {
+            if ($ref["ID"] === $id) {
+                $type = $ref["howpublished"];
+                break;
+            }
+        }
 
-	// var_dump($bibitem);
-
-    var_dump(DOMinnerHTML($bibitem));
-    // $references[] = DOMinnerHTML($bibitem);
+        // add the item to the respective array key
+        if (isset($references[$type])) {
+            $references[$type][] = DOMinnerHTML($bibitem);
+        } else {
+            $references[$type] = array(DOMinnerHTML($bibitem));
+        }
 }
 
-// $fp = fopen('references.json', 'w');
-// fwrite($fp, json_encode($references, JSON_PRETTY_PRINT));
-// fclose($fp);
+$fp = fopen('references-details.json', 'w');
+fwrite($fp, json_encode($references, JSON_PRETTY_PRINT));
+fclose($fp);
 
