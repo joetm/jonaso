@@ -14,7 +14,7 @@ const styles = {
 }
 
 const _REFERENCES_PER_YEAR = "http://jonaso.de/static/references.json"
-const _REFERENCES_PER_TYPE = "http://jonaso.de/static/references-detail.json"
+const _REFERENCES_PER_TYPE = "http://jonaso.de/static/references-type.json"
 
 
 /**
@@ -57,19 +57,21 @@ class Publications extends React.Component {
       this.setState({references: categorizedRefs})
     })
     // fetch references per publication type
-    // fetch(_REFERENCES_PER_TYPE)
-    // .then(response => response.json())
-    // .then(referencesDetail => {
-    //   // const categorizedRefs = categorizeListPerType(refs)
-    //   this.setState({referencesDetail})
-    // })
+    fetch(_REFERENCES_PER_TYPE)
+    .then(response => response.json())
+    .then(referencesDetail => {
+      this.setState({referencesDetail})
+    })
   }
   // switchPubView () {
   //   alert('switch');
   // }
   render() {
-    const { references } = this.state
+    const { references, referencesDetail } = this.state
     const keysYear = Object.keys(references).reverse()
+    const keysType = Object.keys(referencesDetail).reverse()
+    keysType.sort()
+    console.log(referencesDetail)
     return (
       <div>
 

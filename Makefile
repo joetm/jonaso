@@ -34,8 +34,9 @@ refs:
 	# create detailed references json
 	python3 ./pyparse.py
 	php ./parsePerType.php
-	mv references-detail.json ./public/static/
 
+	mv ./references-detail.json ./public/static/
+	mv ./references-type.json ./public/static/
 	rm publications.html
 
 push:
