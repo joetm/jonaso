@@ -536,6 +536,14 @@ class CV extends React.Component {
                     </Item>
 
                     <Item>
+                        <List>
+                          <List.Item>
+                              Student Volunteer, <a href="http://cc.acm.org/2019/" target="_blank">C&amp;C 2019</a>
+                          </List.Item>
+                        </List>
+                    </Item>
+
+                    <Item>
                           <List>
                             <List.Item>
                               Organizer, <a href="https://dc2s2.github.io/2019/">Workshop on Designing Crowd-powered Creativity Support Systems</a>, CHI &apos;19
