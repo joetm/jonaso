@@ -47,6 +47,7 @@ class Publications extends React.Component {
   state = {
     references: {},
     referencesDetail: {},
+    showing: 'type',
   }
   componentWillMount = () => {
     // fetch references per publication year
@@ -63,26 +64,29 @@ class Publications extends React.Component {
       this.setState({referencesDetail})
     })
   }
-  // switchPubView () {
-  //   alert('switch');
-  // }
+  switchPubView = () => {
+    if (this.state.showing === 'type') {
+      this.setState({'showing': 'year'})
+    } else {
+      this.setState({'showing': 'type'})
+    }
+  }
   render() {
-    const { references, referencesDetail } = this.state
+    const { references, referencesDetail, showing } = this.state
     const keysYear = Object.keys(references).reverse()
     const keysType = Object.keys(referencesDetail).reverse()
     keysType.sort()
-    console.log(referencesDetail)
+    // console.log(keysType,referencesDetail)
     return (
       <div>
 
-{/*
         <div style={styles.menu}>
-          <button onClick={this.switchPubView} title="Publications per year">YEAR</button>
+          <button disabled={showing !== 'type'} onClick={this.switchPubView} title="Publications per year">YEAR</button>
           {" "} | {" "}
-          <button onClick={this.switchPubView} title="Publications per type">TYPE</button>
+          <button disabled={showing === 'type'} onClick={this.switchPubView} title="Publications per type">TYPE</button>
         </div>
 
-        <Container id="publications-type" style={{display:'block'}}>
+        <Container id="publications-type" style={{display: showing === 'type' ? 'block' : 'none'}}>
 
               {
                 keysType.map(typ => {
@@ -92,11 +96,11 @@ class Publications extends React.Component {
                           <Header size="large">{typ}</Header>
                         </Grid.Row>
                         {
-                          referencesDetail[typ].map((item, index) => {
-                            item.__html = item.__html.replace('Jonas Oppenlaender', '<strong>Jonas Oppenlaender</strong>')
-                            item.__html = item.__html.replace('Jonas Oppenländer', '<strong>Jonas Oppenländer</strong>')
+                          referencesDetail[typ].map((ref, index) => {
+                            ref = ref.replace('Jonas Oppenlaender', '<strong>Jonas Oppenlaender</strong>')
+                            ref = ref.replace('Jonas Oppenländer', '<strong>Jonas Oppenländer</strong>')
                             let icostr = 'file text outline'
-                            if (item.__html.indexOf('.pdf') === -1) {
+                            if (ref.indexOf('.pdf') === -1) {
                               icostr = 'file outline'
                             }
                             return (
@@ -115,7 +119,7 @@ class Publications extends React.Component {
                                 <Grid.Column width={14}>
                                 <Item>
                                   <Item.Content>
-                                    <Item.Header dangerouslySetInnerHTML={item.__html} />
+                                    <Item.Header dangerouslySetInnerHTML={{__html: ref}} />
                                   </Item.Content>
                                 </Item>
                                 </Grid.Column>
@@ -128,10 +132,11 @@ class Publications extends React.Component {
                 })
               }
 
-        </Container>
-*/}
+            <div style={spacer}></div>
 
-        <Container id="publications-year">
+        </Container>
+
+        <Container id="publications-year" style={{display: showing !== 'type' ? 'block' : 'none'}}>>
 
               {
                 keysYear.map(year => {
