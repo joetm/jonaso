@@ -11,10 +11,6 @@ const styles = {
     fontSize: '1.5em',
     linHeight: '2.5em',
   },
-  // menuLink: {
-  //   textDecoration: 'underline',
-  //   cursor: 'pointer',
-  // },
 }
 
 const _REFERENCES_PER_YEAR = "http://jonaso.de/static/references.json"
@@ -46,26 +42,6 @@ function categorizeListPerYear(pubList) {
     return categorizedList
 }
 
-/**
- * Group publications by type
- * @param {Array} pubList - List of publications
- * @returns {Object} categorizedList - Categorized list of publications
- */
-// function categorizeListPerType(pubList) {
-//     if (!pubList) {
-//         return {}
-//     }
-//     const categorizedList = {}
-//     pubList.forEach(obj => {
-//       if (categorizedList[obj.howpublished]) {
-//           categorizedList[obj.howpublished].push(obj)
-//       } else {
-//           categorizedList[obj.howpublished] = [obj]
-//       }
-//     })
-//     return categorizedList
-// }
-
 
 class Publications extends React.Component {
   state = {
@@ -94,8 +70,6 @@ class Publications extends React.Component {
   render() {
     const { references } = this.state
     const keysYear = Object.keys(references).reverse()
-    // const keysType = Object.keys(referencesDetail).reverse()
-    // keysType.sort()
     return (
       <div>
 
