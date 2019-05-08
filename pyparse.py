@@ -16,14 +16,13 @@ parser.common_strings = False
 with open('src/bibliography/publications.bib') as bibtex_file:
     bib_database = bibtexparser.load(bibtex_file, parser)
 
-print(bib_database.entries)
+# print(bib_database.entries)
 # print(bib_database.strings)
 
 # print(as_text(bib_database.entries[0]['title']))
 
 # bibtex_str = bibtexparser.dumps(bib_database)
 # print(bibtex_str)
-
 
 # write as json
 with open('./references-detail.json', 'w') as outfile:
