@@ -31,11 +31,13 @@ refs:
 	# copy bib file to public folder
 	cp "src/bibliography//publications.bib" ./public/static/
 
+
 	# create detailed references json
 	python3 ./pyparse.py
+	mv ./references-detail.json ./public/static/
+
 	php ./parsePerType.php
 
-	mv ./references-detail.json ./public/static/
 	mv ./references-type.json ./public/static/
 	rm publications.html
 
