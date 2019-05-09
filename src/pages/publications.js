@@ -136,7 +136,7 @@ class Publications extends React.Component {
 
         </Container>
 
-        <Container id="publications-year" style={{display: showing !== 'type' ? 'block' : 'none'}}>>
+        <Container id="publications-year" style={{display: showing !== 'type' ? 'block' : 'none'}}>
 
               {
                 keysYear.map(year => {
