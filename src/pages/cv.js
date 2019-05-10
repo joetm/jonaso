@@ -64,9 +64,9 @@ class CV extends React.Component {
   render() {
         return (
             <div>
-
               <Container>
 
+                <h1 className="print">Jonas Oppenlaender</h1>
 
 <div style={styles.row}>
   <div style={styles.leftCol}>
@@ -903,7 +903,7 @@ class CV extends React.Component {
 */}
 
 
-                  <div style={spacer}></div>
+                  <div className="spacer" style={spacer}></div>
 
               </Container>
             </div>

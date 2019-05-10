@@ -1,12 +1,24 @@
-@page {
-	margin: 1.5cm;
-}
+.print {display: none;}
 
-header, footer {
-	display: none;
-}
+@media print {
 
-body {
-	font: 11pt "Times New Roman", Times, serif;
-	line-height: 1.3;
+	body {
+		font: 11pt "Times New Roman", Times, serif;
+		line-height: 1.3;
+	}
+
+	@page {
+		margin: 1.5cm;
+	}
+
+	.print {display: inherit;}
+
+	header, footer {
+		display: none;
+	}
+
+	#publicationButtons, .spacer{
+		display: none;
+	}
+
 }

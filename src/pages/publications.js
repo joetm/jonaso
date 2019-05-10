@@ -80,7 +80,7 @@ class Publications extends React.Component {
     return (
       <div>
 
-        <div style={styles.menu}>
+        <div id="publicationButtons" style={styles.menu}>
           <button disabled={showing !== 'type'} onClick={this.switchPubView} title="Publications per year">YEAR</button>
           {" "} | {" "}
           <button disabled={showing === 'type'} onClick={this.switchPubView} title="Publications per type">TYPE</button>
