@@ -138,7 +138,7 @@ class Home extends React.Component {
                   }
                 </List>
                 <hr />
-                <Header size="tiny" style={nobottommargin}>Past Travel</Header>
+                <Header size="tiny" style={{...nobottommargin, ...notopmargin}}>Past Travel</Header>
                 <List style={{color: '#AAAAAA'}}>
                   {
                     travel.past.filter(function(item) {

@@ -21,6 +21,9 @@ const styles = {
   }
 }
 
+const zeroPadding = (v) => (v < 10 ? '0' : '') + v
+
+
 class ReadingList extends React.Component {
   state = {
     documents: [],
@@ -65,7 +68,8 @@ class ReadingList extends React.Component {
     const day = d.getDate()
     const hour = d.getHours()
     const min = d.getMinutes()
-    return `${year}-${month}-${day} ${hour}:${min}`
+    // return `${year}-${month}-${day} ${d.format("hh:mm")}`
+    return `${year}-${month}-${day} ${zeroPadding(hour)}:${zeroPadding(min)}`
   }
   render() {
     const { documents, modified, influencer } = this.state
