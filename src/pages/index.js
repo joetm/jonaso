@@ -1,35 +1,14 @@
 import React from "react"
 import Link from "gatsby-link"
 import { Label, Header, List, Grid, Divider, Image, Container, Icon } from 'semantic-ui-react'
+import "isomorphic-fetch"
 
 import "../../libs/academicons/css/academicons.min.css"
 import img from "../img/opp.jpg"
 import { nobottommargin, notopmargin, nobold } from "../common"
 
 
-const travel = {
-  upcoming: [
-    { event: "UIST'19", date: "20.-23. Oct. 2019", location: "New Orleans", status: "planned" },
-    { event: "INTERACT'19", date: "2.-6. Sept. 2019", location: "Paphos", status: "planned" },
-    { event: "C&C'19", date: "23.-26. June 2019", location: "San Diego", status: "confirmed" },
-    { event: "CHI'19", date: "4.-9. May 2019", location: "Glasgow", status: "confirmed" },
-  ],
-  past: [
-    // { event: "CI'19", date: "13.-14. June 2019", location: "Pittsburgh", status: "planned" },
-    // { event: "PerDis'19", date: "12.-14. June 2019", location: "Palermo", status: "planned" },
-    // { event: "ECSCW'19", date: "8.-12. June 2019", location: "Salzburg", status: "planned" },
-    // { event: "IUI'19", date: "17.-20. March 2019", location: "Los Angeles", status: "planned" },
-    { event: "UbiComp'18", date: "9.-11. October 2018", location: "Singapore", status: "confirmed" },
-    { event: "Mobile Human Contributions workshop (MHC'18)", date: "8. October 2018", location: "Singapore", status: "confirmed" },
-    { event: "UBISS", date: "4.-9. June 2018", location: "Oulu", status: "confirmed" },
-    // { event: "Int. SemWeb Research Summer School", date: "1.-7. July 2018", location: "Bertinoro", status: "planned" },
-    { event: "Oulu, Finland", date: "April 2018", location: "Oulu", status: "confirmed" },
-	  { event: "MKWI'18", date: "6.-9. March 2018", location: "Lüneburg", status: "confirmed" },
-    // { event: "WebSci'18", date: "28.-29. May 2018", location: "Amsterdam", status: "planned" },
-    { event: "GI-Symposium: Arbeitswelten der Zukunft", date: "29. January 2018", location: "Berlin", status: "confirmed" },
-    { event: "HCOMP'17", date: "24.10.-26.10.2017", location: "Quebec, QC", status: "confirmed" },
-  ],
-}
+const _TRAVEL = 'https://raw.githubusercontent.com/joetm/jonaso/master/public/travel.json'
 
 const keywords = {
   primary: [
@@ -83,7 +62,22 @@ const styles = {
 
 
 class Home extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      travel: {
+        upcoming: [],
+        past: [],
+      },
+    }
+  }
+  componentWillMount() {
+    fetch(_TRAVEL)
+    .then(response => response.json())
+    .then(travel => this.setState({travel}))
+  }
   render() {
+    const { travel } = this.state
     return (
       <div>
         <Container style={{marginBottom: '14px'}}>
@@ -135,11 +129,27 @@ class Home extends React.Component {
                 <Header size="tiny" style={nobottommargin}>Upcoming Travel</Header>
                 <List>
                   {
-                    travel.upcoming.map((item,index) => (
+                    travel.upcoming.map((item, index) => (
                       <List.Item key={index} title={item.status} style={styles.defaultcursor}>
                           <List.Icon name={item.status === 'confirmed' ? 'checkmark' : 'calendar'} />
                           {[item.event,item.date,item.location].join(", ")}
                       </List.Item>
+                    ))
+                  }
+                </List>
+                <hr />
+                <Header size="tiny" style={nobottommargin}>Past Travel</Header>
+                <List style={{color: '#AAAAAA'}}>
+                  {
+                    travel.past.filter(function(item) {
+                        if (item.status !== "confirmed") {
+                          return false
+                        }
+                        return true
+                    }).map((item, index) => (
+                        <List.Item key={index} title={item.status} style={styles.defaultcursor}>
+                          {[item.event,item.date,item.location].join(", ")}
+                        </List.Item>
                     ))
                   }
                 </List>

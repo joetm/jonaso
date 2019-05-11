@@ -12,10 +12,7 @@ default:
 	##
 
 build:
-	yarn build
-
-dev:
-	yarn dev
+	cp ./src/travel.json ./public/
 
 refs:
 	# _dir="$(pwd)/src/bibliography"
