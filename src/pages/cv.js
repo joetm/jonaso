@@ -459,7 +459,7 @@ class CV extends React.Component {
                   <List>
                     <List.Item>
                     	Co-Teacher, Social Computing (521044A), University of Oulu<br />
-                        (5 ECTS, Bachelor level)
+                        (14 students, 5 ECTS, Bachelor level)
                     </List.Item>
                   </List>
                 </Item>

@@ -7,6 +7,8 @@ import Link from "gatsby-link"
 import { Table, Responsive, Header, List, Label, Item, Icon, Grid, Container } from 'semantic-ui-react'
 require('es6-promise').polyfill();
 import "isomorphic-fetch"
+
+import PubGraph from "../PubGraph.js"
 import { spacer } from "../common"
 
 const _LIST_URL = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/readlist-latest.json'
@@ -76,6 +78,8 @@ class ReadingList extends React.Component {
     return (
       <div>
         <Container>
+
+            <PubGraph documents={documents} />
 
             <Header size="large">
               100 Recently Read Publications
