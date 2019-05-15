@@ -8,7 +8,7 @@ import img from "../img/opp.jpg"
 import { nobottommargin, notopmargin, nobold } from "../common"
 
 
-const _TRAVEL = 'https://raw.githubusercontent.com/joetm/jonaso/master/public/travel.json'
+// const _TRAVEL = 'https://raw.githubusercontent.com/joetm/jonaso/master/public/travel.json'
 
 const keywords = {
   primary: [
@@ -71,11 +71,11 @@ class Home extends React.Component {
       },
     }
   }
-  componentWillMount() {
-    fetch(_TRAVEL)
-    .then(response => response.json())
-    .then(travel => this.setState({travel}))
-  }
+  // componentWillMount() {
+  //   fetch(_TRAVEL)
+  //   .then(response => response.json())
+  //   .then(travel => this.setState({travel}))
+  // }
   render() {
     const { travel } = this.state
     return (
@@ -126,6 +126,7 @@ class Home extends React.Component {
                 <Header size="tiny" style={{...nobold, ...notopmargin, ...nobottommargin}}><strong>Further research interests</strong> include:</Header>
                   { keywords.secondary.join(", ") }
 
+                {/*
                 <Header size="tiny" style={nobottommargin}>Upcoming Travel</Header>
                 <List>
                   {
@@ -153,6 +154,7 @@ class Home extends React.Component {
                     ))
                   }
                 </List>
+	            */}
 
               </Grid.Column>
 
@@ -168,10 +170,6 @@ class Home extends React.Component {
                     P.O. Box 4500<br />
                     FI-90014 Oulu<br />
                     E-Mail: {'{'}firstname.lastname{'}'}@oulu.fi<br />
-                    {/*
-                    Telephone: +49 30 838-61565<br />
-                    Fax: +49 30 838-475233
-					*/}
                 </p>
 
                 <p>
