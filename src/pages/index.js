@@ -120,11 +120,15 @@ class Home extends React.Component {
 				            */}
                 </p>
 
-                <Header size="tiny" style={{...nobold, ...notopmargin, ...nobottommargin}}>My <strong>primary research interests</strong> are:</Header>
-                  { keywords.primary.join(", ") }
+                <p>
+        	        <Header size="tiny" style={{...nobold, ...notopmargin, ...nobottommargin}}>My <strong>primary research interests</strong> are:</Header>
+            	      { keywords.primary.join(", ") }
+                </p>
 
-                <Header size="tiny" style={{...nobold, ...notopmargin, ...nobottommargin}}><strong>Further research interests</strong> include:</Header>
-                  { keywords.secondary.join(", ") }
+                <p>
+	                <Header size="tiny" style={{...nobold, ...notopmargin, ...nobottommargin}}><strong>Further research interests</strong> include:</Header>
+    	              { keywords.secondary.join(", ") }
+                </p>
 
                 {/*
                 <Header size="tiny" style={nobottommargin}>Upcoming Travel</Header>
