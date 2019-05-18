@@ -64,7 +64,7 @@ class ReadingList extends React.Component {
     })
   }
   getDate(timestamp) {
-    const d = new Date(timestamp * 1000)
+    const d = new Date(timestamp)
     const year = d.getFullYear()
     const month = d.getMonth() + 1 // 0...11
     const day = d.getDate()
