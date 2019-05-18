@@ -44,7 +44,7 @@ class ReadingList extends React.Component {
     .then(documents => {
       // console.log(documents);
       this.setState({
-        modified: this.getDate(documents.modified),
+        modified: this.getDate(documents.modified * 1000),
         documents: documents.documents
       })
     })
