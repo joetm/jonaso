@@ -2,13 +2,14 @@ import React from "react"
 import Link from "gatsby-link"
 import { Label, Header, List, Grid, Divider, Image, Container, Icon } from 'semantic-ui-react'
 import "isomorphic-fetch"
+import Skeleton from 'react-loading-skeleton'
 
 import "../../libs/academicons/css/academicons.min.css"
 import img from "../img/opp.jpg"
 import { nobottommargin, notopmargin, nobold } from "../common"
 
 
-// const _TRAVEL = 'https://raw.githubusercontent.com/joetm/jonaso/master/public/travel.json'
+const _TRAVEL = 'https://raw.githubusercontent.com/joetm/jonaso/master/public/travel.json'
 
 const keywords = {
   primary: [
@@ -71,11 +72,11 @@ class Home extends React.Component {
       },
     }
   }
-  // componentWillMount() {
-  //   fetch(_TRAVEL)
-  //   .then(response => response.json())
-  //   .then(travel => this.setState({travel}))
-  // }
+  componentWillMount() {
+    fetch(_TRAVEL)
+    .then(response => response.json())
+    .then(travel => this.setState({travel}))
+  }
   render() {
     const { travel } = this.state
     return (
@@ -112,12 +113,6 @@ class Home extends React.Component {
                   I am interested in building web-based socio-technical systems
                   in which the human and technological elements play the role of participant machinery
                   in order to perform complex tasks better than either human or machine could independently.
-          				  {/*
-                    <br />
-                    This exploratory, open-ended approach to research is conducted in the context of
-                    Business Informatics (BI), a research discipline that originated in Germany.
-                    Unlike Information Science, BI tends towards constructing and evaluating prototypical artefacts (Design Science Research).
-				            */}
                 </p>
 
                 <p>
@@ -133,6 +128,12 @@ class Home extends React.Component {
                 {/*
                 <Header size="tiny" style={nobottommargin}>Upcoming Travel</Header>
                 <List>
+
+<List.Item key={index} title={item.status} style={styles.defaultcursor}>
+  <List.Icon name={item.status === 'confirmed' ? 'checkmark' : 'calendar'} />
+  <Skeleton />
+</List.Item>
+
                   {
                     travel.upcoming.map((item, index) => (
                       <List.Item key={index} title={item.status} style={styles.defaultcursor}>
