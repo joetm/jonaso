@@ -9,7 +9,7 @@ import img from "../img/opp.jpg"
 import { nobottommargin, notopmargin, nobold } from "../common"
 
 
-const _TRAVEL = 'https://raw.githubusercontent.com/joetm/jonaso/master/public/travel.json'
+// const _TRAVEL = 'https://raw.githubusercontent.com/joetm/jonaso/master/public/travel.json'
 
 const keywords = {
   primary: [
@@ -72,11 +72,11 @@ class Home extends React.Component {
       },
     }
   }
-  componentWillMount() {
-    fetch(_TRAVEL)
-    .then(response => response.json())
-    .then(travel => this.setState({travel}))
-  }
+  // componentWillMount() {
+  //   fetch(_TRAVEL)
+  //   .then(response => response.json())
+  //   .then(travel => this.setState({travel}))
+  // }
   render() {
     const { travel } = this.state
     return (
@@ -125,23 +125,17 @@ class Home extends React.Component {
     	              { keywords.secondary.join(", ") }
                 </p>
 
-                {/*
+{/*
                 <Header size="tiny" style={nobottommargin}>Upcoming Travel</Header>
                 <List>
-
-<List.Item key={index} title={item.status} style={styles.defaultcursor}>
-  <List.Icon name={item.status === 'confirmed' ? 'checkmark' : 'calendar'} />
-  <Skeleton />
-</List.Item>
-
-                  {
-                    travel.upcoming.map((item, index) => (
-                      <List.Item key={index} title={item.status} style={styles.defaultcursor}>
-                          <List.Icon name={item.status === 'confirmed' ? 'checkmark' : 'calendar'} />
-                          {[item.event,item.date,item.location].join(", ")}
-                      </List.Item>
-                    ))
-                  }
+                    {
+                        travel.upcoming.map((item, index) => (
+                          <List.Item key={index} title={item.status} style={styles.defaultcursor}>
+                              <List.Icon name={item.status === 'confirmed' ? 'checkmark' : 'calendar'} />
+                              {[item.event,item.date,item.location].join(", ")}
+                          </List.Item>
+                        ))
+                    }
                 </List>
                 <hr />
                 <Header size="tiny" style={{...nobottommargin, ...notopmargin}}>Past Travel</Header>
@@ -159,7 +153,7 @@ class Home extends React.Component {
                     ))
                   }
                 </List>
-	            */}
+*/}
 
               </Grid.Column>
 
