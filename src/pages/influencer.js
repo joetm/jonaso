@@ -4,7 +4,9 @@
 
 import React from "react"
 import { Container, Label} from 'semantic-ui-react'
+
 import { spacer } from "../common"
+
 
 const styles = {
   clear: {
@@ -28,7 +30,8 @@ class AuthorList extends React.Component {
     details: {},
     activeid: null,
   }
-  getAuthorDetails = (id) => {
+  getAuthorDetails = (author) => {
+    const id = author.id
     // remove
     if (id == this.state.activeid) {
       const details = this.state.details
@@ -49,7 +52,7 @@ class AuthorList extends React.Component {
       return response.json()
     })
     .then(documents => {
-      // console.info(documents)
+      console.info(documents)
       const details = this.state.details
       details[id] = documents
       this.setState({
@@ -76,7 +79,7 @@ class AuthorList extends React.Component {
                   style={styles.label}
                   color={activeid === author.id ? 'red' : null}
                   title={author.num > 1 ? author.num + ' publications' : author.num + ' publication'}
-                  onClick={() => this.getAuthorDetails(author.id)}
+                  onClick={() => this.getAuthorDetails(author)}
                 >
                   {author.name}
                   <Label.Detail>{author.num}</Label.Detail>
