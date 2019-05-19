@@ -2,7 +2,6 @@ import React from "react"
 import Link from "gatsby-link"
 import { Label, Header, List, Grid, Divider, Image, Container, Icon } from 'semantic-ui-react'
 import "isomorphic-fetch"
-import Skeleton from 'react-loading-skeleton'
 
 import "../../libs/academicons/css/academicons.min.css"
 import img from "../img/opp.jpg"
