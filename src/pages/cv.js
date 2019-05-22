@@ -3,7 +3,7 @@ import Link from "gatsby-link"
 import { Icon, Label, Header, Divider, List, Item, Image, Container } from 'semantic-ui-react'
 
 import { spacer } from "../common"
-// import "../print.css"
+import "../print.css"
 
 
 const _PORTFOLIO_URL = 'http://www.jonaso.de/portfolio/'
@@ -103,7 +103,7 @@ class CV extends React.Component {
 </div>
 
 
-<div style={styles.row}>
+<div style={styles.row} className="noprint">
   <div style={styles.leftCol}>
                 <Header id="interests" style={styles.headline} size="large">Research Interests</Header>
   </div>

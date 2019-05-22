@@ -13,6 +13,8 @@
 
 	.print {display: inherit;}
 
+	.noprint {display: none;}
+
 	header, footer {
 		display: none;
 	}
