@@ -7,8 +7,8 @@ import "../../libs/academicons/css/academicons.min.css"
 import img from "../img/opp.jpg"
 import { nobottommargin, notopmargin, nobold } from "../common"
 
-
-// const _TRAVEL = 'https://raw.githubusercontent.com/joetm/jonaso/master/public/travel.json'
+// const TRAVEL = 'https://raw.githubusercontent.com/joetm/jonaso/master/public/travel.json'
+// const NEWS = 'https://raw.githubusercontent.com/joetm/jonaso/master/public/news.json'
 
 const keywords = {
   primary: [
@@ -65,19 +65,23 @@ class Home extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      travel: {
-        upcoming: [],
-        past: [],
-      },
+      // travel: {
+      //   upcoming: [],
+      //   past: [],
+      // },
+      // news: [],
     }
   }
-  // componentWillMount() {
-  //   fetch(_TRAVEL)
+  componentWillMount() {
+  //   fetch(TRAVEL)
   //   .then(response => response.json())
   //   .then(travel => this.setState({travel}))
-  // }
+    // fetch(NEWS)
+    // .then(response => response.json())
+    // .then(news => this.setState({news}))
+  }
   render() {
-    const { travel } = this.state
+    // const { news } = this.state
     return (
       <div>
         <Container style={{marginBottom: '14px'}}>
@@ -148,6 +152,20 @@ class Home extends React.Component {
                     }).map((item, index) => (
                         <List.Item key={index} title={item.status} style={styles.defaultcursor}>
                           {[item.event,item.date,item.location].join(", ")}
+                        </List.Item>
+                    ))
+                  }
+                </List>
+
+                <Header size="tiny" style={{...nobottommargin}}>News</Header>
+                <List style={{color: '#AAAAAA'}}>
+                  {
+                    news.filter((item) => {
+                    	// TODO: Filter by date
+                        return true
+                    }).map((item, index) => (
+                        <List.Item key={index} title={item.title} style={styles.defaultcursor}>
+                          {item.date}: {item.title}
                         </List.Item>
                     ))
                   }

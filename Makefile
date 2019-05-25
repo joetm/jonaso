@@ -13,6 +13,7 @@ default:
 
 build:
 	cp ./src/travel.json ./public/
+	cp ./src/news.json ./public/
 
 refs:
 	# _dir="$(pwd)/src/bibliography"
