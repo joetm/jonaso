@@ -87,7 +87,12 @@ class PubGraph extends React.Component {
 
           <ResponsiveContainer width="100%" height={150}>
           <BarChart data={docs}>
-            <XAxis scale="time" domain={['dataMin', 'dataMax']} dataKey="day" tickFormatter={d => moment(d).format('MM-DD')} />
+            <XAxis
+              scale="time"
+              domain={['dataMin', 'dataMax']}
+              dataKey="day"
+              tickFormatter={d => moment(d).format('MM-DD')}
+            />
             <YAxis type="number" />
             <CartesianGrid stroke="#eee" strokeDasharray="5 5"/>
             <Bar type="step" dataKey="num" fill="#4183c4" />

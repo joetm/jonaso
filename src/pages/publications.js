@@ -1,6 +1,7 @@
 import React from "react"
 import Link from "gatsby-link"
 import { Responsive, Header, List, Item, Icon, Grid, Container } from 'semantic-ui-react'
+import { Bar, BarChart, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from 'recharts'
 import "isomorphic-fetch"
 
 import { spacer } from "../common"
@@ -76,9 +77,36 @@ class Publications extends React.Component {
     const keysYear = Object.keys(references).reverse()
     const keysType = Object.keys(referencesDetail).reverse()
     keysType.sort()
-    // console.log(keysType,referencesDetail)
+    // console.log('DEV', keysYear, references)
+
+    // const refMapping = JSON.parse(JSON.stringify(references))
+    const refsByYear = []
+    for (let y in references) {
+      refsByYear.push({year: y, num: references[y].length})
+    }
+
+    // const refsByType = []
+    // for (let t in keysType) {
+    //   refsByYear.push({year: y, num: references[y].length})
+    // }
+
     return (
       <div>
+
+        <ResponsiveContainer width="100%" height={150}>
+          <BarChart data={refsByYear}>
+            <XAxis
+              dataKey="year"
+            />
+            <YAxis
+              type="number"
+              domain={[0, 'dataMax']}
+            />
+            <Tooltip />
+            <CartesianGrid stroke="#eee" strokeDasharray="5 5"/>
+            <Bar type="step" dataKey="num" fill="#ccc" />
+          </BarChart>
+        </ResponsiveContainer>
 
         <div id="publicationButtons" style={styles.menu}>
           <button disabled={showing !== 'type'} onClick={this.switchPubView} title="Publications per year">YEAR</button>
