@@ -12,7 +12,6 @@ import PubGraph from "../PubGraph.js"
 import { spacer } from "../common"
 
 const _LIST_URL = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/readlist-latest.json'
-const _INFLUENCER = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/influencer.json'
 
 const styles = {
   lastupdate: {
@@ -23,13 +22,12 @@ const styles = {
   }
 }
 
-const zeroPadding = (v) => (v < 10 ? '0' : '') + v
+const zeroPadding = v => (v < 10 ? '0' : '') + v
 
 
 class ReadingList extends React.Component {
   state = {
     documents: [],
-    influencer: [],
     modified: 'loading',
   }
   componentWillMount = () => {
@@ -48,20 +46,6 @@ class ReadingList extends React.Component {
         documents: documents.documents
       })
     })
-    // get influencer
-    fetch(_INFLUENCER)
-    .then(response => {
-      if (response.status >= 400) {
-        throw new Error("Bad response from server")
-      }
-      return response.json()
-    })
-    .then(people => {
-      // console.log(people);
-      this.setState({
-        influencer: people
-      })
-    })
   }
   getDate(timestamp) {
     const d = new Date(timestamp)
@@ -74,7 +58,7 @@ class ReadingList extends React.Component {
     return `${year}-${month}-${day} ${zeroPadding(hour)}:${zeroPadding(min)}`
   }
   render() {
-    const { documents, modified, influencer } = this.state
+    const { documents, modified } = this.state
     return (
       <div>
         <Container>
