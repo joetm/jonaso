@@ -1,6 +1,6 @@
 import React from "react"
 import Link from "gatsby-link"
-import { Responsive, Header, List, Item, Icon, Grid, Container } from 'semantic-ui-react'
+import { Button, Responsive, Header, List, Item, Icon, Grid, Container } from 'semantic-ui-react'
 import { Bar, BarChart, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from 'recharts'
 import "isomorphic-fetch"
 
@@ -77,7 +77,7 @@ class Publications extends React.Component {
     const keysYear = Object.keys(references).reverse()
     const keysType = Object.keys(referencesDetail).reverse()
     keysType.sort()
-    // console.log('DEV', keysYear, references)
+    console.log('DEV', referencesDetail)
 
     // const refMapping = JSON.parse(JSON.stringify(references))
     const refsByYear = []
@@ -104,14 +104,22 @@ class Publications extends React.Component {
             />
             <Tooltip />
             <CartesianGrid stroke="#eee" strokeDasharray="5 5"/>
-            <Bar type="step" dataKey="num" fill="#ccc" />
+            <Bar type="step" dataKey="num" fill="#8CE6A9" />
           </BarChart>
         </ResponsiveContainer>
 
         <div id="publicationButtons" style={styles.menu}>
-          <button disabled={showing !== 'type'} onClick={this.switchPubView} title="Publications per year">YEAR</button>
-          {" "} | {" "}
-          <button disabled={showing === 'type'} onClick={this.switchPubView} title="Publications per type">TYPE</button>
+          <Button.Group>
+            <Button disabled={showing !== 'type'} positive={showing !== 'type'}
+              onClick={this.switchPubView}
+              title="Publications per year"
+            >YEAR</Button>
+            <Button.Or />
+            <Button disabled={showing === 'type'} positive={showing === 'type'}
+              onClick={this.switchPubView}
+              title="Publications per type"
+            >TYPE</Button>
+          </Button.Group>
         </div>
 
         <Container id="publications-type" style={{display: showing === 'type' ? 'block' : 'none'}}>
