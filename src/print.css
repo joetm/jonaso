@@ -1,5 +1,12 @@
 .print {display: none;}
 
+.row {
+	display: 'flex';
+    flex-direction: 'row';
+	flex-wrap: 'wrap';
+	margin-bottom: '1.5em';
+}
+
 @media print {
 
 	body {
