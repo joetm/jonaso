@@ -133,10 +133,11 @@ class Publications extends React.Component {
                         </Grid.Row>
                         {
                           referencesDetail[typ].map((ref, index) => {
-                            ref = ref.replace('Jonas Oppenlaender', '<strong>Jonas Oppenlaender</strong>')
-                            ref = ref.replace('Jonas Oppenländer', '<strong>Jonas Oppenländer</strong>')
+                            console.log(ref)
+                            let title = ref.title.replace('Jonas Oppenlaender', '<strong>Jonas Oppenlaender</strong>')
+                            title = title.replace('Jonas Oppenländer', '<strong>Jonas Oppenländer</strong>')
                             let icostr = 'file text outline'
-                            if (ref.indexOf('.pdf') === -1) {
+                            if (title.indexOf('.pdf') === -1) {
                               icostr = 'file outline'
                             }
                             return (
@@ -155,7 +156,7 @@ class Publications extends React.Component {
                                 <Grid.Column width={14}>
                                 <Item>
                                   <Item.Content>
-                                    <Item.Header dangerouslySetInnerHTML={{__html: ref}} />
+                                    <Item.Header dangerouslySetInnerHTML={{__html: title}} />
                                   </Item.Content>
                                 </Item>
                                 </Grid.Column>
