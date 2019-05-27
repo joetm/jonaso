@@ -43,19 +43,29 @@ foreach ($rows as $bibitem) {
         // echo $id . "\r\n";
 
         $type = false;
+        $year = 0;
         // use the $id to look up the type
         foreach ($json as $ref) {
             if ($ref["ID"] === $id) {
                 $type = $ref["howpublished"];
+                $year = $ref["year"];
                 break;
             }
         }
 
         // add the item to the respective array key
         if (isset($references[$type])) {
-            $references[$type][] = DOMinnerHTML($bibitem);
+            $references[$type][] = array(
+                "title" => DOMinnerHTML($bibitem),
+                "year" => $year,
+            );
         } else {
-            $references[$type] = array(DOMinnerHTML($bibitem));
+            $references[$type] = array(
+                array(
+                    "title" => DOMinnerHTML($bibitem),
+                    "year" => $year,
+                )
+            );
         }
 }
 
