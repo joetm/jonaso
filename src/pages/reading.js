@@ -11,6 +11,9 @@ import "isomorphic-fetch"
 import PubGraph from "../PubGraph.js"
 import { spacer } from "../common"
 
+import "semantic-ui-css/components/table.css"
+
+
 const _LIST_URL = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/readlist-latest.json'
 
 const styles = {
@@ -77,7 +80,7 @@ class ReadingList extends React.Component {
                   <Table.HeaderCell collapsing>Author(s)</Table.HeaderCell>
                   <Table.HeaderCell collapsing>Year</Table.HeaderCell>
                   <Table.HeaderCell>Keywords</Table.HeaderCell>
-                  <Table.HeaderCell title="Relevance to my past or current research OR importance to the respective field">Relevance or<br />Importance</Table.HeaderCell>
+                  <Table.HeaderCell title="Relevance to my past or current research OR importance to the respective field">Relevance/<br />Importance</Table.HeaderCell>
                   <Table.HeaderCell>Read</Table.HeaderCell>
                 </Table.Row>
               </Table.Header>
