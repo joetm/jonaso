@@ -12,6 +12,10 @@ const styles = {
     fontSize: '1.5em',
     linHeight: '2.5em',
   },
+  noMarginGrid: {
+    marginRight: 0,
+    marginLeft: 0,
+  },
 }
 
 const _REFERENCES_PER_YEAR = "http://jonaso.de/static/references.json"
@@ -91,7 +95,7 @@ class Publications extends React.Component {
     // }
 
     return (
-      <div>
+      <Container>
 
         <ResponsiveContainer width="100%" height={150}>
           <BarChart data={refsByYear}>
@@ -127,7 +131,7 @@ class Publications extends React.Component {
               {
                 keysType.map(typ => {
                   return (
-                    <Grid key={typ}>
+                    <Grid key={typ} style={styles.noMarginGrid}>
                         <Grid.Row>
                           <Header size="large">{typ}</Header>
                         </Grid.Row>
@@ -178,7 +182,7 @@ class Publications extends React.Component {
               {
                 keysYear.map(year => {
                   return (
-                    <Grid key={year}>
+                    <Grid key={year} style={styles.noMarginGrid}>
                         <Grid.Row>
                           <Header size="large">{year}</Header>
                         </Grid.Row>
@@ -229,7 +233,7 @@ class Publications extends React.Component {
             <div style={spacer}></div>
 
         </Container>
-      </div>
+      </Container>
     )
   }
 }
