@@ -77,7 +77,7 @@ class ReadingList extends React.Component {
                   <Table.HeaderCell collapsing>Author(s)</Table.HeaderCell>
                   <Table.HeaderCell collapsing>Year</Table.HeaderCell>
                   <Table.HeaderCell>Keywords</Table.HeaderCell>
-                  <Table.HeaderCell title="Relevance to my past a current research [0 = not relevant or interesting at the time of reading]">Relevance*</Table.HeaderCell>
+                  <Table.HeaderCell title="Relevance to my past or current research OR importance to the respective field">Relevance or<br />Importance</Table.HeaderCell>
                   <Table.HeaderCell>Read</Table.HeaderCell>
                 </Table.Row>
               </Table.Header>
