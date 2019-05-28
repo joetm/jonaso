@@ -62,7 +62,6 @@ class CV extends React.Component {
   }
   render() {
         return (
-            <div>
               <Container>
 
                 <h1 className="print">Jonas Oppenlaender</h1>
@@ -905,7 +904,6 @@ class CV extends React.Component {
                   <div className="spacer" style={spacer}></div>
 
               </Container>
-            </div>
         )
   }
 }
