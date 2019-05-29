@@ -11,7 +11,7 @@ import "isomorphic-fetch"
 import PubGraph from "../PubGraph.js"
 import { spacer } from "../common"
 
-import "semantic-ui-css/components/table.css"
+// import "semantic-ui-css/components/table.css"
 
 
 const _LIST_URL = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/readlist-latest.json'
