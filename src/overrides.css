@@ -1,0 +1,10 @@
+
+/*--------------
+ Semantic UI Collapsing Table Cells
+---------------*/
+
+.ui.table th.collapsing,
+.ui.table td.collapsing {
+  width: 1px;
+  white-space: nowrap;
+}
