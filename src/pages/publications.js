@@ -3,7 +3,9 @@ import Link from "gatsby-link"
 import { Button, Responsive, Header, List, Item, Icon, Grid, Container } from 'semantic-ui-react'
 import { Bar, BarChart, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from 'recharts'
 import "isomorphic-fetch"
+// import useDetectPrint from 'use-detect-print'
 
+import "semantic-ui-css/components/grid.min.css"
 import { spacer } from "../common"
 
 const styles = {
@@ -82,6 +84,8 @@ class Publications extends React.Component {
     const keysType = Object.keys(referencesDetail).reverse()
     keysType.sort()
     console.log('DEV', referencesDetail)
+
+    // const isPrinting = useDetectPrint()
 
     // const refMapping = JSON.parse(JSON.stringify(references))
     const refsByYear = []

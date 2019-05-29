@@ -77,9 +77,9 @@ class ReadingList extends React.Component {
               <Table.Header>
                 <Table.Row>
                   <Table.HeaderCell>Title</Table.HeaderCell>
-                  <Table.HeaderCell collapsing>Author(s)</Table.HeaderCell>
+                  <Table.HeaderCell style={{maxWidth:'100px'}}>Author(s)</Table.HeaderCell>
                   <Table.HeaderCell collapsing>Year</Table.HeaderCell>
-                  <Table.HeaderCell>Keywords</Table.HeaderCell>
+                  <Table.HeaderCell collapsing>Keywords</Table.HeaderCell>
                   <Table.HeaderCell title="Relevance to my past or current research OR importance to the respective field">Relevance/<br />Importance</Table.HeaderCell>
                   <Table.HeaderCell>Read</Table.HeaderCell>
                 </Table.Row>
@@ -90,7 +90,7 @@ class ReadingList extends React.Component {
                     return (
                       <Table.Row key={`id_${idx}`}>
                         <Table.Cell textAlign="left">{doc.title}</Table.Cell>
-                        <Table.Cell width={2} textAlign="left">{doc.authors.join(', ')}</Table.Cell>
+                        <Table.Cell textAlign="left">{doc.authors.join(', ')}</Table.Cell>
                         <Table.Cell textAlign="left">{doc.year}</Table.Cell>
                         <Table.Cell textAlign="left">{doc.keywords}</Table.Cell>
                         <Table.Cell textAlign="center">{doc.priority}</Table.Cell>
