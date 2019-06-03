@@ -4,11 +4,10 @@ import { Label, Header, List, Grid, Divider, Image, Container, Icon } from 'sema
 import "isomorphic-fetch"
 
 import "../../libs/academicons/css/academicons.min.css"
+import TravelRotary from "../TravelRotary"
 import img from "../img/opp.jpg"
 import { nobottommargin, notopmargin, nobold } from "../common"
 
-// const TRAVEL = 'https://raw.githubusercontent.com/joetm/jonaso/master/public/travel.json'
-// const NEWS = 'https://raw.githubusercontent.com/joetm/jonaso/master/public/news.json'
 
 const keywords = {
   primary: [
@@ -65,23 +64,10 @@ class Home extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      // travel: {
-      //   upcoming: [],
-      //   past: [],
-      // },
-      // news: [],
+      travel: [],
     }
   }
-  componentWillMount() {
-  //   fetch(TRAVEL)
-  //   .then(response => response.json())
-  //   .then(travel => this.setState({travel}))
-    // fetch(NEWS)
-    // .then(response => response.json())
-    // .then(news => this.setState({news}))
-  }
   render() {
-    // const { news } = this.state
     return (
       <div>
         <Container style={{marginBottom: '14px'}}>
@@ -128,49 +114,7 @@ class Home extends React.Component {
     	              { keywords.secondary.join(", ") }
                 </p>
 
-{/*
-                <Header size="tiny" style={nobottommargin}>Upcoming Travel</Header>
-                <List>
-                    {
-                        travel.upcoming.map((item, index) => (
-                          <List.Item key={index} title={item.status} style={styles.defaultcursor}>
-                              <List.Icon name={item.status === 'confirmed' ? 'checkmark' : 'calendar'} />
-                              {[item.event,item.date,item.location].join(", ")}
-                          </List.Item>
-                        ))
-                    }
-                </List>
-                <hr />
-                <Header size="tiny" style={{...nobottommargin, ...notopmargin}}>Past Travel</Header>
-                <List style={{color: '#AAAAAA'}}>
-                  {
-                    travel.past.filter(function(item) {
-                        if (item.status !== "confirmed") {
-                          return false
-                        }
-                        return true
-                    }).map((item, index) => (
-                        <List.Item key={index} title={item.status} style={styles.defaultcursor}>
-                          {[item.event,item.date,item.location].join(", ")}
-                        </List.Item>
-                    ))
-                  }
-                </List>
-
-                <Header size="tiny" style={{...nobottommargin}}>News</Header>
-                <List style={{color: '#AAAAAA'}}>
-                  {
-                    news.filter((item) => {
-                    	// TODO: Filter by date
-                        return true
-                    }).map((item, index) => (
-                        <List.Item key={index} title={item.title} style={styles.defaultcursor}>
-                          {item.date}: {item.title}
-                        </List.Item>
-                    ))
-                  }
-                </List>
-*/}
+                <TravelRotary />
 
               </Grid.Column>
 
@@ -185,7 +129,7 @@ class Home extends React.Component {
                     Room TS371<br />
                     P.O. Box 4500<br />
                     FI-90014 Oulu<br />
-                    E-Mail: {'{'}firstname.lastname{'}'}@oulu.fi<br />
+                    E-Mail: {'{'}firstname.lastname{'}'}@oulu.fi
                 </p>
 
                 <p>

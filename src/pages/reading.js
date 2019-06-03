@@ -94,7 +94,7 @@ class ReadingList extends React.Component {
                         <Table.Cell textAlign="left">{doc.year}</Table.Cell>
                         <Table.Cell textAlign="left">{doc.keywords}</Table.Cell>
                         <Table.Cell textAlign="center">{doc.priority}</Table.Cell>
-                        <Table.Cell textAlign="left">{this.getDate(doc.modified)}</Table.Cell>
+                        <Table.Cell textAlign="left">{this.getDate(doc.modified * 1000)}</Table.Cell>
                       </Table.Row>
                     )
                   })
