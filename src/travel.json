@@ -1,22 +1,17 @@
-{
-  "upcoming": [
-    { "event": "UIST'19", "date": "20.-23. Oct. 2019", "location": "New Orleans", "status": "planned" },
-    { "event": "INTERACT'19", "date": "2.-6. Sept. 2019", "location": "Paphos", "status": "planned" },
-    { "event": "C&C'19", "date": "23.-26. June 2019", "location": "San Diego", "status": "confirmed" }
-  ],
-  "past": [
-    { "event": "PerDis'19", "date": "12.-14. June 2019", "location": "Palermo", "status": "planned" },
-    { "event": "CI'19", "date": "13.-14. June 2019", "location": "Pittsburgh", "status": "planned" },
-    { "event": "CHI'19", "date": "4.-9. May 2019", "location": "Glasgow", "status": "confirmed" },
-    { "event": "ECSCW'19", "date": "8.-12. June 2019", "location": "Salzburg", "status": "planned" },
-    { "event": "IUI'19", "date": "17.-20. March 2019", "location": "Los Angeles", "status": "planned" },
-    { "event": "UbiComp'18", "date": "9.-11. Oct. 2018", "location": "Singapore", "status": "confirmed" },
-    { "event": "Mobile Human Contributions workshop (MHC'18)", "date": "8. Oct. 2018", "location": "Singapore", "status": "confirmed" },
-    { "event": "UBISS", "date": "4.-9. June 2018", "location": "Oulu", "status": "confirmed" },
-    { "event": "Int. SemWeb Research Summer School", "date": "1.-7. July 2018", "location": "Bertinoro", "status": "planned" },
-    { "event": "Oulu, Finland", "date": "April 2018", "location": "Oulu", "status": "confirmed" },
-	  { "event": "MKWI'18", "date": "6.-9. March 2018", "location": "Lüneburg", "status": "confirmed" },
-    { "event": "GI-Symposium: Arbeitswelten der Zukunft", "date": "29. Jan. 2018", "location": "Berlin", "status": "confirmed" },
-    { "event": "HCOMP'17", "date": "24.-26. Oct. 2017", "location": "Quebec, QC", "status": "confirmed" }
-  ]
-}
+[
+  { "event": "UIST'19", "start": "2019-10-20", "end": "2019-10-23", "location": "New Orleans", "status": "planned" },
+  { "event": "INTERACT'19", "start": "2019-09-02", "end": "2019-09-06", "location": "Paphos", "status": "planned" },
+  { "event": "C&C'19", "start": "2019-06-23", "end": "2019-06-26", "location": "San Diego", "status": "confirmed" }
+  { "event": "CI'19", "start": "2019-06-13", "end": "2019-06-14", "location": "Pittsburgh", "status": "planned" },
+  { "event": "CHI'19", "start": "2019-05-04", "end": "2019-05-09", "location": "Glasgow", "status": "confirmed" },
+  { "event": "ECSCW'19", "start": "2019-06-08", "end": "2019-06-12", "location": "Salzburg", "status": "planned" },
+  { "event": "IUI'19", "start": "2019-03-17", "end": "2019-03-20", "location": "Los Angeles", "status": "planned" },
+  { "event": "UbiComp'18", "start": "2019-10-9", "start": "2019-10-9", "location": "Singapore", "status": "confirmed" },
+  { "event": "Mobile Human Contributions workshop (MHC'18)", "date": "2019-10-08", "location": "Singapore", "status": "confirmed" },
+  { "event": "UBISS", "start": "2018-06-04", "end": "2018-06-09", "location": "Oulu", "status": "confirmed" },
+  { "event": "Int. SemWeb Research Summer School", "start": "2018-07-01", "start": "2018-07-07", "location": "Bertinoro", "status": "planned" },
+  { "event": "Oulu, Finland", "date": "2018-04", "location": "Oulu", "status": "confirmed" },
+  { "event": "MKWI'18", "start": "2018-03-06", "end": "2018-03-09", "location": "Lüneburg", "status": "confirmed" },
+  { "event": "GI-Symposium: Arbeitswelten der Zukunft", "date": "29. Jan. 2018", "location": "Berlin", "status": "confirmed" },
+  { "event": "HCOMP'17", "start": "2017-10-24", "end": "2017-10-26", "location": "Quebec, QC", "status": "confirmed" }
+]
