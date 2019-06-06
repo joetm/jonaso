@@ -4,7 +4,7 @@ import { Label, Header, List, Grid, Divider, Image, Container, Icon } from 'sema
 import "isomorphic-fetch"
 
 import "../../libs/academicons/css/academicons.min.css"
-import TravelRotary from "../TravelRotary"
+// import TravelRotary from "../TravelRotary"
 import img from "../img/opp.jpg"
 import { nobottommargin, notopmargin, nobold } from "../common"
 
@@ -114,7 +114,7 @@ class Home extends React.Component {
     	              { keywords.secondary.join(", ") }
                 </p>
 
-                <TravelRotary />
+                {/* <TravelRotary /> */}
 
               </Grid.Column>
 
