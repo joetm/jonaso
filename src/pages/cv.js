@@ -406,6 +406,12 @@ class CV extends React.Component {
 
                     <Item>
                       <List>
+                        <List.Item>University of Oulu UniOGS Travel Grant, Metodifestivaali 2019</List.Item>
+                      </List>
+                    </Item>
+
+                    <Item>
+                      <List>
                         <List.Item>University of Oulu UniOGS Travel Grant, CHI &apos;19</List.Item>
                       </List>
                     </Item>
