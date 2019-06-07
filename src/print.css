@@ -1,13 +1,47 @@
 .print {display: none;}
 
-.row {
-	display: 'flex';
-    flex-direction: 'row';
-	flex-wrap: 'wrap';
-	margin-bottom: '1.5em';
+.cv .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 1.5em;
+}
+.cv .leftCol {
+    flex: 1;
+    vertical-align: 'top';
+}
+.cv .mainCol {
+    flex: 3;
+    vertical-align: 'top';
+}
+.cv .rightCol {
+    flex: 1;
+    vertical-align: 'top';
+    text-align: 'right';
+}
+.cv .rowspan2 {
+  flex: '1 1 100%';
+}
+.cv .nonbold {
+    font-weight: 'normal';
+    font-size: '1em';
+}
+.cv .item {
+
 }
 
+
 @media print {
+
+	/*
+	.cv .ui.items > .item {
+		margin: 0 0 0.5em 0;
+	}
+	.row {
+		margin-bottom: 0;
+		margin-top:0;
+	}
+	*/
 
 	body {
 		font: 11pt "Times New Roman", Times, serif;
@@ -18,7 +52,13 @@
 		margin: 1.5cm;
 	}
 
-	.print {display: inherit;}
+	.print {
+		line-height: 1em;
+	}
+
+	.print-only {
+		display: inherit;
+	}
 
 	.noprint {display: none;}
 
