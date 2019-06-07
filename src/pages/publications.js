@@ -12,7 +12,9 @@ const styles = {
   menu: {
     textAlign: 'center',
     fontSize: '1.5em',
-    linHeight: '2.5em',
+    lineHeight: '2em',
+    marginBottom: '1em',
+    marginTop: '0.5em',
   },
   noMarginGrid: {
     marginRight: 0,
@@ -82,8 +84,24 @@ class Publications extends React.Component {
     const { references, referencesDetail, showing } = this.state
     const keysYear = Object.keys(references).reverse()
     const keysType = Object.keys(referencesDetail).reverse()
-    keysType.sort()
-    console.log('DEV', referencesDetail)
+    // keysType.sort() // sort alphabetically
+
+    // custom sort order
+    let customSortOrder = []
+    if (keysType.length > 0) {
+      customSortOrder = [
+        "Peer-reviewed Conference Proceedings",
+        "Peer-reviewed Journal Articles",
+        "Peer-reviewed Workshops Organized",
+        "Peer-reviewed Workshop Proceedings",
+        "Doctoral Consortia",
+        "Other Publications and Posters",
+        "Theses",
+      ]
+    }
+
+    console.log('customSortOrder', customSortOrder)
+    console.log('keysType', keysType)
 
     // const isPrinting = useDetectPrint()
 
@@ -92,11 +110,6 @@ class Publications extends React.Component {
     for (let y in references) {
       refsByYear.push({year: y, num: references[y].length})
     }
-
-    // const refsByType = []
-    // for (let t in keysType) {
-    //   refsByYear.push({year: y, num: references[y].length})
-    // }
 
     return (
       <Container>
@@ -133,7 +146,7 @@ class Publications extends React.Component {
         <Container id="publications-type" style={{display: showing === 'type' ? 'block' : 'none'}}>
 
               {
-                keysType.map(typ => {
+                customSortOrder.map(typ => {
                   return (
                     <Grid key={typ} style={styles.noMarginGrid}>
                         <Grid.Row>
@@ -141,7 +154,6 @@ class Publications extends React.Component {
                         </Grid.Row>
                         {
                           referencesDetail[typ].map((ref, index) => {
-                            console.log(ref)
                             let title = ref.title.replace('Jonas Oppenlaender', '<strong>Jonas Oppenlaender</strong>')
                             title = title.replace('Jonas Oppenländer', '<strong>Jonas Oppenländer</strong>')
                             let icostr = 'file text outline'
