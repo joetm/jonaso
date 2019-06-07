@@ -28,20 +28,6 @@ const styles = {
   table: {
     display: 'flex',
   },
-  row: {
-    display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    marginBottom: '1.5em',
-  },
-  leftCol: {
-    flex: 1,
-    verticalAlign: 'top',
-  },
-  mainCol: {
-    flex: 3,
-    verticalAlign: 'top',
-  },
   rightCol: {
     flex: 1,
     verticalAlign: 'top',
@@ -62,50 +48,50 @@ class CV extends React.Component {
   }
   render() {
         return (
-              <Container>
+              <Container className="print cv">
 
-                <h1 className="print">Jonas Oppenlaender</h1>
+                <h1 className="print-only">Jonas Oppenlaender</h1>
 
-<div style={styles.row}>
-  <div style={styles.leftCol}>
-                <Header id="contact" style={styles.headline} size="large">Contact Information</Header>
-  </div>
-  <div style={styles.mainCol}>
-                  <Item.Group>
-                    <Item>
-                        <Item.Description style={styles.nomarginTop}>
-                          <List>
-                            <List.Item><a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a></List.Item>
-                            <List.Item><a href="http://www.oulu.fi/university/">University of Oulu</a></List.Item>
-                            <List.Item>Erkki Koiso-Kanttilan katu 3</List.Item>
-                            <List.Item>Room TS371</List.Item>
-                            <List.Item>P.O. Box 4500</List.Item>
-                            <List.Item>90014 Oulu, Finland</List.Item>
-                          </List>
-                        </Item.Description>
-                    </Item>
-                  </Item.Group>
-  </div>
-  <div style={styles.rightCol}>
-                  <Item.Group>
-                    <Item>
-                        <Item.Description style={styles.nomarginTop}>
-                          <List>
-                            <List.Item>E-Mail: {'{'}firstname.lastname{'}'}@oulu.fi</List.Item>
-                            <List.Item>www: jonaso.de</List.Item>
-                          </List>
-                        </Item.Description>
-                    </Item>
-                  </Item.Group>
-  </div>
-</div>
+                <div className="row">
+                  <div className="leftCol">
+                                <Header id="contact" style={styles.headline} size="large">Contact Information</Header>
+                  </div>
+                  <div className="mainCol">
+                                  <Item.Group>
+                                    <Item>
+                                        <Item.Description style={styles.nomarginTop}>
+                                          <List>
+                                            <List.Item><a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a></List.Item>
+                                            <List.Item><a href="http://www.oulu.fi/university/">University of Oulu</a></List.Item>
+                                            <List.Item>Erkki Koiso-Kanttilan katu 3</List.Item>
+                                            <List.Item>Room TS371</List.Item>
+                                            <List.Item>P.O. Box 4500</List.Item>
+                                            <List.Item>90014 Oulu, Finland</List.Item>
+                                          </List>
+                                        </Item.Description>
+                                    </Item>
+                                  </Item.Group>
+                  </div>
+                  <div style={styles.rightCol}>
+                                  <Item.Group>
+                                    <Item>
+                                        <Item.Description style={styles.nomarginTop}>
+                                          <List>
+                                            <List.Item>E-Mail: {'{'}firstname.lastname{'}'}@oulu.fi</List.Item>
+                                            <List.Item>www: jonaso.de</List.Item>
+                                          </List>
+                                        </Item.Description>
+                                    </Item>
+                                  </Item.Group>
+                  </div>
+                </div>
 
 
-<div style={styles.row} className="noprint">
-  <div style={styles.leftCol}>
+<div className="row noprint">
+  <div className="leftCol">
                 <Header id="interests" style={styles.headline} size="large">Research Interests</Header>
   </div>
-  <div style={{...styles.mainCol, ...styles.rowspan2}}>
+  <div className="mainCol" style={styles.rowspan2}>
                   <Item.Group>
                     <Item>
                         <Item.Description style={styles.nomarginTop}>
@@ -123,11 +109,11 @@ class CV extends React.Component {
 </div>
 
 
-<div style={styles.row}>
-  <div style={styles.leftCol}>
+<div className="row">
+  <div className="leftCol">
                 <Header id="education" style={styles.headline} size="large">Education</Header>
   </div>
-  <div style={styles.mainCol}>
+  <div className="mainCol">
                   <Item.Group>
                     <Item>
                         <Item.Description style={styles.nomarginTop}>
@@ -142,9 +128,9 @@ class CV extends React.Component {
   </div>
   <div style={styles.rightCol}>since 2018</div>
 </div>
-<div style={styles.row}>
-  <div style={styles.leftCol}></div>
-  <div style={styles.mainCol}>
+<div className="row">
+  <div className="leftCol"></div>
+  <div className="mainCol">
                   <Item.Group>
                     <Item>
                         <Item.Description>
@@ -159,9 +145,9 @@ class CV extends React.Component {
   </div>
   <div style={styles.rightCol}>2014 - 2015</div>
 </div>
-<div style={styles.row}>
-  <div style={styles.leftCol}></div>
-  <div style={styles.mainCol}>
+<div className="row">
+  <div className="leftCol"></div>
+  <div className="mainCol">
                   <Item.Group>
                     <Item>
                         <Item.Description>
@@ -176,9 +162,9 @@ class CV extends React.Component {
   </div>
   <div style={styles.rightCol}>2013</div>
 </div>
-<div style={styles.row}>
-  <div style={styles.leftCol}></div>
-  <div style={styles.mainCol}>
+<div className="row">
+  <div className="leftCol"></div>
+  <div className="mainCol">
                   <Item.Group>
                     <Item>
                         <Item.Description>
@@ -193,9 +179,9 @@ class CV extends React.Component {
   </div>
   <div style={styles.rightCol}>2002 - 2011</div>
 </div>
-<div style={styles.row}>
-  <div style={styles.leftCol}></div>
-  <div style={styles.mainCol}>
+<div className="row">
+  <div className="leftCol"></div>
+  <div className="mainCol">
                   <Item.Group>
                     <Item>
                         <Item.Description>
@@ -212,11 +198,11 @@ class CV extends React.Component {
 </div>
 
 {/*
-<div style={styles.row}>
-  <div style={styles.leftCol}>
+<div className="row">
+  <div className="leftCol">
                 <Header id="current-research" style={styles.headline} size="large">Current Research</Header>
   </div>
-  <div style={styles.mainCol}>
+  <div className="mainCol">
 
   </div>
   <div style={styles.rightCol}>
@@ -224,11 +210,11 @@ class CV extends React.Component {
 </div>
 */}
 
-<div style={styles.row}>
-  <div style={styles.leftCol}>
+<div className="row">
+  <div className="leftCol">
                 <Header id="research-exerience" style={styles.headline} size="large">Research Experience</Header>
   </div>
-  <div style={styles.mainCol}>
+  <div className="mainCol">
                   <Item.Group>
 
                     <Item>
@@ -244,9 +230,9 @@ class CV extends React.Component {
   </div>
   <div style={styles.rightCol}>2016 - 2018</div>
 </div>
-<div style={styles.row}>
-  <div style={styles.leftCol}></div>
-  <div style={styles.mainCol}>
+<div className="row">
+  <div className="leftCol"></div>
+  <div className="mainCol">
                   <Item.Group>
                     <Item>
                         <Item.Description>
@@ -261,9 +247,9 @@ class CV extends React.Component {
   </div>
   <div style={styles.rightCol}>2015 - 2016</div>
 </div>
-<div style={styles.row}>
-  <div style={styles.leftCol}></div>
-  <div style={styles.mainCol}>
+<div className="row">
+  <div className="leftCol"></div>
+  <div className="mainCol">
                   <Item.Group>
                     <Item>
                         <Item.Description>
@@ -278,11 +264,11 @@ class CV extends React.Component {
   <div style={styles.rightCol}>2005 - 2006</div>
 </div>
 
-<div style={styles.row}>
-  <div style={styles.leftCol}>
+<div className="row">
+  <div className="leftCol">
                 <Header id="other-exerience" style={styles.headline} size="large">Other Work Experience</Header>
   </div>
-  <div style={styles.mainCol}>
+  <div className="mainCol">
 
                   <Item.Group>
 
@@ -298,9 +284,9 @@ class CV extends React.Component {
   </div>
   <div style={styles.rightCol}>2016</div>
 </div>
-<div style={styles.row}>
-  <div style={styles.leftCol}></div>
-  <div style={styles.mainCol}>
+<div className="row">
+  <div className="leftCol"></div>
+  <div className="mainCol">
                   <Item.Group>
                     <Item>
                         <Item.Description>
@@ -314,9 +300,9 @@ class CV extends React.Component {
   </div>
   <div style={styles.rightCol}>2014 - 2015</div>
 </div>
-<div style={styles.row}>
-  <div style={styles.leftCol}></div>
-  <div style={styles.mainCol}>
+<div className="row">
+  <div className="leftCol"></div>
+  <div className="mainCol">
                   <Item.Group>
                     <Item>
                         <Item.Description>
@@ -330,9 +316,9 @@ class CV extends React.Component {
   </div>
   <div style={styles.rightCol}>2011 - 2012</div>
 </div>
-<div style={styles.row}>
-  <div style={styles.leftCol}></div>
-  <div style={styles.mainCol}>
+<div className="row">
+  <div className="leftCol"></div>
+  <div className="mainCol">
                   <Item.Group>
                     <Item>
                         <Item.Description>
@@ -346,9 +332,9 @@ class CV extends React.Component {
   </div>
   <div style={styles.rightCol}>2006 - 2013</div>
 </div>
-<div style={styles.row}>
-  <div style={styles.leftCol}></div>
-  <div style={styles.mainCol}>
+<div className="row">
+  <div className="leftCol"></div>
+  <div className="mainCol">
                   <Item.Group>
                     <Item>
                         <Item.Description>
@@ -362,9 +348,9 @@ class CV extends React.Component {
   </div>
   <div style={styles.rightCol}>2010</div>
 </div>
-<div style={styles.row}>
-  <div style={styles.leftCol}></div>
-  <div style={styles.mainCol}>
+<div className="row">
+  <div className="leftCol"></div>
+  <div className="mainCol">
                   <Item.Group>
                     <Item>
                         <Item.Description>
@@ -380,22 +366,22 @@ class CV extends React.Component {
   <div style={styles.rightCol}>2000 - 2002</div>
 </div>
 
-<div style={styles.row} className="noprint">
-  <div style={styles.leftCol}>
+<div className="row noprint">
+  <div className="leftCol">
                 <Header id="publications" style={styles.headline} size="large">Publications</Header>
   </div>
-  <div style={styles.mainCol}>
+  <div className="mainCol">
                 <a href="javascript:void();" onClick={this.redirectToPublications}>&rarr; &nbsp; See Publications</a>
   </div>
   <div style={styles.rightCol}>
   </div>
 </div>
 
-<div style={styles.row}>
-  <div style={styles.leftCol}>
+<div className="row">
+  <div className="leftCol">
                 <Header id="awards" style={styles.headline} size="large">Honors &amp; Awards</Header>
   </div>
-  <div style={styles.mainCol}>
+  <div className="mainCol">
                   <Item.Group>
 
                     <Item>
@@ -442,22 +428,22 @@ class CV extends React.Component {
 
 
 
-<div style={styles.row}>
-  <div style={styles.leftCol}>
+<div className="row">
+  <div className="leftCol">
                 <Header id="technical-skills" style={styles.headline} size="large">Technical Skills</Header>
   </div>
-  <div style={styles.mainCol}>
+  <div className="mainCol">
                   <a href="javascript:void();" onClick={this.redirectToPortfolio}>&rarr; &nbsp; Visit my Web Development Portfolio</a>
   </div>
   <div style={styles.rightCol}>
   </div>
 </div>
 
-<div style={styles.row}>
-  <div style={styles.leftCol}>
+<div className="row">
+  <div className="leftCol">
                 <Header id="teaching" style={styles.headline} size="large">Teaching Experience</Header>
   </div>
-  <div style={styles.mainCol}>
+  <div className="mainCol">
               <Item.Group>
                 <Item>
                   <List>
@@ -471,10 +457,10 @@ class CV extends React.Component {
   </div>
   <div style={styles.rightCol}>2019</div>
 </div>
-<div style={styles.row}>
-  <div style={styles.leftCol}>
+<div className="row">
+  <div className="leftCol">
   </div>
-  <div style={styles.mainCol}>
+  <div className="mainCol">
               <Item.Group>
 
                 <Item>
@@ -489,10 +475,10 @@ class CV extends React.Component {
   </div>
   <div style={styles.rightCol}>2018</div>
 </div>
-<div style={styles.row}>
-  <div style={styles.leftCol}>
+<div className="row">
+  <div className="leftCol">
   </div>
-  <div style={styles.mainCol}>
+  <div className="mainCol">
               <Item.Group>
 
                 <Item>
@@ -508,10 +494,10 @@ class CV extends React.Component {
   <div style={styles.rightCol}>2018</div>
 </div>
 
-<div style={styles.row}>
-  <div style={styles.leftCol}>
+<div className="row">
+  <div className="leftCol">
   </div>
-  <div style={styles.mainCol}>
+  <div className="mainCol">
               <Item.Group>
                 <Item>
                   <List>
@@ -523,11 +509,11 @@ class CV extends React.Component {
   <div style={styles.rightCol}>2006 - 2007</div>
 </div>
 
-<div style={styles.row}>
-  <div style={styles.leftCol}>
+<div className="row">
+  <div className="leftCol">
                 <Header id="service" style={styles.headline} size="large">Academic Service</Header>
   </div>
-  <div style={styles.mainCol}>
+  <div className="mainCol">
 
                     <Item.Group>
 
@@ -594,11 +580,11 @@ class CV extends React.Component {
   </div>
 </div>
 
-<div style={styles.row}>
-  <div style={styles.leftCol}>
+<div className="row">
+  <div className="leftCol">
                 <Header id="peer-review" style={styles.headline} size="large">Reviewer Experience</Header>
   </div>
-  <div style={styles.mainCol}>
+  <div className="mainCol">
                   <Item.Group>
 
                     <Item>
@@ -623,11 +609,11 @@ class CV extends React.Component {
   <div style={styles.rightCol}></div>
 </div>
 
-<div style={styles.row}>
-  <div style={styles.leftCol}>
+<div className="row">
+  <div className="leftCol">
                 <Header id="certificates" style={styles.headline} size="large">Certificates</Header>
   </div>
-  <div style={styles.mainCol}>
+  <div className="mainCol">
 
                   <Item.Group>
 
@@ -688,11 +674,11 @@ class CV extends React.Component {
   </div>
 </div>
 
-<div style={styles.row}>
-  <div style={styles.leftCol}>
+<div className="row">
+  <div className="leftCol">
                 <Header id="supervisions" style={styles.headline} size="large">Student Supervisions</Header>
   </div>
-  <div style={styles.mainCol}>
+  <div className="mainCol">
                   <Item.Group>
                   <Item>
                       <List>
@@ -705,9 +691,9 @@ class CV extends React.Component {
   </div>
   <div style={styles.rightCol}>2018</div>
 </div>
-<div style={styles.row}>
-  <div style={styles.leftCol}></div>
-  <div style={styles.mainCol}>
+<div className="row">
+  <div className="leftCol"></div>
+  <div className="mainCol">
                   <Item.Group>
                   <Item>
                       <List>
@@ -720,9 +706,9 @@ class CV extends React.Component {
   </div>
   <div style={styles.rightCol}>2016 - 2017</div>
 </div>
-<div style={styles.row}>
-  <div style={styles.leftCol}></div>
-  <div style={styles.mainCol}>
+<div className="row">
+  <div className="leftCol"></div>
+  <div className="mainCol">
                   <Item>
                       <List>
                         <List.Item>
@@ -735,11 +721,11 @@ class CV extends React.Component {
 </div>
 
 
-<div style={styles.row}>
-  <div style={styles.leftCol}>
+<div className="row">
+  <div className="leftCol">
                 <Header id="memberships" style={styles.headline} size="large">Memberships in Scientific Associations</Header>
   </div>
-  <div style={styles.mainCol}>
+  <div className="mainCol">
                   <Item.Group>
 
                     <Item>
@@ -769,11 +755,11 @@ class CV extends React.Component {
 </div>
 
 
-<div style={styles.row}>
-  <div style={styles.leftCol}>
+<div className="row">
+  <div className="leftCol">
                 <Header id="languages" style={styles.headline} size="large">Languages</Header>
   </div>
-  <div style={styles.mainCol}>
+  <div className="mainCol">
                   <Item.Group>
 
                     <Item>
