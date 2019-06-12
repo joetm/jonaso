@@ -22,9 +22,10 @@ const styles = {
   	textTransform: 'uppercase',
   	fontSize: '1em',
   },
-  //rowspan2: {
-  //  flex: '1 1 100%',
-  //},
+  rowspan2: {
+   flex: 4,
+   textAlign: 'left',
+  },
   table: {
     display: 'flex',
   },
@@ -103,8 +104,6 @@ class CV extends React.Component {
                         </Item.Description>
                     </Item>
                   </Item.Group>
-  </div>
-  <div style={styles.rightCol}>
   </div>
 </div>
 
@@ -381,7 +380,7 @@ class CV extends React.Component {
   <div className="leftCol">
                 <Header id="awards" style={styles.headline} size="large">Honors &amp; Awards</Header>
   </div>
-  <div className="mainCol">
+  <div className="mainCol" style={{flex:4}}>
                   <Item.Group>
 
                     <Item>
@@ -421,8 +420,6 @@ class CV extends React.Component {
                     </Item>
 
                   </Item.Group>
-  </div>
-  <div style={styles.rightCol}>
   </div>
 </div>
 
@@ -513,7 +510,7 @@ class CV extends React.Component {
   <div className="leftCol">
                 <Header id="service" style={styles.headline} size="large">Academic Service</Header>
   </div>
-  <div className="mainCol">
+  <div className="mainCol" style={{flex:4}}>
 
                     <Item.Group>
 
@@ -576,13 +573,11 @@ class CV extends React.Component {
 	                </Item.Group>
 
   </div>
-  <div style={styles.rightCol}>
-  </div>
 </div>
 
 <div className="row">
   <div className="leftCol">
-                <Header id="peer-review" style={styles.headline} size="large">Reviewer Experience</Header>
+    <Header id="peer-review" style={styles.headline} size="large">Reviewer Experience</Header>
   </div>
   <div className="mainCol">
                   <Item.Group>
@@ -611,9 +606,9 @@ class CV extends React.Component {
 
 <div className="row">
   <div className="leftCol">
-                <Header id="certificates" style={styles.headline} size="large">Certificates</Header>
+    <Header id="certificates" style={styles.headline} size="large">Certificates</Header>
   </div>
-  <div className="mainCol">
+  <div className="mainCol" style={{flex:4}}>
 
                   <Item.Group>
 
@@ -669,8 +664,6 @@ class CV extends React.Component {
 
                   </Item.Group>
 
-  </div>
-  <div style={styles.rightCol}>
   </div>
 </div>
 
