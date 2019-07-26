@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+./analyze.php
+git add -A
+git commit -m "update influencers"
+git push
+
