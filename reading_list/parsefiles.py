@@ -148,10 +148,11 @@ documents.sort(key=lambda x: x['modified'], reverse=True)
 print ("Unrecognized: ", unrecognizedCounter)
 
 # write the full list
+unrecognizedCounterPercent = unrecognizedCounter / len(documents)
 out = {
         'modified': int(time.time()),
         'unrecognized': unrecognizedCounter,
-        'unrecognized_percent': unrecognizedCounter / len(documents),
+        'unrecognized_percent': unrecognizedCounterPercent,
         'documents': documents
     }
 with open('readlist-full.json', 'w') as LISTFILE:
@@ -171,7 +172,7 @@ for d in documents:
 out = {
        'modified': int(time.time()),
         'unrecognized_overall': unrecognizedCounter,
-        'unrecognized_overall_percent': unrecognizedCounter / len(documents),
+        'unrecognized_overall_percent': unrecognizedCounterPercent,
         'unrecognized': unrecognizedD,
         'unrecognized_percent': unrecognizedD / len(documents),
         'documents': documents
