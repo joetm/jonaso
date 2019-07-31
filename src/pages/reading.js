@@ -22,6 +22,11 @@ const styles = {
     fontSize: '0.6em',
     textAlign: 'right',
     float: 'right',
+  },
+  unrecognized: {
+    fontWeight: 'normal',
+    fontSize: '0.6em',
+    textAlign: 'right',
   }
 }
 
@@ -32,6 +37,8 @@ class ReadingList extends React.Component {
   state = {
     documents: [],
     modified: 'loading',
+    unrecognized_overall: undefined,
+    unrecognized_overall_percent: undefined,
   }
   componentWillMount = () => {
     // get reading list
@@ -46,7 +53,9 @@ class ReadingList extends React.Component {
       // console.log(documents);
       this.setState({
         modified: this.getDate(documents.modified * 1000),
-        documents: documents.documents
+        documents: documents.documents,
+        unrecognized_overall: documents.unrecognized_overall,
+        unrecognized_overall_percent: documents.unrecognized_overall_percent,
       })
     })
   }
@@ -61,7 +70,7 @@ class ReadingList extends React.Component {
     return `${year}-${month}-${day} ${zeroPadding(hour)}:${zeroPadding(min)}`
   }
   render() {
-    const { documents, modified } = this.state
+    const { documents, modified, unrecognized_overall, unrecognized_overall_percent } = this.state
     return (
       <div>
         <Container>
@@ -71,6 +80,7 @@ class ReadingList extends React.Component {
             <Header size="large">
               100 Recently Read Publications
               <div style={styles.lastupdate}>Last updated: <span>{modified}</span></div>
+              <div style={styles.unrecognized}>Unrecognized overall: <span>{unrecognized_overall} ({unrecognized_overall_percent}%)</span></div>
             </Header>
 
             <Table padded collapsing={false}>
