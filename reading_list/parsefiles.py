@@ -108,6 +108,10 @@ for root in BASEPATHS:
                     parseJSON = json.loads(res[2])
                     if parseJSON:
                         documents.append(parseJSON)
+                        if not parseJSON['title']:
+                            unrecognizedCounter = unrecognizedCounter + 1
+                    else:
+                        unrecognizedCounter = unrecognizedCounter + 1
                     continue
 
                 metadata = extractMetadata(fullpath)
@@ -134,6 +138,9 @@ for root in BASEPATHS:
                 conn.commit()
 
                 documents.append(metadata)
+
+                if not metadata['title']:
+                    unrecognizedCounter = unrecognizedCounter + 1
 
 # sort by modified data
 documents.sort(key=lambda x: x['modified'], reverse=True)
