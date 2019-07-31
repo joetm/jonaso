@@ -162,16 +162,18 @@ with open('readlist-full.json', 'w') as LISTFILE:
 del documents[100:]
 
 # count unrecognized in latest-100
-unrecognizedCounter = 0
+unrecognizedD = 0
 for d in documents:
     if not d['title']:
-        unrecognizedCounter = unrecognizedCounter + 1
+        unrecognizedD = unrecognizedD + 1
 
 # write the latest-100 list
 out = {
        'modified': int(time.time()),
-        'unrecognized': unrecognizedCounter,
-        'unrecognized_percent': unrecognizedCounter / len(documents),
+        'unrecognized_overall': unrecognizedCounter,
+        'unrecognized_overall_percent': unrecognizedCounter / len(documents),
+        'unrecognized': unrecognizedD,
+        'unrecognized_percent': unrecognizedD / len(documents),
         'documents': documents
     }
 with open('readlist-latest.json', 'w') as LISTFILE:
