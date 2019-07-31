@@ -74,6 +74,7 @@ c = conn.cursor()
 documents = []
 
 counter = 0
+unrecognizedCounter = 0
 for root in BASEPATHS:
     for path, subdirs, files in os.walk(root):
         for name in files:
@@ -114,6 +115,7 @@ for root in BASEPATHS:
                     # speed up future processing for these misses
                     c.execute("INSERT INTO documents VALUES (?,?,?)", (thehash, int(time.time()), '{}'))
                     conn.commit()
+                    unrecognizedCounter = unrecognizedCounter + 1
                     continue
 
                 print (counter, ": ",  thehash)
@@ -156,6 +158,7 @@ with open('readlist-latest.json', 'w') as LISTFILE:
 # close sqlite connection
 conn.close()
 
+print ("Unrecognized: ", unrecognizedCounter)
 
 # if __name__ == "__main__":
 #     main()
