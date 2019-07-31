@@ -145,18 +145,33 @@ for root in BASEPATHS:
 # sort by modified data
 documents.sort(key=lambda x: x['modified'], reverse=True)
 
+print ("Unrecognized: ", unrecognizedCounter)
+
 # write the full list
 out = {
         'modified': int(time.time()),
+        'unrecognized': unrecognizedCounter,
+        'unrecognized_percent': unrecognizedCounter / len(documents),
         'documents': documents
     }
 with open('readlist-full.json', 'w') as LISTFILE:
     json.dump(out, LISTFILE, indent=4)
 
-# write the latest-100 list
+
+# latest-100
 del documents[100:]
+
+# count unrecognized in latest-100
+unrecognizedCounter = 0
+for d in documents:
+    if not d['title']:
+        unrecognizedCounter = unrecognizedCounter + 1
+
+# write the latest-100 list
 out = {
        'modified': int(time.time()),
+        'unrecognized': unrecognizedCounter,
+        'unrecognized_percent': unrecognizedCounter / len(documents),
         'documents': documents
     }
 with open('readlist-latest.json', 'w') as LISTFILE:
@@ -164,8 +179,6 @@ with open('readlist-latest.json', 'w') as LISTFILE:
 
 # close sqlite connection
 conn.close()
-
-print ("Unrecognized: ", unrecognizedCounter)
 
 # if __name__ == "__main__":
 #     main()
