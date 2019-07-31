@@ -80,7 +80,7 @@ class ReadingList extends React.Component {
             <Header size="large">
               100 Recently Read Publications
               <div style={styles.lastupdate}>Last updated: <span>{modified}</span></div>
-              <div style={styles.unrecognized}>Unrecognized overall: <span>{unrecognized_overall} ({unrecognized_overall_percent}%)</span></div>
+              <div style={styles.unrecognized}>Unrecognized overall: <span>{unrecognized_overall} ({unrecognized_overall_percent * 100}%)</span></div>
             </Header>
 
             <Table padded collapsing={false}>
