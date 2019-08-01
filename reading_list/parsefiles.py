@@ -76,15 +76,20 @@ documents = []
 counter = 0
 unrecognizedCounter = 0
 for root in BASEPATHS:
-    for path, subdirs, files in os.walk(root):
+    for path, subdirs, files in os.walk(root, followlinks=False):
         for name in files:
+
+            fullpath = os.path.join(path, name)
+
+            # skip symlinks
+            if os.path.islink(fullpath):
+                continue
+
             if fnmatch(name, PATTERN_READ):
 
                 counter = counter + 1
 
                 sha1 = hashlib.sha1()
-
-                fullpath = os.path.join(path, name)
 
                 # calculate hash
                 with open(fullpath, 'rb') as f:
