@@ -87,7 +87,7 @@ class TravelRotary extends React.Component {
                   rotary.map((item, index) => {
                     let dateString = ""
                     if ('start' in item && 'end' in item) {
-                      dateString = item.start.getDate() + '.-' + item.end.getDate() + '. ' + item.end.getMonth() + '. ' + item.end.getFullYear()
+                      dateString = item.start.getDate() + '.-' + item.end.getDate() + '. ' + (item.end.getMonth() + 1) + '. ' + item.end.getFullYear()
                     }
                     if ('date' in item) {
                       dateString = item.date
