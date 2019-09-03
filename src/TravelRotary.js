@@ -34,18 +34,20 @@ class TravelRotary extends React.Component {
 
     // convert dates into JavaScript dates
     let rotary = travel.filter(item => item.status === 'confirmed').map(item => {
+      // date ranges
       if ('start' in item) {
         item.start = new Date(item.start)
       }
       if ('end' in item) {
         item.end = new Date(item.end)
       }
+      // single-day events
       if ('date' in item) {
         item.date = new Date(item.date)
       }
-      item.dateDiff = Math.abs(Now - (item.start || item.date))
-      item.isPast = (Now - (item.start || item.date)) > 0 ? true : false
       // identify upcoming travel item in the array
+      item.dateDiff = Now - (item.start || item.date)
+      item.isPast = item.dateDiff > 0 ? true : false
       return item
     })
 
@@ -54,19 +56,19 @@ class TravelRotary extends React.Component {
     let min = null
     for (let i=0; i < rotary.length; i++) {
       if (min === null) {
-        min = rotary[i].dateDiff
+        min = Math.abs(rotary[i].dateDiff)
         index = i
       } else {
-        if (rotary[i].dateDiff < min) {
-          min = rotary[i].dateDiff
+        if (Math.abs(rotary[i].dateDiff) < min) {
+          min = Math.abs(rotary[i].dateDiff)
           index = i
         }
       }
     }
 
-    // show two above and one below the current item
+    // show two above and three below the current item
     const sliceMin = index - 2 <= 0 ? 0 : index - 2;
-    const sliceMax = index + 1 >= rotary.length ? rotary.length : index + 2;
+    const sliceMax = index + 3 >= rotary.length ? rotary.length : index + 2;
     // console.log(index, sliceMin, sliceMax)
     rotary = rotary.slice(sliceMin, sliceMax)
     // console.log('rotary', rotary);

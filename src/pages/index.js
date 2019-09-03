@@ -4,7 +4,7 @@ import { Label, Header, List, Grid, Divider, Image, Container, Icon } from 'sema
 import "isomorphic-fetch"
 
 import "../../libs/academicons/css/academicons.min.css"
-// import TravelRotary from "../TravelRotary"
+import TravelRotary from "../TravelRotary"
 import img from "../img/opp.jpg"
 import { nobottommargin, notopmargin, nobold } from "../common"
 
@@ -86,7 +86,7 @@ class Home extends React.Component {
                   <a href="http://www.oulu.fi/university/">University of Oulu</a>,
                   {" "}
                   <a href="https://www.theatlantic.com/entertainment/archive/2012/03/world-map-metal-band-population-density/329913/">Finland</a>.
-                  {/* working towards a PhD in Applied Computer Science. */}
+                  working towards a PhD in Computer Science.
                   {" "}
                   Previously, I was a research assistant (early-stage researcher)
                   at the <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/" rel="nofollow">Human-Centered Computing</a> group, Freie Universit&auml;t Berlin.
@@ -114,7 +114,7 @@ class Home extends React.Component {
     	              { keywords.secondary.join(", ") }
                 </p>
 
-                {/* <TravelRotary /> */}
+                <TravelRotary />
 
               </Grid.Column>
 
