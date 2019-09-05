@@ -44,7 +44,17 @@ const projects = [
       alt: "",
       title: "",
     },
-    presentations: [],
+    presentations: [
+      {
+        title: "Search Support for Exploratory Writing",
+        year: 2019,
+        month: "Sept",
+        day: 4,
+        conference: "INTERACT'19",
+        location: "Paphos, Cyprus",
+        doi: "10.6084/m9.figshare.9772115",
+      },
+    ],
   },
   {
   	title: "IKON",
