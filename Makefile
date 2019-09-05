@@ -19,7 +19,8 @@ refs:
 	# _dir="$(pwd)/src/bibliography"
 	# create bibliography html
 	# --style "SIGCHI-Reference-Format"
-	bibtex2html -noheader -nofooter "src/bibliography/publications.bib"
+	# -- style "ACM-Reference-Format"
+	bibtex2html -noheader -nofooter --style "SIGCHI-Reference-Format-MOD" "src/bibliography/publications.bib"
 	# convert html to json
 	php ./parse.php
 	# move json file to public folder
