@@ -2489,7 +2489,7 @@ FUNCTION { article }
   new.block
   format.articletitle "title" output.check
   new.block
-  howpublished output
+  % howpublished output
 
   crossref missing$
     { format.journal.volume.number.day.month.year }
@@ -2555,7 +2555,7 @@ FUNCTION { booklet }
   new.block
   format.title "title" output.check
   new.block
-  howpublished output
+  % howpublished output
   address output
   fin.block
   output.issue.doi.coden.isxn.lccn.url.note
@@ -2643,7 +2643,7 @@ FUNCTION { inproceedings }
   output.year.check                   % added
   new.block
   format.articletitle "title" output.check
-  howpublished output.dot.space
+  % howpublished output.dot.space
   crossref missing$
     {
       journal missing$          % jtb: proceedings appearing in journals
@@ -2733,7 +2733,7 @@ FUNCTION { misc }
   title howpublished new.block.checkb
   format.title output
   new.block
-  howpublished output
+  % howpublished output
   "" output.nonnull.dot.space
   output.day.month.year              % Gerry - appears odd if (only) the year is 'repeated' but (appears) 'valuable' if the month/day is _also_ included - 2011/09/28
   fin.block
@@ -2821,8 +2821,8 @@ FUNCTION { periodical }
   new.sentence
   publisher output
   address output
-  howpublished new.block.checka
-  howpublished output
+  % howpublished new.block.checka
+  % howpublished output
   fin.block
   output.issue.doi.coden.isxn.lccn.url.note
   fin.entry
