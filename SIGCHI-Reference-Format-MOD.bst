@@ -211,6 +211,8 @@ ENTRY
         isbn-13       % UTAH
         issn          % UTAH
         lccn          % UTAH
+        % custom keys
+        acceptancerate
   }
   {}
   { label.year extra.label sort.year sort.label }
@@ -750,6 +752,14 @@ FUNCTION { output.note } % UTAH
   note empty.or.unknown
     { }
     { "\shownote{" note add.period$ * "}" * writeln }
+  if$
+}
+
+FUNCTION { output.acceptancerate } % CUSTOM
+{
+  acceptancerate empty.or.unknown
+    { }
+    { "\shownote{" acceptancerate add.period$ * "}" * writeln }
   if$
 }
 
@@ -2435,6 +2445,13 @@ FUNCTION { output.issue.doi.coden.isxn.lccn.url.note }
     {
       "\newblock" writeln
       output.note
+    }
+  if$
+  acceptancerate empty.or.unknown
+    { }
+    {
+      "\newblock" writeln
+      output.acceptancerate
     }
   if$
   ""
