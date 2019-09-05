@@ -22,8 +22,8 @@ const styles = {
   },
 }
 
-const _REFERENCES_PER_YEAR = "http://jonaso.de/static/references.json"
-const _REFERENCES_PER_TYPE = "http://jonaso.de/static/references-type.json"
+const _REFERENCES_PER_YEAR = "https://raw.githubusercontent.com/joetm/jonaso/master/public/static/references.json"
+const _REFERENCES_PER_TYPE = "https://raw.githubusercontent.com/joetm/jonaso/master/public/static/references-type.json"
 
 
 /**
