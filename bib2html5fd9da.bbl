@@ -1,0 +1,238 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{00}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{{\tt DOI:}\penalty0{#1}\ }
+  \fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       #1{#1}          \fi
+
+\bibitem{Hosio:2019:FAP:3321335.3324943}
+{Simo Hosio}, {Andy Alorwu}, {Niels van Berkel}, {Miguel~Bordallo L\'{o}pez},
+  {Mahalakshmy Seetharaman}, {Jonas Oppenlaender}, {and} {Jorge Goncalves}.
+  2019.
+\newblock \showarticletitle{Fueling {AI} with {P}ublic {D}isplays? {A}
+  {F}easibility {S}tudy of {C}ollecting {B}iometrically {T}agged {C}onsensual
+  {D}ata on a {U}niversity {C}ampus}. Peer-reviewed Conference Proceedings. In
+  {\em Proceedings of the 8th ACM International Symposium on Pervasive
+  Displays} {\em (PerDis '19)}. ACM, New York, NY, USA, Article 14, 7 pages.
+\newblock
+\showISBNx{978-1-4503-6751-6}
+\showDOI{%
+\url{http://dx.doi.org/10.1145/3321335.3324943}}
+
+
+\bibitem{8436408}
+{Simo Hosio}, {Jaro Karppinen}, {Niels van Berkel}, {Jonas Oppenlaender}, {and}
+  {Jorge Goncalves}. 2018.
+\newblock \showarticletitle{Mobile {D}ecision {S}upport and {D}ata
+  {P}rovisioning for {L}ow {B}ack {P}ain}.
+\newblock Peer-reviewed Journal Articles, {\em Computer\/} {51}, 8 (August
+  2018), 34--43.
+
+
+\bibitem{weightloss}
+{Simo Hosio}, {Niels van Berkel}, {Jonas Oppenlaender}, {and} {Jorge
+  Goncalves}. 2019.
+\newblock \showarticletitle{Crowdsourcing {P}ersonalized {W}eight {L}oss
+  {D}iets}.
+\newblock Peer-reviewed Journal Articles, {\em Computer\/} (2019).
+
+
+\bibitem{soton2015}
+{Jonas Oppenlaender}. 2015.
+\newblock {\em {CrowdUI} -- {A} tool to remotely source and evaluate user
+  interface adaptations}.
+\newblock Master's\ thesis. Universty of Southampton, Southampton, UK.
+\newblock
+
+
+\bibitem{Oppenlaender:2019:SCW:3325480.3326556}
+{Jonas Oppenlaender}. 2019.
+\newblock \showarticletitle{Supporting {C}reative {W}orkers with {C}rowdsourced
+  {F}eedback}. Doctoral Consortia. In {\em Proceedings of the 2019 {ACM}
+  Conference on Creativity \& Cognition} {\em (C\&C '19)}. ACM, New York, NY,
+  USA, 646--652.
+\newblock
+\showISBNx{978-1-4503-5917-7}
+\showDOI{%
+\url{http://dx.doi.org/10.1145/3325480.3326556}}
+
+
+\bibitem{Oppenlaender:2018:CAM:3267305.3267550}
+{Jonas Oppenlaender}, {Kennedy~Opoku Asare}, {and} {Simo Hosio}. 2018.
+\newblock \showarticletitle{CampusTracker: {A}ssessing {M}obile {W}orkers'
+  {M}omentary {W}illingness to {W}ork on {P}aid {C}rowdsourcing {T}asks}.
+  Peer-reviewed Workshop Proceedings. In {\em Proceedings of the 2018 ACM
+  International Joint Conference and 2018 International Symposium on Pervasive
+  and Ubiquitous Computing and Wearable Computers} {\em (UbiComp '18)}. ACM,
+  New York, NY, USA, 648--653.
+\newblock
+\showISBNx{978-1-4503-5966-5}
+\showDOI{%
+\url{http://dx.doi.org/10.1145/3267305.3267550}}
+
+
+\bibitem{hcomp2017}
+{Jonas Oppenlaender}, {Jesse~Josua Benjamin}, {and} {Claudia M{\"u}ller-Birn}.
+  2017.
+\newblock \showarticletitle{Socio-technical {R}evelation of {K}nowledge
+  {T}ransfer {P}otentials}. Other Publications and Posters. In {\em Proceedings
+  of the 5th AAAI Conference on Human Computation and Crowdsourcing} {\em
+  (HCOMP '17)}.
+\newblock
+\showURL{%
+\url{https://www.humancomputation.com/2017/papers/91-hcomp-paper-final.pdf}}
+
+
+\bibitem{Oppenlaender:2019:EIS:3290607.3313043}
+{Jonas Oppenlaender} {and} {Simo Hosio}. 2019a.
+\newblock \showarticletitle{Experizone: {I}ntegrating {S}ituated {S}cientific
+  {E}xperimentation with {T}eaching of the {S}cientific {M}ethod}. Other
+  Publications and Posters. In {\em Extended Abstracts of the 2019 CHI
+  Conference on Human Factors in Computing Systems} {\em (CHI EA '19)}. ACM,
+  New York, NY, USA, Article LBW1519, 6 pages.
+\newblock
+\showISBNx{978-1-4503-5971-9}
+\showDOI{%
+\url{http://dx.doi.org/10.1145/3290607.3313043}}
+
+
+\bibitem{dc2s2chi2019submission}
+{Jonas Oppenlaender} {and} {Simo Hosio}. 2019b.
+\newblock \showarticletitle{Supporting {C}reative {W}ork with {C}rowd
+  {F}eedback {S}ystems}. Peer-reviewed Workshop Proceedings. In {\em
+  Proceedings of the {$DC^2S^2$} {W}orkshop on {D}esigning {C}rowd-powered
+  {C}reativity {S}upport {S}ystems}.
+\newblock
+
+
+\bibitem{Oppenlaender:2019:TEF:3325480.3326583}
+{Jonas Oppenlaender} {and} {Simo Hosio}. 2019c.
+\newblock \showarticletitle{Towards {E}liciting {F}eedback for {A}rtworks on
+  {P}ublic {D}isplays}. Other Publications and Posters. In {\em Proceedings of
+  the 2019 {ACM} Conference on Creativity \& Cognition} {\em (C\&C '19)}. ACM,
+  New York, NY, USA, 562--569.
+\newblock
+\showISBNx{978-1-4503-5917-7}
+\showDOI{%
+\url{http://dx.doi.org/10.1145/3325480.3326583}}
+
+
+\bibitem{10.1007/978-3-030-29387-1_18}
+{Jonas Oppenlaender}, {Elina Kuosmanen}, {Jorge Goncalves}, {and} {Simo Hosio}.
+  2019a.
+\newblock \showarticletitle{Search {S}upport for {E}xploratory {W}riting}.
+  Peer-reviewed Conference Proceedings. In {\em Human-Computer Interaction --
+  INTERACT 2019} {\em (LNCS 11748)}, {David Lamas}, {Fernando Loizides},
+  {Lennart Nacke}, {Helen Petrie}, {Marco Winckler}, {and} {Panayiotis
+  Zaphiris} (Eds.). Springer International Publishing, Cham, 314--336.
+\newblock
+\showISBNx{978-3-030-29387-1}
+\showURL{%
+\url{https://link.springer.com/chapter/10.1007/978-3-030-29387-1_18}}
+
+
+\bibitem{Oppenlaender:2019:DSD:3290607.3299027}
+{Jonas Oppenlaender}, {Maximilian Mackeprang}, {Abderrahmane Khiat}, {Maja
+  Vukovi\'{c}}, {Jorge Goncalves}, {and} {Simo Hosio}. 2019b.
+\newblock \showarticletitle{{DC2S2}: {D}esigning {C}rowd-powered {C}reativity
+  {S}upport {S}ystems}. Peer-reviewed Workshops Organized. In {\em Extended
+  Abstracts of the 2019 CHI Conference on Human Factors in Computing Systems}
+  {\em (CHI EA '19)}. ACM, New York, NY, USA, Article W06, 8 pages.
+\newblock
+\showISBNx{978-1-4503-5971-9}
+\showDOI{%
+\url{http://dx.doi.org/10.1145/3290607.3299027}}
+
+
+\bibitem{Oppenlaender:2019:CIC:3325480.3326553}
+{Jonas Oppenlaender}, {Naghmi Shireen}, {Maximilian Mackeprang}, {Halil Erhan},
+  {Jorge Goncalves}, {and} {Simo Hosio}. 2019c.
+\newblock \showarticletitle{Crowd-powered {I}nterfaces for {C}reative {D}esign
+  {T}hinking}. Peer-reviewed Workshops Organized. In {\em Proceedings of the
+  2019 ACM Conference on Creativity and Cognition} {\em (C\C '19)}. ACM, New
+  York, NY, USA, 722--729.
+\newblock
+\showISBNx{978-1-4503-5917-7}
+\showDOI{%
+\url{http://dx.doi.org/10.1145/3325480.3326553}}
+
+
+\bibitem{ontology2008}
+{Jonas Oppenl{\"a}nder}. 2008.
+\newblock {E}ntwicklung einer {B}eschreibungssprache f{\"u}r
+  {P}roduktentwicklungsinhalte.
+\newblock Theses.   (2008).
+\newblock
+
+
+\bibitem{kano2009}
+{Jonas Oppenl{\"a}nder}. 2009a.
+\newblock {\em {A}nwendung des {K}ano-{M}odells zur {A}nalyse und
+  {C}harakterisierung gesellschaftlicher {A}nforderungen an {P}rodukte}.
+\newblock Master's\ thesis. Technical University Darmstadt, Darmstadt, Germany.
+\newblock
+
+
+\bibitem{businessmodel2009}
+{Jonas Oppenl{\"a}nder}. 2009b.
+\newblock {G}esch{\"a}ftskonzept f{\"u}r ein auf peer-to-peer basierendes
+  {S}oziales {N}etzwerk.
+\newblock Theses.   (2009).
+\newblock
+
+
+\bibitem{mkwi2018}
+{Jonas Oppenl\"{a}nder}, {Jesse~Josua Benjamin}, {and} {Claudia
+  M{\"u}ller-Birn}. 2018.
+\newblock \showarticletitle{Towards {S}ociotechnical {M}anagement of
+  {I}ntra-{O}rganisational {K}nowledge {T}ransfer}. Other Publications and
+  Posters. In {\em Multikonferenz Wirtschaftsinformatik. Band 1} {\em (MKWI
+  '18)}, {Paul Drews}, {Burkhardt Funk}, {Peter Niemeyer}, {and} {Lin Xie}
+  (Eds.). 307--313.
+\newblock
+\showISBNx{978-3-935786-72-0}
+\showURL{%
+\url{http://mkwi2018.leuphana.de/wp-content/uploads/MKWI_140.pdf}}
+
+
+\bibitem{esciencetage2017}
+{Jonas Oppenl{\"a}nder}, {Falko Gl{\"o}ckler}, {Jana Hoffmann}, {and} {Claudia
+  M{\"u}ller-Birn}. 2017.
+\newblock \showarticletitle{{B}ewertung von {R}eifegradmodellen f{\"u}r ein
+  integriertes {F}orschungsdatenmanagement f{\"u}r multidisziplin{\"a}re
+  {F}orschungsorganisationen}. Peer-reviewed Conference Proceedings. In {\em
+  E-Science-Tage 2017: Forschungsdaten managen}, {Jonas Kratzke} {and} {Vincent
+  Heuveline} (Eds.). heiBOOKS, 53--64.
+\newblock
+\showDOI{%
+\url{http://dx.doi.org/10.11588/heibooks.285.377}}
+
+
+\end{thebibliography}
