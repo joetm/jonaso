@@ -206,6 +206,7 @@ class Publications extends React.Component {
                           references[year].map((item, index) => {
                             item.__html = item.__html.replace('Jonas Oppenlaender', '<strong>Jonas Oppenlaender</strong>')
                             item.__html = item.__html.replace('Jonas Oppenländer', '<strong>Jonas Oppenländer</strong>')
+                            item.__html = item.__html.replace('--', '–')
                             let icostr = 'file text outline'
                             if (item.__html.indexOf('.pdf') === -1) {
                               icostr = 'file outline'
