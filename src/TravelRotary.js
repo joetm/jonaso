@@ -67,8 +67,8 @@ class TravelRotary extends React.Component {
     }
 
     // show two above and three below the current item
-    const sliceMin = index - 2 <= 0 ? 0 : index - 2;
-    const sliceMax = index + 3 >= rotary.length ? rotary.length : index + 2;
+    const sliceMin = index - 3 <= 0 ? 0 : index - 3;
+    const sliceMax = index + 3 >= rotary.length ? rotary.length : index + 3;
     // console.log(index, sliceMin, sliceMax)
     rotary = rotary.slice(sliceMin, sliceMax)
     // console.log('rotary', rotary);
