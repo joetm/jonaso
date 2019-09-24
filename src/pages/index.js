@@ -161,13 +161,11 @@ class Home extends React.Component {
               <Icon title="Twitter" link={true} color="grey" size="big" name='twitter square' />
           </a>
 
-          <a href="https://scholar.google.com/citations?hl=de&user=ucO_QYQAAAAJ" target="_blank">
-              <i style={styles.academicon} title="Google Scholar" className="ai ai-google-scholar-square ai-2x"></i>
-          </a>
-
+          {/*
           <a href="https://www.researchgate.net/profile/Jonas_Oppenlaender" target="_blank">
               <i style={styles.academicon} title="Researchgate" className="ai ai-researchgate-square ai-2x"></i>
           </a>
+          */}
 
           <a href="https://orcid.org/0000-0002-2342-1540">
               <i style={styles.academicon} title="ORCID" className="ai ai-orcid-square ai-2x"></i>
@@ -175,6 +173,10 @@ class Home extends React.Component {
 
           <a href="https://dblp.uni-trier.de/pers/hd/o/Oppenlaender:Jonas">
               <i style={styles.academicon} title="DBLP" className="ai ai-dblp-square ai-2x"></i>
+          </a>
+
+          <a href="https://scholar.google.com/citations?hl=de&user=ucO_QYQAAAAJ" target="_blank">
+              <i style={styles.academicon} title="Google Scholar" className="ai ai-google-scholar-square ai-2x"></i>
           </a>
 
         </Container>
