@@ -8,10 +8,6 @@ import { spacer } from "../common"
 import { ResponsiveContainer, Treemap, BarChart, Bar, Tooltip, XAxis, YAxis, CartesianGrid } from 'recharts'
 
 
-const styles = {
-}
-
-
 class Keywords extends React.Component {
   render() {
     const { keywords = [] } = this.props
