@@ -2431,11 +2431,11 @@ FUNCTION { output.issue.doi.coden.isxn.lccn.url }
   after.block 'output.state :=
 
   output.issue
-  output.isbn
+  % output.isbn
   output.coden  % CODEN is functionally like ISSN, so output them sequentially
-  output.issn
-  output.lccn
-  output.doi    % DOI is ALWAYS last according to CrossRef DOI documentation
+  % output.issn
+  % output.lccn
+  % output.doi    % DOI is ALWAYS last according to CrossRef DOI documentation
   % output.url    % but ACM wants URL last
 }
 
