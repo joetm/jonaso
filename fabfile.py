@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
+import os, sys, re
+
 from fabric.api import *
 from fabric.contrib.console import confirm
-
-import os, sys, re
 
 # .dotenv
 from os.path import join, dirname
@@ -36,8 +36,6 @@ def deploy():
     print "========================================"
     print "deploying to server" + os.environ.get("ftp_host")
     print "========================================"
-
-    pass
 
     try:
 
