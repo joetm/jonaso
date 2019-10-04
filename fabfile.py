@@ -33,25 +33,26 @@ def local_cleanup():
 
 @task
 def deploy():
-    print "========================================"
-    print "deploying to server" + os.environ.get("ftp_host")
-    print "========================================"
+    print("========================================")
+    print("deploying to server" + os.environ.get("ftp_host"))
+    print("========================================")
 
     try:
-
         # cleanup
         local_cleanup()
 
         # compress the folder
         local("tar -zcvf %s %s" % (tarFilename, localdir))
 
+        pass
+
         # upload the tar file to the remote host
-        put(tarFilename, join(remotedir, tarFilename), use_sudo=True, mirror_local_mode=True)
+        # put(tarFilename, join(remotedir, tarFilename), use_sudo=True, mirror_local_mode=True)
 
         # with cd(remotedir):
 
             # untar the folder
-            sudo("tar -xvf " + tarFilename)
+            # sudo("tar -xvf " + tarFilename)
 
             # modify perms # TODO: check if this is necessary
             # sudo("chmod 755 " + remotedir)

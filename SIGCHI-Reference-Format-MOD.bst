@@ -759,7 +759,7 @@ FUNCTION { output.acceptancerate } % CUSTOM
 {
   acceptancerate empty.or.unknown
     { }
-    { "\shownote{" acceptancerate add.period$ * "}" * writeln }
+    { "\shownote{" "Acceptance rate: " acceptancerate * "%" * add.period$ * "}" * writeln }
   if$
 }
 
