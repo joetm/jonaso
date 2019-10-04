@@ -694,13 +694,13 @@ FUNCTION { output.isbn }                % UTAH
       isbn empty.or.unknown
         { }
         {
-          "\showISBNx{" isbn * "}" * writeln
+          % "\showISBNx{" isbn * "}" * writeln
         }
       if$
       isbn-13 empty.or.unknown
         { }
         {
-          "\showISBNxiii{" isbn-13 * "}" * writeln
+          % "\showISBNxiii{" isbn-13 * "}" * writeln
         }
       if$
     }
@@ -711,12 +711,12 @@ FUNCTION { output.isbn }                % UTAH
           isbn empty.or.unknown
             { }
             {
-              "\showISBNx{" isbn * "}" * writeln
+              % "\showISBNx{" isbn * "}" * writeln
             }
           if$
         }
         {
-          "\showISBNxiii{" isbn-13 * "}" * writeln
+          % "\showISBNxiii{" isbn-13 * "}" * writeln
         }
       if$
     }
@@ -727,7 +727,9 @@ FUNCTION { output.issn } % UTAH
 { % output non-empty ISSN as one-line sentence (stack untouched)
   issn empty.or.unknown
     { }
-    { "\showISSN{" issn * "}" * writeln }
+    {
+      % "\showISSN{" issn * "}" * writeln
+    }
   if$
 }
 
