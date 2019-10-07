@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "yarn pubjson && yarn develop",
     "develop": "gatsby develop --open",
-    "build": "gatsby build && yarn pubjson && make build",
+    "build": "gatsby build && yarn pubjson && make build && yarn push",
     "pubjson": "make refs",
     "serve": "gatsby serve",
+    "push": "git add -A && git commit && git push",
     "prod": "yarn build && yarn serve",
     "bundle-map": "bundle-buddy public/*.map"
   },
