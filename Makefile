@@ -26,7 +26,7 @@ refs:
 	# move json file to public folder
 	mv "./references.json" ./public/static/
 	# move bib.html file to public folder
-	mv "./publications_bib.html" ./public/static/
+	# mv "./publications_bib.html" ./public/static/
 	# copy bib file to public folder
 	cp "src/bibliography//publications.bib" ./public/static/
 
