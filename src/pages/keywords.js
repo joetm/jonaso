@@ -1,7 +1,3 @@
-/*
-  DEV: this is supposed to become an up-to-date reading list synced from my PC
-*/
-
 import React from "react"
 import { Container, Label} from 'semantic-ui-react'
 import { spacer } from "../common"
