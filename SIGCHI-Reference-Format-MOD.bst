@@ -211,8 +211,8 @@ ENTRY
         isbn-13       % UTAH
         issn          % UTAH
         lccn          % UTAH
-        % custom keys
-        acceptancerate
+        %% custom keys
+        % acceptancerate
   }
   {}
   { label.year extra.label sort.year sort.label }
@@ -757,13 +757,13 @@ FUNCTION { output.note } % UTAH
   if$
 }
 
-FUNCTION { output.acceptancerate } % CUSTOM
-{
-  acceptancerate empty.or.unknown
-    { }
-    { "\shownote{" "Acceptance rate: " acceptancerate * "%" * add.period$ * "}" * writeln }
-  if$
-}
+% FUNCTION { output.acceptancerate } % CUSTOM
+% {
+%   acceptancerate empty.or.unknown
+%     { }
+%     { "\shownote{" "Acceptance rate: " acceptancerate * "%" * add.period$ * "}" * writeln }
+%   if$
+% }
 
 FUNCTION { output.note.check } % UTAH
 { % return with stack empty
@@ -2448,13 +2448,13 @@ FUNCTION { output.issue.doi.coden.isxn.lccn.url.note }
       "\newblock" writeln
       output.note
     }
-  if$
-  acceptancerate empty.or.unknown
-    { }
-    {
-      "\newblock" writeln
-      output.acceptancerate
-    }
+%  if$
+%  acceptancerate empty.or.unknown
+%    { }
+%    {
+%      "\newblock" writeln
+%      output.acceptancerate
+%    }
   if$
   ""
 }
