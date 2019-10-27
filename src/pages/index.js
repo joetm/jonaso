@@ -12,7 +12,9 @@ import { nobottommargin, notopmargin, nobold } from "../common"
 const keywords = {
   primary: [
     "crowdsourcing",
-    "human computation",
+    "crowd feedback systems",
+    "creativity support tools",
+    // "human computation",
     "collective intelligence",
     "web science",
     "collaborative ontology engineering",
