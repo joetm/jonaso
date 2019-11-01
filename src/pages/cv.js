@@ -355,7 +355,7 @@ class CV extends React.Component {
                         <Item.Description>
                           <List>
                             <List.Item><a href="https://en.wikipedia.org/wiki/Franco-German_Brigade">Franco-German Brigade</a>, Donaueschingen, Germany</List.Item>
-                            <List.Item>Military service in 292<sup>nd</sup> Light Infantry Battalion</List.Item>
+                            <List.Item>Military service in 292nd Light Infantry Battalion</List.Item>
                           </List>
                         </Item.Description>
                     </Item>
