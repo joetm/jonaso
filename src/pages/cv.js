@@ -444,6 +444,7 @@ class CV extends React.Component {
 
 <div className="row">
   <div className="leftCol">
+                <Header id="teaching" style={styles.headline} size="large">Teaching Experience</Header>
   </div>
   <div className="mainCol">
               <Item.Group>
@@ -462,7 +463,6 @@ class CV extends React.Component {
 </div>
 <div className="row">
   <div className="leftCol">
-                <Header id="teaching" style={styles.headline} size="large">Teaching Experience</Header>
   </div>
   <div className="mainCol">
               <Item.Group>
