@@ -1,22 +1,470 @@
 {
     "documents": [
         {
-            "authors": [],
-            "modified": 1573028775,
-            "priority": 0,
+            "priority": 1,
+            "modified": 1573232945,
+            "title": "SMART Protocols: SeMAntic RepresenTation for Experimental Protocols",
+            "authors": [
+                "Olga Giraldo",
+                "Alexander Garc\u00eda",
+                "Oscar Corcho"
+            ],
+            "year": 2014,
+            "keywords": "Ontology Engineering > Ontologies > Experimental Protocols"
+        },
+        {
+            "priority": 1,
+            "modified": 1573232820,
+            "title": "A guideline for reporting experimental protocols in life sciences",
+            "authors": [
+                "Olga Giraldo",
+                "Alexander Garcia",
+                "Oscar Corcho"
+            ],
             "year": 2018,
-            "title": "Horizon 2020 Framework Programme Grant Agreement: 732328 \u2013 FashionBrain",
-            "keywords": "Crowdsourcing, Human Computation > Applications > Fashion Advice > FashionBrain"
+            "keywords": "Ontology Engineering > Ontologies > Experimental Protocols"
         },
         {
+            "priority": 2,
+            "modified": 1573224825,
+            "title": "HUMANS ARE REMARKABLY GOOD AT SELF-DECEPTION. BUT GROWING CONCERN ABOUT REPRODUCIBILITY IS DRIVING MANY RESEARCHERS TO SEEK WAYS TO FIGHT THEIR OWN WORST INSTINCTS",
             "authors": [],
-            "modified": 1572980896,
-            "priority": 0,
-            "year": 2019,
-            "title": "THE PAY UP CAMPAIGN IS A PROJECT OF WORKING WASHINGTON",
-            "keywords": "Future of Work > Gig Economy > PayUp"
+            "year": 2015,
+            "keywords": "Scientific Method, Wissenschaftliches Arbeiten > Bias, Errors"
         },
         {
+            "priority": 1,
+            "modified": 1573221319,
+            "title": "Identifying and Avoiding Bias in Research",
+            "authors": [
+                "Christopher J. Pannucci"
+            ],
+            "year": 2010,
+            "keywords": "Scientific Method, Wissenschaftliches Arbeiten > Bias, Errors"
+        },
+        {
+            "priority": 0,
+            "modified": 1573219648,
+            "title": "Beyond Rigor: Appropriate Analysis",
+            "authors": [
+                "Patricia B. Campbell"
+            ],
+            "year": 2013,
+            "keywords": "Scientific Method, Wissenschaftliches Arbeiten > Rigor"
+        },
+        {
+            "priority": 1,
+            "modified": 1573214691,
+            "title": "Rigorous Science: a How-To Guide",
+            "authors": [
+                "Arturo Casadevall",
+                "Ferric C. Fang"
+            ],
+            "year": 2016,
+            "keywords": "Scientific Method, Wissenschaftliches Arbeiten > Rigor"
+        },
+        {
+            "priority": 2,
+            "modified": 1573212874,
+            "title": "VisiBlends: A Flexible Workflow for Visual Blends",
+            "authors": [
+                "Lydia B. Chilton",
+                "Savvas Petridis",
+                "Maneesh Agrawala"
+            ],
+            "year": 2019,
+            "keywords": "Creativity > Metaphors, Meaning > Visual Metaphors, Visual Blends"
+        },
+        {
+            "priority": 2,
+            "modified": 1573210333,
+            "title": "Human Errors in Interpreting Visual Metaphor",
+            "authors": [
+                "Savvas Petridis",
+                "Lydia B. Chilton"
+            ],
+            "year": 2019,
+            "keywords": "Creativity > Metaphors, Meaning > Visual Metaphors, Visual Blends"
+        },
+        {
+            "priority": 1,
+            "modified": 1573209205,
+            "title": "The Value of Crowdsourcing: Can Users Really Compete with Professionals in Generating New Product Ideas?",
+            "authors": [
+                "Marion K. Poetz",
+                "Martin Schreier"
+            ],
+            "year": 2012,
+            "keywords": "Creativity > Process > 1 Idea Generation, Creativity Stimulation > Crowdsourcing, Open Innovation"
+        },
+        {
+            "priority": 3,
+            "modified": 1573208880,
+            "title": "The Cambridge Handbook of Creativity",
+            "authors": [
+                "JAMES C. KAUFMAN",
+                "San Bernardino",
+                "ROBERT J. STERNBERG"
+            ],
+            "year": 2010,
+            "keywords": "Creativity > General, Theory"
+        },
+        {
+            "priority": 1,
+            "modified": 1573208609,
+            "title": "Assessing Creativity With Self-Report Scales : A Review and Empirical Evaluation",
+            "authors": [
+                "Paul J. Silvia",
+                "Benjamin Wigert",
+                "Roni Reiter-Palmon",
+                "James C. Kaufman"
+            ],
+            "year": 2014,
+            "keywords": "Creativity > Creativity Measurement, Tests, Questionnaires"
+        },
+        {
+            "priority": 3,
+            "modified": 1573208005,
+            "title": "Why Isn't Creativity More Important to Educational Psychologists? Potentials, Pitfalls, and Future Directions in Creativity Research",
+            "authors": [
+                "Jonathan A. Plucker",
+                "Ronald A. Beghetto",
+                "Gayle T. Dow"
+            ],
+            "year": 2004,
+            "keywords": "Creativity > General, Theory > Novel and Useful, Standard Definition"
+        },
+        {
+            "priority": 3,
+            "modified": 1573207749,
+            "title": "Crowdsourcing and Creativity",
+            "authors": [
+                "Mira Dontcheva",
+                "Elizabeth Gerber",
+                "Sheena Lewis"
+            ],
+            "year": 2011,
+            "keywords": "Creativity > Methods > Crowdsourcing"
+        },
+        {
+            "priority": 2,
+            "modified": 1573207175,
+            "title": "Inebriation and Inspiration? A Review of the Research on Alcohol and Creativity",
+            "authors": [],
+            "year": 2011,
+            "keywords": "Creativity > Enhancement, Augmentation > Alcohol"
+        },
+        {
+            "priority": 1,
+            "title": "Everyday Ideation",
+            "authors": [
+                "Rhema Linder",
+                "Clair Snodgrass"
+            ],
+            "year": 2014,
+            "keywords": "Creativity > Creativity Support Tools > Pinterest",
+            "modified": 1573207138
+        },
+        {
+            "priority": 2,
+            "modified": 1573206147,
+            "title": "An Analysis of Creativity",
+            "authors": [],
+            "year": 2008,
+            "keywords": "Creativity > General, Theory > Four P"
+        },
+        {
+            "priority": 1,
+            "modified": 1573206025,
+            "title": "Sparking Creativity: Improving Electronic Brainstorming with Individual Cognitive Priming",
+            "authors": [
+                "Alan R. Dennis",
+                "Randall K. Minas"
+            ],
+            "year": 2011,
+            "keywords": "Creativity > Methods > Affective Priming"
+        },
+        {
+            "priority": 2,
+            "modified": 1573205724,
+            "title": "Varieties of (Scientific) Creativity: A Hierarchical Model of Domain-Specific Disposition, Development, and Achievement",
+            "authors": [
+                "Dean Keith Simonton"
+            ],
+            "year": 2009,
+            "keywords": "Creativity > General, Theory > Hierarchical Domains"
+        },
+        {
+            "priority": 2,
+            "modified": 1573205620,
+            "title": "A Pilot Study of Using Crowds in the Classroom",
+            "authors": [
+                "Steven Dow",
+                "Elizabeth Gerber",
+                "Audris Wong"
+            ],
+            "year": 2013,
+            "keywords": "Creativity > Applications, Domains > Classroom"
+        },
+        {
+            "priority": 2,
+            "modified": 1573198477,
+            "title": "Sparking Creativity: Improving Electronic Brainstorming with Individual Cognitive Priming",
+            "authors": [
+                "Alan R. Dennis",
+                "Akshay P. Bhagwatwar",
+                "AlAN R. DENNIS",
+                "RANDAll K. MINAS",
+                "AKShAy P. BhAgwAtwAR",
+                "AlAn R. Dennis"
+            ],
+            "year": 2013,
+            "keywords": "Creativity > Collaboration, Groups"
+        },
+        {
+            "priority": 3,
+            "title": "A literature review on individual creativity support systems",
+            "authors": [
+                "Kai Wang",
+                "Jeffrey V. Nickerson"
+            ],
+            "year": "N/A",
+            "keywords": "Creativity > Creativity Support Tools > General, Overview",
+            "modified": 1573196953
+        },
+        {
+            "priority": 3,
+            "modified": 1573196749,
+            "title": "The Standard Definition of Creativity",
+            "authors": [
+                "Mark A. Runco",
+                "Garrett J Jaeger",
+                "Garrett J. Jaeger"
+            ],
+            "year": 2012,
+            "keywords": "Creativity > General, Theory > Novel and Useful, Standard Definition"
+        },
+        {
+            "priority": 2,
+            "modified": 1573151322,
+            "title": "Squadbox: A Tool to Combat Email Harassment Using Friendsourced Moderation",
+            "authors": [
+                "Kaitlin Mahar",
+                "Amy X. Zhang"
+            ],
+            "year": 2018,
+            "keywords": "Crowdsourcing, Human Computation > Applications > Moderation > Squadbox"
+        },
+        {
+            "priority": 0,
+            "modified": 1573147846,
+            "title": "Towards Effective Crowd-Powered Online Content Moderation",
+            "authors": [
+                "Danula Hettiachchi",
+                "Jorge Goncalves"
+            ],
+            "year": 2019,
+            "keywords": "Crowdsourcing, Human Computation > Applications > Moderation"
+        },
+        {
+            "priority": 3,
+            "modified": 1573138581,
+            "title": "Affective Computational Priming and Creativity",
+            "authors": [
+                "Sheena Lewis",
+                "Mira Dontcheva",
+                "Elizabeth Gerber"
+            ],
+            "year": 2011,
+            "keywords": "Creativity > Methods > Affective Priming"
+        },
+        {
+            "priority": 3,
+            "modified": 1573138475,
+            "title": "Distributed  Analogical  Idea  Generation  with  Multiple   Constraints",
+            "authors": [
+                "Lixiu Yu",
+                "Robert E. Kraut",
+                "Aniket Kittur"
+            ],
+            "year": 2015,
+            "keywords": "Creativity > Methods > Problem representation > Constraints"
+        },
+        {
+            "priority": 3,
+            "modified": 1573138203,
+            "title": "An Architecture for Exploring Large Design Spaces",
+            "authors": [
+                "John R. Josephson",
+                "B. Chandrasekaran",
+                "Mark Carroll",
+                "Naresh Iyer",
+                "Bryon Wasacz",
+                "Giorgio Rizzoni",
+                "Qingyuan Li",
+                "David A. Erb"
+            ],
+            "year": "N/A",
+            "keywords": "Creativity > Process > 2 Idea Quality, Idea Selection > Design Space Exploration, Evaluating Alternatives"
+        },
+        {
+            "priority": 3,
+            "modified": 1573138128,
+            "title": "Distributed Analogical Idea Generation: Inventing with Crowds",
+            "authors": [
+                "Lixiu Yu",
+                "Aniket Kittur",
+                "Robert E. Kraut"
+            ],
+            "year": 2014,
+            "keywords": "Creativity > General, Theory > Types > Analogical"
+        },
+        {
+            "priority": 1,
+            "modified": 1573137976,
+            "title": "Design space exploration in parametric systems: analyzing effects of goal specificity and method specificity on design solutions",
+            "authors": [
+                "Halil Erhan",
+                "Jelena Popovic",
+                "Naghmi Shireen",
+                "Halil I. Erhan",
+                "Rodolfo S\u00e1nchez",
+                "Robert Woodbury",
+                "Bernhard E. Riecke"
+            ],
+            "year": 2011,
+            "keywords": "Creativity > Process > 2 Idea Quality, Idea Selection > Design Space Exploration, Evaluating Alternatives"
+        },
+        {
+            "priority": 3,
+            "modified": 1573137850,
+            "title": "Providing Timely Examples Improves the Quantity and Quality of Generated Ideas",
+            "authors": [
+                "Pao Siangliulue",
+                "Joel Chan",
+                "Krzysztof Z. Gajos",
+                "Steven P. Dow"
+            ],
+            "year": 2015,
+            "keywords": "Creativity > Process > 1 Idea Generation, Creativity Stimulation > Examples"
+        },
+        {
+            "priority": 1,
+            "modified": 1573137599,
+            "title": "Using avatars to tailor ideation process to innovation strategy",
+            "authors": [
+                "St\u00e9phanie BUISINE",
+                "J\u00e9r\u00f4me GUEGAN",
+                "Jessy BARRE",
+                "Fr\u00e9d\u00e9ric SEGONDS",
+                "St\u00e9phanie Buisine",
+                "J\u00e9r\u00f4me Guegan",
+                "Jessy Barr\u00e9",
+                "Fr\u00e9d\u00e9ric Segonds",
+                "Am\u00e9ziane Aoussat"
+            ],
+            "year": 2019,
+            "keywords": "Creativity > Methods > Affective Priming > Avatars"
+        },
+        {
+            "priority": 1,
+            "modified": 1573136860,
+            "title": "An Internet-Scale Idea Generation System",
+            "authors": [
+                "LIXIU YU",
+                "JEFFREY V. NICKERSON"
+            ],
+            "year": 2013,
+            "keywords": "Creativity > Process > 1 Idea Generation, Creativity Stimulation > Systems > Internet-scale"
+        },
+        {
+            "priority": 2,
+            "modified": 1573136793,
+            "title": "Does Being Bored Make Us More Creative?",
+            "authors": [
+                "Sandi Mann",
+                "Rebekah Cadman"
+            ],
+            "year": 2014,
+            "keywords": "Creativity > Process > 1 Idea Generation, Creativity Stimulation > Methods, Techniques > Boredom"
+        },
+        {
+            "priority": 2,
+            "modified": 1573136791,
+            "title": "Semantically Far Inspirations Considered Harmful? Accounting for Cognitive States in Collaborative Ideation",
+            "authors": [
+                "Joel Chan",
+                "Pao Siangliulue",
+                "Denisa Qori McDonald",
+                "Ruixue Liu",
+                "Reza Moradinezhad",
+                "Safa Aman",
+                "Erin T. Solovey",
+                "Krzysztof Z. Gajos",
+                "Steven P. Dow"
+            ],
+            "year": 2017,
+            "keywords": "Creativity > Process > 1 Idea Generation, Creativity Stimulation > Methods, Techniques > Alternatives"
+        },
+        {
+            "priority": 1,
+            "modified": 1573136534,
+            "title": "BlueSky: Crowd-Powered Uniform Sampling of Idea Spaces",
+            "authors": [
+                "Gaoping Huang",
+                "Alexander J. Quinn"
+            ],
+            "year": 2017,
+            "keywords": "Creativity > Process > 1 Idea Generation, Creativity Stimulation > Crowdsourcing, Open Innovation > Uniform Idea Sampling"
+        },
+        {
+            "priority": 1,
+            "modified": 1573136303,
+            "title": "InspirationWall: Supporting Idea Generation Through Automatic Information Exploration",
+            "authors": [
+                "Salvatore Andolina",
+                "Khalil Klouche",
+                "Diogo Cabral",
+                "Tuukka Ruotsalo",
+                "Giulio Jacucci"
+            ],
+            "year": 2015,
+            "keywords": "Creativity > Process > 1 Idea Generation, Creativity Stimulation > Systems > InspirationWall"
+        },
+        {
+            "priority": 3,
+            "modified": 1573136217,
+            "title": "Crowdboard: Augmenting In-Person Idea Generationwith Real-Time Crowds",
+            "authors": [
+                "Salvatore Andolina",
+                "Hendrik Schneider",
+                "Joel Chan",
+                "Khalil Klouche",
+                "Giulio Jacucci",
+                "Steven Dow"
+            ],
+            "year": 2017,
+            "keywords": "Creativity > Process > 1 Idea Generation, Creativity Stimulation > Systems > CrowdBoard"
+        },
+        {
+            "modified": 1573028775,
+            "title": "Horizon 2020 Framework Programme Grant Agreement: 732328 \u2013 FashionBrain",
+            "authors": [],
+            "year": 2018,
+            "keywords": "Crowdsourcing, Human Computation > Applications > Fashion Advice > FashionBrain",
+            "priority": 0
+        },
+        {
+            "modified": 1572980896,
+            "title": "THE PAY UP CAMPAIGN IS A PROJECT OF WORKING WASHINGTON",
+            "authors": [],
+            "year": 2019,
+            "keywords": "Future of Work > Gig Economy > PayUp",
+            "priority": 0
+        },
+        {
+            "modified": 1572871907,
+            "title": "Animo: Sharing Biosignals on a Smartwatch for Lightweight Social Connection",
             "authors": [
                 "FANNIE LIU",
                 "MARIO ESPARZA",
@@ -28,84 +476,84 @@
                 "Geoff Kaufman",
                 "Laura Dabbish"
             ],
-            "modified": 1572871907,
-            "priority": 1,
             "year": 2019,
-            "title": "Animo: Sharing Biosignals on a Smartwatch for Lightweight Social Connection",
-            "keywords": "CSCW > Ambient Awareness"
+            "keywords": "CSCW > Ambient Awareness",
+            "priority": 1
         },
         {
+            "modified": 1572790087,
+            "title": "Analyzing the Use of Camera Glasses in the Wild",
             "authors": [
                 "Taryn Bipat",
                 "Maarten Willem Bos",
                 "Rajan Vaish"
             ],
-            "modified": 1572790087,
-            "priority": 0,
             "year": 2019,
-            "title": "Analyzing the Use of Camera Glasses in the Wild",
-            "keywords": "Smart Glasses"
+            "keywords": "Smart Glasses",
+            "priority": 0
         },
         {
+            "modified": 1572780848,
+            "title": "Peer reviewers unmasked: largest global survey reveals trends",
             "authors": [
                 "Inga Vesper"
             ],
-            "modified": 1572780848,
-            "priority": 1,
             "year": 2019,
-            "title": "Peer reviewers unmasked: largest global survey reveals trends",
-            "keywords": "Peer Review"
+            "keywords": "Peer Review",
+            "priority": 1
         },
         {
+            "modified": 1572767319,
+            "title": "How GuidingQuestions Facilitate Feedback Exchange in Project-Based Learning",
             "authors": [
                 "Amy Cook"
             ],
-            "modified": 1572767319,
-            "priority": 3,
             "year": 2019,
-            "title": "How GuidingQuestions Facilitate Feedback Exchange in Project-Based Learning",
-            "keywords": "Feedback > Methods > Rubrics > Guiding Questions"
+            "keywords": "Feedback > Methods > Rubrics > Guiding Questions",
+            "priority": 3
         },
         {
+            "modified": 1572711775,
+            "title": "2100 AI: Reflections on the mechanisation of scientific discovery",
             "authors": [
                 "Andrea Mannocci",
                 "Angelo A. Salatino",
                 "Francesco Osborne",
                 "Enrico Motta"
             ],
-            "modified": 1572711775,
-            "priority": 0,
             "year": 2017,
-            "title": "2100 AI: Reflections on the mechanisation of scientific discovery",
-            "keywords": "Machine Learning > Discovery Informatics"
+            "keywords": "Machine Learning > Discovery Informatics",
+            "priority": 0
         },
         {
-            "authors": [],
             "modified": 1572711154,
-            "priority": 0,
-            "year": 2014,
             "title": "A Path to Understanding the Effects of Algorithm Awareness",
-            "keywords": "Machine Learning > Explainable AI, XAI > Algorithm Awareness"
-        },
-        {
             "authors": [],
-            "modified": 1572710326,
-            "priority": 0,
-            "year": 2019,
-            "title": "Silicon Valley billionaires keep getting richer no matter how much money they give away",
-            "keywords": "Income Inequality"
+            "year": 2014,
+            "keywords": "Machine Learning > Explainable AI, XAI > Algorithm Awareness",
+            "priority": 0
         },
         {
+            "modified": 1572710326,
+            "title": "Silicon Valley billionaires keep getting richer no matter how much money they give away",
+            "authors": [],
+            "year": 2019,
+            "keywords": "Income Inequality",
+            "priority": 0
+        },
+        {
+            "modified": 1572708096,
+            "title": "Leadership in the digital business transformation",
             "authors": [
                 "Laura Bordi"
             ],
-            "modified": 1572708096,
-            "priority": 0,
             "year": 2018,
-            "title": "Leadership in the digital business transformation",
-            "keywords": "Leadership, Management > Digital Business Transformation"
+            "keywords": "Leadership, Management > Digital Business Transformation",
+            "priority": 0
         },
         {
+            "modified": 1572708008,
+            "title": "Quantified Factory Worker - Expert Evaluation and Ethical Considerations of Wearable Self-tracking Devices",
             "authors": [
                 "P\u00e4ivi Heikkil\u00e4",
                 "Anita Honka",
@@ -113,25 +561,25 @@
                 "Eija Kaasinen",
                 "Kaisa V\u00e4\u00e4n\u00e4nen"
             ],
-            "modified": 1572708008,
-            "priority": 0,
             "year": 2018,
-            "title": "Quantified Factory Worker - Expert Evaluation and Ethical Considerations of Wearable Self-tracking Devices",
-            "keywords": "Quantified Self > Ethics"
+            "keywords": "Quantified Self > Ethics",
+            "priority": 0
         },
         {
+            "modified": 1572707457,
+            "title": "Experiences evoked by a social robot for guidance and edutainment at a city service point",
             "authors": [
                 "Kirsikka Kaipainen",
                 "Aino Ahtinen",
                 "Aleksi Hiltunen"
             ],
-            "modified": 1572707457,
-            "priority": 1,
             "year": 2018,
-            "title": "Experiences evoked by a social robot for guidance and edutainment at a city service point",
-            "keywords": "Robots > Social Robots"
+            "keywords": "Robots > Social Robots",
+            "priority": 1
         },
         {
+            "modified": 1572707191,
+            "title": "UbiLibrary: Situated Large Public Display as Interactive Interface to Library Services",
             "authors": [
                 "Hannu Kukka",
                 "Tommi Heikkinen",
@@ -139,23 +587,23 @@
                 "Taru Tanska",
                 "Timo Ojala"
             ],
-            "modified": 1572707191,
-            "priority": 0,
             "year": 2018,
-            "title": "UbiLibrary: Situated Large Public Display as Interactive Interface to Library Services",
-            "keywords": "Public Displays > UBI-hotspots"
+            "keywords": "Public Displays > UBI-hotspots",
+            "priority": 0
         },
         {
+            "modified": 1572706349,
+            "title": "Personalization Myopia: A Viewpoint to True Personalization of Information Systems",
             "authors": [
                 "Harri Oinas-Kukkonen"
             ],
-            "modified": 1572706349,
-            "priority": 0,
             "year": 2018,
-            "title": "Personalization Myopia: A Viewpoint to True Personalization of Information Systems",
-            "keywords": "Design, HCI, UI, UX > Personalization, Adaptive UI > Personalization > Personalization Myopia"
+            "keywords": "Design, HCI, UI, UX > Personalization, Adaptive UI > Personalization > Personalization Myopia",
+            "priority": 0
         },
         {
+            "modified": 1572619446,
+            "title": "Connecting Language and Vision Using Crowdsourced Dense Image Annotations",
             "authors": [
                 "Ranjay Krishna",
                 "Yuke Zhu",
@@ -169,112 +617,113 @@
                 "Michael S. Bernstein",
                 "Li Fei-Fei"
             ],
-            "modified": 1572619446,
-            "priority": 0,
             "year": 2016,
-            "title": "Connecting Language and Vision Using Crowdsourced Dense Image Annotations",
-            "keywords": "Benchmarks, gold standards, datasets > Images > Tagging, Object Detection > Visual Genome"
+            "keywords": "Benchmarks, gold standards, datasets > Images > Tagging, Object Detection > Visual Genome",
+            "priority": 0
         },
         {
+            "modified": 1572619338,
+            "title": "Juxtaposed Designs Models: A Method for Parallel Exploration in Parametric CAD",
             "authors": [
                 "Halil Erhan",
                 "Naghmi Shireen"
             ],
-            "modified": 1572619338,
-            "priority": 0,
             "year": 2017,
-            "title": "Juxtaposed Designs Models: A Method for Parallel Exploration in Parametric CAD",
-            "keywords": "Creativity > Process > 2 Idea Quality, Idea Selection > Design Space Exploration, Evaluating Alternatives"
+            "keywords": "Creativity > Process > 2 Idea Quality, Idea Selection > Design Space Exploration, Evaluating Alternatives",
+            "priority": 0
         },
         {
+            "modified": 1572607090,
+            "title": "Preferred reporting items for systematic reviews and meta-analyses: the PRISMA statement",
             "authors": [
                 "David Moher",
                 "Alessandro Liberati",
                 "Jennifer Tetzlaff",
                 "Douglas G Altman"
             ],
-            "modified": 1572607090,
-            "priority": 3,
             "year": 2017,
-            "title": "Preferred reporting items for systematic reviews and meta-analyses: the PRISMA statement",
-            "keywords": "Methods > Literature Review > PRISMA"
+            "keywords": "Methods > Literature Review > PRISMA",
+            "priority": 3
         },
         {
+            "modified": 1572606783,
+            "title": "Funky-Design-Spaces: Interactive Environments for Creativity Inspired by Observing Designers Making Mood Boards",
             "authors": [
                 "Andr\u00e9s Lucero",
                 "Mads Clausen"
             ],
-            "modified": 1572606783,
-            "priority": 0,
             "year": 2015,
-            "title": "Funky-Design-Spaces: Interactive Environments for Creativity Inspired by Observing Designers Making Mood Boards",
-            "keywords": "Creativity > Creativity Support Tools > Organizational Context"
+            "keywords": "Creativity > Creativity Support Tools > Organizational Context",
+            "priority": 0
         },
         {
-            "authors": [],
             "modified": 1572419812,
-            "priority": 1,
-            "year": 2017,
             "title": "Increasing Feedback Receptivity by Moderating Negative Valence",
-            "keywords": "Feedback > Valence, Affect"
+            "authors": [],
+            "year": 2017,
+            "keywords": "Feedback > Valence, Affect",
+            "priority": 1
         },
         {
+            "modified": 1572419542,
+            "title": "The Influence of Feedback Type in Robot-Assisted Training ",
             "authors": [
                 "Neziha Akalin",
                 "Annica Kristoffersson",
                 "Amy Loutfi"
             ],
-            "modified": 1572419542,
-            "priority": 1,
             "year": 2019,
-            "title": "The Influence of Feedback Type in Robot-Assisted Training ",
-            "keywords": "Feedback > Valence, Affect > Robots"
+            "keywords": "Feedback > Valence, Affect > Robots",
+            "priority": 1
         },
         {
+            "modified": 1572335767,
+            "title": "A Large-Scale Study of the \u201cWisdom of Crowds\u201d",
             "authors": [
                 "Camelia Simoiu",
                 "Chiraag Sumanth",
                 "Alok Mysore",
                 "Sharad Goel"
             ],
-            "modified": 1572335767,
-            "priority": 3,
             "year": 2019,
-            "title": "A Large-Scale Study of the \u201cWisdom of Crowds\u201d",
-            "keywords": "Collective Intelligence > Wisdom of the Crowd"
+            "keywords": "Collective Intelligence > Wisdom of the Crowd",
+            "priority": 3
         },
         {
+            "priority": 1,
+            "modified": 1572280626,
+            "title": "Crowd Storage",
             "authors": [
                 "Jeffrey P. Bigham",
                 "Walter S. Lasecki\u03b3"
             ],
-            "modified": 1572280626,
-            "priority": 1,
             "year": 2014,
-            "title": "Crowd Storage",
             "keywords": "Collective Intelligence > Process > Memory"
         },
         {
-            "authors": [],
-            "modified": 1572278931,
             "priority": 0,
-            "year": 2019,
+            "modified": 1572278931,
             "title": "Peripheral artery disease",
+            "authors": [],
+            "year": 2019,
             "keywords": "Medical, Health, Drugs"
         },
         {
+            "priority": 0,
+            "modified": 1572277417,
+            "title": "Mining Tag Clouds and Emoticons behind Community Feedback",
             "authors": [
                 "Kavita A. Ganesan",
                 "Neel Sundaresan",
                 "Harshal Deo"
             ],
-            "modified": 1572277417,
-            "priority": 0,
             "year": 2008,
-            "title": "Mining Tag Clouds and Emoticons behind Community Feedback",
             "keywords": "Feedback > Aggregation > Tag Clouds > Emoticons"
         },
         {
+            "priority": 1,
+            "modified": 1572276830,
+            "title": "Magic Bench \u2014 A Multi-User & Multi-Sensory AR/MR Platform",
             "authors": [
                 "Kyna McIntosh",
                 "John Mars",
@@ -286,77 +735,77 @@
                 "Shawn Lawson",
                 "Moshe Mahler"
             ],
-            "modified": 1572276830,
-            "priority": 1,
             "year": 2017,
-            "title": "Magic Bench \u2014 A Multi-User & Multi-Sensory AR/MR Platform",
             "keywords": "Virtual Reality > Systems > Magic Bench"
         },
         {
+            "priority": 1,
+            "modified": 1572276522,
+            "title": "Online, VR, AR, Lab, and In-Situ: Comparison of Research Methods to Evaluate Smart Artifacts",
             "authors": [
                 "Valentin Schwind"
             ],
-            "modified": 1572276522,
-            "priority": 1,
             "year": 2019,
-            "title": "Online, VR, AR, Lab, and In-Situ: Comparison of Research Methods to Evaluate Smart Artifacts",
             "keywords": "Virtual Reality > Comparison"
         },
         {
-            "authors": [],
-            "modified": 1572276083,
             "priority": 1,
-            "year": 2019,
+            "modified": 1572276083,
             "title": "HOME TABLES PROBABILITY AND STATISTICS CALCULATORS STATISTICS BLOG MATRICES EXPERIMENTAL DESIGN PRACTICALLY CHEATING STATISTICS HANDBOOK",
+            "authors": [],
+            "year": 2019,
             "keywords": "Methods > Statistics > ANOVA, MANOVA > MANOVA > Pillai's trace"
         },
         {
+            "priority": 2,
+            "modified": 1572273068,
+            "title": "An eight-item form of the Empathy Quotient (EQ) and an application to charitable giving",
             "authors": [
                 "Peter John Loewen",
                 "Greg Lyle",
                 "Jennifer S. Nachshen"
             ],
-            "modified": 1572273068,
-            "priority": 2,
             "year": 2008,
-            "title": "An eight-item form of the Empathy Quotient (EQ) and an application to charitable giving",
             "keywords": "Affect > Empathy > Empathy Quotient"
         },
         {
+            "priority": 0,
+            "modified": 1572261650,
+            "title": "The Mocking Gaze: The Social Organization of Kinect Use",
             "authors": [
                 "Richard Harper",
                 "Helena M. Mentis"
             ],
-            "modified": 1572261650,
-            "priority": 0,
             "year": 2012,
-            "title": "The Mocking Gaze: The Social Organization of Kinect Use",
             "keywords": "Design, HCI, UI, UX > Kinect"
         },
         {
+            "priority": 2,
+            "modified": 1572261551,
+            "title": "CO-CREATION EXPERIENCES: THE NEXT PRACTICE IN VALUE CREATION",
             "authors": [
                 "C. K. PRAHALAD",
                 "VENKAT RAMASWAMY"
             ],
-            "modified": 1572261551,
-            "priority": 2,
             "year": 1904,
-            "title": "CO-CREATION EXPERIENCES: THE NEXT PRACTICE IN VALUE CREATION",
             "keywords": "Design, HCI, UI, UX > Co-Creation, Co-Design"
         },
         {
+            "priority": 1,
+            "modified": 1572201506,
+            "title": "Generating Stories From Archived Collections",
             "authors": [
                 "Yasmin AlNoamany",
                 "Michele C. Weigle",
                 "Michael L. Nelson"
             ],
-            "modified": 1572201506,
-            "priority": 1,
             "year": 2017,
-            "title": "Generating Stories From Archived Collections",
             "keywords": "Hypertext, Hypermedia > Narratology"
         },
         {
+            "priority": 1,
+            "modified": 1572198811,
+            "title": "Geppetto: Enabling Semantic Design of Expressive Robot Behaviours",
             "authors": [
                 "Ruta Desai",
                 "Fraser Anderson",
@@ -366,13 +815,13 @@
                 "George Fitzmaurice",
                 "Tovi Grossman"
             ],
-            "modified": 1572198811,
-            "priority": 1,
             "year": 2018,
-            "title": "Geppetto: Enabling Semantic Design of Expressive Robot Behaviours",
             "keywords": "Creativity > Process > 2 Idea Quality, Idea Selection > Design Space Exploration, Evaluating Alternatives"
         },
         {
+            "priority": 2,
+            "modified": 1572180797,
+            "title": "MAD : designing social comparison features in health behaviour change technological interventions",
             "authors": [
                 "Santeri Palviainen",
                 "Jari Juuti",
@@ -383,62 +832,62 @@
                 "Minna Isomursu",
                 "Karin V\u00e4yrynen"
             ],
-            "modified": 1572180797,
-            "priority": 2,
             "year": 2019,
-            "title": "MAD : designing social comparison features in health behaviour change technological interventions",
             "keywords": "Motivation, Incentives > Social Comparison"
         },
         {
+            "priority": 1,
+            "modified": 1572179575,
+            "title": "FACULTY OF INFORMATION TECHNOLOGY AND ELECTRICAL ENGINEERING",
             "authors": [
                 "Antonio Kongjonaj"
             ],
-            "modified": 1572179575,
-            "priority": 1,
             "year": 2019,
-            "title": "FACULTY OF INFORMATION TECHNOLOGY AND ELECTRICAL ENGINEERING",
             "keywords": "Fake News, Credibility > Fact-checking"
         },
         {
+            "priority": 0,
+            "modified": 1572170057,
+            "title": "\"Hi nice to meet you kisses and hugs you're beautiful\", one commenter writes under a video of a young girl playing in her underwear. This video was monetised with pre-roll advertising from Shen Yun",
             "authors": [
                 "K.G ORPHANIDES"
             ],
-            "modified": 1572170057,
-            "priority": 0,
             "year": 2019,
-            "title": "\"Hi nice to meet you kisses and hugs you're beautiful\", one commenter writes under a video of a young girl playing in her underwear. This video was monetised with pre-roll advertising from Shen Yun",
             "keywords": "YouTube"
         },
         {
-            "authors": [],
+            "priority": 0,
             "modified": 1572169977,
-            "priority": 0,
-            "year": 2019,
             "title": "MAJOR COMPANIES PULLED THEIR ADS OVER THE PREDATORY COMMENTS",
+            "authors": [],
+            "year": 2019,
             "keywords": "YouTube"
         },
         {
+            "priority": 0,
+            "modified": 1572169827,
+            "title": "Including nursery rhymes and cartoons",
             "authors": [
                 "Omar Marques/SOPA"
             ],
-            "modified": 1572169827,
-            "priority": 0,
             "year": 2019,
-            "title": "Including nursery rhymes and cartoons",
             "keywords": "YouTube > Algorithm"
         },
         {
+            "priority": 0,
+            "modified": 1572107452,
+            "title": "In \u2018Aquaman,\u2019 Underwater CG Hair Was Surprisingly One Of The Toughest Effects",
             "authors": [
                 "Kimberly Nelson Locascio",
                 "Jeff White"
             ],
-            "modified": 1572107452,
-            "priority": 0,
             "year": 2019,
-            "title": "In \u2018Aquaman,\u2019 Underwater CG Hair Was Surprisingly One Of The Toughest Effects",
             "keywords": "CGI"
         },
         {
+            "priority": 3,
+            "modified": 1572021219,
+            "title": "The Seventh AAAI Conference on Human Computation and Crowdsourcing {HCCIMP-19] AI-Based Request Augmentation to Increase Crovvdsourcing Participation",
             "authors": [
                 "Junvvon Park",
                 "Ranjay Krishna",
@@ -446,78 +895,78 @@
                 "Li Fei-Fei",
                 "Michael Bernstein"
             ],
-            "modified": 1572021219,
-            "priority": 3,
             "year": 2019,
-            "title": "The Seventh AAAI Conference on Human Computation and Crowdsourcing {HCCIMP-19] AI-Based Request Augmentation to Increase Crovvdsourcing Participation",
             "keywords": "Crowdsourcing, Human Computation > Process, Workflow, Worker Selection, Task Design > Task Design > Question Augmentation"
         },
         {
+            "priority": 1,
+            "modified": 1572014895,
+            "title": "Auditing Radicalization Pathways on YouTube",
             "authors": [
                 "Manoel Horta Ribeiro",
                 "Raphael Ottoni",
                 "Robert West",
                 "Virg\u00edlio A. F. Almeida"
             ],
-            "modified": 1572014895,
-            "priority": 1,
             "year": 2019,
-            "title": "Auditing Radicalization Pathways on YouTube",
             "keywords": "Machine Learning > Issues > Radicalization"
         },
         {
+            "priority": 0,
+            "modified": 1572006067,
+            "title": "HUMAN-COMPUTER INTERACTION ViTras - Virtual Reality Therapy by Stimulation of Modulated Body Perception",
             "authors": [
                 "Carolin Wienrich",
                 "Marc Erich Latoschik"
             ],
-            "modified": 1572006067,
-            "priority": 0,
             "year": 2019,
-            "title": "HUMAN-COMPUTER INTERACTION ViTras - Virtual Reality Therapy by Stimulation of Modulated Body Perception",
             "keywords": "Virtual Reality > Applications > Obesity"
         },
         {
-            "authors": [],
+            "priority": 0,
             "modified": 1572005932,
-            "priority": 0,
-            "year": 2019,
             "title": "Avatars in the Treatment of Obesity",
+            "authors": [],
+            "year": 2019,
             "keywords": "Virtual Reality > Applications > Obesity"
         },
         {
+            "priority": 0,
+            "modified": 1571997261,
+            "title": "EU bera\u0308t u\u0308ber neue Frist",
             "authors": [
                 "Donald Tusk"
             ],
-            "modified": 1571997261,
-            "priority": 0,
             "year": 2019,
-            "title": "EU bera\u0308t u\u0308ber neue Frist",
             "keywords": "Brexit"
         },
         {
+            "priority": 3,
+            "modified": 1571925956,
+            "title": "Co-creation and the new landscapes of design",
             "authors": [
                 "Elizabeth B.-N",
                 "Pieter Jan Stappers"
             ],
-            "modified": 1571925956,
-            "priority": 3,
             "year": 2008,
-            "title": "Co-creation and the new landscapes of design",
             "keywords": "Design, HCI, UI, UX > Co-Creation, Co-Design"
         },
         {
+            "priority": 0,
+            "modified": 1571922055,
+            "title": "Visual Methods for the Design of Shape-Changing Interfaces",
             "authors": [
                 "Aluna Everitt",
                 "Joseph Lindley",
                 "Paul Coulton"
             ],
-            "modified": 1571922055,
-            "priority": 0,
             "year": 2019,
-            "title": "Visual Methods for the Design of Shape-Changing Interfaces",
             "keywords": "Creativity > Sketching"
         },
         {
+            "priority": 2,
+            "modified": 1571921583,
+            "title": "Quantum supremacy using a programmable superconducting processor",
             "authors": [
                 "Frank Arute",
                 "Kunal Arya",
@@ -585,24 +1034,24 @@
                 "Adam Zalcman",
                 "John M. Martinis"
             ],
-            "modified": 1571921583,
-            "priority": 2,
             "year": 2019,
-            "title": "Quantum supremacy using a programmable superconducting processor",
             "keywords": "Super Computers > Quantum Supremacy"
         },
         {
+            "priority": 0,
+            "modified": 1571918863,
+            "title": "From nomadic work to nomadic leisure practice: A study of long-term bike touring",
             "authors": [
                 "PEDRO FERREIRA",
                 "BARRY BROWN"
             ],
-            "modified": 1571918863,
-            "priority": 0,
             "year": 2019,
-            "title": "From nomadic work to nomadic leisure practice: A study of long-term bike touring",
             "keywords": "Digital Nomads > Nomadic leasure practices"
         },
         {
+            "priority": 1,
+            "modified": 1571904547,
+            "title": "Machines as Teammates: A Collaboration Research Agenda",
             "authors": [
                 "Isabella Seeber",
                 "Eva Bittner",
@@ -617,50 +1066,50 @@
                 "Gerhard Schwabe",
                 "Matthias S\u00f6llner"
             ],
-            "modified": 1571904547,
-            "priority": 1,
             "year": 2017,
-            "title": "Machines as Teammates: A Collaboration Research Agenda",
             "keywords": "AI > Human-AI-Interaction, Human-Machine-Interaction > Research Questions"
         },
         {
-            "authors": [],
-            "modified": 1571897353,
             "priority": 1,
-            "year": 2019,
+            "modified": 1571897353,
             "title": "Tips on Writing a Diversity Statement",
+            "authors": [],
+            "year": 2019,
             "keywords": "Diversity Statement"
         },
         {
+            "priority": 0,
+            "modified": 1571843193,
+            "title": "NUTRITION FACTS WATER AND BEVERAGES",
             "authors": [
                 "Alexandra Shytsman"
             ],
-            "modified": 1571843193,
-            "priority": 0,
             "year": 2019,
-            "title": "NUTRITION FACTS WATER AND BEVERAGES",
             "keywords": "Tea > Boldo"
         },
         {
-            "authors": [],
-            "modified": 1571832570,
             "priority": 3,
-            "year": 2010,
+            "modified": 1571832570,
             "title": "Abbreviation",
+            "authors": [],
+            "year": 2010,
             "keywords": "Writing > Abbreviations"
         },
         {
+            "priority": 1,
+            "modified": 1571813155,
+            "title": "Annotif: A System for Annotating Mobile Notifications in User Studies",
             "authors": [
                 "Dominik Weber",
                 "Alexandra Voit"
             ],
-            "modified": 1571813155,
-            "priority": 1,
             "year": 2019,
-            "title": "Annotif: A System for Annotating Mobile Notifications in User Studies",
             "keywords": "Mobile Phones > Notifications > Annotation"
         },
         {
+            "priority": 2,
+            "modified": 1571812857,
+            "title": "Microinteraction Ecological Momentary Assessment Response Rates: Effect of Microinteractions or the Smartwatch?",
             "authors": [
                 "ADITYA PONNADA",
                 "Boston MA",
@@ -673,34 +1122,34 @@
                 "Dharam Maniar",
                 "Justin Manjourides"
             ],
-            "modified": 1571812857,
-            "priority": 2,
             "year": 2017,
-            "title": "Microinteraction Ecological Momentary Assessment Response Rates: Effect of Microinteractions or the Smartwatch?",
             "keywords": "Mobile Phones > Sampling > EMA > micro-EMA"
         },
         {
+            "priority": 0,
+            "modified": 1571812378,
+            "title": "Towards Smart Notification Management in Multi-Device Environments",
             "authors": [
                 "Dominik Weber"
             ],
-            "modified": 1571812378,
-            "priority": 0,
             "year": 2017,
-            "title": "Towards Smart Notification Management in Multi-Device Environments",
             "keywords": "Mobile Phones > Notifications > Multi-Device"
         },
         {
+            "priority": 0,
+            "modified": 1571812267,
+            "title": "Notifications and Awareness: A Field Study of Alert Usage and Preferences",
             "authors": [
                 "Shamsi T. Iqbal",
                 "Eric Horvitz"
             ],
-            "modified": 1571812267,
-            "priority": 0,
             "year": 2009,
-            "title": "Notifications and Awareness: A Field Study of Alert Usage and Preferences",
             "keywords": "Mobile Phones > Notifications"
         },
         {
+            "priority": 3,
+            "modified": 1571763262,
+            "title": "Unakite: Scaffolding Developers\u2019 Decision-Making Using the Web",
             "authors": [
                 "Michael Xieyang Liu",
                 "Jane Hsieh",
@@ -712,66 +1161,66 @@
                 "Aniket Kittur",
                 "Brad A. Myers"
             ],
-            "modified": 1571763262,
-            "priority": 3,
             "year": 2019,
-            "title": "Unakite: Scaffolding Developers\u2019 Decision-Making Using the Web",
             "keywords": "Sensemaking > Systems > Unakite"
         },
         {
+            "priority": 1,
+            "modified": 1571755052,
+            "title": "CrowdStudy: General Toolkit for Crowdsourced Evaluation of Web Interfaces",
             "authors": [
                 "Michael Nebeling",
                 "Maximilian Speicher",
                 "Moira C. Norrie"
             ],
-            "modified": 1571755052,
-            "priority": 1,
             "year": 2013,
-            "title": "CrowdStudy: General Toolkit for Crowdsourced Evaluation of Web Interfaces",
             "keywords": "CrowdUI > Systems > CrowdStudy"
         },
         {
+            "priority": 1,
+            "modified": 1571748635,
+            "title": "Computational Design Driven by Aesthetic Preference",
             "authors": [
                 "Yuki Koyama"
             ],
-            "modified": 1571748635,
-            "priority": 1,
             "year": 2016,
-            "title": "Computational Design Driven by Aesthetic Preference",
             "keywords": "CrowdUI > Systems"
         },
         {
+            "priority": 0,
+            "modified": 1571737046,
+            "title": "Valence and Value",
             "authors": [
                 "PETER CARRUTHERS"
             ],
-            "modified": 1571737046,
-            "priority": 0,
             "year": 2018,
-            "title": "Valence and Value",
             "keywords": "Affect > Valence"
         },
         {
+            "priority": 2,
+            "modified": 1571725670,
+            "title": "Digital Self-Harm Among Adolescents",
             "authors": [
                 "Sameer Hinduja",
                 "Justin W. Patchin"
             ],
-            "modified": 1571725670,
-            "priority": 2,
             "year": 2017,
-            "title": "Digital Self-Harm Among Adolescents",
             "keywords": "Healthcare > Digital Self-Harm"
         },
         {
+            "priority": 0,
+            "modified": 1571724643,
+            "title": "Digital Self-Harm: Frequency, Type, Motivations, and Outcomes",
             "authors": [
                 "Elizabeth Englander"
             ],
-            "modified": 1571724643,
-            "priority": 0,
             "year": 2014,
-            "title": "Digital Self-Harm: Frequency, Type, Motivations, and Outcomes",
             "keywords": "Healthcare > Digital Self-Harm > Digital Munchausen"
         },
         {
+            "priority": 0,
+            "modified": 1571724386,
+            "title": "Providing Patient Context to Mental Health Professionals Using Mobile Applications",
             "authors": [
                 "Niels van Berkel",
                 "Simo Hosio",
@@ -780,13 +1229,13 @@
                 "Danuta Wasserman",
                 "Vassilis Kostakos"
             ],
-            "modified": 1571724386,
-            "priority": 0,
             "year": 2016,
-            "title": "Providing Patient Context to Mental Health Professionals Using Mobile Applications",
             "keywords": "Healthcare > Mental Health"
         },
         {
+            "priority": 1,
+            "modified": 1571723819,
+            "title": "Towards a Generalizable Method for Detecting Fluid Intake with Wrist-Mounted Sensors and Adaptive Segmentation",
             "authors": [
                 "Keum San Chun",
                 "Ashley B. Sanders",
@@ -794,456 +1243,13 @@
                 "David E. Conroy",
                 "Edison Thomaz"
             ],
-            "modified": 1571723819,
-            "priority": 1,
             "year": 2019,
-            "title": "Towards a Generalizable Method for Detecting Fluid Intake with Wrist-Mounted Sensors and Adaptive Segmentation",
             "keywords": "Healthcare > Fluid Intake"
-        },
-        {
-            "authors": [
-                "Alexandra Olteanu",
-                "Xin Liu",
-                "Karl Aberer",
-                "LSIR EPFL"
-            ],
-            "modified": 1571722423,
-            "priority": 0,
-            "year": 2013,
-            "title": "Web Credibility: Features Exploration and Credibility Prediction",
-            "keywords": "Web > Issues > Webpage Credibility"
-        },
-        {
-            "authors": [
-                "M. Arnold",
-                "R. K. E. Bellamy",
-                "M. Hind",
-                "S. Houde",
-                "S. Mehta",
-                "A. Mojsilovi\u0107",
-                "R. Nair",
-                "K. Natesan Ramamurthy",
-                "D. Reimer",
-                "A. Olteanu",
-                "D. Piorkowski",
-                "J. Tsay"
-            ],
-            "modified": 1571722259,
-            "priority": 2,
-            "year": 2019,
-            "title": "FactSheets: Increasing Trust in AI Services through Supplier\u2019s Declarations of Conformity",
-            "keywords": "AI > Issues > Trust > Certification, Declaration of Conformity"
-        },
-        {
-            "authors": [
-                "Robert R. Hoffman",
-                "Jeffrey M. Bradshaw",
-                "Matthew Johnson",
-                "Paul J. Feltovich"
-            ],
-            "modified": 1571673068,
-            "priority": 2,
-            "year": 2011,
-            "title": "Beyond Cooperative Robotics: The Central Role of Interdependence in Coactive Design",
-            "keywords": "AI > Human-AI-Interaction, Human-Machine-Interaction > Coactive Design"
-        },
-        {
-            "authors": [
-                "Alan Dix"
-            ],
-            "modified": 1571653561,
-            "priority": 0,
-            "year": 2016,
-            "title": "Human-Like Computing and Human\u2013Computer Interaction",
-            "keywords": "AI > Socratic Wisdom, Socratic Ignorance > Human-like Computing"
-        },
-        {
-            "authors": [
-                "Alan N. Shapiro",
-                "Gianna Maria Gatti"
-            ],
-            "modified": 1571593767,
-            "priority": 0,
-            "year": 2019,
-            "title": "Blog and project archive about transdisciplinary design, media theory and creative coding",
-            "keywords": "Art > Telegarden"
-        },
-        {
-            "authors": [
-                "Watthanasak Jeamwatthanachai",
-                "Mike Wald",
-                "Gary Wills"
-            ],
-            "modified": 1571574122,
-            "priority": 0,
-            "year": 2016,
-            "title": "Map Data Representation for Indoor Navigation A design framework towards a construction of indoor map",
-            "keywords": "Maps > Indoor Maps, Indoor Navigation"
-        },
-        {
-            "authors": [
-                "Watthanasak Jeamwatthanachai",
-                "Mike Wald",
-                "Gary Wills"
-            ],
-            "modified": 1571574111,
-            "priority": 0,
-            "year": 2019,
-            "title": "Map Data Representation for Indoor Navigation by Blind People",
-            "keywords": "Maps > Indoor Maps, Indoor Navigation"
-        },
-        {
-            "authors": [
-                "Yung-Hsiang Lu",
-                "George K. Thiruvathukal",
-                "Ahmed S. Kaseb",
-                "Kent Gauen",
-                "Damini Rijhwani",
-                "Ryan Dailey",
-                "Deeptanshu Malik",
-                "Yutong Huang",
-                "Sarah Aghajanzadeh",
-                "Minghao Guo"
-            ],
-            "modified": 1571573716,
-            "priority": 0,
-            "year": 2019,
-            "title": "See the World through Network Cameras",
-            "keywords": "Privacy > Observation, Network Cameras, CCTV cameras"
-        },
-        {
-            "authors": [
-                "ROBERT N. CHARETTE",
-                "ITABHI Corp",
-                "JOHN L. KING"
-            ],
-            "modified": 1571570870,
-            "priority": 1,
-            "year": 2019,
-            "title": "From Artificial Intelligence to Artificial Wisdom: What Socrates Teaches Us",
-            "keywords": "AI > Socratic Wisdom, Socratic Ignorance"
-        },
-        {
-            "authors": [
-                "MARK CAMPBELL"
-            ],
-            "modified": 1571569639,
-            "priority": 1,
-            "year": 2019,
-            "title": "Synthetic Data: How AI Is Transitioning From Data Consumer to Data Producer... and Why That's Important",
-            "keywords": "AI > Synthetic Data"
-        },
-        {
-            "authors": [
-                "Sophie Neuendorf"
-            ],
-            "modified": 1571506324,
-            "priority": 0,
-            "year": 2019,
-            "title": "How War Photographer Julia Leeb Is Using Virtual Reality and Art to Let Comfortable People Experience the Terror of Conflict Zones",
-            "keywords": "Virtual Reality"
-        },
-        {
-            "authors": [
-                "Michael Chmielewski",
-                "Sarah C. Kucker"
-            ],
-            "modified": 1571503048,
-            "priority": 3,
-            "year": 2019,
-            "title": "An MTurk Crisis? Shifts in Data Quality and the Impact on Study Results",
-            "keywords": "Crowdsourcing, Human Computation > Issues > Bots, Automation"
-        },
-        {
-            "authors": [
-                "Devon Adams",
-                "Alseny Bah",
-                "Elissa M. Redmiles",
-                "Catherine Barwulor"
-            ],
-            "modified": 1571499628,
-            "priority": 0,
-            "year": 2018,
-            "title": "Ethics Emerging: the Story of Privacy and Security Perceptions in Virtual Reality",
-            "keywords": "Privacy > VR"
-        },
-        {
-            "authors": [
-                "Kenji Hata",
-                "Ranjay Krishna",
-                "Li Fei-Fei",
-                "Michael S. Bernstein"
-            ],
-            "modified": 1571499602,
-            "priority": 1,
-            "year": 2016,
-            "title": "A Glimpse Far into the Future: Understanding Long-term Crowd Worker Quality",
-            "keywords": "Crowdsourcing, Human Computation > Issues > Quality, Accuracy > Long-term"
-        },
-        {
-            "authors": [],
-            "modified": 1571493787,
-            "priority": 2,
-            "year": 2018,
-            "title": "GUIDING PRINCIPLES FOR FINDABLE, ACCESSIBLE, INTEROPERABLE AND RE-USABLE DATA PUBLISHING VERSION B1.0",
-            "keywords": "Data > FAIR data"
-        },
-        {
-            "authors": [
-                "Olga Abramova",
-                "Hanna Krasnova",
-                "Chee-Wee Tan"
-            ],
-            "modified": 1571493684,
-            "priority": 1,
-            "year": 2017,
-            "title": "HOW MUCH WILL YOU PAY? UNDERSTANDING THE VALUE OF INFORMATION CUES IN THE SHARING ECONOMY",
-            "keywords": "Data > Data Value, Data Pricing"
-        },
-        {
-            "authors": [
-                "Amina Wagner"
-            ],
-            "modified": 1571493438,
-            "priority": 2,
-            "year": 2017,
-            "title": "Putting a Price Tag on Personal Information \u2013 A Literature Review",
-            "keywords": "Data > Data Value, Data Pricing"
-        },
-        {
-            "authors": [
-                "James McCrostie"
-            ],
-            "modified": 1571490148,
-            "priority": 1,
-            "year": 2019,
-            "title": "Predatory conferences \u2013 A case of academic cannibalism",
-            "keywords": "Publishing > Fake Journals"
-        },
-        {
-            "authors": [
-                "Mark Weiser"
-            ],
-            "modified": 1571423925,
-            "priority": 2,
-            "year": 2004,
-            "title": "Designing Calm Technology",
-            "keywords": "UbiComp > Calm Technology"
-        },
-        {
-            "authors": [
-                "Jim Dabrowski",
-                "Ethan V. Munson"
-            ],
-            "modified": 1571416494,
-            "priority": 2,
-            "year": 2011,
-            "title": "40 Years of searching for the best computer system response time",
-            "keywords": "Design, HCI, UI, UX > Time > Response Time"
-        },
-        {
-            "authors": [
-                "Michael Hildebrandt",
-                "Alan Dix",
-                "Herbert A. Meyer"
-            ],
-            "modified": 1571403329,
-            "priority": 0,
-            "year": 2003,
-            "title": "Time Design",
-            "keywords": "Design, HCI, UI, UX > Time"
-        },
-        {
-            "authors": [],
-            "modified": 1571400853,
-            "priority": 1,
-            "year": 2018,
-            "title": "Time, Temporality, and Slowness: Future Directions for Design Research",
-            "keywords": "Workshop Proposals"
-        },
-        {
-            "authors": [
-                "\u00a9 Paz Arando/Upsplash",
-                "HARRY STEWART",
-                "Fiesta de las \u00d1atitas",
-                "Burying Baby Llamas",
-                "Jenny Mealing",
-                "Rafal Cichawa/Shutterstock"
-            ],
-            "modified": 1571377840,
-            "priority": 0,
-            "year": 2019,
-            "title": "Unusual Customs Only Bolivians Can Understand",
-            "keywords": "Customs"
-        },
-        {
-            "authors": [
-                "Nabil Hossain",
-                "John Krumm",
-                "Lucy Vanderwende",
-                "Eric Horvitz",
-                "Henry Kautz"
-            ],
-            "modified": 1571330698,
-            "priority": 1,
-            "year": 2017,
-            "title": "Filling the Blanks (hint: plural noun) for Mad Libs",
-            "keywords": "Benchmarks, gold standards, datasets > Humor > Fill-in-the-Blank Humor"
-        },
-        {
-            "authors": [
-                "Arto Ojala"
-            ],
-            "modified": 1571323669,
-            "priority": 0,
-            "year": 2019,
-            "title": "The Building Blocks of Academic Writing in the Field of Information Systems",
-            "keywords": "Writing"
-        },
-        {
-            "authors": [],
-            "modified": 1571312670,
-            "priority": 1,
-            "year": 2019,
-            "title": "Online Social Virtual Spaces",
-            "keywords": "Conferences > Remote Attendance"
-        },
-        {
-            "authors": [
-                "Helen Wauck",
-                "Yu-Chun Yen",
-                "Wai-Tat Fu",
-                "Elizabeth Gerber",
-                "Steven P. Dow",
-                "Brian P. Bailey"
-            ],
-            "modified": 1571135963,
-            "priority": 2,
-            "year": 2017,
-            "title": "From in the Class or in the Wild? Peers Provide Better Design Feedback Than External Crowds",
-            "keywords": "Creativity > Applications, Domains > Classroom"
-        },
-        {
-            "authors": [
-                "Jonathan A. Plucker",
-                "Ronald A. Beghetto",
-                "Gayle T. Dow"
-            ],
-            "modified": 1571135171,
-            "priority": 3,
-            "year": 2004,
-            "title": "Why Isn't Creativity More Important to Educational Psychologists? Potentials, Pitfalls, and Future Directions in Creativity Research",
-            "keywords": "Creativity > General, Theory > Novel and Useful, Standard Definition"
-        },
-        {
-            "authors": [
-                "Dean Keith Simonton"
-            ],
-            "modified": 1571135085,
-            "priority": 2,
-            "year": 2009,
-            "title": "Varieties of (Scientific) Creativity: A Hierarchical Model of Domain-Specific Disposition, Development, and Achievement",
-            "keywords": "Creativity > General, Theory > Hierarchical Domains"
-        },
-        {
-            "authors": [
-                "James C. Kaufman",
-                "Sarah F. Keenan-Lechel",
-                "Danah Henriksen",
-                "Punya Mishra"
-            ],
-            "modified": 1571135014,
-            "priority": 0,
-            "year": 2018,
-            "title": "Creativity as a Sliding Maze: an Interview with Dr. James C. Kaufman",
-            "keywords": "Creativity > General, Theory > Four C"
-        },
-        {
-            "authors": [
-                "James C. Kaufman",
-                "Ronald A. Beghetto"
-            ],
-            "modified": 1571134909,
-            "priority": 3,
-            "year": 2009,
-            "title": "Beyond Big and Little: The Four C Model of Creativity",
-            "keywords": "Creativity > General, Theory > Four C"
-        },
-        {
-            "authors": [
-                "Liang Zeng",
-                "Robert W. Proctor",
-                "Gavriel Salvendy"
-            ],
-            "modified": 1571134707,
-            "priority": 3,
-            "year": 2011,
-            "title": "Can Traditional Divergent Thinking Tests Be Trusted in Measuring and Predicting Real-World Creativity?",
-            "keywords": "Creativity > Creativity Measurement, Tests, Questionnaires > Divergent > Issues"
-        },
-        {
-            "authors": [
-                "Lixiu Yu",
-                "Robert E. Kraut",
-                "Aniket Kittur"
-            ],
-            "modified": 1571134117,
-            "priority": 3,
-            "year": 2015,
-            "title": "Distributed  Analogical  Idea  Generation  with  Multiple   Constraints",
-            "keywords": "Creativity > Methods > Problem representation > Constraints"
-        },
-        {
-            "authors": [
-                "Lixiu Yu",
-                "Aniket Kittur",
-                "Robert E. Kraut"
-            ],
-            "modified": 1571134068,
-            "priority": 3,
-            "year": 2015,
-            "title": "Encouraging  \u201cOutside-\u00adthe-\u00adbox\u201d  Thinking  in  Crowd   Innovation  Through  Identifying  Domains  of  Expertise",
-            "keywords": "Creativity > Methods > Problem representation"
-        },
-        {
-            "authors": [
-                "Steven Dow",
-                "Elizabeth Gerber",
-                "Audris Wong"
-            ],
-            "modified": 1571133067,
-            "priority": 2,
-            "year": 2013,
-            "title": "A Pilot Study of Using Crowds in the Classroom",
-            "keywords": "Creativity > Applications, Domains > Classroom"
-        },
-        {
-            "authors": [
-                "Victor Cheung",
-                "Audrey Girouard"
-            ],
-            "modified": 1571132233,
-            "priority": 1,
-            "year": 2019,
-            "title": "Tangible Around-Device Interaction Using Rotatory Gestures with a Magnetic Ring",
-            "keywords": "Mobile Phones > Gestures"
-        },
-        {
-            "authors": [
-                "Frederik Brudy",
-                "Christian Holz",
-                "Steven Houben"
-            ],
-            "modified": 1571132095,
-            "priority": 3,
-            "year": 2019,
-            "title": "Cross-Device Taxonomy:  Survey, Opportunities and Challenges of  Interactions Spanning Across Multiple Devices",
-            "keywords": "Mobile Phones > Cross-device Computing, Cross-device Interaction"
         }
     ],
-    "unrecognized": 0,
-    "modified": 1573127625,
-    "unrecognized_overall": 1543,
+    "modified": 1573233642,
+    "unrecognized_overall": 1552,
     "unrecognized_percent": 0.0,
-    "unrecognized_overall_percent": 0.43
+    "unrecognized_overall_percent": 0.43,
+    "unrecognized": 0
 }
