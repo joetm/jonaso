@@ -46,6 +46,15 @@ const projects = [
     },
     presentations: [
       {
+        title: "Design Recommendations for Augmenting Creative Tasks with Computational Priming",
+        year: 2019,
+        month: "Nov",
+        day: 28,
+        conference: "MUM'19",
+        location: "Pisa, Italy",
+        doi: "10.6084/m9.figshare.11301599",
+      },
+      {
         title: "Search Support for Exploratory Writing",
         year: 2019,
         month: "Sept",
