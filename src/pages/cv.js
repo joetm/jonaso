@@ -118,7 +118,7 @@ class CV extends React.Component {
                         <Item.Description style={styles.nomarginTop}>
                           <List>
                             <List.Item><a href="http://www.oulu.fi/university/">University of Oulu</a>, Oulu, Finland</List.Item>
-                            <List.Item>Ph.D. Candidate</List.Item>
+                            <List.Item>Doctoral Student</List.Item>
                             <List.Item>Supervisor: <a href="http://simohosio.com/">Adjunct Prof. Dr. Simo Hosio</a></List.Item>
                           </List>
                         </Item.Description>
