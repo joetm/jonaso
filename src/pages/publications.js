@@ -70,6 +70,9 @@ class Publications extends React.Component {
     fetch(_REFERENCES_PER_TYPE)
     .then(response => response.json())
     .then(referencesDetail => {
+      referencesDetail = referencesDetail.map(text => {
+        return text.replace('publications_bib.html', '/static/publications_bib.html')
+      })
       this.setState({referencesDetail})
     })
   }
