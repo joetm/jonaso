@@ -378,55 +378,96 @@ class CV extends React.Component {
 
 <div className="row">
   <div className="leftCol">
-                <Header id="awards" style={styles.headline} size="large">Honors &amp; Awards</Header>
+		<Header id="awards" style={styles.headline} size="large">Honors &amp; Awards</Header>
   </div>
-  <div className="mainCol" style={{flex:4}}>
-                  <Item.Group>
-
-                    <Item>
-                      <List>
-                        <List.Item>Nokia Scholarship 2019, Nokia Foundation</List.Item>
-                      </List>
-                    </Item>
-
+  <div className="mainCol">
+              <Item.Group>
+                <Item>
+                  <List>
+                    <List.Item>Nokia Scholarship, Nokia Foundation</List.Item>
+                  </List>
+                </Item>
+              </Item.Group>
+  </div>
+  <div style={styles.rightCol}>2019</div>
+</div>
+<div className="row">
+  <div className="leftCol"></div>
+  <div className="mainCol">
+              <Item.Group>
                     <Item>
                       <List>
                         <List.Item>SIGCHI Travel Grant, C&amp;C &apos;19</List.Item>
                       </List>
                     </Item>
-
+              </Item.Group>
+  </div>
+  <div style={styles.rightCol}>2019</div>
+</div>
+<div className="row">
+  <div className="leftCol"></div>
+  <div className="mainCol">
+              <Item.Group>
                     <Item>
                       <List>
                         <List.Item>University of Oulu UniOGS Travel Grant, Metodifestivaali 2019</List.Item>
                       </List>
                     </Item>
-
+              </Item.Group>
+  </div>
+  <div style={styles.rightCol}>2019</div>
+</div>
+<div className="row">
+  <div className="leftCol"></div>
+  <div className="mainCol">
+              <Item.Group>
                     <Item>
                       <List>
                         <List.Item>University of Oulu UniOGS Travel Grant, CHI &apos;19</List.Item>
                       </List>
                     </Item>
-
+              </Item.Group>
+  </div>
+  <div style={styles.rightCol}>2019</div>
+</div>
+<div className="row">
+  <div className="leftCol"></div>
+  <div className="mainCol">
+              <Item.Group>
                     <Item>
                       <List>
                         <List.Item>Student Travel Grant, UbiComp/ISWC 2018</List.Item>
                       </List>
                     </Item>
-
+              </Item.Group>
+  </div>
+  <div style={styles.rightCol}>2018</div>
+</div>
+<div className="row">
+  <div className="leftCol"></div>
+  <div className="mainCol">
+              <Item.Group>
                     <Item>
                       <List>
                         <List.Item>Distinction, M.Sc. Computer Science, University of Southampton</List.Item>
                       </List>
                     </Item>
-
+              </Item.Group>
+  </div>
+  <div style={styles.rightCol}>2015</div>
+</div>
+<div className="row">
+  <div className="leftCol"></div>
+  <div className="mainCol">
+              <Item.Group>
                     <Item>
                       <List>
                         <List.Item>Erasmus Sokrates Scholarship, German Academic Exchange Service (DAAD)</List.Item>
                       </List>
                     </Item>
-
-                  </Item.Group>
+              </Item.Group>
   </div>
+  <div style={styles.rightCol}>2005 - 2006</div>
 </div>
 
 
