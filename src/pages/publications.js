@@ -70,9 +70,13 @@ class Publications extends React.Component {
     fetch(_REFERENCES_PER_TYPE)
     .then(response => response.json())
     .then(referencesDetail => {
-      referencesDetail = referencesDetail.map(text => {
-        return text.replace('publications_bib.html', '/static/publications_bib.html')
-      })
+      const keys = Object.keys(referencesDetail)
+      for (const key of keys) {
+        referencesDetail[key].map(obj => {
+          obj.title = obj.title.replace('publications_bib.html', '/static/publications_bib.html')
+          return obj
+        })
+      }
       this.setState({referencesDetail})
     })
   }
@@ -103,8 +107,8 @@ class Publications extends React.Component {
       ]
     }
 
-    console.log('customSortOrder', customSortOrder)
-    console.log('keysType', keysType)
+    // console.log('customSortOrder', customSortOrder)
+    // console.log('keysType', keysType)
 
     // const isPrinting = useDetectPrint()
 
