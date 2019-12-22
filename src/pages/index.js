@@ -122,7 +122,7 @@ class Home extends React.Component {
 
               <Grid.Column mobile={7} tablet={7} computer={5}>
 
-                <Image src={img} rounded fluid />
+                <Image src={img} alt="Jonas Oppenlaender" rounded fluid />
 
                 <Header size="tiny" style={nobottommargin}>Office Address:</Header>
                 <p>
