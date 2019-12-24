@@ -103,7 +103,7 @@ class Publications extends React.Component {
         "Peer-reviewed Workshop Proceedings",
         "Doctoral Consortia",
         "Other Publications and Posters",
-        "Theses",
+        "Theses and Seminal Papers",
       ]
     }
 
