@@ -233,6 +233,24 @@ class CV extends React.Component {
   <div className="leftCol"></div>
   <div className="mainCol">
                   <Item.Group>
+
+                    <Item>
+                        <Item.Description style={styles.nomarginTop}>
+                          <List>
+                            <List.Item><a href="https://www.interdisciplinary-laboratory.hu-berlin.de/en/content/jonas-oppenlander/">Cluster of Excellence "Image Knowledge Gestaltung"</a></List.Item>
+                            <List.Item><a href="https://www.hu-berlin.de/">Humboldt University of Berlin</a>, Berlin, Germany</List.Item>
+                            <List.Item>Scientific Staff</List.Item>
+                          </List>
+                        </Item.Description>
+                    </Item>
+                  </Item.Group>
+  </div>
+  <div style={styles.rightCol}>2016 - 2017</div>
+</div>
+<div className="row">
+  <div className="leftCol"></div>
+  <div className="mainCol">
+                  <Item.Group>
                     <Item>
                         <Item.Description>
                           <List>
