@@ -507,6 +507,23 @@ class CV extends React.Component {
   </div>
   <div className="mainCol">
               <Item.Group>
+                <Item>
+                  <List>
+                    <List.Item>
+                    	Teaching Assistant, Social Computing (521044A), University of Oulu<br />
+                        (20+ students, 5 ECTS, Bachelor level)
+                    </List.Item>
+                  </List>
+                </Item>
+              </Item.Group>
+  </div>
+  <div style={styles.rightCol}>2020</div>
+</div>
+<div className="row">
+  <div className="leftCol">
+  </div>
+  <div className="mainCol">
+              <Item.Group>
 
                 <Item>
                   <List>
