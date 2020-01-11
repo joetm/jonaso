@@ -66,6 +66,46 @@
     ]
   },
   {
+   "title": "CrowdUI",
+   "type": "thesis",
+   "lang": "en",
+   "subtitle": "Supporting Web Design with the Crowd",
+   "description": {"__html": "<p>CrowdUI is the prototype of a tool that enables the members of the community of a website to re-arrange any parts of the website's user interface (UI) and thus provide suggestions to the Web designer. The interface modifications are peer-evaluated by the members of the community of users. The integrated pre- and post-task survey can flexibly be adapted to different usability measurement instruments. A comprehensive survey of usability measurement methods was also part of this Master thesis.</p><p>The tool was tested in a field study (140+ users completing phase 1 and 45 users completing the full survey). In total, 62 UI adaptations were sourced, of which 15 received usability ratings. The work also included a new method of ranking and selecting items from a pool of rated UI adaptations.</p>"},
+   "date": "2015, 2018 - 2020",
+   "organisation": "University of Southampton",
+   "organisation_href": "https://www.southampton.ac.uk/",
+   "url": "http://www.crowdui.com/",
+    "img": {
+      "src": "http://www.jonaso.de/static/crowdui-vision.jpg",
+      "alt": "",
+      "title": ""
+    },
+    "presentations": [
+      {
+        "title": "CrowdUI: Supporting Web Design with the Crowd",
+        "year": 2020,
+        "month": "June",
+        "day": 25,
+        "conference": "12th ACM SIGCHI Symposium on Engineering Interactive Computing Systems (EICS '20)",
+        "location": "Nice, France",
+        "doi": null,
+        "url": null,
+        "note": "Forthcoming"
+      },
+      {
+        "title": "CrowdUI - A Tool to Remotely Source and Evaluate User Interface Adaptations",
+        "year": 2015,
+        "month": "October",
+        "day": 5,
+        "conference": "",
+        "location": "Southampton, UK",
+        "doi": null,
+        "url": "http://crowdui.com/screen-recordings/crowdui-presentation.pdf",
+        "note": "MSc final presentation"
+      }
+    ]
+  },
+  {
     "title": "IKON",
     "lang": "en",
     "description_fu": {"__html": "<p>The Natural History Museum in Berlin (Museum für Naturkunde - Leibniz Institute for Evolution and Biodiversity Science) is the largest of its kind in Germany and is among the top 10 world-wide. The museum is home to over 30 Mio. collection objects, more than 250 researchers and more than 400 research assistants as well as PhD students, from disciplines such as biology, paleontology, mineralogy and information science.</p><p>Behind the publicly accessible spaces, these researchers work on manifold projects in a multidisciplinary research setting. To bolster the MfN's efforts at ensuring knowledge transfer throughout its organisation, we collaborate with the MfN in this BMBF-funded project to unveil the currently tacit knowledge, competencies, methods and research project information to the employees of the museum. A formal ontology is developed to support this endeavor.</p><p>The project aims to provide the researchers at the museum with (1) wiki-based read and write access to research project information, (2) insights about potentials for knowledge transfer powered by linked data and (3) interactive visualisations of these networked sources of knowledge. Focussing on the seamless integration of these provisions, the project aims to set up an actionable and holistic system that visualises research project data and their potential for knowledge transfer in research museums.</p>"},
@@ -200,46 +240,6 @@
       "alt": "",
       "title": ""
     }
-  },
-  {
-   "title": "CrowdUI",
-   "type": "thesis",
-   "lang": "en",
-   "subtitle": "Supporting Web Design with the Crowd",
-   "description": {"__html": "<p>CrowdUI is the prototype of a tool that enables the members of the community of a website to re-arrange any parts of the website's user interface (UI) and thus provide suggestions to the Web designer. The interface modifications are peer-evaluated by the members of the community of users. The integrated pre- and post-task survey can flexibly be adapted to different usability measurement instruments. A comprehensive survey of usability measurement methods was also part of this Master thesis.</p><p>The tool was tested in a field study (140+ users completing phase 1 and 45 users completing the full survey). In total, 62 UI adaptations were sourced, of which 15 received usability ratings. The work also included a new method of ranking and selecting items from a pool of rated UI adaptations.</p>"},
-   "date": "2015, 2018 - 2020",
-   "organisation": "University of Southampton",
-   "organisation_href": "https://www.southampton.ac.uk/",
-   "url": "http://www.crowdui.com/",
-    "img": {
-      "src": "http://www.jonaso.de/static/crowdui-vision.jpg",
-      "alt": "",
-      "title": ""
-    },
-    "presentations": [
-      {
-        "title": "CrowdUI: Supporting Web Design with the Crowd",
-        "year": 2020,
-        "month": "June",
-        "day": 25,
-        "conference": "12th ACM SIGCHI Symposium on Engineering Interactive Computing Systems (EICS '20)",
-        "location": "Nice, France",
-        "doi": null,
-        "url": null,
-        "note": "Forthcoming"
-      },
-      {
-        "title": "CrowdUI - A Tool to Remotely Source and Evaluate User Interface Adaptations",
-        "year": 2015,
-        "month": "October",
-        "day": 5,
-        "conference": "",
-        "location": "Southampton, UK",
-        "doi": null,
-        "url": "http://crowdui.com/screen-recordings/crowdui-presentation.pdf",
-        "note": "MSc final presentation"
-      }
-    ]
   },
   {
     "title": "Anwendung des Kano-Modells zur Analyse und Charakterisierung gesellschaftlicher Anforderungen an Produkte",
