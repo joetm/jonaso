@@ -44,7 +44,7 @@ refs:
 	mv ./references-type.json ./public/static/
 	rm publications.html
 
-	mv ./publications_bib.html ./static/
+	mv ./publications_bib.html ./public/static/
 
 push:
 	# push to github
