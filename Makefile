@@ -7,6 +7,7 @@ default:
 	##   make build			produce the production version of the site
 	##   make dev			run the development version of the site
 	##   make refs			build the publication list from .bib file
+	##   make pubs			alias of make refs
 	##   make tests			run tests (TODO)
 	##   make push   		push to github
 	##
@@ -15,6 +16,9 @@ build:
 	cp ./src/travel.json ./public/
 	cp ./src/news.json ./public/
 
+pubs:
+	make refs
+	
 refs:
 	# _dir="$(pwd)/src/bibliography"
 	# create bibliography html
@@ -39,6 +43,8 @@ refs:
 
 	mv ./references-type.json ./public/static/
 	rm publications.html
+
+	mv ./publications_bib.html ./static/
 
 push:
 	# push to github
