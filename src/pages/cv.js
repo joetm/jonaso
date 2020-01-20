@@ -3,10 +3,10 @@ import Link from "gatsby-link"
 import { Icon, Label, Header, Divider, List, Item, Image, Container } from 'semantic-ui-react'
 
 import { spacer } from "../common"
+import cv from "../cv.json"
 
 
 const _PORTFOLIO_URL = 'http://www.jonaso.de/portfolio/'
-const _CV_URL = 'https://raw.githubusercontent.com/joetm/jonaso/master/public/static/cv.json'
 
 const styles = {
   datum: {
@@ -41,18 +41,21 @@ const styles = {
 }
 
 
+// TODO: ROWSPAN
+const Row = ({left, middle, right}) => ( //rowspan=false
+  <div className="row">
+    <div className="leftCol">
+      <Header id="peer-review" style={styles.headline} size="large">{left}</Header>
+    </div>
+    <div className="mainCol">{middle}</div>
+    <div style={styles.rightCol}>{right}</div>
+  </div>
+)
+// {/*style={rowspan ? styles.rowspan2 : null}*/}
+
+
+
 class CV extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      cv: {},
-    }
-  }
-  componentWillMount() {
-    fetch(_CV_URL)
-    .then(response => response.json())
-    .then(cv => this.setState({cv}))
-  }
   redirectToPortfolio = () => {
     window.location = _PORTFOLIO_URL
   }
@@ -60,67 +63,53 @@ class CV extends React.Component {
     window.location = '/publications/'
   }
   render() {
-    const { cv } = this.state
-    console.log('cv', cv)
-
         return (
               <Container className="print cv">
 
                 <h1 className="print-only">Jonas Oppenlaender</h1>
 
-                <div className="row">
-                  <div className="leftCol">
-                                <Header id="contact" style={styles.headline} size="large">Contact Information</Header>
-                  </div>
-                  <div className="mainCol">
-                                  <Item.Group>
-                                    <Item>
-                                        <Item.Description style={styles.nomarginTop}>
-                                          <List>
-                                            <List.Item><a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a></List.Item>
-                                            <List.Item><a href="http://www.oulu.fi/university/">University of Oulu</a></List.Item>
-                                            <List.Item>Erkki Koiso-Kanttilan katu 3</List.Item>
-                                            <List.Item>Room TS371</List.Item>
-                                            <List.Item>P.O. Box 4500</List.Item>
-                                            <List.Item>90014 Oulu, Finland</List.Item>
-                                          </List>
-                                        </Item.Description>
-                                    </Item>
-                                  </Item.Group>
-                  </div>
-                  <div style={styles.rightCol}>
-                                  <Item.Group>
-                                    <Item>
-                                        <Item.Description style={styles.nomarginTop}>
-                                          <List>
-                                            <List.Item>E-Mail: {'{'}firstname.lastname{'}'}@oulu.fi</List.Item>
-                                            <List.Item>www: jonaso.de</List.Item>
-                                          </List>
-                                        </Item.Description>
-                                    </Item>
-                                  </Item.Group>
-                  </div>
-                </div>
+<Row left="Contact Information" middle={(
+      <Item.Group>
+        <Item>
+            <Item.Description style={styles.nomarginTop}>
+              <List>
+                <List.Item><a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a></List.Item>
+                <List.Item><a href="http://www.oulu.fi/university/">University of Oulu</a></List.Item>
+                <List.Item>Erkki Koiso-Kanttilan katu 3</List.Item>
+                <List.Item>Room TS371</List.Item>
+                <List.Item>P.O. Box 4500</List.Item>
+                <List.Item>90014 Oulu, Finland</List.Item>
+              </List>
+            </Item.Description>
+        </Item>
+      </Item.Group>
+)} right={(
+      <Item.Group>
+        <Item>
+            <Item.Description style={styles.nomarginTop}>
+              <List>
+                <List.Item>E-Mail: {'{'}firstname.lastname{'}'}@oulu.fi</List.Item>
+                <List.Item>www: jonaso.de</List.Item>
+              </List>
+            </Item.Description>
+        </Item>
+      </Item.Group>
+)} />
 
 
-<div className="row noprint">
-  <div className="leftCol">
-                <Header id="interests" style={styles.headline} size="large">Research Interests</Header>
-  </div>
-  <div className="mainCol" style={styles.rowspan2}>
-                  <Item.Group>
-                    <Item>
-                        <Item.Description style={styles.nomarginTop}>
-                          <List>
-                            <List.Item>
-								Crowdsourcing; human computation; collective intelligence; web science; semantic web; social machines; computer supported collaborative work; {/*e-science;*/} hypertext and hypermedia; internet culture
-                            </List.Item>
-                          </List>
-                        </Item.Description>
-                    </Item>
-                  </Item.Group>
-  </div>
-</div>
+<Row left="Research Interests" middle={(
+      <Item.Group>
+        <Item>
+            <Item.Description style={styles.nomarginTop}>
+              <List>
+                <List.Item>
+                  Crowdsourcing; human computation; collective intelligence; web science; semantic web; social machines; computer supported collaborative work; {/*e-science;*/} hypertext and hypermedia; internet culture
+                </List.Item>
+              </List>
+            </Item.Description>
+        </Item>
+      </Item.Group>
+)} right="" rowspan={2} />
 
 
 <div className="row">
@@ -386,123 +375,84 @@ class CV extends React.Component {
   <div style={styles.rightCol}>2000 - 2002</div>
 </div>
 
-<div className="row noprint">
-  <div className="leftCol">
-                <Header id="publications" style={styles.headline} size="large">Publications</Header>
-  </div>
-  <div className="mainCol">
-                <a href="javascript:void();" onClick={this.redirectToPublications}>&rarr; &nbsp; See Publications</a>
-  </div>
-  <div style={styles.rightCol}>
-  </div>
-</div>
 
-<div className="row">
-  <div className="leftCol">
-		<Header id="awards" style={styles.headline} size="large">Honors &amp; Awards</Header>
-  </div>
-  <div className="mainCol">
-              <Item.Group>
-                <Item>
-                  <List>
-                    <List.Item>Nokia Scholarship, Nokia Foundation</List.Item>
-                  </List>
-                </Item>
-              </Item.Group>
-  </div>
-  <div style={styles.rightCol}>2019</div>
-</div>
-<div className="row">
-  <div className="leftCol"></div>
-  <div className="mainCol">
-              <Item.Group>
-                    <Item>
-                      <List>
-                        <List.Item>SIGCHI Travel Grant, C&amp;C &apos;19</List.Item>
-                      </List>
-                    </Item>
-              </Item.Group>
-  </div>
-  <div style={styles.rightCol}>2019</div>
-</div>
-<div className="row">
-  <div className="leftCol"></div>
-  <div className="mainCol">
-              <Item.Group>
-                    <Item>
-                      <List>
-                        <List.Item>University of Oulu UniOGS Travel Grant, Metodifestivaali 2019</List.Item>
-                      </List>
-                    </Item>
-              </Item.Group>
-  </div>
-  <div style={styles.rightCol}>2019</div>
-</div>
-<div className="row">
-  <div className="leftCol"></div>
-  <div className="mainCol">
-              <Item.Group>
-                    <Item>
-                      <List>
-                        <List.Item>University of Oulu UniOGS Travel Grant, CHI &apos;19</List.Item>
-                      </List>
-                    </Item>
-              </Item.Group>
-  </div>
-  <div style={styles.rightCol}>2019</div>
-</div>
-<div className="row">
-  <div className="leftCol"></div>
-  <div className="mainCol">
-              <Item.Group>
-                    <Item>
-                      <List>
-                        <List.Item>Student Travel Grant, UbiComp/ISWC 2018</List.Item>
-                      </List>
-                    </Item>
-              </Item.Group>
-  </div>
-  <div style={styles.rightCol}>2018</div>
-</div>
-<div className="row">
-  <div className="leftCol"></div>
-  <div className="mainCol">
-              <Item.Group>
-                    <Item>
-                      <List>
-                        <List.Item>Distinction, M.Sc. Computer Science, University of Southampton</List.Item>
-                      </List>
-                    </Item>
-              </Item.Group>
-  </div>
-  <div style={styles.rightCol}>2015</div>
-</div>
-<div className="row">
-  <div className="leftCol"></div>
-  <div className="mainCol">
-              <Item.Group>
-                    <Item>
-                      <List>
-                        <List.Item>Erasmus Sokrates Scholarship, German Academic Exchange Service (DAAD)</List.Item>
-                      </List>
-                    </Item>
-              </Item.Group>
-  </div>
-  <div style={styles.rightCol}>2005 - 2006</div>
-</div>
+<Row left="Publications" middle={(
+      <a href="javascript:void();" onClick={this.redirectToPublications}>&rarr; &nbsp; See Publications</a>
+)} right="" />
 
 
 
-<div className="row">
-  <div className="leftCol">
-                <Header id="technical-skills" style={styles.headline} size="large">Technical Skills</Header>
-  </div>
-  <div className="mainCol">
-                  <a href="javascript:void();" onClick={this.redirectToPortfolio}>&rarr; &nbsp; Visit my Web Development Portfolio</a>
-  </div>
-  <div style={styles.rightCol}>
-  </div>
-</div>
+<Row left="Honors & Awards" middle={(
+      <Item.Group>
+        <Item>
+          <List>
+            <List.Item>Nokia Scholarship, Nokia Foundation</List.Item>
+          </List>
+        </Item>
+      </Item.Group>
+)} right="2019" />
+<Row left="" middle={(
+      <Item.Group>
+        <Item>
+          <List>
+            <List.Item>SIGCHI Travel Grant, C&amp;C &apos;19</List.Item>
+          </List>
+        </Item>
+      </Item.Group>
+)} right="2019" />
+<Row left="" middle={(
+      <Item.Group>
+        <Item>
+          <List>
+            <List.Item>University of Oulu UniOGS Travel Grant, Metodifestivaali 2019</List.Item>
+          </List>
+        </Item>
+      </Item.Group>
+)} right="2019" />
+<Row left="" middle={(
+      <Item.Group>
+        <Item>
+          <List>
+            <List.Item>University of Oulu UniOGS Travel Grant, CHI &apos;19</List.Item>
+          </List>
+        </Item>
+      </Item.Group>
+)} right="2019" />
+<Row left="" middle={(
+      <Item.Group>
+        <Item>
+          <List>
+            <List.Item>Student Travel Grant, UbiComp/ISWC 2018</List.Item>
+          </List>
+        </Item>
+      </Item.Group>
+)} right="2018" />
+<Row left="" middle={(
+      <Item.Group>
+        <Item>
+          <List>
+            <List.Item>Distinction, M.Sc. Computer Science, University of Southampton</List.Item>
+          </List>
+        </Item>
+      </Item.Group>
+)} right="2015" />
+<Row left="" middle={(
+      <Item.Group>
+        <Item>
+          <List>
+            <List.Item>Erasmus Sokrates Scholarship, German Academic Exchange Service (DAAD)</List.Item>
+          </List>
+        </Item>
+      </Item.Group>
+)} right="2005 - 2006" />
+
+
+
+<Row left="Technical Skills" middle={(
+    <a href="javascript:void();" onClick={this.redirectToPortfolio}>&rarr; &nbsp; Visit my Web Development Portfolio</a>
+)} right="" />
+
+
 
 <div className="row">
   <div className="leftCol">
@@ -680,51 +630,38 @@ class CV extends React.Component {
 
 
 
-<div className="row">
-  <div className="leftCol">
-    <Header id="peer-review" style={styles.headline} size="large">Reviewer Experience</Header>
-  </div>
-  <div className="mainCol">
-                  <Item.Group>
+<Row left="Reviewer Experience" middle={(
+      <Item.Group>
+        <Item>
+              <List>
+                <List.Item>
+                {
+                  cv.hasOwnProperty("peer-review") &&
+                    cv['peer-review'].map(item => (
+                      <div key={item.series}><a href={item.url} title={item.title}>{item.series} {item.years.join(", ")}</a></div>
+                    ))
+                }
+                </List.Item>
+              </List>
+        </Item>
+      </Item.Group>
+)} right="" />
 
-                    <Item>
-                          <List>
-                            <List.Item>
-                            {
-                              cv.hasOwnProperty("peer-review") &&
-                                cv['peer-review'].map(item => (
-                                  <div key={item.series}><a href={item.url} title={item.title}>{item.series} {item.years.join(", ")}</a></div>
-                                ))
-                            }
-                            </List.Item>
-                          </List>
-                    </Item>
 
-                  </Item.Group>
-  </div>
-  <div style={styles.rightCol}></div>
-</div>
+<Row left="Certificates" middle={(
+      <Item.Group>
+        {
+          cv.hasOwnProperty("certificates") &&
+            cv.certificates.map(item => (
+              <Item>
+                {/*<div style={styles.datum}>{item.year}</div>*/}
+                <Item.Header style={styles.nonbold}>{item.name} ({item.institution})</Item.Header>
+              </Item>
+            ))
+        }
+      </Item.Group>
+)} right="" />
 
-<div className="row">
-  <div className="leftCol">
-    <Header id="certificates" style={styles.headline} size="large">Certificates</Header>
-  </div>
-  <div className="mainCol" style={{flex:4}}>
-
-                  <Item.Group>
-                    {
-                      cv.hasOwnProperty("certificates") &&
-                        cv.certificates.map(item => (
-                          <Item>
-                            {/*<div style={styles.datum}>{item.year}</div>*/}
-                            <Item.Header style={styles.nonbold}>{item.name} ({item.institution})</Item.Header>
-                          </Item>
-                        ))
-                    }
-                  </Item.Group>
-
-  </div>
-</div>
 
 <div className="row">
   <div className="leftCol">
@@ -773,73 +710,36 @@ class CV extends React.Component {
 </div>
 
 
-<div className="row">
-  <div className="leftCol">
-                <Header id="memberships" style={styles.headline} size="large">Memberships in Scientific Associations</Header>
-  </div>
-  <div className="mainCol">
-                  <Item.Group>
-
+<Row left="Memberships in Scientific Associations" middle={(
+      <Item.Group>
+        {
+          cv.hasOwnProperty("associations") &&
+            cv.associations.map(item => (
                     <Item>
                       <Item.Content>
-                        <Item.Header style={styles.nonbold}>Association for Computing Machinery (ACM)</Item.Header>
+                        <Item.Header style={styles.nonbold}>{item}</Item.Header>
                       </Item.Content>
                     </Item>
-
-                    <Item>
-                      <Item.Content>
-                        <Item.Header style={styles.nonbold}>ACM Special Interest Group on Computer-Human Interaction (SIGCHI)</Item.Header>
-                      </Item.Content>
-                    </Item>
-
-{/*
-                    <Item>
-                      <Item.Content>
-                        <Item.Header style={styles.nonbold}>Association for Information Systems (AIS)</Item.Header>
-                      </Item.Content>
-                    </Item>
-*/}
-
-                  </Item.Group>
-  </div>
-  <div style={styles.rightCol}>
-  </div>
-</div>
+            ))
+        }
+      </Item.Group>
+)} right="" />
 
 
-<div className="row">
-  <div className="leftCol">
-                <Header id="languages" style={styles.headline} size="large">Languages</Header>
-  </div>
-  <div className="mainCol">
-                  <Item.Group>
-
-                    <Item>
-                      <Item.Content>
-                        <Item.Header style={styles.nonbold}>German (mother tongue)</Item.Header>
-                      </Item.Content>
-                    </Item>
-                    <Item>
-                      <Item.Content>
-                        <Item.Header style={styles.nonbold}>English (business fluent)</Item.Header>
-                      </Item.Content>
-                    </Item>
-                    <Item>
-                      <Item.Content>
-                        <Item.Header style={styles.nonbold}>French (basic knowledge)</Item.Header>
-                      </Item.Content>
-                    </Item>
-                    <Item>
-                      <Item.Content>
-                        <Item.Header style={styles.nonbold}>Spanish (basic knowledge)</Item.Header>
-                      </Item.Content>
-                    </Item>
-
-                  </Item.Group>
-  </div>
-  <div style={styles.rightCol}>
-  </div>
-</div>
+<Row left="Languages" middle={(
+      <Item.Group>
+        {
+          cv.hasOwnProperty("languages") &&
+            cv.languages.map(item => (
+              <Item>
+                <Item.Content>
+                  <Item.Header style={styles.nonbold}>{item.name} ({item.level})</Item.Header>
+                </Item.Content>
+              </Item>
+            ))
+        }
+      </Item.Group>
+)} right="" />
 
 
 {/*
