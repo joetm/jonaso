@@ -4,9 +4,14 @@ import { Icon, Label, Header, Divider, List, Item, Image, Container } from 'sema
 
 import { spacer } from "../common"
 import cv from "../cv.json"
+// headlines
+cv.teaching[0].left = "Teaching Experience"
+cv.awards[0].left = "Honors & Awards"
+cv.academicservice[0].left = "Academic Service"
 
 
 const _PORTFOLIO_URL = 'http://www.jonaso.de/portfolio/'
+
 
 const styles = {
   datum: {
@@ -63,10 +68,9 @@ class CV extends React.Component {
     window.location = '/publications/'
   }
   render() {
-        return (
-              <Container className="print cv">
-
-                <h1 className="print-only">Jonas Oppenlaender</h1>
+    return (
+      <Container className="print cv">
+        <h1 className="print-only">Jonas Oppenlaender</h1>
 
 <Row left="Contact Information" middle={(
       <Item.Group>
@@ -96,14 +100,13 @@ class CV extends React.Component {
       </Item.Group>
 )} />
 
-
 <Row left="Research Interests" middle={(
       <Item.Group>
         <Item>
             <Item.Description style={styles.nomarginTop}>
               <List>
                 <List.Item>
-                  Crowdsourcing; human computation; collective intelligence; web science; semantic web; social machines; computer supported collaborative work; {/*e-science;*/} hypertext and hypermedia; internet culture
+                  { cv.interests.join(", ") }
                 </List.Item>
               </List>
             </Item.Description>
@@ -381,253 +384,58 @@ class CV extends React.Component {
 )} right="" />
 
 
-
-<Row left="Honors & Awards" middle={(
-      <Item.Group>
-        <Item>
-          <List>
-            <List.Item>Nokia Scholarship, Nokia Foundation</List.Item>
-          </List>
-        </Item>
-      </Item.Group>
-)} right="2019" />
-<Row left="" middle={(
-      <Item.Group>
-        <Item>
-          <List>
-            <List.Item>SIGCHI Travel Grant, C&amp;C &apos;19</List.Item>
-          </List>
-        </Item>
-      </Item.Group>
-)} right="2019" />
-<Row left="" middle={(
-      <Item.Group>
-        <Item>
-          <List>
-            <List.Item>University of Oulu UniOGS Travel Grant, Metodifestivaali 2019</List.Item>
-          </List>
-        </Item>
-      </Item.Group>
-)} right="2019" />
-<Row left="" middle={(
-      <Item.Group>
-        <Item>
-          <List>
-            <List.Item>University of Oulu UniOGS Travel Grant, CHI &apos;19</List.Item>
-          </List>
-        </Item>
-      </Item.Group>
-)} right="2019" />
-<Row left="" middle={(
-      <Item.Group>
-        <Item>
-          <List>
-            <List.Item>Student Travel Grant, UbiComp/ISWC 2018</List.Item>
-          </List>
-        </Item>
-      </Item.Group>
-)} right="2018" />
-<Row left="" middle={(
-      <Item.Group>
-        <Item>
-          <List>
-            <List.Item>Distinction, M.Sc. Computer Science, University of Southampton</List.Item>
-          </List>
-        </Item>
-      </Item.Group>
-)} right="2015" />
-<Row left="" middle={(
-      <Item.Group>
-        <Item>
-          <List>
-            <List.Item>Erasmus Sokrates Scholarship, German Academic Exchange Service (DAAD)</List.Item>
-          </List>
-        </Item>
-      </Item.Group>
-)} right="2005 - 2006" />
-
-
+{
+  cv.awards.map((row, i) => (
+    <Row key={i} left={row.left} middle={(
+          <Item.Group>
+            <Item>
+              <List>
+                <List.Item>{row.name}, {row.institution}</List.Item>
+              </List>
+            </Item>
+          </Item.Group>
+    )} right={row.year} />
+  ))
+}
 
 <Row left="Technical Skills" middle={(
     <a href="javascript:void();" onClick={this.redirectToPortfolio}>&rarr; &nbsp; Visit my Web Development Portfolio</a>
 )} right="" />
 
 
-
-<div className="row">
-  <div className="leftCol">
-                <Header id="teaching" style={styles.headline} size="large">Teaching Experience</Header>
-  </div>
-  <div className="mainCol">
+{
+    cv.teaching.map((row, i) => (
+        <Row key={i} left={row.left} middle={(
               <Item.Group>
                 <Item>
                   <List>
                     <List.Item>
-                    	Teaching Assistant, Social Computing (521044A), University of Oulu<br />
-                        (41 students, 5 ECTS, Bachelor level)
+                      {row.position}, {row.course}{row.coursecode && " (" + row.coursecode + ")"}, {row.institution}<br />
+                      ({row.num_students && row.num_students +  " students, "} {row.ECTS && row.ECTS + " ECTS, "} {row.level} level)
                     </List.Item>
                   </List>
                 </Item>
               </Item.Group>
-  </div>
-  <div style={styles.rightCol}>2020</div>
-</div>
-<div className="row">
-  <div className="leftCol">
-  </div>
-  <div className="mainCol">
-              <Item.Group>
+        )} right={row.year} />
+    ))
+}
 
-                <Item>
-                  <List>
-                    <List.Item>
-                    	Teaching Assistant, Human Computer Interaction (521145A), University of Oulu<br />
-                    	(146 students, 5 ECTS, Bachelor level)
-                    </List.Item>
-                  </List>
-                </Item>
-              </Item.Group>
-  </div>
-  <div style={styles.rightCol}>2019</div>
-</div>
-<div className="row">
-  <div className="leftCol">
-  </div>
-  <div className="mainCol">
-              <Item.Group>
-                <Item>
-                  <List>
-                    <List.Item>
-                    	Co-Teacher, Social Computing (521044A), University of Oulu<br />
-                        (14 students, 5 ECTS, Bachelor level)
-                    </List.Item>
-                  </List>
-                </Item>
-              </Item.Group>
-  </div>
-  <div style={styles.rightCol}>2019</div>
-</div>
-<div className="row">
-  <div className="leftCol">
-  </div>
-  <div className="mainCol">
-              <Item.Group>
 
-                <Item>
-                  <List>
-                    <List.Item>
-                    	Teaching Assistant, Human Computer Interaction (521145A), University of Oulu<br />
-                    	(164 students, 5 ECTS, Bachelor level)
-                    </List.Item>
-                  </List>
-                </Item>
-              </Item.Group>
-  </div>
-  <div style={styles.rightCol}>2018</div>
-</div>
-<div className="row">
-  <div className="leftCol">
-  </div>
-  <div className="mainCol">
-              <Item.Group>
-
-                <Item>
-                  <List>
-                    <List.Item>
-                    	Teaching Assistant, Applied Computing Project I (521152S), University of Oulu<br />
-                    	(Group of three students, 10 ECTS, Bachelor level)
-                    </List.Item>
-                  </List>
-                </Item>
-              </Item.Group>
-  </div>
-  <div style={styles.rightCol}>2018</div>
-</div>
-
-<div className="row">
-  <div className="leftCol">
-  </div>
-  <div className="mainCol">
-              <Item.Group>
-                <Item>
-                  <List>
-                    <List.Item>Teaching Assistant (Excercise Tutor), Undergraduate Mathematics and Engineering Mechanics, Technical University of Darmstadt</List.Item>
-                  </List>
-                </Item>
-              </Item.Group>
-  </div>
-  <div style={styles.rightCol}>2006 - 2007</div>
-</div>
-
-<div className="row">
-  <div className="leftCol">
-                <Header id="service" style={styles.headline} size="large">Academic Service</Header>
-  </div>
-  <div className="mainCol" style={{flex:4}}>
-
-                    <Item.Group>
-
-                    <Item>
-                          <List>
-                            <List.Item>
-                              Organizer, <a href="https://creativity-workshops.github.io/cc19/">Workshop on Crowd-Powered Interfaces for Creative Design Thinking</a>, C&amp;C &apos;19
-                            </List.Item>
-                          </List>
-                    </Item>
-
-                    <Item>
-                        <List>
-                          <List.Item>
-                              Student Volunteer, <a href="http://cc.acm.org/2019/" target="_blank">C&amp;C 2019</a>
-                          </List.Item>
-                        </List>
-                    </Item>
-
-                    <Item>
-                          <List>
-                            <List.Item>
-                              Organizer, <a href="https://dc2s2.github.io/2019/">Workshop on Designing Crowd-powered Creativity Support Systems</a>, CHI &apos;19
-                            </List.Item>
-                          </List>
-                    </Item>
-
-	                  <Item>
-                          <List>
-                            <List.Item>
-	                            Associate Chair, <a href="https://chi2019.acm.org/" target="_blank">CHI &apos;19 Late Breaking Work</a>
-                            </List.Item>
-                          </List>
-	                  </Item>
-
-	                  <Item>
-                          <List>
-                            <List.Item>
-	                            Student Volunteer, <a href="http://ubicomp.org/ubicomp2018/" target="_blank">UbiComp 2018</a>
-                            </List.Item>
-                          </List>
-	                  </Item>
-
-	                  <Item>
-                          <List>
-                            <List.Item>
-	                            Organizing Committee, <a href="http://ubicomp.oulu.fi/ubiss/">9<sup>th</sup> International UBI Summer School 2018 (UBISS 2018)</a>, Oulu, Finland
-                            </List.Item>
-                          </List>
-	                  </Item>
-
-	                  <Item>
-                          <List>
-                            <List.Item>
-	                            Program Committee, <a href="http://skill.informatik.uni-leipzig.de/">Studierendenkonferenz Informatik (SKILL)</a>, Berlin, Germany
-                            </List.Item>
-                          </List>
-	                  </Item>
-
-	                </Item.Group>
-
-  </div>
-</div>
-
+{
+    cv.academicservice.map((row, i) => (
+        <Row key={i} left={row.left} middle={(
+          <Item.Group>
+            <Item>
+              <List>
+                <List.Item>
+                  {row.name}, <a href={row.url}>{row.venue}{row.series && " (" + row.series + ")"}</a>{row.location && ", " + row.location}
+                </List.Item>
+              </List>
+            </Item>
+          </Item.Group>
+        )} right={row.year} />
+    ))
+}
 
 
 <Row left="Reviewer Experience" middle={(
@@ -637,8 +445,8 @@ class CV extends React.Component {
                 <List.Item>
                 {
                   cv.hasOwnProperty("peer-review") &&
-                    cv['peer-review'].map(item => (
-                      <div key={item.series}><a href={item.url} title={item.title}>{item.series} {item.years.join(", ")}</a></div>
+                    cv['peer-review'].map((item, i) => (
+                      <div key={item.series + i}><a href={item.url} title={item.title}>{item.series} {item.years.join(", ")}</a></div>
                     ))
                 }
                 </List.Item>
@@ -652,8 +460,8 @@ class CV extends React.Component {
       <Item.Group>
         {
           cv.hasOwnProperty("certificates") &&
-            cv.certificates.map(item => (
-              <Item>
+            cv.certificates.map((item, i) => (
+              <Item key={i}>
                 {/*<div style={styles.datum}>{item.year}</div>*/}
                 <Item.Header style={styles.nonbold}>{item.name} ({item.institution})</Item.Header>
               </Item>
@@ -714,12 +522,12 @@ class CV extends React.Component {
       <Item.Group>
         {
           cv.hasOwnProperty("associations") &&
-            cv.associations.map(item => (
-                    <Item>
-                      <Item.Content>
-                        <Item.Header style={styles.nonbold}>{item}</Item.Header>
-                      </Item.Content>
-                    </Item>
+            cv.associations.map((item, i) => (
+              <Item key={i}>
+                <Item.Content>
+                  <Item.Header style={styles.nonbold}>{item}</Item.Header>
+                </Item.Content>
+              </Item>
             ))
         }
       </Item.Group>
@@ -730,8 +538,8 @@ class CV extends React.Component {
       <Item.Group>
         {
           cv.hasOwnProperty("languages") &&
-            cv.languages.map(item => (
-              <Item>
+            cv.languages.map((item, i) => (
+              <Item key={i}>
                 <Item.Content>
                   <Item.Header style={styles.nonbold}>{item.name} ({item.level})</Item.Header>
                 </Item.Content>
