@@ -6,6 +6,7 @@ import { spacer } from "../common"
 
 
 const _PORTFOLIO_URL = 'http://www.jonaso.de/portfolio/'
+const _CV_URL = 'https://raw.githubusercontent.com/joetm/jonaso/master/public/static/cv.json'
 
 const styles = {
   datum: {
@@ -41,6 +42,17 @@ const styles = {
 
 
 class CV extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      cv: {},
+    }
+  }
+  componentWillMount() {
+    fetch(_CV_URL)
+    .then(response => response.json())
+    .then(cv => this.setState({cv}))
+  }
   redirectToPortfolio = () => {
     window.location = _PORTFOLIO_URL
   }
@@ -48,6 +60,9 @@ class CV extends React.Component {
     window.location = '/publications/'
   }
   render() {
+    const { cv } = this.state
+    console.log('cv', cv)
+
         return (
               <Container className="print cv">
 
@@ -196,18 +211,6 @@ class CV extends React.Component {
   <div style={styles.rightCol}>2000</div>
 </div>
 
-{/*
-<div className="row">
-  <div className="leftCol">
-                <Header id="current-research" style={styles.headline} size="large">Current Research</Header>
-  </div>
-  <div className="mainCol">
-
-  </div>
-  <div style={styles.rightCol}>
-  </div>
-</div>
-*/}
 
 <div className="row">
   <div className="leftCol">
@@ -675,6 +678,8 @@ class CV extends React.Component {
   </div>
 </div>
 
+
+
 <div className="row">
   <div className="leftCol">
     <Header id="peer-review" style={styles.headline} size="large">Reviewer Experience</Header>
@@ -685,18 +690,12 @@ class CV extends React.Component {
                     <Item>
                           <List>
                             <List.Item>
-                            	<a href="https://chi.acm.org/chi-series/" title="ACM CHI Conference on Human Factors in Computing Systems">CHI 2019, 2020</a><br />
-                            	<a href="http://iui.acm.org/" title="ACM IUI">IUI 2020</a><br />
-                            	<a href="http://eics.acm.org/" title="ACM SIGCHI Symposium on Engineering Interactive Computing Systems">EICS PACM 2019 Q4</a><br />
-                            	<a href="http://cscw.acm.org/" title="ACM Conference on Computer-Supported Cooperative Work and Social Computing">CSCW 2018, 2019, 2020</a><br />
-                            	<a href="http://cc.acm.org/2019/" title="Creativity &amp; Cognition">C&amp;C 2019</a><br />
-                            	<a href="https://interact2019.org/" title="IFIP TC.13 International Conference on Human-Computer Interaction">INTERACT 2019</a><br />
-                            	<a href="http://hicss.hawaii.edu/">HICSS-52</a><br />
-                            	<a href="https://imwut.acm.org/">IMWUT 2018</a><br />
-                            	<a href="https://chiplay.acm.org/2018/">CHI PLAY 2018</a><br />
-                            	<a href="http://icmi.acm.org/2018/">ICMI 2018</a><br />
-                            	<a href="http://skill.informatik.uni-leipzig.de/">SKILL-18</a><br />
-                            	<a href="https://2017.eswc-conferences.org/">ESWC 2017</a>
+                            {
+                              cv.hasOwnProperty("peer-review") &&
+                                cv['peer-review'].map(item => (
+                                  <div key={item.series}><a href={item.url} title={item.title}>{item.series} {item.years.join(", ")}</a></div>
+                                ))
+                            }
                             </List.Item>
                           </List>
                     </Item>
@@ -713,57 +712,15 @@ class CV extends React.Component {
   <div className="mainCol" style={{flex:4}}>
 
                   <Item.Group>
-
-                    <Item>
-                      {/*<div style={styles.datum}>2014</div>*/}
-	                    <Item.Header style={styles.nonbold}>Certified ScrumMaster (Scrum Alliance)</Item.Header>
-                    </Item>
-
-                    <Item>
-                      {/*<div style={styles.datum}>2014</div>*/}
-                        <Item.Header style={styles.nonbold}>Certified Associate in Project Management (PMI)</Item.Header>
-                    </Item>
-
-                    <Item>
-                      {/*<div style={styles.datum}>2014</div>*/}
-                        <Item.Header style={styles.nonbold}>ITIL v3 Foundation (Axelos)</Item.Header>
-                    </Item>
-
-                    <Item>
-                      {/*<div style={styles.datum}>2013</div>*/}
-                        <Item.Header style={styles.nonbold}>Certificate in Business Analysis (University of Toronto)</Item.Header>
-                    </Item>
-
-                    <Item>
-                      {/*<div style={styles.datum}>2013</div>*/}
-                        <Item.Header style={styles.nonbold}>Qualit&auml;tsmanagement-Beauftragter (DAkkS)</Item.Header>
-                    </Item>
-
-                    <Item>
-                      {/*<div style={styles.datum}>2013</div>*/}
-                        <Item.Header style={styles.nonbold}>SAP Certified - Associate Business Foundation &amp; Integration with SAP ERP 6.0 EHP5</Item.Header>
-                    </Item>
-
-                    <Item>
-                      {/*<div style={styles.datum}>2013</div>*/}
-                        <Item.Header style={styles.nonbold}>Integrated Business Processes with SAP ERP (TERP10)</Item.Header>
-                    </Item>
-
-                    <Item>
-                      {/*<div style={styles.datum}>2010</div>*/}
-                        <Item.Header style={styles.nonbold}>Zend Certified Engineer (PHP 5)</Item.Header>
-                    </Item>
-
-                    <Item>
-                      {/*<div style={styles.datum}>2009</div>*/}
-                        <Item.Header style={styles.nonbold}>Qualit&auml;tsmanagement-Fachkraft (T&uuml;v S&uuml;d Akademie)</Item.Header>
-                    </Item>
-
-                    <Item>
-                      {/*<div style={styles.datum}>2009</div>*/}
-                        <Item.Header style={styles.nonbold}>Business English Certificate Higher</Item.Header>
-                    </Item>
-
+                    {
+                      cv.hasOwnProperty("certificates") &&
+                        cv.certificates.map(item => (
+                          <Item>
+                            {/*<div style={styles.datum}>{item.year}</div>*/}
+                            <Item.Header style={styles.nonbold}>{item.name} ({item.institution})</Item.Header>
+                          </Item>
+                        ))
+                    }
                   </Item.Group>
 
   </div>
