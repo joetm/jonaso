@@ -8,7 +8,7 @@ import cv from "../cv.json"
 cv.teaching[0].left = "Teaching Experience"
 cv.awards[0].left = "Honors & Awards"
 cv.academicservice[0].left = "Academic Service"
-
+cv.supervisions[0].left = "Student Supervisions"
 
 const _PORTFOLIO_URL = 'http://www.jonaso.de/portfolio/'
 
@@ -471,51 +471,22 @@ class CV extends React.Component {
 )} right="" />
 
 
-<div className="row">
-  <div className="leftCol">
-                <Header id="supervisions" style={styles.headline} size="large">Student Supervisions</Header>
-  </div>
-  <div className="mainCol">
-                  <Item.Group>
-                  <Item>
-                      <List>
-                        <List.Item>
-                          Summer internship project, Antonio Kongjonaj
-                        </List.Item>
-                      </List>
-                  </Item>
-                  </Item.Group>
-  </div>
-  <div style={styles.rightCol}>2018</div>
-</div>
-<div className="row">
-  <div className="leftCol"></div>
-  <div className="mainCol">
-                  <Item.Group>
-                  <Item>
-                      <List>
-                        <List.Item>
-                          M.Sc. Thesis, <a href="https://www.linkedin.com/in/immanuel-pelzer-408505133/">Immanuel Pelzer</a>
-                        </List.Item>
-                      </List>
-                  </Item>
-                  </Item.Group>
-  </div>
-  <div style={styles.rightCol}>2016 - 2017</div>
-</div>
-<div className="row">
-  <div className="leftCol"></div>
-  <div className="mainCol">
-                  <Item>
-                      <List>
-                        <List.Item>
-                          Software Project
-                        </List.Item>
-                      </List>
-                  </Item>
-  </div>
-  <div style={styles.rightCol}>2016 - 2017</div>
-</div>
+
+{
+    cv.supervisions.map((row, i) => (
+        <Row key={i} left={row.left} middle={(
+          <Item.Group>
+            <Item>
+              <List>
+                <List.Item>
+                  {row.type}, {row.supervisee}
+                </List.Item>
+              </List>
+            </Item>
+          </Item.Group>
+        )} right={row.year} />
+    ))
+}
 
 
 <Row left="Memberships in Scientific Associations" middle={(
@@ -548,110 +519,6 @@ class CV extends React.Component {
         }
       </Item.Group>
 )} right="" />
-
-
-{/*
-                <Header id="conferences" size="large">Conference and Workshop Attendance</Header>
-
-                  <Item.Group>
-
-                    <Item>
-	                    <div style={styles.datum}>2018</div>
-	                    <Item.Content>
-	                      <Item.Header><a href="http://ubicomp.org/ubicomp2018/">UbiComp 2018</a></Item.Header>
-	                      <Item.Meta>October 9-11, 2018 &ndash; Singapore</Item.Meta>
-	                    </Item.Content>
-                    </Item>
-
-                    <Item>
-	                    <div style={styles.datum}></div>
-	                    <Item.Content>
-	                      <Item.Header><a href="http://mhc2018.wordpress.com/">Mobile Human Contributions Workshop (MHC'18)</a></Item.Header>
-	                      <Item.Meta>October 8, 2018 &ndash; Singapore</Item.Meta>
-	                    </Item.Content>
-                    </Item>
-
-                    <Item>
-	                    <div style={styles.datum}></div>
-	                    <Item.Content>
-	                      <Item.Header><a href="http://ubicomp.oulu.fi/ubiss/">9<sup>th</sup> International UBI Summer School (UBISS 2018)</a></Item.Header>
-	                      <Item.Meta>June 4-9, 2018 &ndash; Oulu, Finland</Item.Meta>
-	                    </Item.Content>
-                    </Item>
-
-                    <Item>
-                      <div style={styles.datum}></div>
-                      <Item.Content>
-                        <Item.Header><a href="http://mkwi2018.leuphana.de/">Multikonferenz Wirtschaftsinformatik (MKWI)</a></Item.Header>
-                        <Item.Meta>
-                            March 6-9, 2018 &ndash; L&uuml;neburg, Germany
-                        </Item.Meta>
-                      </Item.Content>
-                    </Item>
-
-                    <Item>
-                      <div style={styles.datum}></div>
-                      <Item.Content>
-                        <Item.Header><a href="https://gi.de/veranstaltung/mensch-computer-interaktion-die-arbeitswelten-der-zukunft-gestalten/">GI Symposium</a> <span style={styles.nonbold}>&ndash; Mensch-Computer Interaktion: Die Arbeitswelten der Zukunft gestalten!</span></Item.Header>
-                        <Item.Meta>
-                            January 29, 2018 &ndash; Berlin, Germany
-                        </Item.Meta>
-                      </Item.Content>
-                    </Item>
-
-                    <Item>
-                      <div style={styles.datum}>2017</div>
-                      <Item.Content>
-                        <Item.Header><a href="https://www.humancomputation.com/2017/">5<sup>th</sup> AAAI Conf. on Human Computation and Crowdsourcing (HCOMP)</a></Item.Header>
-                        <Item.Meta>
-                            Oct 25-26, 2017 &ndash; Quebec City, Quebec, Canada
-                        </Item.Meta>
-                      </Item.Content>
-                    </Item>
-
-                    <Item>
-                      <div style={styles.datum}></div>
-                      <Item.Content>
-                        <Item.Header><a href="https://www.humancomputation.com/2017/crowdcamp.html">CrowdCamp Workshop</a></Item.Header>
-                        <Item.Meta>
-                            Oct 24, 2017 &ndash; Quebec City, Quebec, Canada
-                        </Item.Meta>
-                      </Item.Content>
-                    </Item>
-
-                    <Item>
-                      <div style={styles.datum}></div>
-                      <Item.Content>
-                        <Item.Header>Wikidata Workshop</Item.Header>
-                        <Item.Meta>
-                            June 9, 2017 &ndash; DIGIS, Zuse Institute, Berlin, Germany
-                        </Item.Meta>
-                      </Item.Content>
-                    </Item>
-
-                    <Item>
-                      <div style={styles.datum}>2016</div>
-                      <Item.Content>
-                        <Item.Header>#DKT16 <span style={styles.nonbold}> &ndash; Smart Technologies for Knowledge Workers</span></Item.Header>
-                        <Item.Meta>
-                            Oct 11, 2016 &ndash; Berlin, Germany
-                        </Item.Meta>
-                      </Item.Content>
-                    </Item>
-
-                    <Item>
-                      <div style={styles.datum}>2015</div>
-                      <Item.Content>
-                        <Item.Header>1<sup>st</sup> Open Data Camp</Item.Header>
-                        <Item.Meta>
-                            Feb 2015 &ndash; Winchester, Hampshire, UK
-                        </Item.Meta>
-                      </Item.Content>
-                    </Item>
-
-                  </Item.Group>
-*/}
-
 
                   <div className="spacer" style={spacer}></div>
 
