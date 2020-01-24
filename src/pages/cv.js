@@ -59,6 +59,14 @@ const Row = ({left, middle, right}) => ( //rowspan=false
 // {/*style={rowspan ? styles.rowspan2 : null}*/}
 
 
+const PdfCVButton = () => (
+  <div style={{float:'right',marginTop:'0.5em'}}>
+    <a href="/cv/cv-jonas-oppenlaender.pdf" target="_blank">
+      <Icon size='large' name='file pdf outline' />
+    </a>
+  </div>
+)
+
 
 class CV extends React.Component {
   redirectToPortfolio = () => {
@@ -70,7 +78,10 @@ class CV extends React.Component {
   render() {
     return (
       <Container className="print cv">
+        <PdfCVButton />
         <h1 className="print-only">Jonas Oppenlaender</h1>
+
+
 
 <Row left="Contact Information" middle={(
       <Item.Group>

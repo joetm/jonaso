@@ -4,7 +4,8 @@ default:
 	##
 	##  Makefile for jonaso.de
 	##
-	##   make build			produce the production version of the site
+	##   make pre-build		pre-build actions
+	##   make post-build	post build actions
 	##   make dev			run the development version of the site
 	##   make refs			build the publication list from .bib file
 	##   make pubs			alias of make refs
@@ -13,11 +14,15 @@ default:
 	##   make push   		push to github
 	##
 
-build:
+pre-build:
+	make fetch-cv
+
+post-build:
 	cp ./src/travel.json ./public/
 	cp ./src/news.json ./public/
+	make move-cv
 
-cv:
+fetch-cv:
 	git clone git@github.com:joetm/academic-cv.git
 	cd academic-cv; \
 		sed 's|\\excludefromprint{.*}||g' cv.tex > out.tex; \
@@ -25,6 +30,7 @@ cv:
 		pdflatex -synctex=1 -interaction=nonstopmode out2.tex; \
 		pdflatex -synctex=1 -interaction=nonstopmode out2.tex
 
+move-cv:
 	mv academic-cv/out2.pdf "public/cv/cv-jonas-oppenlaender.pdf"
 	# mv academic-cv/out.pdf "public/cv/cv-jonas-oppenlaender-`date '+%Y.%m.%d'`.pdf"
 	# rm public/cv/cv-jonas-oppenlaender-*.pdf
