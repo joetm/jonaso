@@ -69,7 +69,7 @@ foreach ($rows as $bibitem) {
         }
 }
 
-$fp = fopen('references-type.json', 'w');
+$fp = fopen('public/static/references-type.json', 'w');
 fwrite($fp, json_encode($references, JSON_PRETTY_PRINT));
 fclose($fp);
 

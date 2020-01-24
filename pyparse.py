@@ -25,5 +25,5 @@ with open('src/bibliography/publications.bib') as bibtex_file:
 # print(bibtex_str)
 
 # write as json
-with open('./references-detail.json', 'w') as outfile:
+with open('./public/static/references-detail.json', 'w') as outfile:
     json.dump(bib_database.entries, outfile, indent=4, sort_keys=True)

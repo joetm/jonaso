@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # encoding=utf8
 
-"""Reduce author names to 'Firstname Lastname' format"""
+"""Reduce author names to 'Firstname Lastname' format (skipping middle names)"""
 
 import sys
 reload(sys)  
