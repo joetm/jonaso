@@ -14,6 +14,9 @@ def extractMetadata(fullpath):
     r = requests.post(SERVERURL, files=files, headers=headers)
 
     if r.status_code == 200:
+
+        path, filename = os.path.split(fullpath)
+
         rawdata = r.json()
         # skip conditions
         if 'id' not in rawdata or rawdata['id'] == 'empty':
@@ -30,6 +33,7 @@ def extractMetadata(fullpath):
             'title': rawdata['title'],
             'year': rawdata['year'],
             'authors': [] if not rawdata['authors'] else [x['name'] for x in rawdata['authors']],
+            'filename': filename,
             'modified': int(os.path.getmtime(fullpath)),
             # 'created': int(os.path.getctime(fullpath)),
             # 'abstractText': rawdata['abstractText'],

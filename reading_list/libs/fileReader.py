@@ -23,6 +23,8 @@ def parsefiles(PATTERN, BASEPATHS, conn):
 
     c = conn.cursor()
 
+    print(PATTERN)
+
     for root in BASEPATHS:
         for path, subdirs, files in os.walk(root, followlinks=False):
             for name in files:
@@ -100,5 +102,5 @@ def parsefiles(PATTERN, BASEPATHS, conn):
 
     print ("Unrecognized: ", unrecognizedCounter)
 
-    return (documents, unrecognizedCounter)
+    return (documents, counter, unrecognizedCounter)
 

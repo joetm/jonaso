@@ -2,6 +2,7 @@
 
 import json
 import sqlite3
+import time
 
 from libs import fileReader
 
@@ -17,7 +18,6 @@ BASEPATHS = [
     "/home/jonas/FU/Misc/"
 ]
 
-PATTERN_TOREAD = "\+*.pdf"
 PATTERN_READ = "[\!|\-]*.pdf"
 
 
@@ -29,11 +29,14 @@ print("Mining pdfs")
 conn = sqlite3.connect('cache.db')
 
 
-(documents, unrecognizedCounter) = fileReader.parsefiles(PATTERN_READ, BASEPATHS, conn)
+documents, counter, unrecognizedCounter = fileReader.parsefiles(PATTERN_READ, BASEPATHS, conn)
 
 
 # write the full list
-unrecognizedCounterPercent = unrecognizedCounter / counter
+if counter == 0:
+    unrecognizedCounterPercent = 0
+else:
+    unrecognizedCounterPercent = unrecognizedCounter / counter
 out = {
         'modified': int(time.time()),
         'unrecognized': unrecognizedCounter,

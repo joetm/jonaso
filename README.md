@@ -1,7 +1,5 @@
 # academic website
 
-![ci badge](https://github.com/joetm/jonaso/workflows/cvpdf/badge.svg)
-
 Built with [Gatsby](https://www.gatsbyjs.org/)
 
 ## Running in development

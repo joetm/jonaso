@@ -109,4 +109,5 @@ class TravelRotary extends React.Component {
   }
 }
 
+
 export default TravelRotary
