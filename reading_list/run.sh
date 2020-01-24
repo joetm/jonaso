@@ -6,6 +6,8 @@ START_TIME=$SECONDS
 
 ./parsefiles.py
 
+# ./parsetoread.py
+
 docker-stop-all
 
 ./update.sh
