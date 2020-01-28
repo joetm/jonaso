@@ -83,7 +83,8 @@ class Home extends React.Component {
                 <p>
                   I am <strong>Jonas Oppenlaender</strong>,
                   a doctoral student
-                  in the Community Instrumentation and Awareness research group
+                  {/* in the Community Instrumentation and Awareness research group */}
+                  {/* in the Crowd Computing research group */}
                   at the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a>,
                   {" "}
                   <a href="http://www.oulu.fi/university/">University of Oulu</a>,
