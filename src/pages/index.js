@@ -80,11 +80,12 @@ class Home extends React.Component {
 
               <Grid.Column mobile={9} tablet={9} computer={9} widescreen={9} largeScreen={9}>
 
+				{/* in the Community Instrumentation and Awareness research group */}
+                {/* in the Crowd Computing research group */}
+
                 <p>
                   I am <strong>Jonas Oppenlaender</strong>,
                   a doctoral student
-                  {/* in the Community Instrumentation and Awareness research group */}
-                  {/* in the Crowd Computing research group */}
                   at the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a>,
                   {" "}
                   <a href="http://www.oulu.fi/university/">University of Oulu</a>,
