@@ -81,17 +81,20 @@ class Home extends React.Component {
               <Grid.Column mobile={9} tablet={9} computer={9} widescreen={9} largeScreen={9}>
 
 				{/* in the Community Instrumentation and Awareness research group */}
-                {/* in the Crowd Computing research group */}
 
                 <p>
                   I am <strong>Jonas Oppenlaender</strong>,
                   a doctoral student
+                  in the Crowd Computing Lab
+                  {" "}
                   at the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a>,
                   {" "}
                   <a href="http://www.oulu.fi/university/">University of Oulu</a>,
                   {" "}
-                  <a href="https://www.theatlantic.com/entertainment/archive/2012/03/world-map-metal-band-population-density/329913/">Finland</a>.
-                  working towards a PhD in Computer Science.
+                  <a href="https://www.theatlantic.com/entertainment/archive/2012/03/world-map-metal-band-population-density/329913/">Finland</a>,
+                  working towards a PhD in Computer Science,
+                  {" "}
+                  advised by Associate Prof. <a href="http://www.simohosio.com/">Simo Hosio</a>.
                   {" "}
                   Previously, I was a research assistant (early-stage researcher)
                   at the <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/" rel="nofollow">Human-Centered Computing</a> group, Freie Universit&auml;t Berlin.
