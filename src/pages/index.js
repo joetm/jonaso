@@ -96,12 +96,14 @@ class Home extends React.Component {
                   {" "}
                   advised by Associate Prof. <a href="http://www.simohosio.com/">Simo Hosio</a>.
                   {" "}
-                  Previously, I was a research assistant (early-stage researcher)
+                  Previously, I was a research assistant (Wissenschaftlicher Mitarbeiter)
+	              {/* (early-stage researcher) */}
+                  {" "}
                   at the <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/" rel="nofollow">Human-Centered Computing</a> group, Freie Universit&auml;t Berlin.
                 </p>
 
                 <p>
-                  I hold a MSc degree in Computer Science
+                  I hold a MSc degree in Computer Science (with Distinction)
                   from the <a href="https://www.southampton.ac.uk/">University of Southampton</a>, UK,
                   and studied Industrial Engineering in Germany and Sweden.
                 </p>
