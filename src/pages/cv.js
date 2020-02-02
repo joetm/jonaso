@@ -5,7 +5,7 @@ import { Icon, Label, Header, Divider, List, Item, Image, Container } from 'sema
 import { spacer } from "../common"
 import cv from "../cv.json"
 // headlines
-cv.teaching[0].left = "Teaching Experience"
+// cv.teaching[0].left = "Teaching Experience"
 cv.awards[0].left = "Honors & Awards"
 cv.academicservice[0].left = "Academic Service"
 cv.supervisions[0].left = "Student Supervisions"
@@ -76,11 +76,13 @@ class CV extends React.Component {
     window.location = '/publications/'
   }
   render() {
+
+    const teachingPositions = Object.keys(cv.teaching)
+
     return (
       <Container className="print cv">
         <PdfCVButton />
         <h1 className="print-only">Jonas Oppenlaender</h1>
-
 
 
 <Row left="Contact Information" middle={(
@@ -414,22 +416,29 @@ class CV extends React.Component {
 )} right="" />
 
 
-{
-    cv.teaching.map((row, i) => (
-        <Row key={i} left={row.left} middle={(
-              <Item.Group>
-                <Item>
-                  <List>
-                    <List.Item>
-                      {row.position}, {row.course}{row.coursecode && " (" + row.coursecode + ")"}, {row.institution}<br />
-                      ({row.num_students && row.num_students +  " students, "} {row.ECTS && row.ECTS + " ECTS, "} {row.level} level)
-                    </List.Item>
-                  </List>
-                </Item>
-              </Item.Group>
-        )} right={row.year} />
-    ))
-}
+<Row left="Teaching Experience" middle={(
+      <Item.Group>
+        {
+          teachingPositions.map((pos, index) => {
+            return (
+              <Item key={index}>
+                <List>
+                  <List.Item>{pos}</List.Item>
+                  {
+                    cv.teaching[pos].map((row, i) => (
+                          <List.Item style={{paddingLeft:'20px'}} key={i}>
+                            {row.course}{row.coursecode && " (" + row.coursecode + ")"}, {row.institution}<br />
+                            ({row.num_students && row.num_students +  " students, "} {row.ECTS && row.ECTS + " ECTS, "} {row.level} level)
+                          </List.Item>
+                    ))
+                  }
+                </List>
+              </Item>
+            )
+          })
+        }
+      </Item.Group>
+)} right="" />
 
 
 {
@@ -449,7 +458,7 @@ class CV extends React.Component {
 }
 
 
-<Row left="Reviewer Experience" middle={(
+<Row left="Peer Reviewer" middle={(
       <Item.Group>
         <Item>
               <List>

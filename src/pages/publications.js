@@ -97,12 +97,11 @@ class Publications extends React.Component {
     let customSortOrder = []
     if (keysType.length > 0) {
       customSortOrder = [
-        "Peer-reviewed Conference Proceedings",
+        "Peer-reviewed Conference Papers",
         "Peer-reviewed Journal Articles",
         "Peer-reviewed Workshops Organized",
-        "Peer-reviewed Workshop Proceedings",
+        "Peer-reviewed Conference Posters and Position Papers",
         "Doctoral Consortia",
-        "Other Publications and Posters",
         "Theses and Seminal Papers",
       ]
     }
