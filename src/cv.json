@@ -2,78 +2,64 @@
   "interests": [
     "Crowdsourcing", "human computation", "collective intelligence", "web science", "semantic web", "social machines", "computer supported collaborative work", "hypertext and hypermedia", "internet culture"
   ],
-  "teaching": [
-    {
-      "position": "Teaching Assistant",
-      "course": "Social Computing",
-      "coursecode": "521044A",
-      "institution": "University of Oulu",
-      "num_students": 33,
-      "ECTS": 5,
-      "level": "Bachelor",
-      "year": 2020
-    },
-    {
-      "position": "Teaching Assistant",
-      "course": "Human Computer Interaction",
-      "coursecode": "521145A",
-      "institution": "University of Oulu",
-      "num_students": 146,
-      "ECTS": 5,
-      "level": "Bachelor",
-      "year": 2019
-    },
-    {
-      "position": "Co-Teacher",
-      "course": "Social Computing",
-      "coursecode": "521044A",
-      "institution": "University of Oulu",
-      "num_students": 14,
-      "ECTS": 5,
-      "level": "Bachelor",
-      "year": 2019
-    },
-    {
-      "position": "Teaching Assistant",
-      "course": "Human Computer Interaction",
-      "coursecode": "521145A",
-      "institution": "University of Oulu",
-      "num_students": 164,
-      "ECTS": 5,
-      "level": "Bachelor",
-      "year": 2018
-    },
-    {
-      "position": "Teaching Assistant",
-      "course": "Applied Computing Project I",
-      "coursecode": "521152S",
-      "institution": "University of Oulu",
-      "num_students": 3,
-      "ECTS": 10,
-      "level": "Bachelor",
-      "year": 2018
-    },
-    {
-      "position": "Teaching Assistant (Excercise Tutor)",
-      "course": "Mathematics",
-      "coursecode": null,
-      "institution": "Technical University of Darmstadt",
-      "num_students": null,
-      "ECTS": null,
-      "level": "Undergraduate",
-      "year": "2006 - 2007"
-    },
-    {
-      "position": "Teaching Assistant (Excercise Tutor)",
-      "course": "Engineering Mechanics",
-      "coursecode": null,
-      "institution": "Technical University of Darmstadt",
-      "num_students": null,
-      "ECTS": null,
-      "level": "Undergraduate",
-      "year": "2006 - 2007"
-    }
-  ],
+  "teaching": {
+    "Co-Teacher": [
+        {
+          "position": "Co-Teacher",
+          "course": "Social Computing",
+          "coursecode": "521044A",
+          "institution": "University of Oulu",
+          "num_students": 14,
+          "ECTS": 5,
+          "level": "Bachelor",
+          "year": 2019
+        }
+      ],
+      "Curriculum Planning": [
+        {
+          "position": "Teaching Assistant",
+          "course": "Human Computer Interaction",
+          "coursecode": "521145A",
+          "institution": "University of Oulu",
+          "num_students": 164,
+          "ECTS": 5,
+          "level": "Bachelor",
+          "year": 2018
+        },
+        {
+          "position": "Teaching Assistant",
+          "course": "Applied Computing Project I",
+          "coursecode": "521152S",
+          "institution": "University of Oulu",
+          "num_students": 3,
+          "ECTS": 10,
+          "level": "Bachelor",
+          "year": 2018
+        }
+      ],
+      "Teaching Assistant": [
+      {
+        "position": "Teaching Assistant",
+        "course": "Social Computing",
+        "coursecode": "521044A",
+        "institution": "University of Oulu",
+        "num_students": 33,
+        "ECTS": 5,
+        "level": "Bachelor",
+        "year": 2020
+      },
+      {
+        "position": "Teaching Assistant",
+        "course": "Human Computer Interaction",
+        "coursecode": "521145A",
+        "institution": "University of Oulu",
+        "num_students": 146,
+        "ECTS": 5,
+        "level": "Bachelor",
+        "year": 2019
+      }
+    ]
+  },
   "awards": [
     {
       "name": "Nokia Scholarship",
