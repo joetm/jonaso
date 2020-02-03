@@ -100,8 +100,8 @@ class Publications extends React.Component {
         "Peer-reviewed Conference Papers",
         "Peer-reviewed Journal Articles",
         "Peer-reviewed Workshops Organized",
-        "Peer-reviewed Conference Posters and Position Papers",
         "Doctoral Consortia",
+        "Peer-reviewed Conference Posters and Position Papers",
         "Theses and Seminal Papers",
       ]
     }
