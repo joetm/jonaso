@@ -85,7 +85,7 @@ class Home extends React.Component {
                 <p>
                   I am <strong>Jonas Oppenlaender</strong>,
                   a doctoral student
-                  in the Crowd Computing Lab
+                  in the Crowd Computing group
                   {" "}
                   at the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a>,
                   {" "}
