@@ -11,6 +11,7 @@ cv.academicservice[0].left = "Academic Service"
 cv.supervisions[0].left = "Student Supervisions"
 
 const _PORTFOLIO_URL = 'http://www.jonaso.de/portfolio/'
+const _PEERREVIEWS_URL = 'https://raw.githubusercontent.com/joetm/jonaso/master/stat_aggregator/peer-reviews.json'
 
 
 const styles = {
@@ -69,15 +70,27 @@ const PdfCVButton = () => (
 
 
 class CV extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      reviews: {total: 0},
+    }
+  }
   redirectToPortfolio = () => {
     window.location = _PORTFOLIO_URL
   }
   redirectToPublications = () => {
     window.location = '/publications/'
   }
+  componentWillMount() {
+    fetch(_PEERREVIEWS_URL)
+    .then(response => response.json())
+    .then(reviews => this.setState({reviews}))
+  }
   render() {
 
     const teachingPositions = Object.keys(cv.teaching)
+    const { reviews } = this.state
 
     return (
       <Container className="print cv">
@@ -460,6 +473,9 @@ class CV extends React.Component {
 
 <Row left="Peer Reviewer" middle={(
       <Item.Group>
+        <Item>
+          Total peer reviews: {reviews.total}
+        </Item>
         <Item>
               <List>
                 <List.Item>
