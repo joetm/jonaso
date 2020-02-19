@@ -15,6 +15,8 @@ default:
 	##
 
 pre-build:
+	cd ./stat_aggregator; \
+		./fetch_PCS.py
 	make fetch-cv
 
 post-build:
