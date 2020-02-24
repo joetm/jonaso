@@ -6,6 +6,8 @@ default:
 	##
 	##   make pre-build		pre-build actions
 	##   make post-build	post build actions
+	##   make fetch-cv		get the latex cv from overleaf/github and build it
+	##   make move-cv		move the finished cv and clean up directory
 	##   make dev			run the development version of the site
 	##   make refs			build the publication list from .bib file
 	##   make pubs			alias of make refs
