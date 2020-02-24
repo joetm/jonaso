@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <title>PCS</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/static/css/normalize.css" />
+  <link rel="stylesheet" href="/static/css/pcs.css" />
+  <script src="/static/js/jquery.min.js"></script>
+  <script src="/static/js/jquery-ui.min.js"></script>
+  <script src="/static/js/pcs.js"></script>
+  <script> $.ajaxSetup( { cache: false } ); </script>
+
+  
+    <script type="text/javascript">
+    $(document).ready( function () { $('input:text:first').focus() } ); // focus on first text box
+  </script>
+<style>
+  footer { text-align: center; padding-bottom: 6px; font-size: 90%; color: blue }
+  footer a { padding: 3px; text-decoration: underline; font-size: 90%; color: blue }
+</style>
+
+ 
+
+</head>
+
+<body>
+
+  <header>
+      <div class="logos">
+
+      <div class="left">
+	  <a href="/pcs"><img src="/static/images/pcsLogo2.png" alt="PCS logo"></a>
+      </div>
+
+      <div class="middle">
+      </div>
+
+      <div class="right">
+      </div>
+  </div>
+
+
+      <nav>
+    <div class="middle">
+      <ul id="navToggleItems" data-state="hidden">
+        <li class="confName">Precision Conference Solutions</li>
+      </ul>
+    </div>
+  </nav>
+  
+
+  </header>
+
+  <main>
+    
+
+      <!-- flashed messages -->
+
+      
+        <div class="alert" aria-hidden="true">
+          <a href=# class="alert notice" onclick="this.setAttribute('data-state','hidden')">You must be signed in to access 'https://new.precisionconference.com/reviewing_history'.</a>
+        </div>
+        <div class="visually-hidden" role="alert">Notice: You must be signed in to access 'https://new.precisionconference.com/reviewing_history'.</div> 
+      
+
+    
+
+    
+
+<h1 style="display: none">PCS login page</h1>
+  
+<center>
+
+<p style="margin-top:4em; margin-bottom: 4em;">Sign in below to <b>submit</b> a contribution, to <b>sign up</b> as
+a reviewer, or to <b>review</b> assigned submissions.
+
+<form action="" method="POST">
+
+  <div style="display:none;"><input id="csrf_token" name="csrf_token" type="hidden" value="1582531438##aa5ff0f40ffe22db4a2b2994400a3872f120fa1e"><input id="next" name="next" type="hidden" value="https://new.precisionconference.com/reviewing_history"><input id="reg_next" name="reg_next" type="hidden" value="/user/login"><input id="society" name="society" type="hidden" value=""></div>
+  <input id="society" name="society" type="hidden" value="">
+
+  <table>
+    <tr>
+      <td><label for="username">Username or Email</label></td>
+      <td><input id="username" name="username" type="text" value=""></td>
+    </tr>
+
+    <tr>
+      <td><label for="password">Password</label></td>
+      <td><input id="password" name="password" type="password" value=""></td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td><input id="remember_me" name="remember_me" type="checkbox" value="y"> <label for="remember_me">Remember me</label></td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td><input type="submit" value="Sign in"></td>
+    </tr>
+  </table>
+
+</form>
+
+<br />
+<br />
+
+<p><a href="/user/register">Create an account</a></p>
+
+<p><a href="/user/forgot-password">Reset my password</a></p>
+
+<br />
+<br />
+
+</center>
+
+<script>
+window.onload = function() { document.getElementById("username").focus(); }
+</script>
+
+
+    <div aria-live="polite" class="visually-hidden" id="aria-alert-message"></div>
+  </main>
+
+  <footer>
+      <a href="mailto:support@precisionconference.com">support</a>
+  |
+  <a href="/privacy_policy">privacy policy</a>
+  |
+  <a href="/terms_of_use">terms of use</a>
+
+  </footer>
+
+</body>
+
+</html>
