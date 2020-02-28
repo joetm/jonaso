@@ -90,7 +90,7 @@ class TravelRotary extends React.Component {
                       dateString = item.start.getDate() + '.-' + item.end.getDate() + '.' + (item.end.getMonth() + 1) + '.' + item.end.getFullYear()
                     }
                     if ('date' in item) {
-                      dateString = item.date
+                      dateString = item.date.getDate() + '.' + (item.date.getMonth() + 1) + '.' + item.date.getFullYear()
                     }
                     return (
                       <List.Item key={index} title={item.status} style={{
