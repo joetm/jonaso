@@ -135,8 +135,8 @@ class Home extends React.Component {
                 <Header size="tiny" style={nobottommargin}>Office Address:</Header>
                 <p>
                     University of Oulu<br />
-                    Erkki Koiso-Kanttilan katu 3<br />
-                    Room TS371<br />
+                    Pentti Kaiteran katu 1<br />
+                    Room TS370<br />
                     P.O. Box 4500<br />
                     FI-90014 Oulu<br />
                     E-Mail: {'{'}firstname.lastname{'}'}@oulu.fi
