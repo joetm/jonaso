@@ -31,8 +31,12 @@ fetch-cv:
 	cd academic-cv; \
 		sed 's|\\excludefromprint{.*}||g' cv.tex > out.tex; \
 		sed 's|\\settoggle{showpositiondetails}{true}|\\settoggle{showpositiondetails}{false}|g' out.tex > out2.tex; \
-		sed 's|\\settoggle{showsummary}{true}|\\settoggle{showsummary}{false}|g' out2.tex > out3.tex; \
-		sed 's|\\settoggle{showlinks}{false}|\\settoggle{showlinks}{true}|g' out3.tex > out4.tex; \
+		sed 's|\\settoggle{showsummary}{true}|\\settoggle{showsummary}{false}|g' out2.tex > out.tex; \
+		sed 's|\\settoggle{shownationality}{true}|\\settoggle{showsummary}{false}|g' out.tex > out2.tex; \
+		sed 's|\\settoggle{showinterests}{true}|\\settoggle{showsummary}{false}|g' out2.tex > out.tex; \
+		sed 's|\\settoggle{showlinks}{false}|\\settoggle{showlinks}{true}|g' out.tex > out2.tex; \
+		sed 's|\\settoggle{showpublications}{false}|\\settoggle{showlinks}{true}|g' out2.tex > out3.tex; \
+		sed 's|\\settoggle{showmoney}{true}|\\settoggle{showlinks}{false}|g' out3.tex > out4.tex; \
 		pdflatex -synctex=1 -interaction=nonstopmode out4.tex; \
 		pdflatex -synctex=1 -interaction=nonstopmode out4.tex
 
