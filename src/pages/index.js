@@ -84,7 +84,7 @@ class Home extends React.Component {
 
                 <p>
                   I am <strong>Jonas Oppenlaender</strong>,
-                  a doctoral student
+                  a doctoral researcher
                   in the Crowd Computing group
                   {" "}
                   at the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a>,
@@ -138,7 +138,7 @@ class Home extends React.Component {
                     Pentti Kaiteran katu 1<br />
                     Room TS370<br />
                     P.O. Box 4500<br />
-                    FI-90014 Oulu<br />
+                    FI-90570 Oulu<br />
                     E-Mail: {'{'}firstname.lastname{'}'}@oulu.fi
                 </p>
 
