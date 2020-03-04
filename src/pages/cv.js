@@ -105,10 +105,10 @@ class CV extends React.Component {
               <List>
                 <List.Item><a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a></List.Item>
                 <List.Item><a href="http://www.oulu.fi/university/">University of Oulu</a></List.Item>
-                <List.Item>Erkki Koiso-Kanttilan katu 3</List.Item>
-                <List.Item>Room TS371</List.Item>
+                <List.Item>Pentti Kaiteran katu 1</List.Item>
+                <List.Item>Room TS370</List.Item>
                 <List.Item>P.O. Box 4500</List.Item>
-                <List.Item>90014 Oulu, Finland</List.Item>
+                <List.Item>90570 Oulu, Finland</List.Item>
               </List>
             </Item.Description>
         </Item>
@@ -151,7 +151,7 @@ class CV extends React.Component {
                         <Item.Description style={styles.nomarginTop}>
                           <List>
                             <List.Item><a href="http://www.oulu.fi/university/">University of Oulu</a>, Oulu, Finland</List.Item>
-                            <List.Item>Doctoral Student</List.Item>
+                            <List.Item>Doctoral Researcher</List.Item>
                             <List.Item>Supervisor: <a href="http://simohosio.com/">Associate Prof. Dr. Simo Hosio</a></List.Item>
                           </List>
                         </Item.Description>
