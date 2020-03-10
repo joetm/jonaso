@@ -4,6 +4,7 @@
 """Reduce author names to 'Firstname Lastname' format (skipping middle names)"""
 
 import sys
+# from importlib import reload
 reload(sys)  
 sys.setdefaultencoding('utf8')
 
