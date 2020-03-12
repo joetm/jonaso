@@ -33,7 +33,7 @@ class TravelRotary extends React.Component {
     const Now = new Date()
 
     // convert dates into JavaScript dates
-    let rotary = travel.filter(item => item.status === 'confirmed').map(item => {
+    let rotary = travel.filter(item => ['confirmed','canceled'].indexOf(item.status) > -1).map(item => {
       // date ranges
       if ('start' in item) {
         item.start = new Date(item.start)
@@ -95,8 +95,9 @@ class TravelRotary extends React.Component {
                     return (
                       <List.Item key={index} title={item.status} style={{
                         color: item.isPast ? '#AAAAAA' : '#000000',
+                        textDecoration: item.status === 'canceled' ? 'line-through' : 'initial'
                       }}>
-                          <List.Icon name={item.status === 'confirmed' ? 'checkmark' : 'calendar'} />
+                          <List.Icon name={['confirmed', 'canceled'].indexOf(item.status) > -1 ? 'checkmark' : 'calendar'} />
                           {[item.event,dateString,item.location].join(", ")}
                       </List.Item>
                     );
