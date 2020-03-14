@@ -51,7 +51,7 @@ const styles = {
 const Row = ({left, middle, right}) => ( //rowspan=false
   <div className="row">
     <div className="leftCol">
-      <Header id="peer-review" style={styles.headline} size="large">{left}</Header>
+      <Header style={styles.headline} size="large">{left}</Header>
     </div>
     <div className="mainCol">{middle}</div>
     <div style={styles.rightCol}>{right}</div>
@@ -473,9 +473,11 @@ class CV extends React.Component {
 
 <Row left="Peer Reviewer" middle={(
       <Item.Group>
+        {/*
         <Item>
           Total peer reviews: {reviews.total}
         </Item>
+        */}
         <Item>
               <List>
                 <List.Item>
