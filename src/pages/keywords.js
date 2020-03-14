@@ -70,7 +70,7 @@ class Keywords extends React.Component {
 
           <div style={{clear:'both'}}></div>
 
-          <ResponsiveContainer width="100%" height={980}>
+          <ResponsiveContainer width="100%" height={780}>
             {
               chart == 'bar' ?
                 <BarChart layout="vertical" data={keywords}>

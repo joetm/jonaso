@@ -41,7 +41,7 @@ class ReadingList extends React.Component {
   }
   render() {
     const { influencer, keywords } = this.state
-    const filtered_keywords = keywords.filter(kw => kw.num > 5)    
+    const filtered_keywords = keywords.filter(kw => kw.num > 9)    
     return (
       <div>
         <Container>
