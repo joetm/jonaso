@@ -22,6 +22,13 @@ const styles = {
   details: {
     clear: 'both',
   },
+  kwlabel: {
+    marginBottom: '0.5em',
+    cursor: 'pointer',
+    float:'left',
+    marginRight: '1em',
+    backgroundColor: '#FF9090',
+  },
 }
 
 
@@ -86,6 +93,9 @@ class AuthorList extends React.Component {
                 </Label>
                 {details[author.id] &&
                   <div style={styles.details} key={`a${author.id}`}>{
+                    details[author.id]['keywords'].map(kw => (
+                        <div className={} key={`t${author.id}${kw}`}>{kw}</div>
+                    ))
                     details[author.id]['docs'].filter(doc => doc.priority === priority).map(doc => (
                         <div key={`t${author.id}${doc.priority}${doc.title}`}>{doc.title}</div>
                     ))
