@@ -191,11 +191,11 @@ while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 						);
 			if (!isset($details[$author])) {
 				$details[$author] = [
-					'titles' => array($thedoc),
+					'docs' => array($thedoc),
 					'keywords' => $authorkeywords,
 				];
 			} else {
-				$details[$author]['titles'][] = $thedoc;
+				$details[$author]['docs'][] = $thedoc;
 				foreach ($authorkeywords as $kw) {
 					if (!in_array($kw, $details[$author]['keywords'])) {
 						$details[$author]['keywords'][] = $kw;
