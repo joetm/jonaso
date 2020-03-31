@@ -133,6 +133,7 @@ while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 	$jsondoc = json_decode($doc);
 
 	$authorkeywords = explode(" > ", $jsondoc->keywords);
+	$authorkeywords = array_filter($authorkeywords, function ($kw) {return strlen(trim($kw)) > 0});
 
 	// find the inspirational authors
 	// --------------------------------
