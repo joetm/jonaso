@@ -132,6 +132,9 @@ while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 
 	$jsondoc = json_decode($doc);
 
+	$keywords = explode(">", $jsondoc['keywords']);
+	$keywords = array_map(function($kw) {return trim($kw);}, $keywords);
+
 	// find the inspirational authors
 	// --------------------------------
 
@@ -183,14 +186,22 @@ while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 
 			// store the title in the respective author details
 			// var_dump($author, $jsondoc->title);
-			$thetitle_arr = array(
+			$thedoc = array(
 						"title" => $jsondoc->title,
 						"priority" => $jsondoc->priority,
 						);
 			if (!isset($details[$author])) {
-				$details[$author] = array($thetitle_arr);
+				$details[$author] = [
+					'titles' => array($thedoc),
+					'keywords' => $keywords,
+				];
 			} else {
-				$details[$author][] = $thetitle_arr;
+				$details[$author]['titles'][] = $thedoc;
+				foreach ($keywords as $kw) {
+					if (!in_array($kw, $details[$author]['keywords'])) {
+						$details[$author]['keywords'][] = $kw;
+					}
+				}
 			}
 		}
 
