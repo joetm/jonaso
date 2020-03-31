@@ -6,6 +6,7 @@ import React from "react"
 import { Container, Label} from 'semantic-ui-react'
 
 import { spacer } from "../common"
+import "./influencer.css"
 
 
 const styles = {
@@ -19,16 +20,32 @@ const styles = {
     float:'left',
     marginRight: '1em',
   },
-  details: {
+  detailswrapper: {
     clear: 'both',
+    border: '1px solid black',
   },
-  kwlabel: {
-    marginBottom: '0.5em',
-    cursor: 'pointer',
-    float:'left',
-    marginRight: '1em',
-    backgroundColor: '#FF9090',
-  },
+}
+
+const Wrapper = ({title, items}) => (
+  <div>
+    <div key={`${title}-2`}>{title}</div>
+    <div key={`${title}-2`}>{items}</div>
+  </div>
+)
+
+const DetailContainer = ({authorid, details}) => {
+  const { docs=[], keywords=[] } = details
+  const kwlist = keywords.map(kw => <div className="ui label" key={`t${authorid}-kw-${kw}`}>{kw}</div>)
+  const publist = docs.map(doc => (
+          <div key={`t${authorid}${doc.priority}${doc.title}`}>{doc.title}</div>
+        ))
+
+  return (
+    <div style={styles.detailswrapper} key={`a-a${authorid}`}>
+      <Wrapper key={`w-a${authorid}-1`} title="Keywords" items={kwlist} />
+      <Wrapper key={`w-a${authorid}-2`} title="Publications" items={publist} />
+    </div>
+  )
 }
 
 
@@ -92,14 +109,7 @@ class AuthorList extends React.Component {
                   <Label.Detail>{author.num}</Label.Detail>
                 </Label>
                 {details[author.id] &&
-                  <div style={styles.details} key={`a${author.id}`}>{
-                    details[author.id]['keywords'].map(kw => (
-                        <div className={} key={`t${author.id}${kw}`}>{kw}</div>
-                    ))
-                    details[author.id]['docs'].filter(doc => doc.priority === priority).map(doc => (
-                        <div key={`t${author.id}${doc.priority}${doc.title}`}>{doc.title}</div>
-                    ))
-                  }</div>
+                  <DetailContainer authorid={author.id} details={details[author.id]} />
                 }
               </div>
             )
