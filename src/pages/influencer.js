@@ -86,7 +86,7 @@ class AuthorList extends React.Component {
                 </Label>
                 {details[author.id] &&
                   <div style={styles.details} key={`a${author.id}`}>{
-                    details[author.id]['titles'].filter(doc => doc.priority === priority).map(doc => (
+                    details[author.id]['docs'].filter(doc => doc.priority === priority).map(doc => (
                         <div key={`t${author.id}${doc.priority}${doc.title}`}>{doc.title}</div>
                     ))
                   }</div>
