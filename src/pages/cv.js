@@ -260,7 +260,10 @@ class CV extends React.Component {
           <Item.Group>
             <Item>
               <List>
-                <List.Item>{row.name}, {row.institution}</List.Item>
+                <List.Item>
+                  {row.name}
+                  {row.institution && <span>, {row.institution}</span>}
+                </List.Item>
               </List>
             </Item>
           </Item.Group>
