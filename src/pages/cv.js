@@ -49,6 +49,17 @@ const styles = {
 }
 
 
+const SupervisorWrap = ({supervisor, link}) => {
+  if (!supervisor) {
+    return null;
+  }
+  if (link) {
+      return (<List.Item>Supervisor: <a href={link}>{supervisor}</a></List.Item>)
+  }
+  return (<List.Item>Supervisor: {supervisor}</List.Item>)
+}
+
+
 // TODO: ROWSPAN
 const Row = ({left, middle, right}) => ( //rowspan=false
   <div className="row">
@@ -160,23 +171,20 @@ class CV extends React.Component {
 
 {
   cv.education.map((row, i) => (
-    <Row key={i} left={row.left} middle={(
-          <Item.Group>
-            <Item>
-              <Item.Description style={styles.nomarginTop}>
-                <List>
-                  <List.Item><a href={row.institution_link}>{row.institution}</a>, {row.location}</List.Item>
-                  <List.Item>{row.position}</List.Item>
-                  {
-                    row.supervisor &&
-                      <List.Item>Supervisor: <a href={row.supervisor_link}>{row.supervisor}</a></List.Item>
-                  }
-                </List>
-              </Item.Description>
-            </Item>
-          </Item.Group>
-    )} right={startEndYear(row)} />
-  ))
+      <Row key={i} left={row.left} middle={(
+            <Item.Group>
+              <Item>
+                <Item.Description style={styles.nomarginTop}>
+                  <List>
+                    <List.Item><a href={row.institution_link}>{row.institution}</a>, {row.location}</List.Item>
+                    <List.Item>{row.position}</List.Item>
+                    <SupervisorWrap supervisor={row.supervisor} link={row.supervisor_link} />
+                  </List>
+                </Item.Description>
+              </Item>
+            </Item.Group>
+      )} right={startEndYear(row)} />
+    ))
 }
 
 
