@@ -1,6 +1,6 @@
 import React from "react"
 import { Container } from 'semantic-ui-react'
-// require('es6-promise').polyfill();
+// require('es6-promise').polyfill()
 import "isomorphic-fetch"
 import { spacer } from "../common"
 import Influencer from "./influencer"
