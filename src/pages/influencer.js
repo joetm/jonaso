@@ -27,32 +27,40 @@ const styles = {
 
 const KeywordWrapper = ({title, items}) => (
   <div style={{clear:'both'}}>
-    <h4 key={`${title}-t`}>{title}</h4>
-    <div style={{clear:'both'}} key={`${title}-i`}>{items}</div>
+    <h4>{title}</h4>
+    <div style={{clear:'both'}}>{items}</div>
   </div>
 ) //`
 
 const PubWrapper = ({title, items}) => (
-  <div style={{paddingTop: '1rem', marginTop: '1rem', clear:'both'}}>
-    <h4 key={`${title}-t`}>{title}</h4>
-    <ol key={`${title}-i`}>{items}</ol>
+  <div style={{paddingTop: "1rem", marginTop: "1rem", clear:"both"}}>
+    <h4>{title}</h4>
+    <ol>{items}</ol>
   </div>
 ) //`
 
-const DetailContainer = ({authorid, details, priority}) => {
+const DetailContainer = ({authorid, details, priority, keywordClick}) => {
   const { docs=[], keywords=[] } = details
   // console.info("keywords", keywords)
   // console.info("docs", docs)
 
   // const kwlist = keywords.join(", ")
-  const kwlist = keywords.map((kw, i) => <Label style={styles.label} as="a" color='teal' key={`kw${i}${authorid}${kw}`}>{kw}</Label>) //`;
+  const kwlist = keywords.map((kw, i) => (
+    <Label
+      style={styles.label}
+      as="a"
+      color='teal'
+      onClick={(e) => keywordClick(e)}
+      key={`kw${i}${authorid}${kw}`}
+    >{kw}</Label>
+  )) //`;
 
   const publist = docs.filter(doc => doc.priority === priority).map((doc, i) => (
             <li key={`p${i}${authorid}${doc.priority}${doc.title}`}>{doc.title}</li>
         )) //`
 
   return (
-    <div style={styles.detailswrapper} key={`a-a${authorid}`}>
+    <div className="clear" key={`a-a${authorid}`}>
       <KeywordWrapper title="Keywords" items={kwlist} />
       <PubWrapper title="Publications" items={publist} />
     </div>
@@ -64,9 +72,12 @@ class AuthorList extends React.Component {
   state = {
     details: {}, // cache of details
     activeid: null,
+    activeKeyword: null,
   }
-  detailsVisible = () => {
-    return this.state.activeid !== null
+  keywordClick = (e) => {
+    const keyword = e.target.innerText
+    console.log('Keyword:', keyword)
+    this.setState({activeKeyword: keyword})
   }
   getAuthorDetails = (author) => {
     const id = author.id
@@ -82,11 +93,6 @@ class AuthorList extends React.Component {
       })
       return
     }
-    // TODO
-    // remove all open detail boxes
-
-
-
     // ------
     // add
     // ------
@@ -141,7 +147,7 @@ class AuthorList extends React.Component {
                   <Label.Detail>{author.num}</Label.Detail>
                 </Label>
                 {details[author.id] && activeid === author.id &&
-                  <DetailContainer authorid={author.id} priority={priority} details={details[author.id]} />
+                  <DetailContainer authorid={author.id} priority={priority} details={details[author.id]} keywordClick={this.keywordClick} />
                 }
               </div>
             )

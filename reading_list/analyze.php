@@ -107,6 +107,7 @@ $db = new MyDB();
 $authors = array();
 $keywords = array();
 $details = array();
+$keywordauthors = array();
 
 // for progress bar
 $result = $db->query('SELECT count(json) AS `cnt` FROM `documents`');
@@ -168,7 +169,7 @@ while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 			$author = trim($author);
 
 			// reduce to "firstname lastname"
-			$parseauthor = shell_exec('./parsename.py "' . $author . '"');
+			$parseauthor = shell_exec('./parsename.py "' . addslashes($author) . '"');
 			if ($parseauthor) {
 				// echo "Parseauthor: " . $parseauthor . "\n";
 				$author = $parseauthor;
@@ -176,6 +177,8 @@ while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 
 			// FIRST LAST -> First Last
 			$author = trim(ucwords(strtolower($author)), "\n");
+
+			$authorid = md5($author);
 
 			// increase publication counter for this author
 			if (isset($authors[$author][$jsondoc->priority])) {
@@ -203,6 +206,16 @@ while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 					if (!in_array($kw, $details[$author]['keywords'])) {
 						$details[$author]['keywords'][] = $kw;
 					}
+
+					// new (1/2): for each keyword, store the author
+					if (!isset($keywordauthors[$kw])) {
+						$keywordauthors[$kw] = [ $authorid ];
+					} else {
+						if (!isset($keywordauthors[$kw][$authorid])) {
+							$keywordauthors[$kw][] = $authorid;
+						}
+					}
+
 				}
 			}
 		}
@@ -303,3 +316,17 @@ foreach ($details as $author => $array_of_titles) {
 	fwrite($fp, json_encode($array_of_titles));
 	fclose($fp);
 }
+
+
+
+// new (2/2): for each keyword, store the author
+// [
+// 	"kw1": [ a, b, c],
+// 	"kw2": [ c, d, e],
+// ]
+foreach ($keywordauthors as $keyword) {
+	$fp = fopen('./keywordauthors/' . md5($keyword) . '.json', 'w');
+	fwrite($fp, json_encode($keywordauthors[$keyword]));
+	fclose($fp);
+}
+
