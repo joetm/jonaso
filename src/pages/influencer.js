@@ -45,8 +45,7 @@ const DetailContainer = ({authorid, details, priority, keywordClick, activeKeywo
   const { docs=[], keywords=[] } = details
   // console.info("keywords", keywords)
   // console.info("docs", docs)
-
-  console.log('activeKeyword', activeKeyword)
+  // console.info('activeKeyword', activeKeyword)
 
   // const kwlist = keywords.join(", ")
   const kwlist = keywords.map((kw, i) => (
@@ -75,11 +74,10 @@ const DetailContainer = ({authorid, details, priority, keywordClick, activeKeywo
 class AuthorList extends React.Component {
   state = {
     details: {}, // cache of details
-    activeid: null,
-    activeAuthors: [],
     activeKeyword: null,
   }
   keywordClick = (e) => {
+  	const { updateActive } = this.props
     const keyword = e.target.innerText
     console.info('Querying keyword:', keyword)
     const kwid = md5(keyword);
@@ -94,37 +92,38 @@ class AuthorList extends React.Component {
     })
     .then(activeAuthors => {
       // console.info("Ajax response", activeAuthors)
-	  this.setState({ activeAuthors, activeKeyword: keyword })
+	  this.setState({ activeKeyword: keyword })
+	  updateActive({ activeAuthors })
     })
 
   }
   getAuthorDetails = (author) => {
+  	const { activeid, updateActive } = this.props
     const id = author.id
     // ------
     // remove, when the same author is clicked a second time
     // ------
-    if (id == this.state.activeid) {
+    if (id == activeid) {
       const details = this.state.details
       delete details[id];
       this.setState({
-        activeid: null,
         details,
-        activeAuthors: [],
       })
+      updateActive({activeid: null, activeAuthors: []})
       return
     }
     // reset the highlighted labels
     this.setState({
-      activeAuthors: [],
       activeKeyword: null,
     })
+    updateActive({activeAuthors: []})
     // ------
     // add
     // ------
     // cache check
     const details = this.state.details
     if (details[id]) {
-      this.setState({activeid: id})
+      updateActive({activeid: id})
       return
     }    
     // load from remote
@@ -141,15 +140,13 @@ class AuthorList extends React.Component {
       // update cache with details
       const details = this.state.details
       details[id] = res
-      this.setState({
-        activeid: id,
-        details,
-      })
+      this.setState({ details })
+      updateActive({activeid: id})
     })
   }
   render () {
-    const { list, priority } = this.props
-    const { details, activeid, activeAuthors, activeKeyword } = this.state
+    const { list, priority, activeid, activeAuthors } = this.props
+    const { details, activeKeyword } = this.state
     // console.log('list', list)
     if (!list) {
       return null
@@ -201,26 +198,47 @@ class AuthorList extends React.Component {
 
 class Influencer extends React.Component {
   state = {
-    pointer: 10,
+    activeid: null,
+    activeAuthors: [],
+  }
+  updateActive = (obj) => {
+  	this.setState({ ...obj })
   }
   render() {
     const { influencer = [] } = this.props
-    const { pointer } = this.state
-
+    const { activeid, activeAuthors } = this.state
     return (
         <Container>
           <h2>Influencers</h2>
           <div style={styles.clear}>
             <h3>Highly influential</h3>
-            <AuthorList priority={3} list={influencer[3]} />
+            <AuthorList
+            	priority={3}
+            	list={influencer[3]}
+            	activeid={activeid}
+            	activeAuthors={activeAuthors}
+            	updateActive={this.updateActive}
+            />
           </div>
           <div style={styles.clear}>
             <h3>Influential</h3>
-            <AuthorList priority={2} list={influencer[2]} />
+            <AuthorList
+            	priority={2}
+            	list={influencer[2]}
+            	activeid={activeid}
+            	activeAuthors={activeAuthors}
+            	updateActive={this.updateActive}
+            />
           </div>
           <div style={styles.clear}>
             <h3>Relevant</h3>
-            <AuthorList priority={1} list={influencer[1]} />
+            <AuthorList
+            	priority={1}
+            	list={influencer[1]}
+            	activeid={activeid}
+            	activeAuthors={activeAuthors}
+            	updateActive={this.updateActive}
+            />
           </div>
           <div style={styles.clear}></div>
         </Container>
