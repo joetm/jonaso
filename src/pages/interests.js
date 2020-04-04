@@ -24,9 +24,7 @@ class ReadingList extends React.Component {
       }
       return response.json()
     })
-    .then(influencer => {
-      this.setState({influencer})
-    })
+    .then(influencer => this.setState({ influencer }))
     // get keywords
     fetch(_KEYWORDS)
     .then(response => {
@@ -35,13 +33,11 @@ class ReadingList extends React.Component {
       }
       return response.json()
     })
-    .then(keywords => {
-      this.setState({keywords})
-    })
+    .then(keywords => this.setState({ keywords }))
   }
   render() {
     const { influencer, keywords } = this.state
-    const filtered_keywords = keywords.filter(kw => kw.num > 9)    
+    const filtered_keywords = keywords.filter(kw => kw.num > 10)
     return (
       <div>
         <Container>
@@ -53,6 +49,7 @@ class ReadingList extends React.Component {
             <div style={spacer}></div>
 
         </Container>
+
       </div>
     )
   }
