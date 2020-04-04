@@ -8,6 +8,8 @@ import { Container, Label, Segment } from 'semantic-ui-react'
 import { spacer } from "../common"
 import "./influencer.css"
 
+import md5 from "md5"
+
 
 const styles = {
   clear: {
@@ -77,7 +79,27 @@ class AuthorList extends React.Component {
   keywordClick = (e) => {
     const keyword = e.target.innerText
     console.log('Keyword:', keyword)
-    this.setState({activeKeyword: keyword})
+
+	alert(md5(keyword));
+
+
+    // load the authors of this keyword
+    const url = `https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/keywordauthors/${id}.json`
+    fetch(url)
+    .then(response => {
+      if (response.status >= 400) {
+        throw new Error("Bad response from server")
+      }
+      return response.json()
+    })
+    .then(res => {
+      // console.info("Ajax response", res)
+      // update cache with details
+      const details = this.state.details
+      details[id] = res
+	  this.setState({activeKeyword: keyword})
+    })
+
   }
   getAuthorDetails = (author) => {
     const id = author.id
@@ -157,7 +179,7 @@ class AuthorList extends React.Component {
     )
   }
 }
-
+//`
 
 class Influencer extends React.Component {
   state = {
@@ -166,7 +188,6 @@ class Influencer extends React.Component {
   render() {
     const { influencer = [] } = this.props
     const { pointer } = this.state
-    // console.log('influencer', influencer)
 
     return (
         <Container>
