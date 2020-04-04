@@ -109,6 +109,7 @@ $keywords = array();
 $details = array();
 $keywordauthors = array();
 
+
 // for progress bar
 $result = $db->query('SELECT count(json) AS `cnt` FROM `documents`');
 $total = $result->fetchArray(SQLITE3_ASSOC)['cnt'];
@@ -117,12 +118,11 @@ $done = 0;
 
 $result = $db->query('SELECT `json` FROM `documents`');
 
+
 $i = 0;
 while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 
 	$i++;
-
-	// var_dump($doc);
 
 	// skip empty
 	if ($doc === "{}") {
@@ -318,15 +318,10 @@ foreach ($details as $author => $array_of_titles) {
 }
 
 
-
 // new (2/2): for each keyword, store the author
-// [
-// 	"kw1": [ a, b, c],
-// 	"kw2": [ c, d, e],
-// ]
-foreach ($keywordauthors as $keyword) {
+foreach ($keywordauthors as $keyword => $arr) {
 	$fp = fopen('./keywordauthors/' . md5($keyword) . '.json', 'w');
-	fwrite($fp, json_encode($keywordauthors[$keyword]));
+	fwrite($fp, json_encode($arr));
 	fclose($fp);
 }
 
