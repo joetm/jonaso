@@ -3,7 +3,7 @@
 */
 
 import React from "react"
-import { Container, Label} from 'semantic-ui-react'
+import { Container, Label, Segment } from 'semantic-ui-react'
 
 import { spacer } from "../common"
 import "./influencer.css"
@@ -16,47 +16,63 @@ const styles = {
   },
   label: {
     marginBottom: '0.5em',
-    cursor: 'pointer',
-    float:'left',
     marginRight: '1em',
+    float:'left',
   },
   detailswrapper: {
     clear: 'both',
-    border: '1px solid black',
   },
 }
 
-const Wrapper = ({title, items}) => (
-  <div>
-    <div key={`${title}-2`}>{title}</div>
-    <div key={`${title}-2`}>{items}</div>
-  </div>
-)
 
-const DetailContainer = ({authorid, details}) => {
+const KeywordWrapper = ({title, items}) => (
+  <div style={{clear:'both'}}>
+    <h4 key={`${title}-t`}>{title}</h4>
+    <div style={{clear:'both'}} key={`${title}-i`}>{items}</div>
+  </div>
+) //`
+
+const PubWrapper = ({title, items}) => (
+  <div style={{paddingTop: '1rem', marginTop: '1rem', clear:'both'}}>
+    <h4 key={`${title}-t`}>{title}</h4>
+    <ol key={`${title}-i`}>{items}</ol>
+  </div>
+) //`
+
+const DetailContainer = ({authorid, details, priority}) => {
   const { docs=[], keywords=[] } = details
-  const kwlist = keywords.map(kw => <div className="ui label" key={`t${authorid}-kw-${kw}`}>{kw}</div>)
-  const publist = docs.map(doc => (
-          <div key={`t${authorid}${doc.priority}${doc.title}`}>{doc.title}</div>
-        ))
+  // console.info("keywords", keywords)
+  // console.info("docs", docs)
+
+  // const kwlist = keywords.join(", ")
+  const kwlist = keywords.map((kw, i) => <Label style={styles.label} as="a" color='teal' key={`kw${i}${authorid}${kw}`}>{kw}</Label>) //`;
+
+  const publist = docs.filter(doc => doc.priority === priority).map((doc, i) => (
+            <li key={`p${i}${authorid}${doc.priority}${doc.title}`}>{doc.title}</li>
+        )) //`
 
   return (
     <div style={styles.detailswrapper} key={`a-a${authorid}`}>
-      <Wrapper key={`w-a${authorid}-1`} title="Keywords" items={kwlist} />
-      <Wrapper key={`w-a${authorid}-2`} title="Publications" items={publist} />
+      <KeywordWrapper title="Keywords" items={kwlist} />
+      <PubWrapper title="Publications" items={publist} />
     </div>
   )
-}
+} //`
 
 
 class AuthorList extends React.Component {
   state = {
-    details: {},
+    details: {}, // cache of details
     activeid: null,
+  }
+  detailsVisible = () => {
+    return this.state.activeid !== null
   }
   getAuthorDetails = (author) => {
     const id = author.id
-    // remove
+    // ------
+    // remove, when the same author is clicked a second time
+    // ------
     if (id == this.state.activeid) {
       const details = this.state.details
       delete details[id];
@@ -66,7 +82,21 @@ class AuthorList extends React.Component {
       })
       return
     }
+    // TODO
+    // remove all open detail boxes
+
+
+
+    // ------
     // add
+    // ------
+    // cache check
+    const details = this.state.details
+    if (details[id]) {
+      this.setState({activeid: id})
+      return
+    }    
+    // load from remote
     const url = `https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/influencers/${id}.json`
     fetch(url)
     .then(response => {
@@ -76,7 +106,8 @@ class AuthorList extends React.Component {
       return response.json()
     })
     .then(res => {
-      console.info(res)
+      // console.info("Ajax response", res)
+      // update cache with details
       const details = this.state.details
       details[id] = res
       this.setState({
@@ -101,6 +132,7 @@ class AuthorList extends React.Component {
               <div key={`${index}_${author.id}`} id={author.id}>
                 <Label
                   style={styles.label}
+                  as="a"
                   color={activeid === author.id ? 'red' : null}
                   title={author.num > 1 ? author.num + ' publications' : author.num + ' publication'}
                   onClick={() => this.getAuthorDetails(author)}
@@ -108,8 +140,8 @@ class AuthorList extends React.Component {
                   {author.name}
                   <Label.Detail>{author.num}</Label.Detail>
                 </Label>
-                {details[author.id] &&
-                  <DetailContainer authorid={author.id} details={details[author.id]} />
+                {details[author.id] && activeid === author.id &&
+                  <DetailContainer authorid={author.id} priority={priority} details={details[author.id]} />
                 }
               </div>
             )
