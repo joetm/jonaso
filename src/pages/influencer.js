@@ -41,17 +41,19 @@ const PubWrapper = ({title, items}) => (
   </div>
 ) //`
 
-const DetailContainer = ({authorid, details, priority, keywordClick}) => {
+const DetailContainer = ({authorid, details, priority, keywordClick, activeKeyword}) => {
   const { docs=[], keywords=[] } = details
   // console.info("keywords", keywords)
   // console.info("docs", docs)
+
+  console.log('activeKeyword', activeKeyword)
 
   // const kwlist = keywords.join(", ")
   const kwlist = keywords.map((kw, i) => (
     <Label
       style={styles.label}
       as="a"
-      color='teal'
+      color={activeKeyword == kw ? 'orange' : 'teal'}
       onClick={(e) => keywordClick(e)}
       key={`kw${i}${authorid}${kw}`}
     >{kw}</Label>
@@ -74,17 +76,15 @@ class AuthorList extends React.Component {
   state = {
     details: {}, // cache of details
     activeid: null,
+    activeAuthors: [],
     activeKeyword: null,
   }
   keywordClick = (e) => {
     const keyword = e.target.innerText
-    console.log('Keyword:', keyword)
-
-	alert(md5(keyword));
-
-
+    console.info('Querying keyword:', keyword)
+    const kwid = md5(keyword);
     // load the authors of this keyword
-    const url = `https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/keywordauthors/${id}.json`
+    const url = `https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/keywordauthors/${kwid}.json`
     fetch(url)
     .then(response => {
       if (response.status >= 400) {
@@ -92,12 +92,9 @@ class AuthorList extends React.Component {
       }
       return response.json()
     })
-    .then(res => {
-      // console.info("Ajax response", res)
-      // update cache with details
-      const details = this.state.details
-      details[id] = res
-	  this.setState({activeKeyword: keyword})
+    .then(activeAuthors => {
+      // console.info("Ajax response", activeAuthors)
+	  this.setState({ activeAuthors, activeKeyword: keyword })
     })
 
   }
@@ -112,9 +109,15 @@ class AuthorList extends React.Component {
       this.setState({
         activeid: null,
         details,
+        activeAuthors: [],
       })
       return
     }
+    // reset the highlighted labels
+    this.setState({
+      activeAuthors: [],
+      activeKeyword: null,
+    })
     // ------
     // add
     // ------
@@ -146,7 +149,7 @@ class AuthorList extends React.Component {
   }
   render () {
     const { list, priority } = this.props
-    const { details, activeid } = this.state
+    const { details, activeid, activeAuthors, activeKeyword } = this.state
     // console.log('list', list)
     if (!list) {
       return null
@@ -156,12 +159,21 @@ class AuthorList extends React.Component {
         {
           list.map((author, index) => {
             if (author.num <= 1) { return null }
+            // label color
+            let labelColor = null
+        	if (activeAuthors.includes(author.id)) {
+        		labelColor = 'yellow'
+        	}
+        	if (activeid === author.id) {
+        		labelColor = 'red'
+        	}
+        	// return the list of authors
             return (
               <div key={`${index}_${author.id}`} id={author.id}>
                 <Label
                   style={styles.label}
                   as="a"
-                  color={activeid === author.id ? 'red' : null}
+                  color={labelColor}
                   title={author.num > 1 ? author.num + ' publications' : author.num + ' publication'}
                   onClick={() => this.getAuthorDetails(author)}
                 >
@@ -169,7 +181,13 @@ class AuthorList extends React.Component {
                   <Label.Detail>{author.num}</Label.Detail>
                 </Label>
                 {details[author.id] && activeid === author.id &&
-                  <DetailContainer authorid={author.id} priority={priority} details={details[author.id]} keywordClick={this.keywordClick} />
+                  <DetailContainer
+                  	authorid={author.id}
+                  	activeKeyword={activeKeyword}
+                  	priority={priority}
+                  	details={details[author.id]}
+                  	keywordClick={this.keywordClick}
+                  />
                 }
               </div>
             )
