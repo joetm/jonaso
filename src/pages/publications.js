@@ -1,7 +1,7 @@
 import React from "react"
 import Link from "gatsby-link"
 import { Button, Responsive, Header, List, Item, Icon, Grid, Container } from 'semantic-ui-react'
-import { Bar, BarChart, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from 'recharts'
+import { Bar, BarChart, XAxis, YAxis, Tooltip, LabelList, CartesianGrid, ResponsiveContainer } from 'recharts'
 import "isomorphic-fetch"
 // import useDetectPrint from 'use-detect-print'
 
@@ -114,9 +114,21 @@ class Publications extends React.Component {
 
     // const refMapping = JSON.parse(JSON.stringify(references))
     const refsByYear = []
+    let maxRefsByYear = 0
     for (let y in references) {
-      refsByYear.push({year: y, num: references[y].length})
+      const c = references[y].length
+      refsByYear.push({year: y, num: c})
+      if (c > maxRefsByYear) {
+        maxRefsByYear = c
+      }
     }
+    maxRefsByYear = maxRefsByYear + 2
+
+    const tickArray = []
+    for (let i = 0; i <= maxRefsByYear; i+=2) {
+      tickArray.push(i)
+    }
+    console.log(tickArray)
 
     return (
       <Container>
@@ -129,10 +141,14 @@ class Publications extends React.Component {
             <YAxis
               type="number"
               domain={[0, 'dataMax']}
+              ticks={tickArray}
+              allowDecimals={false}
             />
             <Tooltip />
             <CartesianGrid stroke="#eee" strokeDasharray="5 5"/>
-            <Bar type="step" dataKey="num" fill="#8CE6A9" />
+            <Bar dataKey="num" fill="#8CE6A9">
+              <LabelList dataKey="num" position="top" />
+            </Bar>
           </BarChart>
         </ResponsiveContainer>
 
