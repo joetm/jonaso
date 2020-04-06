@@ -85,15 +85,20 @@ class AuthorList extends React.Component {
     const url = `https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/keywordauthors/${kwid}.json`
     fetch(url)
     .then(response => {
-      if (response.status >= 400) {
-        throw new Error("Bad response from server")
+      if (response.status == 404) {
+        // no authors found. Just highlight the clicked keyword.
+        return []
+      } else {
+        if (response.status >= 400) {
+          throw new Error("Bad response from server")
+        }
       }
       return response.json()
     })
     .then(activeAuthors => {
       // console.info("Ajax response", activeAuthors)
-	  this.setState({ activeKeyword: keyword })
-	  updateActive({ activeAuthors })
+  	  this.setState({ activeKeyword: keyword })
+  	  updateActive({ activeAuthors })
     })
 
   }
