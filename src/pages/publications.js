@@ -26,6 +26,7 @@ const _REFERENCES_PER_YEAR = "https://raw.githubusercontent.com/joetm/jonaso/mas
 const _REFERENCES_PER_TYPE = "https://raw.githubusercontent.com/joetm/jonaso/master/public/static/references-type.json"
 
 
+
 /**
  * Group publications by year
  * @param {Array} pubList - List of publications
@@ -57,6 +58,7 @@ class Publications extends React.Component {
     references: {},
     referencesDetail: {},
     showing: 'type',
+    graphdata: {},
   }
   componentWillMount = () => {
     // fetch references per publication year
@@ -64,7 +66,27 @@ class Publications extends React.Component {
     .then(response => response.json())
     .then(refs => {
       const categorizedRefs = categorizeListPerYear(refs)
-      this.setState({references: categorizedRefs})
+
+      // const refMapping = JSON.parse(JSON.stringify(references))
+      const refsByYear = []
+      let maxRefsByYear = 0
+      for (let y in categorizedRefs) {
+        const c = categorizedRefs[y].length
+        refsByYear.push({year: y, num: c})
+        if (c > maxRefsByYear) {
+          maxRefsByYear = c
+        }
+      }
+
+      maxRefsByYear = maxRefsByYear + 2
+      const tickArray = []
+      for (let i = 0; i <= maxRefsByYear; i+=2) {
+        tickArray.push(i)
+      }
+      // console.log(tickArray)
+
+      const graphdata = {refsByYear, tickArray}
+      this.setState({references: categorizedRefs, graphdata })
     })
     // fetch references per publication type
     fetch(_REFERENCES_PER_TYPE)
@@ -88,7 +110,7 @@ class Publications extends React.Component {
     }
   }
   render() {
-    const { references, referencesDetail, showing } = this.state
+    const { references, referencesDetail, showing, graphdata } = this.state
     const keysYear = Object.keys(references).reverse()
     const keysType = Object.keys(referencesDetail).reverse()
     // keysType.sort() // sort alphabetically
@@ -112,36 +134,18 @@ class Publications extends React.Component {
 
     // const isPrinting = useDetectPrint()
 
-    // const refMapping = JSON.parse(JSON.stringify(references))
-    const refsByYear = []
-    let maxRefsByYear = 0
-    for (let y in references) {
-      const c = references[y].length
-      refsByYear.push({year: y, num: c})
-      if (c > maxRefsByYear) {
-        maxRefsByYear = c
-      }
-    }
-    maxRefsByYear = maxRefsByYear + 2
-
-    const tickArray = []
-    for (let i = 0; i <= maxRefsByYear; i+=2) {
-      tickArray.push(i)
-    }
-    console.log(tickArray)
-
     return (
       <Container>
 
         <ResponsiveContainer width="100%" height={150}>
-          <BarChart data={refsByYear}>
+          <BarChart data={graphdata.refsByYear}>
             <XAxis
               dataKey="year"
             />
             <YAxis
               type="number"
               domain={[0, 'dataMax']}
-              ticks={tickArray}
+              ticks={graphdata.tickArray}
               allowDecimals={false}
             />
             <Tooltip />
