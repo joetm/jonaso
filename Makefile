@@ -28,6 +28,15 @@ post-build:
 
 fetch-cv:
 	git clone git@github.com:joetm/academic-cv.git
+	# get an up-to-date graph of the publications from the homepage to use in the latex CV
+	./acquire-graph.js
+	mv ./graph.png ./academic-cv/
+	# modify publication-list.tex to use this graph
+	cd academic-cv; \
+		sed 's|\\includegraphics\[.*\]{.*}|\\includegraphics\[width=\\textwidth\]{./graph.png}|g' publication-list.tex > publications.tex; \
+		pdflatex -synctex=1 -interaction=nonstopmode publications.tex; \
+		pdflatex -synctex=1 -interaction=nonstopmode publications.tex
+	# set the options in the CV
 	cd academic-cv; \
 		sed 's|\\excludefromprint{.*}||g' cv.tex > out.tex; \
 		sed 's|\\settoggle{showpositiondetails}{true}|\\settoggle{showpositiondetails}{false}|g' out.tex > out2.tex; \
@@ -36,14 +45,15 @@ fetch-cv:
 		sed 's|\\settoggle{showinterests}{true}|\\settoggle{showsummary}{false}|g' out2.tex > out.tex; \
 		sed 's|\\settoggle{showlinks}{false}|\\settoggle{showlinks}{true}|g' out.tex > out2.tex; \
 		sed 's|\\settoggle{showpublications}{false}|\\settoggle{showlinks}{true}|g' out2.tex > out3.tex; \
-		sed 's|\\settoggle{showmoney}{true}|\\settoggle{showlinks}{false}|g' out3.tex > out4.tex; \
-		pdflatex -synctex=1 -interaction=nonstopmode out4.tex; \
-		pdflatex -synctex=1 -interaction=nonstopmode out4.tex
+		sed 's|\\settoggle{showmoney}{true}|\\settoggle{showlinks}{false}|g' out3.tex > cv.tex; \
+		pdflatex -synctex=1 -interaction=nonstopmode cv.tex; \
+		pdflatex -synctex=1 -interaction=nonstopmode cv.tex
 
 move-cv:
-	mv academic-cv/out4.pdf "public/cv/cv-jonas-oppenlaender.pdf"
+	mv academic-cv/cv.pdf "public/cv/oppenlaender-cv.pdf"
+	mv academic-cv/publications.pdf "public/cv/oppenlaender-publications.pdf"
+	# TODO
 	# mv academic-cv/out.pdf "public/cv/cv-jonas-oppenlaender-`date '+%Y.%m.%d'`.pdf"
-	# rm public/cv/cv-jonas-oppenlaender-*.pdf
 	rm -rf academic-cv
 
 pubs:

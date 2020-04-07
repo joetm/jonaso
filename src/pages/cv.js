@@ -75,7 +75,7 @@ const Row = ({left, middle, right}) => ( //rowspan=false
 
 const PdfCVButton = () => (
   <div style={{float:'right',marginTop:'0.5em'}}>
-    <a title="Download cv as pdf" href="/cv/cv-jonas-oppenlaender.pdf" target="_blank">
+    <a title="Download cv as pdf" href="/cv/oppenlaender-cv.pdf" target="_blank">
       <Icon size='large' name='file pdf outline' />
     </a>
   </div>
