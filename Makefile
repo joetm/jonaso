@@ -36,8 +36,8 @@ fetch-cv:
 	# modify publication-list.tex to use this graph
 	cd academic-cv; \
 		sed 's|figures/publications.png|graph.png|g' publication-list.tex > publications.tex; \
-		pdflatex -quiet -synctex=1 -interaction=nonstopmode publications.tex; \
-		pdflatex -quiet -synctex=1 -interaction=nonstopmode publications.tex
+		pdflatex -halt-on-error -synctex=1 -interaction=batchmode publications.tex; \
+		pdflatex -halt-on-error -synctex=1 -interaction=batchmode publications.tex
 
 	# set the options in the CV
 	cd academic-cv; \
@@ -49,8 +49,8 @@ fetch-cv:
 		sed 's|\\settoggle{showlinks}{false}|\\settoggle{showlinks}{true}|g' out.tex > out2.tex; \
 		sed 's|\\settoggle{showpublications}{false}|\\settoggle{showpublications}{true}|g' out2.tex > out.tex; \
 		sed 's|\\settoggle{showmoney}{true}|\\settoggle{showmoney}{false}|g' out.tex > cv.tex; \
-		pdflatex -quiet -synctex=1 -interaction=nonstopmode cv.tex; \
-		pdflatex -quiet -synctex=1 -interaction=nonstopmode cv.tex
+		pdflatex -halt-on-error -synctex=1 -interaction=batchmode cv.tex; \
+		pdflatex -halt-on-error -synctex=1 -interaction=batchmode cv.tex
 
 move-cv:
 	mv academic-cv/cv.pdf "public/cv/oppenlaender-cv.pdf"
