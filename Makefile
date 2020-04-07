@@ -28,26 +28,29 @@ post-build:
 
 fetch-cv:
 	git clone git@github.com:joetm/academic-cv.git
+
 	# get an up-to-date graph of the publications from the homepage to use in the latex CV
 	./acquire-graph.js
 	mv ./graph.png ./academic-cv/
+
 	# modify publication-list.tex to use this graph
 	cd academic-cv; \
-		sed 's|\\includegraphics\[.*\]{.*}|\\includegraphics\[width=\\textwidth\]{./graph.png}|g' publication-list.tex > publications.tex; \
-		pdflatex -synctex=1 -interaction=nonstopmode publications.tex; \
-		pdflatex -synctex=1 -interaction=nonstopmode publications.tex
+		sed 's|figures/publications.png|graph.png|g' publication-list.tex > publications.tex; \
+		pdflatex -quiet -synctex=1 -interaction=nonstopmode publications.tex; \
+		pdflatex -quiet -synctex=1 -interaction=nonstopmode publications.tex
+
 	# set the options in the CV
 	cd academic-cv; \
 		sed 's|\\excludefromprint{.*}||g' cv.tex > out.tex; \
 		sed 's|\\settoggle{showpositiondetails}{true}|\\settoggle{showpositiondetails}{false}|g' out.tex > out2.tex; \
 		sed 's|\\settoggle{showsummary}{true}|\\settoggle{showsummary}{false}|g' out2.tex > out.tex; \
-		sed 's|\\settoggle{shownationality}{true}|\\settoggle{showsummary}{false}|g' out.tex > out2.tex; \
-		sed 's|\\settoggle{showinterests}{true}|\\settoggle{showsummary}{false}|g' out2.tex > out.tex; \
+		sed 's|\\settoggle{shownationality}{true}|\\settoggle{shownationality}{false}|g' out.tex > out2.tex; \
+		sed 's|\\settoggle{showinterests}{true}|\\settoggle{showinterests}{false}|g' out2.tex > out.tex; \
 		sed 's|\\settoggle{showlinks}{false}|\\settoggle{showlinks}{true}|g' out.tex > out2.tex; \
-		sed 's|\\settoggle{showpublications}{false}|\\settoggle{showlinks}{true}|g' out2.tex > out3.tex; \
-		sed 's|\\settoggle{showmoney}{true}|\\settoggle{showlinks}{false}|g' out3.tex > cv.tex; \
-		pdflatex -synctex=1 -interaction=nonstopmode cv.tex; \
-		pdflatex -synctex=1 -interaction=nonstopmode cv.tex
+		sed 's|\\settoggle{showpublications}{false}|\\settoggle{showpublications}{true}|g' out2.tex > out.tex; \
+		sed 's|\\settoggle{showmoney}{true}|\\settoggle{showmoney}{false}|g' out.tex > cv.tex; \
+		pdflatex -quiet -synctex=1 -interaction=nonstopmode cv.tex; \
+		pdflatex -quiet -synctex=1 -interaction=nonstopmode cv.tex
 
 move-cv:
 	mv academic-cv/cv.pdf "public/cv/oppenlaender-cv.pdf"
