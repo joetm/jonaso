@@ -145,7 +145,6 @@ class Publications extends React.Component {
 
     return (
       <Container>
-        <PdfPubsButton />
 
         <ResponsiveContainer width="100%" height={150}>
           <BarChart data={graphdata.refsByYear}>
@@ -167,6 +166,7 @@ class Publications extends React.Component {
         </ResponsiveContainer>
 
         <div id="publicationButtons" style={styles.menu}>
+          <PdfPubsButton />
           <Button.Group>
             <Button disabled={showing !== 'type'} positive={showing !== 'type'}
               onClick={this.switchPubView}
