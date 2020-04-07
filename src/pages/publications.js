@@ -53,6 +53,15 @@ function categorizeListPerYear(pubList) {
 }
 
 
+const PdfPubsButton = () => (
+  <div style={{float:'right',marginTop:'0.5em'}}>
+    <a title="Download publications as pdf" href="/cv/oppenlaender-publications.pdf" target="_blank">
+      <Icon size='large' name='file pdf outline' />
+    </a>
+  </div>
+)
+
+
 class Publications extends React.Component {
   state = {
     references: {},
@@ -136,6 +145,7 @@ class Publications extends React.Component {
 
     return (
       <Container>
+        <PdfPubsButton />
 
         <ResponsiveContainer width="100%" height={150}>
           <BarChart data={graphdata.refsByYear}>
