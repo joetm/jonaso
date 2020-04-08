@@ -3,7 +3,7 @@
 */
 
 import React from "react"
-import { Container, Label, Segment } from 'semantic-ui-react'
+import { Container, Label } from 'semantic-ui-react'
 
 import { spacer } from "../common"
 import "./influencer.css"
@@ -172,16 +172,16 @@ class AuthorList extends React.Component {
         	// return the list of authors
             return (
               <div key={`${index}_${author.id}`} id={author.id}>
-                <Label
-                  style={styles.label}
-                  as="a"
-                  color={labelColor}
-                  title={author.num > 1 ? author.num + ' publications' : author.num + ' publication'}
-                  onClick={() => this.getAuthorDetails(author)}
-                >
-                  {author.name}
-                  <Label.Detail>{author.num}</Label.Detail>
-                </Label>
+              <Label
+                style={styles.label}
+                as="a"
+                color={labelColor}
+                title={author.num > 1 ? author.num + ' publications' : author.num + ' publication'}
+                onClick={() => this.getAuthorDetails(author)}
+              >
+                {author.name}
+                <Label.Detail>{author.num}</Label.Detail>
+              </Label>
                 {details[author.id] && activeid === author.id &&
                   <DetailContainer
                   	authorid={author.id}
