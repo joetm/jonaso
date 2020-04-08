@@ -10,6 +10,7 @@ import 'semantic-ui-css/components/container.min.css'
 import 'semantic-ui-css/components/image.min.css'
 import 'semantic-ui-css/components/icon.min.css'
 import 'semantic-ui-css/components/menu.min.css'
+import 'semantic-ui-css/components/loader.min.css'
 import 'semantic-ui-css/components/reset.min.css'
 import 'semantic-ui-css/components/site.min.css'
 
