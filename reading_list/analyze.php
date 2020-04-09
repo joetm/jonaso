@@ -105,8 +105,9 @@ function sortFunc($item1, $item2)
 $db = new MyDB();
 
 $authors = array();
+$coauthors = array();
 $keywords = array();
-$details = array();
+$influencers = array();
 $keywordauthors = array();
 
 
@@ -194,20 +195,20 @@ while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 						"priority" => $jsondoc->priority,
 						);
 			//first publication for this author
-			if (!isset($details[$author])) {
-				$details[$author] = [
+			if (!isset($influencers[$author])) {
+				$influencers[$author] = [
 					'docs' => array($thedoc),
 					'keywords' => $authorkeywords,
 				];
 			} else {
-				$details[$author]['docs'][] = $thedoc;
+				$influencers[$author]['docs'][] = $thedoc;
 				//author keywords
 				foreach ($authorkeywords as $kw) {
-					if (!in_array($kw, $details[$author]['keywords'])) {
-						$details[$author]['keywords'][] = $kw;
+					if (!in_array($kw, $influencers[$author]['keywords'])) {
+						$influencers[$author]['keywords'][] = $kw;
 					}
 
-					// new (1/2): for each keyword, store the author
+					// for each keyword, store the author
 					if (!isset($keywordauthors[$kw])) {
 						$keywordauthors[$kw] = [ $authorid ];
 					} else {
@@ -218,6 +219,24 @@ while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 
 				}
 			}
+
+			// fill coauthors
+			// first time seeing this author?
+			if (!isset($coauthors[$authorid])) {
+				$coauthors[$authorid] = [];
+			}
+			foreach ($jsondoc->authors as $a) {
+				// skip self
+				$a = trim(ucwords(strtolower($a)), "\n");
+				$aid = md5($a);
+				if ($authorid === $aid) {
+					continue
+				}
+				if (!in_array($aid, $coauthors[$authorid])) {
+					$coauthors[$authorid][] = $aid;
+				}
+			}
+
 		}
 
 	}
@@ -311,17 +330,23 @@ fclose($fp);
 
 // write out the author details
 // chdir('./influencers/');
-foreach ($details as $author => $array_of_titles) {
+foreach ($influencers as $author => $array_of_titles) {
 	$fp = fopen('./influencers/' . md5($author) . '.json', 'w');
 	fwrite($fp, json_encode($array_of_titles));
 	fclose($fp);
 }
 
-
-// new (2/2): for each keyword, store the author
+// for each keyword, store the author
 foreach ($keywordauthors as $keyword => $arr) {
 	$fp = fopen('./keywordauthors/' . md5($keyword) . '.json', 'w');
 	fwrite($fp, json_encode($arr));
+	fclose($fp);
+}
+
+// for each author, store the coauthors
+foreach ($coauthors as $author => $coauthors_arr) {
+	$fp = fopen('./coauthors/' . md5($author) . '.json', 'w');
+	fwrite($fp, json_encode($coauthors_arr));
 	fclose($fp);
 }
 
