@@ -24,19 +24,13 @@
 
 // https://stackoverflow.com/a/9853018/426266
 function show_status($done, $total, $size=30) {
-
     static $start_time;
-
     // if we go over our bound, just ignore it
     if($done > $total) return;
-
     if(empty($start_time)) $start_time=time();
     $now = time();
-
     $perc=(double)($done/$total);
-
     $bar=floor($perc*$size);
-
     $status_bar="\r[";
     $status_bar.=str_repeat("=", $bar);
     if($bar<$size){
@@ -45,23 +39,15 @@ function show_status($done, $total, $size=30) {
     } else {
         $status_bar.="=";
     }
-
     $disp=number_format($perc*100, 0);
-
     $status_bar.="] $disp%  $done/$total";
-
     $rate = ($now-$start_time)/$done;
     $left = $total - $done;
     $eta = round($rate * $left, 2);
-
     $elapsed = $now - $start_time;
-
     $status_bar.= " remaining: ".number_format($eta)." sec.  elapsed: ".number_format($elapsed)." sec.";
-
     echo "$status_bar  ";
-
     flush();
-
     // when done, send a newline
     if($done == $total) {
         echo "\n";
@@ -71,8 +57,7 @@ function show_status($done, $total, $size=30) {
 
 class MyDB extends SQLite3
 {
-    function __construct()
-    {
+    function __construct() {
         $this->open("./cache.db");
     }
 }
@@ -103,24 +88,6 @@ function normalize_name($author) {
 	// return
 	return $author;
 }
-
-// function reorganize_keywords(& $keywords, $newarray) {
-// 	$id = array_shift($newarray);
-// 	$tmp = $keywords[$id];
-// 	if (!isset($tmp)) {
-// 		foreach ($newarray as $kw) {
-// 			if (!in_array($kw, $keywords[$id])) {
-// 				array_push($keywords[$id], $kw);
-// 			}
-// 		}
-// 	} else {
-// 		// next level iteration
-// 		if (is_array($tmp)) {	
-// 			$id2 = array_shift($tmp);
-// 			reorganize_keywords($keywords[$id], $id2);
-// 		}
-// 	}
-// }
 
 
 $db = new MyDB();
@@ -357,8 +324,8 @@ foreach ($keywordauthors as $keyword => $arr) {
 }
 
 // for each author, store the coauthors
-foreach ($coauthors as $author => $coauthors_arr) {
-	$fp = fopen('./coauthors/' . md5($author) . '.json', 'w');
+foreach ($coauthors as $authorid => $coauthors_arr) {
+	$fp = fopen('./coauthors/' . $authorid . '.json', 'w');
 	fwrite($fp, json_encode($coauthors_arr));
 	fclose($fp);
 }
