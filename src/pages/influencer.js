@@ -21,38 +21,37 @@ const styles = {
     marginRight: '1em',
     float:'left',
   },
-  detailswrapper: {
-    clear: 'both',
-  },
 }
 
 
 // ----------------
 
-const KeywordWrapper = ({title, items}) => (
-  <div style={{clear:'both'}}>
-    <h4>{title}</h4>
-    <div style={{clear:'both'}}>{items}</div>
-  </div>
-)
+const Wrapper = {
+  KeywordWrapper: ({title, items}) => (
+    <div className="wrapperBox">
+      <h4>{title}</h4>
+      <div style={{clear:'both'}}>{items}</div>
+    </div>
+  ),
+  CoauthorWrapper: ({title, authorid, toggleCoauthors, coauthorToggleActive}) => (
+    <div className="wrapperBox">
+      <h4>{title}</h4>
+      <div><Checkbox checked={coauthorToggleActive} onChange={() => toggleCoauthors(authorid)} label='Show co-authors' toggle /></div>
+    </div>
+  ),
+  PubWrapper: ({title, items}) => (
+    <div className="wrapperBox">
+      <h4>{title}</h4>
+      <ol>{items}</ol>
+    </div>
+  ),
+}
 
-const CoauthorWrapper = ({title, authorid, toggleCoauthors}) => (
-  <div style={{clear:'both'}}>
-    <h4>{title}</h4>
-    <div><Checkbox onChange={() => toggleCoauthors(authorid)} label='Show co-authors' toggle /></div>
-  </div>
-)
 
-const PubWrapper = ({title, items}) => (
-  <div style={{paddingTop: "1rem", marginTop: "1rem", clear:"both"}}>
-    <h4>{title}</h4>
-    <ol>{items}</ol>
-  </div>
-)
 
 // ----------------
 
-const DetailContainer = ({authorid, details, priority, keywordClick, activeKeyword, toggleCoauthors}) => {
+const DetailContainer = ({authorid, details, priority, keywordClick, activeKeyword, toggleCoauthors, coauthorToggleActive}) => {
   const { docs=[], keywords=[] } = details
   // console.info("keywords", keywords)
   // console.info("docs", docs)
@@ -75,9 +74,9 @@ const DetailContainer = ({authorid, details, priority, keywordClick, activeKeywo
 
   return (
     <div className="clear" key={`a-a${authorid}`}>
-      <KeywordWrapper title="Keywords" items={kwlist} />
-      <CoauthorWrapper title="Co-Authors" authorid={authorid} toggleCoauthors={toggleCoauthors} />
-      <PubWrapper title="Publications" items={publist} />
+      <Wrapper.KeywordWrapper title="Keywords" items={kwlist} />
+      <Wrapper.CoauthorWrapper title="Co-Authors" authorid={authorid} toggleCoauthors={toggleCoauthors} coauthorToggleActive={coauthorToggleActive} />
+      <Wrapper.PubWrapper title="Publications" items={publist} />
     </div>
   )
 } //`
@@ -87,13 +86,24 @@ class AuthorList extends React.Component {
   state = {
     details: {}, // cache of details
     activeKeyword: null,
+    coauthorToggleActive: false,
   }
   keywordClick = (e) => {
-  	const { updateActive } = this.props
+    const { updateActive } = this.props
+    const { activeKeyword } = this.state
     const keyword = e.target.innerText
     console.info('Querying keyword:', keyword)
-    const kwid = md5(keyword);
+    // toggle the checkbox off
+    this.setState({coauthorToggleActive: false})
+    // click on already active author?
+    if (keyword == activeKeyword) {
+      // deselect this author
+      this.setState({ activeKeyword: null })
+      updateActive({ activeAuthors: [] })
+      return
+    }
     // load the authors of this keyword
+    const kwid = md5(keyword);
     const url = `https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/keywordauthors/${kwid}.json`
     fetch(url)
     .then(response => {
@@ -114,8 +124,16 @@ class AuthorList extends React.Component {
     })
   }
   toggleCoauthors = (authorid) => {
+    const { coauthorToggleActive } = this.state
     const { updateActive } = this.props
-    console.log(authorid)
+    if (coauthorToggleActive) {
+      updateActive({ activeAuthors: [] })
+      // deselect highlighted keyword
+      // deselect all highlighted coauthors
+      this.setState({ activeKeyword: null, coauthorToggleActive: false })
+      return
+    }
+    this.setState({coauthorToggleActive: true})
     const url = `https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/coauthors/${authorid}.json`
     fetch(url)
     .then(response => {
@@ -133,6 +151,8 @@ class AuthorList extends React.Component {
       // console.info("Ajax response", activeAuthors)
       // this.setState({ activeKeyword: keyword })
       updateActive({ activeAuthors })
+      // deselect highlighted keyword
+      this.setState({ activeKeyword: null })
     })
   }
   getAuthorDetails = (author) => {
@@ -184,7 +204,7 @@ class AuthorList extends React.Component {
   }
   render () {
     const { list, priority, activeid, activeAuthors } = this.props
-    const { details, activeKeyword } = this.state
+    const { details, activeKeyword, coauthorToggleActive } = this.state
     // console.log('list', list)
     if (!list) {
       return null
@@ -223,6 +243,7 @@ class AuthorList extends React.Component {
                   	details={details[author.id]}
                   	keywordClick={this.keywordClick}
                     toggleCoauthors={this.toggleCoauthors}
+                    coauthorToggleActive={coauthorToggleActive}
                   />
                 }
               </div>
@@ -249,7 +270,7 @@ class Influencer extends React.Component {
     return (
         <Container>
           <h2>Influencers</h2>
-          <div style={styles.clear}>
+          <div className="clear">
             <h3>Highly influential</h3>
             <AuthorList
             	priority={3}
@@ -259,7 +280,7 @@ class Influencer extends React.Component {
             	updateActive={this.updateActive}
             />
           </div>
-          <div style={styles.clear}>
+          <div className="clear">
             <h3>Influential</h3>
             <AuthorList
             	priority={2}
@@ -269,7 +290,7 @@ class Influencer extends React.Component {
             	updateActive={this.updateActive}
             />
           </div>
-          <div style={styles.clear}>
+          <div className="clear">
             <h3>Relevant</h3>
             <AuthorList
             	priority={1}
@@ -279,7 +300,7 @@ class Influencer extends React.Component {
             	updateActive={this.updateActive}
             />
           </div>
-          <div style={styles.clear}></div>
+          <div className="clear"></div>
         </Container>
     )
   }

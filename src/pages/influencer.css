@@ -1,12 +1,10 @@
 
-.kwlabel {
-  marginBottom: '0.5em';
-  cursor: 'pointer';
-  float:'left';
-  marginRight: '1em';
-  backgroundColor: '#FF9090';
+.clear {
+  clear: both;
 }
 
-.clear {
-  clear: 'both';
+.wrapperBox {
+  clear:both;
+  margin-top: 1rem;
+  padding-top: 1rem;
 }
