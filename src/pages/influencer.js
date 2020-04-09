@@ -3,7 +3,7 @@
 */
 
 import React from "react"
-import { Container, Label } from 'semantic-ui-react'
+import { Container, Label, Checkbox } from 'semantic-ui-react'
 
 import { spacer } from "../common"
 import "./influencer.css"
@@ -27,21 +27,32 @@ const styles = {
 }
 
 
+// ----------------
+
 const KeywordWrapper = ({title, items}) => (
   <div style={{clear:'both'}}>
     <h4>{title}</h4>
     <div style={{clear:'both'}}>{items}</div>
   </div>
-) //`
+)
+
+const CoauthorWrapper = ({title, authorid, toggleCoauthors}) => (
+  <div style={{clear:'both'}}>
+    <h4>{title}</h4>
+    <div><Checkbox onChange={() => toggleCoauthors(authorid)} label='Show co-authors' toggle /></div>
+  </div>
+)
 
 const PubWrapper = ({title, items}) => (
   <div style={{paddingTop: "1rem", marginTop: "1rem", clear:"both"}}>
     <h4>{title}</h4>
     <ol>{items}</ol>
   </div>
-) //`
+)
 
-const DetailContainer = ({authorid, details, priority, keywordClick, activeKeyword}) => {
+// ----------------
+
+const DetailContainer = ({authorid, details, priority, keywordClick, activeKeyword, toggleCoauthors}) => {
   const { docs=[], keywords=[] } = details
   // console.info("keywords", keywords)
   // console.info("docs", docs)
@@ -65,6 +76,7 @@ const DetailContainer = ({authorid, details, priority, keywordClick, activeKeywo
   return (
     <div className="clear" key={`a-a${authorid}`}>
       <KeywordWrapper title="Keywords" items={kwlist} />
+      <CoauthorWrapper title="Co-Authors" authorid={authorid} toggleCoauthors={toggleCoauthors} />
       <PubWrapper title="Publications" items={publist} />
     </div>
   )
@@ -100,7 +112,28 @@ class AuthorList extends React.Component {
   	  this.setState({ activeKeyword: keyword })
   	  updateActive({ activeAuthors })
     })
-
+  }
+  toggleCoauthors = (authorid) => {
+    const { updateActive } = this.props
+    console.log(authorid)
+    const url = `https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/coauthors/${authorid}.json`
+    fetch(url)
+    .then(response => {
+      if (response.status == 404) {
+        // no co-authors found.
+        return []
+      } else {
+        if (response.status >= 400) {
+          throw new Error("Bad response from server")
+        }
+      }
+      return response.json()
+    })
+    .then(activeAuthors => {
+      // console.info("Ajax response", activeAuthors)
+      // this.setState({ activeKeyword: keyword })
+      updateActive({ activeAuthors })
+    })
   }
   getAuthorDetails = (author) => {
   	const { activeid, updateActive } = this.props
@@ -189,6 +222,7 @@ class AuthorList extends React.Component {
                   	priority={priority}
                   	details={details[author.id]}
                   	keywordClick={this.keywordClick}
+                    toggleCoauthors={this.toggleCoauthors}
                   />
                 }
               </div>
