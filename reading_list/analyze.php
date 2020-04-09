@@ -83,6 +83,27 @@ function sortFunc($item1, $item2)
     return ($item1['num'] < $item2['num']) ? 1 : -1;
 }
 
+$_norm_name_db = [];
+function normalize_name($author) {
+	global $_norm_name_db;
+	// cache hit?
+	if (isset($_norm_name_db[$author])) {
+		return $_norm_name_db[$author];
+	}
+	$key = $author;
+	// reduce to "firstname lastname"
+	$parseauthor = shell_exec('./parsename.py "' . addslashes($author) . '"');
+	if ($parseauthor) {
+		$author = $parseauthor;
+	}
+	// FIRST LAST -> First Last
+	$author = trim(ucwords(strtolower($author)), "\n");
+	// cache
+	$_norm_name_db[$key] = $author;
+	// return
+	return $author;
+}
+
 // function reorganize_keywords(& $keywords, $newarray) {
 // 	$id = array_shift($newarray);
 // 	$tmp = $keywords[$id];
@@ -169,15 +190,8 @@ while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 
 			$author = trim($author);
 
-			// reduce to "firstname lastname"
-			$parseauthor = shell_exec('./parsename.py "' . addslashes($author) . '"');
-			if ($parseauthor) {
-				// echo "Parseauthor: " . $parseauthor . "\n";
-				$author = $parseauthor;
-			}
-
-			// FIRST LAST -> First Last
-			$author = trim(ucwords(strtolower($author)), "\n");
+			// normalization
+			$author = normalize_name($author);
 			$authorid = md5($author);
 
 			// increase publication counter for this author
@@ -225,7 +239,7 @@ while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 				$coauthors[$authorid] = [];
 			}
 			foreach ($jsondoc->authors as $a) {
-				$a = trim(ucwords(strtolower($a)), "\n");
+				$a = normalize_name($a);
 				$aid = md5($a);
 				// skip self
 				if ($authorid === $aid) {
