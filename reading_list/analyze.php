@@ -230,7 +230,7 @@ while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 				$a = trim(ucwords(strtolower($a)), "\n");
 				$aid = md5($a);
 				if ($authorid === $aid) {
-					continue
+					continue;
 				}
 				if (!in_array($aid, $coauthors[$authorid])) {
 					$coauthors[$authorid][] = $aid;
