@@ -178,7 +178,6 @@ while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 
 			// FIRST LAST -> First Last
 			$author = trim(ucwords(strtolower($author)), "\n");
-
 			$authorid = md5($author);
 
 			// increase publication counter for this author
@@ -220,15 +219,15 @@ while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 				}
 			}
 
-			// fill coauthors
+			// coauthors
 			// first time seeing this author?
 			if (!isset($coauthors[$authorid])) {
 				$coauthors[$authorid] = [];
 			}
 			foreach ($jsondoc->authors as $a) {
-				// skip self
 				$a = trim(ucwords(strtolower($a)), "\n");
 				$aid = md5($a);
+				// skip self
 				if ($authorid === $aid) {
 					continue;
 				}
