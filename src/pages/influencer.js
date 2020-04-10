@@ -12,10 +12,6 @@ import md5 from "md5"
 
 
 const styles = {
-  clear: {
-    clear: 'both',
-    marginBottom: '5em',
-  },
   label: {
     marginBottom: '0.5em',
     marginRight: '1em',
@@ -46,8 +42,6 @@ const Wrapper = {
     </div>
   ),
 }
-
-
 
 // ----------------
 
@@ -166,6 +160,7 @@ class AuthorList extends React.Component {
       delete details[id];
       this.setState({
         details,
+        coauthorToggleActive: false,
       })
       updateActive({activeid: null, activeAuthors: []})
       return
@@ -173,6 +168,7 @@ class AuthorList extends React.Component {
     // reset the highlighted labels
     this.setState({
       activeKeyword: null,
+      coauthorToggleActive: false,
     })
     updateActive({activeAuthors: []})
     // ------
