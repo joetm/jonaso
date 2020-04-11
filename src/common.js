@@ -17,3 +17,8 @@ const styles = {
 }
 
 export default styles
+
+export const nobottommargin = styles.nobottommargin
+export const notopmargin = styles.notopmargin
+export const nobold = styles.nobold
+export const spacer = styles.spacer

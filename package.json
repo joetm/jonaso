@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "description": "Gatsby hello world starter",
+  "name": "jonas.de",
+  "description": "jonaso.de",
   "license": "MIT",
   "scripts": {
     "dev": "yarn pubjson && yarn develop",
@@ -13,12 +13,11 @@
     "bundle-map": "bundle-buddy public/*.map"
   },
   "dependencies": {
-    "es6-promise": "^4.2.5",
-    "gatsby": "^1.9.279",
-    "gatsby-link": "^1.6.32",
-    "gatsby-plugin-no-sourcemaps": "^1.0.5",
-    "gatsby-plugin-nprogress": "^1.0.14",
-    "hoist-non-react-statics": "^3.2.1",
+    "es6-promise": "^4.2.8",
+    "gatsby": "^2.20.18",
+    "gatsby-plugin-no-sourcemaps": "^2.2.0",
+    "gatsby-plugin-nprogress": "^2.2.1",
+    "hoist-non-react-statics": "^3.3.2",
     "isomorphic-fetch": "^2.2.1",
     "latex.js": "^0.11.1",
     "lodash": "^4.17.15",
@@ -26,15 +25,17 @@
     "moment": "^2.24.0",
     "moment-range": "^4.0.2",
     "puppeteer": "^2.1.1",
-    "react-calendar-heatmap": "^1.8.0",
-    "react-loading-skeleton": "^1.1.1",
-    "recharts": "^1.5.0",
-    "rimraf": "^2.6.3",
-    "semantic-ui-css": "^2.2.12",
-    "semantic-ui-react": "^0.77.1",
+    "react": "^16.13.1",
+    "react-calendar-heatmap": "^1.8.1",
+    "react-dom": "^16.13.1",
+    "react-loading-skeleton": "^2.0.1",
+    "recharts": "^1.8.5",
+    "rimraf": "^3.0.2",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.88.2",
     "use-detect-print": "^0.0.2"
   },
   "devDependencies": {
-    "bundle-buddy": "^0.2.1"
+    "bundle-buddy": "^0.2.2"
   }
 }

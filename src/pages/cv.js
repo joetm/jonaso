@@ -1,6 +1,6 @@
 import React from "react"
-import Link from "gatsby-link"
-import { Icon, Label, Header, Divider, List, Item, Image, Container } from 'semantic-ui-react'
+import { Icon, Header, List, Item, Container } from 'semantic-ui-react'
+import Layout from "../components/layout"
 
 import { spacer } from "../common"
 import cv from "../cv.json"
@@ -88,7 +88,7 @@ class CV extends React.Component {
   }
   redirectToPortfolio = () => window.location = _PORTFOLIO_URL
   redirectToPublications = () => window.location = '/publications/'
-  componentWillMount() {
+  componentDidMount() {
     fetch(_PEERREVIEWS_URL)
     .then(response => response.json())
     .then(reviews => this.setState({reviews}))
@@ -100,11 +100,12 @@ class CV extends React.Component {
     return row.end === null ? "since " + row.start : row.start + " - " + row.end
   }
   render() {
-    const { reviews } = this.state
+    // const { reviews } = this.state
     const startEndYear = this.startEndYear
     const teachingPositions = Object.keys(cv.teaching)
 
     return (
+      <Layout>
       <Container className="print cv">
         <PdfCVButton />
         <h1 className="print-only">Jonas Oppenlaender</h1>
@@ -249,7 +250,7 @@ class CV extends React.Component {
 
 
 <Row left="Publications" middle={(
-      <a href="javascript:void();" onClick={this.redirectToPublications}>&rarr; &nbsp; See Publications</a>
+      <button onClick={this.redirectToPublications}>&rarr; &nbsp; See Publications</button>
 )} right="" />
 
 
@@ -280,7 +281,7 @@ class CV extends React.Component {
 ***********************/}
 
 <Row left="Technical Skills" middle={(
-    <a href="javascript:void();" onClick={this.redirectToPortfolio}>&rarr; &nbsp; Visit my Web Development Portfolio</a>
+    <button onClick={this.redirectToPortfolio}>&rarr; &nbsp; Visit my Web Development Portfolio</button>
 )} right="" />
 
 
@@ -444,6 +445,7 @@ class CV extends React.Component {
                   <div className="spacer" style={spacer}></div>
 
               </Container>
+        </Layout>
         )
   }
 }

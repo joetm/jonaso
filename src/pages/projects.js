@@ -1,19 +1,16 @@
 import React from "react"
-import "isomorphic-fetch"
-import Link from "gatsby-link"
-import { Image, Responsive, Button, Header, List, Item, Icon, Grid, Container } from 'semantic-ui-react'
-// import "isomorphic-fetch"
-
-import { spacer } from "../common"
-
-import img_idlab from "../img/idlab.jpg"
-import img_ikon  from "../img/ikon.png"
+import { Image, Header, List, Item, Grid, Container } from 'semantic-ui-react'
+import Layout from "../components/layout"
+import { spacer } from "../common.js"
+// import img_idlab from "../img/idlab.jpg"
+// import img_ikon  from "../img/ikon.png"
 // import crowdui   from "../img/crowdui-vision.jpg"
-import prodxml   from "../img/prodxml.jpg"
-import kano      from "../img/kano-variation.jpg"
-import sns       from "../img/sns-analysis.png"
-import skillsplanner from "../img/skillsplanner.png"
-import img_cpcw  from "../img/cpcw.jpg"
+// import prodxml   from "../img/prodxml.jpg"
+// import kano      from "../img/kano-variation.jpg"
+// import sns       from "../img/sns-analysis.png"
+// import skillsplanner from "../img/skillsplanner.png"
+// import img_cpcw  from "../img/cpcw.jpg"
+
 
 
 const _PROJECTS = 'https://raw.githubusercontent.com/joetm/jonaso/master/src/projects.json'
@@ -34,7 +31,7 @@ const CustomImage = ({image}) => (
 
 const joinIfNotNull = (arr) => arr.filter(val => val ? val : undefined).join(', ')
 
-const Banner = (src, alt, title) => <img style={{width:'100%'}} src={src} alt={alt} title={title} />
+// const Banner = (src, alt, title) => <img style={{width:'100%'}} src={src} alt={alt} title={title} />
 
 const PresItem = ({pres, i}) => {
   const url = pres.doi ? `http://doi.org/${pres.doi}` : pres.url || null
@@ -62,7 +59,7 @@ class Projects extends React.Component {
   state = {
     projects: [],
   }
-  componentWillMount = () => {
+  componentDidMount = () => {
     // get projects
     fetch(_PROJECTS)
     .then(response => {
@@ -75,9 +72,9 @@ class Projects extends React.Component {
   }
   render() {
     const { projects } = this.state
-    const keys = Object.keys(projects).reverse()
+    // const keys = Object.keys(projects).reverse()
     return (
-      <div>
+      <Layout>
         <Container>
               <Header id="technical-skills" size="huge">Research Projects</Header>
 
@@ -152,11 +149,10 @@ class Projects extends React.Component {
                 })
               }
 
-
             <div style={spacer}></div>
 
         </Container>
-      </div>
+      </Layout>
     )
   }
 }
