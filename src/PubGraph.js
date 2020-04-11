@@ -29,16 +29,6 @@ const aggregateByDay = (docs) => {
   return aggDocs
 }
 
-// const zeroFill = (docs, documents) => {
-//   const min = getMin(documents)
-//   const max = getMax(documents)
-//   let currDate = min
-//   while (currDate < max) {
-//     currDate += 24*60*60*1000
-//     docs[currDate] = 0
-//   }
-//   return docs
-// }
 
 class PubGraph extends React.Component {
   state = {
@@ -53,11 +43,6 @@ class PubGraph extends React.Component {
       docs = augmentDate(documents)
       if (!this.isAggregated) {
         docs = aggregateByDay(docs)
-        // console.log('aggregateByDay', docs)
-        // zero fill
-        // docs = zeroFill(docs, documents)
-        // console.log('zeroFill', docs)
-        // console.log('aggDocs', docs)
         // convert obj to array
         const keys = Object.keys(docs)
         keys.sort()
@@ -67,22 +52,17 @@ class PubGraph extends React.Component {
             day: Number(key),
           }
         })
-        // console.log('arrDocs', arrDocs);
         this.isAggregated = true
-        // docs = zeroFill(docs)
-        this.setState({docs})
+        this.setState({ docs })
       }
     }
   }
   render() {
     const { docs } = this.state
-    // console.log('docs', docs)
     return (
       <div>
         <Container>
-
           <Header size="large">Timeline</Header>
-
           <ResponsiveContainer width="100%" height={150}>
           <BarChart data={docs}>
             <XAxis
