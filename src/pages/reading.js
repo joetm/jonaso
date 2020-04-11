@@ -6,7 +6,7 @@ import React from "react"
 import Link from "gatsby-link"
 import { Table, Responsive, Header, List, Label, Item, Icon, Grid, Container } from 'semantic-ui-react'
 // require('es6-promise').polyfill();
-import "isomorphic-fetch"
+// import "isomorphic-fetch"
 
 import PubGraph from "../PubGraph.js"
 import { spacer } from "../common"
