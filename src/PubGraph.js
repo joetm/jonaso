@@ -81,9 +81,7 @@ class PubGraph extends React.Component {
       <div>
         <Container>
 
-          <Header size="large">
-            Timeline
-          </Header>
+          <Header size="large">Timeline</Header>
 
           <ResponsiveContainer width="100%" height={150}>
           <BarChart data={docs}>

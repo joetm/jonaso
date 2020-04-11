@@ -42,7 +42,7 @@ const PresItem = ({pres, i}) => {
     <List key={`presi_${i}`}>
       <List.Item>
         <List.Icon name='newspaper' />
-        <List.Content>{
+        <List.Content style={{textDecoration: pres.status === 'canceled' ? 'line-through': 'inherit'}}>{
           url ?
             <a href={url}>{pres.title}</a>
             :
@@ -79,7 +79,6 @@ class Projects extends React.Component {
     return (
       <div>
         <Container>
-
               <Header id="technical-skills" size="huge">Research Projects</Header>
 
 							<p style={spacer}>
@@ -88,8 +87,8 @@ class Projects extends React.Component {
 
               {
                 projects.map(project => {
-                	const { title, subtitle, description, date, organisation, organisation_href, funding, img } = project
-                  const { presentations = [], workshops = [] } = project
+                	const { title, subtitle, description, date, organisation, organisation_href, funding, img,
+                    presentations = [], workshops = [] } = project
                   return (
                     <Grid key={`grid_${title}`} style={{marginBottom:'20px'}}>
 
@@ -147,7 +146,6 @@ class Projects extends React.Component {
                         </Item>
                         </Grid.Column>
                       </Grid.Row>
-
 
                     </Grid>
                   )
