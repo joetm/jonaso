@@ -1,10 +1,9 @@
 import React from "react"
 import { Container } from 'semantic-ui-react'
-// require('es6-promise').polyfill()
-import "isomorphic-fetch"
 import { spacer } from "../common"
-import Influencer from "./influencer"
-import Keywords from "./keywords"
+import Influencer from "../components/influencer"
+import Keywords from "../components/keywords"
+import Layout from "../components/layout"
 
 const _INFLUENCER = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/influencer.json'
 const _KEYWORDS = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/keywords.json'
@@ -15,7 +14,7 @@ class ReadingList extends React.Component {
     influencer: [],
     keywords: [],
   }
-  componentWillMount = () => {
+  componentDidMount = () => {
     // get influencer
     fetch(_INFLUENCER)
     .then(response => {
@@ -39,18 +38,13 @@ class ReadingList extends React.Component {
     const { influencer, keywords } = this.state
     const filtered_keywords = keywords.filter(kw => kw.num > 14)
     return (
-      <div>
+      <Layout>
         <Container>
-
             <Keywords keywords={filtered_keywords} />
-
             <Influencer influencer={influencer} />
-            
             <div style={spacer}></div>
-
         </Container>
-
-      </div>
+      </Layout>
     )
   }
 }

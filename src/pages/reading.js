@@ -3,12 +3,9 @@
 */
 
 import React from "react"
-import Link from "gatsby-link"
-import { Table, Responsive, Header, List, Label, Item, Icon, Grid, Container } from 'semantic-ui-react'
-// require('es6-promise').polyfill();
-// import "isomorphic-fetch"
-
-import PubGraph from "../PubGraph.js"
+import { Table, Header, Container } from 'semantic-ui-react'
+import Layout from "../components/layout"
+import PubGraph from "../components/PubGraph.js"
 import { spacer } from "../common"
 
 // import "semantic-ui-css/components/table.css"
@@ -40,7 +37,7 @@ class ReadingList extends React.Component {
     unrecognized_overall: undefined,
     unrecognized_overall_percent: undefined,
   }
-  componentWillMount = () => {
+  componentDidMount = () => {
     // get reading list
     fetch(_LIST_URL)
     .then(response => {
@@ -72,7 +69,7 @@ class ReadingList extends React.Component {
   render() {
     const { documents, modified, unrecognized_overall, unrecognized_overall_percent } = this.state
     return (
-      <div>
+      <Layout>
         <Container>
 
             <PubGraph documents={documents} />
@@ -115,7 +112,7 @@ class ReadingList extends React.Component {
             <div style={spacer}></div>
 
         </Container>
-      </div>
+      </Layout>
     )
   }
 }

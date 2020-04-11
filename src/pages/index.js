@@ -1,13 +1,12 @@
 import React from "react"
-import Link from "gatsby-link"
-import { Label, Header, List, Grid, Divider, Image, Container, Icon } from 'semantic-ui-react'
-import "isomorphic-fetch"
+import { Header, Grid, Divider, Image, Container, Icon } from 'semantic-ui-react'
 
 import "../../libs/academicons/css/academicons.min.css"
 import TravelRotary from "../TravelRotary"
 import img from "../img/opp.jpg"
 import ACMDL from "../img/ACM-DL-Logo-size3.webp"
 import { nobottommargin, notopmargin, nobold } from "../common"
+import Layout from "../components/layout"
 
 
 const keywords = {
@@ -72,7 +71,7 @@ class Home extends React.Component {
   }
   render() {
     return (
-      <div>
+      <Layout>
         <Container style={{marginBottom: '14px'}}>
 
           <Grid>
@@ -159,19 +158,19 @@ class Home extends React.Component {
 
           <Divider />
 
-          <a href="https://www.linkedin.com/in/jonasopp/" target="_blank">
+          <a href="https://www.linkedin.com/in/jonasopp/" target="_blank" rel="noopener noreferrer">
               <Icon title="Jonas Oppenlaender on LinkedIn" link={true} color="grey" size="big" name='linkedin square' />
           </a>
 
-          <a href="https://github.com/joetm" target="_blank">
+          <a href="https://github.com/joetm" target="_blank" rel="noopener noreferrer">
               <Icon title="Jonas Oppenlaender on GitHub" link={true} color="grey" size="big" name='github square' />
           </a>
 
-          <a href="https://twitter.com/Duesynapse" target="_blank">
+          <a href="https://twitter.com/Duesynapse" target="_blank" rel="noopener noreferrer">
               <Icon title="Jonas Oppenlaender on Twitter" link={true} color="grey" size="big" name='twitter square' />
           </a>
 
-          <a href="https://dl.acm.org/author_page.cfm?id=99659312669" target="_blank">
+          <a href="https://dl.acm.org/author_page.cfm?id=99659312669" target="_blank" rel="noopener noreferrer">
               <i style={{display:'inline-block', width: '25px', height: '25px',
               	backgroundImage: `url(${ACMDL})`, verticalAlign: 'middle', backgroundPosition: 'center center', lineHeight: 1, margin: '0px 0.25rem 0px 0px', backgroundSize: 'cover', opacity: 0.45}} title="Jonas Oppenlaender on ACM DL"></i>
           </a>
@@ -184,12 +183,12 @@ class Home extends React.Component {
               <i style={styles.academicon} title="Jonas Oppenlaender on DBLP" className="ai ai-dblp-square ai-2x"></i>
           </a>
 
-          <a href="https://scholar.google.com/citations?hl=de&user=ucO_QYQAAAAJ" target="_blank">
+          <a href="https://scholar.google.com/citations?hl=de&user=ucO_QYQAAAAJ" target="_blank" rel="noopener noreferrer">
               <i style={styles.academicon} title="Jonas Oppenlaender on Google Scholar" className="ai ai-google-scholar-square ai-2x"></i>
           </a>
 
         </Container>
-      </div>
+      </Layout>
     )
   }
 }

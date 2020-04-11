@@ -20,7 +20,7 @@ class TravelRotary extends React.Component {
   state = {
     rotary: []
   }
-  componentWillMount() {
+  componentDidMount() {
     fetch(TRAVEL)
     .then(response => response.json())
     .then(travel => this.setRotary(travel))

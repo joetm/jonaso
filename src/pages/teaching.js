@@ -1,8 +1,7 @@
 import React from "react"
-import Link from "gatsby-link"
-import { Responsive, Header, List, Item, Icon, Grid, Container } from 'semantic-ui-react'
-import "isomorphic-fetch"
+import { Header, Item, Container } from 'semantic-ui-react'
 
+import Layout from "../components/layout"
 import { spacer } from "../common"
 
 
@@ -19,13 +18,12 @@ const styles = {
 
 
 class Teaching extends React.Component {
-  redirectToPortfolio = () => {
-    window.location = _PORTFOLIO_URL
-  }
+  // redirectToPortfolio = () => {
+  //   window.location = _PORTFOLIO_URL
+  // }
   render() {
         return (
-            <div>
-
+            <Layout>
               <Container>
 
                 <Header id="education" size="large">Teaching Assistant</Header>
@@ -36,9 +34,7 @@ class Teaching extends React.Component {
                       <div style={styles.datum}>Autumn term 2018</div>
                       <Item.Content>
                         <Item.Header>
-                          <a href="#">
                             Social Computing
-                          </a>
                         </Item.Header>
                       </Item.Content>
                     </Item>
@@ -47,9 +43,7 @@ class Teaching extends React.Component {
                       <div style={styles.datum}>Autumn term 2018</div>
                       <Item.Content>
                         <Item.Header>
-                          <a href="#">
                             Human Computer Interaction
-                          </a>
                         </Item.Header>
                       </Item.Content>
                     </Item>
@@ -59,7 +53,7 @@ class Teaching extends React.Component {
                   <div style={spacer}></div>
 
               </Container>
-            </div>
+            </Layout>
         )
   }
 }

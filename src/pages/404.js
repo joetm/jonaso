@@ -1,18 +1,16 @@
 import React from "react"
-import Link from "gatsby-link"
-import { Container, Icon } from 'semantic-ui-react'
+import { Container } from 'semantic-ui-react'
+import Layout from "../components/layout"
 
 
 class Home extends React.Component {
     render() {
         return (
-            <div>
+            <Layout>
               <Container>
-
                 404 - Not Found.
-
               </Container>
-            </div>
+            </Layout>
         )
     }
 }
