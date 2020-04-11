@@ -205,7 +205,7 @@ class AuthorList extends React.Component {
       return null
     }
     return (
-      <div>
+      <React.Fragment>
         {
           list.map((author, index) => {
             if (author.num <= 1) { return null }
@@ -245,7 +245,7 @@ class AuthorList extends React.Component {
             )
           })
         }
-      </div>
+      </React.Fragment>
     )
   }
 }

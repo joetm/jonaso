@@ -72,31 +72,31 @@ class TravelRotary extends React.Component {
   render() {
     const { rotary } = this.state
     return (
-      <div>
-          <Header size="tiny" style={styles.nobottommargin}>Travel</Header>
-          <List>
-              {
-                  rotary.map((item, index) => {
-                    let dateString = ""
-                    if ('start' in item && 'end' in item) {
-                      dateString = item.start.getDate() + '.-' + item.end.getDate() + '.' + (item.end.getMonth() + 1) + '.' + item.end.getFullYear()
-                    }
-                    if ('date' in item) {
-                      dateString = item.date.getDate() + '.' + (item.date.getMonth() + 1) + '.' + item.date.getFullYear()
-                    }
-                    return (
-                      <List.Item key={index} title={item.status} style={{
-                        color: item.isPast ? '#AAAAAA' : '#000000',
-                        textDecoration: item.status === 'canceled' ? 'line-through' : 'initial'
-                      }}>
-                          <List.Icon name={['confirmed', 'canceled'].indexOf(item.status) > -1 ? 'checkmark' : 'calendar'} />
-                          {[item.event,dateString,item.location].join(", ")}
-                      </List.Item>
-                    );
-                  })
-              }
-          </List>
-      </div>
+      <React.Fragment>
+        <Header size="tiny" style={styles.nobottommargin}>Travel</Header>
+        <List>
+            {
+                rotary.map((item, index) => {
+                  let dateString = ""
+                  if ('start' in item && 'end' in item) {
+                    dateString = item.start.getDate() + '.-' + item.end.getDate() + '.' + (item.end.getMonth() + 1) + '.' + item.end.getFullYear()
+                  }
+                  if ('date' in item) {
+                    dateString = item.date.getDate() + '.' + (item.date.getMonth() + 1) + '.' + item.date.getFullYear()
+                  }
+                  return (
+                    <List.Item key={index} title={item.status} style={{
+                      color: item.isPast ? '#AAAAAA' : '#000000',
+                      textDecoration: item.status === 'canceled' ? 'line-through' : 'initial'
+                    }}>
+                        <List.Icon name={['confirmed', 'canceled'].indexOf(item.status) > -1 ? 'checkmark' : 'calendar'} />
+                        {[item.event,dateString,item.location].join(", ")}
+                    </List.Item>
+                  );
+                })
+            }
+        </List>
+      </React.Fragment>
     )
   }
 }
