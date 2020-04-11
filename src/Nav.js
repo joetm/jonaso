@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Input, Menu } from 'semantic-ui-react'
 import { navigateTo } from "gatsby-link"
 
@@ -9,11 +9,21 @@ const styles = {
 }
 
 
-export default class Nav extends Component {
+export default class Nav extends React.Component {
   state = {
     activeItem: 'home'
   }
+  createMenu = ({item}) => {
+    const { activeItem } = this.state
+    const lcitem = item.toLowerCase()
+    return (
+      <Menu.Item name={lcitem} active={activeItem === lcitem} onClick={this.handleItemClick}>
+        {item}
+      </Menu.Item>
+    )
+  }
   handleItemClick = (e, { name }) => {
+    e.preventDefault()
     this.setState({activeItem: name})
     if (name === 'home') {
       navigateTo('/')
@@ -26,40 +36,16 @@ export default class Nav extends Component {
   }
   render() {
     const { activeItem } = this.state
-    // console.log('activeItem:', activeItem)
+    const MenuItem = this.createMenu
     return (
       <header>
         <Menu fluid pointing stackable secondary widths="6" style={styles.navSpacer}>
-          <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick}>
-            Home
-          </Menu.Item>
-          <Menu.Item name='publications' active={activeItem === 'publications'} onClick={this.handleItemClick}>
-            Publications
-          </Menu.Item>
-          {/*
-          <Menu.Item name='teaching' active={activeItem === 'teaching'} onClick={this.handleItemClick}>
-            Teaching
-          </Menu.Item>
-    	    */}
-          <Menu.Item name='projects' active={activeItem === 'projects'} onClick={this.handleItemClick}>
-            Projects
-          </Menu.Item>
-          <Menu.Item name='cv' active={activeItem === 'cv'} onClick={this.handleItemClick}>
-            CV
-          </Menu.Item>
-          <Menu.Item name='reading' active={activeItem === 'reading'} onClick={this.handleItemClick}>
-            Reading
-          </Menu.Item>
-          <Menu.Item name='interests' active={activeItem === 'interests'} onClick={this.handleItemClick}>
-            Interests
-          </Menu.Item>
-          {/*
-            <Menu.Menu position='right'>
-              <Menu.Item>
-                <Input icon='search' placeholder='Search...' />
-              </Menu.Item>
-            </Menu.Menu>
-          */}
+          <MenuItem item='Home' />
+          <MenuItem item='Publications' />
+          <MenuItem item='Projects' />
+          <MenuItem item='CV' />
+          <MenuItem item='Reading' />
+          <MenuItem item='Interests' />
         </Menu>
       </header>
     )
