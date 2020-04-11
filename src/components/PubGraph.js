@@ -60,7 +60,6 @@ class PubGraph extends React.Component {
   render() {
     const { docs } = this.state
     return (
-      <div>
         <Container>
           <Header size="large">Timeline</Header>
           <ResponsiveContainer width="100%" height={150}>
@@ -76,9 +75,7 @@ class PubGraph extends React.Component {
             <Bar type="step" dataKey="num" fill="#4183c4" />
           </BarChart>
           </ResponsiveContainer>
-            
         </Container>
-      </div>
     )
   }
 }
