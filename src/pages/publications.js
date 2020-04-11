@@ -1,10 +1,8 @@
 import React from "react"
-import Link from "gatsby-link"
-import { Button, Responsive, Header, List, Item, Icon, Grid, Container } from 'semantic-ui-react'
+import { Button, Responsive, Header, Item, Icon, Grid, Container } from 'semantic-ui-react'
 import { Bar, BarChart, XAxis, YAxis, Tooltip, LabelList, CartesianGrid, ResponsiveContainer } from 'recharts'
-import "isomorphic-fetch"
 // import useDetectPrint from 'use-detect-print'
-
+import Layout from "../components/layout"
 import "semantic-ui-css/components/grid.min.css"
 import { spacer } from "../common"
 
@@ -69,7 +67,7 @@ class Publications extends React.Component {
     showing: 'type',
     graphdata: {},
   }
-  componentWillMount = () => {
+  componentDidMount = () => {
     // fetch references per publication year
     fetch(_REFERENCES_PER_YEAR)
     .then(response => response.json())
@@ -144,6 +142,7 @@ class Publications extends React.Component {
     // const isPrinting = useDetectPrint()
 
     return (
+      <Layout>
       <Container>
 
         <ResponsiveContainer width="100%" height={150}>
@@ -288,6 +287,7 @@ class Publications extends React.Component {
 
         </Container>
       </Container>
+      </Layout>
     )
   }
 }
