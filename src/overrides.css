@@ -1,4 +1,9 @@
 
+/* Force scrollbar to prevent jumping */
+body {
+    overflow-y: scroll;
+}
+
 /*--------------
  Semantic UI Collapsing Table Cells
 ---------------*/
