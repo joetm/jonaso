@@ -61,6 +61,7 @@ const SupervisorWrap = ({supervisor, link}) => {
 
 
 // TODO: ROWSPAN
+// {/*style={rowspan ? styles.rowspan2 : null}*/}
 const Row = ({left, middle, right}) => ( //rowspan=false
   <div className="row">
     <div className="leftCol">
@@ -70,7 +71,6 @@ const Row = ({left, middle, right}) => ( //rowspan=false
     <div style={styles.rightCol}>{right}</div>
   </div>
 )
-// {/*style={rowspan ? styles.rowspan2 : null}*/}
 
 
 const PdfCVButton = () => (
@@ -83,11 +83,8 @@ const PdfCVButton = () => (
 
 
 class CV extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      reviews: {total: 0},
-    }
+  state = {
+    reviews: {total: 0},
   }
   redirectToPortfolio = () => window.location = _PORTFOLIO_URL
   redirectToPublications = () => window.location = '/publications/'
@@ -103,10 +100,9 @@ class CV extends React.Component {
     return row.end === null ? "since " + row.start : row.start + " - " + row.end
   }
   render() {
-
-    const teachingPositions = Object.keys(cv.teaching)
     const { reviews } = this.state
     const startEndYear = this.startEndYear
+    const teachingPositions = Object.keys(cv.teaching)
 
     return (
       <Container className="print cv">

@@ -17,11 +17,8 @@ const styles = {
 
 
 class TravelRotary extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      rotary: [],
-    }
+  state = {
+    rotary: []
   }
   componentWillMount() {
     fetch(TRAVEL)
@@ -29,7 +26,6 @@ class TravelRotary extends React.Component {
     .then(travel => this.setRotary(travel))
   }
   setRotary(travel) {
-
     const Now = new Date()
 
     // convert dates into JavaScript dates
@@ -69,9 +65,7 @@ class TravelRotary extends React.Component {
     // show two above and three below the current item
     const sliceMin = index - 5 <= 0 ? 0 : index - 5;
     const sliceMax = index + 5 >= rotary.length ? rotary.length : index + 5;
-    // console.log(index, sliceMin, sliceMax)
     rotary = rotary.slice(sliceMin, sliceMax)
-    // console.log('rotary', rotary);
 
     this.setState({ rotary })
   }
@@ -79,9 +73,7 @@ class TravelRotary extends React.Component {
     const { rotary } = this.state
     return (
       <div>
-
           <Header size="tiny" style={styles.nobottommargin}>Travel</Header>
-
           <List>
               {
                   rotary.map((item, index) => {
@@ -104,7 +96,6 @@ class TravelRotary extends React.Component {
                   })
               }
           </List>
-
       </div>
     )
   }
