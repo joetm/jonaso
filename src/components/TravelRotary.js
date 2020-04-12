@@ -1,19 +1,9 @@
 import React from "react"
 import { Header, List } from 'semantic-ui-react'
+import { nobottommargin } from '../common'
 
 
 const TRAVEL = 'https://raw.githubusercontent.com/joetm/jonaso/master/public/travel.json'
-
-
-const styles = {
-  notopmargin: {
-    marginTop: 0,
-  },
-  nobottommargin: {
-    marginBottom: 0,
-  },
-  defaultcursor: {cursor: 'inherit'},
-}
 
 
 class TravelRotary extends React.Component {
@@ -73,10 +63,10 @@ class TravelRotary extends React.Component {
     const { rotary } = this.state
     return (
       <React.Fragment>
-        <Header size="tiny" style={styles.nobottommargin}>Travel</Header>
+        <Header size="tiny" style={nobottommargin}>Travel</Header>
         <List>
             {
-                rotary.map((item, index) => {
+                rotary.map((item) => {
                   let dateString = ""
                   if ('start' in item && 'end' in item) {
                     dateString = item.start.getDate() + '.-' + item.end.getDate() + '.' + (item.end.getMonth() + 1) + '.' + item.end.getFullYear()
@@ -85,7 +75,7 @@ class TravelRotary extends React.Component {
                     dateString = item.date.getDate() + '.' + (item.date.getMonth() + 1) + '.' + item.date.getFullYear()
                   }
                   return (
-                    <List.Item key={index} title={item.status} style={{
+                    <List.Item key={item.event} title={item.status} style={{
                       color: item.isPast ? '#AAAAAA' : '#000000',
                       textDecoration: item.status === 'canceled' ? 'line-through' : 'initial'
                     }}>
