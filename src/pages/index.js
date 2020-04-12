@@ -2,7 +2,7 @@ import React from "react"
 import { Header, Grid, Divider, Image, Container, Icon } from 'semantic-ui-react'
 
 import "../../libs/academicons/css/academicons.min.css"
-import TravelRotary from "../TravelRotary"
+import TravelRotary from "../components/TravelRotary"
 import img from "../img/opp.jpg"
 import ACMDL from "../img/ACM-DL-Logo-size3.webp"
 import { nobottommargin, notopmargin, nobold } from "../common"
