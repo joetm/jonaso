@@ -4,12 +4,14 @@ import { spacer } from "../common"
 import Influencer from "../components/influencer"
 import Keywords from "../components/keywords"
 import Layout from "../components/layout"
+// import KeywordCloud from '../components/cloud'
+
 
 const _INFLUENCER = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/influencer.json'
 const _KEYWORDS = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/keywords.json'
 
 
-class ReadingList extends React.Component {
+class Interests extends React.Component {
   state = {
     influencer: [],
     keywords: [],
@@ -40,13 +42,16 @@ class ReadingList extends React.Component {
     return (
       <Layout>
         <Container>
-            <Keywords keywords={filtered_keywords} />
-            <Influencer influencer={influencer} />
-            <div style={spacer}></div>
+          {/*
+          <KeywordCloud />
+          */}
+          <Keywords keywords={filtered_keywords} />
+          <Influencer influencer={influencer} />
+          <div style={spacer}></div>
         </Container>
       </Layout>
     )
   }
 }
 
-export default ReadingList
+export default Interests
