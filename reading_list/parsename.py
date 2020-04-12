@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 # encoding=utf8
+# -*- coding: utf-8 -*-
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
 """Reduce author names to 'Firstname Lastname' format (skipping middle names)"""
 

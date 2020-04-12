@@ -4,7 +4,7 @@ import { Bar, BarChart, XAxis, YAxis, Tooltip, LabelList, CartesianGrid, Respons
 // import useDetectPrint from 'use-detect-print'
 import Layout from "../components/layout"
 import "semantic-ui-css/components/grid.min.css"
-import { spacer } from "../common"
+import { spacer, noMarginGrid } from "../common"
 
 const styles = {
   menu: {
@@ -13,10 +13,6 @@ const styles = {
     lineHeight: '2em',
     marginBottom: '1em',
     marginTop: '0.5em',
-  },
-  noMarginGrid: {
-    marginRight: 0,
-    marginLeft: 0,
   },
 }
 
@@ -59,6 +55,20 @@ const PdfPubsButton = () => (
   </div>
 )
 
+const SwitchBtn = ({active, switchPubView}) => (
+  <Button.Group>
+    <Button disabled={!active} positive={!active}
+      onClick={switchPubView}
+      title="Publications per year"
+    >YEAR</Button>
+    <Button.Or />
+    <Button disabled={active} positive={active}
+      onClick={switchPubView}
+      title="Publications per type"
+    >TYPE</Button>
+  </Button.Group>
+)
+
 
 class Publications extends React.Component {
   state = {
@@ -93,7 +103,10 @@ class Publications extends React.Component {
       // console.log(tickArray)
 
       const graphdata = {refsByYear, tickArray}
-      this.setState({references: categorizedRefs, graphdata })
+      this.setState({
+      	references: categorizedRefs,
+      	graphdata
+      })
     })
     // fetch references per publication type
     fetch(_REFERENCES_PER_TYPE)
@@ -106,7 +119,7 @@ class Publications extends React.Component {
           return obj
         })
       }
-      this.setState({referencesDetail})
+      this.setState({ referencesDetail })
     })
   }
   switchPubView = () => {
@@ -122,6 +135,8 @@ class Publications extends React.Component {
     const keysType = Object.keys(referencesDetail).reverse()
     // keysType.sort() // sort alphabetically
 
+    const typeIsActive = showing === 'type'
+
     // custom sort order
     let customSortOrder = []
     if (keysType.length > 0) {
@@ -135,11 +150,6 @@ class Publications extends React.Component {
         "Theses and Seminal Papers",
       ]
     }
-
-    // console.log('customSortOrder', customSortOrder)
-    // console.log('keysType', keysType)
-
-    // const isPrinting = useDetectPrint()
 
     return (
       <Layout>
@@ -166,25 +176,18 @@ class Publications extends React.Component {
 
         <div id="publicationButtons" style={styles.menu}>
           <PdfPubsButton />
-          <Button.Group>
-            <Button disabled={showing !== 'type'} positive={showing !== 'type'}
-              onClick={this.switchPubView}
-              title="Publications per year"
-            >YEAR</Button>
-            <Button.Or />
-            <Button disabled={showing === 'type'} positive={showing === 'type'}
-              onClick={this.switchPubView}
-              title="Publications per type"
-            >TYPE</Button>
-          </Button.Group>
+          <SwitchBtn
+            active={typeIsActive}
+            switchPubView={this.switchPubView}
+          />
         </div>
 
-        <Container id="publications-type" style={{display: showing === 'type' ? 'block' : 'none'}}>
+        <Container id="publications-type" style={{display: typeIsActive ? 'block' : 'none'}}>
 
               {
                 customSortOrder.map(typ => {
                   return (
-                    <Grid key={typ} style={styles.noMarginGrid}>
+                    <Grid key={typ} style={noMarginGrid}>
                         <Grid.Row>
                           <Header size="large">{typ}</Header>
                         </Grid.Row>
@@ -192,10 +195,7 @@ class Publications extends React.Component {
                           referencesDetail[typ].map((ref, index) => {
                             let title = ref.title.replace('Jonas Oppenlaender', '<strong>Jonas Oppenlaender</strong>')
                             title = title.replace('Jonas Oppenländer', '<strong>Jonas Oppenländer</strong>')
-                            let icostr = 'file text outline'
-                            if (title.indexOf('.pdf') === -1) {
-                              icostr = 'file outline'
-                            }
+                            const icostr = title.indexOf('.pdf') === -1 ? 'file outline' : 'file text outline'
                             return (
                               <Grid.Row key={index}>
                                 <Grid.Column width={2}>
@@ -229,12 +229,12 @@ class Publications extends React.Component {
 
         </Container>
 
-        <Container id="publications-year" style={{display: showing !== 'type' ? 'block' : 'none'}}>
+        <Container id="publications-year" style={{display: typeIsActive ? 'none' : 'block'}}>
 
               {
                 keysYear.map(year => {
                   return (
-                    <Grid key={year} style={styles.noMarginGrid}>
+                    <Grid key={year} style={noMarginGrid}>
                         <Grid.Row>
                           <Header size="large">{year}</Header>
                         </Grid.Row>
@@ -243,10 +243,7 @@ class Publications extends React.Component {
                             item.__html = item.__html.replace('Jonas Oppenlaender', '<strong>Jonas Oppenlaender</strong>')
                             item.__html = item.__html.replace('Jonas Oppenländer', '<strong>Jonas Oppenländer</strong>')
                             item.__html = item.__html.replace('--', '–')
-                            let icostr = 'file text outline'
-                            if (item.__html.indexOf('.pdf') === -1) {
-                              icostr = 'file outline'
-                            }
+                            const icostr = item.__html.indexOf('.pdf') === -1 ? 'file outline' : 'file text outline'
                             return (
                               <Grid.Row key={index}>
                                 <Grid.Column width={2}>
@@ -264,13 +261,6 @@ class Publications extends React.Component {
                                 <Item>
                                   <Item.Content>
                                     <Item.Header dangerouslySetInnerHTML={item}></Item.Header>
-                                    {/*
-                                    <Item.Extra>
-                                      <List>
-                                        <List.Item><a href="https://www.researchgate.net/publication/321418554_Towards_Sociotechnical_Management_of_Intra-Organisational_Knowledge_Transfer"><Icon title="pdf" name='file pdf outline' /></a></List.Item>
-                                      </List>
-                                    </Item.Extra>
-                                    */}
                                   </Item.Content>
                                 </Item>
                                 </Grid.Column>
