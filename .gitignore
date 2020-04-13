@@ -12,7 +12,7 @@ reading_list/toreadlist-full.json
 reading_list/keyword-*.json
 ./yarn.lock
 venv
-*.db.BAK
+./*/*.db.BAK
 *.BAK
 *.BAK.sh
 dist/*.tar.gz
