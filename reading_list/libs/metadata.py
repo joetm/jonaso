@@ -5,12 +5,20 @@ import os
 
 
 # curl -v -H "Content-type: application/pdf" --data-binary @paper.pdf "http://scienceparse.allenai.org/v1"
-SERVERURL = 'http://localhost:8080/v1'
+# SERVERURL = 'http://localhost:8080/v1'
+# SERVERURL_REMOTE = 'http://192.168.0.53:8080/v1'
 
 
 def extractMetadata(fullpath):
     files = {'upload_file': open(fullpath,'rb')}
     headers = {'Content-type': 'application/pdf'}
+
+    # remote or locally?
+    if 'IPADDRESS' in os.environ:
+        SERVERURL = 'http://%s:8080/v1' % os.environ['IPADDRESS']
+    else: # fallback to localhost
+        SERVERURL = 'http://localhost:8080/v1'
+
     r = requests.post(SERVERURL, files=files, headers=headers)
 
     if r.status_code == 200:
