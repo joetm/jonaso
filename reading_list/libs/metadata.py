@@ -49,14 +49,18 @@ def extractMetadata(fullpath):
         # if not 'title' in rawdata:
         #     skip = True # return False
 
+        # should have a title, but okey without one (using filename instead)
         try:
             title = rawdata['title']
         except KeyError:
+            # unrecognized title: use filename instead
             title = os.path.splitext(filename)[0].strip('!-')
 
-        if not 'authors' in rawdata:
-            skip == True
-        if rawdata['authors'] == []:
+        # must have authors
+        try:
+            if rawdata['authors'] == []:
+                skip == True
+        except KeyError:
             skip == True
 
         # skip?
@@ -91,7 +95,7 @@ def extractMetadata(fullpath):
             rawdata['authors'] = False
         metadata = {
             # 'id': rawdata['id'],
-            'title': rawdata['title'],
+            'title': title,
             'year': rawdata['year'],
             'authors': [] if not rawdata['authors'] else [x['name'] for x in rawdata['authors']],
             'filename': filename,
