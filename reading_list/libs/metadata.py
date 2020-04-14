@@ -12,17 +12,28 @@ import csv
 # SERVERURL_REMOTE = 'http://192.168.0.53:8080/v1'
 
 
+# example of unrecognized document:
+    # "('id', 'SP:b919b0662fcdc3a4e79bb98b30a29678538faf90')",
+    # "('abstractText', 'This SIG examines ...')",
+    # "('year', 2012)",
+    # "('sections', [{''}]",
+    # ('authors', [{'name': 'Celine Latulipe', 'affiliations': []}])",
+    # "('references', [{'
+
+
 def extractMetadata(fullpath):
     files = {'upload_file': open(fullpath,'rb')}
     headers = {'Content-type': 'application/pdf'}
+    # params = {'skipFields': 'references,sections'}
 
     # remote or locally?
+    # skipFields=references,sections
     if 'IPADDRESS' in os.environ:
         SERVERURL = 'http://%s:8080/v1?skipFields=references,sections' % os.environ['IPADDRESS']
     else: # fallback to localhost
         SERVERURL = 'http://localhost:8080/v1?skipFields=references,sections'
 
-    r = requests.post(SERVERURL, files=files, headers=headers)
+    r = requests.post(SERVERURL, files=files, headers=headers) # , data=params
 
     if r.status_code == 200:
 
@@ -31,18 +42,39 @@ def extractMetadata(fullpath):
         skip = False
 
         rawdata = r.json()
+
         # skip conditions
-        if 'id' not in rawdata or rawdata['id'] == 'empty':
-            skip = True # return False
+        # if 'id' not in rawdata or rawdata['id'] == 'empty':
+            # skip = True # return False
         if not 'title' in rawdata:
             skip = True # return False
 
         # skip?
         if skip == True:
+            # log the skipped document
+
+            # filter for csv storage
+            if 'sections' in rawdata:
+                del rawdata['sections']
+            if 'references' in rawdata:
+                del rawdata['references']
+
+            missed = {}
+            defaults = {
+                'filename': filename,
+                'id': '',
+                'title': '',
+                'abstractText': '',
+                'year': '',
+                'authors': '',
+            }
+            missed.update(defaults)
+            missed.update(rawdata)
+
             # log the unrecognized entry
             with open('unrecognized.csv', 'a') as csvfile:
                 unrecogWriter = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-                unrecogWriter.writerow([rawdata[k] for k in rawdata.keys()])
+                unrecogWriter.writerow(missed.items()) # ([rawdata[k] for k in rawdata.keys()])
             return False
 
         # sanitize

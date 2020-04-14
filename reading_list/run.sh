@@ -2,6 +2,10 @@
 
 START_TIME=$SECONDS
 
+# reset unrecognized.csv
+rm unrecognized.csv
+rouch unrecognized.csv
+
 # ./start-docker.sh &
 
 echo "Enter:"
@@ -19,13 +23,16 @@ else
 	export IPADDRESS="localhost"
 fi
 
-./parsefiles.py
+if ./parsefiles.py ; then
+    # echo "Command succeeded"
+	docker-stop-all
+	./update.sh
+else
+    # echo "Command failed"
+	docker-stop-all
+fi
 
 # ./parsetoread.py
-
-docker-stop-all
-
-./update.sh
 
 ELAPSED_TIME=$(($SECONDS - $START_TIME))
 
