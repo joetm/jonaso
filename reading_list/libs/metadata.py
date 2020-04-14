@@ -4,6 +4,7 @@
 
 import requests
 import os
+import csv
 
 
 # curl -v -H "Content-type: application/pdf" --data-binary @paper.pdf "http://scienceparse.allenai.org/v1"
@@ -27,12 +28,23 @@ def extractMetadata(fullpath):
 
         path, filename = os.path.split(fullpath)
 
+        skip = False
+
         rawdata = r.json()
         # skip conditions
         if 'id' not in rawdata or rawdata['id'] == 'empty':
-            return False
+            skip = True # return False
         if not 'title' in rawdata:
+            skip = True # return False
+
+        # skip?
+        if skip == True:
+            # log the unrecognized entry
+            with open('unrecognized.csv', 'a') as csvfile:
+                unrecogWriter = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+                unrecogWriter.writerow([rawdata[k] for k in rawdata.keys()])
             return False
+
         # sanitize
         if not 'year' in rawdata:
             rawdata['year'] = "N/A"

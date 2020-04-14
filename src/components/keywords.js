@@ -51,6 +51,7 @@ class Keywords extends React.Component {
   render() {
     const { keywords = [] } = this.props
     const { chart } = this.state
+    const barChartActive = chart === 'bar'
     // console.log('keywords', keywords)
 
     // filtered_keywords = keywords.map(kw => kw.num > 1 ? kw : null);
@@ -61,16 +62,16 @@ class Keywords extends React.Component {
           <h2 style={{float:'left', display:'inline-block'}}>Research Interests</h2>
 
           <Button.Group style={{float: 'right'}}>
-              <Button positive={chart === 'bar'} onClick={() => this.changeChartType('bar')}>Bar</Button>
+              <Button positive={barChartActive} onClick={() => this.changeChartType('bar')}>Bar</Button>
               <Button.Or />
-              <Button positive={chart !== 'bar'} onClick={() => this.changeChartType('tree')}>Tree</Button>
+              <Button positive={!barChartActive} onClick={() => this.changeChartType('tree')}>Tree</Button>
           </Button.Group>
 
           <div style={{clear:'both'}}></div>
 
           <ResponsiveContainer width="100%" height={580}>
             {
-              chart === 'bar' ?
+              barChartActive ?
                 <BarChart layout="vertical" data={keywords}>
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis type="number" dataKey="num" />
