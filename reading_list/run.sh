@@ -3,8 +3,8 @@
 START_TIME=$SECONDS
 
 # reset unrecognized.csv
-rm unrecognized.csv
-rouch unrecognized.csv
+# rm unrecognized.csv
+# rouch unrecognized.csv
 
 # ./start-docker.sh &
 
