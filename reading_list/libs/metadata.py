@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
 import requests
 import os
@@ -15,9 +17,9 @@ def extractMetadata(fullpath):
 
     # remote or locally?
     if 'IPADDRESS' in os.environ:
-        SERVERURL = 'http://%s:8080/v1' % os.environ['IPADDRESS']
+        SERVERURL = 'http://%s:8080/v1?skipFields=references,sections' % os.environ['IPADDRESS']
     else: # fallback to localhost
-        SERVERURL = 'http://localhost:8080/v1'
+        SERVERURL = 'http://localhost:8080/v1?skipFields=references,sections'
 
     r = requests.post(SERVERURL, files=files, headers=headers)
 
@@ -45,6 +47,7 @@ def extractMetadata(fullpath):
             'modified': int(os.path.getmtime(fullpath)),
             # 'created': int(os.path.getctime(fullpath)),
             # 'abstractText': rawdata['abstractText'],
+            # 'sections': rawdata['sections'],
             # 'references': rawdata['references'],
         }
         print(rawdata['id'], ' - ', metadata['title'])
