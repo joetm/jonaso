@@ -1,319 +1,713 @@
 {
-    "unrecognized": 0,
-    "modified": 1586845728,
-    "unrecognized_overall": 2039,
     "documents": [
         {
-            "modified": 1586799818,
-            "filename": "-3378543.pdf",
-            "authors": [],
-            "year": 2020,
-            "priority": 0,
-            "keywords": "Computer Science > Theory of Computation (ToC)",
-            "title": "Through the lens of a passionate theoretician"
+            "filename": "!1908.10328.pdf",
+            "title": "Movie Plot Analysis via Turning Point Identification",
+            "modified": 1586882845,
+            "authors": [
+                "Pinelopi Papalampidi",
+                "Frank Keller",
+                "Mirella Lapata"
+            ],
+            "priority": 1,
+            "keywords": "Machine Learning > Applications > Movie Plot Analysis",
+            "year": 2019
         },
         {
-            "modified": 1586799563,
+            "filename": "!s12859-017-1663-3.pdf",
+            "title": "\u201cgnparser\u201d: a powerful parser for scientific names based on Parsing Expression Grammar",
+            "modified": 1586882529,
+            "authors": [
+                "Dmitry Y. Mozzherin",
+                "Alexander A. Myltsev",
+                "David J. Patterson"
+            ],
+            "priority": 1,
+            "keywords": "Machine Learning > Applications > Science Parsers > gnparser",
+            "year": 2017
+        },
+        {
+            "filename": "!!AIES-19_paper_99.pdf",
+            "title": "Robots Can Be More Than Black And White: Examining Racial Bias Towards Robots",
+            "modified": 1586871343,
+            "authors": [
+                "Arifah Addison",
+                "Kumar Yogeeswaran",
+                "Christoph Bartneck"
+            ],
+            "priority": 2,
+            "keywords": "Robots, Bots > Issues > Racial Bias",
+            "year": "N/A"
+        },
+        {
+            "filename": "!!37eb47a6303668a7933fcb428654ebe26425.pdf",
+            "title": "The Police Officer\u2019s Dilemma: Using Ethnicity to Disambiguate Potentially Threatening Individuals",
+            "modified": 1586856378,
+            "authors": [
+                "Joshua Correll",
+                "Bernadette Park",
+                "Charles M. Judd",
+                "Bernd Wittenbrink"
+            ],
+            "priority": 2,
+            "keywords": "Psychology > Bias > Racial Bias > Shooter Bias",
+            "year": 2002
+        },
+        {
+            "filename": "!You\u2019re Expecting Too Much Out of Boston Dynamics\u2019 Robots _ WIRED.pdf",
+            "title": "You\u2019re Expecting Too Much Out of Boston Dynamics\u2019 Robots _ WIRED",
+            "modified": 1586849958,
+            "authors": [],
+            "priority": 1,
+            "keywords": "Robots, Bots > Issues > Inflated Expectations",
+            "year": 2020
+        },
+        {
+            "filename": "!!Bot_Guidelines_Nov_2018.pdf",
+            "title": "Responsible bots: 10 guidelines for developers of conversational AI",
+            "modified": 1586849713,
+            "authors": [],
+            "priority": 2,
+            "keywords": "AI > Guidelines, Policies > AI Principles > Chat Bots, Conversational AI",
+            "year": 2018
+        },
+        {
+            "filename": "!3377325.3377489.pdf",
+            "title": "Human-in-the-Loop AI in Government: A Case Study",
+            "modified": 1586849503,
+            "authors": [
+                "Lanthao Benedikt",
+                "Chaitanya Joshi",
+                "Louisa Nolan",
+                "Ruben Henstra-Hill",
+                "Luke Shaw",
+                "Sharon Hook"
+            ],
+            "priority": 1,
+            "keywords": "AI > Interactive Machine Learning, Human-In-the-Loop",
+            "year": 2020
+        },
+        {
+            "filename": "!1802.05365.pdf",
+            "title": "Deep contextualized word representations",
+            "modified": 1586849177,
+            "authors": [
+                "Matthew E. Peters",
+                "Mark Neumann",
+                "Mohit Iyyer",
+                "Matt Gardner",
+                "Christopher Clark",
+                "Kenton Lee",
+                "Luke Zettlemoyer"
+            ],
+            "priority": 1,
+            "keywords": "NLP > Word Embeddings > Embeddings from Language Models (ELMo)",
+            "year": 2018
+        },
+        {
+            "filename": "!Q17-1010.pdf",
+            "title": "Enriching Word Vectors with Subword Information",
+            "modified": 1586849093,
+            "authors": [
+                "Piotr Bojanowski",
+                "Edouard Grave",
+                "Tomas Mikolov"
+            ],
+            "priority": 1,
+            "keywords": "NLP > Word Embeddings > FastText",
+            "year": 2017
+        },
+        {
+            "filename": "-Game theory in practice _ The Economist.pdf",
+            "title": "Game theory in practice _ The Economist",
+            "modified": 1586847023,
+            "authors": [],
+            "priority": 0,
+            "keywords": "Game Theory",
+            "year": 2017
+        },
+        {
+            "authors": [],
+            "title": "Game theory in practice _ The Economist",
+            "modified": 1586847023,
+            "filename": "-Game theory in practice _ The Economist.pdf",
+            "priority": 0,
+            "keywords": "Game Theory",
+            "year": 2017
+        },
+        {
+            "filename": "!!balliet2009.pdf",
+            "title": "balliet2009",
+            "modified": 1586803166,
+            "authors": [
+                "Daniel Balliet"
+            ],
+            "priority": 2,
+            "keywords": "Game Theory > Social Dilemmas > Communication",
+            "year": 2009
+        },
+        {
+            "filename": "-3378543.pdf",
+            "title": "Through the lens of a passionate theoretician",
+            "modified": 1586799818,
+            "authors": [],
+            "priority": 0,
+            "keywords": "Computer Science > Theory of Computation (ToC)",
+            "year": 2020
+        },
+        {
             "filename": "-CHI2019-Doherty.pdf",
+            "title": "Engagement with Mental Health Screening on Mobile Devices: Results from an Antenatal Feasibility Study",
+            "modified": 1586799563,
             "authors": [
                 "Kevin Doherty",
                 "Cecily Morrison"
             ],
-            "year": 2019,
             "priority": 0,
             "keywords": "Mental Health > Screening, Monitoring",
-            "title": "Engagement with Mental Health Screening on Mobile Devices: Results from an Antenatal Feasibility Study"
+            "year": 2019
         },
         {
-            "modified": 1586799480,
             "filename": "!p1-thieme.pdf",
+            "title": "Designing for Mental Wellbeing: Towards a More Holistic Approach in the Treatment and Prevention of Mental Illness",
+            "modified": 1586799480,
             "authors": [
                 "Anja Thieme",
                 "Jayne Wallace",
                 "Thomas D. Meyer",
                 "Patrick Olivier"
             ],
-            "year": 2015,
             "priority": 1,
             "keywords": "Mental Health > Design for Mental Wellbeing",
-            "title": "Designing for Mental Wellbeing: Towards a More Holistic Approach in the Treatment and Prevention of Mental Illness"
+            "year": 2015
         },
         {
-            "modified": 1586799312,
             "filename": "!!KeyesSalutogenicMentalHealthChapter2.29.12.pdf",
+            "title": "Mental Health Is a Complete State: How the Salutogenic Perspective Complete the Picture",
+            "modified": 1586799312,
             "authors": [
                 "Corey L. M. Keyes"
             ],
-            "year": 2020,
             "priority": 2,
             "keywords": "Mental Health > Salutogenesis > Complete State",
-            "title": "Mental Health Is a Complete State: How the Salutogenic Perspective Complete the Picture"
+            "year": 2020
         },
         {
-            "modified": 1586795666,
+            "filename": "!!495426a.pdf",
+            "title": "495426a",
+            "modified": 1586796487,
+            "authors": [],
+            "priority": 2,
+            "keywords": "Open Science, e-Science, e-Research, Research Data > Open Access",
+            "year": 2013
+        },
+        {
+            "filename": "-Some facts on Sci-Hub that Wikipedia gets wrong _ engineuring.pdf",
+            "title": "Some facts on Sci-Hub that Wikipedia gets wrong _ engineuring",
+            "modified": 1586795760,
+            "authors": [],
+            "priority": 0,
+            "keywords": "Open Science, e-Science, e-Research, Research Data > Piracy > Sci-Hub",
+            "year": 2020
+        },
+        {
             "filename": "!Meet the pirate queen making academic papers free online - The Verge.pdf",
+            "title": "SCI-HUB POSED A DIRECT THREAT TO THE ACADEMIC PUBLISHERS\u2019 BUSINESS MODEL",
+            "modified": 1586795666,
             "authors": [
                 "Alexandra Elbakyan",
                 "SCIENCE\u2019S PIRATE QUEEN"
             ],
-            "year": 2020,
             "priority": 1,
             "keywords": "Open Science, e-Science, e-Research, Research Data > Piracy > Sci-Hub",
-            "title": "SCI-HUB POSED A DIRECT THREAT TO THE ACADEMIC PUBLISHERS\u2019 BUSINESS MODEL"
+            "year": 2020
         },
         {
-            "modified": 1586792812,
             "filename": "!iwc23-0004.pdf",
+            "title": "Socio-technical systems: From design methods to systems engineering",
+            "modified": 1586792812,
             "authors": [
                 "Gordon Baxter",
                 "Ian Sommerville"
             ],
-            "year": 2010,
             "priority": 1,
             "keywords": "Socio-technical Systems, Social Machines > Engineering Socio-technical Systems",
-            "title": "Socio-technical systems: From design methods to systems engineering"
+            "year": 2010
         },
         {
-            "modified": 1586791963,
             "filename": "!ecog.03424.pdf",
+            "title": "Macroecological and macroevolutionary patterns emerge in the universe of GNU/Linux operating systems",
+            "modified": 1586791963,
             "authors": [],
-            "year": 2018,
             "priority": 1,
             "keywords": "Socio-technical Systems, Social Machines > Macroecological Patterns, Macroevolutionary Patterns",
-            "title": "Macroecological and macroevolutionary patterns emerge in the universe of GNU/Linux operating systems"
+            "year": 2018
         },
         {
-            "modified": 1586791808,
             "filename": "-huang2017.pdf",
+            "title": "Event summarization for sports games using twitter streams",
+            "modified": 1586791808,
             "authors": [
                 "Yue Huang",
                 "\u00b7Chao Shen",
                 "\u00b7Tao Li"
             ],
-            "year": 2017,
             "priority": 0,
             "keywords": "Socio-technical Systems, Social Machines > Applications > Event Summarization",
-            "title": "Event summarization for sports games using twitter streams"
+            "year": 2017
         },
         {
-            "modified": 1586791349,
+            "filename": "-18262.SWM.Slides.pdf",
+            "title": "18262.SWM.Slides",
+            "modified": 1586791584,
+            "authors": [
+                "David De Roure"
+            ],
+            "priority": 0,
+            "keywords": "Socio-technical Systems, Social Machines > General",
+            "year": 2018
+        },
+        {
             "filename": "-shardanand-and-maes-1995.pdf",
+            "title": "Social Information Filtering: Algorithms for Automating \"Word of Mouth\"",
+            "modified": 1586791349,
             "authors": [
                 "Upendra Shardanand"
             ],
-            "year": 2011,
             "priority": 0,
             "keywords": "Socio-technical Systems, Social Machines > Recommender Systems > Social Information Filtering",
-            "title": "Social Information Filtering: Algorithms for Automating \"Word of Mouth\""
+            "year": 2011
         },
         {
-            "modified": 1586791154,
             "filename": "!Charting Sociotechnical Dimensions of Values for Design Research.pdf",
+            "title": "Charting Sociotechnical Dimensions of Values for Design Research",
+            "modified": 1586791154,
             "authors": [
                 "Katie Shilton",
                 "Jes A. Koepfler",
                 "Kenneth R. Fleischmann"
             ],
-            "year": 2013,
             "priority": 1,
             "keywords": "Socio-technical Systems, Social Machines > Socio-technical Congruence > Values",
-            "title": "Charting Sociotechnical Dimensions of Values for Design Research"
+            "year": 2013
         },
         {
-            "modified": 1586789673,
             "filename": "-AIES-19_paper_27.pdf",
+            "title": "Building Jiminy Cricket: An Architecture for Moral Agreements Among Stakeholders",
+            "modified": 1586789673,
             "authors": [],
-            "year": "N/A",
             "priority": 0,
             "keywords": "AI > Issues > Ethics > Moral Agent",
-            "title": "Building Jiminy Cricket: An Architecture for Moral Agreements Among Stakeholders"
+            "year": "N/A"
         },
         {
-            "modified": 1586787286,
-            "filename": "-Prudence in a Storm - The New Atlantis.pdf",
+            "filename": "!!digital revolution - whats on horizon - 06756877.pdf",
+            "title": "digital revolution - whats on horizon - 06756877",
+            "modified": 1586787883,
             "authors": [],
-            "year": 2020,
+            "priority": 2,
+            "keywords": "Future of Work > Digitization, Disruption > Emerging Technologies",
+            "year": 2014
+        },
+        {
+            "filename": "-Prudence in a Storm - The New Atlantis.pdf",
+            "title": "Prudence in a Storm",
+            "modified": 1586787286,
+            "authors": [],
             "priority": 0,
             "keywords": "Pandemics > Corona Virus Pandemic > Prudence",
-            "title": "Prudence in a Storm"
+            "year": 2020
         },
         {
-            "modified": 1586780180,
+            "filename": "!Save Lives, Ready Shovels - The New Atlantis.pdf",
+            "title": "Save Lives, Ready Shovels - The New Atlantis",
+            "modified": 1586787110,
+            "authors": [],
+            "priority": 1,
+            "keywords": "Pandemics > Corona Virus Pandemic > Exit Strategy",
+            "year": 2020
+        },
+        {
+            "filename": "-\u201cA Coronavirus Winter\u201d_ Michael T. Osterholm on the Road Ahead - The New Atlantis.pdf",
+            "title": "\u201cA Coronavirus Winter\u201d_ Michael T. Osterholm on the Road Ahead - The New Atlantis",
+            "modified": 1586786314,
+            "authors": [
+                "Michael T. Osterholm"
+            ],
+            "priority": 0,
+            "keywords": "Pandemics > Corona Virus Pandemic > Exit Strategy",
+            "year": 2020
+        },
+        {
+            "filename": "-What\u2019s the Plan_ - The New Atlantis.pdf",
+            "title": "What\u2019s the Plan_ - The New Atlantis",
+            "modified": 1586786212,
+            "authors": [
+                "Ari Schulman"
+            ],
+            "priority": 0,
+            "keywords": "Pandemics > Corona Virus Pandemic > Exit Strategy",
+            "year": 2020
+        },
+        {
             "filename": "!!personal-narratives.pdf",
+            "title": "Personal narratives and the life story",
+            "modified": 1586780180,
             "authors": [
                 "dan P. mcAdams"
             ],
-            "year": 2020,
             "priority": 2,
             "keywords": "Methods > Narrative Research",
-            "title": "Personal narratives and the life story"
+            "year": 2020
         },
         {
-            "modified": 1586772607,
+            "filename": "-2002RiessmanAnalysisOfPersonalNarratives.pdf",
+            "title": "2002RiessmanAnalysisOfPersonalNarratives",
+            "modified": 1586778564,
+            "authors": [],
+            "priority": 0,
+            "keywords": "Methods > Narrative Research",
+            "year": 2010
+        },
+        {
+            "filename": "-DesignUnit2.pdf",
+            "title": "DesignUnit2",
+            "modified": 1586777151,
+            "authors": [],
+            "priority": 0,
+            "keywords": "Methods > Needfinding Study",
+            "year": 2014
+        },
+        {
+            "filename": "-Establishing a Research Agenda _ Tomorrow's Professor Postings.pdf",
+            "title": "Establishing a Research Agenda _ Tomorrow's Professor Postings",
+            "modified": 1586776848,
+            "authors": [],
+            "priority": 0,
+            "keywords": "Research Agenda, PhD Plan",
+            "year": 2019
+        },
+        {
             "filename": "!Teaching Portfolios, Language Centre - Lapin yliopisto - University of Lapland - Lapplands universitet.pdf",
+            "title": "Teaching poftfolio guidelines, Language Centre",
+            "modified": 1586772607,
             "authors": [],
-            "year": 2019,
             "priority": 1,
             "keywords": "Teaching > Teaching Portfolio",
-            "title": "Teaching poftfolio guidelines, Language Centre"
+            "year": 2019
         },
         {
-            "modified": 1586772560,
             "filename": "!begin-portfolio.pdf",
+            "title": "Beginning a Teaching Portfolio: Questions to Consider",
+            "modified": 1586772560,
             "authors": [],
-            "year": 2020,
             "priority": 1,
             "keywords": "Teaching > Teaching Portfolio",
-            "title": "Beginning a Teaching Portfolio: Questions to Consider"
+            "year": 2020
         },
         {
-            "modified": 1586772184,
             "filename": "-research.pdf",
+            "title": "Mapping out a Research Agenda",
+            "modified": 1586772184,
             "authors": [
                 "NSEFS",
                 "BG Ryder",
                 "Barbara G. Ryder"
             ],
-            "year": 2003,
             "priority": 0,
             "keywords": "Research Agenda, PhD Plan",
-            "title": "Mapping out a Research Agenda"
+            "year": 2003
         },
         {
-            "modified": 1586723489,
             "filename": "!!!20181220_TNA57Askonas.pdf",
+            "title": "How Tech Utopia Fostered Tyranny",
+            "modified": 1586723489,
             "authors": [
                 "Jon Askonas"
             ],
-            "year": 2018,
             "priority": 3,
             "keywords": "Future of Work > Big Tech",
-            "title": "How Tech Utopia Fostered Tyranny"
+            "year": 2018
         },
         {
-            "modified": 1586721359,
             "filename": "-aaai15-nr.pdf",
+            "title": "The Network Data Repository with Interactive Graph Analytics and Visualization",
+            "modified": 1586721359,
             "authors": [
                 "Ryan A. Rossi",
                 "Nesreen K. Ahmed"
             ],
-            "year": 2014,
             "priority": 0,
             "keywords": "Benchmarks, gold standards, datasets > Science > Networkrepository (NR)",
-            "title": "The Network Data Repository with Interactive Graph Analytics and Visualization"
+            "year": 2014
         },
         {
-            "modified": 1586707958,
+            "filename": "-Modeketten stornieren Auftr\u00e4ge_ Textilarbeiterinnen vor dem Nichts _ tagesschau.de.pdf",
+            "title": "Modeketten stornieren Auftr\u00e4ge_ Textilarbeiterinnen vor dem Nichts _ tagesschau.de",
+            "modified": 1586717248,
+            "authors": [],
+            "priority": 0,
+            "keywords": "Pandemics > Corona Virus Pandemic",
+            "year": 2020
+        },
+        {
             "filename": "!Becker-TailoredControls-2019.pdf",
+            "title": "Tailored Controls: Creating Personalized TangibleUser Interfaces from Paper",
+            "modified": 1586707958,
             "authors": [
                 "Vincent Becker",
                 "Sandro Kalbermatter",
                 "G\u00e1bor S\u00f6r\u00f6s"
             ],
-            "year": 2019,
             "priority": 1,
             "keywords": "Design, HCI, UI, UX > Tangible Interaction, Tangible UI, TUI > Paper Controls",
-            "title": "Tailored Controls: Creating Personalized TangibleUser Interfaces from Paper"
+            "year": 2019
         },
         {
-            "modified": 1586707345,
             "filename": "-TAKE_2019_full_paper.pdf",
+            "title": "Enabling Knowledge Management in Complex Industrial Processes Using Semantic Web Technology",
+            "modified": 1586707345,
             "authors": [
                 "Katarina Milenkovi\u0107",
                 "Simon Mayer",
                 "Konrad Diwold",
                 "Josef Zehetner"
             ],
-            "year": 2019,
             "priority": 0,
             "keywords": "Linked Data > SPARQL, Querying > Unstructured Data",
-            "title": "Enabling Knowledge Management in Complex Industrial Processes Using Semantic Web Technology"
+            "year": 2019
         },
         {
-            "modified": 1586706569,
+            "filename": "-Solid.pdf",
+            "title": "Solid",
+            "modified": 1586706837,
+            "authors": [],
+            "priority": 0,
+            "keywords": "Linked Data > SOLID",
+            "year": 2018
+        },
+        {
             "filename": "!!swj1908.pdf",
+            "title": "Survey of Tools for Linked Data Consumption",
+            "modified": 1586706569,
             "authors": [
                 "Jakub Kl\u00edmek",
                 "Petr \u0160koda"
             ],
-            "year": 2018,
             "priority": 2,
             "keywords": "Linked Data > Consumption",
-            "title": "Survey of Tools for Linked Data Consumption"
+            "year": 2018
         },
         {
-            "modified": 1586698654,
+            "filename": "!!Comparison of triplestores - Wikipedia.pdf",
+            "title": "Comparison of triplestores - Wikipedia",
+            "modified": 1586706205,
+            "authors": [],
+            "priority": 2,
+            "keywords": "Linked Data > Triple Stores",
+            "year": 2020
+        },
+        {
+            "filename": "-Modern Tooling.pdf",
+            "title": "Modern Tooling",
+            "modified": 1586705891,
+            "authors": [],
+            "priority": 0,
+            "keywords": "Linked Data > Authoring",
+            "year": 2016
+        },
+        {
             "filename": "-1109180.1109205.pdf",
+            "title": "Composite Metaphor, Games and Interface",
+            "modified": 1586698654,
             "authors": [
                 "Amy Powell"
             ],
-            "year": 2005,
             "priority": 0,
             "keywords": "Metaphors, Meaning > Composite Metaphors",
-            "title": "Composite Metaphor, Games and Interface"
+            "year": 2005
         },
         {
-            "modified": 1586698016,
             "filename": "!Dereshev et al - Long-Term Value of Social Robots through the Eyes of Expert Users AAM.pdf",
+            "title": "Long-Term Value of Social Robots through the Eyes of Expert Users",
+            "modified": 1586698016,
             "authors": [
                 "Dmitry Dereshev",
                 "David Kirk"
             ],
-            "year": 2019,
             "priority": 1,
             "keywords": "Robots, Bots",
-            "title": "Long-Term Value of Social Robots through the Eyes of Expert Users"
+            "year": 2019
         },
         {
-            "modified": 1586683558,
             "filename": "-2004.04428.pdf",
+            "title": "Care Robots with Sexual Assistance Functions",
+            "modified": 1586683558,
             "authors": [
                 "Oliver Bendel"
             ],
-            "year": 2020,
             "priority": 0,
             "keywords": "Robots, Bots > Sex Robots",
-            "title": "Care Robots with Sexual Assistance Functions"
+            "year": 2020
         },
         {
-            "modified": 1586579890,
+            "filename": "-Nicaraguas Sonderweg_ Land fast ohne Corona - angeblich _ tagesschau.de.pdf",
+            "title": "Nicaraguas Sonderweg_ Land fast ohne Corona - angeblich _ tagesschau.de",
+            "modified": 1586630694,
+            "authors": [
+                "Nicaraguas Sonderweg"
+            ],
+            "priority": 0,
+            "keywords": "Pandemics > Corona Virus Pandemic",
+            "year": 2020
+        },
+        {
+            "filename": "-WHO pr\u00fcft F\u00e4lle aus S\u00fcdkorea_ Erneute Corona-Ansteckung m\u00f6glich_ _ tagesschau.de.pdf",
+            "title": "WHO pr\u00fcft F\u00e4lle aus S\u00fcdkorea_ Erneute Corona-Ansteckung m\u00f6glich_ _ tagesschau.de",
+            "modified": 1586630583,
+            "authors": [
+                "Erneute Corona-Ansteckung",
+                "Melanie Brinkmann"
+            ],
+            "priority": 0,
+            "keywords": "Pandemics > Corona Virus Pandemic",
+            "year": 2020
+        },
+        {
+            "filename": "-Studie aus Wuhan_ Sch\u00e4digt Corona das Nervensystem_ _ tagesschau.de.pdf",
+            "title": "Studie aus Wuhan_ Sch\u00e4digt Corona das Nervensystem_ _ tagesschau.de",
+            "modified": 1586630484,
+            "authors": [
+                "Sch\u00e4digt Corona das Nervensystem"
+            ],
+            "priority": 0,
+            "keywords": "Pandemics > Corona Virus Pandemic > Nerve Damage",
+            "year": 2020
+        },
+        {
+            "filename": "-BMEL - Tierwohl-Initiative des BMEL - Alternativen zum T\u00f6ten m\u00e4nnlicher K\u00fcken.pdf",
+            "title": "BMEL - Tierwohl-Initiative des BMEL - Alternativen zum T\u00f6ten m\u00e4nnlicher K\u00fcken",
+            "modified": 1586627039,
+            "authors": [
+                "m\u00e4nnlicher K\u00fcken"
+            ],
+            "priority": 0,
+            "keywords": "Food Industry > Chicken Farms > Eintagsk\u00fcken, In-ovo-Geschlechtsbestimmung",
+            "year": 2020
+        },
+        {
+            "filename": "-Anfrage der Gr\u00fcnen_ 2019 mehr als 45 Millionen K\u00fcken get\u00f6tet _ tagesschau.de.pdf",
+            "title": "Anfrage der Gr\u00fcnen_ 2019 mehr als 45 Millionen K\u00fcken get\u00f6tet _ tagesschau.de",
+            "modified": 1586626901,
+            "authors": [
+                "K\u00fcken get\u00f6tet"
+            ],
+            "priority": 0,
+            "keywords": "Food Industry > Chicken Farms > Eintagsk\u00fcken, In-ovo-Geschlechtsbestimmung",
+            "year": 2020
+        },
+        {
+            "filename": "-Mixins Considered Harmful \u2013 React Blog.pdf",
+            "title": "Mixins Considered Harmful \u2013 React Blog",
+            "modified": 1586620777,
+            "authors": [
+                "Dan Abramov"
+            ],
+            "priority": 0,
+            "keywords": "WebDev > React",
+            "year": 2020
+        },
+        {
+            "filename": "!About rel=noopener.pdf",
+            "title": "About rel=noopener",
+            "modified": 1586620075,
+            "authors": [],
+            "priority": 1,
+            "keywords": "WebDev",
+            "year": 2020
+        },
+        {
+            "filename": "-eslint-plugin-jsx-a11y_anchor-is-valid.md at master \u00b7 evcohen_eslint-plugin-jsx-a11y.pdf",
+            "title": "eslint-plugin-jsx-a11y_anchor-is-valid.md at master \u00b7 evcohen_eslint-plugin-jsx-a11y",
+            "modified": 1586619302,
+            "authors": [],
+            "priority": 0,
+            "keywords": "WebDev > React",
+            "year": 2020
+        },
+        {
+            "filename": "!React Fragments \u2013 What, Why, How - DEV Community \ud83d\udc69_\ud83d\udcbb\ud83d\udc68_\ud83d\udcbb.pdf",
+            "title": "React Fragments \u2013 What, Why, How - DEV Community \ud83d\udc69_\ud83d\udcbb\ud83d\udc68_\ud83d\udcbb",
+            "modified": 1586613735,
+            "authors": [],
+            "priority": 1,
+            "keywords": "WebDev > React",
+            "year": 2020
+        },
+        {
+            "filename": "!!!Part 4_ Pandemic Metaphors _ PIRC.pdf",
+            "title": "Part 4_ Pandemic Metaphors _ PIRC",
+            "modified": 1586609848,
+            "authors": [],
+            "priority": 3,
+            "keywords": "Metaphors, Meaning > Pandemic Metaphors",
+            "year": 2020
+        },
+        {
             "filename": "!paper369.pdf",
+            "title": "Geppeto: Enabling Semantic Design of Expressive Robot Behaviors",
+            "modified": 1586579890,
             "authors": [
                 "Ruta Desai",
                 "Justin Matejka",
                 "Stelian Coros"
             ],
-            "year": 2019,
             "priority": 1,
             "keywords": "Robots, Bots > Motion Design",
-            "title": "Geppeto: Enabling Semantic Design of Expressive Robot Behaviors"
+            "year": 2019
         },
         {
-            "modified": 1586579369,
             "filename": "!Stellungnahme-Enquete-KI-Social-Bots-Gallwitz.pdf",
+            "title": "Stellungnahme zum Themenkomplex",
+            "modified": 1586579369,
             "authors": [],
-            "year": 2020,
             "priority": 1,
             "keywords": "Robots, Bots > Social Robots > Social Media Bots",
-            "title": "Stellungnahme zum Themenkomplex"
+            "year": 2020
         },
         {
-            "modified": 1586577693,
+            "filename": "!Lecture Notes _ The Army that Never Existed_ The Failure of Social Bots Research.pdf",
+            "title": "Lecture Notes _ The Army that Never Existed_ The Failure of Social Bots Research",
+            "modified": 1586578725,
+            "authors": [
+                "Michael Kreil",
+                "Emilio Ferrara",
+                "Alessandro Flammini",
+                "Bence Kollanyi",
+                "Philip N. Howard"
+            ],
+            "priority": 1,
+            "keywords": "Robots, Bots > Social Robots > Social Media Bots",
+            "year": 2020
+        },
+        {
             "filename": "-Carry_Pigeon_HRI_2020.pdf",
+            "title": "Carrier-pigeon Robot: Promoting Interactions Among Older Adults in a Care Home",
+            "modified": 1586577693,
             "authors": [
                 "Hugo Sim\u00e3o",
                 "Ana Pires",
                 "David Gon\u00e7alves",
                 "Tiago Guerreiro"
             ],
-            "year": 2020,
             "priority": 0,
             "keywords": "Robots, Bots > Social Robots > Elderly Care",
-            "title": "Carrier-pigeon Robot: Promoting Interactions Among Older Adults in a Care Home"
+            "year": 2020
         },
         {
-            "modified": 1586574705,
             "filename": "!!!Youtube_Algorithmic_Personas_WuPedersenSalehi.pdf",
+            "title": "Agent, Gatekeeper, Drug Dealer: How Content Creators Craft Algorithmic Personas",
+            "modified": 1586574705,
             "authors": [
                 "EVA YIWEI WU",
                 "EMILY PEDERSEN",
@@ -321,38 +715,38 @@
                 "Eva Yiwei Wu",
                 "Emily Pedersen"
             ],
-            "year": 2019,
             "priority": 3,
             "keywords": "Machine Learning > Issues > Interpretability > Algorithmic Personas",
-            "title": "Agent, Gatekeeper, Drug Dealer: How Content Creators Craft Algorithmic Personas"
+            "year": 2019
         },
         {
-            "modified": 1586574068,
             "filename": "!1-s2.0-S0747563219304467-main.pdf",
+            "title": "How Acceptable Is This? How User Experience Factors Can Broaden our Understanding of The Acceptance of Privacy Trade-offs",
+            "modified": 1586574068,
             "authors": [
                 "Verena Distler",
                 "Carine Lallemand",
                 "Vincent Koenig"
             ],
-            "year": 2020,
             "priority": 1,
             "keywords": "Privacy > Privacy Trade-off",
-            "title": "How Acceptable Is This? How User Experience Factors Can Broaden our Understanding of The Acceptance of Privacy Trade-offs"
+            "year": 2020
         },
         {
-            "modified": 1586573646,
             "filename": "!!!1606.03490.pdf",
+            "title": "The Mythos of Model Interpretability",
+            "modified": 1586573646,
             "authors": [
                 "Zachary C. Lipton"
             ],
-            "year": 2017,
             "priority": 3,
             "keywords": "Machine Learning > Explainable AI, XAI > Interpretability",
-            "title": "The Mythos of Model Interpretability"
+            "year": 2017
         },
         {
-            "modified": 1586572639,
             "filename": "!!ijerph-17-00499.pdf",
+            "title": "A Scoping Review of Digital Tools to Reduce Sedentary Behavior or Increase Physical Activity in Knowledge Workers",
+            "modified": 1586572639,
             "authors": [
                 "Ida Damen",
                 "Hans Brombacher",
@@ -362,88 +756,227 @@
                 "Pieter van Wesemael",
                 "Steven Vos"
             ],
-            "year": 2020,
             "priority": 2,
             "keywords": "CSCW > Sedentary Work",
-            "title": "A Scoping Review of Digital Tools to Reduce Sedentary Behavior or Increase Physical Activity in Knowledge Workers"
+            "year": 2020
         },
         {
-            "modified": 1586534998,
+            "filename": "-Luxottica - Wikipedia.pdf",
+            "title": "Luxottica - Wikipedia",
+            "modified": 1586535476,
+            "authors": [],
+            "priority": 0,
+            "keywords": "Monopol",
+            "year": 2020
+        },
+        {
             "filename": "!!10.1007@s11613-020-00639-7.pdf",
+            "title": "Technik fu\u0308r Gutes Leben \u2013 Eudaikonomie Versuch u\u0308ber eine Neuausrichtung der Wirtschaft",
+            "modified": 1586534998,
             "authors": [
                 "Maike Keller",
                 "M. Keller"
             ],
-            "year": 2020,
             "priority": 2,
             "keywords": "Future of Work > Eudaiconomy",
-            "title": "Technik fu\u0308r Gutes Leben \u2013 Eudaikonomie Versuch u\u0308ber eine Neuausrichtung der Wirtschaft"
+            "year": 2020
         },
         {
-            "modified": 1586423026,
             "filename": "!a33-Lee.pdf",
+            "title": "Understanding How Digital Gifting Influences Social Interaction on Live Streams",
+            "modified": 1586423026,
             "authors": [
                 "Yi-Chieh Lee",
                 "Chi-Hsien Yen",
                 "Dennis Wang",
                 "Wai-Tat Fu"
             ],
-            "year": 2019,
             "priority": 1,
             "keywords": "Communities, Networks > Social Media > Live Streaming > Tipping, Gifting",
-            "title": "Understanding How Digital Gifting Influences Social Interaction on Live Streams"
+            "year": 2019
         },
         {
-            "modified": 1586347415,
+            "filename": "!!How to Turn a Job You Hate Into One You Love.pdf",
+            "title": "How to Turn a Job You Hate Into One You Love",
+            "modified": 1586422628,
+            "authors": [
+                "Kristin Wong",
+                "You Can"
+            ],
+            "priority": 2,
+            "keywords": "Future of Work > Job Crafting",
+            "year": 2020
+        },
+        {
+            "filename": "!This Is Why Job Candidates Should Interview Each Other.pdf",
+            "title": "This Is Why Job Candidates Should Interview Each Other",
+            "modified": 1586421902,
+            "authors": [],
+            "priority": 1,
+            "keywords": "Future of Work > Job Interviews",
+            "year": 2020
+        },
+        {
+            "filename": "-The dangers of work loneliness; How to love your job again _ LinkedIn.pdf",
+            "title": "The dangers of work loneliness; How to love your job again _ LinkedIn",
+            "modified": 1586421544,
+            "authors": [
+                "Juliette Lee"
+            ],
+            "priority": 0,
+            "keywords": "Future of Work > Issues > Loneliness",
+            "year": 2017
+        },
+        {
+            "filename": "-WinogradACMDesin.pdf",
+            "title": "WinogradACMDesin",
+            "modified": 1586421066,
+            "authors": [],
+            "priority": 0,
+            "keywords": "Software Development > Software Design",
+            "year": 1997
+        },
+        {
+            "filename": "-Coronavirus-Pandemie_ Fl\u00fcchtlingsrettung ausgesetzt _ tagesschau.de.pdf",
+            "title": "Coronavirus-Pandemie_ Fl\u00fcchtlingsrettung ausgesetzt _ tagesschau.de",
+            "modified": 1586375505,
+            "authors": [],
+            "priority": 0,
+            "keywords": "Pandemics > Corona Virus Pandemic",
+            "year": 2020
+        },
+        {
+            "filename": "-Staatsanwaltschaft ermittelt_ Betrug bei Corona-Soforthilfen_ _ tagesschau.de.pdf",
+            "title": "Staatsanwaltschaft ermittelt_ Betrug bei Corona-Soforthilfen_ _ tagesschau.de",
+            "modified": 1586375430,
+            "authors": [
+                "Betrug bei Corona-Soforthilfen"
+            ],
+            "priority": 0,
+            "keywords": "Pandemics > Corona Virus Pandemic > Crime",
+            "year": 2020
+        },
+        {
+            "filename": "!!!813960151-MIT.pdf",
+            "title": "813960151-MIT",
+            "modified": 1586352371,
+            "authors": [
+                "Michael Scott",
+                "Scott Bernstein",
+                "David R. Karger",
+                "David Karger"
+            ],
+            "priority": 3,
+            "keywords": "Crowdsourcing, Human Computation",
+            "year": 2012
+        },
+        {
             "filename": "-p971-bernstein.pdf",
+            "title": "Enhancing Directed Content Sharing on the Web",
+            "modified": 1586347415,
             "authors": [
                 "Michael S. Bernstein",
                 "Adam Marcus",
                 "David R. Karger",
                 "Robert C. Miller"
             ],
-            "year": 2010,
             "priority": 0,
             "keywords": "Communities, Networks > Social Media > Link Sharing > FeedMe",
-            "title": "Enhancing Directed Content Sharing on the Web"
+            "year": 2010
         },
         {
-            "modified": 1586335840,
             "filename": "!TalkScience_Primer-decrypted.pdf",
+            "title": "Talk Science Primer",
+            "modified": 1586335840,
             "authors": [
                 "Sarah Michaels",
                 "Cathy O\u2019Connor"
             ],
-            "year": 2011,
             "priority": 1,
             "keywords": "Teaching > Discussions, Classroom Talk",
-            "title": "Talk Science Primer"
+            "year": 2011
         },
         {
-            "modified": 1586334468,
+            "filename": "!!!Formatted+Inclusive+Meeting+Guide-v5.pdf",
+            "title": "Formatted+Inclusive+Meeting+Guide-v5",
+            "modified": 1586335513,
+            "authors": [
+                "Angie Pendergrass",
+                "Jane Zelikova",
+                "James Arnott",
+                "Hazel Bain",
+                "Rebecca Barnes",
+                "Jill Baron",
+                "Kuheli Dutt",
+                "Miriam Gay-Antaki",
+                "Rebecca Haacker",
+                "Emily Jack-Scott",
+                "AJ Lauer",
+                "Aisha Morris",
+                "Deb Morrison",
+                "Anne-Marie Nunez",
+                "Heidi Steltzer",
+                "LuAnne Thompson"
+            ],
+            "priority": 3,
+            "keywords": "Inclusivity",
+            "year": 2019
+        },
+        {
+            "filename": "-the phd and knowledge Creativity & Cognition Studios.pdf",
+            "title": "the phd and knowledge Creativity & Cognition Studios",
+            "modified": 1586334888,
+            "authors": [],
+            "priority": 0,
+            "keywords": "PhD",
+            "year": 2019
+        },
+        {
             "filename": "-What is a PhD in HCI_.pdf",
+            "title": "What is a PhD in HCI?",
+            "modified": 1586334468,
             "authors": [
                 "Chris Johnson"
             ],
-            "year": 2019,
             "priority": 0,
             "keywords": "PhD > PhD in HCI",
-            "title": "What is a PhD in HCI?"
+            "year": 2019
         },
         {
-            "modified": 1586331465,
+            "filename": "-Why You Should Ignore All That Coronavirus-Inspired Productivity Pressure - The Chronicle of Higher Education.pdf",
+            "title": "Why You Should Ignore All That Coronavirus-Inspired Productivity Pressure - The Chronicle of Higher Education",
+            "modified": 1586332125,
+            "authors": [
+                "Aisha S. Ahmad"
+            ],
+            "priority": 0,
+            "keywords": "Career Advice",
+            "year": 2020
+        },
+        {
             "filename": "!!!1706.07269.pdf",
+            "title": "Explanation in Artificial Intelligence: Insights from the Social Sciences",
+            "modified": 1586331465,
             "authors": [
                 "Tim Miller"
             ],
-            "year": 2018,
             "priority": 3,
             "keywords": "Machine Learning > Explainable AI, XAI > General",
-            "title": "Explanation in Artificial Intelligence: Insights from the Social Sciences"
+            "year": 2018
         },
         {
-            "modified": 1586330105,
+            "filename": "!!1712.00547.pdf",
+            "title": "1712.00547",
+            "modified": 1586331291,
+            "authors": [],
+            "priority": 2,
+            "keywords": "Machine Learning > Explainable AI, XAI > General",
+            "year": 2017
+        },
+        {
             "filename": "-1810.13170.pdf",
+            "title": "Face Presentation Attack Detection in Learned Color-liked Space",
+            "modified": 1586330105,
             "authors": [
                 "Lei Li",
                 "Zhaoqiang Xia",
@@ -451,91 +984,100 @@
                 "Fabio Roli",
                 "Xiaoyi Feng"
             ],
-            "year": 2018,
             "priority": 0,
             "keywords": "Counter Surveillance > Face Recognition > Face Presentation Attack",
-            "title": "Face Presentation Attack Detection in Learned Color-liked Space"
+            "year": 2018
         },
         {
-            "modified": 1586329797,
             "filename": "-s43017-020-0039-9.pdf",
+            "title": "The environmental price of fast fashion",
+            "modified": 1586329797,
             "authors": [],
-            "year": 2020,
             "priority": 0,
             "keywords": "Environment > Fast Fashion",
-            "title": "The environmental price of fast fashion"
+            "year": 2020
         },
         {
-            "modified": 1586280875,
+            "filename": "!!!2907069.pdf",
+            "title": "2907069",
+            "modified": 1586284886,
+            "authors": [],
+            "priority": 3,
+            "keywords": "Design, HCI, UI, UX > General, Theory",
+            "year": 2016
+        },
+        {
             "filename": "!imagedesc_chi2020.pdf",
+            "title": "\"Person, Shoes, Tree. Is the Person Naked?\" What People with Vision Impairments Want in Image Descriptions",
+            "modified": 1586280875,
             "authors": [
                 "Abigale Stangl",
                 "Meredith Ringel Morris"
             ],
-            "year": 2020,
             "priority": 1,
             "keywords": "Accessibility > Blindness, Vision Impairment > Alternative Descriptions, Image Alt Text",
-            "title": "\"Person, Shoes, Tree. Is the Person Naked?\" What People with Vision Impairments Want in Image Descriptions"
+            "year": 2020
         },
         {
-            "modified": 1586280333,
             "filename": "!2002.06910.pdf",
+            "title": "t-viSNE: Interactive Assessment and Interpretation of t-SNE Projections",
+            "modified": 1586280333,
             "authors": [
                 "Angelos Chatzimparmpas",
                 "Rafael M. Martins"
             ],
-            "year": 2020,
             "priority": 1,
             "keywords": "Visualisation > Interaction >  t-viSNE",
-            "title": "t-viSNE: Interactive Assessment and Interpretation of t-SNE Projections"
+            "year": 2020
         },
         {
-            "modified": 1586276803,
             "filename": "-Liip-Meeting-Gestures.pdf",
+            "title": "Online Meeting Gestures",
+            "modified": 1586276803,
             "authors": [],
-            "year": 2020,
             "priority": 0,
             "keywords": "CSCW > Virtual Work > Online Meetings > Meeting Gestures",
-            "title": "Online Meeting Gestures"
+            "year": 2020
         },
         {
-            "modified": 1586271406,
             "filename": "!!353927.353935.pdf",
+            "title": "Metaphor in Theory and Practice: the Influence of Metaphors on Expectations",
+            "modified": 1586271406,
             "authors": [
                 "Anne Hamilton"
             ],
-            "year": 2000,
             "priority": 2,
             "keywords": "Metaphors, Meaning",
-            "title": "Metaphor in Theory and Practice: the Influence of Metaphors on Expectations"
+            "year": 2000
         },
         {
-            "modified": 1586267836,
             "filename": "!Calderoni2014-SNAofOCgroupsfin.pdf",
+            "title": "Social Network Analysis of Organized Criminal Groups",
+            "modified": 1586267836,
             "authors": [
                 "Francesco Calderoni"
             ],
-            "year": 2013,
             "priority": 1,
             "keywords": "Crime > Crime Network Analysis",
-            "title": "Social Network Analysis of Organized Criminal Groups"
+            "year": 2013
         },
         {
-            "modified": 1586264396,
             "filename": "!10.1.1.150.1764.pdf",
+            "title": "User Experience Evaluation Methods in Academic and Industrial Contexts",
+            "modified": 1586264396,
             "authors": [
                 "Virpi Roto",
                 "Marianna Obrist",
                 "Kaisa V\u00e4\u00e4n\u00e4nen-Vainio-Mattila"
             ],
-            "year": 2009,
             "priority": 1,
             "keywords": "Design, HCI, UI, UX > User Experience, UX > Measurement",
-            "title": "User Experience Evaluation Methods in Academic and Industrial Contexts"
+            "year": 2009
         },
         {
-            "modified": 1586264356,
             "filename": "!!!1868914.1868973.pdf",
+            "title": "User Experience Evaluation Methods: Current State and Development Needs",
+            "modified": 1586264356,
             "authors": [
                 "Arnold P.O.S. Vermeeren",
                 "Effie Lai-Chong Law",
@@ -544,14 +1086,14 @@
                 "Jettie Hoonhout",
                 "Kaisa V\u00e4\u00e4n\u00e4nen-Vainio-Mattila"
             ],
-            "year": 2010,
             "priority": 3,
             "keywords": "Design, HCI, UI, UX > User Experience, UX > Measurement",
-            "title": "User Experience Evaluation Methods: Current State and Development Needs"
+            "year": 2010
         },
         {
-            "modified": 1586194043,
             "filename": "!!!CHI2020_HappinessProductivity.pdf",
+            "title": "Optimizing for Happiness and Productivity: Modeling Opportune Moments for Transitions and Breaks at Work",
+            "modified": 1586194043,
             "authors": [
                 "Harmanpreet Kaur",
                 "Alex C. Williams",
@@ -560,689 +1102,48 @@
                 "Jaime Teevan",
                 "Shamsi Iqbal"
             ],
-            "year": 2019,
             "priority": 3,
             "keywords": "Future of Work > Crowdsourcing, Microtasks > Micro Productivity",
-            "title": "Optimizing for Happiness and Productivity: Modeling Opportune Moments for Transitions and Breaks at Work"
+            "year": 2019
         },
         {
-            "modified": 1586183489,
             "filename": "-Corona-Krise in der T\u00fcrkei_ Erdogan bittet um Spenden f\u00fcr den Staat _ tagesschau.de.pdf",
+            "title": "Corona-Krise in der Tu\u0308rkei",
+            "modified": 1586183489,
             "authors": [
                 "Erdogan bittet um Spenden",
                 "f\u00fcr den Staat"
             ],
-            "year": 2020,
             "priority": 0,
             "keywords": "Turkey",
-            "title": "Corona-Krise in der Tu\u0308rkei"
+            "year": 2020
         },
         {
-            "modified": 1586180469,
+            "filename": "!!![Fogg] Persuasive Technology-unlocked.pdf",
+            "title": "[Fogg] Persuasive Technology-unlocked",
+            "modified": 1586180609,
+            "authors": [],
+            "priority": 3,
+            "keywords": "Design, HCI, UI, UX > Persuasive Technology",
+            "year": 2013
+        },
+        {
             "filename": "!!p1975-disalvo.pdf",
+            "title": "Mapping the Landscape of Sustainable HCI",
+            "modified": 1586180469,
             "authors": [
                 "Carl DiSalvo",
                 "Phoebe Sengers",
                 "Hr\u00f6nn Brynjarsd\u00f3ttir"
             ],
-            "year": 2010,
             "priority": 2,
             "keywords": "Design, HCI, UI, UX > Sustainable HCI",
-            "title": "Mapping the Landscape of Sustainable HCI"
-        },
-        {
-            "modified": 1586179825,
-            "filename": "!paper515.pdf",
-            "authors": [
-                "Nicolas Villar",
-                "Daniel Cletheroe",
-                "Greg Saul",
-                "Christian Holz",
-                "Tim Regan",
-                "Oscar Salandin",
-                "Misha Sra",
-                "Hui-Shyong Yeo",
-                "William Field",
-                "Haiyan Zhang"
-            ],
-            "year": 2018,
-            "priority": 1,
-            "keywords": "Design, HCI, UI, UX > Tangible Interaction, Tangible UI, TUI",
-            "title": "Project Zanzibar: A Portable and Flexible  Tangible Interaction Platform"
-        },
-        {
-            "modified": 1586173989,
-            "filename": "!!!Abras, Maloney-Krichmar, Preece - 2004 - User-Centered Design.pdf",
-            "authors": [
-                "Chadia Abras",
-                "Diane Maloney-Krichmar",
-                "Jenny Preece"
-            ],
-            "year": 2004,
-            "priority": 3,
-            "keywords": "Design, HCI, UI, UX > User-centered Design",
-            "title": "User-Centered Design"
-        },
-        {
-            "modified": 1586170428,
-            "filename": "!14-KensingBlomberg-PDIssuesConcerns-JCSCW.pdf",
-            "authors": [
-                "FINN KENSING",
-                "JEANETTE BLOMBERG"
-            ],
-            "year": 1998,
-            "priority": 1,
-            "keywords": "Design, HCI, UI, UX > Participatory Design, User-centered Design",
-            "title": "Participatory Design: Issues and Concerns"
-        },
-        {
-            "modified": 1586169281,
-            "filename": "-1120212.1120311.pdf",
-            "authors": [
-                "Keith A. Butler",
-                "Robert J.K"
-            ],
-            "year": 2006,
-            "priority": 0,
-            "keywords": "Design, HCI, UI, UX",
-            "title": "Human-Computer Interaction: Introduction and Overview"
-        },
-        {
-            "modified": 1586165392,
-            "filename": "!!p699-bartneck.pdf",
-            "authors": [
-                "Christoph Bartneck",
-                "Jun Hu"
-            ],
-            "year": 2009,
-            "priority": 2,
-            "keywords": "Design, HCI, UI, UX > CHI",
-            "title": "Scientometric Analysis Of The CHI Proceedings"
-        },
-        {
-            "modified": 1586161759,
-            "filename": "-3170427.3170655.pdf",
-            "authors": [
-                "Simon Robinson"
-            ],
-            "year": 2017,
-            "priority": 0,
-            "keywords": "Mobile Phones > User Experience, UX",
-            "title": "Mobile UX \u2013 The Next Ten Years?"
-        },
-        {
-            "modified": 1586100188,
-            "filename": "-775047.775057.pdf",
-            "authors": [
-                "Matthew Richardson",
-                "Pedro Domingos"
-            ],
-            "year": 2003,
-            "priority": 0,
-            "keywords": "Marketing > Viral Marketing",
-            "title": "Mining Knowledge-Sharing Sites for Viral Marketing"
-        },
-        {
-            "modified": 1586097004,
-            "filename": "!3378422.pdf",
-            "authors": [],
-            "year": 2020,
-            "priority": 1,
-            "keywords": "Fake News, Credibility, Post Truth > Detection",
-            "title": "Detecting fake news in social media"
-        },
-        {
-            "modified": 1586096716,
-            "filename": "!HowManyParticipantsareReallyEnoughfor.pdf",
-            "authors": [
-                "Roobaea AlRoobaea",
-                "Pam J. Mayhew"
-            ],
-            "year": 2014,
-            "priority": 1,
-            "keywords": "Methods > Qualitative > Sample size > Saturation",
-            "title": "How Many Participants are Really Enough for Usability Studies?"
-        },
-        {
-            "modified": 1586086197,
-            "filename": "!96f4d659a7f4e06f64323515868cc14b031b.pdf",
-            "authors": [
-                "Samantha J. Heintzelman",
-                "Jason Trent",
-                "Laura A. King"
-            ],
-            "year": 2013,
-            "priority": 1,
-            "keywords": "Psychology > Meaning of Life, MIL",
-            "title": "Encounters With Objective Coherence and the Experience of Meaning in Life"
-        },
-        {
-            "modified": 1586083374,
-            "filename": "!!Herbert_Simon___theories_of_bounded_rationality___1972.pdf",
-            "authors": [
-                "HERBERT A. SIMON"
-            ],
-            "year": 2010,
-            "priority": 2,
-            "keywords": "Psychology > Bounded Rationality",
-            "title": "THEORIES OF BOUNDED RATIONALITY"
-        },
-        {
-            "modified": 1586031021,
-            "filename": "!derrick2012.pdf",
-            "authors": [
-                "Jaye L. Derrick"
-            ],
-            "year": 2013,
-            "priority": 1,
-            "keywords": "Psychology > Social Surrogate Restoration",
-            "title": "Energized by Television: Familiar Fictional Worlds Restore Self-Control"
-        },
-        {
-            "modified": 1586030684,
-            "filename": "-a2-abascal.pdf",
-            "authors": [
-                "JULIO ABASCAL"
-            ],
-            "year": 2019,
-            "priority": 0,
-            "keywords": "Design, HCI, UI, UX > EICS > Inaccessible Computing Systems",
-            "title": "Engineering Inaccessible Computing Systems "
-        },
-        {
-            "modified": 1586011896,
-            "filename": "-1520340.1520379.pdf",
-            "authors": [],
-            "year": 2009,
-            "priority": 0,
-            "keywords": "Design, HCI, UI, UX > Design for Cultural Identity",
-            "title": "More Than Kimchi and Cash: Designing for Cultural Identity"
-        },
-        {
-            "modified": 1586008682,
-            "filename": "!!3382746.pdf",
-            "authors": [
-                "Jerrold M. Grochow"
-            ],
-            "year": 2020,
-            "priority": 2,
-            "keywords": "AI > Human-AI-Interaction, Human-Machine-Interaction > Levels of Autonomy (LoA) > Taxonomy for Automated Assistants",
-            "title": "A taxonomy of automated assistants"
-        },
-        {
-            "modified": 1586006207,
-            "filename": "!3382741.pdf",
-            "authors": [],
-            "year": 2020,
-            "priority": 1,
-            "keywords": "Privacy > Surveillance > Learning Analytics, Data Use in Universities",
-            "title": "The temptation of data-enabled surveillance"
-        },
-        {
-            "modified": 1586005916,
-            "filename": "-3378554.pdf",
-            "authors": [],
-            "year": 2020,
-            "priority": 0,
-            "keywords": "Digitization > Singapore",
-            "title": "Innovating services and digital economy in Singapore"
-        },
-        {
-            "modified": 1586002770,
-            "filename": "-3381913.pdf",
-            "authors": [],
-            "year": 2020,
-            "priority": 0,
-            "keywords": "Machine Learning > Applications > Taste, Smell",
-            "title": "Machine learning, meet whiskey"
-        },
-        {
-            "modified": 1585999278,
-            "filename": "!2470654.2466451.pdf",
-            "authors": [
-                "Jeffrey Bardzell",
-                "Shaowen Bardzell"
-            ],
-            "year": 2013,
-            "priority": 1,
-            "keywords": "Design, HCI, UI, UX > Critical Design",
-            "title": "What is \u201cCritical\u201d about Critical Design?"
-        },
-        {
-            "modified": 1585988650,
-            "filename": "!!Internet_and_Religion.pdf",
-            "authors": [
-                "Heidi Campbell"
-            ],
-            "year": 2009,
-            "priority": 2,
-            "keywords": "Religion > Religion Online",
-            "title": "Internet and Religion"
-        },
-        {
-            "modified": 1585988378,
-            "filename": "!!!UXML_Framework_for_CHI20__camera_ready_.pdf",
-            "authors": [
-                "Aaron Steinfeld",
-                "Qian Yang",
-                "Carolyn Ros\u00e9",
-                "John Zimmerman"
-            ],
-            "year": 2020,
-            "priority": 3,
-            "keywords": "AI > Human-AI-Interaction, Human-Machine-Interaction",
-            "title": "Re-examining Whether, Why, and How Human-AI Interaction Is Uniquely Difficult to Design"
-        },
-        {
-            "modified": 1585907502,
-            "filename": "!chi20c.pdf",
-            "authors": [
-                "Narges Ashtari",
-                "Andrea Bunt",
-                "Joanna McGrenere",
-                "Michael Nebeling",
-                "Parmit K. Chilana"
-            ],
-            "year": 2020,
-            "priority": 1,
-            "keywords": "Virtual Reality > Authoring",
-            "title": "Creating Augmented and Virtual Reality Applications: Current Practices, Challenges, and Opportunities"
-        },
-        {
-            "modified": 1585906610,
-            "filename": "!3128572.3140444.pdf",
-            "authors": [
-                "Nicholas Carlini",
-                "David Wagner"
-            ],
-            "year": 2017,
-            "priority": 1,
-            "keywords": "Machine Learning > Adversarial Machine Learning",
-            "title": "Adversarial Examples Are Not Easily Detected:  Bypassing Ten Detection Methods"
-        },
-        {
-            "modified": 1585906441,
-            "filename": "!3052973.3053009.pdf",
-            "authors": [
-                "Nicolas Papernot",
-                "Patrick McDaniel",
-                "Ian Goodfellow",
-                "Somesh Jha",
-                "Z. Berkay Celik",
-                "Ananthram Swami"
-            ],
-            "year": 2017,
-            "priority": 1,
-            "keywords": "Machine Learning > Adversarial Machine Learning",
-            "title": "Practical Black-Box Attacks against Machine Learning"
-        },
-        {
-            "modified": 1585906181,
-            "filename": "-3316781.3323470.pdf",
-            "authors": [
-                "Giulio Zizzo",
-                "Chris Hankin",
-                "Sergio Maffeis",
-                "Kevin Jones"
-            ],
-            "year": 2019,
-            "priority": 0,
-            "keywords": "Machine Learning > Adversarial Machine Learning",
-            "title": "INVITED: Adversarial Machine Learning Beyond the Image Domain"
-        },
-        {
-            "modified": 1585905659,
-            "filename": "!2976749.2978392.pdf",
-            "authors": [
-                "Mahmood Sharif",
-                "Sruti Bhagavatula",
-                "Lujo Bauer",
-                "Michael K. Reiter"
-            ],
-            "year": 2016,
-            "priority": 1,
-            "keywords": "Machine Learning > Adversarial Machine Learning > Eye Glasses",
-            "title": "Accessorize to a Crime: Real and Stealthy Attacks on State-of-the-Art Face Recognition"
-        },
-        {
-            "modified": 1585903170,
-            "filename": "!!fenrg-05-00011.pdf",
-            "authors": [
-                "David J. Heldebrant",
-                "Christopher R. Jones",
-                "Barbara Olfe-Kr\u00e4utlein",
-                "Henriette Naims",
-                "Katy Armstrong"
-            ],
-            "year": 2017,
-            "priority": 2,
-            "keywords": "Carbon Utilisation and Storage, Carbon Capture and Storage (CCS) > Acceptance",
-            "title": "The Social Acceptance of Carbon Dioxide Utilisation: A Review and Research Agenda"
-        },
-        {
-            "modified": 1585816968,
-            "filename": "!fenrg-02-00055.pdf",
-            "authors": [
-                "Berend Smit",
-                "Alissa Park",
-                "Greeshma Gadikota"
-            ],
-            "year": 2014,
-            "priority": 1,
-            "keywords": "Carbon Utilisation and Storage, Carbon Capture and Storage (CCS) > Acceptance",
-            "title": "The grand challenges in carbon capture, utilization, and storage"
-        },
-        {
-            "modified": 1585766952,
-            "filename": "-AI Gahaku _ Renaissance painting from your photos_.pdf",
-            "authors": [
-                "AI Artist",
-                "AI Gahaku"
-            ],
-            "year": 2020,
-            "priority": 0,
-            "keywords": "Machine Learning > Art",
-            "title": "Request for Donations"
-        },
-        {
-            "modified": 1585745729,
-            "filename": "!Sacha Baron Cohen's Keynote Address at ADL's 2019 Never Is Now Summit on Anti-Semitism and Hate _ Anti-Defamation League.pdf",
-            "authors": [
-                "Sacha Baron",
-                "Sacha Baron Cohen"
-            ],
-            "year": 2020,
-            "priority": 1,
-            "keywords": "Communities, Networks > Social Media > Facebook",
-            "title": "ADL\u2019s Response to the Coronavirus Pandemic"
-        },
-        {
-            "modified": 1585722661,
-            "filename": "!Epidemic Modeling 101_ Or why your CoVID19 exponential fits are wrong.pdf",
-            "authors": [
-                "Bruno Gon\u00e7alves",
-                "Simon DeDeo"
-            ],
-            "year": 2020,
-            "priority": 1,
-            "keywords": "Pandemics > Corona Virus Pandemic",
-            "title": "Epidemic Modeling 101: Or why your CoVID19 exponential ts are wrong"
-        },
-        {
-            "modified": 1585683322,
-            "filename": "-UN zu Corona-Pandemie_ _Gr\u00f6\u00dfte Krise seit Zweitem Weltkrieg_ _ tagesschau.de.pdf",
-            "authors": [
-                "Werner Eckert",
-                "\"Gr\u00f6\u00dfte Krise",
-                "seit Zweitem Weltkrieg"
-            ],
-            "year": 2020,
-            "priority": 0,
-            "keywords": "Pandemics > Corona Virus Pandemic",
-            "title": "UN zu Corona-Pandemie"
-        },
-        {
-            "modified": 1585677341,
-            "filename": "-Where+fairness+fails+data+algorithms+and+the+limits+of+antidiscrimination+discourse.pdf",
-            "authors": [
-                "Anna Lauren Hoffmann"
-            ],
-            "year": 2019,
-            "priority": 0,
-            "keywords": "Data > Big Data > Issues > Bias, Fairness",
-            "title": "Where fairness fails: data, algorithms, and the limits of antidiscrimination discourse"
-        },
-        {
-            "modified": 1585670348,
-            "filename": "!Kay72a.pdf",
-            "authors": [
-                "Alan C. Kay"
-            ],
-            "year": 2003,
-            "priority": 1,
-            "keywords": "Design, HCI, UI, UX > General, Theory > Personal Dynamic Media, Dynabook",
-            "title": "A Personal Computer for Children of all hges"
-        },
-        {
-            "modified": 1585669469,
-            "filename": "-LBW221.pdf",
-            "authors": [
-                "Teo Babic",
-                "Florian Perteneder"
-            ],
-            "year": 2020,
-            "priority": 0,
-            "keywords": "Public Displays > Issues > Distance Interactions",
-            "title": "Simo: Interactions with Distant Displays by Smartphones with Simultaneous Face and World Tracking"
-        },
-        {
-            "modified": 1585669342,
-            "filename": "!!1712.02547.pdf",
-            "authors": [
-                "Yunlong Wang",
-                "Lingdan Wu",
-                "Jan-Philipp Lange",
-                "Ahmed Fadhil",
-                "Harald Reiterer"
-            ],
-            "year": 2018,
-            "priority": 2,
-            "keywords": "CSCW > Sedentary Work",
-            "title": "Title page Persuasive Technology in Reducing Prolonged Sedentary Behavior at Work: A Systematic Review"
-        },
-        {
-            "modified": 1585667113,
-            "filename": "-ubicomp2020a.pdf",
-            "authors": [
-                "Niels van Berkel",
-                "Anja Exler",
-                "Martin Gjoreski",
-                "Tadashi Okoshi",
-                "Veljko Pejovic",
-                "Tine Kolenik",
-                "Aku Visuri"
-            ],
-            "year": 2020,
-            "priority": 0,
-            "keywords": "Workshop Proposals",
-            "title": "UbiTtention 2020: 5th International Workshop on Smart & Ambient Notification and Attention Management"
-        },
-        {
-            "modified": 1585661878,
-            "filename": "!!!chi20c-sub2351-cam-i16.pdf",
-            "authors": [
-                "Florian \u2018Floyd\u2019 Mueller",
-                "Pedro Lopes",
-                "Paul Strohmeier",
-                "Wendy Ju",
-                "Caitlyn Seim",
-                "Martin Weigel",
-                "Suranga Nanayakkara",
-                "Marianna Obrist",
-                "Zhuying Li",
-                "Joseph Delfa",
-                "Jun Nishida",
-                "Elizabeth M. Gerber",
-                "Dag Svanaes",
-                "Jonathan Grudin",
-                "Stefan Greuter",
-                "Kai Kunze",
-                "Thomas Erickson",
-                "Steven Greenspan",
-                "Masahiko Inami",
-                "Joe Marshall",
-                "Harald Reiterer",
-                "Katrin Wolf",
-                "Jochen Meyer",
-                "Thecla Schiphorst",
-                "Dakuo Wang",
-                "Pattie Maes"
-            ],
-            "year": 2020,
-            "priority": 3,
-            "keywords": "AI > Human-Computer Integration > Challenges",
-            "title": "Next Steps in Human-Computer Integration"
-        },
-        {
-            "modified": 1585658754,
-            "filename": "!!!The_three_paradigms_of_HCI.pdf",
-            "authors": [
-                "Deborah Gail Tatar",
-                "Steve Harrison"
-            ],
-            "year": 2007,
-            "priority": 3,
-            "keywords": "Design, HCI, UI, UX > General, Theory > HCI Paradigms",
-            "title": "The Three Paradigms of HCI"
-        },
-        {
-            "modified": 1585658623,
-            "filename": "-3027063.3027102.pdf",
-            "authors": [],
-            "year": 2017,
-            "priority": 0,
-            "keywords": "Design, HCI, UI, UX > General, Theory",
-            "title": "Introduction to Human-Computer Interaction"
-        },
-        {
-            "modified": 1585648723,
-            "filename": "!!!hsieh2005.pdf",
-            "authors": [
-                "Hsiu-Fang Hsieh",
-                "Sarah E. Shannon"
-            ],
-            "year": 2005,
-            "priority": 3,
-            "keywords": "Methods > Qualitative > Content Analysis",
-            "title": "Three Approaches to Qualitative Content Analysis"
-        },
-        {
-            "modified": 1585596345,
-            "filename": "!Critical_Race_Theory_for_HCI.pdf",
-            "authors": [
-                "Ihudiya Finda Ogbonnaya-Ogburu",
-                "Angela D. R. Smith",
-                "Alexandra To",
-                "Kentaro Toyama"
-            ],
-            "year": 2020,
-            "priority": 1,
-            "keywords": "Design, HCI, UI, UX > Critical Race Theory",
-            "title": "Critical Race Theory for HCI"
-        },
-        {
-            "modified": 1585591686,
-            "filename": "-Germany will issue coronavirus antibody certificates to allow quarantined to re-enter society.pdf",
-            "authors": [
-                "Daniel Wighton",
-                "David Chazan",
-                "Tony Diver",
-                "Michael Gove"
-            ],
-            "year": 2020,
-            "priority": 0,
-            "keywords": "Pandemics > Corona Virus Pandemic > Lockdown > Exiting the Lockdown",
-            "title": "More from News"
-        },
-        {
-            "modified": 1585589654,
-            "filename": "!!Hoffmann,+Proferes,+&+Zimmer+-+Zuckerberg+Files.pdf",
-            "authors": [
-                "Anna Lauren Hoffmann",
-                "Nicholas Proferes",
-                "Michael Zimmer"
-            ],
-            "year": 2016,
-            "priority": 2,
-            "keywords": "Communities, Networks > Social Media > Facebook > Communication",
-            "title": "\u201cMaking the world more open and connected\u201d: Mark Zuckerberg and the discursive construction of Facebook and its users"
-        },
-        {
-            "modified": 1585502575,
-            "filename": "-Weltspiegel zu Singapur_ Aus der SARS-Epidemie gelernt _ tagesschau.de.pdf",
-            "authors": [],
-            "year": 2020,
-            "priority": 0,
-            "keywords": "Pandemics > Corona Virus Pandemic > Singapur",
-            "title": "Aus der SARS-Epidemie gelernt"
-        },
-        {
-            "modified": 1585502475,
-            "filename": "-Corona in Russland_ Putins Urlaub f\u00fcr alle bringt Probleme _ tagesschau.de.pdf",
-            "authors": [
-                "Putins Urlaub"
-            ],
-            "year": 2020,
-            "priority": 0,
-            "keywords": "Pandemics > Corona Virus Pandemic > Russia",
-            "title": "Corona in Russland"
-        },
-        {
-            "modified": 1585495656,
-            "filename": "!!ultra-chi20.pdf",
-            "authors": [
-                "Yuxin Chen",
-                "Huiying Li",
-                "Shan-Yuan Teng",
-                "Steven Nagels",
-                "Zhijing Li",
-                "Pedro Lopes",
-                "Ben Y. Zhao",
-                "Haitao Zheng"
-            ],
-            "year": 2020,
-            "priority": 2,
-            "keywords": "Counter Surveillance > Jammer",
-            "title": "Wearable Microphone Jamming"
-        },
-        {
-            "modified": 1585491728,
-            "filename": "-Pr\u00e4sidentin zu den aktuellen Herausforderungen f\u00fcr die Forschung \u2014 Presseportal.pdf",
-            "authors": [],
-            "year": 2020,
-            "priority": 0,
-            "keywords": "Pandemics > Corona Virus Pandemic > Germany",
-            "title": "Pra\u0308sidentin zu den aktuellen Herausforderungen fu\u0308r die Forschung"
-        },
-        {
-            "modified": 1585469568,
-            "filename": "!!InstructorEvaluationSummary.pdf",
-            "authors": [],
-            "year": 2008,
-            "priority": 2,
-            "keywords": "Teaching > Teaching Portfolio",
-            "title": "The evaluation system adapted by the department of Computer Science and Engineering consists of survey questions that cover different aspects regarding students\u2019 background and GPA, instructor capabilities and teaching style, course material, and the cla"
-        },
-        {
-            "modified": 1585406284,
-            "filename": "-The Daily Routines of Famous Creative People _ Podio.pdf",
-            "authors": [
-                "HONOR\u00c9 DE BALZAC",
-                "JOHN MILTON",
-                "HARUKI MURAKAMI",
-                "VOLTAIRE BENJAMIN FRANKLIN",
-                "IMMANUEL KANT",
-                "KURT VONNEGUT",
-                "MAYA ANGELOU",
-                "WYSTAN HUGH AUDEN",
-                "LUDWIG VAN BEETHOVEN",
-                "SIGMUND FREUD"
-            ],
-            "year": 2020,
-            "priority": 0,
-            "keywords": "Creativity > Process > Habits, Routines",
-            "title": "MARY FLANNERY O'CONNOR LE CORBUSIER VICTOR HUGO WOLFGANG AMADEUS MOZART CHARLES DARWIN CHARLES DICKENS"
-        },
-        {
-            "modified": 1585403255,
-            "filename": "-Isolation gelockert_ Wuhan kehrt vorsichtig zum Alltag zur\u00fcck _ tagesschau.de.pdf",
-            "authors": [],
-            "year": 2020,
-            "priority": 0,
-            "keywords": "Pandemics > Corona Virus Pandemic",
-            "title": "Isolation gelockert"
+            "year": 2010
         }
     ],
+    "unrecognized_overall": 0,
+    "modified": 1586892384,
     "unrecognized_percent": 0.0,
-    "unrecognized_overall_percent": 0.43
+    "unrecognized": 0,
+    "unrecognized_overall_percent": 0.0
 }
