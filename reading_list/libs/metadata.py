@@ -4,7 +4,7 @@
 
 import requests
 import os
-import csv
+# import csv
 
 
 # curl -v -H "Content-type: application/pdf" --data-binary @paper.pdf "http://scienceparse.allenai.org/v1"
@@ -46,35 +46,42 @@ def extractMetadata(fullpath):
         # skip conditions
         # if 'id' not in rawdata or rawdata['id'] == 'empty':
             # skip = True # return False
-        if not 'title' in rawdata:
-            skip = True # return False
+        # if not 'title' in rawdata:
+        #     skip = True # return False
+
+        try:
+            title = rawdata['title']
+        except KeyError:
+            title = os.path.splitext(filename)[0].strip('!-')
+
+        if not 'authors' in rawdata:
+            skip == True
+        if rawdata['authors'] == []:
+            skip == True
 
         # skip?
         if skip == True:
             # log the skipped document
-
             # filter for csv storage
-            if 'sections' in rawdata:
-                del rawdata['sections']
-            if 'references' in rawdata:
-                del rawdata['references']
-
-            missed = {}
-            defaults = {
-                'filename': filename,
-                'id': '',
-                'title': '',
-                'abstractText': '',
-                'year': '',
-                'authors': '',
-            }
-            missed.update(defaults)
-            missed.update(rawdata)
-
-            # log the unrecognized entry
-            with open('unrecognized.csv', 'a') as csvfile:
-                unrecogWriter = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-                unrecogWriter.writerow(missed.items()) # ([rawdata[k] for k in rawdata.keys()])
+            # if 'sections' in rawdata:
+            #     del rawdata['sections']
+            # if 'references' in rawdata:
+            #     del rawdata['references']
+            # missed = {}
+            # defaults = {
+            #     'filename': filename,
+            #     'id': '',
+            #     'title': '',
+            #     'abstractText': '',
+            #     'year': '',
+            #     'authors': '',
+            # }
+            # missed.update(defaults)
+            # missed.update(rawdata)
+            # # log the unrecognized entry
+            # with open('unrecognized.csv', 'a') as csvfile:
+            #     unrecogWriter = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+            #     unrecogWriter.writerow(missed.items()) # ([rawdata[k] for k in rawdata.keys()])
             return False
 
         # sanitize
