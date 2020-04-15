@@ -3,6 +3,10 @@
   clear: both;
 }
 
+.clickable {
+	cursor: pointer;
+}
+
 .wrapperBox {
   clear:both;
   margin-top: 1rem;
