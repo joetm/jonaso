@@ -40,6 +40,7 @@ def extractMetadata(fullpath):
         path, filename = os.path.split(fullpath)
 
         skip = False
+        recog = True
 
         rawdata = r.json()
 
@@ -49,16 +50,22 @@ def extractMetadata(fullpath):
         # if not 'title' in rawdata:
         #     skip = True # return False
 
-        # should have a title, but okey without one (using filename instead)
+        # should have a title, but okay without one (using filename instead)
         try:
             title = rawdata['title']
         except KeyError:
             # unrecognized title: use filename instead
             title = os.path.splitext(filename)[0].strip('!-')
+            recog = False
+        try:
+            if title.endswith('Wikipedia') and not rawdata['authors']:
+                rawdata['authors'] = 'Wikipedia'
+        except:
+            pass
 
         # must have authors
         try:
-            if rawdata['authors'] == []:
+            if not rawdata['authors']:
                 skip == True
         except KeyError:
             skip == True
@@ -91,14 +98,16 @@ def extractMetadata(fullpath):
         # sanitize
         if not 'year' in rawdata:
             rawdata['year'] = "N/A"
-        if not 'authors' in rawdata:
-            rawdata['authors'] = False
+        # if not 'authors' in rawdata:
+        #     rawdata['authors'] = False
         metadata = {
             # 'id': rawdata['id'],
             'title': title,
             'year': rawdata['year'],
-            'authors': [] if not rawdata['authors'] else [x['name'] for x in rawdata['authors']],
+            # 'authors': [] if not rawdata['authors'] else [x['name'] for x in rawdata['authors']],
+            'authors': [x['name'] for x in rawdata['authors']],
             'filename': filename,
+            'recog': int(recog),
             'modified': int(os.path.getmtime(fullpath)),
             # 'created': int(os.path.getctime(fullpath)),
             # 'abstractText': rawdata['abstractText'],
