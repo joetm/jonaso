@@ -234,21 +234,36 @@ while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 				$keywords[$level][$kw] = $keywords[$level][$kw] + 1;
 			}
 		}
+
 		// re-orgqanise by level 1 -> [ kw_lvl2_1 = num, kw_lvl2_2 = num, ...]
-		if (isset($jsondoc->level) && $jsondoc->level == 1) {
-			$l1 = array_shift($keyword_array);
-			$l2 = array_shift($keyword_array);
-			// // first encounter of lvl1 keyword
+		// if (isset($jsondoc->level) && $jsondoc->level == 1) {
+		// 	$l1 = array_shift($keyword_array);
+		// 	$l2 = array_shift($keyword_array);
+		// 	// // first encounter of lvl1 keyword
+		// 	if (!isset($keywords_level2[$l1])) {
+		// 		$keywords_level2[$l1] = [$l2 => 1];
+		// 	} else {
+		// 		if (!isset($keywords_level2[$l1][$l2])) {
+		// 			$keywords_level2[$l1][$l2] = 1;
+		// 		} else {
+		// 			$keywords_level2[$l1][$l2] = $keywords_level2[$l1][$l2] + 1;
+		// 		}
+		// 	}
+		// }
+
+		$l1 = array_shift($keyword_array);
+		$l2 = array_shift($keyword_array);
+		if (isset($jsondoc->level) && $jsondoc->level === 1) {
 			if (!isset($keywords_level2[$l1])) {
-				$keywords_level2[$l1] = [$l2 => 1];
-			} else {
-				if (!isset($keywords_level2[$l1][$l2])) {
-					$keywords_level2[$l1][$l2] = 1;
-				} else {
-					$keywords_level2[$l1][$l2] = $keywords_level2[$l1][$l2] + 1;
-				}
+				$keywords_level2[$l1] = [];
 			}
 		}
+		if (!isset($keywords_level2[$l1][$l2])) {
+			$keywords_level2[$l1][$l2] = 1;
+		} else {
+			$keywords_level2[$l1][$l2] = $keywords_level2[$l1][$l2] + 1;
+		}
+
 	}
 
 	$done++;
@@ -261,22 +276,9 @@ while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 
 }
 
-// var_dump($keywords[0]);
-
 // ksort($authors);
 // asort($authors);
 // array_multisort($authors, SORT_DESC, $authors);
-
-// DEV
-// for ($i = 0; $i < 60; $i++) {
-// 	$author = array_keys($authors)[$i];
-// 	echo $author;
-// 	echo " ";
-// 	var_dump($authors[$author]);
-// 	echo "\n";
-// }
-
-// var_dump($authors['Juho Hamari']);
 
 $priorities = [
 	// 0 => [],
@@ -311,7 +313,7 @@ fclose($fp);
 // keywords (only level 1)
 $kws = array();
 foreach ($keywords[0] as $key => $val) {
-	$tmp = array('name' => $key, 'num' => $val);
+	$tmp = array('name' => $key, 'num' => $val, 'id' => md5($key));
 	// if (!in_array($tmp, $kws)) {
 		array_push($kws, $tmp);
 	// }
@@ -322,19 +324,17 @@ $fp = fopen('keywords.json', 'w');
 fwrite($fp, json_encode($kws));
 fclose($fp);
 
-// keywords (only level 1)
-// $kws = array();
-// foreach ($keywords_level2 as $key => $kw) {
-// 	$tmp = array('name' => $key, 'num' => $val);
-// 	// if (!in_array($tmp, $kws)) {
-// 		array_push($kws, $tmp);
-// 	// }
-// }
-// usort($kws, 'sortFunc');
-// save keywords to file
-$fp = fopen('keywords-level2.json', 'w');
-fwrite($fp, json_encode($keywords_level2));
-fclose($fp);
+// keywords (level 2)
+$kws = array();
+foreach ($keywords_level2 as $key => $sublevel) {
+	if (isset($sublevel[""])) {
+		unset($sublevel[""]);
+	}
+	// save keywords to file
+	$fp = fopen("level2/" . md5($key) . ".json", 'w');
+	fwrite($fp, json_encode($sublevel));
+	fclose($fp);
+}
 
 
 // write out the author details
