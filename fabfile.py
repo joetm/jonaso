@@ -4,16 +4,17 @@
 
 import os, sys, re
 
-from fabric.api import *
-from fabric.contrib.console import confirm
+# from fabric.api import *
+# from fabric.contrib.console import confirm
+from fabric2 import Connection
 
 # .dotenv
-from os.path import join, dirname
-from dotenv import load_dotenv
+# from os.path import join, dirname
+# from dotenv import load_dotenv
 
 # load environment variables from .env file
-dotenv_path = join(dirname(__file__), 'ENV', 'jonaso.de')
-load_dotenv(dotenv_path)
+# dotenv_path = join(dirname(__file__), 'ENV', 'jonaso.de')
+# load_dotenv(dotenv_path)
 #os.environ.get('ftp_username')
 #os.environ.get('ftp_password')
 
@@ -23,26 +24,36 @@ localdir = "public"
 tarFilename = "dist/jonaso.tar.gz"
 
 # credentials are stored in ENV/<site> file
-env.user = os.environ.get("ftp_username")
-env.hosts = [ os.environ.get("ftp_host") ]
+# env.user = os.environ.get("ftp_username")
+# env.hosts = [ os.environ.get("ftp_host") ]
 
 
-@task
+# @task
 def local_cleanup():
     local("rm -f " + tarFilename)
 
-@task
+# @task
 def deploy():
     print("========================================")
-    print("deploying to server" + os.environ.get("ftp_host"))
+    print("deploying to server") # + os.environ.get("ftp_host"))
     print("========================================")
+
+    c = Connection(host='www.jonaso.de', port=21)
+    result = c.run('uname -s')
+    print(result.stdout.strip())
+    print(result.exited)
+    print(result.ok)
+    print(result.command)
+    print(result.connection)
+    print(result.connection.host)
+    sys.exit()
 
     try:
         # cleanup
-        local_cleanup()
+        # local_cleanup()
 
         # compress the folder
-        local("tar -zcvf %s %s" % (tarFilename, localdir))
+        # local("tar -zcvf %s %s" % (tarFilename, localdir))
 
         pass
 
@@ -71,7 +82,7 @@ def deploy():
     finally:
 
         # cleanup
-        local_cleanup()
+        # local_cleanup()
 
         # remote cleanup
         # remove the tar file and sql file
