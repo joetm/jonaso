@@ -287,6 +287,8 @@ usort($priorities[1], 'sortFunc');
 usort($priorities[2], 'sortFunc');
 usort($priorities[3], 'sortFunc');
 
+
+# level 1
 $kws = array();
 foreach ($keywords[0] as $key => $val) {
 	$tmp = array('name' => $key, 'num' => $val);
@@ -295,17 +297,29 @@ foreach ($keywords[0] as $key => $val) {
 	// }
 }
 usort($kws, 'sortFunc');
+// save keywords to file
+$fp = fopen('keywords.json', 'w');
+fwrite($fp, json_encode($kws));
+fclose($fp);
 
-// var_dump($kws);
+# level 2
+$kws = array();
+foreach ($keywords[1] as $key => $val) {
+	$tmp = array('name' => $key, 'num' => $val);
+	// if (!in_array($tmp, $kws)) {
+		array_push($kws, $tmp);
+	// }
+}
+usort($kws, 'sortFunc');
+// save keywords to file
+$fp = fopen('keywords-level-2.json', 'w');
+fwrite($fp, json_encode($kws));
+fclose($fp);
+
 
 // save influencers to json file
 $fp = fopen('influencer.json', 'w');
 fwrite($fp, json_encode($priorities));
-fclose($fp);
-
-// save keywords to file
-$fp = fopen('keywords.json', 'w');
-fwrite($fp, json_encode($kws));
 fclose($fp);
 
 // write out the author details
