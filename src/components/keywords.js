@@ -3,22 +3,6 @@ import { Container, Button } from 'semantic-ui-react'
 import { ResponsiveContainer, Treemap, BarChart, Bar, Tooltip, XAxis, YAxis, CartesianGrid } from 'recharts'
 
 
-// const BChart = ({ keywords }) => {
-//   console.log(keywords);
-//   return (
-//     <BarChart layout="vertical" data={keywords}>
-//             <CartesianGrid strokeDasharray="3 3" />
-//             <XAxis type="number" dataKey="num" />
-//             <YAxis type="category" dataKey="name" width={200} />
-//             <Tooltip
-//               separator=" "
-//               formatter={(value, name, props) => (<span>Publications: {value}</span>)}
-//             />
-//             <Bar dataKey="num" fill="#82ca9d" />
-//     </BarChart>
-//   )
-// }
-
 
 class Keywords extends React.Component {
   constructor(props) {
