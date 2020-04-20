@@ -82,8 +82,9 @@ def parsefiles(PATTERN, BASEPATHS, conn):
                     print (counter, ": ",  thehash)
 
                     # get my keywords (not the author keywords)
-                    keywords = path.replace(root, '').replace('/',' > ')
-                    md['keywords'] = keywords
+                    md['keywords'] = path.replace(root, '').replace('/',' > ')
+
+                    md['level'] = len(fullpath.replace(root, "").split("/")) - 1
 
                     # calculate the priority rating
                     md['priority'] = 0 if name.startswith('-') else 1
