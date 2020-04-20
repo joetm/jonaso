@@ -95,6 +95,7 @@ $db = new MyDB();
 $authors = array();
 $coauthors = array();
 $keywords = array();
+$keywords_level2 = array();
 $influencers = array();
 $keywordauthors = array();
 
@@ -225,13 +226,25 @@ while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 	// --------------------------------
 	if ($jsondoc->keywords && $jsondoc->priority > 0) {
 		$keyword_array = explode(" > ", $jsondoc->keywords);
-		// re-organise
-		// reorganize_keywords($keywords, $keyword_array);
+		// re-organise by level
 		foreach ($keyword_array as $level => $kw) {
 			if (!isset($keywords[$level][$kw])) {
 				$keywords[$level][$kw] = 1;
 			} else {
 				$keywords[$level][$kw] = $keywords[$level][$kw] + 1;
+			}
+		}
+		// re-orgqanise by level 1 -> level 2
+		$level1_kw = array_pop($keyword_array);
+		foreach ($keyword_array as $kw) {
+			// first encounter of this keyword
+			if (isset($keywords_level2[$level1_kw])) {
+				$keywords_level2[$level1_kw] = [$kw => 1];
+			}
+			if (isset($keywords_level2[$level1_kw][$kw])) {
+				$keywords_level2[$level1_kw][$kw] => 1;
+			} else {
+				$keywords_level2[$level1_kw][$kw]++;
 			}
 		}
 	}
@@ -288,7 +301,12 @@ usort($priorities[2], 'sortFunc');
 usort($priorities[3], 'sortFunc');
 
 
-# level 1
+// save influencers to json file
+$fp = fopen('influencer.json', 'w');
+fwrite($fp, json_encode($priorities));
+fclose($fp);
+
+// keywords (only level 1)
 $kws = array();
 foreach ($keywords[0] as $key => $val) {
 	$tmp = array('name' => $key, 'num' => $val);
@@ -302,25 +320,20 @@ $fp = fopen('keywords.json', 'w');
 fwrite($fp, json_encode($kws));
 fclose($fp);
 
-# level 2
-$kws = array();
-foreach ($keywords[1] as $key => $val) {
-	$tmp = array('name' => $key, 'num' => $val);
-	// if (!in_array($tmp, $kws)) {
-		array_push($kws, $tmp);
-	// }
-}
-usort($kws, 'sortFunc');
+// keywords (only level 1)
+// $kws = array();
+// foreach ($keywords_level2 as $key => $kw) {
+// 	$tmp = array('name' => $key, 'num' => $val);
+// 	// if (!in_array($tmp, $kws)) {
+// 		array_push($kws, $tmp);
+// 	// }
+// }
+// usort($kws, 'sortFunc');
 // save keywords to file
-$fp = fopen('keywords-level-2.json', 'w');
-fwrite($fp, json_encode($kws));
+$fp = fopen('keywords-level2.json', 'w');
+fwrite($fp, json_encode($keywords_level2));
 fclose($fp);
 
-
-// save influencers to json file
-$fp = fopen('influencer.json', 'w');
-fwrite($fp, json_encode($priorities));
-fclose($fp);
 
 // write out the author details
 // chdir('./influencers/');
