@@ -234,17 +234,17 @@ while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 				$keywords[$level][$kw] = $keywords[$level][$kw] + 1;
 			}
 		}
-		// re-orgqanise by level 1 -> level 2
+		// re-orgqanise by level 1 -> [ kw_lvl2_1 = num, kw_lvl2_2 = num, ...]
 		$level1_kw = array_pop($keyword_array);
-		foreach ($keyword_array as $kw) {
-			// first encounter of this keyword
-			if (isset($keywords_level2[$level1_kw])) {
-				$keywords_level2[$level1_kw] = [$kw => 1];
-			}
-			if (isset($keywords_level2[$level1_kw][$kw])) {
-				$keywords_level2[$level1_kw][$kw] => 1;
+		$level2_kw = array_pop($keyword_array);
+		// first encounter of lvl1 keyword
+		if (!isset($keywords_level2[$level1_kw])) {
+			$keywords_level2[$level1_kw] = [$level2_kw => 1];
+		} else {
+			if (!isset($keywords_level2[$level1_kw][$level2_kw])) {
+				$keywords_level2[$level1_kw][$level2_kw] = 1;
 			} else {
-				$keywords_level2[$level1_kw][$kw]++;
+				$keywords_level2[$level1_kw][$level2_kw] = $keywords_level2[$level1_kw][$level2_kw] + 1;
 			}
 		}
 	}
