@@ -21,6 +21,32 @@ import os
     # "('references', [{'
 
 
+def log():
+    # log the skipped document
+    # filter for csv storage
+    if 'sections' in rawdata:
+        del rawdata['sections']
+    if 'references' in rawdata:
+        del rawdata['references']
+    missed = {}
+    defaults = {
+        'filename': filename,
+        'id': '',
+        'title': '',
+        'abstractText': '',
+        'year': '',
+        'authors': '',
+    }
+    # overwrite where necessary
+    missed.update(defaults)
+    missed.update(rawdata)
+    # log the unrecognized entry
+    with open('unrecognized.csv', 'a') as csvfile:
+        unrecogWriter = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+        unrecogWriter.writerow(missed.items()) # ([rawdata[k] for k in rawdata.keys()])
+
+
+
 def extractMetadata(fullpath):
     files = {'upload_file': open(fullpath,'rb')}
     headers = {'Content-type': 'application/pdf'}
@@ -59,7 +85,7 @@ def extractMetadata(fullpath):
             recog = False
         try:
             if title.endswith('Wikipedia') and not rawdata['authors']:
-                rawdata['authors'] = 'Wikipedia'
+                rawdata['authors'] = [{'name': 'Wikipedia'}]
         except:
             pass
 
@@ -72,27 +98,7 @@ def extractMetadata(fullpath):
 
         # skip?
         if skip == True:
-            # log the skipped document
-            # filter for csv storage
-            # if 'sections' in rawdata:
-            #     del rawdata['sections']
-            # if 'references' in rawdata:
-            #     del rawdata['references']
-            # missed = {}
-            # defaults = {
-            #     'filename': filename,
-            #     'id': '',
-            #     'title': '',
-            #     'abstractText': '',
-            #     'year': '',
-            #     'authors': '',
-            # }
-            # missed.update(defaults)
-            # missed.update(rawdata)
-            # # log the unrecognized entry
-            # with open('unrecognized.csv', 'a') as csvfile:
-            #     unrecogWriter = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-            #     unrecogWriter.writerow(missed.items()) # ([rawdata[k] for k in rawdata.keys()])
+            # log(rawdata)
             return False
 
         # sanitize
@@ -104,8 +110,7 @@ def extractMetadata(fullpath):
             # 'id': rawdata['id'],
             'title': title,
             'year': rawdata['year'],
-            # 'authors': [] if not rawdata['authors'] else [x['name'] for x in rawdata['authors']],
-            'authors': [x['name'] for x in rawdata['authors']],
+            'authors': [] if not rawdata['authors'] else [x['name'] for x in rawdata['authors']],
             'filename': filename,
             'recog': int(recog),
             'modified': int(os.path.getmtime(fullpath)),
