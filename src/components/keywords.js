@@ -13,33 +13,51 @@ class Keywords extends React.Component {
       activeTooltipIndex: false,
       activeLabel: null,
       subcontent: [],
+      level2: [],
     }
   }
   handleBackButtonClick = () => {
     this.setState({isZoomed: false})
   }
-  handleClick = e => {
-    let {isZoomed} = this.state
-    isZoomed = !isZoomed
-    if (isZoomed) {
-      // DEV
-      let subcontent = [{name:'A',num:12},{name:'B',num:12}]
-      this.setState({subcontent})
+  handleClick = bar => {
+    const { isZoomed } = this.state
+    if (!isZoomed) {
+        // query level2
+        const URL = `https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/level2/${bar.id}.json`
+        fetch(URL)
+        .then(response => {
+          if (response.status >= 400) {
+            return []
+          }
+          return response.json()
+        })
+        .then(level2 => {
+          console.log('setting data:', level2);
+          this.setState({
+            isZoomed: true,
+            level2
+          })
+        })
+        console.log('isZoomed:', isZoomed);
+    } else {
+        this.setState({
+          isZoomed: false,
+          level2: [],
+        })
+        console.log('isZoomed:', isZoomed);
     }
-    this.setState({isZoomed})
-    console.log(e, 'zoomed:', isZoomed);
   }
   changeChartType = (chart) => {
     this.setState({chart})
   }
   render() {
     const { keywords = [] } = this.props
-    const { chart } = this.state
+    const { chart, level2, isZoomed } = this.state
     const barChartActive = chart === 'bar'
-    // console.log('keywords', keywords)
+
+    const displaydata = isZoomed && level2.length ? level2 : keywords;
 
     // filtered_keywords = keywords.map(kw => kw.num > 1 ? kw : null);
-    // console.log('filtered_keywords', filtered_keywords);
 
     return (
         <Container style={{marginBottom: '2em'}}>
@@ -56,7 +74,7 @@ class Keywords extends React.Component {
           <ResponsiveContainer width="100%" height={740}>
             {
               barChartActive ?
-                <BarChart layout="vertical" data={keywords}>
+                <BarChart layout="vertical" data={displaydata}>
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis type="number" dataKey="num" />
                         <YAxis type="category" dataKey="name" width={200} />
@@ -64,15 +82,19 @@ class Keywords extends React.Component {
                           separator=" "
                           formatter={(value, name, props) => (<span>Publications: {value}</span>)}
                         />
-                        <Bar dataKey="num" fill="#82ca9d" />
+                        <Bar
+                          dataKey="num"
+                          fill="#82ca9d"
+                          className="clickable"
+                          onClick={this.handleClick}
+                        />
                 </BarChart>
               :
                 <Treemap
-                  data={keywords}
+                  data={displaydata}
                   isAnimationActive={true}
                   animationDuration={1000}
                   dataKey="num"
-                  onClick={this.handleClick}
                 />
             }
           </ResponsiveContainer>
