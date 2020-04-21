@@ -13,6 +13,7 @@ class Keywords extends React.Component {
       activeTooltipIndex: false,
       activeLabel: null,
       level2: [],
+      breadcrumb: null,
     }
   }
   handleBackButtonClick = () => {
@@ -34,7 +35,8 @@ class Keywords extends React.Component {
           console.log('setting data:', level2);
           this.setState({
             isZoomed: true,
-            level2
+            level2,
+            breadcrumb: bar.name,
           })
         })
         console.log('isZoomed:', isZoomed);
@@ -42,6 +44,7 @@ class Keywords extends React.Component {
         this.setState({
           isZoomed: false,
           level2: [],
+          breadcrumb: null,
         })
         console.log('isZoomed:', isZoomed);
     }
@@ -57,7 +60,7 @@ class Keywords extends React.Component {
   }
   render() {
     const { keywords = [] } = this.props
-    const { chart, level2, isZoomed } = this.state
+    const { chart, level2, isZoomed, breadcrumb } = this.state
     const barChartActive = chart === 'bar'
 
     const displaydata = isZoomed && level2.length ? level2 : keywords;
@@ -76,7 +79,10 @@ class Keywords extends React.Component {
 
           {
             isZoomed &&
-              <Button circular onClick={this.zoomOut} icon='left arrow' style={{float: 'right', marginRight: '1em'}} />
+              <div style={{float: 'right', marginRight: '1em'}}>
+                <span style={{marginRight: '1em'}}>{breadcrumb}</span>
+                <Button circular onClick={this.zoomOut} icon='left arrow' />
+              </div>
           }
 
           <div style={{clear:'both'}}></div>
