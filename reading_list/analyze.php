@@ -235,22 +235,6 @@ while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 			}
 		}
 
-		// re-orgqanise by level 1 -> [ kw_lvl2_1 = num, kw_lvl2_2 = num, ...]
-		// if (isset($jsondoc->level) && $jsondoc->level == 1) {
-		// 	$l1 = array_shift($keyword_array);
-		// 	$l2 = array_shift($keyword_array);
-		// 	// // first encounter of lvl1 keyword
-		// 	if (!isset($keywords_level2[$l1])) {
-		// 		$keywords_level2[$l1] = [$l2 => 1];
-		// 	} else {
-		// 		if (!isset($keywords_level2[$l1][$l2])) {
-		// 			$keywords_level2[$l1][$l2] = 1;
-		// 		} else {
-		// 			$keywords_level2[$l1][$l2] = $keywords_level2[$l1][$l2] + 1;
-		// 		}
-		// 	}
-		// }
-
 		$l1 = array_shift($keyword_array);
 		$l2 = array_shift($keyword_array);
 		if (isset($jsondoc->level) && $jsondoc->level === 1) {
@@ -314,10 +298,9 @@ fclose($fp);
 $kws = array();
 foreach ($keywords[0] as $key => $val) {
 	$tmp = array('name' => $key, 'num' => $val, 'id' => md5($key));
-	// if (!in_array($tmp, $kws)) {
-		array_push($kws, $tmp);
-	// }
+	array_push($kws, $tmp);
 }
+// sort descending by num
 usort($kws, 'sortFunc');
 // save keywords to file
 $fp = fopen('keywords.json', 'w');
@@ -325,15 +308,17 @@ fwrite($fp, json_encode($kws));
 fclose($fp);
 
 // keywords (level 2)
-$kws = array();
 foreach ($keywords_level2 as $key => $sublevel) {
 	if (isset($sublevel[""])) {
 		unset($sublevel[""]);
 	}
+	// reorganize
 	$tmp = [];
-	foreach ($sublevel as $key => $val) {
-		$tmp[] = ["name" => $key, "num" => $val]; // no id needed at this level (for now)
+	foreach ($sublevel as $k => $v) {
+		$tmp[] = ["name" => $k, "num" => $v]; // no id needed at this level (for now)
 	}
+	// sort descending by num
+	usort($tmp, 'sortFunc');
 	// save keywords to file
 	$fp = fopen("level2/" . md5($key) . ".json", 'w');
 	fwrite($fp, json_encode($tmp));

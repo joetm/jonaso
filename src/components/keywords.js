@@ -12,7 +12,6 @@ class Keywords extends React.Component {
       isZoomed: false,
       activeTooltipIndex: false,
       activeLabel: null,
-      subcontent: [],
       level2: [],
     }
   }
@@ -47,6 +46,12 @@ class Keywords extends React.Component {
         console.log('isZoomed:', isZoomed);
     }
   }
+  zoomOut = () => {
+    this.setState({
+      isZoomed: false,
+      level2: [],
+    })
+  }
   changeChartType = (chart) => {
     this.setState({chart})
   }
@@ -69,12 +74,17 @@ class Keywords extends React.Component {
               <Button positive={!barChartActive} onClick={() => this.changeChartType('tree')}>Tree</Button>
           </Button.Group>
 
+          {
+            isZoomed &&
+              <Button circular onClick={this.zoomOut} icon='left arrow' style={{float: 'right', marginRight: '1em'}} />
+          }
+
           <div style={{clear:'both'}}></div>
 
           <ResponsiveContainer width="100%" height={740}>
             {
               barChartActive ?
-                <BarChart layout="vertical" data={displaydata}>
+                <BarChart layout="vertical" data={displaydata} onClick={isZoomed ? this.zoomOut : null}>
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis type="number" dataKey="num" />
                         <YAxis type="category" dataKey="name" width={200} />
@@ -85,7 +95,7 @@ class Keywords extends React.Component {
                         <Bar
                           dataKey="num"
                           fill="#82ca9d"
-                          className="clickable"
+                          className={!isZoomed ? "clickable" : ""}
                           onClick={this.handleClick}
                         />
                 </BarChart>
