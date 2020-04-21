@@ -89,17 +89,20 @@ def extractMetadata(fullpath):
         except:
             pass
 
-        # must have authors
-        try:
-            if not rawdata['authors']:
-                skip == True
-        except KeyError:
-            skip == True
+        # skip conditions:
+        # - must have authors
+        # if not 'authors' in rawdata:
+        #     skip == True
 
-        # skip?
-        if skip == True:
-            # log(rawdata)
-            return False
+        # skip this document?
+        # if skip == True:
+        #     # log(rawdata)
+        #     return False
+
+        try:
+            authors = [] if not rawdata['authors'] else [x['name'] for x in rawdata['authors']]
+        except:
+            authors = []
 
         # sanitize
         if not 'year' in rawdata:
@@ -110,7 +113,7 @@ def extractMetadata(fullpath):
             # 'id': rawdata['id'],
             'title': title,
             'year': rawdata['year'],
-            'authors': [] if not rawdata['authors'] else [x['name'] for x in rawdata['authors']],
+            'authors': authors,
             'filename': filename,
             'recog': int(recog),
             'modified': int(os.path.getmtime(fullpath)),
