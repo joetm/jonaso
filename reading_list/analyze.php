@@ -330,9 +330,13 @@ foreach ($keywords_level2 as $key => $sublevel) {
 	if (isset($sublevel[""])) {
 		unset($sublevel[""]);
 	}
+	$tmp = [];
+	foreach ($sublevel as $key => $val) {
+		$tmp[] = ["name" => $key, "num" => $val]; // no id needed at this level (for now)
+	}
 	// save keywords to file
 	$fp = fopen("level2/" . md5($key) . ".json", 'w');
-	fwrite($fp, json_encode($sublevel));
+	fwrite($fp, json_encode($tmp));
 	fclose($fp);
 }
 
