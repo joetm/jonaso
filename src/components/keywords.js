@@ -55,9 +55,7 @@ class Keywords extends React.Component {
       level2: [],
     })
   }
-  changeChartType = (chart) => {
-    this.setState({chart})
-  }
+  changeChartType = (chart) => this.setState({chart})
   render() {
     const { keywords = [] } = this.props
     const { chart, level2, isZoomed, breadcrumb } = this.state
