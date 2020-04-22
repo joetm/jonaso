@@ -46,10 +46,6 @@ const Wrapper = {
 
 const DetailContainer = ({authorid, details, priority, keywordClick, activeKeyword, toggleCoauthors, coauthorToggleActive}) => {
   const { docs=[], keywords=[] } = details
-  // console.info("keywords", keywords)
-  // console.info("docs", docs)
-  // console.info('activeKeyword', activeKeyword)
-
   // const kwlist = keywords.join(", ")
   const kwlist = keywords.map((kw, i) => (
     <Label
@@ -85,7 +81,7 @@ class AuthorList extends React.Component {
     const { updateActive } = this.props
     const { activeKeyword } = this.state
     const keyword = e.target.innerText
-    console.info('Querying keyword:', keyword)
+    // console.info('Querying keyword:', keyword)
     // toggle the checkbox off
     this.setState({coauthorToggleActive: false})
     // click on already active author?
