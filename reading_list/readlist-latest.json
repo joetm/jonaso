@@ -1,428 +1,710 @@
 {
-    "unrecognized_overall_percent": 0.0,
-    "unrecognized_overall": 0,
     "unrecognized": 0,
+    "unrecognized_overall_percent": 0.0,
+    "modified": 1587641900,
+    "unrecognized_percent": 0.0,
+    "unrecognized_overall": 0,
     "documents": [
         {
-            "recog": 1,
+            "modified": 1587641561,
             "level": 2,
-            "title": "Distributed Cognition and Distributed Morality: Agency, Artifacts and Systems",
+            "year": 2015,
+            "title": "ContentServer",
+            "recog": 0,
+            "keywords": "Business Models > Open Business Model",
+            "authors": [
+                "Thomas Kohler"
+            ],
+            "filename": "!!ContentServer.pdf",
+            "priority": 2
+        },
+        {
+            "modified": 1587639660,
+            "level": 2,
+            "year": "N/A",
+            "title": "THE OPEN BUSINESS MODEL: TOWARDS A COMMON UNDERSTANDING OF AN EMERGING CONCEPT",
+            "recog": 1,
+            "keywords": "Business Models > Open Business Model",
+            "authors": [
+                "Tobias Weiblen",
+                "Karolin Frankenberger",
+                "Oliver Gassmann"
+            ],
+            "filename": "!!The Open Business Model  Towards a Common Understanding of an Emerging Concept.pdf",
+            "priority": 2
+        },
+        {
+            "modified": 1587639358,
+            "level": 5,
+            "year": "N/A",
+            "title": "Decentralized Privacy-Preserving Proximity Tracing",
+            "recog": 1,
+            "keywords": "Privacy > Health Apps > Contact Tracing > Privacy Preserving Disease Tracking > DPPPT",
+            "authors": [
+                "Carmela Troncoso",
+                "Mathias Payer",
+                "Marcel Salath\u00e9",
+                "Wouter Lueks",
+                "Theresa Stadler",
+                "Daniele Antonioli",
+                "Ludovic Barman",
+                "Sylvain Chatel",
+                "Srdjan \u010capkun",
+                "Jan Beutel",
+                "Dennis Jackson",
+                "Aysajan Abidin",
+                "Reuben Binns",
+                "Ciro Cattuto"
+            ],
+            "filename": "!DP3T White Paper.pdf",
+            "priority": 1
+        },
+        {
+            "modified": 1587639317,
+            "level": 5,
+            "year": "N/A",
+            "title": "Decentralized Privacy-Preserving Proximity Tracing Overview of Data Protection and Security",
+            "recog": 1,
+            "keywords": "Privacy > Health Apps > Contact Tracing > Privacy Preserving Disease Tracking > DPPPT",
+            "authors": [
+                "Wouter Lueks",
+                "Theresa Stadler",
+                "Daniele Antonioli",
+                "Ludovic Barman",
+                "Sylvain Chatel",
+                "Thomas Wiegand"
+            ],
+            "filename": "-DP3T - Data Protection and Security.pdf",
+            "priority": 0
+        },
+        {
+            "modified": 1587639275,
+            "level": 5,
+            "year": 2020,
+            "title": "COVID-19 Response: What Data Is Necessary For Digital Proximity Tracing?",
+            "recog": 1,
+            "keywords": "Privacy > Health Apps > Contact Tracing > Privacy Preserving Disease Tracking > DPPPT",
+            "authors": [],
+            "filename": "-COVID19 Response - What Data Is Necessary For Digital Proximity Tracing.pdf",
+            "priority": 0
+        },
+        {
+            "modified": 1587639142,
+            "level": 5,
+            "year": 2020,
+            "title": "Distributed privacy-preserving contact tracing with mobile phones",
+            "recog": 1,
+            "keywords": "Privacy > Health Apps > Contact Tracing > Privacy Preserving Disease Tracking > DPPPT",
+            "authors": [],
+            "filename": "!DP3T-Slideshow.pdf",
+            "priority": 1
+        },
+        {
+            "modified": 1587638940,
+            "level": 5,
+            "year": "N/A",
+            "title": "Decentralized Privacy-Preserving Proximity Tracing: Simplified Overview",
+            "recog": 1,
+            "keywords": "Privacy > Health Apps > Contact Tracing > Privacy Preserving Disease Tracking > DPPPT",
+            "authors": [],
+            "filename": "-DP3T - Simplified Three Page Brief.pdf",
+            "priority": 0
+        },
+        {
+            "modified": 1587638649,
+            "level": 5,
+            "year": 2020,
+            "title": "EPFL and ETH Zurich advance digital contact tracing project - EPFL",
+            "recog": 0,
+            "keywords": "Privacy > Health Apps > Contact Tracing > Privacy Preserving Disease Tracking > Switzerland",
+            "authors": [],
+            "filename": "-EPFL and ETH Zurich advance digital contact tracing project - EPFL.pdf",
+            "priority": 0
+        },
+        {
+            "modified": 1587638581,
+            "level": 5,
+            "year": 2020,
+            "title": "Contact tracing app could be launched in Switzerland within weeks - SWI swissinfo.ch",
+            "recog": 0,
+            "keywords": "Privacy > Health Apps > Contact Tracing > Privacy Preserving Disease Tracking > Switzerland",
+            "authors": [],
+            "filename": "-Contact tracing app could be launched in Switzerland within weeks - SWI swissinfo.ch.pdf",
+            "priority": 0
+        },
+        {
+            "modified": 1587637134,
+            "level": 4,
+            "year": 2004,
+            "title": "Qualitative and quantitative methods: When stories converge",
+            "recog": 1,
+            "keywords": "Methods > Qualitative > Triangulation > Small q, Big Q",
+            "authors": [
+                "Michelle Fine"
+            ],
+            "filename": "!!!kidder1987.pdf",
+            "priority": 3
+        },
+        {
+            "modified": 1587636540,
+            "level": 3,
+            "year": 2017,
+            "title": "king2017",
+            "recog": 0,
+            "keywords": "Methods > Qualitative > Template Analysis",
+            "authors": [],
+            "filename": "!!king2017.pdf",
+            "priority": 2
+        },
+        {
+            "modified": 1587635306,
+            "level": 3,
+            "year": 2018,
+            "title": "braun2019",
+            "recog": 0,
+            "keywords": "Methods > Qualitative > Thematic Analysis",
+            "authors": [
+                "Virginia Braun",
+                "Victoria Clarke",
+                "Nikki Hayfield"
+            ],
+            "filename": "!!!braun2019.pdf",
+            "priority": 3
+        },
+        {
+            "modified": 1587632776,
+            "level": 4,
+            "year": 2019,
+            "title": "\u2018A starting point for your journey, not a map\u2019: Nikki Hayfield in conversation with Virginia Braun and Victoria Clarke about thematic analysis",
+            "recog": 1,
+            "keywords": "Methods > Qualitative > Thematic Analysis > Reflexive Thematic Analysis",
+            "authors": [
+                "Virginia Braun",
+                "Victoria Clarke",
+                "Nikki Hayfield"
+            ],
+            "filename": "-braun2019.pdf",
+            "priority": 0
+        },
+        {
+            "modified": 1587632681,
+            "level": 4,
+            "year": 2019,
+            "title": "Reflecting on reflexive thematic analysis",
+            "recog": 1,
+            "keywords": "Methods > Qualitative > Thematic Analysis > Reflexive Thematic Analysis",
+            "authors": [
+                "Virginia Braun",
+                "Victoria Clarke"
+            ],
+            "filename": "!!braun2019.pdf",
+            "priority": 2
+        },
+        {
+            "modified": 1587630262,
+            "level": 3,
+            "year": 2020,
+            "title": "d41586-020-01129-7",
+            "recog": 0,
+            "keywords": "Animals > Birds > Kakapo",
+            "authors": [
+                "Andrew Digby"
+            ],
+            "filename": "-d41586-020-01129-7.pdf",
+            "priority": 0
+        },
+        {
+            "modified": 1587629834,
+            "level": 4,
+            "year": 2012,
+            "title": "Using grounded theory as a method for rigorously reviewing literature",
+            "recog": 1,
+            "keywords": "Methods > Qualitative > Grounded Theory > Literature Reviews",
+            "authors": [
+                "Joost F. Wolfswinkel",
+                "Elfi Furtmueller",
+                "Celeste P.M. Wilderom"
+            ],
+            "filename": "!!wolfswinkel2011.pdf",
+            "priority": 2
+        },
+        {
+            "modified": 1587629042,
+            "level": 3,
+            "year": 2020,
+            "title": "Thematic analysis in HCI \u2013 Design and Society",
+            "recog": 0,
+            "keywords": "Methods > Qualitative > Thematic Analysis",
+            "authors": [],
+            "filename": "!!Thematic analysis in HCI \u2013 Design and Society.pdf",
+            "priority": 2
+        },
+        {
+            "modified": 1587573880,
+            "level": 2,
+            "year": 2020,
+            "title": "Make money from Matched Betting (full guide) - Save the Student",
+            "recog": 0,
+            "keywords": "Gambling > Matched Betting",
+            "authors": [],
+            "filename": "-Make money from Matched Betting (full guide) - Save the Student.pdf",
+            "priority": 0
+        },
+        {
+            "modified": 1587573628,
+            "level": 2,
+            "year": 2020,
+            "title": "What is Matched Betting_ _ Profit Accumulator",
+            "recog": 0,
+            "keywords": "Gambling > Matched Betting",
+            "authors": [],
+            "filename": "-What is Matched Betting_ _ Profit Accumulator.pdf",
+            "priority": 0
+        },
+        {
+            "modified": 1587554907,
+            "level": 1,
+            "year": 2020,
+            "title": "Sonification - Wikipedia",
+            "recog": 0,
+            "keywords": "Sonification",
+            "authors": [
+                "John M. Chambers",
+                "Max Mathews",
+                "Don Ihde"
+            ],
+            "filename": "-Sonification - Wikipedia.pdf",
+            "priority": 0
+        },
+        {
+            "modified": 1587551923,
+            "level": 2,
+            "year": 2020,
+            "title": "ENRIO Statement 16 April 2020",
+            "recog": 1,
+            "keywords": "Teaching > Academic Integrity",
+            "authors": [],
+            "filename": "-ENRIO_Statement_16042020.pdf",
+            "priority": 0
+        },
+        {
             "modified": 1587535217,
-            "keywords": "Cognition, Intelligence > Extended Cognition, Distributed Cognition",
-            "priority": 2,
-            "filename": "!!10.1007%2Fs11948-016-9802-1.pdf",
+            "level": 2,
             "year": 2016,
+            "title": "Distributed Cognition and Distributed Morality: Agency, Artifacts and Systems",
+            "recog": 1,
+            "keywords": "Cognition, Intelligence > Extended Cognition, Distributed Cognition",
             "authors": [
                 "Richard Heersmink"
-            ]
+            ],
+            "filename": "!!10.1007%2Fs11948-016-9802-1.pdf",
+            "priority": 2
         },
         {
-            "recog": 0,
-            "level": 2,
-            "title": "Data virtualization - Wikipedia",
             "modified": 1587532690,
-            "keywords": "Data > Data Virtualization",
-            "priority": 0,
-            "filename": "-Data virtualization - Wikipedia.pdf",
+            "level": 2,
             "year": 2020,
+            "title": "Data virtualization - Wikipedia",
+            "recog": 0,
+            "keywords": "Data > Data Virtualization",
             "authors": [
                 "Wikipedia"
-            ]
+            ],
+            "filename": "-Data virtualization - Wikipedia.pdf",
+            "priority": 0
         },
         {
-            "recog": 1,
-            "level": 2,
-            "title": "\"Sharks off the British Coast\"",
             "modified": 1587487858,
-            "keywords": "Oil > Crude Oil Trade",
-            "priority": 0,
-            "filename": "-That Time I Tried to Buy an Actual Barrel of Crude Oil - Bloomberg.pdf",
+            "level": 2,
             "year": 2020,
-            "authors": []
-        },
-        {
+            "title": "\"Sharks off the British Coast\"",
             "recog": 1,
-            "level": 3,
-            "title": "Turning Live Surveillance Feeds Into Unsettling Works of Art",
-            "modified": 1587486338,
-            "keywords": "Counter Surveillance > Surveillance Artworks > Jaywalking",
-            "priority": 0,
-            "filename": "-Turning Live Surveillance Feeds Into Unsettling Works of Art _ WIRED.pdf",
-            "year": 2020,
-            "authors": []
+            "keywords": "Oil > Crude Oil Trade",
+            "authors": [],
+            "filename": "-That Time I Tried to Buy an Actual Barrel of Crude Oil - Bloomberg.pdf",
+            "priority": 0
         },
         {
-            "recog": 0,
+            "modified": 1587486338,
             "level": 3,
-            "title": "Trojan Offices \u2013 Dries Depoorter",
-            "modified": 1587486092,
-            "keywords": "Counter Surveillance > Surveillance Artworks > Trojan Offices",
-            "priority": 0,
-            "filename": "-Trojan Offices \u2013 Dries Depoorter.pdf",
             "year": 2020,
+            "title": "Turning Live Surveillance Feeds Into Unsettling Works of Art",
+            "recog": 1,
+            "keywords": "Counter Surveillance > Surveillance Artworks > Jaywalking",
+            "authors": [],
+            "filename": "-Turning Live Surveillance Feeds Into Unsettling Works of Art _ WIRED.pdf",
+            "priority": 0
+        },
+        {
+            "modified": 1587486092,
+            "level": 3,
+            "year": 2020,
+            "title": "Trojan Offices \u2013 Dries Depoorter",
+            "recog": 0,
+            "keywords": "Counter Surveillance > Surveillance Artworks > Trojan Offices",
             "authors": [
                 "Brakke Grond",
                 "DRIES DEPOORTER"
-            ]
+            ],
+            "filename": "-Trojan Offices \u2013 Dries Depoorter.pdf",
+            "priority": 0
         },
         {
-            "recog": 1,
-            "level": 2,
-            "title": "Die With Me \u2013 neon",
             "modified": 1587486029,
-            "keywords": "Art > Die With Me Chat",
-            "priority": 0,
-            "filename": "-Die With Me \u2013 neon \u2013 Dries Depoorter.pdf",
+            "level": 2,
             "year": 2020,
+            "title": "Die With Me \u2013 neon",
+            "recog": 1,
+            "keywords": "Art > Die With Me Chat",
             "authors": [
                 "IDFA Doclab",
                 "DRIES DEPOORTER"
-            ]
+            ],
+            "filename": "-Die With Me \u2013 neon \u2013 Dries Depoorter.pdf",
+            "priority": 0
         },
         {
-            "recog": 0,
-            "level": 3,
-            "title": "Seattle Crime Cams \u2013 Dries Depoorter",
             "modified": 1587485872,
-            "keywords": "Counter Surveillance > Surveillance Artworks > Seattle Crime Cams",
-            "priority": 0,
-            "filename": "-Seattle Crime Cams \u2013 Dries Depoorter.pdf",
+            "level": 3,
             "year": 2020,
+            "title": "Seattle Crime Cams \u2013 Dries Depoorter",
+            "recog": 0,
+            "keywords": "Counter Surveillance > Surveillance Artworks > Seattle Crime Cams",
             "authors": [
                 "Brakke Grond",
                 "DRIES DEPOORTER"
-            ]
+            ],
+            "filename": "-Seattle Crime Cams \u2013 Dries Depoorter.pdf",
+            "priority": 0
         },
         {
-            "recog": 0,
-            "level": 2,
-            "title": "Face Detected \u2013 Dries Depoorter",
             "modified": 1587485800,
-            "keywords": "Art > Face Detected",
-            "priority": 1,
-            "filename": "!Face Detected \u2013 Dries Depoorter.pdf",
+            "level": 2,
             "year": 2020,
+            "title": "Face Detected \u2013 Dries Depoorter",
+            "recog": 0,
+            "keywords": "Art > Face Detected",
             "authors": [
                 "Matthijs De Block",
                 "DRIES DEPOORTER"
-            ]
+            ],
+            "filename": "!Face Detected \u2013 Dries Depoorter.pdf",
+            "priority": 1
         },
         {
-            "recog": 0,
-            "level": 2,
-            "title": "Tinderin \u2013 Dries Depoorter",
             "modified": 1587485599,
-            "keywords": "Art > Tinderin",
-            "priority": 0,
-            "filename": "-Tinderin \u2013 Dries Depoorter.pdf",
-            "year": 2020,
-            "authors": [
-                "DRIES DEPOORTER"
-            ]
-        },
-        {
-            "recog": 0,
             "level": 2,
-            "title": "ShortLife \u2013 Dries Depoorter",
+            "year": 2020,
+            "title": "Tinderin \u2013 Dries Depoorter",
+            "recog": 0,
+            "keywords": "Art > Tinderin",
+            "authors": [
+                "DRIES DEPOORTER"
+            ],
+            "filename": "-Tinderin \u2013 Dries Depoorter.pdf",
+            "priority": 0
+        },
+        {
             "modified": 1587485564,
+            "level": 2,
+            "year": 2020,
+            "title": "ShortLife \u2013 Dries Depoorter",
+            "recog": 0,
             "keywords": "Art > Short Life",
-            "priority": 1,
+            "authors": [
+                "DRIES DEPOORTER"
+            ],
             "filename": "!ShortLife \u2013 Dries Depoorter.pdf",
-            "year": 2020,
-            "authors": [
-                "DRIES DEPOORTER"
-            ]
+            "priority": 1
         },
         {
-            "recog": 0,
-            "level": 3,
-            "title": "Surveillance Speaker \u2013 Dries Depoorter",
             "modified": 1587485484,
-            "keywords": "Counter Surveillance > Surveillance Artworks > Surveillance Speaker",
-            "priority": 1,
-            "filename": "!Surveillance Speaker \u2013 Dries Depoorter.pdf",
+            "level": 3,
             "year": 2020,
+            "title": "Surveillance Speaker \u2013 Dries Depoorter",
+            "recog": 0,
+            "keywords": "Counter Surveillance > Surveillance Artworks > Surveillance Speaker",
             "authors": [
                 "DRIES DEPOORTER"
-            ]
+            ],
+            "filename": "!Surveillance Speaker \u2013 Dries Depoorter.pdf",
+            "priority": 1
         },
         {
-            "recog": 0,
-            "level": 3,
-            "title": "Michael \u2013 Dries Depoorter",
             "modified": 1587485295,
-            "keywords": "Counter Surveillance > Surveillance Artworks > Michael",
-            "priority": 0,
-            "filename": "-Michael \u2013 Dries Depoorter.pdf",
+            "level": 3,
             "year": 2020,
+            "title": "Michael \u2013 Dries Depoorter",
+            "recog": 0,
+            "keywords": "Counter Surveillance > Surveillance Artworks > Michael",
             "authors": [
                 "Bieke Depoorter",
                 "DRIES DEPOORTER"
-            ]
+            ],
+            "filename": "-Michael \u2013 Dries Depoorter.pdf",
+            "priority": 0
         },
         {
-            "recog": 1,
-            "level": 3,
-            "title": "Get Popular Vending Machine",
             "modified": 1587485177,
-            "keywords": "Art > Social Media > Quick Fix",
-            "priority": 1,
-            "filename": "!Get Popular Vending Machine \u2013 Dries Depoorter.pdf",
-            "year": 2020,
-            "authors": [
-                "DRIES DEPOORTER"
-            ]
-        },
-        {
-            "recog": 0,
             "level": 3,
-            "title": "Quick Fix \u2013 Dries Depoorter",
-            "modified": 1587485099,
-            "keywords": "Art > Social Media > Quick Fix",
-            "priority": 1,
-            "filename": "!Quick Fix \u2013 Dries Depoorter.pdf",
             "year": 2020,
-            "authors": [
-                "DRIES DEPOORTER"
-            ]
-        },
-        {
+            "title": "Get Popular Vending Machine",
             "recog": 1,
+            "keywords": "Art > Social Media > Quick Fix",
+            "authors": [
+                "DRIES DEPOORTER"
+            ],
+            "filename": "!Get Popular Vending Machine \u2013 Dries Depoorter.pdf",
+            "priority": 1
+        },
+        {
+            "modified": 1587485099,
             "level": 3,
-            "title": "Jaywalking Frames",
-            "modified": 1587484918,
-            "keywords": "Counter Surveillance > Surveillance Artworks > Jaywalking",
-            "priority": 0,
-            "filename": "-Jaywalking Frames \u2013 Dries Depoorter.pdf",
             "year": 2020,
+            "title": "Quick Fix \u2013 Dries Depoorter",
+            "recog": 0,
+            "keywords": "Art > Social Media > Quick Fix",
+            "authors": [
+                "DRIES DEPOORTER"
+            ],
+            "filename": "!Quick Fix \u2013 Dries Depoorter.pdf",
+            "priority": 1
+        },
+        {
+            "modified": 1587484918,
+            "level": 3,
+            "year": 2020,
+            "title": "Jaywalking Frames",
+            "recog": 1,
+            "keywords": "Counter Surveillance > Surveillance Artworks > Jaywalking",
             "authors": [
                 "Boudewijn Bollmann",
                 "DRIES DEPOORTER"
-            ]
+            ],
+            "filename": "-Jaywalking Frames \u2013 Dries Depoorter.pdf",
+            "priority": 0
         },
         {
-            "recog": 0,
-            "level": 3,
-            "title": "Jaywalking \u2013 Dries Depoorter",
             "modified": 1587484690,
-            "keywords": "Counter Surveillance > Surveillance Artworks > Jaywalking",
-            "priority": 1,
-            "filename": "!Jaywalking \u2013 Dries Depoorter.pdf",
+            "level": 3,
             "year": 2020,
+            "title": "Jaywalking \u2013 Dries Depoorter",
+            "recog": 0,
+            "keywords": "Counter Surveillance > Surveillance Artworks > Jaywalking",
             "authors": [
                 "DRIES DEPOORTER"
-            ]
+            ],
+            "filename": "!Jaywalking \u2013 Dries Depoorter.pdf",
+            "priority": 1
         },
         {
-            "recog": 0,
-            "level": 4,
-            "title": "UK Parliament attack_ London traffic cams capture a live view of Westminster \u2014 Quartz",
             "modified": 1587484558,
-            "keywords": "Privacy > Surveillance > CCTV Surveillance > London",
-            "priority": 0,
-            "filename": "-UK Parliament attack_ London traffic cams capture a live view of Westminster \u2014 Quartz.pdf",
+            "level": 4,
             "year": 2020,
+            "title": "UK Parliament attack_ London traffic cams capture a live view of Westminster \u2014 Quartz",
+            "recog": 0,
+            "keywords": "Privacy > Surveillance > CCTV Surveillance > London",
             "authors": [
                 "Joon Ian Wong"
-            ]
+            ],
+            "filename": "-UK Parliament attack_ London traffic cams capture a live view of Westminster \u2014 Quartz.pdf",
+            "priority": 0
         },
         {
-            "recog": 1,
-            "level": 4,
-            "title": "Self Assessment Tool - guidance",
             "modified": 1587484327,
-            "keywords": "Privacy > Surveillance > CCTV Surveillance > Surveillance Camera Code of Practice",
-            "priority": 1,
-            "filename": "!scc_self_assessment_tool_wcc_jul2019.pdf",
+            "level": 4,
             "year": 2020,
-            "authors": []
-        },
-        {
-            "recog": 0,
-            "level": 3,
-            "title": "Cameras in Westminster _ Westminster City Council",
-            "modified": 1587484304,
-            "keywords": "Privacy > Surveillance > CCTV Surveillance",
-            "priority": 0,
-            "filename": "-Cameras in Westminster _ Westminster City Council.pdf",
-            "year": 2020,
-            "authors": []
-        },
-        {
+            "title": "Self Assessment Tool - guidance",
             "recog": 1,
-            "level": 2,
-            "title": "Ways of being seen: surveillance art and the interpellation of viewing subjects",
+            "keywords": "Privacy > Surveillance > CCTV Surveillance > Surveillance Camera Code of Practice",
+            "authors": [],
+            "filename": "!scc_self_assessment_tool_wcc_jul2019.pdf",
+            "priority": 1
+        },
+        {
+            "modified": 1587484304,
+            "level": 3,
+            "year": 2020,
+            "title": "Cameras in Westminster _ Westminster City Council",
+            "recog": 0,
+            "keywords": "Privacy > Surveillance > CCTV Surveillance",
+            "authors": [],
+            "filename": "-Cameras in Westminster _ Westminster City Council.pdf",
+            "priority": 0
+        },
+        {
             "modified": 1587484041,
-            "keywords": "Counter Surveillance > Surveillance Artworks",
-            "priority": 1,
-            "filename": "!monahan2017.pdf",
+            "level": 2,
             "year": 2017,
+            "title": "Ways of being seen: surveillance art and the interpellation of viewing subjects",
+            "recog": 1,
+            "keywords": "Counter Surveillance > Surveillance Artworks",
             "authors": [
                 "Torin Monahan"
-            ]
+            ],
+            "filename": "!monahan2017.pdf",
+            "priority": 1
         },
         {
-            "recog": 1,
-            "level": 1,
-            "title": "Crypto and empire: the contradictions of counter-surveillance advocacy",
             "modified": 1587483214,
-            "keywords": "Counter Surveillance",
-            "priority": 0,
-            "filename": "-10.1177@0163443716643006.pdf",
+            "level": 1,
             "year": 2016,
+            "title": "Crypto and empire: the contradictions of counter-surveillance advocacy",
+            "recog": 1,
+            "keywords": "Counter Surveillance",
             "authors": [
                 "Seda G\u00fcrses",
                 "Arun Kundnani",
                 "Joris Van Hoboken"
-            ]
+            ],
+            "filename": "-10.1177@0163443716643006.pdf",
+            "priority": 0
         },
         {
-            "recog": 1,
-            "level": 3,
-            "title": "Managing the hidden costs of coordination",
             "modified": 1587482927,
-            "keywords": "CSCW > Coordination > Coordination Costs",
-            "priority": 0,
-            "filename": "-3379989.pdf",
+            "level": 3,
             "year": 2020,
-            "authors": []
+            "title": "Managing the hidden costs of coordination",
+            "recog": 1,
+            "keywords": "CSCW > Coordination > Coordination Costs",
+            "authors": [],
+            "filename": "-3379989.pdf",
+            "priority": 0
         },
         {
-            "recog": 1,
-            "level": 2,
-            "title": "AI Extenders: The Ethical and Societal Implications of Humans Cognitively Extended by AI",
             "modified": 1587476323,
-            "keywords": "Human Augmentation > Cognitive Extenders",
-            "priority": 1,
-            "filename": "!AIES-19_paper_83.pdf",
+            "level": 2,
             "year": "N/A",
+            "title": "AI Extenders: The Ethical and Societal Implications of Humans Cognitively Extended by AI",
+            "recog": 1,
+            "keywords": "Human Augmentation > Cognitive Extenders",
             "authors": [
                 "Jos\u00e9 Hern\u00e1ndez-Orallo",
                 "Karina Vold"
-            ]
+            ],
+            "filename": "!AIES-19_paper_83.pdf",
+            "priority": 1
         },
         {
-            "recog": 0,
-            "level": 3,
-            "title": "CCC _ 10 requirements for the evaluation of _Contact Tracing_ apps",
             "modified": 1587475508,
+            "level": 3,
+            "year": 2020,
+            "title": "CCC _ 10 requirements for the evaluation of _Contact Tracing_ apps",
+            "recog": 0,
             "keywords": "Privacy > Health Apps > Contact Tracing",
-            "priority": 2,
+            "authors": [],
             "filename": "!!CCC _ 10 requirements for the evaluation of _Contact Tracing_ apps.pdf",
-            "year": 2020,
-            "authors": []
+            "priority": 2
         },
         {
-            "recog": 1,
-            "level": 3,
-            "title": "Hansel and Gretel and the Virus: Privacy Conscious Contact Tracing",
             "modified": 1587474918,
+            "level": 3,
+            "year": 2020,
+            "title": "Hansel and Gretel and the Virus: Privacy Conscious Contact Tracing",
+            "recog": 1,
             "keywords": "Privacy > Health Apps > Contact Tracing",
-            "priority": 0,
+            "authors": [],
             "filename": "-Hansel and Gretel and the Virus_ Privacy Conscious Contact Tracing __ Jaap-Henk Hoepman.pdf",
-            "year": 2020,
-            "authors": []
+            "priority": 0
         },
         {
-            "recog": 0,
-            "level": 3,
-            "title": "Historische Kursentwicklung_ Was ist am \u00d6lmarkt los_ _ tagesschau.de",
             "modified": 1587474271,
+            "level": 3,
+            "year": 2020,
+            "title": "Historische Kursentwicklung_ Was ist am \u00d6lmarkt los_ _ tagesschau.de",
+            "recog": 0,
             "keywords": "Pandemics > Corona Virus Pandemic > Recession",
-            "priority": 0,
+            "authors": [
+                "FRAGEN UND ANTWORTEN"
+            ],
             "filename": "-Historische Kursentwicklung_ Was ist am \u00d6lmarkt los_ _ tagesschau.de.pdf",
-            "year": 2020,
-            "authors": [
-                "FRAGEN UND ANTWORTEN"
-            ]
+            "priority": 0
         },
         {
-            "recog": 0,
-            "level": 3,
-            "title": "Ma\u00dfnahmen gegen Corona_ War der _Lockdown_ unn\u00f6tig_ _ tagesschau.de",
             "modified": 1587473728,
-            "keywords": "Pandemics > Corona Virus Pandemic > Lockdown",
-            "priority": 0,
-            "filename": "-Ma\u00dfnahmen gegen Corona_ War der _Lockdown_ unn\u00f6tig_ _ tagesschau.de.pdf",
+            "level": 3,
             "year": 2020,
+            "title": "Ma\u00dfnahmen gegen Corona_ War der _Lockdown_ unn\u00f6tig_ _ tagesschau.de",
+            "recog": 0,
+            "keywords": "Pandemics > Corona Virus Pandemic > Lockdown",
             "authors": [
                 "FRAGEN UND ANTWORTEN"
-            ]
+            ],
+            "filename": "-Ma\u00dfnahmen gegen Corona_ War der _Lockdown_ unn\u00f6tig_ _ tagesschau.de.pdf",
+            "priority": 0
         },
         {
-            "recog": 0,
-            "level": 3,
-            "title": "towards-digital-paradise-developing-four-business-cases-of-hyperconnected-technologies",
             "modified": 1587472799,
-            "keywords": "Ubiquitous Computing > Naked World, Naked Approach > Hyperconnected Technologies",
-            "priority": 0,
-            "filename": "-towards-digital-paradise-developing-four-business-cases-of-hyperconnected-technologies.pdf",
+            "level": 3,
             "year": "N/A",
+            "title": "towards-digital-paradise-developing-four-business-cases-of-hyperconnected-technologies",
+            "recog": 0,
+            "keywords": "Ubiquitous Computing > Naked World, Naked Approach > Hyperconnected Technologies",
             "authors": [
                 "Risto L\u00e4tti",
                 "Johannes Mikkonen",
                 "Pasi Pussinen"
-            ]
+            ],
+            "filename": "-towards-digital-paradise-developing-four-business-cases-of-hyperconnected-technologies.pdf",
+            "priority": 0
         },
         {
-            "recog": 1,
-            "level": 3,
-            "title": "Emerging Natural User Interfaces in Mobile Computing: A Bottoms-Up Survey",
             "modified": 1587472469,
-            "keywords": "Ubiquitous Computing > Naked World, Naked Approach > Natural User Interface",
-            "priority": 2,
-            "filename": "!!1911.04794.pdf",
+            "level": 3,
             "year": 2019,
+            "title": "Emerging Natural User Interfaces in Mobile Computing: A Bottoms-Up Survey",
+            "recog": 1,
+            "keywords": "Ubiquitous Computing > Naked World, Naked Approach > Natural User Interface",
             "authors": [
                 "KIRILL A. SHATILOV"
-            ]
+            ],
+            "filename": "!!1911.04794.pdf",
+            "priority": 2
         },
         {
-            "recog": 0,
-            "level": 2,
-            "title": "Embodied Cognition (Stanford Encyclopedia of Philosophy)",
             "modified": 1587471789,
-            "keywords": "Cognition, Intelligence > Embodied Cognition",
-            "priority": 3,
-            "filename": "!!!Embodied Cognition (Stanford Encyclopedia of Philosophy).pdf",
+            "level": 2,
             "year": 2020,
-            "authors": []
+            "title": "Embodied Cognition (Stanford Encyclopedia of Philosophy)",
+            "recog": 0,
+            "keywords": "Cognition, Intelligence > Embodied Cognition",
+            "authors": [],
+            "filename": "!!!Embodied Cognition (Stanford Encyclopedia of Philosophy).pdf",
+            "priority": 3
         },
         {
-            "recog": 0,
-            "level": 3,
-            "title": "Extended mind thesis - Wikipedia",
             "modified": 1587470961,
-            "keywords": "Cognition, Intelligence > Extended Cognition, Distributed Cognition > Extended Mind",
-            "priority": 2,
-            "filename": "!!Extended mind thesis - Wikipedia.pdf",
+            "level": 3,
             "year": 2020,
+            "title": "Extended mind thesis - Wikipedia",
+            "recog": 0,
+            "keywords": "Cognition, Intelligence > Extended Cognition, Distributed Cognition > Extended Mind",
             "authors": [
                 "Wikipedia"
-            ]
+            ],
+            "filename": "!!Extended mind thesis - Wikipedia.pdf",
+            "priority": 2
         },
         {
-            "recog": 0,
-            "level": 3,
-            "title": "_The Extended Mind_ by Andy Clark and David Chalmers",
             "modified": 1587470766,
-            "keywords": "Cognition, Intelligence > Extended Cognition, Distributed Cognition > Extended Mind",
-            "priority": 2,
-            "filename": "!!_The Extended Mind_ by Andy Clark and David Chalmers.pdf",
+            "level": 3,
             "year": 2020,
+            "title": "_The Extended Mind_ by Andy Clark and David Chalmers",
+            "recog": 0,
+            "keywords": "Cognition, Intelligence > Extended Cognition, Distributed Cognition > Extended Mind",
             "authors": [
                 "David Chalmers"
-            ]
+            ],
+            "filename": "!!_The Extended Mind_ by Andy Clark and David Chalmers.pdf",
+            "priority": 2
         },
         {
-            "recog": 1,
-            "level": 2,
-            "title": "BioTIME: A database of biodiversity time series for the Anthropocene",
             "modified": 1587467593,
-            "keywords": "Biology > Biodiversity",
-            "priority": 0,
-            "filename": "-nbnfi-fe2018092036131.pdf",
+            "level": 2,
             "year": 2018,
+            "title": "BioTIME: A database of biodiversity time series for the Anthropocene",
+            "recog": 1,
+            "keywords": "Biology > Biodiversity",
             "authors": [
                 "Maria Dornelas",
                 "Laura H. Ant~ao",
@@ -530,139 +812,139 @@
                 "Rebecca Kinnear",
                 "Kari Klanderud",
                 "Halvor Knutsen"
-            ]
+            ],
+            "filename": "-nbnfi-fe2018092036131.pdf",
+            "priority": 0
         },
         {
-            "recog": 0,
-            "level": 3,
-            "title": "COVID-19 Apps and Systems - Oxford HCC (Please contibute!)",
             "modified": 1587466849,
-            "keywords": "Privacy > Health Apps > Contact Tracing",
-            "priority": 1,
-            "filename": "!COVID-19 Apps and Systems - Oxford HCC (Please contibute!).pdf",
+            "level": 3,
             "year": "N/A",
-            "authors": []
+            "title": "COVID-19 Apps and Systems - Oxford HCC (Please contibute!)",
+            "recog": 0,
+            "keywords": "Privacy > Health Apps > Contact Tracing",
+            "authors": [],
+            "filename": "!COVID-19 Apps and Systems - Oxford HCC (Please contibute!).pdf",
+            "priority": 1
         },
         {
-            "recog": 1,
-            "level": 3,
-            "title": "CoDesign With Data",
             "modified": 1587466160,
-            "keywords": "Design, HCI, UI, UX > Co-Creation, Co-Design > Co-Design with Data Workshops",
-            "priority": 1,
-            "filename": "!codesignwithdata.pdf",
+            "level": 3,
             "year": 2015,
+            "title": "CoDesign With Data",
+            "recog": 1,
+            "keywords": "Design, HCI, UI, UX > Co-Creation, Co-Design > Co-Design with Data Workshops",
             "authors": [
                 "Graham Michael Dove"
-            ]
+            ],
+            "filename": "!codesignwithdata.pdf",
+            "priority": 1
         },
         {
-            "recog": 1,
-            "level": 2,
-            "title": "Consumer Cocreation in New Product Development",
             "modified": 1587465825,
-            "keywords": "Design, HCI, UI, UX > Co-Creation, Co-Design",
-            "priority": 3,
-            "filename": "!!!hoyer2010.pdf",
+            "level": 2,
             "year": 2010,
+            "title": "Consumer Cocreation in New Product Development",
+            "recog": 1,
+            "keywords": "Design, HCI, UI, UX > Co-Creation, Co-Design",
             "authors": [
                 "Wayne D. Hoyer",
                 "Rajesh Chandy",
                 "Matilda Dorotic",
                 "Manfred Krafft",
                 "Siddharth S. Singh"
-            ]
+            ],
+            "filename": "!!!hoyer2010.pdf",
+            "priority": 3
         },
         {
-            "recog": 1,
-            "level": 3,
-            "title": "Co-designing a Chatbot for and with Refugees and Migrants",
             "modified": 1587465513,
-            "keywords": "Design, HCI, UI, UX > Chat Bots, Conversational AI > Co-design",
-            "priority": 1,
-            "filename": "!master_Chen_Zhifa_2019.pdf",
+            "level": 3,
             "year": 2019,
+            "title": "Co-designing a Chatbot for and with Refugees and Migrants",
+            "recog": 1,
+            "keywords": "Design, HCI, UI, UX > Chat Bots, Conversational AI > Co-design",
             "authors": [
                 "ZHIFA CHEN",
                 "Yichen Lu",
                 "Zhifa Chen",
                 "Mika P. Nieminen"
-            ]
+            ],
+            "filename": "!master_Chen_Zhifa_2019.pdf",
+            "priority": 1
         },
         {
-            "recog": 1,
-            "priority": 1,
-            "title": "ShareVR: Enabling Co-Located Experiences for Virtual Reality between HMD and Non-HMD Users",
             "modified": 1587398288,
-            "keywords": "Virtual Reality > Shared Reality",
             "level": 2,
-            "filename": "!3025453.3025683.pdf",
             "year": 2017,
+            "title": "ShareVR: Enabling Co-Located Experiences for Virtual Reality between HMD and Non-HMD Users",
+            "recog": 1,
+            "keywords": "Virtual Reality > Shared Reality",
             "authors": [
                 "Jan Gugenheimer",
                 "Evgeny Stemasov",
                 "Julian Frommel",
                 "Enrico Rukzio"
-            ]
+            ],
+            "filename": "!3025453.3025683.pdf",
+            "priority": 1
         },
         {
-            "recog": 1,
-            "priority": 0,
-            "title": "Five Eyes",
             "modified": 1587398014,
-            "keywords": "Privacy > Surveillance > Intelligence Sharing > Five Eyes, 5 Eyes Countries",
             "level": 4,
-            "filename": "-Five Eyes - Wikipedia.pdf",
             "year": 2020,
-            "authors": []
-        },
-        {
-            "recog": 0,
-            "priority": 0,
-            "title": "5 Eyes, 9 Eyes, & 14 Eyes Countries \u2013 What You NEED to Know",
-            "modified": 1587397853,
-            "keywords": "Privacy > Surveillance > Intelligence Sharing > Five Eyes, 5 Eyes Countries",
-            "level": 4,
-            "filename": "-5 Eyes, 9 Eyes, & 14 Eyes Countries \u2013 What You NEED to Know.pdf",
-            "year": 2020,
-            "authors": []
-        },
-        {
+            "title": "Five Eyes",
             "recog": 1,
-            "priority": 2,
-            "title": "The Aligned Rank Transform for Nonparametric Factorial Analyses Using Only ANOVA Procedures",
-            "modified": 1587392553,
-            "keywords": "Methods > Statistics > Normal Distribution Transformations > Aligned Rank Transform",
+            "keywords": "Privacy > Surveillance > Intelligence Sharing > Five Eyes, 5 Eyes Countries",
+            "authors": [],
+            "filename": "-Five Eyes - Wikipedia.pdf",
+            "priority": 0
+        },
+        {
+            "modified": 1587397853,
             "level": 4,
-            "filename": "!!1978942.1978963.pdf",
+            "year": 2020,
+            "title": "5 Eyes, 9 Eyes, & 14 Eyes Countries \u2013 What You NEED to Know",
+            "recog": 0,
+            "keywords": "Privacy > Surveillance > Intelligence Sharing > Five Eyes, 5 Eyes Countries",
+            "authors": [],
+            "filename": "-5 Eyes, 9 Eyes, & 14 Eyes Countries \u2013 What You NEED to Know.pdf",
+            "priority": 0
+        },
+        {
+            "modified": 1587392553,
+            "level": 4,
             "year": 2011,
+            "title": "The Aligned Rank Transform for Nonparametric Factorial Analyses Using Only ANOVA Procedures",
+            "recog": 1,
+            "keywords": "Methods > Statistics > Normal Distribution Transformations > Aligned Rank Transform",
             "authors": [
                 "Jacob O. Wobbrock",
                 "Leah Findlater",
                 "Darren Gergle",
                 "James J. Higgins"
-            ]
+            ],
+            "filename": "!!1978942.1978963.pdf",
+            "priority": 2
         },
         {
-            "recog": 0,
-            "priority": 1,
-            "title": "mjskay_ARTool_ R Package for Aligned Rank Transform for Nonparametric Factorial ANOVAs",
             "modified": 1587388455,
-            "keywords": "Methods > Statistics > Normal Distribution Transformations > Aligned Rank Transform",
             "level": 4,
-            "filename": "!mjskay_ARTool_ R Package for Aligned Rank Transform for Nonparametric Factorial ANOVAs.pdf",
             "year": 2020,
-            "authors": []
+            "title": "mjskay_ARTool_ R Package for Aligned Rank Transform for Nonparametric Factorial ANOVAs",
+            "recog": 0,
+            "keywords": "Methods > Statistics > Normal Distribution Transformations > Aligned Rank Transform",
+            "authors": [],
+            "filename": "!mjskay_ARTool_ R Package for Aligned Rank Transform for Nonparametric Factorial ANOVAs.pdf",
+            "priority": 1
         },
         {
-            "recog": 1,
-            "level": 2,
-            "title": "\u201cI don\u2019t want to wear a screen\u201d: Probing Perceptions of and Possibilities for Dynamic Displays on Clothing",
-            "year": 2016,
-            "keywords": "Public Displays > Wearable Displays",
-            "priority": 0,
-            "filename": "-2858036.2858192.pdf",
             "modified": 1587387483,
+            "level": 2,
+            "year": 2016,
+            "title": "\u201cI don\u2019t want to wear a screen\u201d: Probing Perceptions of and Possibilities for Dynamic Displays on Clothing",
+            "recog": 1,
+            "keywords": "Public Displays > Wearable Displays",
             "authors": [
                 "Laura Devendorf",
                 "Joanne Lo",
@@ -674,47 +956,47 @@
                 "Ivan Poupyrev",
                 "Eric Paulos",
                 "Kimiko Ryokai"
-            ]
+            ],
+            "filename": "-2858036.2858192.pdf",
+            "priority": 0
         },
         {
-            "recog": 0,
-            "priority": 3,
-            "title": "813960151-MIT",
             "modified": 1587386992,
-            "keywords": "Crowdsourcing, Human Computation",
             "level": 1,
-            "filename": "!!!813960151-MIT.pdf",
             "year": 2012,
+            "title": "813960151-MIT",
+            "recog": 0,
+            "keywords": "Crowdsourcing, Human Computation",
             "authors": [
                 "Michael Scott",
                 "Scott Bernstein",
                 "David R. Karger",
                 "David Karger"
-            ]
+            ],
+            "filename": "!!!813960151-MIT.pdf",
+            "priority": 3
         },
         {
-            "recog": 1,
-            "priority": 0,
-            "title": "Autochthonous Computing",
             "modified": 1587386946,
-            "keywords": "Design, HCI, UI, UX > CHI > Alt CHI > 2020 > 7507",
             "level": 5,
-            "filename": "-chi20p-sub7507-i7.pdf",
             "year": 2020,
+            "title": "Autochthonous Computing",
+            "recog": 1,
+            "keywords": "Design, HCI, UI, UX > CHI > Alt CHI > 2020 > 7507",
             "authors": [
                 "Barath Raghavan",
                 "Bill Tomlinson"
-            ]
+            ],
+            "filename": "-chi20p-sub7507-i7.pdf",
+            "priority": 0
         },
         {
-            "recog": 1,
-            "priority": 1,
-            "title": "Mindfulness Meditation Activates Altruism",
             "modified": 1587383202,
-            "keywords": "Motivation, Incentives > Mindfulness > Altruism",
             "level": 3,
-            "filename": "!s41598-020-62652-1.pdf",
             "year": 2020,
+            "title": "Mindfulness Meditation Activates Altruism",
+            "recog": 1,
+            "keywords": "Motivation, Incentives > Mindfulness > Altruism",
             "authors": [
                 "Sage K. iwamoto",
                 "Marcus Alexander",
@@ -722,90 +1004,90 @@
                 "Michael R. irwin",
                 "Nicholas A. christakis",
                 "Akihiro nishi"
-            ]
+            ],
+            "filename": "!s41598-020-62652-1.pdf",
+            "priority": 1
         },
         {
-            "recog": 1,
-            "priority": 0,
-            "title": "COVID-19: health literacy is an underestimated problem",
             "modified": 1587383068,
-            "keywords": "Pandemics > Health Communication > Free Rider",
             "level": 3,
-            "filename": "-PIIS2468266720300864.pdf",
             "year": 2020,
-            "authors": []
+            "title": "COVID-19: health literacy is an underestimated problem",
+            "recog": 1,
+            "keywords": "Pandemics > Health Communication > Free Rider",
+            "authors": [],
+            "filename": "-PIIS2468266720300864.pdf",
+            "priority": 0
         },
         {
-            "recog": 1,
-            "level": 1,
-            "title": "Conceptual Modeling by Analogy and Metaphor",
-            "year": 2007,
-            "keywords": "Metaphors, Meaning",
-            "priority": 0,
-            "filename": "-1321440.1321562.pdf",
             "modified": 1587378015,
+            "level": 1,
+            "year": 2007,
+            "title": "Conceptual Modeling by Analogy and Metaphor",
+            "recog": 1,
+            "keywords": "Metaphors, Meaning",
             "authors": [
                 "Karin K. Breitman",
                 "Simone D.J. Barbosa",
                 "Marco A. Casanova",
                 "Antonio L. Furtado"
-            ]
+            ],
+            "filename": "-1321440.1321562.pdf",
+            "priority": 0
         },
         {
-            "recog": 1,
-            "priority": 0,
-            "title": "Smile to Me: Investigating Emotions and their Representation in Text-based Messaging in the Wild",
             "modified": 1587377873,
-            "keywords": "Affect > Emotion > Smilies, Emojis",
             "level": 3,
-            "filename": "-3340764.3340795.pdf",
             "year": 2019,
+            "title": "Smile to Me: Investigating Emotions and their Representation in Text-based Messaging in the Wild",
+            "recog": 1,
+            "keywords": "Affect > Emotion > Smilies, Emojis",
             "authors": [
                 "Romina Poguntke",
                 "Tamara Mantz",
                 "Stefan Schneegass"
-            ]
+            ],
+            "filename": "-3340764.3340795.pdf",
+            "priority": 0
         },
         {
-            "recog": 1,
-            "priority": 0,
-            "title": "Responsive Decentralized Composition of Service Mashups for the Internet of Things",
             "modified": 1587377179,
-            "keywords": "Socio-technical Systems, Social Machines > Multi-Agent Systems (MAS)",
             "level": 2,
-            "filename": "-ciortea-et-al_IoT2016.pdf",
             "year": 2016,
+            "title": "Responsive Decentralized Composition of Service Mashups for the Internet of Things",
+            "recog": 1,
+            "keywords": "Socio-technical Systems, Social Machines > Multi-Agent Systems (MAS)",
             "authors": [
                 "Andrei Ciortea",
                 "Olivier Boissier",
                 "Adina Magda Florea"
-            ]
+            ],
+            "filename": "-ciortea-et-al_IoT2016.pdf",
+            "priority": 0
         },
         {
-            "recog": 1,
-            "priority": 0,
-            "title": "Hypermedia-driven Socio-technical Networks for Goal-driven Discovery in the Web of Things",
             "modified": 1587377119,
-            "keywords": "Socio-technical Systems, Social Machines > Multi-Agent Systems (MAS) > Hypermedia MAS",
             "level": 3,
-            "filename": "-ciortea-et-al_WoT2016.pdf",
             "year": 2016,
+            "title": "Hypermedia-driven Socio-technical Networks for Goal-driven Discovery in the Web of Things",
+            "recog": 1,
+            "keywords": "Socio-technical Systems, Social Machines > Multi-Agent Systems (MAS) > Hypermedia MAS",
             "authors": [
                 "Andrei Ciortea",
                 "Antoine Zimmermann",
                 "Olivier Boissier",
                 "Adina Magda Florea"
-            ]
+            ],
+            "filename": "-ciortea-et-al_WoT2016.pdf",
+            "priority": 0
         },
         {
-            "recog": 1,
-            "priority": 0,
-            "title": "A Decade in Hindsight: The Missing Bridge Between Multi-Agent Systems and the World Wide Web",
             "modified": 1587376806,
-            "keywords": "Socio-technical Systems, Social Machines > Multi-Agent Systems (MAS) > Hypermedia MAS",
             "level": 3,
-            "filename": "-Ciortea-et-al-AAMAS2019.pdf",
             "year": 2020,
+            "title": "A Decade in Hindsight: The Missing Bridge Between Multi-Agent Systems and the World Wide Web",
+            "recog": 1,
+            "keywords": "Socio-technical Systems, Social Machines > Multi-Agent Systems (MAS) > Hypermedia MAS",
             "authors": [
                 "Andrei Ciortea",
                 "Simon Mayer",
@@ -813,17 +1095,17 @@
                 "Olivier Boissier",
                 "Alessandro Ricci",
                 "Antoine Zimmermann"
-            ]
+            ],
+            "filename": "-Ciortea-et-al-AAMAS2019.pdf",
+            "priority": 0
         },
         {
-            "recog": 1,
-            "priority": 1,
-            "title": "Hypermedia to connect them all: Autonomous hypermedia agents and socio-technical interactions",
             "modified": 1587376159,
-            "keywords": "Socio-technical Systems, Social Machines > Multi-Agent Systems (MAS) > Hypermedia MAS",
             "level": 3,
-            "filename": "!Mayer-HypermediaToConnect-2018.pdf",
             "year": 2018,
+            "title": "Hypermedia to connect them all: Autonomous hypermedia agents and socio-technical interactions",
+            "recog": 1,
+            "keywords": "Socio-technical Systems, Social Machines > Multi-Agent Systems (MAS) > Hypermedia MAS",
             "authors": [
                 "Simon Mayer",
                 "Andrei Ciortea",
@@ -831,68 +1113,68 @@
                 "Maria Ines Robles",
                 "Matthias Kovatsch",
                 "Angelo Croatti"
-            ]
+            ],
+            "filename": "!Mayer-HypermediaToConnect-2018.pdf",
+            "priority": 1
         },
         {
-            "recog": 1,
-            "priority": 0,
-            "title": "Long-Lived Agents on the Web: Continuous Acquisition of Behaviors in Hypermedia Environments",
             "modified": 1587375951,
-            "keywords": "Socio-technical Systems, Social Machines > Multi-Agent Systems (MAS) > Hypermedia MAS",
             "level": 3,
-            "filename": "-Long_Lived_Agents_on_the_Web__Continuous_Acquisition_of_Behaviors_in_Hypermedia_Environments.pdf",
             "year": 2020,
+            "title": "Long-Lived Agents on the Web: Continuous Acquisition of Behaviors in Hypermedia Environments",
+            "recog": 1,
+            "keywords": "Socio-technical Systems, Social Machines > Multi-Agent Systems (MAS) > Hypermedia MAS",
             "authors": [
                 "Danai Vachtsevanou",
                 "Philip Junker",
                 "Andrei Ciortea",
                 "Iori Mizutani",
                 "Simon Mayer"
-            ]
+            ],
+            "filename": "-Long_Lived_Agents_on_the_Web__Continuous_Acquisition_of_Behaviors_in_Hypermedia_Environments.pdf",
+            "priority": 0
         },
         {
-            "recog": 1,
-            "priority": 1,
-            "title": "A Total Error Framework for Digital Traces of Humans",
             "modified": 1587373808,
-            "keywords": "Web Science > Digital traces",
             "level": 2,
-            "filename": "!1907.08228.pdf",
             "year": 2019,
+            "title": "A Total Error Framework for Digital Traces of Humans",
+            "recog": 1,
+            "keywords": "Web Science > Digital traces",
             "authors": [
                 "Indira Sen",
                 "Fabian Fl\u00f6ck",
                 "Katrin Weller",
                 "Bernd Wei\u00df",
                 "Claudia Wagner"
-            ]
+            ],
+            "filename": "!1907.08228.pdf",
+            "priority": 1
         },
         {
-            "recog": 1,
-            "level": 3,
-            "title": "Beyond binary choices: Integrating individual and social creativity",
-            "year": 2005,
-            "keywords": "Creativity > Collaboration, Groups > Social Creativity",
-            "priority": 1,
-            "filename": "!fischer2005.pdf",
             "modified": 1587373251,
+            "level": 3,
+            "year": 2005,
+            "title": "Beyond binary choices: Integrating individual and social creativity",
+            "recog": 1,
+            "keywords": "Creativity > Collaboration, Groups > Social Creativity",
             "authors": [
                 "Gerhard Fischer",
                 "Elisa Giaccardi",
                 "Hal Eden",
                 "Masanori Sugimoto",
                 "Yunwen Ye"
-            ]
+            ],
+            "filename": "!fischer2005.pdf",
+            "priority": 1
         },
         {
-            "recog": 1,
-            "level": 5,
-            "title": "Contextual Insights",
-            "year": 2014,
-            "keywords": "Creativity > General, Theory > Types > Analogical > Contextual Insights",
-            "priority": 0,
-            "filename": "-p265-fuxman.pdf",
             "modified": 1587371946,
+            "level": 5,
+            "year": 2014,
+            "title": "Contextual Insights",
+            "recog": 1,
+            "keywords": "Creativity > General, Theory > Types > Analogical > Contextual Insights",
             "authors": [
                 "Ariel Fuxman",
                 "Patrick Pantel",
@@ -905,559 +1187,293 @@
                 "Dhyanesh Narayanan",
                 "Evangelos Papalexakis",
                 "Bo Zhao"
-            ]
+            ],
+            "filename": "-p265-fuxman.pdf",
+            "priority": 0
         },
         {
-            "recog": 1,
-            "level": 4,
-            "title": "Accelerating Innovation Through Analogy Mining",
-            "year": 2017,
-            "keywords": "Creativity > General, Theory > Types > Analogical",
-            "priority": 2,
-            "filename": "!!p235-hope.pdf",
             "modified": 1587371804,
+            "level": 4,
+            "year": 2017,
+            "title": "Accelerating Innovation Through Analogy Mining",
+            "recog": 1,
+            "keywords": "Creativity > General, Theory > Types > Analogical",
             "authors": [
                 "Tom Hope",
                 "Joel Chan",
                 "Aniket Ki\u008aur",
                 "Dafna Shahaf"
-            ]
+            ],
+            "filename": "!!p235-hope.pdf",
+            "priority": 2
         },
         {
-            "recog": 1,
-            "priority": 0,
-            "title": "ITEE-DP Call for Course Funding, Autumn 2020",
             "modified": 1587370762,
-            "keywords": "Teaching > Teaching Costs",
             "level": 2,
-            "filename": "-Survey powered by Webropol.pdf",
             "year": 2020,
-            "authors": []
+            "title": "ITEE-DP Call for Course Funding, Autumn 2020",
+            "recog": 1,
+            "keywords": "Teaching > Teaching Costs",
+            "authors": [],
+            "filename": "-Survey powered by Webropol.pdf",
+            "priority": 0
         },
         {
-            "recog": 1,
-            "level": 2,
-            "title": "Creativity or creativities?",
-            "year": 2005,
-            "keywords": "Creativity > General, Theory",
-            "priority": 3,
-            "filename": "!!!sternberg2005.pdf",
             "modified": 1587364071,
+            "level": 2,
+            "year": 2005,
+            "title": "Creativity or creativities?",
+            "recog": 1,
+            "keywords": "Creativity > General, Theory",
             "authors": [
                 "Robert J. Sternberg"
-            ]
+            ],
+            "filename": "!!!sternberg2005.pdf",
+            "priority": 3
         },
         {
-            "recog": 1,
-            "level": 3,
-            "title": "Creating Creativity: User Interfaces for Supporting Innovation",
-            "year": "N/A",
-            "keywords": "Creativity > Creativity Support Tools > Genex Framework",
-            "priority": 3,
-            "filename": "!!!Shneiderman2000Creating.pdf",
             "modified": 1587361926,
+            "level": 3,
+            "year": "N/A",
+            "title": "Creating Creativity: User Interfaces for Supporting Innovation",
+            "recog": 1,
+            "keywords": "Creativity > Creativity Support Tools > Genex Framework",
             "authors": [
                 "BEN SHNEIDERMAN"
-            ]
+            ],
+            "filename": "!!!Shneiderman2000Creating.pdf",
+            "priority": 3
         },
         {
-            "recog": 0,
-            "level": 2,
-            "title": "[Shneiderman] Leonardo's Laptop Human Needs and the New Computing Technologies",
-            "year": 2003,
-            "keywords": "Creativity > General, Theory",
-            "priority": 0,
-            "filename": "-[Shneiderman] Leonardo's Laptop Human Needs and the New Computing Technologies.pdf",
             "modified": 1587360967,
+            "level": 2,
+            "year": 2003,
+            "title": "[Shneiderman] Leonardo's Laptop Human Needs and the New Computing Technologies",
+            "recog": 0,
+            "keywords": "Creativity > General, Theory",
             "authors": [
                 "Ben Shneiderman"
-            ]
+            ],
+            "filename": "-[Shneiderman] Leonardo's Laptop Human Needs and the New Computing Technologies.pdf",
+            "priority": 0
         },
         {
-            "recog": 0,
-            "level": 3,
-            "title": "edmonds2005",
-            "year": 2005,
-            "keywords": "Creativity > Creativity Support Tools > General, Overview",
-            "priority": 0,
-            "filename": "-edmonds2005.pdf",
             "modified": 1587360457,
-            "authors": []
+            "level": 3,
+            "year": 2005,
+            "title": "edmonds2005",
+            "recog": 0,
+            "keywords": "Creativity > Creativity Support Tools > General, Overview",
+            "authors": [],
+            "filename": "-edmonds2005.pdf",
+            "priority": 0
         },
         {
-            "recog": 1,
-            "priority": 3,
-            "title": "Happiness Is Everything, or Is It? Explorations on the Meaning of Psychological Well-Being",
             "modified": 1587360031,
-            "keywords": "Happiness > Eudamonic Well-being",
             "level": 2,
-            "filename": "!!!bc0e7b5946b39778784a2167019eebd53e52.pdf",
             "year": 2004,
+            "title": "Happiness Is Everything, or Is It? Explorations on the Meaning of Psychological Well-Being",
+            "recog": 1,
+            "keywords": "Happiness > Eudamonic Well-being",
             "authors": [
                 "Carol D. Ryff"
-            ]
+            ],
+            "filename": "!!!bc0e7b5946b39778784a2167019eebd53e52.pdf",
+            "priority": 3
         },
         {
-            "recog": 1,
-            "priority": 1,
-            "title": "Eudaimonic Well-Being and Coping with Stress in University Students: The Mediating/Moderating Role of Self-Efficacy",
             "modified": 1587358490,
-            "keywords": "Happiness > Eudamonic Well-being",
             "level": 2,
-            "filename": "!ijerph-16-00048.pdf",
             "year": 2018,
+            "title": "Eudaimonic Well-Being and Coping with Stress in University Students: The Mediating/Moderating Role of Self-Efficacy",
+            "recog": 1,
+            "keywords": "Happiness > Eudamonic Well-being",
             "authors": [
                 "Carlos Freire",
                 "Mar\u00eda del Mar Ferrad\u00e1s",
                 "Jos\u00e9 Carlos N\u00fa\u00f1ez",
                 "Antonio Valle",
                 "Guillermo Vallejo"
-            ]
+            ],
+            "filename": "!ijerph-16-00048.pdf",
+            "priority": 1
         },
         {
-            "recog": 1,
-            "priority": 3,
-            "title": "Standards for Internet-Based Experimenting",
             "modified": 1587357140,
-            "keywords": "Methods > Surveys, Umfrage, User Study > Validity Check",
             "level": 3,
-            "filename": "!!!ExPsyReipsReprint.decrypted.pdf",
             "year": 2002,
+            "title": "Standards for Internet-Based Experimenting",
+            "recog": 1,
+            "keywords": "Methods > Surveys, Umfrage, User Study > Validity Check",
             "authors": [
                 "Ulf-Dietrich Reips"
-            ]
+            ],
+            "filename": "!!!ExPsyReipsReprint.decrypted.pdf",
+            "priority": 3
         },
         {
-            "recog": 0,
-            "priority": 0,
-            "title": "Hysteresis - Wikipedia",
             "modified": 1587315840,
-            "keywords": "Engineering",
             "level": 1,
-            "filename": "-Hysteresis - Wikipedia.pdf",
             "year": 2020,
+            "title": "Hysteresis - Wikipedia",
+            "recog": 0,
+            "keywords": "Engineering",
             "authors": [
                 "Mark Krasnosel'skii"
-            ]
+            ],
+            "filename": "-Hysteresis - Wikipedia.pdf",
+            "priority": 0
         },
         {
-            "recog": 1,
-            "priority": 2,
-            "title": "Seriousness checks are useful to improve data validity in online research",
             "modified": 1587301626,
-            "keywords": "Methods > Surveys, Umfrage, User Study > Validity Check > Seriousness Check",
             "level": 4,
-            "filename": "!!Aust2013_Article_SeriousnessChecksAreUsefulToIm.pdf",
             "year": 2013,
+            "title": "Seriousness checks are useful to improve data validity in online research",
+            "recog": 1,
+            "keywords": "Methods > Surveys, Umfrage, User Study > Validity Check > Seriousness Check",
             "authors": [
                 "Frederik Aust",
                 "Birk Diedenhofen",
                 "Sebastian Ullrich",
                 "Jochen Musch"
-            ]
+            ],
+            "filename": "!!Aust2013_Article_SeriousnessChecksAreUsefulToIm.pdf",
+            "priority": 2
         },
         {
-            "recog": 1,
-            "priority": 3,
-            "title": "Increasing Well-Being in Academia",
             "modified": 1587297318,
-            "keywords": "Mental Health",
             "level": 1,
-            "filename": "!!!Increasing Well-Being in Academia - Isabelle Augenstein - Medium.pdf",
             "year": 2020,
+            "title": "Increasing Well-Being in Academia",
+            "recog": 1,
+            "keywords": "Mental Health",
             "authors": [
                 "Isabelle Augenstein"
-            ]
+            ],
+            "filename": "!!!Increasing Well-Being in Academia - Isabelle Augenstein - Medium.pdf",
+            "priority": 3
         },
         {
-            "recog": 0,
-            "priority": 2,
-            "title": "kahneman1992",
             "modified": 1587296717,
-            "keywords": "Psychology > Cognitive Psychology > Reference Points",
             "level": 3,
-            "filename": "!!kahneman1992.pdf",
             "year": 2003,
+            "title": "kahneman1992",
+            "recog": 0,
+            "keywords": "Psychology > Cognitive Psychology > Reference Points",
             "authors": [
                 "Amos Tversky",
                 "Jack Knetsch",
                 "Richard Thaler",
                 "Dale Miller"
-            ]
+            ],
+            "filename": "!!kahneman1992.pdf",
+            "priority": 2
         },
         {
-            "recog": 1,
-            "priority": 2,
-            "title": "Cognitive Reference Points",
             "modified": 1587296439,
-            "keywords": "Psychology > Cognitive Psychology > Reference Points",
             "level": 3,
-            "filename": "!!rosch1975.pdf",
             "year": 2003,
+            "title": "Cognitive Reference Points",
+            "recog": 1,
+            "keywords": "Psychology > Cognitive Psychology > Reference Points",
             "authors": [
                 "ELEANOR ROSCH"
-            ]
+            ],
+            "filename": "!!rosch1975.pdf",
+            "priority": 2
         },
         {
-            "recog": 0,
-            "priority": 1,
-            "title": "Envisioning Cards",
             "modified": 1587224705,
-            "keywords": "Design, HCI, UI, UX > Value-sensitive Design > Design Cards > Envisioning Cards",
             "level": 4,
+            "year": 2018,
+            "title": "Envisioning Cards",
+            "recog": 0,
+            "keywords": "Design, HCI, UI, UX > Value-sensitive Design > Design Cards > Envisioning Cards",
+            "authors": [],
             "filename": "!Envisioning Cards.pdf",
-            "year": 2018,
-            "authors": []
+            "priority": 1
         },
         {
-            "recog": 1,
-            "level": 3,
-            "title": "Metaphor Cards: A How-to-Guide for Making and Using a Generative Metaphorical Design Toolkit",
-            "year": 2018,
-            "keywords": "Metaphors, Meaning > Design Cards > Metaphor Cards",
-            "priority": 2,
-            "filename": "!!3196709.3196811.pdf",
             "modified": 1587224591,
-            "authors": []
-        },
-        {
-            "recog": 0,
             "level": 3,
-            "title": "metaphorcards_internationaljustice",
             "year": 2018,
-            "keywords": "Metaphors, Meaning > Design Cards > Metaphor Cards",
-            "priority": 2,
-            "filename": "!!metaphorcards_internationaljustice.pdf",
-            "modified": 1587224531,
-            "authors": []
-        },
-        {
-            "recog": 0,
-            "priority": 1,
-            "title": "Fragebogen 2",
-            "modified": 1587220119,
-            "keywords": "Methods > Surveys, Umfrage, User Study > Validity Check",
-            "level": 3,
-            "filename": "!Fragebogen 2.pdf",
-            "year": 2020,
-            "authors": []
-        },
-        {
+            "title": "Metaphor Cards: A How-to-Guide for Making and Using a Generative Metaphorical Design Toolkit",
             "recog": 1,
+            "keywords": "Metaphors, Meaning > Design Cards > Metaphor Cards",
+            "authors": [],
+            "filename": "!!3196709.3196811.pdf",
+            "priority": 2
+        },
+        {
+            "modified": 1587224531,
             "level": 3,
-            "title": "Supporting Creative Work",
-            "year": 2003,
-            "keywords": "Creativity > Process > Workflow",
-            "priority": 2,
-            "filename": "!!HCII2003_SupportingCreativeWorkpagenumbers.pdf",
+            "year": 2018,
+            "title": "metaphorcards_internationaljustice",
+            "recog": 0,
+            "keywords": "Metaphors, Meaning > Design Cards > Metaphor Cards",
+            "authors": [],
+            "filename": "!!metaphorcards_internationaljustice.pdf",
+            "priority": 2
+        },
+        {
+            "modified": 1587220119,
+            "level": 3,
+            "year": 2020,
+            "title": "Fragebogen 2",
+            "recog": 0,
+            "keywords": "Methods > Surveys, Umfrage, User Study > Validity Check",
+            "authors": [],
+            "filename": "!Fragebogen 2.pdf",
+            "priority": 1
+        },
+        {
             "modified": 1587218014,
+            "level": 3,
+            "year": 2003,
+            "title": "Supporting Creative Work",
+            "recog": 1,
+            "keywords": "Creativity > Process > Workflow",
             "authors": [
                 "Daniel V. Oppenheim"
-            ]
+            ],
+            "filename": "!!HCII2003_SupportingCreativeWorkpagenumbers.pdf",
+            "priority": 2
         },
         {
-            "recog": 0,
-            "priority": 0,
-            "title": "australian-health-sector-emergency-response-plan-for-novel-coronavirus-covid-19_2",
             "modified": 1587202796,
+            "level": 3,
+            "year": 2020,
+            "title": "australian-health-sector-emergency-response-plan-for-novel-coronavirus-covid-19_2",
+            "recog": 0,
             "keywords": "Pandemics > Corona Virus Pandemic > Australia",
-            "level": 3,
+            "authors": [],
             "filename": "-australian-health-sector-emergency-response-plan-for-novel-coronavirus-covid-19_2.pdf",
-            "year": 2020,
-            "authors": []
+            "priority": 0
         },
         {
-            "recog": 1,
-            "priority": 0,
-            "title": "Gerichte halten Warenhausschlie\u00dfungen fu\u0308r vertretbar",
             "modified": 1587202615,
-            "keywords": "Pandemics > Corona Virus Pandemic > Germany",
             "level": 3,
-            "filename": "-Coronavirus-Pandemie_ ++ Gerichte_ Warenhausschlie\u00dfungen rechtens ++ _ tagesschau.de.pdf",
             "year": 2020,
-            "authors": []
+            "title": "Gerichte halten Warenhausschlie\u00dfungen fu\u0308r vertretbar",
+            "recog": 1,
+            "keywords": "Pandemics > Corona Virus Pandemic > Germany",
+            "authors": [],
+            "filename": "-Coronavirus-Pandemie_ ++ Gerichte_ Warenhausschlie\u00dfungen rechtens ++ _ tagesschau.de.pdf",
+            "priority": 0
         },
         {
-            "recog": 1,
-            "priority": 3,
-            "title": "SOLVENT: A Mixed Initiative System for Finding Analogies between Research Papers",
             "modified": 1587201743,
-            "keywords": "Crowdsourcing, Human Computation > Applications > Research > Literature review, paper screening",
             "level": 4,
-            "filename": "!!!2018-cscw-schema-highlighter.pdf",
             "year": 2018,
+            "title": "SOLVENT: A Mixed Initiative System for Finding Analogies between Research Papers",
+            "recog": 1,
+            "keywords": "Crowdsourcing, Human Computation > Applications > Research > Literature review, paper screening",
             "authors": [
                 "JOEL CHAN",
                 "JOSEPH CHEE CHANG"
-            ]
-        },
-        {
-            "recog": 1,
-            "priority": 0,
-            "title": "Worlds within Worlds Metaphors for Exploring n-Dimensional Virtual Worlds",
-            "modified": 1587196022,
-            "keywords": "Virtual Reality > Worlds within Worlds",
-            "level": 2,
-            "filename": "-97924.97933.pdf",
-            "year": 1999,
-            "authors": [
-                "Steven Feiner",
-                "Clifford Beshers"
-            ]
-        },
-        {
-            "recog": 1,
-            "priority": 0,
-            "title": "Zuru\u0308ck zur U\u0308bersicht",
-            "modified": 1587139137,
-            "keywords": "Pandemics > Corona Virus Pandemic",
-            "level": 2,
-            "filename": "-PLAYMOBIL Nase-Mund-Maske - 70536 - PLAYMOBIL\u00ae Deutschland.pdf",
-            "year": 2020,
-            "authors": [
-                "PLAYMOBIL Nase-Mund-Maske"
-            ]
-        },
-        {
-            "recog": 1,
-            "priority": 0,
-            "title": "Contingency Exigency",
-            "modified": 1587130104,
-            "keywords": "Economics > Contingency Exigency",
-            "level": 2,
-            "filename": "-2325702.2325711.pdf",
-            "year": 2011,
-            "authors": [
-                "DANIEL REEVES",
-                "Daniel Reeves"
-            ]
-        },
-        {
-            "recog": 0,
-            "priority": 3,
-            "title": "big.2012.0002",
-            "modified": 1587129991,
-            "keywords": "Quantified Self",
-            "level": 1,
-            "filename": "!!!big.2012.0002.pdf",
-            "year": 2013,
-            "authors": []
-        },
-        {
-            "recog": 1,
-            "priority": 1,
-            "title": "TimeAware: Leveraging Framing Effects to Enhance Personal Productivity",
-            "modified": 1587129610,
-            "keywords": "Quantified Self",
-            "level": 1,
-            "filename": "!2858036.2858428.pdf",
-            "year": 2016,
-            "authors": [
-                "Young-Ho Kim",
-                "Jae Ho Jeon",
-                "Eun Kyoung Choe",
-                "Bongshin Lee",
-                "KwonHyun Kim",
-                "Jinwook Seo"
-            ]
-        },
-        {
-            "recog": 0,
-            "priority": 0,
-            "title": "Experiencing the Pandemic \u2013 Your Story Deserves to be Heard",
-            "modified": 1587124610,
-            "keywords": "Methods > Qualitative > Small Stories Research",
-            "level": 3,
-            "filename": "-Experiencing the Pandemic \u2013 Your Story Deserves to be Heard.pdf",
-            "year": 2020,
-            "authors": []
-        },
-        {
-            "recog": 1,
-            "priority": 0,
-            "title": "Sensemaking for Professional Development: Opportunities and Challenges",
-            "modified": 1587102202,
-            "keywords": "Sensemaking",
-            "level": 1,
-            "filename": "-Hui-Sensemaking for Professional Development_ Opportunities and Challenges.pdf",
-            "year": 2018,
-            "authors": []
-        },
-        {
-            "recog": 1,
-            "priority": 2,
-            "title": "Attention in Psychology, Neuroscience, and Machine Learning",
-            "modified": 1587101086,
-            "keywords": "Psychology > Attention",
-            "level": 2,
-            "filename": "!!fncom-14-00029.pdf",
-            "year": 2020,
-            "authors": [
-                "Grace W. Lindsay"
-            ]
-        },
-        {
-            "recog": 1,
-            "priority": 0,
-            "title": "THE ANNOUNCEMENT COMES AS UBER HAS SEEN A PRECIPITOUS DROP IN RIDERSHIP",
-            "modified": 1587066383,
-            "keywords": "Uber",
-            "level": 1,
-            "filename": "-Uber pledges 10 million free rides and deliveries for workers affected by COVID-19 - The Verge.pdf",
-            "year": 2020,
-            "authors": []
-        },
-        {
-            "recog": 0,
-            "priority": 3,
-            "title": "CrowdworkingMonitorNo2_finalpublished",
-            "modified": 1587029530,
-            "keywords": "Future of Work > Crowdwork > Germany",
-            "level": 3,
-            "filename": "!!!CrowdworkingMonitorNo2_finalpublished.pdf",
-            "year": 2019,
-            "authors": []
-        },
-        {
-            "recog": 1,
-            "priority": 0,
-            "title": "RETRACTED ARTICLE: Who are they to judge? Overcoming anthropometry through fat bodybuilding",
-            "modified": 1587027172,
-            "keywords": "Grievance studies > Fat Bodybuilding",
-            "level": 2,
-            "filename": "-RETRACTED ARTICLE Who are they to judge Overcoming anthropometry through fat bodybuilding.pdf",
-            "year": 2018,
-            "authors": [
-                "Richard Baldwin"
-            ]
-        },
-        {
-            "recog": 1,
-            "priority": 0,
-            "title": "RETRACTED ARTICLE: Human reactions to rape culture and queer performativity at urban dog parks in Portland, Oregon",
-            "modified": 1587027044,
-            "keywords": "Grievance studies > Dog Park Rape Culture",
-            "level": 2,
-            "filename": "-RETRACTED ARTICLE Human reactions to rape culture and queer performativity at urban dog parks in Portland Oregon.pdf",
-            "year": 2018,
-            "authors": [
-                "Helen Wilson",
-                "H. WILSON"
-            ]
-        },
-        {
-            "recog": 1,
-            "priority": 0,
-            "title": "RETRACTED ARTICLE: Going in Through the Back Door: Challenging Straight Male Homohysteria, Transhysteria, and Transphobia Through Receptive Penetrative Sex Toy Use",
-            "modified": 1587026996,
-            "keywords": "Grievance studies > Cure Homophobia",
-            "level": 2,
-            "filename": "-Smith2018_Article_RETRACTEDARTICLEGoingInThrough.pdf",
-            "year": 2018,
-            "authors": [
-                "Peter Boghossian",
-                "Helen Pluckrose"
-            ]
-        },
-        {
-            "recog": 1,
-            "priority": 0,
-            "title": "Newer tools to fight inter-galactic parasites and their transmissibility in Zygirion simulation",
-            "modified": 1587026816,
-            "keywords": "Grievance studies > Inter-galactic Parasites",
-            "level": 2,
-            "filename": "-A1305010104.pdf",
-            "year": 2018,
-            "authors": [
-                "Beth Smith",
-                "Farooq Ali Khan",
-                "Chris Beauregard",
-                "Christina Hendricks",
-                "Sukant Khurana"
-            ]
-        },
-        {
-            "recog": 0,
-            "priority": 0,
-            "title": "This Isn\u2019t Incompetence",
-            "modified": 1587026726,
-            "keywords": "Grievance studies",
-            "level": 1,
-            "filename": "-This Isn\u2019t Incompetence.pdf",
-            "year": 2019,
-            "authors": []
-        },
-        {
-            "recog": 1,
-            "priority": 0,
-            "title": "Zoom into doctoral thesis defense on massive IoT and wireless energy transfer",
-            "modified": 1587026063,
-            "keywords": "Science Communication",
-            "level": 1,
-            "filename": "-Zoom into doctoral thesis defense on massive IoT and wireless energy transfer _ University of Oulu.pdf",
-            "year": 2020,
-            "authors": [
-                "Onel Alcaraz L\u00f3pez"
-            ]
-        },
-        {
-            "recog": 1,
-            "priority": 0,
-            "title": "Tips to Tame a Feral Cat",
-            "modified": 1586977625,
-            "keywords": "Animals > Cats > Socialization",
-            "level": 3,
-            "filename": "-Tips to Tame a Feral Cat - 4 steps.pdf",
-            "year": 2020,
-            "authors": []
-        },
-        {
-            "recog": 1,
-            "priority": 0,
-            "title": "How to Socialize an Adult Cat",
-            "modified": 1586977369,
-            "keywords": "Animals > Cats > Socialization",
-            "level": 3,
-            "filename": "-How to Socialize an Adult Cat.pdf",
-            "year": 2020,
-            "authors": []
-        },
-        {
-            "recog": 1,
-            "priority": 0,
-            "title": "Socializing Shy or Feral Cats A Guide for Austin Pets Alive! Foster Parents and Adopters",
-            "modified": 1586977109,
-            "keywords": "Animals > Cats > Socialization",
-            "level": 3,
-            "filename": "-APA-Guide-to-Socializing-Adult-Cats.pdf",
-            "year": 2014,
-            "authors": []
-        },
-        {
-            "recog": 0,
-            "priority": 0,
-            "title": "The Keys to Kitten Socialization",
-            "modified": 1586976654,
-            "keywords": "Animals > Cats > Socialization",
-            "level": 3,
-            "filename": "-The Keys to Kitten Socialization.pdf",
-            "year": 2020,
-            "authors": [
-                "Debbie Martin"
-            ]
-        },
-        {
-            "recog": 0,
-            "priority": 0,
-            "title": "ChronoViz",
-            "modified": 1586975975,
-            "keywords": "Methods > Qualitative > Tools > ChronoViz",
-            "level": 4,
-            "filename": "-ChronoViz.pdf",
-            "year": 2020,
-            "authors": []
+            ],
+            "filename": "!!!2018-cscw-schema-highlighter.pdf",
+            "priority": 3
         }
-    ],
-    "unrecognized_percent": 0.0,
-    "modified": 1587535518
+    ]
 }
