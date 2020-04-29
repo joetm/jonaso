@@ -266,8 +266,16 @@ class CV extends React.Component {
             <Item>
               <List>
                 <List.Item>
-                  {row.name}
-                  {row.institution && <span>, {row.institution}</span>}
+                  {
+                  	row.url ?
+	                  <a href={row.url}>{row.name}</a>
+	                  :
+	                  <React.Fragment>row.name</React.Fragment>
+                  }
+                  {
+                  	row.institution &&
+                  		<React.Fragment>, {row.institution}</React.Fragment>
+                  }
                 </List.Item>
               </List>
             </Item>
