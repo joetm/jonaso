@@ -17,8 +17,10 @@ default:
 	##
 
 pre-build:
-# 	cd ./stat_aggregator; \
-# 		./fetch_PCS.py
+	# 	cd ./stat_aggregator; \
+	# 		./fetch_PCS.py
+	# academic-cv folder exists?
+	# [ -d "academic-cv" ] && rm -rf academic-cv
 	make fetch-cv
 
 post-build:
