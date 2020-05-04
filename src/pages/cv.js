@@ -123,7 +123,6 @@ class CV extends React.Component {
                 <List.Item><a href="http://www.oulu.fi/university/">University of Oulu</a></List.Item>
                 <List.Item>Pentti Kaiteran katu 1</List.Item>
                 <List.Item>Room TS370</List.Item>
-                <List.Item>P.O. Box 4500</List.Item>
                 <List.Item>90570 Oulu, Finland</List.Item>
               </List>
             </Item.Description>
