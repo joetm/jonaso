@@ -26,10 +26,10 @@ const styles = {
     fontSize: '1em',
   },
   headline: {
-  	maxWidth: '180px',
-  	fontWeight: 'normal',
-  	textTransform: 'uppercase',
-  	fontSize: '1em',
+    maxWidth: '180px',
+    fontWeight: 'normal',
+    textTransform: 'uppercase',
+    fontSize: '1em',
   },
   rowspan2: {
    flex: 4,
@@ -44,7 +44,7 @@ const styles = {
     textAlign: 'right',
   },
   nomarginTop: {
-  	marginTop: 0,
+    marginTop: 0,
   },
 }
 
@@ -103,6 +103,20 @@ class CV extends React.Component {
     // const { reviews } = this.state
     const startEndYear = this.startEndYear
     const teachingPositions = Object.keys(cv.teaching)
+
+    const peerreviews = {}
+    cv['peer-review'].forEach(entry => {
+        entry.years.forEach(year => {
+            if (peerreviews.hasOwnProperty("" + year)) {
+                peerreviews["" + year].push(entry)
+            } else {
+                peerreviews["" + year] = [entry]
+            }
+        })
+    })
+    // add section header to first item
+    const key1 = Object.keys(peerreviews).reverse()[0]
+    peerreviews[key1].left = "Peer Reviewer"
 
     return (
       <Layout>
@@ -247,7 +261,6 @@ class CV extends React.Component {
       PUBLICATIONS
 ***********************/}
 
-
 <Row left="Publications" middle={(
       <button onClick={this.redirectToPublications}>&rarr; &nbsp; See Publications</button>
 )} right="" />
@@ -266,14 +279,14 @@ class CV extends React.Component {
               <List>
                 <List.Item>
                   {
-                  	row.url ?
-	                  <a href={row.url}>{row.name}</a>
-	                  :
-	                  <span>row.name</span>
+                    row.url ?
+                      <a href={row.url}>{row.name}</a>
+                      :
+                      <span>row.name</span>
                   }
                   {
-                  	row.institution &&
-                  		<span>, {row.institution}</span>
+                    row.institution &&
+                        <span>, {row.institution}</span>
                   }
                 </List.Item>
               </List>
@@ -347,27 +360,44 @@ class CV extends React.Component {
       PEER REVIEW
 ***********************/}
 
+{/*
 <Row left="Peer Reviewer" middle={(
       <Item.Group>
-        {/*
         <Item>
-          Total peer reviews: {reviews.total}
-        </Item>
-        */}
-        <Item>
-              <List>
-                <List.Item>
-                {
-                  cv.hasOwnProperty("peer-review") &&
-                    cv['peer-review'].map((item, i) => (
-                      <div key={item.series + i}><a href={item.url} title={item.title}>{item.series} {item.years.join(", ")}</a></div>
-                    ))
-                }
-                </List.Item>
-              </List>
+          <List>
+            <List.Item>
+              {
+                Object.keys(peerreviews).map(year => peerreviews[year].map((item, i) => (
+                  <div key={item.series + i}><a href={item.url} title={item.title}>{item.series} {item.years.join(", ")}</a></div>
+                )))
+              }
+            </List.Item>
+          </List>
         </Item>
       </Item.Group>
 )} right="" />
+*/}
+
+{
+    Object.keys(peerreviews).reverse().map(year => (
+        <Row key={`pr${year}`} left={peerreviews[year].left} middle={(
+          <Item.Group>
+            <Item>
+              <List>
+                <List.Item>
+                  {
+                    peerreviews[year].map((item, i) => (
+                       <a key={item.series + i} href={item.url} title={item.title}>{item.series}</a>
+                    )).reduce((prev, next) => [prev, ', ', next])
+                  }
+                </List.Item>
+              </List>
+            </Item>
+          </Item.Group>
+        )} right={year} />
+    ))
+}
+
 
 
 {/**********************
