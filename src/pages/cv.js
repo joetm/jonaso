@@ -278,15 +278,24 @@ class CV extends React.Component {
             <Item>
               <List>
                 <List.Item>
+                  {row.name}
                   {
-                    row.url ?
-                      <a href={row.url}>{row.name}</a>
-                      :
-                      <span>row.name</span>
+                    row.event && row.institution &&
+                        <span> ({row.event})</span>
                   }
                   {
-                    row.institution &&
-                        <span>, {row.institution}</span>
+                    (row.institution && row.url) ?
+                      <span>, <a href={row.url}>{row.institution}</a></span>
+                      :
+                      <span>{row.institution}</span>
+                  }
+                  {
+                    row.event && row.url && !row.institution &&
+                        <span>, <a href={row.url}>{row.event}</a></span>
+                  }
+                  {
+                    row.event && !row.url && !row.institution &&
+                        <span>, {row.event}</span>
                   }
                 </List.Item>
               </List>
