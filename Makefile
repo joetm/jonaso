@@ -50,7 +50,8 @@ fetch-cv:
 		sed 's|\\settoggle{showinterests}{true}|\\settoggle{showinterests}{false}|g' out2.tex > out.tex; \
 		sed 's|\\settoggle{showlinks}{false}|\\settoggle{showlinks}{true}|g' out.tex > out2.tex; \
 		sed 's|\\settoggle{showpublications}{false}|\\settoggle{showpublications}{true}|g' out2.tex > out.tex; \
-		sed 's|\\settoggle{showmoney}{true}|\\settoggle{showmoney}{false}|g' out.tex > cv.tex; \
+		sed 's|\\settoggle{showtotalfunding}{true}|\\settoggle{showpublications}{false}|g' out.tex > out2.tex; \
+		sed 's|\\settoggle{showmoney}{true}|\\settoggle{showmoney}{false}|g' out2.tex > cv.tex; \
 		pdflatex -halt-on-error -synctex=1 -interaction=batchmode cv.tex; \
 		pdflatex -halt-on-error -synctex=1 -interaction=batchmode cv.tex
 
