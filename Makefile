@@ -22,6 +22,8 @@ pre-build:
 	# academic-cv folder exists?
 	# [ -d "academic-cv" ] && rm -rf academic-cv
 	make fetch-cv
+	make replace-cv
+	make build-cv
 
 post-build:
 	cp ./src/travel.json ./public/
@@ -35,25 +37,34 @@ fetch-cv:
 	./acquire-graph.js
 	mv ./graph.png ./academic-cv/
 
-	# modify publication-list.tex to use this graph
+replace-cv:
+	# modify publication-list.tex to use the downloaded graph
 	cd academic-cv; \
-		sed 's|figures/publications.png|graph.png|g' publication-list.tex > publications.tex; \
-		pdflatex -halt-on-error -synctex=1 -interaction=batchmode publications.tex; \
-		pdflatex -halt-on-error -synctex=1 -interaction=batchmode publications.tex
+		sed 's|figures/publications.png|graph.png|g' publication-list.tex > publications.tex
 
 	# set the options in the CV
 	cd academic-cv; \
-		sed 's|\\excludefromprint{.*}||g' cv.tex > out.tex; \
-		sed 's|\\settoggle{showpositiondetails}{true}|\\settoggle{showpositiondetails}{false}|g' out.tex > out2.tex; \
-		sed 's|\\settoggle{showsummary}{true}|\\settoggle{showsummary}{false}|g' out2.tex > out.tex; \
-		sed 's|\\settoggle{shownationality}{true}|\\settoggle{shownationality}{false}|g' out.tex > out2.tex; \
-		sed 's|\\settoggle{showinterests}{true}|\\settoggle{showinterests}{false}|g' out2.tex > out.tex; \
-		sed 's|\\settoggle{showlinks}{false}|\\settoggle{showlinks}{true}|g' out.tex > out2.tex; \
-		sed 's|\\settoggle{showpublications}{false}|\\settoggle{showpublications}{true}|g' out2.tex > out.tex; \
-		sed 's|\\settoggle{showtotalfunding}{true}|\\settoggle{showpublications}{false}|g' out.tex > out2.tex; \
-		sed 's|\\settoggle{showmoney}{true}|\\settoggle{showmoney}{false}|g' out2.tex > cv.tex; \
+		sed 's|\\excludefromprint{.*}||g' cv.tex > tmp.tex; \
+		sed 's|\\settoggle{showpositiondetails}{true}|\\settoggle{showpositiondetails}{false}|g' tmp.tex > cv.tex; \
+		sed 's|\\settoggle{showsummary}{true}|\\settoggle{showsummary}{false}|g' cv.tex > tmp.tex; \
+		sed 's|\\settoggle{shownationality}{true}|\\settoggle{shownationality}{false}|g' tmp.tex > cv.tex; \
+		sed 's|\\settoggle{showinterests}{true}|\\settoggle{showinterests}{false}|g' cv.tex > tmp.tex; \
+		sed 's|\\settoggle{showlinks}{false}|\\settoggle{showlinks}{true}|g' tmp.tex > cv.tex; \
+		sed 's|\\settoggle{showpublications}{false}|\\settoggle{showpublications}{true}|g' cv.tex > tmp2.tex; \
+		sed 's|\\settoggle{showtotalfunding}{true}|\\settoggle{showpublications}{false}|g' tmp2.tex > tmp.tex; \
+		sed 's|\\settoggle{showmoney}{true}|\\settoggle{showmoney}{false}|g' tmp.tex > cv.tex
+
+build-cv:
+	# build the publication list
+	cd academic-cv; \
+		pdflatex -halt-on-error -synctex=1 -interaction=batchmode publications.tex; \
+		pdflatex -halt-on-error -synctex=1 -interaction=batchmode publications.tex
+
+	# build the CV
+	cd academic-cv; \
 		pdflatex -halt-on-error -synctex=1 -interaction=batchmode cv.tex; \
 		pdflatex -halt-on-error -synctex=1 -interaction=batchmode cv.tex
+
 
 move-cv:
 	mv academic-cv/cv.pdf "public/cv/oppenlaender-cv.pdf"
