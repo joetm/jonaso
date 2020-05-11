@@ -31,7 +31,7 @@ post-build:
 	make move-cv
 
 fetch-cv:
-	git clone git@github.com:joetm/academic-cv.git
+	git clone --depth=1 git@github.com:joetm/academic-cv.git
 
 	# get an up-to-date graph of the publications from the homepage to use in the latex CV
 	./acquire-graph.js
