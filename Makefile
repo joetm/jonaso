@@ -53,7 +53,8 @@ replace-cv:
 		sed 's|\\settoggle{showpublications}{false}|\\settoggle{showpublications}{true}|g' cv.tex > tmp2.tex; \
 		sed 's|\\settoggle{showtotalfunding}{true}|\\settoggle{showtotalfunding}{false}|g' tmp2.tex > tmp.tex; \
 		sed 's|\\settoggle{showreferences}{true}|\\settoggle{showreferences}{false}|g' tmp.tex > tmp2.tex; \
-		sed 's|\\settoggle{showmoney}{true}|\\settoggle{showmoney}{false}|g' tmp2.tex > cv.tex
+		sed 's|\\settoggle{showpublicationsummary}{false}|\\settoggle{showpublicationsummary}{true}|g' tmp2.tex > tmp.tex; \
+		sed 's|\\settoggle{showmoney}{true}|\\settoggle{showmoney}{false}|g' tmp.tex > cv.tex
 
 build-cv:
 	# build the publication list
