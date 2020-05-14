@@ -51,7 +51,7 @@ replace-cv:
 		sed 's|\\settoggle{showinterests}{true}|\\settoggle{showinterests}{false}|g' cv.tex > tmp.tex; \
 		sed 's|\\settoggle{showlinks}{false}|\\settoggle{showlinks}{true}|g' tmp.tex > cv.tex; \
 		sed 's|\\settoggle{showpublications}{false}|\\settoggle{showpublications}{true}|g' cv.tex > tmp2.tex; \
-		sed 's|\\settoggle{showtotalfunding}{true}|\\settoggle{showpublications}{false}|g' tmp2.tex > tmp.tex; \
+		sed 's|\\settoggle{showtotalfunding}{true}|\\settoggle{showtotalfunding}{false}|g' tmp2.tex > tmp.tex; \
 		sed 's|\\settoggle{showmoney}{true}|\\settoggle{showmoney}{false}|g' tmp.tex > cv.tex
 
 build-cv:
