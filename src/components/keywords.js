@@ -85,7 +85,7 @@ class Keywords extends React.Component {
 
           <div style={{clear:'both'}}></div>
 
-          <ResponsiveContainer width="100%" height={740}>
+          <ResponsiveContainer width="100%" height={780}>
             {
               barChartActive ?
                 <BarChart layout="vertical" data={displaydata} onClick={isZoomed ? this.zoomOut : null}>
@@ -107,7 +107,7 @@ class Keywords extends React.Component {
                 <Treemap
                   data={displaydata}
                   isAnimationActive={true}
-                  animationDuration={1000}
+                  animationDuration={800}
                   dataKey="num"
                 />
             }
