@@ -1,5 +1,5 @@
 import React from "react"
-import { Icon, Header, List, Item, Container } from 'semantic-ui-react'
+import { Icon, Header, List, Item, Container, Label } from 'semantic-ui-react'
 import Layout from "../components/layout"
 
 import { spacer } from "../common"
@@ -85,6 +85,7 @@ const PdfCVButton = () => (
 class CV extends React.Component {
   state = {
     reviews: {total: 0},
+    activeTag: null,
   }
   redirectToPortfolio = () => window.location = _PORTFOLIO_URL
   redirectToPublications = () => window.location = '/publications/'
@@ -93,16 +94,31 @@ class CV extends React.Component {
     .then(response => response.json())
     .then(reviews => this.setState({reviews}))
   }
+  handleTagClick = (e) => {
+    const activeTag = e.target.innerHTML
+    if (activeTag === this.state.activeTag) {
+      this.setState({ activeTag: null })
+      return
+    }
+    this.setState({ activeTag })
+  }
   startEndYear(row) {
     if (row.hasOwnProperty('year')) {
       return row.year
     }
     return row.end === null ? "since " + row.start : row.start + " - " + row.end
   }
+  // countKeywords = () => {
+  //   const arrays = [cv.education, cv.research_experience, cv.work_experience]
+  //   const keyword_list = arrays.map(arr => arr.map(entry => entry.keywords).reduce((acc, curr) => acc.concat(curr))).reduce((acc, curr) => acc.concat(curr))
+  //   console.log(keywords)
+  // }
   render() {
-    // const { reviews } = this.state
+    const { activeTag } = this.state
     const startEndYear = this.startEndYear
     const teachingPositions = Object.keys(cv.teaching)
+
+    // const keyword_count = this.countKeywords()
 
     const peerreviews = {}
     cv['peer-review'].forEach(entry => {
@@ -189,6 +205,22 @@ class CV extends React.Component {
                     <List.Item><a href={row.institution_link}>{row.institution}</a>, {row.location}</List.Item>
                     <List.Item>{row.position}</List.Item>
                     <SupervisorWrap supervisor={row.supervisor} link={row.supervisor_link} />
+                    {/*
+                      row.keywords.length > 0 && (
+                        <List.Item>
+                          <Label.Group>
+                          {
+                            row.keywords.sort().map(kw => <Label
+                                                            key={kw}
+                                                            color={activeTag === kw ? 'olive': null}
+                                                            size='mini'
+                                                            onClick={this.handleTagClick}
+                                                            as='a'>{kw}</Label>)
+                          }
+                          </Label.Group>
+                        </List.Item>
+                      )
+                    */}
                   </List>
                 </Item.Description>
               </Item>
@@ -226,6 +258,22 @@ class CV extends React.Component {
                     row.supervisor &&
                       <List.Item>Supervisor: <a href={row.supervisor_link}>{row.supervisor}</a></List.Item>
                   */}
+                  {/*
+                    row.keywords.length > 0 && (
+                      <List.Item>
+                        <Label.Group>
+                        {
+                          row.keywords.sort().map(kw => <Label
+                                                          key={kw}
+                                                          color={activeTag === kw ? 'olive': null}
+                                                          size='mini'
+                                                          onClick={this.handleTagClick}
+                                                          as='a'>{kw}</Label>)
+                        }
+                        </Label.Group>
+                      </List.Item>
+                    )
+                  */}
                 </List>
               </Item.Description>
             </Item>
@@ -248,6 +296,22 @@ class CV extends React.Component {
                 <List>
                   <List.Item><a href={row.organization_link}>{row.organization}</a>, {row.location}</List.Item>
                   <List.Item>{row.position}</List.Item>
+                  {/*
+                    row.keywords.length > 0 && (
+                      <List.Item>
+                        <Label.Group>
+                        {
+                          row.keywords.sort().map(kw => <Label
+                                                          key={kw}
+                                                          color={activeTag === kw ? 'olive': null}
+                                                          size='mini'
+                                                          onClick={this.handleTagClick}
+                                                          as='a'>{kw}</Label>)
+                        }
+                        </Label.Group>
+                      </List.Item>
+                    )
+                  */}
                 </List>
               </Item.Description>
             </Item>
