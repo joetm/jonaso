@@ -1,5 +1,5 @@
 import React from "react"
-import { Icon, Header, List, Item, Container, Label } from 'semantic-ui-react'
+import { Icon, Header, List, Item, Container } from 'semantic-ui-react'
 import Layout from "../components/layout"
 
 import { spacer } from "../common"
@@ -62,15 +62,17 @@ const SupervisorWrap = ({supervisor, link}) => {
 
 // TODO: ROWSPAN
 // {/*style={rowspan ? styles.rowspan2 : null}*/}
-const Row = ({left, middle, right}) => ( //rowspan=false
-  <div className="row">
-    <div className="leftCol">
-      <Header style={styles.headline} size="large">{left}</Header>
-    </div>
-    <div className="mainCol">{middle}</div>
-    <div style={styles.rightCol}>{right}</div>
-  </div>
-)
+const Row = ({left, middle, right}) => {
+	return ( //rowspan=false
+	  <div className="row">
+	    <div className="leftCol">
+	      <Header style={styles.headline} size="large">{left}</Header>
+	    </div>
+	    <div className="mainCol">{middle}</div>
+	    <div style={styles.rightCol}>{right}</div>
+	  </div>
+	)
+}
 
 
 const PdfCVButton = () => (
@@ -85,8 +87,13 @@ const PdfCVButton = () => (
 class CV extends React.Component {
   state = {
     reviews: {total: 0},
-    activeTag: null,
+    // activeTag: null,
+    // isHovered: false, 
   }
+  // setIsHovered = (isHovered) => {
+  // 	console.info('isHovered', isHovered)
+  // 	this.setState({isHovered})
+  // }
   redirectToPortfolio = () => window.location = _PORTFOLIO_URL
   redirectToPublications = () => window.location = '/publications/'
   componentDidMount() {
@@ -94,14 +101,14 @@ class CV extends React.Component {
     .then(response => response.json())
     .then(reviews => this.setState({reviews}))
   }
-  handleTagClick = (e) => {
-    const activeTag = e.target.innerHTML
-    if (activeTag === this.state.activeTag) {
-      this.setState({ activeTag: null })
-      return
-    }
-    this.setState({ activeTag })
-  }
+  // handleTagClick = (e) => {
+    // const activeTag = e.target.innerHTML
+    // if (activeTag === this.state.activeTag) {
+    //   this.setState({ activeTag: null })
+    //   return
+    // }
+  //   this.setState({ activeTag })
+  // }
   startEndYear(row) {
     if (row.hasOwnProperty('year')) {
       return row.year
@@ -114,7 +121,7 @@ class CV extends React.Component {
   //   console.log(keywords)
   // }
   render() {
-    const { activeTag } = this.state
+    // const { activeTag, isHovered } = this.state
     const startEndYear = this.startEndYear
     const teachingPositions = Object.keys(cv.teaching)
 
@@ -236,7 +243,8 @@ class CV extends React.Component {
 
 {
   cv.research_experience.map((row, i) => (
-    <Row key={i} left={row.left} middle={(
+    <Row key={i} left={row.left}
+        middle={(
           <Item.Group>
             <Item>
               <Item.Description style={styles.nomarginTop}>
