@@ -141,11 +141,10 @@ class Home extends React.Component {
                     E-Mail: {'{'}firstname.lastname{'}'}@oulu.fi
                 </p>
 
+              {/*
                 <p>
                     <strong>Consultation hour</strong>: <i>on demand</i> - just send me an email and we&apos;ll arrange a meeting
                 </p>
-
-				{/*
                 <p>
                     <Icon as="i" link={true} size="large" name='hand outline right' />
                     <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/theses/open/index.html">Open BSc and MSc theses</a>

@@ -83,11 +83,13 @@ def extractMetadata(fullpath):
             # unrecognized title: use filename instead
             title = os.path.splitext(filename)[0].strip('!-')
             recog = False
-        try:
-            if title.endswith('Wikipedia') and not rawdata['authors']:
-                rawdata['authors'] = [{'name': 'Wikipedia'}]
-        except:
-            pass
+
+        # uncomment to capture Wikipedia articles
+        # try:
+        #     if title.endswith('Wikipedia') and not rawdata['authors']:
+        #         rawdata['authors'] = [{'name': 'Wikipedia'}]
+        # except:
+        #     pass
 
         # skip conditions:
         # - must have authors
