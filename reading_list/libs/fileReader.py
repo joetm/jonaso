@@ -95,10 +95,10 @@ def parsefiles(PATTERN, BASEPATHS, conn):
                     c.execute("INSERT INTO documents VALUES (?,?,?)", (thehash, int(time.time()), json.dumps(md, ensure_ascii=True)))
                     conn.commit()
 
-                    documents.append(md)
-
-                    if not md['title']:
+                    if not md['title'] or not md['recog']:
                         unrecognizedCounter = unrecognizedCounter + 1
+
+                    documents.append(md)
 
     # sort by modified data
     documents.sort(key=lambda x: x['modified'], reverse=True)
