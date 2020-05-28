@@ -65,7 +65,7 @@ def parsefiles(PATTERN, BASEPATHS, conn):
                         parseJSON = json.loads(res[2])
                         if parseJSON:
                             documents.append(parseJSON)
-                            if not parseJSON['title']:
+                            if not parseJSON['title'] or not parseJSON['recog']:
                                 unrecognizedCounter = unrecognizedCounter + 1
                         else:
                             unrecognizedCounter = unrecognizedCounter + 1
