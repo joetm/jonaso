@@ -32,21 +32,18 @@ class Keywords extends React.Component {
           return response.json()
         })
         .then(level2 => {
-          console.log('setting data:', level2);
           this.setState({
             isZoomed: true,
             level2,
             breadcrumb: bar.name,
           })
         })
-        console.log('isZoomed:', isZoomed);
     } else {
         this.setState({
           isZoomed: false,
           level2: [],
           breadcrumb: null,
         })
-        console.log('isZoomed:', isZoomed);
     }
   }
   zoomOut = () => {
@@ -60,7 +57,6 @@ class Keywords extends React.Component {
     const { keywords = [] } = this.props
     const { chart, level2, isZoomed, breadcrumb } = this.state
     const barChartActive = chart === 'bar'
-
     const displaydata = isZoomed && level2.length ? level2 : keywords;
 
     // filtered_keywords = keywords.map(kw => kw.num > 1 ? kw : null);
@@ -85,13 +81,16 @@ class Keywords extends React.Component {
 
           <div style={{clear:'both'}}></div>
 
-          <ResponsiveContainer width="100%" height={780}>
+          <ResponsiveContainer width="100%" height={800}>
             {
               barChartActive ?
-                <BarChart layout="vertical" data={displaydata} onClick={isZoomed ? this.zoomOut : null}>
+                <BarChart
+                  layout="vertical"
+                  data={displaydata}
+                  onClick={isZoomed ? this.zoomOut : null}>
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis type="number" dataKey="num" />
-                        <YAxis type="category" dataKey="name" width={200} />
+                        <YAxis type="category" dataKey="name" width={255} />
                         <Tooltip
                           separator=" "
                           formatter={(value, name, props) => (<span>Publications: {value}</span>)}
@@ -101,7 +100,11 @@ class Keywords extends React.Component {
                           fill="#82ca9d"
                           className={!isZoomed ? "clickable" : ""}
                           onClick={this.handleClick}
-                        />
+                        >
+                        {/*
+                          <LabelList dataKey="num" position="insideRight" />
+                        */}
+                        </Bar>
                 </BarChart>
               :
                 <Treemap
