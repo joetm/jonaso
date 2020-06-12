@@ -81,7 +81,7 @@ class Keywords extends React.Component {
 
           <div style={{clear:'both'}}></div>
 
-          <ResponsiveContainer width="100%" height={800}>
+          <ResponsiveContainer width="100%" height={880}>
             {
               barChartActive ?
                 <BarChart
