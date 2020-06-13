@@ -1,7 +1,8 @@
 import React from "react"
-import { Image, Header, List, Item, Grid, Container } from 'semantic-ui-react'
+import { Image, Header, Item, Grid, Container } from 'semantic-ui-react'
 import Layout from "../components/layout"
 import { spacer } from "../common.js"
+import ProjectItem from "../components/ProjectItem"
 // import img_idlab from "../img/idlab.jpg"
 // import img_ikon  from "../img/ikon.png"
 // import crowdui   from "../img/crowdui-vision.jpg"
@@ -29,30 +30,9 @@ const CustomImage = ({image}) => (
 	/>
 )
 
-const joinIfNotNull = (arr) => arr.filter(val => val ? val : undefined).join(', ')
-
 // const Banner = (src, alt, title) => <img style={{width:'100%'}} src={src} alt={alt} title={title} />
 
-const PresItem = ({pres, i}) => {
-  const url = pres.doi ? `http://doi.org/${pres.doi}` : pres.url || null
-  return (
-    <List key={`presi_${i}`}>
-      <List.Item>
-        <List.Icon name='newspaper' />
-        <List.Content style={{textDecoration: pres.status === 'canceled' ? 'line-through': 'inherit'}}>{
-          url ?
-            <a href={url}>{pres.title}</a>
-            :
-            `${pres.title}`
-        }
-        </List.Content>
-      </List.Item>
-      <List.Item>
-        <List.Content>{joinIfNotNull([pres.note, pres.conference, pres.location])}, {pres.month} {pres.year}</List.Content>
-      </List.Item>
-    </List>
-  )
-}
+
 
 
 class Projects extends React.Component {
@@ -89,7 +69,7 @@ class Projects extends React.Component {
                   return (
                     <Grid key={`grid_${title}`} style={{marginBottom:'20px'}}>
 
-							        <Container>
+							        <Container style={{paddingLeft: 0}}>
                       <Grid.Row>
                         <Header>{title}{subtitle ? ` – ${subtitle}` : null}</Header>
                       </Grid.Row>
@@ -123,7 +103,7 @@ class Projects extends React.Component {
                                 <Header size="small">Medium</Header>
                             }
                             {
-                              medium.map((post, i) => <PresItem key={`${title}_${i}`} pres={post} i={i} /> )
+                              medium.map((post, i) => <ProjectItem key={`${title}_${i}`} item={post} i={i} /> )
                             }
 
                             {
@@ -131,7 +111,7 @@ class Projects extends React.Component {
                                 <Header size="small">Presentations</Header>
                             }
                             {
-                              presentations.map((pres, i) => <PresItem key={`${title}_${i}`} pres={pres} i={i} /> )
+                              presentations.map((pres, i) => <ProjectItem key={`${title}_${i}`} item={pres} i={i} /> )
                             }
 
                             {
@@ -139,7 +119,7 @@ class Projects extends React.Component {
                                 <Header size="small">Workshops</Header>
                             }
                             {
-                              workshops.map((pres, i) => <PresItem key={`${title}_${i}`} pres={pres} i={i} /> )
+                              workshops.map((pres, i) => <ProjectItem key={`${title}_${i}`} item={pres} i={i} /> )
                             }
 
                           </Item.Content>
