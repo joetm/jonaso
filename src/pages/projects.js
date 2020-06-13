@@ -85,7 +85,7 @@ class Projects extends React.Component {
               {
                 projects.map(project => {
                 	const { title, subtitle, description, date, organisation, organisation_href, funding, img,
-                    presentations = [], workshops = [] } = project
+                    medium = [], presentations = [], workshops = [] } = project
                   return (
                     <Grid key={`grid_${title}`} style={{marginBottom:'20px'}}>
 
@@ -97,16 +97,12 @@ class Projects extends React.Component {
 
                       <Grid.Row key={`row_${title}`}>
 
-                        <Grid.Column width={2}>
-                        	{date}
-                        </Grid.Column>
+                        <Grid.Column width={2}>{date}</Grid.Column>
 
                         <Grid.Column width={14}>
                         <Item>
 
-                          <div>
-                            <CustomImage image={img} />
-                          </div>
+                          <CustomImage image={img} />
 
                           <Item.Content>
                             <Item.Extra>
@@ -121,6 +117,14 @@ class Projects extends React.Component {
                             <Item.Extra>
                             	<p>{funding}</p>
                             </Item.Extra>
+
+                            {
+                              medium.length > 0 &&
+                                <Header size="small">Medium</Header>
+                            }
+                            {
+                              medium.map((post, i) => <PresItem key={`${title}_${i}`} pres={post} i={i} /> )
+                            }
 
                             {
                               presentations.length > 0 &&
