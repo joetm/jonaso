@@ -5,6 +5,7 @@ import "../../libs/academicons/css/academicons.min.css"
 import TravelRotary from "../components/TravelRotary"
 import img from "../img/opp.jpg"
 import ACMDL from "../img/ACM-DL-Logo-size3.webp"
+import MEDIUM from "../img/monogram-mask.svg"
 import { nobottommargin, notopmargin, nobold } from "../common"
 import Layout from "../components/layout"
 
@@ -161,21 +162,38 @@ class Home extends React.Component {
               <Icon title="Jonas Oppenlaender on LinkedIn" link={true} color="grey" size="big" name='linkedin square' />
           </a>
 
-          <a href="https://github.com/joetm" target="_blank" rel="noopener noreferrer">
-              <Icon title="Jonas Oppenlaender on GitHub" link={true} color="grey" size="big" name='github square' />
-          </a>
-
           <a href="https://twitter.com/Duesynapse" target="_blank" rel="noopener noreferrer">
               <Icon title="Jonas Oppenlaender on Twitter" link={true} color="grey" size="big" name='twitter square' />
           </a>
 
+          <a href="https://github.com/joetm" target="_blank" rel="noopener noreferrer">
+              <Icon title="Jonas Oppenlaender on GitHub" link={true} color="grey" size="big" name='github square' />
+          </a>
+
+          <a href="https://medium.com/@j.oppenlaender" target="_blank" rel="noopener noreferrer">
+              <i style={{display:'inline-block', width: '25px', height: '25px',
+              	backgroundImage: `url(${MEDIUM})`,
+              	verticalAlign: 'middle', backgroundPosition: 'center center', lineHeight: 1,
+              	margin: '0 0.25rem 0 0.3rem', backgroundSize: 'cover', opacity: 0.45}} title="Jonas Oppenlaender on Medium"></i>
+          </a>
+
           <a href="https://dl.acm.org/author_page.cfm?id=99659312669" target="_blank" rel="noopener noreferrer">
               <i style={{display:'inline-block', width: '25px', height: '25px',
-              	backgroundImage: `url(${ACMDL})`, verticalAlign: 'middle', backgroundPosition: 'center center', lineHeight: 1, margin: '0px 0.25rem 0px 0px', backgroundSize: 'cover', opacity: 0.45}} title="Jonas Oppenlaender on ACM DL"></i>
+              	backgroundImage: `url(${ACMDL})`,
+              	verticalAlign: 'middle', backgroundPosition: 'center center', lineHeight: 1,
+              	margin: '0px 0.4rem 0px 0.4rem', backgroundSize: 'cover', opacity: 0.45}} title="Jonas Oppenlaender on ACM DL"></i>
+          </a>
+
+          <a href="https://arxiv.org/search/cs?searchtype=author&query=Oppenlaender%2C+J" target="_blank" rel="noopener noreferrer">
+              <i style={styles.academicon} title="Jonas Oppenlaender on ArXiv" className="ai ai-arxiv-square ai-2x"></i>
           </a>
 
           <a href="https://orcid.org/0000-0002-2342-1540">
               <i style={styles.academicon} title="Jonas Oppenlaender on ORCID" className="ai ai-orcid-square ai-2x"></i>
+          </a>
+
+          <a href="https://figshare.com/authors/Jonas_Oppenlaender/4813044">
+              <i style={styles.academicon} title="Jonas Oppenlaender on Figshare" className="ai ai-figshare-square ai-2x"></i>
           </a>
 
           <a href="https://dblp.uni-trier.de/pers/hd/o/Oppenlaender:Jonas">
