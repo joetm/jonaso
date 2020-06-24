@@ -1,6 +1,6 @@
 import React from "react"
 import { Container, Button } from 'semantic-ui-react'
-import { ResponsiveContainer, Treemap, BarChart, Bar, Tooltip, XAxis, YAxis, CartesianGrid } from 'recharts'
+import { ResponsiveContainer, BarChart, Bar, Tooltip, XAxis, YAxis, CartesianGrid } from 'recharts' // Treemap
 
 
 
@@ -8,7 +8,7 @@ class Keywords extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      chart: 'bar',
+      // chart: 'bar',
       isZoomed: false,
       activeTooltipIndex: false,
       activeLabel: null,
@@ -52,11 +52,11 @@ class Keywords extends React.Component {
       level2: [],
     })
   }
-  changeChartType = (chart) => this.setState({chart})
+  // changeChartType = (chart) => this.setState({chart})
   render() {
     const { keywords = [] } = this.props
-    const { chart, level2, isZoomed, breadcrumb } = this.state
-    const barChartActive = chart === 'bar'
+    const { level2, isZoomed, breadcrumb } = this.state // chart
+    // const barChartActive = chart === 'bar'
     const displaydata = isZoomed && level2.length ? level2 : keywords;
 
     // filtered_keywords = keywords.map(kw => kw.num > 1 ? kw : null);
@@ -65,11 +65,13 @@ class Keywords extends React.Component {
         <Container style={{marginBottom: '2em'}}>
           <h2 style={{float:'left', display:'inline-block'}}>Research Interests</h2>
 
+          {/*
           <Button.Group style={{float: 'right'}}>
               <Button positive={barChartActive} onClick={() => this.changeChartType('bar')}>Bar</Button>
               <Button.Or />
               <Button positive={!barChartActive} onClick={() => this.changeChartType('tree')}>Tree</Button>
           </Button.Group>
+          */}
 
           {
             isZoomed &&
@@ -82,8 +84,9 @@ class Keywords extends React.Component {
           <div style={{clear:'both'}}></div>
 
           <ResponsiveContainer width="100%" height={880}>
-            {
+            {/*
               barChartActive ?
+            */}
                 <BarChart
                   layout="vertical"
                   data={displaydata}
@@ -106,6 +109,7 @@ class Keywords extends React.Component {
                         */}
                         </Bar>
                 </BarChart>
+            {/*
               :
                 <Treemap
                   data={displaydata}
@@ -113,7 +117,7 @@ class Keywords extends React.Component {
                   animationDuration={800}
                   dataKey="num"
                 />
-            }
+            */}
           </ResponsiveContainer>
 
         </Container>

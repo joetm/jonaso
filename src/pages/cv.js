@@ -95,7 +95,8 @@ class CV extends React.Component {
   // 	this.setState({isHovered})
   // }
   redirectToPortfolio = () => window.location = _PORTFOLIO_URL
-  redirectToPublications = () => window.location = '/publications/'
+  redirectToPublications = () => window.location = '/publications'
+  redirectToInterests = () => window.location = '/interests'
   componentDidMount() {
     fetch(_PEERREVIEWS_URL)
     .then(response => response.json())
@@ -183,6 +184,7 @@ class CV extends React.Component {
         INTERESTS
 ***********************/}
 
+{/*
 <Row left="Research Interests" middle={(
       <Item.Group>
         <Item>
@@ -196,6 +198,10 @@ class CV extends React.Component {
         </Item>
       </Item.Group>
 )} right="" rowspan={2} />
+*/}
+<Row left="Research Interests" middle={(
+      <button onClick={this.redirectToInterests}>&rarr; &nbsp; See Interests</button>
+)} right="" />
 
 
 {/**********************
