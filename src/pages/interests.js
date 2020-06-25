@@ -4,8 +4,9 @@ import { spacer } from "../common"
 import Influencer from "../components/influencer"
 import Keywords from "../components/keywords"
 import Layout from "../components/layout"
-// import KeywordCloud from '../components/cloud'
-
+/*
+import KeywordCloud from '../components/cloud'
+*/
 
 const _INFLUENCER = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/influencer.json'
 const _KEYWORDS = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/keywords.json'
@@ -42,9 +43,7 @@ class Interests extends React.Component {
     return (
       <Layout>
         <Container>
-          {/*
-          <KeywordCloud />
-          */}
+          {/* <KeywordCloud /> */}
           <Keywords keywords={filtered_keywords} />
           <Influencer influencer={influencer} />
           <div style={spacer}></div>
