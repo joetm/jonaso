@@ -49,7 +49,7 @@ const styles = {
 }
 
 
-const SupervisorWrap = ({supervisor, link}) => {
+const SupervisorWrap = ({supervisor, link = false}) => {
   if (!supervisor) {
     return null;
   }
@@ -95,8 +95,8 @@ class CV extends React.Component {
   // 	this.setState({isHovered})
   // }
   redirectToPortfolio = () => window.location = _PORTFOLIO_URL
-  redirectToPublications = () => window.location = '/publications'
-  redirectToInterests = () => window.location = '/interests'
+  redirectToPublications = () => window.location = '/publications/'
+  redirectToInterests = () => window.location = '/interests/'
   componentDidMount() {
     fetch(_PEERREVIEWS_URL)
     .then(response => response.json())

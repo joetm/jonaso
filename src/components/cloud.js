@@ -10,8 +10,8 @@ import keywordcloud from '../keyword-cloud-priority.json'
 
 class Cloud extends React.Component {
   render() {
-    const baseSize = 20
-    const words = keywordcloud.filter(x => x.value > 2)
+    const baseSize = 25
+    const words = keywordcloud.filter(x => x.value > 15)
     return (
       <Container style={{marginBottom: '2em'}}>
       <TagCloud 
@@ -21,6 +21,7 @@ class Cloud extends React.Component {
           fontWeight: 'bold',
           fontStyle: 'italic',
           // color: () => randomColor(),
+          // color: "#82CA9D",
           // padding: 5,
           width: '100%',
           height: '580px'
