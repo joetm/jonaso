@@ -365,7 +365,7 @@ class CV extends React.Component {
                     (row.institution && row.url) ?
                       <span>, <a href={row.url}>{row.institution}</a></span>
                       :
-                      <span>{row.institution}</span>
+                      <span>, {row.institution}</span>
                   }
                   {
                     row.event && row.url && !row.institution &&
