@@ -54,9 +54,9 @@ const SupervisorWrap = ({supervisor, link = false}) => {
     return null;
   }
   if (link) {
-      return (<List.Item>Supervisor: <a href={link}>{supervisor}</a></List.Item>)
+      return (<List.Item>Advisor: <a href={link}>{supervisor}</a></List.Item>)
   }
-  return (<List.Item>Supervisor: {supervisor}</List.Item>)
+  return (<List.Item>Advisor: {supervisor}</List.Item>)
 }
 
 
