@@ -7,7 +7,7 @@ import cv from "../cv.json"
 // headlines
 cv.education[0].left = "Education"
 cv.research_experience[0].left = "Research Experience"
-cv.work_experience[0].left = "Other Work Experience"
+cv.work_experience[0].left = "Professional Experience"
 cv.awards[0].left = "Honors & Awards"
 cv.academicservice[0].left = "Academic Service"
 cv.supervisions[0].left = "Student Supervisions"
