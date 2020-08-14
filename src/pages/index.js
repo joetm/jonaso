@@ -18,7 +18,8 @@ const keywords = {
     // "human computation",
     "collective intelligence",
     "web science",
-    "collaborative ontology engineering",
+    "ontology engineering",
+    // "collaborative ontology engineering",
     "semantic web",
     "linked data",
   ],
@@ -110,19 +111,33 @@ class Home extends React.Component {
 
                 <p>
                   I am interested in building web-based socio-technical systems
-                  in which the human and technological elements play the role of participant machinery
-                  in order to perform complex tasks better than either human or machine could independently.
+                  in which the human and technological elements 
+                  perform complex tasks better than either human or machine could independently.
                 </p>
 
+                <p>
+                  I have lived, studied and/or worked in
+                  Germany, Switzerland, France, the United Kingdom, Sweden, Macedonia, the United States, and Finland.
+                </p>
+
+                <p>
+                  My current research interests can be found here.
+                  Some of my past interests include 
+                    { keywords.primary.join(", ") }
+                  and
+                    { keywords.secondary.join(", ") }.
+                </p>
+
+                {/*
                 <p>
         	        <Header size="tiny" style={{...nobold, ...notopmargin, ...nobottommargin}}>My <strong>primary research interests</strong> are:</Header>
             	      { keywords.primary.join(", ") }
                 </p>
-
                 <p>
 	                <Header size="tiny" style={{...nobold, ...notopmargin, ...nobottommargin}}><strong>Further research interests</strong> include:</Header>
     	              { keywords.secondary.join(", ") }
                 </p>
+                */}
 
                 <TravelRotary />
 
