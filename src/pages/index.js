@@ -116,7 +116,7 @@ class Home extends React.Component {
                 </p>
 
                 <p>
-                  I have lived, studied and/or worked in
+                  I lived, studied and/or worked in
                   Germany, Switzerland, France, the United Kingdom, Sweden, Macedonia, the United States, and Finland.
                 </p>
 
