@@ -1,5 +1,6 @@
 import React from "react"
 import { Header, Grid, Divider, Image, Container, Icon } from 'semantic-ui-react'
+import { Link } from "gatsby"
 
 import "../../libs/academicons/css/academicons.min.css"
 import TravelRotary from "../components/TravelRotary"
@@ -121,7 +122,7 @@ class Home extends React.Component {
                 </p>
 
                 <p>
-                  My current research interests can be found here.
+                  My current research interests can be found <Link to="/interests">here</Link>.
                   Some of my past interests include 
                     { keywords.primary.join(", ") }
                   and
