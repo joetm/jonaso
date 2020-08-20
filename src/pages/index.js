@@ -123,9 +123,9 @@ class Home extends React.Component {
 
                 <p>
                   My current research interests can be found <Link to="/interests">here</Link>.
-                  Some of my past interests include 
+                  Some of my past interests include{" "}
                     { keywords.primary.join(", ") }
-                  and
+                  {" "} and{" "}
                     { keywords.secondary.join(", ") }.
                 </p>
 
