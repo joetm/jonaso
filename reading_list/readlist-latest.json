@@ -1,56 +1,98 @@
 {
-    "unrecognized_overall": 2369,
+    "modified": 1598885591,
+    "unrecognized_percent": 0.0,
+    "unrecognized_overall_percent": 0.42,
+    "unrecognized": 0,
     "documents": [
         {
-            "title": "Detecting signal from science: The structure of research communities and prior knowledge improves prediction of genetic regulatory experiments",
-            "priority": 2,
+            "modified": 1598885285,
+            "authors": [
+                "Max Kreminski",
+                "Ben Samuel",
+                "Edward Melcer",
+                "Noah Wardrip-Fruin"
+            ],
             "recog": 1,
+            "year": 2019,
+            "priority": 3,
+            "level": 2,
+            "keywords": "Machine Learning > Evaluation",
+            "filename": "!!!EvaluatingViaRetellings.pdf",
+            "title": "Evaluating AI-Based Games Through Retellings"
+        },
+        {
+            "modified": 1598868841,
+            "authors": [
+                "Mirjam Palosaari Eladhari(B",
+                "M. P. Eladhari"
+            ],
+            "recog": 1,
+            "year": 2018,
+            "priority": 3,
+            "level": 4,
+            "keywords": "Machine Learning > Explainable AI, XAI > Folk Theories > Retellings",
+            "filename": "!!!eladhari2018.pdf",
+            "title": "Re-Tellings: The Fourth Layer of Narrative as an Instrument for Critique"
+        },
+        {
+            "modified": 1598860587,
+            "authors": [
+                "Avraham N. Kluger",
+                "Angelo DeNisi"
+            ],
+            "recog": 1,
+            "year": 2004,
+            "priority": 3,
             "level": 3,
-            "filename": "!!2008.09985.pdf",
-            "keywords": "Open Science, e-Science, e-Research, Research Data > Collaboration > Research Communities",
+            "keywords": "Feedback > Effect, Reception > Feedback Intervention Theory",
+            "filename": "!!!e81ca813ed757e1e76c0023865c7dbdc7308.pdf",
+            "title": "The Effects of Feedback Interventions on Performance: A Historical Review, a Meta-Analysis, and a Preliminary Feedback Intervention Theory"
+        },
+        {
+            "modified": 1598722652,
             "authors": [
                 "Alexander V. Belikov",
                 "Andrey Rzhetsky",
                 "James Evans"
             ],
-            "modified": 1598722652,
-            "year": 2020
+            "recog": 1,
+            "year": 2020,
+            "priority": 2,
+            "level": 3,
+            "keywords": "Open Science, e-Science, e-Research, Research Data > Collaboration > Research Communities",
+            "filename": "!!2008.09985.pdf",
+            "title": "Detecting signal from science: The structure of research communities and prior knowledge improves prediction of genetic regulatory experiments"
         },
         {
-            "title": "cscw20",
-            "priority": 2,
-            "recog": 0,
-            "level": 4,
-            "filename": "!!cscw20.pdf",
-            "keywords": "Crowdsourcing, Human Computation > Process, Workflow, Worker Selection, Task Design > Assignment > CrowdCog",
+            "modified": 1598721941,
             "authors": [
                 "NIELS VAN BERKEL",
                 "Aalborg",
                 "VASSILIS KOSTAKOS"
             ],
-            "modified": 1598721941,
-            "year": 2020
+            "recog": 0,
+            "year": 2020,
+            "priority": 2,
+            "level": 4,
+            "keywords": "Crowdsourcing, Human Computation > Process, Workflow, Worker Selection, Task Design > Assignment > CrowdCog",
+            "filename": "!!cscw20.pdf",
+            "title": "cscw20"
         },
         {
-            "title": "Leap Motion\u2019s \u201cVirtual Wearables\u201d May Be The Future Of Computing",
-            "priority": 0,
-            "recog": 1,
-            "level": 3,
-            "filename": "-Leap Motion\u2019s \u201cVirtual Wearables\u201d May Be The Future Of Computing.pdf",
-            "keywords": "Virtual Reality > Augmented Reality, AR, Mixed Reality > Virtual Wearables",
+            "modified": 1598625964,
             "authors": [
                 "Keiichi Matsuda"
             ],
-            "modified": 1598625964,
-            "year": 2018
+            "recog": 1,
+            "year": 2018,
+            "priority": 0,
+            "level": 3,
+            "keywords": "Virtual Reality > Augmented Reality, AR, Mixed Reality > Virtual Wearables",
+            "filename": "-Leap Motion\u2019s \u201cVirtual Wearables\u201d May Be The Future Of Computing.pdf",
+            "title": "Leap Motion\u2019s \u201cVirtual Wearables\u201d May Be The Future Of Computing"
         },
         {
-            "title": "How Context Influences Cross-Device Task Acceptance in Crowd Work",
-            "priority": 0,
-            "recog": 1,
-            "level": 3,
-            "filename": "-hcomp2020.pdf",
-            "keywords": "Crowdsourcing, Human Computation > Mobile Crowdsourcing > Context",
+            "modified": 1598548938,
             "authors": [
                 "Danula Hettiachchi",
                 "Senuri Wijenayake",
@@ -58,89 +100,88 @@
                 "Vassilis Kostakos",
                 "Jorge Goncalves"
             ],
-            "modified": 1598548938,
-            "year": 2020
+            "recog": 1,
+            "year": 2020,
+            "priority": 0,
+            "level": 3,
+            "keywords": "Crowdsourcing, Human Computation > Mobile Crowdsourcing > Context",
+            "filename": "-hcomp2020.pdf",
+            "title": "How Context Influences Cross-Device Task Acceptance in Crowd Work"
         },
         {
-            "title": "A college kid created a fake, AI-generated blog. It reached #1 on Hacker News. _ MIT Technology Review",
-            "priority": 0,
-            "recog": 0,
-            "level": 4,
-            "filename": "-A college kid created a fake, AI-generated blog. It reached #1 on Hacker News. _ MIT Technology Review.pdf",
-            "keywords": "AI > Issues > Misuse > Fake Blog",
+            "modified": 1598458592,
             "authors": [
                 "Karen Hao"
             ],
-            "modified": 1598458592,
-            "year": 2020
+            "recog": 0,
+            "year": 2020,
+            "priority": 0,
+            "level": 4,
+            "keywords": "AI > Issues > Misuse > Fake Blog",
+            "filename": "-A college kid created a fake, AI-generated blog. It reached #1 on Hacker News. _ MIT Technology Review.pdf",
+            "title": "A college kid created a fake, AI-generated blog. It reached #1 on Hacker News. _ MIT Technology Review"
         },
         {
-            "title": "Perceptions of scientific research literature and strategies for reading papers depend on academic career stage",
-            "priority": 1,
-            "recog": 1,
-            "level": 1,
-            "filename": "!Perceptions_of_scientific_research_literature_and_.pdf",
-            "keywords": "Reading",
+            "modified": 1598278794,
             "authors": [
                 "Katharine E. Hubbard",
                 "Sonja D. Dunbar"
             ],
-            "modified": 1598278794,
-            "year": 2017
-        },
-        {
-            "title": "nmeth.2134",
-            "priority": 0,
-            "recog": 0,
-            "level": 2,
-            "filename": "-nmeth.2134.pdf",
-            "keywords": "Writing > Color in Charts, Visualizations",
-            "authors": [],
-            "modified": 1598275797,
-            "year": 2012
-        },
-        {
-            "title": "Combating Anti-Blackness in the AI Community",
-            "priority": 0,
             "recog": 1,
-            "level": 4,
-            "filename": "-AI_Anti_Blackness.pdf",
-            "keywords": "AI > Issues > Racism > Anti-Blackness",
+            "year": 2017,
+            "priority": 1,
+            "level": 1,
+            "keywords": "Reading",
+            "filename": "!Perceptions_of_scientific_research_literature_and_.pdf",
+            "title": "Perceptions of scientific research literature and strategies for reading papers depend on academic career stage"
+        },
+        {
+            "modified": 1598275797,
+            "authors": [],
+            "recog": 0,
+            "year": 2012,
+            "priority": 0,
+            "level": 2,
+            "keywords": "Writing > Color in Charts, Visualizations",
+            "filename": "-nmeth.2134.pdf",
+            "title": "nmeth.2134"
+        },
+        {
             "authors": [
                 "Devin Guillory"
             ],
             "modified": 1598271992,
-            "year": 2020
+            "year": 2020,
+            "recog": 1,
+            "priority": 0,
+            "level": 4,
+            "keywords": "AI > Issues > Racism > Anti-Blackness",
+            "filename": "-AI_Anti_Blackness.pdf",
+            "title": "Combating Anti-Blackness in the AI Community"
         },
         {
-            "title": "Annotated Bibliography_Racial Justice in the Academy",
-            "priority": 1,
-            "recog": 0,
-            "level": 2,
-            "filename": "!Annotated Bibliography_Racial Justice in the Academy.pdf",
-            "keywords": "Issues > Racism",
             "authors": [],
             "modified": 1598271825,
-            "year": "N/A"
+            "year": "N/A",
+            "recog": 0,
+            "priority": 1,
+            "level": 2,
+            "keywords": "Issues > Racism",
+            "filename": "!Annotated Bibliography_Racial Justice in the Academy.pdf",
+            "title": "Annotated Bibliography_Racial Justice in the Academy"
         },
         {
-            "title": "Dismantling Systemic Racism at the Oxford Internet Institute (OII):",
-            "priority": 1,
-            "recog": 1,
-            "level": 2,
-            "filename": "!Dismantling Systemic Racism at the OII_A Template for Institutional Change.pdf",
-            "keywords": "Issues > Racism",
             "authors": [],
             "modified": 1598271789,
-            "year": "N/A"
+            "year": "N/A",
+            "recog": 1,
+            "priority": 1,
+            "level": 2,
+            "keywords": "Issues > Racism",
+            "filename": "!Dismantling Systemic Racism at the OII_A Template for Institutional Change.pdf",
+            "title": "Dismantling Systemic Racism at the Oxford Internet Institute (OII):"
         },
         {
-            "title": "Creative Writing with a Machine in the Loop:  Case Studies on Slogans and Stories ",
-            "priority": 2,
-            "recog": 1,
-            "level": 5,
-            "filename": "!!iui2018-creativewriting.pdf",
-            "keywords": "Creativity > Creativity Support Tools > Applications > Storytelling > Machine-in-the-loop creative writing",
             "authors": [
                 "Elizabeth Clark",
                 "Anne Spencer Ross",
@@ -149,15 +190,15 @@
                 "Noah A. Smith"
             ],
             "modified": 1598271698,
-            "year": 2018
+            "year": 2018,
+            "recog": 1,
+            "priority": 2,
+            "level": 5,
+            "keywords": "Creativity > Creativity Support Tools > Applications > Storytelling > Machine-in-the-loop creative writing",
+            "filename": "!!iui2018-creativewriting.pdf",
+            "title": "Creative Writing with a Machine in the Loop:  Case Studies on Slogans and Stories "
         },
         {
-            "title": "Aligning Books and Movies: Towards Story-like Visual Explanations by Watching Movies and Reading Books",
-            "priority": 0,
-            "recog": 1,
-            "level": 3,
-            "filename": "-Zhu_Aligning_Books_and_ICCV_2015_paper.pdf",
-            "keywords": "Benchmarks, gold standards, datasets > Books > Toronto Book Corpus",
             "authors": [
                 "Yukun Zhu",
                 "Ryan Kiros",
@@ -168,159 +209,159 @@
                 "Sanja Fidler"
             ],
             "modified": 1598271561,
-            "year": "N/A"
+            "year": "N/A",
+            "recog": 1,
+            "priority": 0,
+            "level": 3,
+            "keywords": "Benchmarks, gold standards, datasets > Books > Toronto Book Corpus",
+            "filename": "-Zhu_Aligning_Books_and_ICCV_2015_paper.pdf",
+            "title": "Aligning Books and Movies: Towards Story-like Visual Explanations by Watching Movies and Reading Books"
         },
         {
-            "title": "Beyond Dyadic Interactions: Considering Chatbots as Community Members",
-            "priority": 1,
-            "recog": 1,
-            "level": 2,
-            "filename": "!Seering et al 2019 Social Chatbots.pdf",
-            "keywords": "Chat Bots, Conversational AI > Social Chatbots",
             "authors": [
                 "Joseph Seering",
                 "Michal Luria"
             ],
             "modified": 1598266795,
-            "year": 2019
+            "year": 2019,
+            "recog": 1,
+            "priority": 1,
+            "level": 2,
+            "keywords": "Chat Bots, Conversational AI > Social Chatbots",
+            "filename": "!Seering et al 2019 Social Chatbots.pdf",
+            "title": "Beyond Dyadic Interactions: Considering Chatbots as Community Members"
         },
         {
-            "title": "222-229-1-PB",
-            "priority": 1,
-            "recog": 0,
-            "level": 4,
-            "filename": "!222-229-1-PB.pdf",
-            "keywords": "Methods > Design Research > Design-oriented Research > Research-oriented Design vs Design-oriented Research",
             "authors": [],
             "modified": 1598266586,
-            "year": 2005
+            "year": 2005,
+            "recog": 0,
+            "priority": 1,
+            "level": 4,
+            "keywords": "Methods > Design Research > Design-oriented Research > Research-oriented Design vs Design-oriented Research",
+            "filename": "!222-229-1-PB.pdf",
+            "title": "222-229-1-PB"
         },
         {
-            "title": "Daisy the dog didn\u2019t save 967 people in the 9_11 attacks",
-            "priority": 0,
-            "recog": 0,
-            "level": 3,
-            "filename": "-Daisy the dog didn\u2019t save 967 people in the 9_11 attacks.pdf",
-            "keywords": "Fake News, Credibility, Post Truth > Applications > aapfactcheck",
             "authors": [],
             "modified": 1598265359,
-            "year": 2020
+            "year": 2020,
+            "recog": 0,
+            "priority": 0,
+            "level": 3,
+            "keywords": "Fake News, Credibility, Post Truth > Applications > aapfactcheck",
+            "filename": "-Daisy the dog didn\u2019t save 967 people in the 9_11 attacks.pdf",
+            "title": "Daisy the dog didn\u2019t save 967 people in the 9_11 attacks"
         },
         {
-            "title": "Design-oriented Human\u2014Computer Interaction",
-            "priority": 1,
-            "recog": 1,
-            "level": 3,
-            "filename": "!642611.642652.pdf",
-            "keywords": "Methods > Design Research > Design-oriented Research",
             "authors": [
                 "Daniel Fallman"
             ],
             "modified": 1598254384,
-            "year": 2003
+            "year": 2003,
+            "recog": 1,
+            "priority": 1,
+            "level": 3,
+            "keywords": "Methods > Design Research > Design-oriented Research",
+            "filename": "!642611.642652.pdf",
+            "title": "Design-oriented Human\u2014Computer Interaction"
         },
         {
-            "title": "Research Through Design as a Method for Interaction Design Research in HCI",
-            "priority": 2,
-            "recog": 1,
-            "level": 2,
-            "filename": "!!Research through Design.pdf",
-            "keywords": "Methods > Research through Design (RtD)",
             "authors": [
                 "John Zimmerman",
                 "Jodi Forlizzi",
                 "Shelley Evenson"
             ],
             "modified": 1598252336,
-            "year": 2007
+            "year": 2007,
+            "recog": 1,
+            "priority": 2,
+            "level": 2,
+            "keywords": "Methods > Research through Design (RtD)",
+            "filename": "!!Research through Design.pdf",
+            "title": "Research Through Design as a Method for Interaction Design Research in HCI"
         },
         {
-            "title": "Community-Suggested Template Additions ",
-            "priority": 0,
-            "recog": 0,
-            "level": 2,
-            "filename": "-Community-Suggested Template Additions .pdf",
-            "keywords": "Issues > Racism",
             "authors": [],
             "modified": 1598249920,
-            "year": "N/A"
+            "year": "N/A",
+            "recog": 0,
+            "priority": 0,
+            "level": 2,
+            "keywords": "Issues > Racism",
+            "filename": "-Community-Suggested Template Additions .pdf",
+            "title": "Community-Suggested Template Additions "
         },
         {
-            "title": "Dismantling Systemic Racism at the Oxford Internet Institute (OII)_ An Open Letter",
-            "priority": 0,
-            "recog": 0,
-            "level": 2,
-            "filename": "-Dismantling Systemic Racism at the Oxford Internet Institute (OII)_ An Open Letter.pdf",
-            "keywords": "Issues > Racism",
             "authors": [],
             "modified": 1598249840,
-            "year": 2020
+            "year": 2020,
+            "recog": 0,
+            "priority": 0,
+            "level": 2,
+            "keywords": "Issues > Racism",
+            "filename": "-Dismantling Systemic Racism at the Oxford Internet Institute (OII)_ An Open Letter.pdf",
+            "title": "Dismantling Systemic Racism at the Oxford Internet Institute (OII)_ An Open Letter"
         },
         {
-            "title": "BASIC CONTENT ANALYSIS",
-            "priority": 2,
-            "recog": 1,
-            "level": 3,
-            "filename": "!! Weber] Basic Content Analysis.pdf",
-            "keywords": "Methods > Qualitative > Content Analysis",
             "authors": [
                 "SECOND EDITION",
                 "ROBERT PHILIP WEBER"
             ],
             "modified": 1598117741,
-            "year": 2015
+            "year": 2015,
+            "recog": 1,
+            "priority": 2,
+            "level": 3,
+            "keywords": "Methods > Qualitative > Content Analysis",
+            "filename": "!! Weber] Basic Content Analysis.pdf",
+            "title": "BASIC CONTENT ANALYSIS"
         },
         {
-            "title": "Juxtapeer: Comparative Peer Review Yields Higher Quality Feedback and Promotes Deeper Reflection",
-            "priority": 3,
-            "recog": 1,
-            "level": 3,
-            "filename": "!!!3173574.3173868.pdf",
-            "keywords": "Feedback > Peer Feedback > Juxtapeer",
             "authors": [
                 "Julia Cambre",
                 "Scott Klemmer",
                 "Chinmay Kulkarni"
             ],
             "modified": 1598116824,
-            "year": 2018
+            "year": 2018,
+            "recog": 1,
+            "priority": 3,
+            "level": 3,
+            "keywords": "Feedback > Peer Feedback > Juxtapeer",
+            "filename": "!!!3173574.3173868.pdf",
+            "title": "Juxtapeer: Comparative Peer Review Yields Higher Quality Feedback and Promotes Deeper Reflection"
         },
         {
-            "title": "Decipher: An Interactive Visualization Tool for Interpreting Unstructured Design Feedback from Multiple Providers",
-            "priority": 3,
-            "recog": 1,
-            "level": 5,
-            "filename": "!!!3313831.3376380.pdf",
-            "keywords": "Feedback > Sensemaking > Aggregation, Summarization > Systems > Decipher",
             "authors": [
                 "Yu-Chun Grace Yen",
                 "Joy O. Kim",
                 "Brian P. Bailey"
             ],
             "modified": 1598116581,
-            "year": 2020
+            "year": 2020,
+            "recog": 1,
+            "priority": 3,
+            "level": 5,
+            "keywords": "Feedback > Sensemaking > Aggregation, Summarization > Systems > Decipher",
+            "filename": "!!!3313831.3376380.pdf",
+            "title": "Decipher: An Interactive Visualization Tool for Interpreting Unstructured Design Feedback from Multiple Providers"
         },
         {
-            "title": "Guru, Partner, or Pencil Sharpener? Understanding Designers' Attitudes Towards Intelligent Creativity Support Tools",
-            "priority": 2,
-            "recog": 1,
-            "level": 3,
-            "filename": "!!2007.04848.pdf",
-            "keywords": "Creativity > Creativity Support Tools > Attitude",
             "authors": [
                 "Angus Main",
                 "Mick Grierson"
             ],
             "modified": 1598116186,
-            "year": 2020
+            "year": 2020,
+            "recog": 1,
+            "priority": 2,
+            "level": 3,
+            "keywords": "Creativity > Creativity Support Tools > Attitude",
+            "filename": "!!2007.04848.pdf",
+            "title": "Guru, Partner, or Pencil Sharpener? Understanding Designers' Attitudes Towards Intelligent Creativity Support Tools"
         },
         {
-            "title": "CommunityCrit: Inviting the Public to Improve and Evaluate Urban Design Ideas through Micro-Activities",
-            "priority": 3,
-            "recog": 1,
-            "level": 3,
-            "filename": "!!!paper195.pdf",
-            "keywords": "Feedback > Applications > Urban Design",
             "authors": [
                 "Narges Mahyar",
                 "Michael R. James",
@@ -329,15 +370,15 @@
                 "Steven P. Dow"
             ],
             "modified": 1598019578,
-            "year": 2018
+            "year": 2018,
+            "recog": 1,
+            "priority": 3,
+            "level": 3,
+            "keywords": "Feedback > Applications > Urban Design",
+            "filename": "!!!paper195.pdf",
+            "title": "CommunityCrit: Inviting the Public to Improve and Evaluate Urban Design Ideas through Micro-Activities"
         },
         {
-            "title": "The Human Penguin Project: Climate, Social Integration, and Core Body Temperature",
-            "keywords": "Crowdsourcing, Human Computation > Applications > Body Temperature > The Human Penguin Project",
-            "recog": 1,
-            "level": 4,
-            "filename": "!!165-2479-3-PB.pdf",
-            "priority": 2,
             "authors": [
                 "Hans IJzerman",
                 "Siegwart Lindenberg",
@@ -371,28 +412,28 @@
                 "Beate Seibt"
             ],
             "modified": 1598011801,
-            "year": 2018
+            "year": 2018,
+            "recog": 1,
+            "priority": 2,
+            "level": 4,
+            "keywords": "Crowdsourcing, Human Computation > Applications > Body Temperature > The Human Penguin Project",
+            "filename": "!!165-2479-3-PB.pdf",
+            "title": "The Human Penguin Project: Climate, Social Integration, and Core Body Temperature"
         },
         {
-            "title": "Data from the Human Penguin Project, a cross-national dataset testing social thermoregulation principles",
-            "keywords": "Crowdsourcing, Human Computation > Applications > Body Temperature > The Human Penguin Project",
-            "recog": 1,
-            "level": 4,
-            "filename": "!s41597-019-0029-2.pdf",
-            "priority": 1,
             "authors": [
                 "Chuan-Peng Hu"
             ],
             "modified": 1598011684,
-            "year": 2019
+            "year": 2019,
+            "recog": 1,
+            "priority": 1,
+            "level": 4,
+            "keywords": "Crowdsourcing, Human Computation > Applications > Body Temperature > The Human Penguin Project",
+            "filename": "!s41597-019-0029-2.pdf",
+            "title": "Data from the Human Penguin Project, a cross-national dataset testing social thermoregulation principles"
         },
         {
-            "title": "OSF _ The Human Penguin Project",
-            "keywords": "Crowdsourcing, Human Computation > Applications > Body Temperature > The Human Penguin Project",
-            "recog": 0,
-            "level": 4,
-            "filename": "-OSF _ The Human Penguin Project.pdf",
-            "priority": 0,
             "authors": [
                 "Hans IJzerman",
                 "Ilker Dalgar (/cgmdn",
@@ -404,137 +445,137 @@
                 "Johanna Katarina Blomster"
             ],
             "modified": 1598001158,
-            "year": 2020
+            "year": 2020,
+            "recog": 0,
+            "priority": 0,
+            "level": 4,
+            "keywords": "Crowdsourcing, Human Computation > Applications > Body Temperature > The Human Penguin Project",
+            "filename": "-OSF _ The Human Penguin Project.pdf",
+            "title": "OSF _ The Human Penguin Project"
         },
         {
-            "title": "About following on Twitter",
-            "keywords": "Communities, Networks > Social Media > Twitter > Following",
-            "recog": 1,
-            "level": 4,
-            "filename": "-About following on Twitter.pdf",
-            "priority": 0,
             "authors": [],
             "modified": 1597999069,
-            "year": 2020
+            "year": 2020,
+            "recog": 1,
+            "priority": 0,
+            "level": 4,
+            "keywords": "Communities, Networks > Social Media > Twitter > Following",
+            "filename": "-About following on Twitter.pdf",
+            "title": "About following on Twitter"
         },
         {
-            "title": "Humanistic HCI",
-            "keywords": "Design, HCI, UI, UX > Humanistic HCI",
-            "recog": 1,
-            "level": 2,
-            "filename": "-bardzell2015.pdf",
-            "priority": 0,
             "authors": [
                 "Jeffrey Bardzell",
                 "Shaowen Bardzell",
                 "John M. Carroll"
             ],
             "modified": 1597926397,
-            "year": 2015
+            "year": 2015,
+            "recog": 1,
+            "priority": 0,
+            "level": 2,
+            "keywords": "Design, HCI, UI, UX > Humanistic HCI",
+            "filename": "-bardzell2015.pdf",
+            "title": "Humanistic HCI"
         },
         {
-            "title": "PolicyKit: Building Governance in Online Communities",
-            "keywords": "Communities, Networks > Policy > PolicyKit",
-            "recog": 1,
-            "level": 3,
-            "filename": "!2008.04236.pdf",
-            "priority": 1,
             "authors": [
                 "Amy X. Zhang",
                 "Grant Hugh",
                 "Michael S. Bernstein"
             ],
             "modified": 1597912819,
-            "year": 2020
+            "year": 2020,
+            "recog": 1,
+            "priority": 1,
+            "level": 3,
+            "keywords": "Communities, Networks > Policy > PolicyKit",
+            "filename": "!2008.04236.pdf",
+            "title": "PolicyKit: Building Governance in Online Communities"
         },
         {
-            "title": "Applying Participatory Design Theory to Designing Evaluation Methods",
-            "keywords": "Design, HCI, UI, UX > Participatory Design",
-            "recog": 1,
-            "level": 2,
-            "filename": "-2212776.2223725.pdf",
-            "priority": 0,
             "authors": [
                 "Diana Kusunoki"
             ],
             "modified": 1597912489,
-            "year": 2012
+            "year": 2012,
+            "recog": 1,
+            "priority": 0,
+            "level": 2,
+            "keywords": "Design, HCI, UI, UX > Participatory Design",
+            "filename": "-2212776.2223725.pdf",
+            "title": "Applying Participatory Design Theory to Designing Evaluation Methods"
         },
         {
-            "title": "Dimensions of integration in embedded and extended cognitive systems",
-            "keywords": "Cognition, Intelligence > Extended Cognition, Distributed Cognition",
-            "recog": 1,
-            "level": 2,
-            "filename": "!10.1007%2Fs11097-014-9355-1.pdf",
-            "priority": 1,
             "authors": [
                 "Richard Heersmink"
             ],
             "modified": 1597912271,
-            "year": 2015
+            "year": 2015,
+            "recog": 1,
+            "priority": 1,
+            "level": 2,
+            "keywords": "Cognition, Intelligence > Extended Cognition, Distributed Cognition",
+            "filename": "!10.1007%2Fs11097-014-9355-1.pdf",
+            "title": "Dimensions of integration in embedded and extended cognitive systems"
         },
         {
-            "title": "TextRank: Bringing Order into Texts",
-            "keywords": "NLP > Summarization > Textrank",
-            "recog": 1,
-            "level": 3,
-            "filename": "!!mihalcea.emnlp04.pdf",
-            "priority": 2,
             "authors": [
                 "Rada Mihalcea",
                 "Paul Tarau"
             ],
             "modified": 1597906495,
-            "year": "N/A"
+            "year": "N/A",
+            "recog": 1,
+            "priority": 2,
+            "level": 3,
+            "keywords": "NLP > Summarization > Textrank",
+            "filename": "!!mihalcea.emnlp04.pdf",
+            "title": "TextRank: Bringing Order into Texts"
         },
         {
-            "title": "Textrank for summarizing text",
-            "keywords": "NLP > Summarization > Textrank",
-            "recog": 1,
-            "level": 3,
-            "filename": "!Textrank for summarizing text.pdf",
-            "priority": 1,
             "authors": [
                 "Jan Wijffels"
             ],
             "modified": 1597906289,
-            "year": 2020
+            "year": 2020,
+            "recog": 1,
+            "priority": 1,
+            "level": 3,
+            "keywords": "NLP > Summarization > Textrank",
+            "filename": "!Textrank for summarizing text.pdf",
+            "title": "Textrank for summarizing text"
         },
         {
-            "title": "High concentrations of plastic hidden beneath the surface of the Atlantic Ocean",
-            "keywords": "Environment > Microplastic",
-            "recog": 1,
-            "level": 2,
-            "filename": "!s41467-020-17932-9.pdf",
-            "priority": 1,
             "authors": [
                 "Katsiaryna Pabortsava",
                 "Richard S. Lampitt"
             ],
             "modified": 1597853165,
-            "year": 2020
+            "year": 2020,
+            "recog": 1,
+            "priority": 1,
+            "level": 2,
+            "keywords": "Environment > Microplastic",
+            "filename": "!s41467-020-17932-9.pdf",
+            "title": "High concentrations of plastic hidden beneath the surface of the Atlantic Ocean"
         },
         {
-            "title": "Studie zu Meeresverschmutzung_ Millionen Tonnen Mikroplastik im Atlantik _ tagesschau.de",
-            "keywords": "Environment > Microplastic",
-            "recog": 0,
-            "level": 2,
-            "filename": "-Studie zu Meeresverschmutzung_ Millionen Tonnen Mikroplastik im Atlantik _ tagesschau.de.pdf",
-            "priority": 0,
             "authors": [
                 "Millionen Tonnen",
                 "Mikroplastik im Atlantik"
             ],
             "modified": 1597852537,
-            "year": 2020
+            "year": 2020,
+            "recog": 0,
+            "priority": 0,
+            "level": 2,
+            "keywords": "Environment > Microplastic",
+            "filename": "-Studie zu Meeresverschmutzung_ Millionen Tonnen Mikroplastik im Atlantik _ tagesschau.de.pdf",
+            "title": "Studie zu Meeresverschmutzung_ Millionen Tonnen Mikroplastik im Atlantik _ tagesschau.de"
         },
         {
-            "title": "Problematising Upstream Technology through Speculative Design: The Case of Quantified Cats and Dogs",
-            "keywords": "Design, HCI, UI, UX > Human-Animal Interaction",
-            "recog": 1,
-            "level": 2,
-            "filename": "-2702123.2702260.pdf",
-            "priority": 0,
             "authors": [
                 "Shaun Lawson",
                 "Ben Kirman",
@@ -543,15 +584,15 @@
                 "Lisa Hopkins"
             ],
             "modified": 1597840554,
-            "year": 2015
+            "year": 2015,
+            "recog": 1,
+            "priority": 0,
+            "level": 2,
+            "keywords": "Design, HCI, UI, UX > Human-Animal Interaction",
+            "filename": "-2702123.2702260.pdf",
+            "title": "Problematising Upstream Technology through Speculative Design: The Case of Quantified Cats and Dogs"
         },
         {
-            "title": "GEM-NI: A System For Creating and Managing Alternatives In Generative Design",
-            "keywords": "Creativity > Process > 2 Idea Quality, Idea Selection > Design Space Exploration, Evaluating Alternatives > GEM-NI",
-            "recog": 1,
-            "level": 5,
-            "filename": "-10.1.1.728.33.pdf",
-            "priority": 0,
             "authors": [
                 "Loutfouz Zaman",
                 "Wolfgang Stuerzlinger",
@@ -563,52 +604,53 @@
                 "Simon Fraser"
             ],
             "modified": 1597838286,
-            "year": 2015
+            "year": 2015,
+            "recog": 1,
+            "priority": 0,
+            "level": 5,
+            "keywords": "Creativity > Process > 2 Idea Quality, Idea Selection > Design Space Exploration, Evaluating Alternatives > GEM-NI",
+            "filename": "-10.1.1.728.33.pdf",
+            "title": "GEM-NI: A System For Creating and Managing Alternatives In Generative Design"
         },
         {
-            "title": "How to Conduct a Literature Review",
-            "keywords": "Methods > Literature Review",
-            "recog": 1,
-            "level": 2,
-            "filename": "!Literature Review Presentation - Shivam Gupta.pdf",
-            "priority": 1,
             "authors": [
                 "Shivam Gupta"
             ],
             "modified": 1597836700,
-            "year": 2020
+            "year": 2020,
+            "recog": 1,
+            "priority": 1,
+            "level": 2,
+            "keywords": "Methods > Literature Review",
+            "filename": "!Literature Review Presentation - Shivam Gupta.pdf",
+            "title": "How to Conduct a Literature Review"
         },
         {
-            "title": "The 'creepy Facebook AI' story that captivated the media - BBC News",
-            "keywords": "NLP > Natural Language Generation > Language Creating by AI",
-            "recog": 0,
-            "level": 3,
-            "filename": "-The 'creepy Facebook AI' story that captivated the media - BBC News.pdf",
-            "priority": 0,
             "authors": [
                 "Chris Baraniuk"
             ],
             "modified": 1597835453,
-            "year": 2020
+            "year": 2020,
+            "recog": 0,
+            "priority": 0,
+            "level": 3,
+            "keywords": "NLP > Natural Language Generation > Language Creating by AI",
+            "filename": "-The 'creepy Facebook AI' story that captivated the media - BBC News.pdf",
+            "title": "The 'creepy Facebook AI' story that captivated the media - BBC News"
         },
         {
-            "title": "Language creation in artificial intelligence - Wikipedia",
-            "keywords": "NLP > Natural Language Generation > Language Creating by AI",
-            "recog": 0,
-            "level": 3,
-            "filename": "!Language creation in artificial intelligence - Wikipedia.pdf",
-            "priority": 1,
             "authors": [],
             "modified": 1597835256,
-            "year": 2020
+            "year": 2020,
+            "recog": 0,
+            "priority": 1,
+            "level": 3,
+            "keywords": "NLP > Natural Language Generation > Language Creating by AI",
+            "filename": "!Language creation in artificial intelligence - Wikipedia.pdf",
+            "title": "Language creation in artificial intelligence - Wikipedia"
         },
         {
-            "title": "How Work From Home Affects Collaboration: A Large-Scale Study of Information Workers in a Natural Experiment During COVID-19",
-            "keywords": "CSCW > Virtual Work, Distributed Work, Remote Work > Work from Home",
-            "recog": 1,
-            "level": 3,
-            "filename": "!!2007.15584.pdf",
-            "priority": 2,
+            "modified": 1597753556,
             "authors": [
                 "Longqi Yang",
                 "Sonia Jaffe",
@@ -623,150 +665,150 @@
                 "Brent Hecht",
                 "Jaime Teevan"
             ],
-            "modified": 1597753556,
-            "year": 2020
+            "recog": 1,
+            "year": 2020,
+            "priority": 2,
+            "level": 3,
+            "keywords": "CSCW > Virtual Work, Distributed Work, Remote Work > Work from Home",
+            "filename": "!!2007.15584.pdf",
+            "title": "How Work From Home Affects Collaboration: A Large-Scale Study of Information Workers in a Natural Experiment During COVID-19"
         },
         {
-            "title": "Mostly Harmless Econometrics: An Empiricist\u0092s Companion",
-            "keywords": "Economics > Econometrics",
-            "recog": 1,
-            "level": 2,
-            "filename": "!![Angrist, Pischke] Mostly Harmless Econometrics An Empiricists Companion.pdf",
-            "priority": 2,
+            "modified": 1597752222,
             "authors": [
                 "Joshua D. Angrist",
                 "J\u00f6rn-Ste\u00a4en Pischke"
             ],
-            "modified": 1597752222,
-            "year": 2008
+            "recog": 1,
+            "year": 2008,
+            "priority": 2,
+            "level": 2,
+            "keywords": "Economics > Econometrics",
+            "filename": "!![Angrist, Pischke] Mostly Harmless Econometrics An Empiricists Companion.pdf",
+            "title": "Mostly Harmless Econometrics: An Empiricist\u0092s Companion"
         },
         {
-            "title": "Practice-based professional learning - Wikipedia",
-            "keywords": "CSCW > Skill Transfer > Practice-based Professional Learning",
-            "recog": 0,
-            "level": 3,
-            "filename": "-Practice-based professional learning - Wikipedia.pdf",
-            "priority": 0,
+            "modified": 1597749414,
             "authors": [
                 "Evan J. Fishman",
                 "Hilda Borko"
             ],
-            "modified": 1597749414,
-            "year": 2020
+            "recog": 0,
+            "year": 2020,
+            "priority": 0,
+            "level": 3,
+            "keywords": "CSCW > Skill Transfer > Practice-based Professional Learning",
+            "filename": "-Practice-based professional learning - Wikipedia.pdf",
+            "title": "Practice-based professional learning - Wikipedia"
         },
         {
-            "title": "Designing Interactive Scaffolds to Encourage Reflection on Peer Feedback",
-            "keywords": "Feedback > Peer Feedback > Reflection Scaffolds",
-            "recog": 1,
-            "level": 3,
-            "filename": "!!!3357236.3395480.pdf",
-            "priority": 3,
+            "modified": 1597748451,
             "authors": [
                 "Amy Cook",
                 "Steven Dow"
             ],
-            "modified": 1597748451,
-            "year": 2020
+            "recog": 1,
+            "year": 2020,
+            "priority": 3,
+            "level": 3,
+            "keywords": "Feedback > Peer Feedback > Reflection Scaffolds",
+            "filename": "!!!3357236.3395480.pdf",
+            "title": "Designing Interactive Scaffolds to Encourage Reflection on Peer Feedback"
         },
         {
-            "title": "Reflective practice - Wikipedia",
-            "keywords": "Methods > Design Research > Reflective Practice",
-            "recog": 0,
-            "level": 3,
-            "filename": "!!!Reflective practice - Wikipedia.pdf",
-            "priority": 3,
+            "modified": 1597747472,
             "authors": [
                 "Donald Sch\u00f6n",
                 "Marcus Aurelius"
             ],
-            "modified": 1597747472,
-            "year": 2020
-        },
-        {
-            "title": "[Sch\u00f6n] The Reflective Practitioner",
-            "keywords": "Methods > Design Research > Reflective Practice",
             "recog": 0,
+            "year": 2020,
+            "priority": 3,
             "level": 3,
-            "filename": "!![Sch\u00f6n] The Reflective Practitioner.pdf",
-            "priority": 2,
-            "authors": [],
-            "modified": 1597747295,
-            "year": 2015
+            "keywords": "Methods > Design Research > Reflective Practice",
+            "filename": "!!!Reflective practice - Wikipedia.pdf",
+            "title": "Reflective practice - Wikipedia"
         },
         {
-            "title": "Social Immersive Media Pursuing Best Practices for Multi-user Interactive Camera/projector Exhibits",
-            "keywords": "Design, HCI, UI, UX > Interaction > Social Immersive Media",
-            "recog": 1,
+            "modified": 1597747295,
+            "authors": [],
+            "recog": 0,
+            "year": 2015,
+            "priority": 2,
             "level": 3,
-            "filename": "-Social+Immersive+Media-Snibbe-CHI09.pdf",
-            "priority": 0,
+            "keywords": "Methods > Design Research > Reflective Practice",
+            "filename": "!![Sch\u00f6n] The Reflective Practitioner.pdf",
+            "title": "[Sch\u00f6n] The Reflective Practitioner"
+        },
+        {
+            "modified": 1597746467,
             "authors": [
                 "Scott S. Snibbe",
                 "Hayes S. Raffle"
             ],
-            "modified": 1597746467,
-            "year": 2009
+            "recog": 1,
+            "year": 2009,
+            "priority": 0,
+            "level": 3,
+            "keywords": "Design, HCI, UI, UX > Interaction > Social Immersive Media",
+            "filename": "-Social+Immersive+Media-Snibbe-CHI09.pdf",
+            "title": "Social Immersive Media Pursuing Best Practices for Multi-user Interactive Camera/projector Exhibits"
         },
         {
-            "title": "p40-nunamaker",
-            "keywords": "CSCW > Electronic Meetings",
-            "recog": 0,
-            "level": 2,
-            "filename": "-p40-nunamaker.pdf",
-            "priority": 0,
+            "modified": 1597745661,
             "authors": [
                 "Alan R. Dennis",
                 "Joseph S. Valacich",
                 "Douglas R. Vogel"
             ],
-            "modified": 1597745661,
-            "year": 1991
+            "recog": 0,
+            "year": 1991,
+            "priority": 0,
+            "level": 2,
+            "keywords": "CSCW > Electronic Meetings",
+            "filename": "-p40-nunamaker.pdf",
+            "title": "p40-nunamaker"
         },
         {
-            "title": "Meta-Design: Design for Designers",
-            "keywords": "Design, HCI, UI, UX > Meta-Design",
-            "recog": 1,
-            "level": 2,
-            "filename": "-347642.347798.pdf",
-            "priority": 0,
+            "modified": 1597680898,
             "authors": [
                 "Gerhard Fischer",
                 "Eric Scharff"
             ],
-            "modified": 1597680898,
-            "year": 2000
+            "recog": 1,
+            "year": 2000,
+            "priority": 0,
+            "level": 2,
+            "keywords": "Design, HCI, UI, UX > Meta-Design",
+            "filename": "-347642.347798.pdf",
+            "title": "Meta-Design: Design for Designers"
         },
         {
-            "title": "Designing for Reflection on Experience",
-            "keywords": "Design, HCI, UI, UX > Reflective Design > Reflection on Experience",
-            "recog": 1,
-            "level": 3,
-            "filename": "!1520340.1520730.pdf",
-            "priority": 1,
-            "authors": [],
             "modified": 1597680436,
-            "year": 2009
+            "authors": [],
+            "recog": 1,
+            "year": 2009,
+            "priority": 1,
+            "level": 3,
+            "keywords": "Design, HCI, UI, UX > Reflective Design > Reflection on Experience",
+            "filename": "!1520340.1520730.pdf",
+            "title": "Designing for Reflection on Experience"
         },
         {
-            "title": "Subject pool recruitment procedures: organizing experiments with ORSEE",
-            "keywords": "Participant Recruitment > Subject Pools > Online Recruitment System for Economic Experiments (ORSEE)",
-            "recog": 1,
-            "level": 3,
-            "filename": "!!Greiner2015_Article_SubjectPoolRecruitmentProcedur.pdf",
-            "priority": 2,
+            "modified": 1597480023,
             "authors": [
                 "Ben Greiner"
             ],
-            "modified": 1597480023,
-            "year": 2015
+            "recog": 1,
+            "year": 2015,
+            "priority": 2,
+            "level": 3,
+            "keywords": "Participant Recruitment > Subject Pools > Online Recruitment System for Economic Experiments (ORSEE)",
+            "filename": "!!Greiner2015_Article_SubjectPoolRecruitmentProcedur.pdf",
+            "title": "Subject pool recruitment procedures: organizing experiments with ORSEE"
         },
         {
-            "title": "The Show Must Go On: How to Elicit Lablike Data on the Effects of COVID-19 Lockdown on Fairness and Cooperation",
-            "keywords": "Methods > Laboratory Experiment > COVID-19 > Lab on the Web",
-            "recog": 1,
-            "level": 4,
-            "filename": "-OnlineExperiment.pdf",
-            "priority": 0,
+            "modified": 1597479292,
             "authors": [
                 "Irene Maria Buso",
                 "LUISS Guido Carli",
@@ -778,184 +820,184 @@
                 "Luca Panaccione",
                 "Lorenzo Spadoni"
             ],
-            "modified": 1597479292,
-            "year": 2020
+            "recog": 1,
+            "year": 2020,
+            "priority": 0,
+            "level": 4,
+            "keywords": "Methods > Laboratory Experiment > COVID-19 > Lab on the Web",
+            "filename": "-OnlineExperiment.pdf",
+            "title": "The Show Must Go On: How to Elicit Lablike Data on the Effects of COVID-19 Lockdown on Fairness and Cooperation"
         },
         {
-            "title": "Jabberwocky: an ontology-aware toolkit for manipulating text",
-            "keywords": "Ontology Matching, Ontology Alignment > Text to Ontology",
-            "recog": 1,
-            "level": 2,
-            "filename": "!!joss.02168.pdf",
-            "priority": 2,
+            "modified": 1597402293,
             "authors": [
                 "Samantha C Pendleton",
                 "Georgios V Gkoutos"
             ],
-            "modified": 1597402293,
-            "year": 2020
-        },
-        {
-            "title": "Recruit and retain a diverse workforce",
-            "keywords": "Inclusivity > Diversity",
             "recog": 1,
-            "level": 2,
-            "filename": "-s41570-020-0214-z.pdf",
-            "priority": 0,
-            "authors": [],
-            "modified": 1597379647,
-            "year": 2020
-        },
-        {
-            "title": "On the Move with a Magic Thing: Role Playing in Concept Design of Mobile Services and Devices",
-            "keywords": "Methods > Role Playing > Situated Participative Enactment of Scenarios (SPES)",
-            "recog": 1,
-            "level": 3,
-            "filename": "!!magic-DIS2010.pdf",
+            "year": 2020,
             "priority": 2,
+            "level": 2,
+            "keywords": "Ontology Matching, Ontology Alignment > Text to Ontology",
+            "filename": "!!joss.02168.pdf",
+            "title": "Jabberwocky: an ontology-aware toolkit for manipulating text"
+        },
+        {
+            "modified": 1597379647,
+            "authors": [],
+            "recog": 1,
+            "year": 2020,
+            "priority": 0,
+            "level": 2,
+            "keywords": "Inclusivity > Diversity",
+            "filename": "-s41570-020-0214-z.pdf",
+            "title": "Recruit and retain a diverse workforce"
+        },
+        {
+            "modified": 1597306810,
             "authors": [
                 "Giulio Iacucci",
                 "Kari Kuutti",
                 "Mervi Ranta"
             ],
-            "modified": 1597306810,
-            "year": 2000
+            "recog": 1,
+            "year": 2000,
+            "priority": 2,
+            "level": 3,
+            "keywords": "Methods > Role Playing > Situated Participative Enactment of Scenarios (SPES)",
+            "filename": "!!magic-DIS2010.pdf",
+            "title": "On the Move with a Magic Thing: Role Playing in Concept Design of Mobile Services and Devices"
         },
         {
-            "title": "TAGATUNE: A GAME FOR MUSIC AND SOUND ANNOTATION",
-            "keywords": "Crowdsourcing, Human Computation > Applications > Tagging, Annotation > Music Annotation > TagATune",
-            "recog": 1,
-            "level": 5,
-            "filename": "-e0a30cf26601cb14574a53c990bda744e7fa.pdf",
-            "priority": 0,
+            "modified": 1597244807,
             "authors": [
                 "Edith L. M. Law",
                 "Luis von Ahn",
                 "Roger B. Dannenberg",
                 "Mike Crawford"
             ],
-            "modified": 1597244807,
-            "year": 2007
+            "recog": 1,
+            "year": 2007,
+            "priority": 0,
+            "level": 5,
+            "keywords": "Crowdsourcing, Human Computation > Applications > Tagging, Annotation > Music Annotation > TagATune",
+            "filename": "-e0a30cf26601cb14574a53c990bda744e7fa.pdf",
+            "title": "TAGATUNE: A GAME FOR MUSIC AND SOUND ANNOTATION"
         },
         {
-            "title": "Automated Evaluation of Crowdsourced Annotations in the Cultural Heritage Domain",
-            "keywords": "Crowdsourcing, Human Computation > Applications > Tagging, Annotation > Annotation Quality",
-            "recog": 1,
-            "level": 4,
-            "filename": "!ursw14.pdf",
-            "priority": 1,
+            "modified": 1597244705,
             "authors": [
                 "Archana Nottamkandath",
                 "Jasper Oosterman",
                 "Davide Ceolin",
                 "Wan Fokkink"
             ],
-            "modified": 1597244705,
-            "year": 2014
-        },
-        {
-            "title": "CrowdsourcingMicroLevelMultimedia",
-            "keywords": "Crowdsourcing, Human Computation > Applications > Tagging, Annotation > Video Annotation",
-            "recog": 0,
-            "level": 4,
-            "filename": "-CrowdsourcingMicroLevelMultimedia.pdf",
-            "priority": 0,
-            "authors": [],
-            "modified": 1597239460,
-            "year": 2012
-        },
-        {
-            "title": "The Urban Institute Audit Studies: Their Methods and Findings",
-            "keywords": "Methods > Audit Studies",
             "recog": 1,
-            "level": 2,
-            "filename": "!!fulltext_stamped.pdf",
-            "priority": 2,
+            "year": 2014,
+            "priority": 1,
+            "level": 4,
+            "keywords": "Crowdsourcing, Human Computation > Applications > Tagging, Annotation > Annotation Quality",
+            "filename": "!ursw14.pdf",
+            "title": "Automated Evaluation of Crowdsourced Annotations in the Cultural Heritage Domain"
+        },
+        {
+            "modified": 1597239460,
+            "authors": [],
+            "recog": 0,
+            "year": 2012,
+            "priority": 0,
+            "level": 4,
+            "keywords": "Crowdsourcing, Human Computation > Applications > Tagging, Annotation > Video Annotation",
+            "filename": "-CrowdsourcingMicroLevelMultimedia.pdf",
+            "title": "CrowdsourcingMicroLevelMultimedia"
+        },
+        {
+            "modified": 1597233539,
             "authors": [
                 "Peter Siegelman",
                 "James J. Heckman",
                 "Iomes I. Heckmon",
                 "Peter Siegelmon"
             ],
-            "modified": 1597233539,
-            "year": 2017
-        },
-        {
-            "title": "From tech-clash to trust: organizations need to focus on value and values",
-            "keywords": "Future of Work > Post-digital",
             "recog": 1,
-            "level": 2,
-            "filename": "-Accenture-Technology-Vision-2020-Full-Report.pdf",
-            "priority": 0,
-            "authors": [],
-            "modified": 1597226613,
-            "year": 2020
-        },
-        {
-            "title": "Fairness Through Awareness",
-            "keywords": "Machine Learning > Issues > Fairness > Definitions of Fairness > Demographic Parity",
-            "recog": 1,
-            "level": 5,
-            "filename": "!!2090236.2090255.pdf",
+            "year": 2017,
             "priority": 2,
+            "level": 2,
+            "keywords": "Methods > Audit Studies",
+            "filename": "!!fulltext_stamped.pdf",
+            "title": "The Urban Institute Audit Studies: Their Methods and Findings"
+        },
+        {
+            "modified": 1597226613,
+            "authors": [],
+            "recog": 1,
+            "year": 2020,
+            "priority": 0,
+            "level": 2,
+            "keywords": "Future of Work > Post-digital",
+            "filename": "-Accenture-Technology-Vision-2020-Full-Report.pdf",
+            "title": "From tech-clash to trust: organizations need to focus on value and values"
+        },
+        {
+            "modified": 1597226498,
             "authors": [
                 "Cynthia Dwork",
                 "Moritz Hardt",
                 "Toniann Pitassi",
                 "Richard Zemel"
             ],
-            "modified": 1597226498,
-            "year": 2011
+            "recog": 1,
+            "year": 2011,
+            "priority": 2,
+            "level": 5,
+            "keywords": "Machine Learning > Issues > Fairness > Definitions of Fairness > Demographic Parity",
+            "filename": "!!2090236.2090255.pdf",
+            "title": "Fairness Through Awareness"
         },
         {
-            "title": "Design Lessons from AI\u2019s Two Grand Goals: Human Emulation and Useful Applications",
-            "keywords": "AI > Human-AI-Interaction, Human-Machine-Interaction",
-            "recog": 1,
-            "level": 2,
-            "filename": "!!!10.1109@TTS.2020.2992669.pdf",
-            "priority": 3,
+            "modified": 1597226453,
             "authors": [
                 "Ben Shneiderman"
             ],
-            "modified": 1597226453,
-            "year": 2020
+            "recog": 1,
+            "year": 2020,
+            "priority": 3,
+            "level": 2,
+            "keywords": "AI > Human-AI-Interaction, Human-Machine-Interaction",
+            "filename": "!!!10.1109@TTS.2020.2992669.pdf",
+            "title": "Design Lessons from AI\u2019s Two Grand Goals: Human Emulation and Useful Applications"
         },
         {
-            "title": "EDITED BY SEETA PEN\u0303A GANGADHARAN WITH VIRGINIA EUBANKS AND SOLON BAROCAS An Algorithm Audit",
-            "keywords": "Machine Learning > Issues > Bias, Discrimination > Auditing",
-            "recog": 1,
-            "level": 4,
-            "filename": "-An Algorithm Audit.pdf",
-            "priority": 0,
+            "modified": 1597225130,
             "authors": [
                 "CHRISTIAN SANDVIG"
             ],
-            "modified": 1597225130,
-            "year": 2014
+            "recog": 1,
+            "year": 2014,
+            "priority": 0,
+            "level": 4,
+            "keywords": "Machine Learning > Issues > Bias, Discrimination > Auditing",
+            "filename": "-An Algorithm Audit.pdf",
+            "title": "EDITED BY SEETA PEN\u0303A GANGADHARAN WITH VIRGINIA EUBANKS AND SOLON BAROCAS An Algorithm Audit"
         },
         {
-            "title": "Auditing Algorithms: Research Methods for Detecting Discrimination on Internet Platforms",
-            "keywords": "Machine Learning > Issues > Bias, Discrimination > Auditing",
-            "recog": 1,
-            "level": 4,
-            "filename": "!!!Auditing Algorithms -- Sandvig -- ICA 2014 Data and Discrimination Preconference.pdf",
-            "priority": 3,
+            "modified": 1597166719,
             "authors": [
                 "Christian Sandvig",
                 "Kevin Hamilton",
                 "Karrie Karahalios",
                 "Cedric Langbort"
             ],
-            "modified": 1597166719,
-            "year": 2014
+            "recog": 1,
+            "year": 2014,
+            "priority": 3,
+            "level": 4,
+            "keywords": "Machine Learning > Issues > Bias, Discrimination > Auditing",
+            "filename": "!!!Auditing Algorithms -- Sandvig -- ICA 2014 Data and Discrimination Preconference.pdf",
+            "title": "Auditing Algorithms: Research Methods for Detecting Discrimination on Internet Platforms"
         },
         {
-            "title": "Structured Labeling to Facilitate Concept Evolution in Machine Learning",
-            "keywords": "Annotation > Structured Labelling",
-            "recog": 1,
-            "level": 2,
-            "filename": "!!p3075.pdf",
-            "priority": 2,
+            "modified": 1597156578,
             "authors": [
                 "Todd Kulesza",
                 "Saleema Amershi",
@@ -963,71 +1005,71 @@
                 "Danyel Fisher",
                 "Denis Charles"
             ],
-            "modified": 1597156578,
-            "year": 2014
+            "recog": 1,
+            "year": 2014,
+            "priority": 2,
+            "level": 2,
+            "keywords": "Annotation > Structured Labelling",
+            "filename": "!!p3075.pdf",
+            "title": "Structured Labeling to Facilitate Concept Evolution in Machine Learning"
         },
         {
-            "title": "Enabling StructuredDataGeneration by Nontechnical Experts",
-            "keywords": "Annotation > Tools > Neonion",
-            "recog": 1,
-            "level": 3,
-            "filename": "!2017_MCI_231.pdf",
-            "priority": 1,
+            "modified": 1597155680,
             "authors": [
                 "Andre Breitenfeld",
                 "Maximilian Mackeprang",
                 "Ming-Tung Hong",
                 "Claudia M\u00fcller-Birn"
             ],
-            "modified": 1597155680,
-            "year": 2017
+            "recog": 1,
+            "year": 2017,
+            "priority": 1,
+            "level": 3,
+            "keywords": "Annotation > Tools > Neonion",
+            "filename": "!2017_MCI_231.pdf",
+            "title": "Enabling StructuredDataGeneration by Nontechnical Experts"
         },
         {
-            "title": "Death of Sandra Bland - Wikipedia",
-            "keywords": "Police > Police Violence",
-            "recog": 0,
-            "level": 2,
-            "filename": "-Death of Sandra Bland - Wikipedia.pdf",
-            "priority": 0,
+            "modified": 1597149081,
             "authors": [
                 "Sandra Bland",
                 "Brian Encinia"
             ],
-            "modified": 1597149081,
-            "year": 2020
-        },
-        {
-            "title": "Accenture-Labs-Innovation-Report-2020",
-            "keywords": "Innovation",
             "recog": 0,
-            "level": 1,
-            "filename": "-Accenture-Labs-Innovation-Report-2020.pdf",
+            "year": 2020,
             "priority": 0,
-            "authors": [],
-            "modified": 1597148802,
-            "year": 2020
+            "level": 2,
+            "keywords": "Police > Police Violence",
+            "filename": "-Death of Sandra Bland - Wikipedia.pdf",
+            "title": "Death of Sandra Bland - Wikipedia"
         },
         {
-            "title": "\u201cAlgorithms ruin everything\u201d: #RIPTwitter, Folk Theories, and Resistance to Algorithmic Change in Social Media",
-            "keywords": "Machine Learning > Explainable AI, XAI > Folk Theories",
-            "recog": 1,
-            "level": 3,
-            "filename": "!!!3025453.3025659.pdf",
-            "priority": 3,
+            "modified": 1597148802,
+            "authors": [],
+            "recog": 0,
+            "year": 2020,
+            "priority": 0,
+            "level": 1,
+            "keywords": "Innovation",
+            "filename": "-Accenture-Labs-Innovation-Report-2020.pdf",
+            "title": "Accenture-Labs-Innovation-Report-2020"
+        },
+        {
+            "modified": 1597148713,
             "authors": [
                 "Michael A. DeVito",
                 "Darren Gergle"
             ],
-            "modified": 1597148713,
-            "year": 2020
+            "recog": 1,
+            "year": 2020,
+            "priority": 3,
+            "level": 3,
+            "keywords": "Machine Learning > Explainable AI, XAI > Folk Theories",
+            "filename": "!!!3025453.3025659.pdf",
+            "title": "\u201cAlgorithms ruin everything\u201d: #RIPTwitter, Folk Theories, and Resistance to Algorithmic Change in Social Media"
         },
         {
-            "title": "First I \u201clike\u201d it, then I hide it: Folk Theories of Social Feeds",
-            "keywords": "Machine Learning > Explainable AI, XAI > Folk Theories > Seamful Design",
-            "recog": 1,
-            "level": 4,
-            "filename": "!!!p2371-eslami.pdf",
-            "priority": 3,
+            "modified": 1597147166,
             "authors": [
                 "Motahhare Eslami",
                 "Karrie Karahalios",
@@ -1037,16 +1079,16 @@
                 "Kevin Hamilton",
                 "Alex Kirlik"
             ],
-            "modified": 1597147166,
-            "year": 2016
+            "recog": 1,
+            "year": 2016,
+            "priority": 3,
+            "level": 4,
+            "keywords": "Machine Learning > Explainable AI, XAI > Folk Theories > Seamful Design",
+            "filename": "!!!p2371-eslami.pdf",
+            "title": "First I \u201clike\u201d it, then I hide it: Folk Theories of Social Feeds"
         },
         {
-            "title": "How People Form Folk Theories of Social Media Feeds and What It Means for How We Study Self-Presentation",
-            "keywords": "Machine Learning > Explainable AI, XAI > Folk Theories",
-            "recog": 1,
-            "level": 3,
-            "filename": "!!3173574.3173694.pdf",
-            "priority": 2,
+            "modified": 1597147057,
             "authors": [
                 "Michael A. DeVito",
                 "Jeremy Birnholtz",
@@ -1054,16 +1096,16 @@
                 "Megan French",
                 "Sunny Liu"
             ],
-            "modified": 1597147057,
-            "year": 2020
+            "recog": 1,
+            "year": 2020,
+            "priority": 2,
+            "level": 3,
+            "keywords": "Machine Learning > Explainable AI, XAI > Folk Theories",
+            "filename": "!!3173574.3173694.pdf",
+            "title": "How People Form Folk Theories of Social Media Feeds and What It Means for How We Study Self-Presentation"
         },
         {
-            "title": "0000776",
-            "keywords": "Creativity > General, Theory > Types > Analogical",
-            "recog": 0,
-            "level": 4,
-            "filename": "!!!0000776.pdf",
-            "priority": 3,
+            "modified": 1597146341,
             "authors": [
                 "KEITH J. HOLYOAK",
                 "Manfred Kochen",
@@ -1071,32 +1113,32 @@
                 "Tim Carroll",
                 "Teresa Frankovich"
             ],
-            "modified": 1597146341,
-            "year": 2003
+            "recog": 0,
+            "year": 2003,
+            "priority": 3,
+            "level": 4,
+            "keywords": "Creativity > General, Theory > Types > Analogical",
+            "filename": "!!!0000776.pdf",
+            "title": "0000776"
         },
         {
-            "title": "Accelerating Innovation Through Analogy Mining",
-            "keywords": "Creativity > General, Theory > Types > Analogical",
-            "recog": 1,
-            "level": 4,
-            "filename": "!!!p235-hope.pdf",
-            "priority": 3,
+            "modified": 1597146210,
             "authors": [
                 "Tom Hope",
                 "Joel Chan",
                 "Aniket Ki\u008aur",
                 "Dafna Shahaf"
             ],
-            "modified": 1597146210,
-            "year": 2017
+            "recog": 1,
+            "year": 2017,
+            "priority": 3,
+            "level": 4,
+            "keywords": "Creativity > General, Theory > Types > Analogical",
+            "filename": "!!!p235-hope.pdf",
+            "title": "Accelerating Innovation Through Analogy Mining"
         },
         {
-            "title": "Creativity_support_tool_evaluation_metho",
-            "keywords": "Creativity > Creativity Support Tools",
-            "recog": 0,
-            "level": 2,
-            "filename": "!!!Creativity_support_tool_evaluation_metho.pdf",
-            "priority": 3,
+            "modified": 1597144983,
             "authors": [
                 "Ben Shneiderman",
                 "Mary Czerwinski",
@@ -1111,27 +1153,27 @@
                 "Bill Kules",
                 "Elisa Giaccardi"
             ],
-            "modified": 1597144983,
-            "year": 2005
-        },
-        {
-            "title": "Welcome to the Jungle: HCI After Dark",
-            "keywords": "Design, HCI, UI, UX > Nocturnal HCI",
-            "recog": 1,
+            "recog": 0,
+            "year": 2005,
+            "priority": 3,
             "level": 2,
-            "filename": "-1979742.1979630.pdf",
-            "priority": 0,
-            "authors": [],
-            "modified": 1597144941,
-            "year": 2011
+            "keywords": "Creativity > Creativity Support Tools",
+            "filename": "!!!Creativity_support_tool_evaluation_metho.pdf",
+            "title": "Creativity_support_tool_evaluation_metho"
         },
         {
-            "title": "UbiOpticon: Participatory Sousveillance with Urban Screens and Mobile Phone Cameras",
-            "keywords": "Public Displays > Applications > Sousveillance",
+            "modified": 1597144941,
+            "authors": [],
             "recog": 1,
-            "level": 3,
-            "filename": "-p56-foth.pdf",
+            "year": 2011,
             "priority": 0,
+            "level": 2,
+            "keywords": "Design, HCI, UI, UX > Nocturnal HCI",
+            "filename": "-1979742.1979630.pdf",
+            "title": "Welcome to the Jungle: HCI After Dark"
+        },
+        {
+            "modified": 1597144358,
             "authors": [
                 "Marcus Foth",
                 "Tommi Heikkinen",
@@ -1140,30 +1182,30 @@
                 "Christine Satchell",
                 "Timo Ojala"
             ],
-            "modified": 1597144358,
-            "year": 2014
+            "recog": 1,
+            "year": 2014,
+            "priority": 0,
+            "level": 3,
+            "keywords": "Public Displays > Applications > Sousveillance",
+            "filename": "-p56-foth.pdf",
+            "title": "UbiOpticon: Participatory Sousveillance with Urban Screens and Mobile Phone Cameras"
         },
         {
-            "title": "Women\u2019s Safety in Public Spaces: Examining the Efficacy of Panic Buttons in New Delhi",
-            "keywords": "Safety > Panic Button",
-            "recog": 1,
-            "level": 2,
-            "filename": "-3025453.3025532.pdf",
-            "priority": 0,
+            "modified": 1597133289,
             "authors": [
                 "Naveena Karusala",
                 "Neha Kumar"
             ],
-            "modified": 1597133289,
-            "year": 2017
+            "recog": 1,
+            "year": 2017,
+            "priority": 0,
+            "level": 2,
+            "keywords": "Safety > Panic Button",
+            "filename": "-3025453.3025532.pdf",
+            "title": "Women\u2019s Safety in Public Spaces: Examining the Efficacy of Panic Buttons in New Delhi"
         },
         {
-            "title": "Improving the Safety of Homeless Young People with Mobile Phones: Values, Form and Function",
-            "keywords": "Safety",
-            "recog": 1,
-            "level": 1,
-            "filename": "!!1978942.1979191.pdf",
-            "priority": 2,
+            "modified": 1597133069,
             "authors": [
                 "Jill Palzkill Woelfer",
                 "Amy Iverson",
@@ -1171,68 +1213,68 @@
                 "Batya Friedman",
                 "Brian T. Gill"
             ],
-            "modified": 1597133069,
-            "year": 2011
-        },
-        {
-            "title": "Safety-Critical Interaction: Usability in Incidents and Accidents",
-            "keywords": "Safety",
             "recog": 1,
+            "year": 2011,
+            "priority": 2,
             "level": 1,
-            "filename": "-985921.986165.pdf",
-            "priority": 0,
-            "authors": [],
+            "keywords": "Safety",
+            "filename": "!!1978942.1979191.pdf",
+            "title": "Improving the Safety of Homeless Young People with Mobile Phones: Values, Form and Function"
+        },
+        {
             "modified": 1597130941,
-            "year": 2004
-        },
-        {
-            "title": "whats-the-folk-theory-reasoning-about-cybersocial-systems",
-            "keywords": "Machine Learning > Explainable AI, XAI > Folk Theories",
-            "recog": 0,
-            "level": 3,
-            "filename": "!!!whats-the-folk-theory-reasoning-about-cybersocial-systems.pdf",
-            "priority": 3,
             "authors": [],
-            "modified": 1597064704,
-            "year": 2016
+            "recog": 1,
+            "year": 2004,
+            "priority": 0,
+            "level": 1,
+            "keywords": "Safety",
+            "filename": "-985921.986165.pdf",
+            "title": "Safety-Critical Interaction: Usability in Incidents and Accidents"
         },
         {
-            "title": "The relationship between accessibility and usability of websites",
-            "keywords": "Design, HCI, UI, UX > Usability > Accessibility",
-            "recog": 1,
+            "modified": 1597064704,
+            "authors": [],
+            "recog": 0,
+            "year": 2016,
+            "priority": 3,
             "level": 3,
-            "filename": "-The_relationship_between_accessibility_and_usabili.pdf",
-            "priority": 0,
+            "keywords": "Machine Learning > Explainable AI, XAI > Folk Theories",
+            "filename": "!!!whats-the-folk-theory-reasoning-about-cybersocial-systems.pdf",
+            "title": "whats-the-folk-theory-reasoning-about-cybersocial-systems"
+        },
+        {
+            "modified": 1597064691,
             "authors": [
                 "Helen L. Petrie",
                 "Helen Petrie",
                 "Omar Kheir"
             ],
-            "modified": 1597064691,
-            "year": 2007
+            "recog": 1,
+            "year": 2007,
+            "priority": 0,
+            "level": 3,
+            "keywords": "Design, HCI, UI, UX > Usability > Accessibility",
+            "filename": "-The_relationship_between_accessibility_and_usabili.pdf",
+            "title": "The relationship between accessibility and usability of websites"
         },
         {
-            "title": "[Florida] The Rise of the Creative Class, Revisited",
-            "keywords": "Creativity > Importance, Implications",
-            "recog": 0,
-            "level": 2,
-            "filename": "!![Florida] The Rise of the Creative Class, Revisited.pdf",
-            "priority": 2,
+            "modified": 1597042521,
             "authors": [
                 "RICHARD FLORIDA",
                 "R ICHARD",
                 "F LOR IDA"
             ],
-            "modified": 1597042521,
-            "year": 2012
+            "recog": 0,
+            "year": 2012,
+            "priority": 2,
+            "level": 2,
+            "keywords": "Creativity > Importance, Implications",
+            "filename": "!![Florida] The Rise of the Creative Class, Revisited.pdf",
+            "title": "[Florida] The Rise of the Creative Class, Revisited"
         },
         {
-            "title": "Overcoming catastrophic forgetting in neural networks",
-            "keywords": "Neuroscience > Memory > Elastic Weight Consolidation (EWC)",
-            "recog": 1,
-            "level": 3,
-            "filename": "-3521.full.pdf",
-            "priority": 0,
+            "modified": 1597035589,
             "authors": [
                 "James Kirkpatrick",
                 "Razvan Pascanu",
@@ -1249,27 +1291,27 @@
                 "Dharshan Kumaran",
                 "Raia Hadsell"
             ],
-            "modified": 1597035589,
-            "year": 2017
-        },
-        {
-            "title": "The Rise of the Creative Class, Revisited - CityLab",
-            "keywords": "Creativity > Importance, Implications",
-            "recog": 0,
-            "level": 2,
-            "filename": "-The Rise of the Creative Class, Revisited - CityLab.pdf",
-            "priority": 0,
-            "authors": [],
-            "modified": 1597034542,
-            "year": 2020
-        },
-        {
-            "title": "Rewire: Interface Design Assistance from Examples",
-            "keywords": "Design, HCI, UI, UX > Web Design",
             "recog": 1,
+            "year": 2017,
+            "priority": 0,
+            "level": 3,
+            "keywords": "Neuroscience > Memory > Elastic Weight Consolidation (EWC)",
+            "filename": "-3521.full.pdf",
+            "title": "Overcoming catastrophic forgetting in neural networks"
+        },
+        {
+            "modified": 1597034542,
+            "authors": [],
+            "recog": 0,
+            "year": 2020,
+            "priority": 0,
             "level": 2,
-            "filename": "!Swearngin2018Rewire.pdf",
-            "priority": 1,
+            "keywords": "Creativity > Importance, Implications",
+            "filename": "-The Rise of the Creative Class, Revisited - CityLab.pdf",
+            "title": "The Rise of the Creative Class, Revisited - CityLab"
+        },
+        {
+            "modified": 1597033874,
             "authors": [
                 "Amanda Swearngin",
                 "Mira Dontcheva",
@@ -1278,63 +1320,63 @@
                 "Morgan Dixon",
                 "Paul G. Allen"
             ],
-            "modified": 1597033874,
-            "year": 2018
+            "recog": 1,
+            "year": 2018,
+            "priority": 1,
+            "level": 2,
+            "keywords": "Design, HCI, UI, UX > Web Design",
+            "filename": "!Swearngin2018Rewire.pdf",
+            "title": "Rewire: Interface Design Assistance from Examples"
         },
         {
-            "title": "Managing Tasks Across the Work-Life Boundary:Opportunities, Challenges, and Directions",
-            "keywords": "CSCW > Work-Life Boundaries",
-            "recog": 1,
-            "level": 2,
-            "filename": "-WilliamsNFW2020.pdf",
-            "priority": 0,
+            "modified": 1596906947,
             "authors": [
                 "Alex C. Williams",
                 "Shamsi Iqbal",
                 "Julia Kiseleva",
                 "Ryen W. White"
             ],
-            "modified": 1596906947,
-            "year": 2020
+            "recog": 1,
+            "year": 2020,
+            "priority": 0,
+            "level": 2,
+            "keywords": "CSCW > Work-Life Boundaries",
+            "filename": "-WilliamsNFW2020.pdf",
+            "title": "Managing Tasks Across the Work-Life Boundary:Opportunities, Challenges, and Directions"
         },
         {
-            "title": "The Mulan experiment",
-            "keywords": "Medical, Health, Drugs > Depression > Avatar Depression",
-            "recog": 1,
-            "level": 3,
-            "filename": "-'Avatar' depression syndrome_.pdf",
-            "priority": 0,
+            "modified": 1596884848,
             "authors": [
                 "Jeva Lange",
                 "Jacob Lambert",
                 "Marianne Dodson",
                 "Ryan Cooper"
             ],
-            "modified": 1596884848,
-            "year": 2020
+            "recog": 1,
+            "year": 2020,
+            "priority": 0,
+            "level": 3,
+            "keywords": "Medical, Health, Drugs > Depression > Avatar Depression",
+            "filename": "-'Avatar' depression syndrome_.pdf",
+            "title": "The Mulan experiment"
         },
         {
-            "title": "Avatar-Induced Depression_ Coping With The Intangibility Of Pandora (VIDEO) _ HuffPost",
-            "keywords": "Medical, Health, Drugs > Depression > Avatar Depression",
-            "recog": 0,
-            "level": 3,
-            "filename": "-Avatar-Induced Depression_ Coping With The Intangibility Of Pandora (VIDEO) _ HuffPost.pdf",
-            "priority": 0,
+            "modified": 1596884808,
             "authors": [
                 "Seth Meyers",
                 "MOST SHARED",
                 "Larry Kudlow"
             ],
-            "modified": 1596884808,
-            "year": 2020
+            "recog": 0,
+            "year": 2020,
+            "priority": 0,
+            "level": 3,
+            "keywords": "Medical, Health, Drugs > Depression > Avatar Depression",
+            "filename": "-Avatar-Induced Depression_ Coping With The Intangibility Of Pandora (VIDEO) _ HuffPost.pdf",
+            "title": "Avatar-Induced Depression_ Coping With The Intangibility Of Pandora (VIDEO) _ HuffPost"
         },
         {
-            "title": "\"RUNNING FAWKES ON YOUR PHOTOS IS LIKE ADDING AN INVISIBLE MASK TO YOUR SELFIES\"",
-            "keywords": "Counter Surveillance > Face Recognition",
-            "recog": 1,
-            "level": 2,
-            "filename": "-Cloak your photos with this AI privacy tool to fool facial recognition - The Verge.pdf",
-            "priority": 0,
+            "modified": 1596816324,
             "authors": [
                 "Shawn Shan",
                 "Emily Wenger",
@@ -1342,42 +1384,42 @@
                 "Huiying Li",
                 "Haitao Zheng"
             ],
-            "modified": 1596816324,
-            "year": 2020
+            "recog": 1,
+            "year": 2020,
+            "priority": 0,
+            "level": 2,
+            "keywords": "Counter Surveillance > Face Recognition",
+            "filename": "-Cloak your photos with this AI privacy tool to fool facial recognition - The Verge.pdf",
+            "title": "\"RUNNING FAWKES ON YOUR PHOTOS IS LIKE ADDING AN INVISIBLE MASK TO YOUR SELFIES\""
         },
         {
-            "title": "Trump erh\u00f6ht Druck_ TikTok_ Die Uhr l\u00e4uft _ tagesschau.de",
-            "keywords": "Communities, Networks > Social Media > Tik Tok",
-            "recog": 0,
-            "level": 3,
-            "filename": "-Trump erh\u00f6ht Druck_ TikTok_ Die Uhr l\u00e4uft _ tagesschau.de.pdf",
-            "priority": 0,
+            "modified": 1596810895,
             "authors": [
                 "TikTok: Die Uhr l\u00e4uft"
             ],
-            "modified": 1596810895,
-            "year": 2020
+            "recog": 0,
+            "year": 2020,
+            "priority": 0,
+            "level": 3,
+            "keywords": "Communities, Networks > Social Media > Tik Tok",
+            "filename": "-Trump erh\u00f6ht Druck_ TikTok_ Die Uhr l\u00e4uft _ tagesschau.de.pdf",
+            "title": "Trump erh\u00f6ht Druck_ TikTok_ Die Uhr l\u00e4uft _ tagesschau.de"
         },
         {
-            "title": "Nach Explosionenen in Beirut_ Fake-Video zeigt angeblichen Raketenangriff _ tagesschau.de",
-            "keywords": "Fake News, Credibility, Post Truth",
-            "recog": 0,
-            "level": 1,
-            "filename": "-Nach Explosionenen in Beirut_ Fake-Video zeigt angeblichen Raketenangriff _ tagesschau.de.pdf",
-            "priority": 0,
+            "modified": 1596810692,
             "authors": [
                 "angeblichen Raketenangriff"
             ],
-            "modified": 1596810692,
-            "year": 2020
+            "recog": 0,
+            "year": 2020,
+            "priority": 0,
+            "level": 1,
+            "keywords": "Fake News, Credibility, Post Truth",
+            "filename": "-Nach Explosionenen in Beirut_ Fake-Video zeigt angeblichen Raketenangriff _ tagesschau.de.pdf",
+            "title": "Nach Explosionenen in Beirut_ Fake-Video zeigt angeblichen Raketenangriff _ tagesschau.de"
         },
         {
-            "title": "Elon Musk Bitcoin Giveaway Scam Rakes in Millions of Dollars in BTC",
-            "keywords": "Crime > Bitcoin > Elon Musk 5000 BTC Giveaway",
-            "recog": 1,
-            "level": 3,
-            "filename": "-Elon Musk Bitcoin Giveaway Scam Rakes in Millions of Dollars in BTC _ Bitcoin News.pdf",
-            "priority": 0,
+            "modified": 1596726608,
             "authors": [
                 "\u2018Elon Musk",
                 "Steve Wozniak",
@@ -1385,111 +1427,73 @@
                 "Tim Sweeney",
                 "FUBU CEO Daymond"
             ],
-            "modified": 1596726608,
-            "year": 2020
+            "recog": 1,
+            "year": 2020,
+            "priority": 0,
+            "level": 3,
+            "keywords": "Crime > Bitcoin > Elon Musk 5000 BTC Giveaway",
+            "filename": "-Elon Musk Bitcoin Giveaway Scam Rakes in Millions of Dollars in BTC _ Bitcoin News.pdf",
+            "title": "Elon Musk Bitcoin Giveaway Scam Rakes in Millions of Dollars in BTC"
         },
         {
-            "title": "Explanatory Coexistence 1 Running head: EXPLANATORY COEXISTENCE Bundles of Contradiction: A Coexistence View of Conceptual Change",
-            "keywords": "Machine Learning > Explainable AI, XAI > Folk Theories > Explanatory Coexistence",
-            "recog": 1,
-            "level": 4,
-            "filename": "!!shtulman_lombrozo.pdf",
-            "priority": 2,
+            "modified": 1596719592,
             "authors": [
                 "Andrew Shtulman",
                 "Tania Lombrozo"
             ],
-            "modified": 1596719592,
-            "year": 2015
+            "recog": 1,
+            "year": 2015,
+            "priority": 2,
+            "level": 4,
+            "keywords": "Machine Learning > Explainable AI, XAI > Folk Theories > Explanatory Coexistence",
+            "filename": "!!shtulman_lombrozo.pdf",
+            "title": "Explanatory Coexistence 1 Running head: EXPLANATORY COEXISTENCE Bundles of Contradiction: A Coexistence View of Conceptual Change"
         },
         {
-            "title": "Standing on the Schemas of Giants: Socially Augmented Information Foraging",
-            "keywords": "Sensemaking",
-            "recog": 1,
-            "level": 1,
-            "filename": "!!!p999-kittur.pdf",
-            "priority": 3,
+            "modified": 1596711546,
             "authors": [
                 "Aniket Kittur",
                 "Andrew M. Peters",
                 "Abdigani Diriye",
                 "Michael R. Bove"
             ],
-            "modified": 1596711546,
-            "year": 2013
+            "recog": 1,
+            "year": 2013,
+            "priority": 3,
+            "level": 1,
+            "keywords": "Sensemaking",
+            "filename": "!!!p999-kittur.pdf",
+            "title": "Standing on the Schemas of Giants: Socially Augmented Information Foraging"
         },
         {
-            "title": "Almost an Expert: The Effects of Rubrics and Expertise on Perceived Value of Crowdsourced Design Critiques",
-            "keywords": "Feedback > Methods, Feedback Quality > Rubrics",
-            "recog": 1,
-            "level": 3,
-            "filename": "!!!Posts_paper 3.pdf",
-            "priority": 3,
+            "modified": 1596695006,
             "authors": [
                 "Alvin Yuan",
                 "Kurt Luther",
                 "Markus Krause",
                 "Steven P. Dow"
             ],
-            "modified": 1596695006,
-            "year": 2016
+            "recog": 1,
+            "year": 2016,
+            "priority": 3,
+            "level": 3,
+            "keywords": "Feedback > Methods, Feedback Quality > Rubrics",
+            "filename": "!!!Posts_paper 3.pdf",
+            "title": "Almost an Expert: The Effects of Rubrics and Expertise on Perceived Value of Crowdsourced Design Critiques"
         },
         {
-            "title": "How GuidingQuestions Facilitate Feedback Exchange in Project-Based Learning",
-            "keywords": "Feedback > Methods, Feedback Quality > Rubrics > Guiding Questions",
-            "recog": 1,
-            "level": 4,
-            "filename": "!!!paper138.pdf",
-            "priority": 3,
+            "modified": 1596692334,
             "authors": [
                 "Amy Cook"
             ],
-            "modified": 1596692334,
-            "year": 2019
-        },
-        {
-            "title": "Potential in Creativity: Individual, Social, Material Perspectives, and a Dynamic Integrative Framework",
-            "keywords": "Creativity > General, Theory > Potential in Creativity",
             "recog": 1,
-            "level": 3,
-            "filename": "!!10.1080@10400419.2020.1712161.pdf",
-            "priority": 2,
-            "authors": [
-                "Giovanni Emanuele Corazza",
-                "Vlad Petre Gl\u0103veanu"
-            ],
-            "modified": 1596627206,
-            "year": 2020
-        },
-        {
-            "title": "The Risk of Automation for Jobs in OECD Countries A COMPARATIVE ANALYSIS",
+            "year": 2019,
             "priority": 3,
-            "recog": 1,
-            "level": 3,
-            "filename": "!!!automation.pdf",
-            "keywords": "Future of Work > Automation, Technological Unemployment, Digitization > Task-based Estimation",
-            "authors": [
-                "Melanie Arntz",
-                "Terry Gregory",
-                "Ulrich Zierahn"
-            ],
-            "modified": 1596544737,
-            "year": 2016
-        },
-        {
-            "title": "ETLA-Muistio-Brief-22",
-            "priority": 1,
-            "recog": 0,
-            "level": 3,
-            "filename": "!ETLA-Muistio-Brief-22.pdf",
-            "keywords": "Future of Work > Automation, Technological Unemployment, Digitization > Finland",
-            "authors": [],
-            "modified": 1596543540,
-            "year": 2014
+            "level": 4,
+            "keywords": "Feedback > Methods, Feedback Quality > Rubrics > Guiding Questions",
+            "filename": "!!!paper138.pdf",
+            "title": "How GuidingQuestions Facilitate Feedback Exchange in Project-Based Learning"
         }
     ],
-    "unrecognized": 0,
-    "unrecognized_percent": 0.0,
-    "unrecognized_overall_percent": 0.42,
-    "modified": 1598722893
+    "unrecognized_overall": 2369
 }
