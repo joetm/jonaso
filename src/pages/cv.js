@@ -546,14 +546,6 @@ class CV extends React.Component {
       </Item.Group>
 )} right="" />
 
-                  <div className="spacer" style={spacer}></div>
-
-              </Container>
-        </Layout>
-        )
-  }
-}
-
 
 {/**********************
       ASSOCIATIONS
@@ -573,6 +565,15 @@ class CV extends React.Component {
         }
       </Item.Group>
 )} right="" />
+
+
+                  <div className="spacer" style={spacer}></div>
+
+              </Container>
+        </Layout>
+        )
+  }
+}
 
 
 export default CV
