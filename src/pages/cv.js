@@ -528,26 +528,6 @@ class CV extends React.Component {
 
 
 {/**********************
-      ASSOCIATIONS
-***********************/}
-
-<Row left="Memberships in Scientific Associations" middle={(
-      <Item.Group>
-        {
-          cv.hasOwnProperty("associations") &&
-            cv.associations.map((item, i) => (
-              <Item key={i}>
-                <Item.Content>
-                  <Item.Header style={styles.nonbold}>{item}</Item.Header>
-                </Item.Content>
-              </Item>
-            ))
-        }
-      </Item.Group>
-)} right="" />
-
-
-{/**********************
         LANGUAGES
 ***********************/}
 
@@ -573,5 +553,26 @@ class CV extends React.Component {
         )
   }
 }
+
+
+{/**********************
+      ASSOCIATIONS
+***********************/}
+
+<Row left="Memberships in Scientific Associations" middle={(
+      <Item.Group>
+        {
+          cv.hasOwnProperty("associations") &&
+            cv.associations.map((item, i) => (
+              <Item key={i}>
+                <Item.Content>
+                  <Item.Header style={styles.nonbold}>{item}</Item.Header>
+                </Item.Content>
+              </Item>
+            ))
+        }
+      </Item.Group>
+)} right="" />
+
 
 export default CV
