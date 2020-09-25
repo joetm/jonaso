@@ -8,7 +8,8 @@ import cv from "../cv.json"
 cv.education[0].left = "Education"
 cv.research_experience[0].left = "Research Experience"
 cv.work_experience[0].left = "Professional Experience"
-cv.awards[0].left = "Honors & Awards"
+cv.awards[0].left = "Recognition & Awards" // Honors & Awards
+cv.grants[0].left = "Scholarships & Grants"
 cv.academicservice[0].left = "Academic Service"
 cv.supervisions[0].left = "Student Supervisions"
 
@@ -382,6 +383,45 @@ class CV extends React.Component {
     )} right={row.year} />
   ))
 }
+
+{/**********************
+         GRANTS
+***********************/}
+
+{
+  cv.grants.map((row, i) => (
+    <Row key={i} left={row.left} middle={(
+          <Item.Group>
+            <Item>
+              <List>
+                <List.Item>
+                  {row.name}
+                  {
+                    row.event && row.institution &&
+                        <span> ({row.event})</span>
+                  }
+                  {
+                    (row.institution && row.url) ?
+                      <span>, <a href={row.url}>{row.institution}</a></span>
+                      :
+                      <span>, {row.institution}</span>
+                  }
+                  {
+                    row.event && row.url && !row.institution &&
+                        <span>, <a href={row.url}>{row.event}</a></span>
+                  }
+                  {
+                    row.event && !row.url && !row.institution &&
+                        <span>, {row.event}</span>
+                  }
+                </List.Item>
+              </List>
+            </Item>
+          </Item.Group>
+    )} right={row.year} />
+  ))
+}
+
 
 {/**********************
     Technical Skills
