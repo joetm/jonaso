@@ -192,14 +192,14 @@
   "teaching": {
     "Co-Teacher": [
         {
-          "position": "Co-Teacher",
+          "position": "Teaching Assistant",
           "course": "Social Computing",
           "coursecode": "521044A",
           "institution": "University of Oulu",
-          "num_students": 14,
+          "num_students": 50,
           "ECTS": 5,
           "level": "Bachelor",
-          "year": 2019
+          "year": 2020
         },
         {
           "position": "Teaching Assistant",
@@ -210,6 +210,16 @@
           "ECTS": 5,
           "level": "Bachelor",
           "year": 2020
+        },
+        {
+          "position": "Teaching Assistant",
+          "course": "Social Computing",
+          "coursecode": "521044A",
+          "institution": "University of Oulu",
+          "num_students": 14,
+          "ECTS": 5,
+          "level": "Bachelor",
+          "year": 2019
         }
       ],
       "Curriculum Planning": [
@@ -245,16 +255,6 @@
       },
       {
         "position": "Teaching Assistant",
-        "course": "Applied Computing Project I",
-        "coursecode": "521152S",
-        "institution": "University of Oulu",
-        "num_students": 3,
-        "ECTS": 10,
-        "level": "Bachelor",
-        "year": 2018
-      },
-      {
-        "position": "Teaching Assistant",
         "course": "Human Computer Interaction",
         "coursecode": "521145A",
         "institution": "University of Oulu",
@@ -262,16 +262,57 @@
         "ECTS": 5,
         "level": "Bachelor",
         "year": 2018
+      },
+      {
+        "position": "Teaching Assistant",
+        "course": "Applied Computing Project I",
+        "coursecode": "521152S",
+        "institution": "University of Oulu",
+        "num_students": 3,
+        "ECTS": 10,
+        "level": "Bachelor",
+        "year": 2018
       }
     ]
   },
   "awards": [
     {
+      "name": "Invited Member of Doctoral Consortium",
+      "institution": "Mensch und Computer (MuC '20)",
+      "url": "https://muc2020.mensch-und-computer.de/",
+      "month": "September",
+      "year": 2020
+    },
+    {
+      "name": "Invited Member of Doctoral Consortium",
+      "institution": "Symposium on Engineering Interactive Computing Systems (EICS '20)",
+      "url": "https://eics.acm.org/2020/",
+      "month": "June",
+      "year": 2020
+    },
+    {
+      "name": "Invited Member of Graduate Student Symposium",
+      "institution": "Creativity & Cognition (C&C '19)",
+      "url": "http://cc.acm.org/2019/",
+      "month": "June",
+      "year": 2019
+    },
+    {
+      "name": "Distinction, M.Sc. Computer Science",
+      "institution": "University of Southampton",
+      "url": "https://www.southampton.ac.uk/",
+      "month": "November",
+      "year": 2015
+    }
+  ],
+  "grants": [
+    {
       "name": "Grant",
       "institution": "Jenny and Antti Wihuri Foundation",
       "url": "https://wihurinrahasto.fi/?lang=en",
       "month": "September",
-      "year": 2020
+      "year": 2020,
+      "acceptancerate": "8%"
     },
     {
       "name": "Course Grant",
@@ -281,23 +322,9 @@
       "year": 2020
     },
     {
-      "name": "Invited Member of Doctoral Consortium",
-      "institution": "MuC '20",
-      "url": "",
-      "month": "September",
-      "year": 2020
-    },
-    {
       "name": "Scholarship",
       "institution": "Riitta and Jorma J. Takanen Foundation",
       "url": "http://www.rjtsaatio.fi/",
-      "month": "June",
-      "year": 2020
-    },
-    {
-      "name": "Invited Member of Doctoral Consortium",
-      "institution": "EICS '20",
-      "url": "",
       "month": "June",
       "year": 2020
     },
@@ -331,13 +358,6 @@
       "year": 2019
     },
     {
-      "name": "Invited Member of Graduate Student Symposium",
-      "institution": "Creativity & Cognition '19",
-      "url": "",
-      "month": "June",
-      "year": 2019
-    },
-    {
       "name": "Travel Grant",
       "institution": "University of Oulu UniOGS",
       "event": "Metodifestivaali",
@@ -361,13 +381,6 @@
       "year": 2018
     },
     {
-      "name": "Distinction, M.Sc. Computer Science",
-      "institution": "University of Southampton",
-      "url": "https://www.southampton.ac.uk/",
-      "month": "November",
-      "year": 2015
-    },
-    {
       "name": "Erasmus Sokrates Scholarship",
       "institution": "German Academic Exchange Service (DAAD)",
       "url": "https://www.daad.de/",
@@ -387,7 +400,7 @@
       "name": "Organizing Committee",
       "url": "http://icdc2020.org/",
       "venue": "6th International Conference on Design Creativity",
-      "location": "Oulu, Finland",
+      "location": "Virtual (previously Oulu, Finland)",
       "series": "ICDC2020",
       "year": 2020
     },
@@ -402,6 +415,7 @@
       "name": "Organizer",
       "url": "https://creativity-workshops.github.io/cc19/",
       "venue": "Workshop on Crowd-Powered Interfaces for Creative Design Thinking",
+      "location": "San Diego, CA",
       "series": "C&C '19",
       "year": 2019
     },
@@ -417,6 +431,7 @@
       "name": "Organizer",
       "url": "https://dc2s2.github.io/2019/",
       "venue": "Workshop on Designing Crowd-powered Creativity Support Systems",
+      "location": "Glasgow, Scotland, UK",
       "series": "CHI '19",
       "year": 2019
     },
