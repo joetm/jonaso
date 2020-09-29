@@ -45,16 +45,16 @@ replace-cv:
 	# set the options in the CV
 	cd academic-cv; \
 		sed 's|\\excludefromprint{.*}||g' cv.tex > tmp.tex; \
-		sed 's|\\settoggle{showpositiondetails}{true}|\\settoggle{showpositiondetails}{false}|g' tmp.tex > cv.tex; \
-		sed 's|\\settoggle{showsummary}{true}|\\settoggle{showsummary}{false}|g' cv.tex > tmp.tex; \
-		sed 's|\\settoggle{shownationality}{true}|\\settoggle{shownationality}{false}|g' tmp.tex > cv.tex; \
-		sed 's|\\settoggle{showinterests}{true}|\\settoggle{showinterests}{false}|g' cv.tex > tmp.tex; \
-		sed 's|\\settoggle{showlinks}{false}|\\settoggle{showlinks}{true}|g' tmp.tex > cv.tex; \
-		sed 's|\\settoggle{showpublications}{false}|\\settoggle{showpublications}{true}|g' cv.tex > tmp2.tex; \
-		sed 's|\\settoggle{showtotalfunding}{true}|\\settoggle{showtotalfunding}{false}|g' tmp2.tex > tmp.tex; \
-		sed 's|\\settoggle{showreferences}{true}|\\settoggle{showreferences}{false}|g' tmp.tex > tmp2.tex; \
-		sed 's|\\settoggle{showpublicationsummary}{false}|\\settoggle{showpublicationsummary}{true}|g' tmp2.tex > tmp.tex; \
-		sed 's|\\settoggle{showmoney}{true}|\\settoggle{showmoney}{false}|g' tmp.tex > cv.tex
+		sed 's|\\definenewtoggle{showpositiondetails}{true}|\\definenewtoggle{showpositiondetails}{false}|g' tmp.tex > cv.tex; \
+		sed 's|\\definenewtoggle{showsummary}{true}|\\definenewtoggle{showsummary}{false}|g' cv.tex > tmp.tex; \
+		sed 's|\\definenewtoggle{shownationality}{true}|\\definenewtoggle{shownationality}{false}|g' tmp.tex > cv.tex; \
+		sed 's|\\definenewtoggle{showinterests}{true}|\\definenewtoggle{showinterests}{false}|g' cv.tex > tmp.tex; \
+		sed 's|\\definenewtoggle{showlinks}{false}|\\definenewtoggle{showlinks}{true}|g' tmp.tex > cv.tex; \
+		sed 's|\\definenewtoggle{showpublications}{false}|\\definenewtoggle{showpublications}{true}|g' cv.tex > tmp2.tex; \
+		sed 's|\\definenewtoggle{showtotalfunding}{true}|\\definenewtoggle{showtotalfunding}{false}|g' tmp2.tex > tmp.tex; \
+		sed 's|\\definenewtoggle{showreferences}{true}|\\definenewtoggle{showreferences}{false}|g' tmp.tex > tmp2.tex; \
+		sed 's|\\definenewtoggle{showpublicationsummary}{false}|\\definenewtoggle{showpublicationsummary}{true}|g' tmp2.tex > tmp.tex; \
+		sed 's|\\definenewtoggle{showmoney}{true}|\\definenewtoggle{showmoney}{false}|g' tmp.tex > cv.tex
 
 build-cv:
 	# build the publication list
