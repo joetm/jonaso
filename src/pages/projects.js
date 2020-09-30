@@ -94,9 +94,13 @@ class Projects extends React.Component {
                               }
                             </Item.Extra>
                             <Item.Header dangerouslySetInnerHTML={description}></Item.Header>
-                            <Item.Extra>
-                            	<p>{funding}</p>
-                            </Item.Extra>
+
+                            {
+                            	funding &&
+	                            <Item.Extra>
+    	                        	<p>{funding}</p>
+        	                    </Item.Extra>
+         	                  }
 
                             {
                               medium.length > 0 &&
