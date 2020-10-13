@@ -19,8 +19,10 @@ default:
 pre-build:
 	# 	cd ./stat_aggregator; \
 	# 		./fetch_PCS.py
+
 	# academic-cv folder exists?
 	# [ -d "academic-cv" ] && rm -rf academic-cv
+
 	make fetch-cv
 	make replace-cv
 	make build-cv
@@ -65,10 +67,12 @@ replace-cv:
 		sed 's|\\definenewtoggle{showinterests}{true}|\\definenewtoggle{showinterests}{false}|g' cv.tex > tmp.tex; \
 		sed 's|\\definenewtoggle{shownationality}{true}|\\definenewtoggle{shownationality}{false}|g' tmp.tex > cv.tex; \
 		sed 's|\\definenewtoggle{showpublications}{false}|\\definenewtoggle{showpublications}{true}|g' cv.tex > tmp.tex; \
-		sed 's|\\definenewtoggle{showlinks}{false}|\\definenewtoggle{showlinks}{true}|g' tmp.tex > cv.tex; \
+		sed 's|\\definenewtoggle{showselectedpublications}{true}|\\definenewtoggle{showselectedpublications}{false}|g' tmp.tex > cv.tex; \
 		sed 's|\\definenewtoggle{showfunding}{false}|\\definenewtoggle{showfunding}{true}|g' cv.tex > tmp.tex; \
-		sed 's|\\definenewtoggle{showtotalfunding}{true}|\\definenewtoggle{showtotalfunding}{false}|g' tmp.tex > cv.tex; \
+		sed 's|\\definenewtoggle{showgranttitles}{true}|\\definenewtoggle{showgranttitles}{false}|g' tmp.tex > cv.tex; \
 		sed 's|\\definenewtoggle{showreferences}{true}|\\definenewtoggle{showreferences}{false}|g' cv.tex > tmp.tex; \
+		sed 's|\\definenewtoggle{showlinks}{false}|\\definenewtoggle{showlinks}{true}|g' tmp.tex > cv.tex; \
+		sed 's|\\definenewtoggle{showtotalfunding}{true}|\\definenewtoggle{showtotalfunding}{false}|g' cv.tex > tmp.tex; \
 		sed 's|\\definenewtoggle{showpublicationsummary}{false}|\\definenewtoggle{showpublicationsummary}{true}|g' tmp.tex > tmp2.tex; \
 		sed 's|\\definenewtoggle{showmoney}{true}|\\definenewtoggle{showmoney}{false}|g' tmp2.tex > cv.tex
 
