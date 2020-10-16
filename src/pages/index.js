@@ -73,6 +73,9 @@ class Home extends React.Component {
     }
   }
   render() {
+
+console.info(process.env.NODE_ENV);
+
     return (
       <Layout>
         <Container style={{marginBottom: '14px'}}>
