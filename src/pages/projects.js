@@ -3,15 +3,6 @@ import { Image, Header, Item, Grid, Container } from 'semantic-ui-react'
 import Layout from "../components/layout"
 import { spacer } from "../common.js"
 import ProjectItem from "../components/ProjectItem"
-// import img_idlab from "../img/idlab.jpg"
-// import img_ikon  from "../img/ikon.png"
-// import crowdui   from "../img/crowdui-vision.jpg"
-// import prodxml   from "../img/prodxml.jpg"
-// import kano      from "../img/kano-variation.jpg"
-// import sns       from "../img/sns-analysis.png"
-// import skillsplanner from "../img/skillsplanner.png"
-// import img_cpcw  from "../img/cpcw.jpg"
-
 
 
 const _PROJECTS = 'https://raw.githubusercontent.com/joetm/jonaso/master/src/projects.json'
