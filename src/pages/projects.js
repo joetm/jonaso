@@ -6,6 +6,7 @@ import ProjectItem from "../components/ProjectItem"
 
 
 const _PROJECTS = 'https://raw.githubusercontent.com/joetm/jonaso/master/src/projects.json'
+// const _PUBLICATIONS = 'https://raw.githubusercontent.com/joetm/jonaso/master/public/static/references-type.json'
 
 
 const CustomImage = ({image}) => (
@@ -24,11 +25,10 @@ const CustomImage = ({image}) => (
 // const Banner = (src, alt, title) => <img style={{width:'100%'}} src={src} alt={alt} title={title} />
 
 
-
-
 class Projects extends React.Component {
   state = {
     projects: [],
+    publications: {},
   }
   componentDidMount = () => {
     // get projects
@@ -40,9 +40,19 @@ class Projects extends React.Component {
       return response.json()
     })
     .then(projects => this.setState({projects}))
+    // get publications
+    // fetch(_PUBLICATIONS)
+    // .then(response => {
+    //   if (response.status >= 400) {
+    //     throw new Error("Bad response from server")
+    //   }
+    //   return response.json()
+    // })
+    // .then(publications => this.setState({publications}))
   }
   render() {
-    const { projects } = this.state
+    const { projects, publications } = this.state
+    console.log(publications)
     // const keys = Object.keys(projects).reverse()
     return (
       <Layout>
@@ -56,7 +66,7 @@ class Projects extends React.Component {
               {
                 projects.map(project => {
                 	const { title, subtitle, description, date, organisation, organisation_href, funding, img,
-                    medium = [], presentations = [], workshops = [] } = project
+                    medium = [], presentations = [], workshops = [], publications = [] } = project
                   return (
                     <Grid key={`grid_${title}`} style={{marginBottom:'20px'}}>
 
@@ -115,6 +125,20 @@ class Projects extends React.Component {
                             }
                             {
                               workshops.map((pres, i) => <ProjectItem key={`${title}_${i}`} item={pres} i={i} /> )
+                            }
+
+                            {
+                            /*
+                              publications.length > 0 &&
+                                <Header size="small">Publications</Header>
+                            */
+                            }
+                            {
+                            /*
+                              publications.map(pub => <div key={pub}>
+                                  <a href={`http://jonaso.de/static/publications_bib.html#${pub}`}>{pub}</a>
+                                </div> )
+                            */
                             }
 
                           </Item.Content>
