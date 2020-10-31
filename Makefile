@@ -25,7 +25,11 @@ pre-build:
 
 	make fetch-cv
 	make replace-cv
+	make bib-json
 	make build-cv
+
+bib-json:
+	pandoc-citeproc --bib2json ./src/bibliography/publications.bib > ./public/static/publications.json
 
 post-build:
 	cp ./src/travel.json ./public/
