@@ -6,7 +6,7 @@ import ProjectItem from "../components/ProjectItem"
 
 
 const _PROJECTS = 'https://raw.githubusercontent.com/joetm/jonaso/master/src/projects.json'
-// const _PUBLICATIONS = 'https://raw.githubusercontent.com/joetm/jonaso/master/public/static/references-type.json'
+// const _PUBLICATIONS = 'https://raw.githubusercontent.com/joetm/jonaso/master/public/static/publications.json'
 
 
 const CustomImage = ({image}) => (
@@ -28,14 +28,14 @@ const CustomImage = ({image}) => (
 class Projects extends React.Component {
   state = {
     projects: [],
-    publications: {},
+    // publications: [],
   }
   componentDidMount = () => {
     // get projects
     fetch(_PROJECTS)
     .then(response => {
       if (response.status >= 400) {
-        throw new Error("Bad response from server")
+        throw new Error("Bad response from server: Could not get projects")
       }
       return response.json()
     })
@@ -44,15 +44,54 @@ class Projects extends React.Component {
     // fetch(_PUBLICATIONS)
     // .then(response => {
     //   if (response.status >= 400) {
-    //     throw new Error("Bad response from server")
+    //     throw new Error("Bad response from server: Could not get publications")
     //   }
     //   return response.json()
     // })
     // .then(publications => this.setState({publications}))
   }
+  // findPublicationByKey = (key) => {
+  //   // get the right publication
+  //   let thePub = this.state.publications.filter(pub => {
+  //     return pub.id === key
+  //   })
+  //   thePub = thePub[0]
+  //   if (!thePub) {
+  //     return
+  //   }
+  //   console.log(thePub)
+  //   return (
+  //     <List key={key}>
+  //       <List.Item>
+  //         <List.Icon name='newspaper' />
+  //         <List.Content>{
+  //           thePub.URL ?
+  //             <a href={thePub.URL}>{thePub.title}</a>
+  //             :
+  //             `${thePub.title}`
+  //         }
+  //         </List.Content>
+  //       </List.Item>
+  //     </List>
+  //   )
+  // }
+
+/*
+      <span>{thePub.author.map(a => <span>{a.family}, {a.given}</span>)}: {thePub.title}. ({thePub.year})
+        {thePub.DOI &&
+          <span>https://doi.org/{thePub.DOI}</span>
+        }
+      </span>
+*/
+
+      // { (month && year) &&
+      //   <List.Item>
+      //     <List.Content>{joinIfNotNull([metadata, joinIfNotNull([month, year], ' ')])}</List.Content>
+      //   </List.Item>
+      // }
+
   render() {
     const { projects, publications } = this.state
-    console.log(publications)
     // const keys = Object.keys(projects).reverse()
     return (
       <Layout>
@@ -128,17 +167,15 @@ class Projects extends React.Component {
                             }
 
                             {
-                            /*
+                              /*
                               publications.length > 0 &&
                                 <Header size="small">Publications</Header>
-                            */
                             }
                             {
-                            /*
-                              publications.map(pub => <div key={pub}>
-                                  <a href={`http://jonaso.de/static/publications_bib.html#${pub}`}>{pub}</a>
+                              publications.map(pubkey => <div key={pubkey}>
+                                  {this.findPublicationByKey(pubkey)}
                                 </div> )
-                            */
+                                */
                             }
 
                           </Item.Content>
