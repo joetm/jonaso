@@ -1,148 +1,538 @@
 {
     "documents": [
         {
-            "keywords": "Open Science, e-Science, e-Research, Research Data > Open Data > Issues",
-            "recog": 0,
-            "title": "3411292",
-            "filename": "-3411292.pdf",
-            "authors": [],
-            "modified": 1606902583,
-            "priority": 0,
+            "level": 2,
+            "priority": 1,
             "year": 2020,
-            "level": 3
+            "filename": "!How to avoid being duped by survivorship bias - Richard Hughes-Jones.pdf",
+            "title": "How to avoid being duped by survivorship bias",
+            "keywords": "Biases > Survivorship Bias",
+            "recog": 1,
+            "authors": [],
+            "modified": 1607599799
         },
         {
-            "keywords": "Design, HCI, UI, UX > Persuasive Systems, Persuasive Technology > Digital Nudging > 23 Ways to Nudge Framework",
+            "level": 2,
+            "priority": 0,
+            "year": 2020,
+            "filename": "-Human-made materials now outweigh Earth's entire biomass \u2013 study _ Environment _ The Guardian.pdf",
+            "title": "Human-made materials now outweigh Earth's entire biomass \u2013 study _ Environment _ The Guardian",
+            "keywords": "Earth > Mass",
+            "recog": 0,
+            "authors": [
+                "Sandra Laville"
+            ],
+            "modified": 1607599612
+        },
+        {
+            "level": 2,
+            "priority": 0,
+            "year": 2020,
+            "filename": "-SRC Newsletter \u2013 Winter 2019 _ Survey Research Centre _ University of Waterloo.pdf",
+            "title": "Quality over Quantity: the Pros and Cons of Using Crowdsourcing Platforms to Find Survey Respondents",
+            "keywords": "Crowdsourcing, Human Computation > Issues",
             "recog": 1,
-            "title": "23 Ways to Nudge: A Review of Technology-Mediated Nudging in Human-Computer Interaction",
+            "authors": [],
+            "modified": 1607599293
+        },
+        {
+            "level": 3,
+            "priority": 0,
+            "year": 2020,
+            "filename": "-It\u2019s Time to Do Something_ Mitigating the Negative Impacts of Computing Through a Change to the Peer Review Process - ACM FCA.pdf",
+            "title": "It\u2019s Time to Do Something: Mitigating the Negative Impacts of Computing Through a Change to the Peer Review Process",
+            "keywords": "Peer Review > Issues > Negative Impacts of Technology",
+            "recog": 1,
+            "authors": [],
+            "modified": 1607593857
+        },
+        {
+            "level": 1,
+            "priority": 0,
+            "year": 2020,
+            "filename": "-2010.02401.pdf",
+            "title": "Tactical Patterns for Grassroots Urban Repair",
+            "keywords": "Virtual Reality",
+            "recog": 1,
+            "authors": [
+                "Sarah Cooney",
+                "Barath Raghavan"
+            ],
+            "modified": 1607531660
+        },
+        {
+            "level": 2,
+            "priority": 0,
+            "year": 2020,
+            "filename": "-Milton Friedman was wrong on the corporation.pdf",
+            "title": "Milton Friedman was wrong on the corporation",
+            "keywords": "Business > Profit Maximization",
+            "recog": 0,
+            "authors": [
+                "James Ferguson",
+                "Martin Wolf"
+            ],
+            "modified": 1607521824
+        },
+        {
+            "level": 2,
+            "priority": 3,
+            "year": 2020,
+            "filename": "!!!Deep-Learning-with-PyTorch.pdf",
+            "title": "Deep-Learning-with-PyTorch",
+            "keywords": "Machine Learning > Deep Learning",
+            "recog": 0,
+            "authors": [
+                "Eli Stevens",
+                "Luca Antiga",
+                "Thomas Viehmann",
+                "Soumith Chintala"
+            ],
+            "modified": 1607424245
+        },
+        {
+            "level": 3,
+            "priority": 1,
+            "year": 2020,
+            "filename": "!2002.01092.pdf",
+            "title": "Human-centered Explainable AI: Towards a Reflective Sociotechnical Approach",
+            "keywords": "Machine Learning > Explainable AI, XAI > Human-centered Explainable AI",
+            "recog": 1,
+            "authors": [
+                "Mark O. Riedl"
+            ],
+            "modified": 1607418242
+        },
+        {
+            "level": 3,
+            "priority": 0,
+            "year": 2013,
+            "filename": "-2470654.2470716.pdf",
+            "title": "Configuring Participation: On How We Involve People In Design",
+            "keywords": "Design, HCI, UI, UX > Co-Creation, Co-Design > Configuring Participation",
+            "recog": 1,
+            "authors": [
+                "John Vines",
+                "Rachel Clarke",
+                "Peter Wright",
+                "John McCarthy",
+                "Patrick Olivier"
+            ],
+            "modified": 1607418041
+        },
+        {
+            "level": 4,
+            "priority": 1,
+            "year": 2020,
+            "filename": "!ML Interpretability_ LIME and SHAP in prose and code - Cloudera Blog.pdf",
+            "title": "Cloudera Operational Database Infrastructure Planning Considerations",
+            "keywords": "Machine Learning > Explainable AI, XAI > Interpretability > LIME, SHAP",
+            "recog": 1,
+            "authors": [
+                "Victor Dibia"
+            ],
+            "modified": 1607417676
+        },
+        {
+            "level": 4,
+            "priority": 1,
+            "year": 2020,
+            "filename": "!Idea Behind LIME and SHAP. Intuition behind ML interpretation\u2026 _ by ashutosh nayak _ Towards Data Science.pdf",
+            "title": "Idea Behind LIME and SHAP. Intuition behind ML interpretation\u2026 _ by ashutosh nayak _ Towards Data Science",
+            "keywords": "Machine Learning > Explainable AI, XAI > Interpretability > LIME, SHAP",
+            "recog": 0,
+            "authors": [],
+            "modified": 1607417485
+        },
+        {
+            "level": 3,
+            "priority": 2,
+            "year": 2020,
+            "filename": "!!2020.coling-main.551.pdf",
+            "title": "Mining Crowdsourcing Problems from Discussion Forums of Workers",
+            "keywords": "Crowdsourcing, Human Computation > Issues > Worker Problems",
+            "recog": 1,
+            "authors": [
+                "Zahra Nouri",
+                "Gregor Engels"
+            ],
+            "modified": 1607268277
+        },
+        {
+            "level": 3,
+            "priority": 0,
+            "year": 2020,
+            "filename": "-Companies are now writing reports tailored for AI readers \u2013 and it should worry us _ Big data _ The Guardian.pdf",
+            "title": "Companies are now writing reports tailored for AI readers \u2013 and it should worry us _ Big data _ The Guardian",
+            "keywords": "Machine Learning > Applications > Company Reports",
+            "recog": 0,
+            "authors": [
+                "John Naughton"
+            ],
+            "modified": 1607258306
+        },
+        {
+            "level": 5,
+            "priority": 1,
+            "year": 2020,
+            "filename": "!The two-year fight to stop Amazon from selling face recognition to the police _ MIT Technology Review.pdf",
+            "title": "The two-year fight to stop Amazon from selling face recognition to the police _ MIT Technology Review",
+            "keywords": "Machine Learning > Issues > Bias, Discrimination > Gender Bias > Gender Shades",
+            "recog": 0,
+            "authors": [
+                "Karen Hao"
+            ],
+            "modified": 1607256522
+        },
+        {
+            "level": 2,
+            "priority": 0,
+            "year": 2020,
+            "filename": "-We read the paper that forced Timnit Gebru out of Google. Here\u2019s what it says _ MIT Technology Review.pdf",
+            "title": "We read the paper that forced Timnit Gebru out of Google. Here\u2019s what it says _ MIT Technology Review",
+            "keywords": "Machine Learning > Issues",
+            "recog": 0,
+            "authors": [
+                "Karen Hao"
+            ],
+            "modified": 1607256449
+        },
+        {
+            "level": 3,
+            "priority": 0,
+            "year": 2020,
+            "filename": "-The Venezuela_Silvercorp USA Saga Keeps Getting Weirder - bellingcat.pdf",
+            "title": "The Venezuela/Silvercorp USA Saga Keeps Getting Weirder",
+            "keywords": "War > Merceneries > Silvercorp USA",
+            "recog": 1,
+            "authors": [
+                "Juan Guaido",
+                "Sergio Vergara"
+            ],
+            "modified": 1607170308
+        },
+        {
+            "level": 3,
+            "priority": 0,
+            "year": 2020,
+            "filename": "-Ex-Green Beret led failed attempt to oust Venezuela's Maduro.pdf",
+            "title": "Ex-Green Beret led failed attempt to oust Venezuela's Maduro",
+            "keywords": "War > Merceneries > Silvercorp USA",
+            "recog": 0,
+            "authors": [],
+            "modified": 1607169282
+        },
+        {
+            "level": 3,
+            "priority": 0,
+            "year": 2020,
+            "filename": "-The Invasion of Venezuela, Brought To You By Silvercorp USA - bellingcat.pdf",
+            "title": "The Invasion of Venezuela, Brought To You By Silvercorp USA",
+            "keywords": "War > Merceneries > Silvercorp USA",
+            "recog": 1,
+            "authors": [
+                "Hugo Chavez"
+            ],
+            "modified": 1607169102
+        },
+        {
+            "level": 3,
+            "priority": 0,
+            "year": 2020,
+            "filename": "-Petro (cryptocurrency) - Wikipedia.pdf",
+            "title": "Petro (cryptocurrency) - Wikipedia",
+            "keywords": "Blockchain, Bitcoin > Cryptocurrencies > Petro (Venezuela)",
+            "recog": 0,
+            "authors": [],
+            "modified": 1607169007
+        },
+        {
+            "level": 1,
+            "priority": 0,
+            "year": 2020,
+            "filename": "-Venezuelan presidential crisis - Wikipedia.pdf",
+            "title": "Venezuelan presidential crisis",
+            "keywords": "Venezuela",
+            "recog": 1,
+            "authors": [
+                "Juan Guaid\u00f3",
+                "Nicol\u00e1s Maduro"
+            ],
+            "modified": 1607168834
+        },
+        {
+            "level": 2,
+            "priority": 0,
+            "year": 2020,
+            "filename": "-2010 flash crash - Wikipedia.pdf",
+            "title": "2010 flash crash - Wikipedia",
+            "keywords": "Finance > Flash Crash 2010",
+            "recog": 0,
+            "authors": [
+                "Navinder Singh Sarao"
+            ],
+            "modified": 1607156944
+        },
+        {
+            "level": 2,
+            "priority": 3,
+            "year": 2020,
+            "filename": "!!![Aaron Hurst] The Purpose Economy How Your Desire for Impact, Personal Growth and Community Is Changing the World.pdf",
+            "title": "Advance Acclaim",
+            "keywords": "Purpose-Driven Organisations > Purpose Economy",
+            "recog": 1,
+            "authors": [
+                "\u201cAaron Hurst",
+                "Arianna Huffington",
+                "Daniel H. Pink",
+                "Chan Suh",
+                "Jerry Colonna",
+                "Markus Hipp",
+                "Michele Kahane",
+                "Stephen Jordan",
+                "Jim Schorr",
+                "Roberto Orci"
+            ],
+            "modified": 1607085275
+        },
+        {
+            "level": 5,
+            "priority": 3,
+            "year": 2018,
+            "filename": "!!!buolamwini18a.pdf",
+            "title": "Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification\u2217",
+            "keywords": "Machine Learning > Issues > Bias, Discrimination > Gender Bias > Gender Shades",
+            "recog": 1,
+            "authors": [
+                "Joy Buolamwini",
+                "Timnit Gebru",
+                "Christo Wilson"
+            ],
+            "modified": 1607084087
+        },
+        {
+            "level": 3,
+            "priority": 0,
+            "year": 2017,
+            "filename": "-nbnfi-fe201708087904.pdf",
+            "title": "On Creative Metaphors in Technology Design: Case \u201cMagic\u201d",
+            "keywords": "Metaphors, Meaning > Example Metaphors > Magic",
+            "recog": 1,
+            "authors": [],
+            "modified": 1607077837
+        },
+        {
+            "level": 3,
+            "priority": 1,
+            "year": "N/A",
+            "filename": "!HCOMP_2020_paper_94.pdf",
+            "title": "Qualification Labour: A Fair Wage Isn\u2019t Enough if Workers Need to Do 5,000 Low Paid Tasks to Qualify for Your Task",
+            "keywords": "Crowdsourcing, Human Computation > Issues > Qualification Threshold",
+            "recog": 1,
+            "authors": [
+                "Jonathan K. Kummerfeld"
+            ],
+            "modified": 1607077439
+        },
+        {
+            "level": 4,
+            "priority": 0,
+            "year": 2020,
+            "filename": "-EUNIS_2020_paper_67.pdf",
+            "title": "The Transfer Dashboard: Integrating the Third Mission into the University Infrastructure",
+            "keywords": "Knowledge > Knowledge Transfer, Knowledge Sharing > Systems > Transfer Dashboard",
+            "recog": 1,
+            "authors": [
+                "Jan Bernoth",
+                "Ulrike Lucke"
+            ],
+            "modified": 1607067587
+        },
+        {
+            "level": 2,
+            "priority": 3,
+            "year": 2019,
+            "filename": "!!!simplypsychology.org-Exp-Method.pdf",
+            "title": "Experimental Method",
+            "keywords": "Methods > Experiments",
+            "recog": 1,
+            "authors": [],
+            "modified": 1607007124
+        },
+        {
+            "level": 4,
+            "priority": 3,
+            "year": 2014,
+            "filename": "!!!2556288.2557004.pdf",
+            "title": "Is Once Enough? On the Extent and Content of Replications in Human-Computer Interaction",
+            "keywords": "Design, HCI, UI, UX > CHI > Issues > Replication",
+            "recog": 1,
+            "authors": [
+                "Kasper Hornb\u00e6k",
+                "S\u00f8ren S. Sander",
+                "Javier Bargas-Avila",
+                "Jakob Grue Simonsen"
+            ],
+            "modified": 1607006975
+        },
+        {
+            "level": 2,
+            "priority": 0,
+            "year": 2020,
+            "filename": "-d41586-020-02512-0.pdf",
+            "title": "d41586-020-02512-0",
+            "keywords": "Peer Review > Signing",
+            "recog": 0,
+            "authors": [],
+            "modified": 1607006767
+        },
+        {
+            "priority": 0,
+            "year": 2020,
+            "recog": 0,
+            "filename": "-3411292.pdf",
+            "title": "3411292",
+            "level": 3,
+            "keywords": "Open Science, e-Science, e-Research, Research Data > Open Data > Issues",
+            "modified": 1606902583,
+            "authors": []
+        },
+        {
+            "priority": 3,
+            "year": 2019,
+            "recog": 1,
             "filename": "!!!3290605.3300733.pdf",
+            "title": "23 Ways to Nudge: A Review of Technology-Mediated Nudging in Human-Computer Interaction",
+            "level": 4,
+            "keywords": "Design, HCI, UI, UX > Persuasive Systems, Persuasive Technology > Digital Nudging > 23 Ways to Nudge Framework",
+            "modified": 1606902515,
             "authors": [
                 "Ana Caraban",
                 "Evangelos Karapanos"
-            ],
-            "modified": 1606902515,
-            "priority": 3,
-            "year": 2019,
-            "level": 4
+            ]
         },
         {
-            "keywords": "Design, HCI, UI, UX > Persuasive Systems, Persuasive Technology > Digital Nudging > Nudge Deck",
+            "priority": 3,
+            "year": 2020,
             "recog": 1,
-            "title": "The Nudge Deck: A Design Support Tool for Technology-Mediated Nudging",
             "filename": "!!!3357236.3395485.pdf",
+            "title": "The Nudge Deck: A Design Support Tool for Technology-Mediated Nudging",
+            "level": 4,
+            "keywords": "Design, HCI, UI, UX > Persuasive Systems, Persuasive Technology > Digital Nudging > Nudge Deck",
+            "modified": 1606902508,
             "authors": [
                 "Ana Caraban",
                 "Loukas Konstantinou",
                 "Evangelos Karapanos"
-            ],
-            "modified": 1606902508,
-            "priority": 3,
-            "year": 2020,
-            "level": 4
+            ]
         },
         {
-            "keywords": "Design, HCI, UI, UX > Persuasive Systems, Persuasive Technology > Digital Nudging > 23 Ways to Nudge Framework",
+            "priority": 2,
+            "year": 2020,
             "recog": 0,
-            "title": "3414464",
             "filename": "!!3414464.pdf",
+            "title": "3414464",
+            "level": 4,
+            "keywords": "Design, HCI, UI, UX > Persuasive Systems, Persuasive Technology > Digital Nudging > 23 Ways to Nudge Framework",
+            "modified": 1606901803,
             "authors": [
                 "Ana Caraban"
-            ],
-            "modified": 1606901803,
-            "priority": 2,
-            "year": 2020,
-            "level": 4
+            ]
         },
         {
-            "keywords": "Design, HCI, UI, UX > Design-Led Innovation > Kuhn's Loss",
+            "priority": 0,
+            "year": 2020,
             "recog": 0,
-            "title": "3418604",
             "filename": "-3418604.pdf",
-            "authors": [],
+            "title": "3418604",
+            "level": 3,
+            "keywords": "Design, HCI, UI, UX > Design-Led Innovation > Kuhn's Loss",
             "modified": 1606901119,
-            "priority": 0,
-            "year": 2020,
-            "level": 3
+            "authors": []
         },
         {
-            "keywords": "Literature > Wisdom Literature",
+            "priority": 0,
+            "year": 2020,
             "recog": 0,
-            "title": "Wisdom literature - Wikipedia",
             "filename": "-Wisdom literature - Wikipedia.pdf",
-            "authors": [],
+            "title": "Wisdom literature - Wikipedia",
+            "level": 2,
+            "keywords": "Literature > Wisdom Literature",
             "modified": 1606812371,
-            "priority": 0,
-            "year": 2020,
-            "level": 2
+            "authors": []
         },
         {
-            "keywords": "Machine Learning > Issues > Privacy > Face Recognition, Voice Recognition > Clearview AI",
+            "priority": 0,
+            "year": 2020,
             "recog": 1,
-            "title": "Here\u2019s how you might be able to get yours",
             "filename": "-I Got My File From Clearview AI, and It Freaked Me Out _ by Thomas Smith _ OneZero.pdf",
+            "title": "Here\u2019s how you might be able to get yours",
+            "level": 5,
+            "keywords": "Machine Learning > Issues > Privacy > Face Recognition, Voice Recognition > Clearview AI",
+            "modified": 1606648994,
             "authors": [
                 "Thomas Smith"
-            ],
-            "modified": 1606648994,
-            "priority": 0,
-            "year": 2020,
-            "level": 5
+            ]
         },
         {
-            "keywords": "Counter Surveillance > Face Recognition",
+            "priority": 0,
+            "year": 2020,
             "recog": 0,
-            "title": "This 'Anonymizer' Tool Replaces Your Face With a Fake to Trick Facial Recognition _ Debugger",
             "filename": "-This 'Anonymizer' Tool Replaces Your Face With a Fake to Trick Facial Recognition _ Debugger.pdf",
+            "title": "This 'Anonymizer' Tool Replaces Your Face With a Fake to Trick Facial Recognition _ Debugger",
+            "level": 2,
+            "keywords": "Counter Surveillance > Face Recognition",
+            "modified": 1606648778,
             "authors": [
                 "Donald Iain Smith/Getty"
-            ],
-            "modified": 1606648778,
-            "priority": 0,
-            "year": 2020,
-            "level": 2
+            ]
         },
         {
-            "keywords": "Healthcare > Elderly Care",
+            "priority": 0,
+            "year": 2020,
             "recog": 1,
-            "title": "CARE: Context\u2010awareness for elderly care",
             "filename": "-Klakegg2020_Article_CAREContext-awarenessForElderl.pdf",
-            "authors": [],
+            "title": "CARE: Context\u2010awareness for elderly care",
+            "level": 2,
+            "keywords": "Healthcare > Elderly Care",
             "modified": 1606641612,
-            "priority": 0,
-            "year": 2020,
-            "level": 2
+            "authors": []
         },
         {
-            "keywords": "Crowdsourcing, Human Computation > Applications > Writing",
+            "priority": 0,
+            "year": 2020,
             "recog": 0,
-            "title": "US20200349596A1",
             "filename": "-US20200349596A1.pdf",
+            "title": "US20200349596A1",
+            "level": 3,
+            "keywords": "Crowdsourcing, Human Computation > Applications > Writing",
+            "modified": 1606228133,
             "authors": [
                 "Semiha Ece Kamar"
-            ],
-            "modified": 1606228133,
-            "priority": 0,
-            "year": 2020,
-            "level": 3
+            ]
         },
         {
-            "keywords": "Crowdsourcing, Human Computation > Issues > Ethics",
-            "recog": 1,
-            "title": "Are all Bresearch fields^ equal? Rethinking practice for the use of data from crowdsourcing market places",
-            "filename": "!!Gleibs2017_Article_AreAllResearchFieldsEqualRethi.pdf",
-            "authors": [
-                "Ilka H. Gleibs"
-            ],
-            "modified": 1606204380,
             "priority": 2,
             "year": 2017,
-            "level": 3
+            "recog": 1,
+            "filename": "!!Gleibs2017_Article_AreAllResearchFieldsEqualRethi.pdf",
+            "title": "Are all Bresearch fields^ equal? Rethinking practice for the use of data from crowdsourcing market places",
+            "level": 3,
+            "keywords": "Crowdsourcing, Human Computation > Issues > Ethics",
+            "modified": 1606204380,
+            "authors": [
+                "Ilka H. Gleibs"
+            ]
         },
         {
-            "keywords": "Personal Informatics",
+            "priority": 2,
+            "year": 2020,
             "recog": 1,
-            "title": "Mapping and Taking Stock of the Personal Informatics Literature",
             "filename": "!!depstein_imwut20.pdf",
+            "title": "Mapping and Taking Stock of the Personal Informatics Literature",
+            "level": 1,
+            "keywords": "Personal Informatics",
+            "modified": 1606125747,
             "authors": [
                 "DANIEL A. EPSTEIN",
                 "CLARA CALDEIRA",
@@ -163,103 +553,87 @@
                 "Sazeda Sultana",
                 "Elizabeth V. Eikey",
                 "Yunan Chen"
-            ],
-            "modified": 1606125747,
-            "priority": 2,
-            "year": 2020,
-            "level": 1
+            ]
         },
         {
-            "keywords": "Design, HCI, UI, UX > Design-Led Innovation",
-            "recog": 0,
-            "title": "0DLIOverview",
-            "filename": "-0DLIOverview.pdf",
-            "authors": [],
-            "modified": 1606058320,
             "priority": 0,
             "year": 2007,
-            "level": 2
+            "recog": 0,
+            "filename": "-0DLIOverview.pdf",
+            "title": "0DLIOverview",
+            "level": 2,
+            "keywords": "Design, HCI, UI, UX > Design-Led Innovation",
+            "modified": 1606058320,
+            "authors": []
         },
         {
-            "keywords": "Arctic Research",
+            "priority": 1,
+            "year": 2020,
             "recog": 0,
-            "title": "3416085",
             "filename": "!3416085.pdf",
-            "authors": [],
+            "title": "3416085",
+            "level": 1,
+            "keywords": "Arctic Research",
             "modified": 1606041483,
-            "priority": 1,
-            "year": 2020,
-            "level": 1
+            "authors": []
         },
         {
-            "keywords": "Design, HCI, UI, UX > CHI > Learning, Education",
+            "priority": 1,
+            "year": 2020,
             "recog": 0,
-            "title": "3411290",
             "filename": "!3411290.pdf",
-            "authors": [],
+            "title": "3411290",
+            "level": 3,
+            "keywords": "Design, HCI, UI, UX > CHI > Learning, Education",
             "modified": 1606040657,
+            "authors": []
+        },
+        {
             "priority": 1,
             "year": 2020,
-            "level": 3
-        },
-        {
-            "keywords": "Design, HCI, UI, UX > CHI > Issues > Replication",
-            "recog": 1,
-            "title": "Is Once Enough? On the Extent and Content of Replications in Human-Computer Interaction",
-            "filename": "!!!2556288.2557004.pdf",
-            "authors": [
-                "Kasper Hornb\u00e6k",
-                "S\u00f8ren S. Sander",
-                "Javier Bargas-Avila",
-                "Jakob Grue Simonsen"
-            ],
-            "modified": 1606036865,
-            "priority": 3,
-            "year": 2014,
-            "level": 4
-        },
-        {
-            "keywords": "AI > Issues > Hype",
             "recog": 0,
-            "title": "Four reasons why hyping AI is an ethical problem _ by Dorothea Baur _ Nov, 2020 _ Medium",
             "filename": "!Four reasons why hyping AI is an ethical problem _ by Dorothea Baur _ Nov, 2020 _ Medium.pdf",
+            "title": "Four reasons why hyping AI is an ethical problem _ by Dorothea Baur _ Nov, 2020 _ Medium",
+            "level": 3,
+            "keywords": "AI > Issues > Hype",
+            "modified": 1605965189,
             "authors": [
                 "Dorothea Baur"
-            ],
-            "modified": 1605965189,
-            "priority": 1,
-            "year": 2020,
-            "level": 3
+            ]
         },
         {
-            "keywords": "CHI > Contributions to HCI",
-            "recog": 0,
-            "title": "Contributions to HCI _ CHI 2014",
-            "filename": "!!!Contributions to HCI _ CHI 2014.pdf",
-            "authors": [],
-            "modified": 1605957989,
             "priority": 3,
             "year": 2020,
-            "level": 2
+            "recog": 0,
+            "filename": "!!!Contributions to HCI _ CHI 2014.pdf",
+            "title": "Contributions to HCI _ CHI 2014",
+            "level": 2,
+            "keywords": "CHI > Contributions to HCI",
+            "modified": 1605957989,
+            "authors": []
         },
         {
-            "keywords": "NLP > Issues > English Language > Bender Rule",
-            "recog": 0,
-            "title": "Bender-SDSS-2019",
-            "filename": "!Bender-SDSS-2019.pdf",
-            "authors": [
-                "Emily M. Bender"
-            ],
-            "modified": 1605873251,
             "priority": 1,
             "year": 2019,
-            "level": 4
+            "recog": 0,
+            "filename": "!Bender-SDSS-2019.pdf",
+            "title": "Bender-SDSS-2019",
+            "level": 4,
+            "keywords": "NLP > Issues > English Language > Bender Rule",
+            "modified": 1605873251,
+            "authors": [
+                "Emily M. Bender"
+            ]
         },
         {
-            "keywords": "Machine Learning > Applications > Demographic Inference",
+            "priority": 0,
+            "year": 2020,
             "recog": 0,
-            "title": "isbn9789526227467",
             "filename": "-isbn9789526227467.pdf",
+            "title": "isbn9789526227467",
+            "level": 3,
+            "keywords": "Machine Learning > Applications > Demographic Inference",
+            "modified": 1605797417,
             "authors": [
                 "Santeri Palviainen",
                 "Anne Tuomisto",
@@ -270,30 +644,30 @@
                 "Docent Susanna Pirttikangas",
                 "Atte Joonas Oksanen",
                 "Panagiotis Karampelas"
-            ],
-            "modified": 1605797417,
-            "priority": 0,
-            "year": 2020,
-            "level": 3
+            ]
         },
         {
-            "keywords": "Languages > Zaum",
+            "priority": 0,
+            "year": 2020,
             "recog": 0,
-            "title": "Zaum - Wikipedia",
             "filename": "-Zaum - Wikipedia.pdf",
+            "title": "Zaum - Wikipedia",
+            "level": 2,
+            "keywords": "Languages > Zaum",
+            "modified": 1605712495,
             "authors": [
                 "Velimir Khlebnikov"
-            ],
-            "modified": 1605712495,
-            "priority": 0,
-            "year": 2020,
-            "level": 2
+            ]
         },
         {
-            "keywords": "Methods > Statistics > p-Values",
+            "priority": 2,
+            "year": 2016,
             "recog": 1,
-            "title": "Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations",
             "filename": "!!Greenland2016_Article_StatisticalTestsPValuesConfide.pdf",
+            "title": "Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations",
+            "level": 3,
+            "keywords": "Methods > Statistics > p-Values",
+            "modified": 1605712085,
             "authors": [
                 "Sander Greenland",
                 "Stephen J. Senn",
@@ -302,276 +676,265 @@
                 "Charles Poole",
                 "Steven N. Goodman",
                 "Douglas G. Altman"
-            ],
-            "modified": 1605712085,
-            "priority": 2,
-            "year": 2016,
-            "level": 3
+            ]
         },
         {
-            "keywords": "Design, HCI, UI, UX > Human-Centered System Design",
+            "priority": 3,
+            "year": 2002,
             "recog": 1,
-            "title": "Human Centered Systems in the Perspective of Organizational and Social Informatics",
             "filename": "!!!277351.277356.pdf",
+            "title": "Human Centered Systems in the Perspective of Organizational and Social Informatics",
+            "level": 2,
+            "keywords": "Design, HCI, UI, UX > Human-Centered System Design",
+            "modified": 1605699190,
             "authors": [
                 "Rob Kling",
                 "Susan Leigh Star"
-            ],
-            "modified": 1605699190,
-            "priority": 3,
-            "year": 2002,
-            "level": 2
+            ]
         },
         {
-            "keywords": "Methods > Experiments",
-            "recog": 1,
-            "title": "Experimental Method",
-            "filename": "!!!simplypsychology.org-Exp-Method.pdf",
-            "authors": [],
-            "modified": 1605699038,
-            "priority": 3,
-            "year": 2019,
-            "level": 2
-        },
-        {
-            "keywords": "Methods > User study",
-            "recog": 0,
-            "title": "08_chapter 2",
-            "filename": "-08_chapter 2.pdf",
-            "authors": [],
-            "modified": 1605698185,
             "priority": 0,
             "year": 2012,
-            "level": 2
+            "recog": 0,
+            "filename": "-08_chapter 2.pdf",
+            "title": "08_chapter 2",
+            "level": 2,
+            "keywords": "Methods > User study",
+            "modified": 1605698185,
+            "authors": []
         },
         {
-            "keywords": "Machine Learning > Issues > Costs",
+            "priority": 0,
+            "year": 2020,
             "recog": 0,
-            "title": "The implications of Microsoft\u2019s exclusive GPT-3 license \u2013 TechTalks",
             "filename": "-The implications of Microsoft\u2019s exclusive GPT-3 license \u2013 TechTalks.pdf",
-            "authors": [],
+            "title": "The implications of Microsoft\u2019s exclusive GPT-3 license \u2013 TechTalks",
+            "level": 3,
+            "keywords": "Machine Learning > Issues > Costs",
             "modified": 1605627545,
-            "priority": 0,
-            "year": 2020,
-            "level": 3
+            "authors": []
         },
         {
-            "keywords": "European Union > Rechtsstaatlichkeit",
+            "priority": 0,
+            "year": 2020,
             "recog": 1,
-            "title": "Blockade des EU-Haushalts",
             "filename": "-Blockade des EU-Haushalts_ Die EU in Geiselhaft _ tagesschau.de.pdf",
-            "authors": [],
+            "title": "Blockade des EU-Haushalts",
+            "level": 2,
+            "keywords": "European Union > Rechtsstaatlichkeit",
             "modified": 1605624181,
-            "priority": 0,
-            "year": 2020,
-            "level": 2
+            "authors": []
         },
         {
-            "keywords": "Medical, Health, Drugs > Triage",
+            "priority": 0,
+            "year": 2020,
             "recog": 0,
-            "title": "Klage gegen Triage_ _Dann werde ich abgeh\u00e4ngt_ _ tagesschau.de",
             "filename": "-Klage gegen Triage_ _Dann werde ich abgeh\u00e4ngt_ _ tagesschau.de.pdf",
+            "title": "Klage gegen Triage_ _Dann werde ich abgeh\u00e4ngt_ _ tagesschau.de",
+            "level": 2,
+            "keywords": "Medical, Health, Drugs > Triage",
+            "modified": 1605623973,
             "authors": [
                 "\"Dann werde ich abgeh\u00e4ngt"
-            ],
-            "modified": 1605623973,
-            "priority": 0,
-            "year": 2020,
-            "level": 2
+            ]
         },
         {
-            "keywords": "Trust > Trust-worthy Systems",
+            "priority": 0,
+            "year": 2020,
             "recog": 1,
-            "title": "seL4 in Australia",
             "filename": "-3378426.pdf",
-            "authors": [],
+            "title": "seL4 in Australia",
+            "level": 2,
+            "keywords": "Trust > Trust-worthy Systems",
             "modified": 1605548507,
-            "priority": 0,
-            "year": 2020,
-            "level": 2
+            "authors": []
         },
         {
-            "keywords": "Trust > Metrics",
+            "priority": 2,
+            "year": 2007,
             "recog": 1,
-            "title": "Trust in News Media",
             "filename": "!!0093650206298071.pdf",
+            "title": "Trust in News Media",
+            "level": 2,
+            "keywords": "Trust > Metrics",
+            "modified": 1605548385,
             "authors": [
                 "Matthias Kohring",
                 "J\u00f6rg Matthes"
-            ],
-            "modified": 1605548385,
-            "priority": 2,
-            "year": 2007,
-            "level": 2
+            ]
         },
         {
-            "keywords": "Machine Learning > Issues > Bias, Discrimination",
-            "recog": 0,
-            "title": "3209581",
-            "filename": "!!!3209581.pdf",
-            "authors": [],
-            "modified": 1605547273,
             "priority": 3,
             "year": 2018,
-            "level": 3
+            "recog": 0,
+            "filename": "!!!3209581.pdf",
+            "title": "3209581",
+            "level": 3,
+            "keywords": "Machine Learning > Issues > Bias, Discrimination",
+            "modified": 1605547273,
+            "authors": []
         },
         {
-            "keywords": "Supporting Science",
-            "recog": 1,
-            "title": "The Enduring Quest for the Future and Its Consequences for Scientific Inquiry",
-            "filename": "-Discussionpaper_Hausstein_The_enduring_quest_for_the_future.pdf",
-            "authors": [
-                "Alexandra Hausstein"
-            ],
-            "modified": 1605523748,
             "priority": 0,
             "year": 2020,
-            "level": 1
+            "recog": 1,
+            "filename": "-Discussionpaper_Hausstein_The_enduring_quest_for_the_future.pdf",
+            "title": "The Enduring Quest for the Future and Its Consequences for Scientific Inquiry",
+            "level": 1,
+            "keywords": "Supporting Science",
+            "modified": 1605523748,
+            "authors": [
+                "Alexandra Hausstein"
+            ]
         },
         {
-            "keywords": "Creativity > Innovation",
+            "priority": 0,
+            "year": 2018,
             "recog": 1,
-            "title": "The proliferation of the innovation discourse",
             "filename": "-The_proliferation_of_the_innovation_discourse.pdf",
+            "title": "The proliferation of the innovation discourse",
+            "level": 2,
+            "keywords": "Creativity > Innovation",
+            "modified": 1605523643,
             "authors": [
                 "Alexandra Hausstein",
                 "Armin Grunwald"
-            ],
-            "modified": 1605523643,
-            "priority": 0,
-            "year": 2018,
-            "level": 2
+            ]
         },
         {
-            "keywords": "Publishing > Blank Books",
+            "priority": 0,
+            "year": 2020,
             "recog": 1,
-            "title": "Empty satire: the regrettable rise of blank paged books in the Trump era",
             "filename": "-Empty satire_ the regrettable rise of blank-paged books in the Trump era _ Books _ The Guardian.pdf",
+            "title": "Empty satire: the regrettable rise of blank paged books in the Trump era",
+            "level": 2,
+            "keywords": "Publishing > Blank Books",
+            "modified": 1605466972,
             "authors": [
                 "Danuta Kean",
                 "Donald Trump"
-            ],
-            "modified": 1605466972,
-            "priority": 0,
-            "year": 2020,
-            "level": 2
+            ]
         },
         {
-            "keywords": "Purpose-Driven Organisations",
+            "priority": 0,
+            "year": 2020,
             "recog": 0,
-            "title": "2020 is the Tipping Point for Purpose _ The Global Imprint",
             "filename": "-2020 is the Tipping Point for Purpose _ The Global Imprint.pdf",
+            "title": "2020 is the Tipping Point for Purpose _ The Global Imprint",
+            "level": 1,
+            "keywords": "Purpose-Driven Organisations",
+            "modified": 1605462846,
             "authors": [
                 "Aaron Hurst"
-            ],
-            "modified": 1605462846,
-            "priority": 0,
-            "year": 2020,
-            "level": 1
+            ]
         },
         {
-            "keywords": "Purpose-Driven Organisations",
-            "recog": 0,
-            "title": "2020 Global Marketing Trends4129",
-            "filename": "-2020 Global Marketing Trends4129.pdf",
-            "authors": [],
-            "modified": 1605462648,
             "priority": 0,
             "year": "N/A",
-            "level": 1
+            "recog": 0,
+            "filename": "-2020 Global Marketing Trends4129.pdf",
+            "title": "2020 Global Marketing Trends4129",
+            "level": 1,
+            "keywords": "Purpose-Driven Organisations",
+            "modified": 1605462648,
+            "authors": []
         },
         {
-            "keywords": "Purpose-Driven Organisations > Tree Planting > Ecosia",
-            "recog": 0,
-            "title": "Ecosia Technology Radar (Public) - 2020",
-            "filename": "!Ecosia Technology Radar (Public) - 2020.pdf",
-            "authors": [],
-            "modified": 1605460678,
             "priority": 1,
             "year": 2020,
-            "level": 3
+            "recog": 0,
+            "filename": "!Ecosia Technology Radar (Public) - 2020.pdf",
+            "title": "Ecosia Technology Radar (Public) - 2020",
+            "level": 3,
+            "keywords": "Purpose-Driven Organisations > Tree Planting > Ecosia",
+            "modified": 1605460678,
+            "authors": []
         },
         {
-            "keywords": "Legal > Legal Tech > GDPR",
-            "recog": 1,
-            "title": "Making Privacy a Reality",
-            "filename": "!concept_noyb_public.pdf",
-            "authors": [],
-            "modified": 1605460193,
             "priority": 1,
             "year": 2017,
-            "level": 3
+            "recog": 1,
+            "filename": "!concept_noyb_public.pdf",
+            "title": "Making Privacy a Reality",
+            "level": 3,
+            "keywords": "Legal > Legal Tech > GDPR",
+            "modified": 1605460193,
+            "authors": []
         },
         {
-            "keywords": "AI > Issues > Trust > AI Weapons",
-            "recog": 0,
-            "title": "Will Commanders Trust Their New AI Weapons and Tools_ - Defense One",
-            "filename": "-Will Commanders Trust Their New AI Weapons and Tools_ - Defense One.pdf",
-            "authors": [
-                "MARGARITA KONAEV"
-            ],
-            "modified": 1605452923,
             "priority": 0,
             "year": 2020,
-            "level": 4
+            "recog": 0,
+            "filename": "-Will Commanders Trust Their New AI Weapons and Tools_ - Defense One.pdf",
+            "title": "Will Commanders Trust Their New AI Weapons and Tools_ - Defense One",
+            "level": 4,
+            "keywords": "AI > Issues > Trust > AI Weapons",
+            "modified": 1605452923,
+            "authors": [
+                "MARGARITA KONAEV"
+            ]
         },
         {
-            "keywords": "AI > Issues > Trust > AI Weapons",
-            "recog": 0,
-            "title": "DARPA_FY20_Presidents_Budget_Request",
-            "filename": "-DARPA_FY20_Presidents_Budget_Request.pdf",
-            "authors": [],
-            "modified": 1605452844,
             "priority": 0,
             "year": 2019,
-            "level": 4
+            "recog": 0,
+            "filename": "-DARPA_FY20_Presidents_Budget_Request.pdf",
+            "title": "DARPA_FY20_Presidents_Budget_Request",
+            "level": 4,
+            "keywords": "AI > Issues > Trust > AI Weapons",
+            "modified": 1605452844,
+            "authors": []
         },
         {
-            "keywords": "Leadership, Management > Elon Musk > Micromanagement",
+            "priority": 0,
+            "year": 2020,
             "recog": 0,
-            "title": "Tesla CEO Elon Musk_ extreme micromanager",
             "filename": "-Tesla CEO Elon Musk_ extreme micromanager.pdf",
+            "title": "Tesla CEO Elon Musk_ extreme micromanager",
+            "level": 3,
+            "keywords": "Leadership, Management > Elon Musk > Micromanagement",
+            "modified": 1605440076,
             "authors": [
                 "Lora Kolodny",
                 "Elon Musk\u2019s",
                 "Elon Musk"
-            ],
-            "modified": 1605440076,
-            "priority": 0,
-            "year": 2020,
-            "level": 3
+            ]
         },
         {
-            "keywords": "Leadership, Management > Elon Musk",
+            "priority": 0,
+            "year": 2020,
             "recog": 0,
-            "title": "Elon Musk's Leadership Style_ 10 Strategies That He Uses Daily __ ONE37pm",
             "filename": "-Elon Musk's Leadership Style_ 10 Strategies That He Uses Daily __ ONE37pm.pdf",
+            "title": "Elon Musk's Leadership Style_ 10 Strategies That He Uses Daily __ ONE37pm",
+            "level": 2,
+            "keywords": "Leadership, Management > Elon Musk",
+            "modified": 1605439989,
             "authors": [
                 "Stephanie Maida"
-            ],
-            "modified": 1605439989,
-            "priority": 0,
-            "year": 2020,
-            "level": 2
+            ]
         },
         {
-            "keywords": "Leadership, Management > Elon Musk",
+            "priority": 0,
+            "year": 2020,
             "recog": 0,
-            "title": "This Is How Elon Musk Handles Bad Situations. Every Business Leader Should Take Note _ Inc.com",
             "filename": "-This Is How Elon Musk Handles Bad Situations. Every Business Leader Should Take Note _ Inc.com.pdf",
+            "title": "This Is How Elon Musk Handles Bad Situations. Every Business Leader Should Take Note _ Inc.com",
+            "level": 2,
+            "keywords": "Leadership, Management > Elon Musk",
+            "modified": 1605439639,
             "authors": [
                 "Elon Musk"
-            ],
-            "modified": 1605439639,
-            "priority": 0,
-            "year": 2020,
-            "level": 2
+            ]
         },
         {
-            "keywords": "Future of Work > Automation, Technological Unemployment, Digitization",
+            "priority": 3,
+            "year": 2019,
             "recog": 1,
-            "title": "Toward understanding the impact of artificial intelligence on labor",
             "filename": "!!!6531.full.pdf",
+            "title": "Toward understanding the impact of artificial intelligence on labor",
+            "level": 2,
+            "keywords": "Future of Work > Automation, Technological Unemployment, Digitization",
+            "modified": 1605368458,
             "authors": [
                 "Morgan R. Frank",
                 "David Autor",
@@ -586,268 +949,252 @@
                 "Dashun Wang",
                 "Hyejin Youn",
                 "Iyad Rahwan"
-            ],
-            "modified": 1605368458,
-            "priority": 3,
-            "year": 2019,
-            "level": 2
+            ]
         },
         {
-            "keywords": "Machine Learning > Issues > Reproducability",
+            "priority": 0,
+            "year": 2020,
             "recog": 0,
-            "title": "AI is wrestling with a replication crisis _ MIT Technology Review",
             "filename": "-AI is wrestling with a replication crisis _ MIT Technology Review.pdf",
+            "title": "AI is wrestling with a replication crisis _ MIT Technology Review",
+            "level": 3,
+            "keywords": "Machine Learning > Issues > Reproducability",
+            "modified": 1605295004,
             "authors": [
                 "Douglas Heaven",
                 "Joelle Pineau"
-            ],
-            "modified": 1605295004,
-            "priority": 0,
-            "year": 2020,
-            "level": 3
+            ]
         },
         {
-            "keywords": "Communities, Networks > Social Media > Facebook > Issues > Free Speech",
+            "priority": 0,
+            "year": 2020,
             "recog": 1,
-            "title": "Zuckerberg acknowledged criticism of Facebook by President-elect Joe Biden but said the company shared some of the Biden team\u2019s same concerns about social media. He urged employees not to jump to conclusions about how the new administration might approach regulation of social media companies. Bannon suggested in a video posted on Nov. 5 that FBI Director Christopher Wray and government infectious diseases expert",
             "filename": "-Zuckerberg defends not suspending ex-Trump aide Bannon from Facebook_ recording _ Reuters.pdf",
+            "title": "Zuckerberg acknowledged criticism of Facebook by President-elect Joe Biden but said the company shared some of the Biden team\u2019s same concerns about social media. He urged employees not to jump to conclusions about how the new administration might approach regulation of social media companies. Bannon suggested in a video posted on Nov. 5 that FBI Director Christopher Wray and government infectious diseases expert",
+            "level": 5,
+            "keywords": "Communities, Networks > Social Media > Facebook > Issues > Free Speech",
+            "modified": 1605274160,
             "authors": [
                 "Katie Paul",
                 "Mark Zuckerberg",
                 "Steve Bannon",
                 "Anthony Fauci",
                 "Donald Trump"
-            ],
-            "modified": 1605274160,
-            "priority": 0,
-            "year": 2020,
-            "level": 5
+            ]
         },
         {
-            "keywords": "Methods > Qualitative > Value Sensitive Design > Self-disclosure",
+            "priority": 2,
+            "year": 2012,
             "recog": 1,
-            "title": "Next Steps for Value Sensitive Design",
             "filename": "!!borning-muller-chi2012.pdf",
+            "title": "Next Steps for Value Sensitive Design",
+            "level": 4,
+            "keywords": "Methods > Qualitative > Value Sensitive Design > Self-disclosure",
+            "modified": 1605265775,
             "authors": [
                 "Alan Borning",
                 "Michael Muller"
-            ],
-            "modified": 1605265775,
-            "priority": 2,
-            "year": 2012,
-            "level": 4
+            ]
         },
         {
-            "keywords": "Design, HCI, UI, UX > Implications for Design",
-            "recog": 1,
-            "title": "Implications for Design",
-            "filename": "-dourish_implications_for_design.pdf",
-            "authors": [
-                "Paul Dourish"
-            ],
-            "modified": 1605265033,
             "priority": 0,
             "year": 2006,
-            "level": 2
+            "recog": 1,
+            "filename": "-dourish_implications_for_design.pdf",
+            "title": "Implications for Design",
+            "level": 2,
+            "keywords": "Design, HCI, UI, UX > Implications for Design",
+            "modified": 1605265033,
+            "authors": [
+                "Paul Dourish"
+            ]
         },
         {
-            "keywords": "Creativity > Importance, Implications",
+            "priority": 1,
+            "year": 2020,
             "recog": 0,
-            "title": "What professional skills will be the most important in the future_ _ World Economic Forum",
             "filename": "!What professional skills will be the most important in the future_ _ World Economic Forum.pdf",
+            "title": "What professional skills will be the most important in the future_ _ World Economic Forum",
+            "level": 2,
+            "keywords": "Creativity > Importance, Implications",
+            "modified": 1605264292,
             "authors": [
                 "Scott Belsky",
                 "Maureen Fleming"
-            ],
-            "modified": 1605264292,
-            "priority": 1,
-            "year": 2020,
-            "level": 2
+            ]
         },
         {
-            "keywords": "CSCW > Virtual Work, Distributed Work, Remote Work > Zoom Fatigue",
+            "priority": 3,
+            "year": 2020,
             "recog": 1,
-            "title": "A Psychological Exploration of Zoom Fatigue",
             "filename": "!!!A Psychological Exploration of Zoom Fatigue _ Psychiatric Times.pdf",
-            "authors": [],
+            "title": "A Psychological Exploration of Zoom Fatigue",
+            "level": 3,
+            "keywords": "CSCW > Virtual Work, Distributed Work, Remote Work > Zoom Fatigue",
             "modified": 1605258410,
-            "priority": 3,
-            "year": 2020,
-            "level": 3
+            "authors": []
         },
         {
-            "keywords": "Machine Learning > Deep Learning",
-            "recog": 0,
-            "title": "Deep-Learning-with-PyTorch",
-            "filename": "!!!Deep-Learning-with-PyTorch.pdf",
-            "authors": [
-                "Eli Stevens",
-                "Luca Antiga",
-                "Thomas Viehmann",
-                "Soumith Chintala"
-            ],
-            "modified": 1605191480,
-            "priority": 3,
-            "year": 2020,
-            "level": 2
-        },
-        {
-            "keywords": "Machine Learning > Issues > Facial Recognition",
-            "recog": 0,
-            "title": "How normal am I_",
-            "filename": "-How normal am I_.pdf",
-            "authors": [],
-            "modified": 1605086251,
             "priority": 0,
             "year": 2020,
-            "level": 3
+            "recog": 0,
+            "filename": "-How normal am I_.pdf",
+            "title": "How normal am I_",
+            "level": 3,
+            "keywords": "Machine Learning > Issues > Facial Recognition",
+            "modified": 1605086251,
+            "authors": []
         },
         {
-            "keywords": "Design, HCI, UI, UX > Persuasive Systems, Persuasive Technology",
+            "priority": 0,
+            "year": 2020,
             "recog": 0,
-            "title": "isbn9789526227603",
             "filename": "-isbn9789526227603.pdf",
+            "title": "isbn9789526227603",
+            "level": 2,
+            "keywords": "Design, HCI, UI, UX > Persuasive Systems, Persuasive Technology",
+            "modified": 1605011386,
             "authors": [
                 "Santeri Palviainen",
                 "Anne Tuomisto",
                 "Pertti Tikkanen",
                 "Harri Oinas-Kukkonen"
-            ],
-            "modified": 1605011386,
-            "priority": 0,
-            "year": 2020,
-            "level": 2
+            ]
         },
         {
-            "keywords": "Machine Learning > Deep Learning",
-            "recog": 1,
-            "title": "The Matrix Calculus You Need For Deep Learning",
-            "filename": "-The matrix calculus you need for deep learning.pdf",
-            "authors": [
-                "Terence Parr"
-            ],
-            "modified": 1604937202,
             "priority": 0,
             "year": 2018,
-            "level": 2
+            "recog": 1,
+            "filename": "-The matrix calculus you need for deep learning.pdf",
+            "title": "The Matrix Calculus You Need For Deep Learning",
+            "level": 2,
+            "keywords": "Machine Learning > Deep Learning",
+            "modified": 1604937202,
+            "authors": [
+                "Terence Parr"
+            ]
         },
         {
-            "keywords": "Methods > Qualitative > Interviews",
-            "recog": 0,
-            "title": "good-questions-for-stakeholder-interviews",
-            "filename": "!good-questions-for-stakeholder-interviews.pdf",
-            "authors": [],
-            "modified": 1604753828,
             "priority": 1,
             "year": 2019,
-            "level": 3
+            "recog": 0,
+            "filename": "!good-questions-for-stakeholder-interviews.pdf",
+            "title": "good-questions-for-stakeholder-interviews",
+            "level": 3,
+            "keywords": "Methods > Qualitative > Interviews",
+            "modified": 1604753828,
+            "authors": []
         },
         {
-            "keywords": "Communities, Networks > Social Media > Facebook > Issues > Management",
+            "priority": 0,
+            "year": 2020,
             "recog": 1,
-            "title": "Popular in the Community",
             "filename": "-49% Facebook Employees Don't Believe It Had Positive Impact On World.pdf",
+            "title": "Popular in the Community",
+            "level": 5,
+            "keywords": "Communities, Networks > Social Media > Facebook > Issues > Management",
+            "modified": 1604751506,
             "authors": [
                 "Manik Berry"
-            ],
-            "modified": 1604751506,
-            "priority": 0,
-            "year": 2020,
-            "level": 5
+            ]
         },
         {
-            "keywords": "Wicked Problems",
-            "recog": 0,
-            "title": "Lesson 1.4 - Design Thinking_ The Beginner\u2019s Guide _ Interaction Design Foundation",
-            "filename": "!Lesson 1.4 - Design Thinking_ The Beginner\u2019s Guide _ Interaction Design Foundation.pdf",
-            "authors": [],
-            "modified": 1604747599,
             "priority": 1,
             "year": 2020,
-            "level": 1
+            "recog": 0,
+            "filename": "!Lesson 1.4 - Design Thinking_ The Beginner\u2019s Guide _ Interaction Design Foundation.pdf",
+            "title": "Lesson 1.4 - Design Thinking_ The Beginner\u2019s Guide _ Interaction Design Foundation",
+            "level": 1,
+            "keywords": "Wicked Problems",
+            "modified": 1604747599,
+            "authors": []
         },
         {
-            "keywords": "Design, HCI, UI, UX > Usability > Examples",
+            "priority": 1,
+            "year": 2020,
             "recog": 0,
-            "title": "Lesson 0.8 - Design Thinking_ The Beginner\u2019s Guide _ Interaction Design Foundation",
             "filename": "!Lesson 0.8 - Design Thinking_ The Beginner\u2019s Guide _ Interaction Design Foundation.pdf",
+            "title": "Lesson 0.8 - Design Thinking_ The Beginner\u2019s Guide _ Interaction Design Foundation",
+            "level": 3,
+            "keywords": "Design, HCI, UI, UX > Usability > Examples",
+            "modified": 1604744371,
             "authors": [
                 "Donald A. Norman"
-            ],
-            "modified": 1604744371,
-            "priority": 1,
-            "year": 2020,
-            "level": 3
+            ]
         },
         {
-            "keywords": "Design, HCI, UI, UX > Design Thinking",
-            "recog": 0,
-            "title": "Rethinking Design Thinking - Core77",
-            "filename": "-Rethinking Design Thinking - Core77.pdf",
-            "authors": [],
-            "modified": 1604743303,
             "priority": 0,
             "year": 2020,
-            "level": 2
+            "recog": 0,
+            "filename": "-Rethinking Design Thinking - Core77.pdf",
+            "title": "Rethinking Design Thinking - Core77",
+            "level": 2,
+            "keywords": "Design, HCI, UI, UX > Design Thinking",
+            "modified": 1604743303,
+            "authors": []
         },
         {
-            "keywords": "Methods > Statistics > Sampling > Sample Size",
+            "priority": 1,
+            "year": 2018,
             "recog": 1,
-            "title": "Statistical primer: sample size and power calculations\u2014why, when and how?\u2020",
             "filename": "!ezy169.pdf",
+            "title": "Statistical primer: sample size and power calculations\u2014why, when and how?\u2020",
+            "level": 4,
+            "keywords": "Methods > Statistics > Sampling > Sample Size",
+            "modified": 1604656089,
             "authors": [
                 "Graeme L. Hickey",
                 "Stuart W. Grant",
                 "Joel Dunning",
                 "Matthias Siepe"
-            ],
-            "modified": 1604656089,
-            "priority": 1,
-            "year": 2018,
-            "level": 4
+            ]
         },
         {
-            "keywords": "Fake News, Credibility, Post Truth > Disinformation > Disinformation Warfare",
-            "recog": 0,
-            "title": "Nach der US-Wahl_ Trump gegen (fast) alle _ tagesschau.de",
-            "filename": "-Nach der US-Wahl_ Trump gegen (fast) alle _ tagesschau.de.pdf",
-            "authors": [],
-            "modified": 1604650969,
             "priority": 0,
             "year": 2020,
-            "level": 3
+            "recog": 0,
+            "filename": "-Nach der US-Wahl_ Trump gegen (fast) alle _ tagesschau.de.pdf",
+            "title": "Nach der US-Wahl_ Trump gegen (fast) alle _ tagesschau.de",
+            "level": 3,
+            "keywords": "Fake News, Credibility, Post Truth > Disinformation > Disinformation Warfare",
+            "modified": 1604650969,
+            "authors": []
         },
         {
-            "keywords": "Rebuttals",
-            "recog": 0,
-            "title": "Responding to peer review",
-            "filename": "!Responding to peer review.pdf",
-            "authors": [],
-            "modified": 1604590972,
             "priority": 1,
             "year": 2020,
-            "level": 1
+            "recog": 0,
+            "filename": "!Responding to peer review.pdf",
+            "title": "Responding to peer review",
+            "level": 1,
+            "keywords": "Rebuttals",
+            "modified": 1604590972,
+            "authors": []
         },
         {
-            "keywords": "Fake News, Credibility, Post Truth > Distribution",
+            "priority": 0,
+            "year": 2019,
             "recog": 0,
-            "title": "PEPWNAv1",
             "filename": "-PEPWNAv1.pdf",
+            "title": "PEPWNAv1",
+            "level": 2,
+            "keywords": "Fake News, Credibility, Post Truth > Distribution",
+            "modified": 1604570243,
             "authors": [
                 "Jessica Pepp",
                 "Eliot Michaelson",
                 "Rachel Katharine Sterken"
-            ],
-            "modified": 1604570243,
-            "priority": 0,
-            "year": 2019,
-            "level": 2
+            ]
         },
         {
-            "keywords": "NLP > Context",
+            "priority": 0,
+            "year": 2020,
             "recog": 1,
-            "title": "How We Do Things With Words: Analyzing Text as Social and Cultural Data",
             "filename": "-frai-03-00062.pdf",
+            "title": "How We Do Things With Words: Analyzing Text as Social and Cultural Data",
+            "level": 2,
+            "keywords": "NLP > Context",
+            "modified": 1604567519,
             "authors": [
                 "Dong Nguyen",
                 "Maria Liakata",
@@ -855,70 +1202,70 @@
                 "Jacob Eisenstein",
                 "David Mimno",
                 "Rebekah Tromble"
-            ],
-            "modified": 1604567519,
-            "priority": 0,
-            "year": 2020,
-            "level": 2
+            ]
         },
         {
-            "keywords": "Methods > Nonexperimental Research",
+            "priority": 0,
+            "year": 2020,
             "recog": 0,
-            "title": "Overview of Nonexperimental Research \u2013 Research Methods in Psychology",
             "filename": "-Overview of Nonexperimental Research \u2013 Research Methods in Psychology.pdf",
-            "authors": [],
+            "title": "Overview of Nonexperimental Research \u2013 Research Methods in Psychology",
+            "level": 2,
+            "keywords": "Methods > Nonexperimental Research",
             "modified": 1604567386,
-            "priority": 0,
-            "year": 2020,
-            "level": 2
+            "authors": []
         },
         {
-            "keywords": "Healthcare > Digital Healthcare > Issues > Grand Challenges",
-            "recog": 1,
-            "title": "Grand challenges in digital health",
-            "filename": "-fpubh-03-00134.pdf",
-            "authors": [
-                "Patty Kostkova"
-            ],
-            "modified": 1604567014,
             "priority": 0,
             "year": 2015,
-            "level": 4
+            "recog": 1,
+            "filename": "-fpubh-03-00134.pdf",
+            "title": "Grand challenges in digital health",
+            "level": 4,
+            "keywords": "Healthcare > Digital Healthcare > Issues > Grand Challenges",
+            "modified": 1604567014,
+            "authors": [
+                "Patty Kostkova"
+            ]
         },
         {
-            "keywords": "Creativity > Teaching",
-            "recog": 1,
-            "title": "On Creativity and Innovation in the Computing Curriculum",
-            "filename": "-p17-brookes.pdf",
-            "authors": [
-                "Wayne Brookes"
-            ],
-            "modified": 1604496482,
             "priority": 0,
             "year": 2017,
-            "level": 2
+            "recog": 1,
+            "filename": "-p17-brookes.pdf",
+            "title": "On Creativity and Innovation in the Computing Curriculum",
+            "level": 2,
+            "keywords": "Creativity > Teaching",
+            "modified": 1604496482,
+            "authors": [
+                "Wayne Brookes"
+            ]
         },
         {
-            "keywords": "Creativity > Teaching",
+            "priority": 1,
+            "year": 2012,
             "recog": 1,
-            "title": "Teaching Creativity in Computer Science",
             "filename": "!p123-salgian.pdf",
+            "title": "Teaching Creativity in Computer Science",
+            "level": 2,
+            "keywords": "Creativity > Teaching",
+            "modified": 1604496333,
             "authors": [
                 "Andrea Salgian",
                 "Teresa M. Nakra",
                 "Christopher Ault",
                 "Yunfeng Wang"
-            ],
-            "modified": 1604496333,
-            "priority": 1,
-            "year": 2012,
-            "level": 2
+            ]
         },
         {
-            "keywords": "Fake News, Credibility, Post Truth > Disinformation > Disinformation Warfare",
+            "priority": 1,
+            "year": 2018,
             "recog": 1,
-            "title": "Disinformation Warfare: Understanding State-Sponsored Trolls on Twitter and Their Influence on the Web",
             "filename": "!Disinformation_Warfare_Understanding_State-Sponsor.pdf",
+            "title": "Disinformation Warfare: Understanding State-Sponsored Trolls on Twitter and Their Influence on the Web",
+            "level": 3,
+            "keywords": "Fake News, Credibility, Post Truth > Disinformation > Disinformation Warfare",
+            "modified": 1604491909,
             "authors": [
                 "Tristan Caulfield",
                 "Michael Sirivianos",
@@ -926,453 +1273,76 @@
                 "Emiliano De Cristofaro",
                 "Gianluca Stringhini",
                 "Jeremy Blackburn"
-            ],
-            "modified": 1604491909,
-            "priority": 1,
-            "year": 2018,
-            "level": 3
+            ]
         },
         {
-            "keywords": "Fake News, Credibility, Post Truth > Disinformation",
-            "recog": 0,
-            "title": "Trump zu angeblichem Betrug_ H\u00f6hepunkt einer Desinformationskampagne _ tagesschau.de",
-            "filename": "-Trump zu angeblichem Betrug_ H\u00f6hepunkt einer Desinformationskampagne _ tagesschau.de.pdf",
-            "authors": [],
-            "modified": 1604483735,
             "priority": 0,
             "year": 2020,
-            "level": 2
+            "recog": 0,
+            "filename": "-Trump zu angeblichem Betrug_ H\u00f6hepunkt einer Desinformationskampagne _ tagesschau.de.pdf",
+            "title": "Trump zu angeblichem Betrug_ H\u00f6hepunkt einer Desinformationskampagne _ tagesschau.de",
+            "level": 2,
+            "keywords": "Fake News, Credibility, Post Truth > Disinformation",
+            "modified": 1604483735,
+            "authors": []
         },
         {
-            "keywords": "Creativity > Creativity Measurement, Tests, Questionnaires",
+            "priority": 0,
+            "year": 2020,
             "recog": 1,
-            "title": "Semantic measures in design conversations as predictors of creative outcomes in design education",
             "filename": "-Paper - 6th ICDC - Revised - 4HG no tracks.pdf",
+            "title": "Semantic measures in design conversations as predictors of creative outcomes in design education",
+            "level": 2,
+            "keywords": "Creativity > Creativity Measurement, Tests, Questionnaires",
+            "modified": 1604399667,
             "authors": [
                 "Georgi V. Georgiev",
                 "Hernan Casakin"
-            ],
-            "modified": 1604399667,
-            "priority": 0,
-            "year": 2020,
-            "level": 2
+            ]
         },
         {
-            "keywords": "Trust > Dishonesty",
+            "priority": 1,
+            "year": 2020,
             "recog": 1,
-            "title": "Dishonesty as a signal of trustworthiness: Honesty-Humility and trustworthy dishonesty",
             "filename": "!rsos.200685.pdf",
+            "title": "Dishonesty as a signal of trustworthiness: Honesty-Humility and trustworthy dishonesty",
+            "level": 2,
+            "keywords": "Trust > Dishonesty",
+            "modified": 1604399468,
             "authors": [
                 "Karolina A. \u015aciga\u0142a",
                 "Christoph Schild",
                 "Ingo Zettler"
-            ],
-            "modified": 1604399468,
-            "priority": 1,
-            "year": 2020,
-            "level": 2
+            ]
         },
         {
-            "keywords": "Creativity > Workshops > Innovation Games",
-            "recog": 0,
-            "title": "The Innovation Games - Innovation Games",
-            "filename": "!!The Innovation Games - Innovation Games.pdf",
-            "authors": [],
-            "modified": 1604322221,
             "priority": 2,
             "year": 2020,
-            "level": 3
+            "recog": 0,
+            "filename": "!!The Innovation Games - Innovation Games.pdf",
+            "title": "The Innovation Games - Innovation Games",
+            "level": 3,
+            "keywords": "Creativity > Workshops > Innovation Games",
+            "modified": 1604322221,
+            "authors": []
         },
         {
-            "keywords": "Psychology > Maximising, Satisficing",
+            "priority": 1,
+            "year": 2020,
             "recog": 1,
-            "title": "A behaviouralist (re)learns some lessons",
             "filename": "!Good enough. A behaviouralist (re)learns some\u2026 _ by Koen Smets _ Oct, 2020 _ Medium.pdf",
+            "title": "A behaviouralist (re)learns some lessons",
+            "level": 2,
+            "keywords": "Psychology > Maximising, Satisficing",
+            "modified": 1604309884,
             "authors": [
                 "Koen Smets"
-            ],
-            "modified": 1604309884,
-            "priority": 1,
-            "year": 2020,
-            "level": 2
-        },
-        {
-            "keywords": "Pandemics > Corona Virus Pandemic > Trust",
-            "recog": 1,
-            "title": "COVID-19: Large-scale collective action, government intervention, and the importance of trust",
-            "filename": "-1-s2.0-S0305750X20303636-main.pdf",
-            "authors": [
-                "Niklas Harring",
-                "Sverker C. Jagers",
-                "\u00c5sa L\u00f6fgren"
-            ],
-            "modified": 1604309523,
-            "priority": 0,
-            "year": 2020,
-            "level": 3
-        },
-        {
-            "keywords": "Pandemics > Corona Virus Pandemic > UK",
-            "recog": 1,
-            "title": "National Covid lockdown expected across England next week",
-            "filename": "-National Covid lockdown expected across England next week _ World news _ The Guardian.pdf",
-            "authors": [
-                "Sarah Boseley",
-                "Helen Pidd",
-                "Linda Geddes",
-                "Nazia Parveen",
-                "Boris Johnson",
-                "Rishi Sunak"
-            ],
-            "modified": 1604309352,
-            "priority": 0,
-            "year": 2020,
-            "level": 3
-        },
-        {
-            "keywords": "CSCW > Virtual Work, Distributed Work, Remote Work > Zoom Fatigue",
-            "recog": 1,
-            "title": "Connecting Through Technology During the Coronavirus Disease 2019 Pandemic: Avoiding \u201cZoom Fatigue\u201d",
-            "filename": "-cyber.2020.29188.bkw.pdf",
-            "authors": [
-                "\u2018\u2018Zoom Fatigue",
-                "Brenda K. Wiederhold"
-            ],
-            "modified": 1604303831,
-            "priority": 0,
-            "year": 2020,
-            "level": 3
-        },
-        {
-            "keywords": "Pandemics > Corona Virus Pandemic > UK > Support Bubble",
-            "recog": 1,
-            "title": "Making a support bubble with another household",
-            "filename": "-Making a support bubble with another household - GOV.UK.pdf",
-            "authors": [],
-            "modified": 1604238371,
-            "priority": 0,
-            "year": 2020,
-            "level": 4
-        },
-        {
-            "keywords": "AI > Issues > Ethics > Moral Uncertainty",
-            "recog": 1,
-            "title": "An Empirical Approach to Capture Moral Uncertainty in AI",
-            "filename": "-3375627.3375805.pdf",
-            "authors": [
-                "Andreia Martinho",
-                "Maarten Kroesen",
-                "Caspar Chorus",
-                "William MacAskill"
-            ],
-            "modified": 1604223960,
-            "priority": 0,
-            "year": 2019,
-            "level": 4
-        },
-        {
-            "keywords": "AI > Issues > Ethics > Non-Humanist Ethics",
-            "recog": 1,
-            "title": "Cultivating Humanity: towards a Non-Humanist Ethics of Technology",
-            "filename": "-verbeek2009.pdf",
-            "authors": [
-                "Peter-Paul Verbeek"
-            ],
-            "modified": 1604223750,
-            "priority": 0,
-            "year": 2015,
-            "level": 4
-        },
-        {
-            "keywords": "AI > Issues > Ethics",
-            "recog": 0,
-            "title": "State-of-AI-Ethics-Oct-2020",
-            "filename": "-State-of-AI-Ethics-Oct-2020.pdf",
-            "authors": [
-                "Brooke Criswell",
-                "Samuel Curtis",
-                "Pablo Naz\u00e9",
-                "Ameen Jauhar",
-                "Rediet Abebe",
-                "Solon Barocas",
-                "Jon Kleinberg",
-                "Karen Levy",
-                "Claudia Lopez Lloreda"
-            ],
-            "modified": 1604223594,
-            "priority": 0,
-            "year": "N/A",
-            "level": 3
-        },
-        {
-            "keywords": "Machine Learning > Issues > Transparency",
-            "recog": 0,
-            "title": "Algorithms and democracy - AlgorithmWatch Online Policy Dialogue, 30 October 2020 _ European Commission",
-            "filename": "-Algorithms and democracy - AlgorithmWatch Online Policy Dialogue, 30 October 2020 _ European Commission.pdf",
-            "authors": [],
-            "modified": 1604222982,
-            "priority": 0,
-            "year": 2020,
-            "level": 3
-        },
-        {
-            "keywords": "Supporting Science > Literature Reviews, Synthesis",
-            "recog": 1,
-            "title": "Opening up the black box of scholarly synthesis: Intermediate products, processes, and tools",
-            "filename": "!!!pra2.270.pdf",
-            "authors": [
-                "Xin Qian",
-                "Katrina Fenlon",
-                "Wayne Lutters",
-                "Joel Chan"
-            ],
-            "modified": 1604221990,
-            "priority": 3,
-            "year": 2020,
-            "level": 2
-        },
-        {
-            "keywords": "Design, HCI, UI, UX > Persuasive Systems, Persuasive Technology > Dark Patterns",
-            "recog": 0,
-            "title": "How Dark Patterns Online Manipulate Shoppers - The Atlantic",
-            "filename": "-How Dark Patterns Online Manipulate Shoppers - The Atlantic.pdf",
-            "authors": [],
-            "modified": 1604072739,
-            "priority": 0,
-            "year": 2020,
-            "level": 3
-        },
-        {
-            "keywords": "Religion > Comparative Religion",
-            "recog": 0,
-            "title": "Comparative religion - Wikipedia",
-            "filename": "-Comparative religion - Wikipedia.pdf",
-            "authors": [
-                "Max M\u00fcller",
-                "Edward Burne\ue03c Tylor",
-                "William Robertson Smith",
-                "James George",
-                "Rudolf O\ue03co",
-                "Nicholas de Lange"
-            ],
-            "modified": 1604069399,
-            "priority": 0,
-            "year": 2020,
-            "level": 2
-        },
-        {
-            "keywords": "AI > Synthetic Data",
-            "recog": 0,
-            "title": "Synthetic data - Wikipedia",
-            "filename": "!Synthetic data - Wikipedia.pdf",
-            "authors": [],
-            "modified": 1604046269,
-            "priority": 1,
-            "year": 2020,
-            "level": 2
-        },
-        {
-            "keywords": "Creativity > Process > 2 Idea Quality, Idea Selection > Systems > CrowDEA",
-            "recog": 1,
-            "title": "CrowDEA: Multi-View Idea Prioritization with Crowds",
-            "filename": "!!!7460-Article Text-10894-1-10-20200930.pdf",
-            "authors": [
-                "Yukino Baba",
-                "Jiyi Li",
-                "Hisashi Kashima"
-            ],
-            "modified": 1603962366,
-            "priority": 3,
-            "year": 2020,
-            "level": 5
-        },
-        {
-            "keywords": "Crowdsourcing, Human Computation > Applications > Detect Harmful AI > Constraints",
-            "recog": 1,
-            "title": "Using the Crowd to Prevent Harmful AI Behavior",
-            "filename": "!!!3415168.pdf",
-            "authors": [
-                "SEBASTIAN J. CARTER",
-                "KAYLA SCHLECHTINGER"
-            ],
-            "modified": 1603962270,
-            "priority": 3,
-            "year": 2020,
-            "level": 4
-        },
-        {
-            "keywords": "Crowdsourcing, Human Computation > Issues > Onboarding",
-            "recog": 1,
-            "title": "The Challenges of Crowd Workers in Rural and Urban America",
-            "filename": "!7475-Article Text-10853-1-10-20200925.pdf",
-            "authors": [
-                "Claudia Flores-Saviaga",
-                "Yuwen Li",
-                "Benjamin V. Hanrahan",
-                "Jeffrey Bigham",
-                "Saiph Savage"
-            ],
-            "modified": 1603961556,
-            "priority": 1,
-            "year": 2020,
-            "level": 3
-        },
-        {
-            "keywords": "Ontology Matching, Ontology Alignment > Applications >  Matching of biodiversity and ecology ontologies",
-            "recog": 1,
-            "title": "Matching Biodiversity and Ecology Ontologies: Challenges & Evaluation Results",
-            "filename": "-urn_nbn_de_0011-n-5864187.pdf",
-            "authors": [
-                "Naouel Karam",
-                "Abderrahmane Khiat",
-                "Alsayed Algergawy",
-                "Melanie Sattler",
-                "Claus Weiland",
-                "Marco Schmidt"
-            ],
-            "modified": 1603903004,
-            "priority": 0,
-            "year": 2020,
-            "level": 3
-        },
-        {
-            "keywords": "Creativity > Representation of Ideas",
-            "recog": 1,
-            "title": "Learning a Lightweight Representation: First Step Towards Automatic Detection of Multidimensional Relationships between Ideas",
-            "filename": "!khiat2020.pdf",
-            "authors": [
-                "Abderrahmane Khiat"
-            ],
-            "modified": 1603902720,
-            "priority": 1,
-            "year": 2020,
-            "level": 2
-        },
-        {
-            "keywords": "Machine Learning > Recurrent Neural Network (RNN)",
-            "recog": 0,
-            "title": "Gated recurrent unit - Wikipedia",
-            "filename": "-Gated recurrent unit - Wikipedia.pdf",
-            "authors": [
-                "Kyunghyun Cho",
-                "Felix Gers",
-                "J\u00fcrgen Schmidhuber",
-                "Fred Cummins"
-            ],
-            "modified": 1603902581,
-            "priority": 0,
-            "year": 2020,
-            "level": 2
-        },
-        {
-            "keywords": "AI > Issues > Trust > Certification, Declaration of Conformity",
-            "recog": 1,
-            "title": "TRUSTWORTHY USE OF ARTIFICIAL INTELLIGENCE",
-            "filename": "!Whitepaper_Thrustworthy_AI.pdf",
-            "authors": [],
-            "modified": 1603902055,
-            "priority": 1,
-            "year": 2019,
-            "level": 4
-        },
-        {
-            "keywords": "Linked Data > Conversion > Error Correction > RDF-Doctor",
-            "recog": 1,
-            "title": "RDF Doctor: A Holistic Approach for Syntax Error Detection and Correction of RDF Data",
-            "filename": "-KEOD_2019_69.pdf",
-            "authors": [
-                "Abderrahmane Khiat",
-                "Steffen Lohmann",
-                "Ahmad Hemid",
-                "Lavdim Halilaj"
-            ],
-            "modified": 1603899551,
-            "priority": 0,
-            "year": 2019,
-            "level": 4
-        },
-        {
-            "keywords": "AI > Issues > Trust > Certification, Declaration of Conformity",
-            "recog": 1,
-            "title": "Zertifizierung zur Sicherstellung einer vertrauenswu\u0308rdigen KI",
-            "filename": "-KI-Zertifizierung - Fraunhofer IAIS.pdf",
-            "authors": [
-                "Zertifizierte KI-Anwendungen",
-                "Armin Laschet",
-                "\u00a9 Laurence Chaperon"
-            ],
-            "modified": 1603899222,
-            "priority": 0,
-            "year": 2020,
-            "level": 4
-        },
-        {
-            "keywords": "Communities, Networks > Social Media > Issues > Professionalism",
-            "recog": 0,
-            "title": "The #medbikini Controversy _ Sarah Fraser MD",
-            "filename": "-The #medbikini Controversy _ Sarah Fraser MD.pdf",
-            "authors": [],
-            "modified": 1603883696,
-            "priority": 0,
-            "year": 2020,
-            "level": 4
-        },
-        {
-            "keywords": "Teaching > Teaching Portfolio",
-            "recog": 0,
-            "title": "750197_guidance-teaching-portfolio-for-job-application-at-the-faculties-of-humanities-and-social-sciences",
-            "filename": "!!750197_guidance-teaching-portfolio-for-job-application-at-the-faculties-of-humanities-and-social-sciences.pdf",
-            "authors": [],
-            "modified": 1603875328,
-            "priority": 2,
-            "year": 2017,
-            "level": 2
-        },
-        {
-            "keywords": "Privacy > Health Apps > Data Breach",
-            "recog": 0,
-            "title": "Hacker seeks to extort Finnish mental health patients after data breach \u2013 POLITICO",
-            "filename": "-Hacker seeks to extort Finnish mental health patients after data breach \u2013 POLITICO.pdf",
-            "authors": [],
-            "modified": 1603871821,
-            "priority": 0,
-            "year": 2020,
-            "level": 3
-        },
-        {
-            "keywords": "Crowdsourcing, Human Computation > Applications > Moderation > Blurring",
-            "recog": 1,
-            "title": "Fast, Accurate, and Healthier: Interactive Blurring Helps Moderators Reduce Exposure to Harmful Content",
-            "filename": "!!7461-Article Text-10892-1-10-20200930.pdf",
-            "authors": [
-                "Anubrata Das",
-                "Brandon Dang",
-                "Matthew Lease"
-            ],
-            "modified": 1603870979,
-            "priority": 2,
-            "year": 2020,
-            "level": 4
-        },
-        {
-            "keywords": "Machine Learning > Interactive Machine Learning, Human-In-the-Loop",
-            "recog": 1,
-            "title": "Soliciting Human-in-the-Loop User Feedback for Interactive Machine Learning Reduces User Trust and Impressions of Model Accuracy",
-            "filename": "!!7464-Article Text-10886-1-10-20200930.pdf",
-            "authors": [
-                "Donald R. Honeycutt",
-                "Mahsan Nourani",
-                "Eric D. Ragan"
-            ],
-            "modified": 1603868760,
-            "priority": 2,
-            "year": 2020,
-            "level": 2
+            ]
         }
     ],
-    "unrecognized_overall": 2500,
-    "modified": 1606903158,
-    "unrecognized": 0,
+    "unrecognized_overall_percent": 0.42,
     "unrecognized_percent": 0.0,
-    "unrecognized_overall_percent": 0.42
+    "unrecognized": 0,
+    "modified": 1607682084,
+    "unrecognized_overall": 2510
 }
