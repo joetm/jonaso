@@ -108,7 +108,7 @@ console.info(process.env.NODE_ENV);
 
                 <p>
                   I hold a MSc degree in Computer Science (with Distinction)
-                  from the <a href="https://www.southampton.ac.uk/">University of Southampton</a> and studied Industrial Engineering in Germany and Sweden (leading to the degree of Diplom-Wirtschaftsingenieur which is equivalent to a Master of Science).<br />
+                  from the <a href="https://www.southampton.ac.uk/">University of Southampton</a> and studied Industrial Engineering at the <a href="https://www.tu-darmstadt.de/">Technical University of Darmstadt</a> in Germany and <a href="https://liu.se/en">Linköping University</a> in Sweden (leading to the degree of Diplom-Wirtschaftsingenieur which is equivalent to a Master of Science).<br />
                   In the past, I worked as research assistant (Wissenschaftlicher Mitarbeiter) at <a href="https://www.fu-berlin.de/">Freie Universität</a> and the <a href="https://gepris.dfg.de/gepris/projekt/194453117/ergebnisse?context=projekt&task=showDetail&id=194453117">Cluster of Excellence "Bild Wissen Gestaltung"</a> in Berlin.
                    Before that, I worked in agile teams as a web developer at <a href="https://www.seme4.com/">Seme4</a> and <a href="https://www.liip.ch/">Liip</a>.
                    Finally, I gained industry experience as Business Analyst and Strategy Analyst at <a href="https://www.alstom.com/">Alstom</a> (now <a href="https://www.ge.com/">GE</a>).
