@@ -7,7 +7,7 @@ import TravelRotary from "../components/TravelRotary"
 import img from "../img/opp.jpg"
 import ACMDL from "../img/ACM-DL-Logo-size3.webp"
 import MEDIUM from "../img/monogram-mask.svg"
-import { nobottommargin, notopmargin, nobold } from "../common"
+import { nobottommargin } from "../common"
 import Layout from "../components/layout"
 
 
@@ -90,33 +90,28 @@ console.info(process.env.NODE_ENV);
                 <p>
                   I am <strong>Jonas Oppenlaender</strong>,
                   a doctoral researcher
-                  in the Crowd Computing group
+                  in the <a href="https://crowdcomputing.net/">Crowd Computing</a> group
                   {" "}
                   at the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a>,
                   {" "}
-                  <a href="http://www.oulu.fi/university/">University of Oulu</a>,
-                  {" "}
-                  <a href="https://www.theatlantic.com/entertainment/archive/2012/03/world-map-metal-band-population-density/329913/">Finland</a>,
-                  working towards a PhD in Computer Science,
+                  <a href="http://www.oulu.fi/university/">University of Oulu</a> in Finland,
+                  working towards a doctoral degree in Computer Science,
                   {" "}
                   advised by Associate Prof. <a href="http://www.simohosio.com/">Simo Hosio</a>.
-                  {" "}
+                  {/*
                   Previously, I was a research assistant (Wissenschaftlicher Mitarbeiter)
-	              {/* (early-stage researcher) */}
                   {" "}
-                  at the <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/" rel="nofollow">Human-Centered Computing</a> group, Freie Universit&auml;t Berlin.
+                  at the <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/" rel="nofollow">Human-Centered Computing</a> group, <a href="https://www.fu-berlin.de/">Freie Universit&auml;t Berlin</a>
+                  and the <a href="https://gepris.dfg.de/gepris/projekt/194453117/ergebnisse?context=projekt&task=showDetail&id=194453117">Cluster of Excellence "Bild Wissen Gestaltung"</a> in Berlin.
+                  */}
                 </p>
 
                 <p>
                   I hold a MSc degree in Computer Science (with Distinction)
-                  from the <a href="https://www.southampton.ac.uk/">University of Southampton</a>, UK,
-                  and studied Industrial Engineering in Germany and Sweden.
-                </p>
-
-                <p>
-                  I am interested in building web-based socio-technical systems
-                  in which the human and technological elements 
-                  perform complex tasks better than either human or machine could independently.
+                  from the <a href="https://www.southampton.ac.uk/">University of Southampton</a> and studied Industrial Engineering in Germany and Sweden (leading to the degree of Diplom-Wirtschaftsingenieur which is equivalent to a Master of Science).<br />
+                  In the past, I worked as research assistant (Wissenschaftlicher Mitarbeiter) at <a href="https://www.fu-berlin.de/">Freie Universität</a> and the <a href="https://gepris.dfg.de/gepris/projekt/194453117/ergebnisse?context=projekt&task=showDetail&id=194453117">Cluster of Excellence "Bild Wissen Gestaltung"</a> in Berlin.
+                   Before that, I worked in agile teams as a web developer at <a href="https://www.seme4.com/">Seme4</a> and <a href="https://www.liip.ch/">Liip</a>.
+                   Finally, I gained industry experience as Business Analyst and Strategy Analyst at <a href="https://www.alstom.com/">Alstom</a> (now <a href="https://www.ge.com/">GE</a>).
                 </p>
 
                 <p>
@@ -125,7 +120,11 @@ console.info(process.env.NODE_ENV);
                 </p>
 
                 <p>
-                  My current research interests can be found <Link to="/interests">here</Link>.
+                  In my academic research, I am interested in building web-based socio-technical systems
+                  in which the human and technological elements perform complex tasks better than either
+                  human or machine could independently.
+                  <br />
+                  My current scientific research interests are reflected <Link to="/interests">here</Link>.
                   Some of my past interests include{" "}
                     { keywords.primary.join(", ") }
                   {" "} and{" "}
