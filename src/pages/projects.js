@@ -91,7 +91,7 @@ class Projects extends React.Component {
       // }
 
   render() {
-    const { projects, publications } = this.state
+    const { projects } = this.state
     // const keys = Object.keys(projects).reverse()
     return (
       <Layout>
@@ -105,7 +105,7 @@ class Projects extends React.Component {
               {
                 projects.map(project => {
                 	const { title, subtitle, description, date, organisation, organisation_href, funding, img,
-                    medium = [], presentations = [], workshops = [], publications = [] } = project
+                    medium = [], presentations = [], workshops = [] } = project
                   return (
                     <Grid key={`grid_${title}`} style={{marginBottom:'20px'}}>
 
