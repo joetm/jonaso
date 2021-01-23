@@ -50,35 +50,35 @@ replace-cv:
 
 	# set the options in the CV
 	cd academic-cv; \
-		sed 's|\\excludefromprint{.*}||g' cv.tex > tmp.tex; \
-		sed 's|\\definenewtoggle{showbirthdate}{true}|\\definenewtoggle{showbirthdate}{false}|g' tmp.tex > cv.tex; \
-		sed 's|\\definenewtoggle{shownationality}{true}|\\definenewtoggle{shownationality}{false}|g' cv.tex > tmp.tex; \
-		sed 's|\\definenewtoggle{showgithub}{false}|\\definenewtoggle{showgithub}{true}|g' tmp.tex > cv.tex; \
-		sed 's|\\definenewtoggle{showobjective}{true}|\\definenewtoggle{showobjective}{false}|g' cv.tex > tmp.tex; \
-		sed 's|\\definenewtoggle{showabitur}{true}|\\definenewtoggle{showabitur}{false}|g' tmp.tex > cv.tex; \
-		sed 's|\\definenewtoggle{showdoctoralstudiesasexperience}{false}|\\definenewtoggle{showdoctoralstudiesasexperience}{true}|g' cv.tex > tmp.tex; \
-		sed 's|\\definenewtoggle{showteaching}{false}|\\definenewtoggle{showteaching}{true}|g' tmp.tex > cv.tex; \
-		sed 's|\\definenewtoggle{showsupervisions}{false}|\\definenewtoggle{showsupervisions}{true}|g' cv.tex > tmp.tex; \
-		sed 's|\\definenewtoggle{showacademicservice}{false}|\\definenewtoggle{showacademicservice}{true}|g' tmp.tex > cv.tex; \
-		sed 's|\\definenewtoggle{showpeerreview}{false}|\\definenewtoggle{showpeerreview}{true}|g' cv.tex > tmp.tex; \
-		sed 's|\\definenewtoggle{showcertifications}{false}|\\definenewtoggle{showcertifications}{true}|g' tmp.tex > cv.tex; \
-		sed 's|\\definenewtoggle{showlanguages}{false}|\\definenewtoggle{showlanguages}{true}|g' cv.tex > tmp.tex; \
-		sed 's|\\definenewtoggle{showmemberships}{false}|\\definenewtoggle{showmemberships}{true}|g' tmp.tex > cv.tex; \
-		sed 's|\\definenewtoggle{showthesestitles}{false}|\\definenewtoggle{showthesestitles}{true}|g' cv.tex > tmp.tex; \
-		sed 's|\\definenewtoggle{showsupervisors}{false}|\\definenewtoggle{showsupervisors}{true}|g' tmp.tex > cv.tex; \
-		sed 's|\\definenewtoggle{showsummary}{true}|\\definenewtoggle{showsummary}{false}|g' cv.tex > tmp.tex; \
-		sed 's|\\definenewtoggle{showpositiondetails}{true}|\\definenewtoggle{showpositiondetails}{false}|g' tmp.tex > cv.tex; \
-		sed 's|\\definenewtoggle{showinterests}{true}|\\definenewtoggle{showinterests}{false}|g' cv.tex > tmp.tex; \
-		sed 's|\\definenewtoggle{shownationality}{true}|\\definenewtoggle{shownationality}{false}|g' tmp.tex > cv.tex; \
-		sed 's|\\definenewtoggle{showpublications}{false}|\\definenewtoggle{showpublications}{true}|g' cv.tex > tmp.tex; \
-		sed 's|\\definenewtoggle{showselectedpublications}{true}|\\definenewtoggle{showselectedpublications}{false}|g' tmp.tex > cv.tex; \
-		sed 's|\\definenewtoggle{showfunding}{false}|\\definenewtoggle{showfunding}{true}|g' cv.tex > tmp.tex; \
-		sed 's|\\definenewtoggle{showgranttitles}{true}|\\definenewtoggle{showgranttitles}{false}|g' tmp.tex > cv.tex; \
-		sed 's|\\definenewtoggle{showreferences}{true}|\\definenewtoggle{showreferences}{false}|g' cv.tex > tmp.tex; \
-		sed 's|\\definenewtoggle{showlinks}{false}|\\definenewtoggle{showlinks}{true}|g' tmp.tex > cv.tex; \
-		sed 's|\\definenewtoggle{showtotalfunding}{true}|\\definenewtoggle{showtotalfunding}{false}|g' cv.tex > tmp.tex; \
-		sed 's|\\definenewtoggle{showpublicationsummary}{false}|\\definenewtoggle{showpublicationsummary}{true}|g' tmp.tex > tmp2.tex; \
-		sed 's|\\definenewtoggle{showmoney}{true}|\\definenewtoggle{showmoney}{false}|g' tmp2.tex > cv.tex
+		sed 's|\\excludefromprint{.*}||g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showbirthdate}{true}|\\definenewtoggle{showbirthdate}{false}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{shownationality}{true}|\\definenewtoggle{shownationality}{false}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showgithub}{false}|\\definenewtoggle{showgithub}{true}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showobjective}{true}|\\definenewtoggle{showobjective}{false}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showabitur}{true}|\\definenewtoggle{showabitur}{false}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showdoctoralstudiesasexperience}{false}|\\definenewtoggle{showdoctoralstudiesasexperience}{true}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showteaching}{false}|\\definenewtoggle{showteaching}{true}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showsupervisions}{false}|\\definenewtoggle{showsupervisions}{true}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showacademicservice}{false}|\\definenewtoggle{showacademicservice}{true}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showpeerreview}{false}|\\definenewtoggle{showpeerreview}{true}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showcertifications}{false}|\\definenewtoggle{showcertifications}{true}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showlanguages}{false}|\\definenewtoggle{showlanguages}{true}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showmemberships}{false}|\\definenewtoggle{showmemberships}{true}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showthesestitles}{false}|\\definenewtoggle{showthesestitles}{true}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showsupervisors}{false}|\\definenewtoggle{showsupervisors}{true}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showsummary}{true}|\\definenewtoggle{showsummary}{false}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showpositiondetails}{true}|\\definenewtoggle{showpositiondetails}{false}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showinterests}{true}|\\definenewtoggle{showinterests}{false}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{shownationality}{true}|\\definenewtoggle{shownationality}{false}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showpublications}{false}|\\definenewtoggle{showpublications}{true}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showselectedpublications}{true}|\\definenewtoggle{showselectedpublications}{false}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showfunding}{false}|\\definenewtoggle{showfunding}{true}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showgranttitles}{true}|\\definenewtoggle{showgranttitles}{false}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showreferences}{true}|\\definenewtoggle{showreferences}{false}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showlinks}{false}|\\definenewtoggle{showlinks}{true}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showtotalfunding}{true}|\\definenewtoggle{showtotalfunding}{false}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showpublicationsummary}{false}|\\definenewtoggle{showpublicationsummary}{true}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showmoney}{true}|\\definenewtoggle{showmoney}{false}|g' cv.tex | sponge cv.tex
 
 build-cv:
 	# build the publication list
