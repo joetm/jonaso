@@ -39,6 +39,8 @@ def parsefiles(PATTERN, BASEPATHS, conn):
 
                 if fnmatch(name, PATTERN):
 
+                    print(name)
+
                     counter = counter + 1
 
                     sha1 = hashlib.sha1()
