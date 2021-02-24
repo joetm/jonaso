@@ -39,8 +39,6 @@ def parsefiles(PATTERN, BASEPATHS, conn):
 
                 if fnmatch(name, PATTERN):
 
-                    print(name)
-
                     counter = counter + 1
 
                     sha1 = hashlib.sha1()
@@ -81,6 +79,7 @@ def parsefiles(PATTERN, BASEPATHS, conn):
                         unrecognizedCounter = unrecognizedCounter + 1
                         continue
 
+                    print(name)
                     print (counter, ": ",  thehash)
 
                     # get my keywords (not the author keywords)
