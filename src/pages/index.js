@@ -89,13 +89,24 @@ console.info(process.env.NODE_ENV);
 
                 <p>
                   I am <strong>Jonas Oppenlaender</strong>,
-                  a doctoral researcher
+                  a Senior Researcher at <a href="https://www.fiz-karlsruhe.de/">FIZ Karlsruhe</a> &ndash; Leibniz Institute for Information Infrastructure.
+                  {" "}
+                  I work in the 
+                  {" "}
+                  <a href="https://www.fiz-karlsruhe.de/en/forschung/information-service-engineering">Information Service Engineering (ISE)</a>
+                  {" "}
+                  headed by
+                  Prof. <a href="https://www.aifb.kit.edu/web/Harald_Sack/en">Harald Sack</a>.
+                </p>
+
+                <p>
+                  Previously, I was a doctoral researcher
                   in the <a href="https://crowdcomputing.net/">Crowd Computing</a> group
                   {" "}
                   at the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a>,
                   {" "}
-                  <a href="http://www.oulu.fi/university/">University of Oulu</a> in Finland,
-                  working towards a doctoral degree in Computer Science,
+                  <a href="http://www.oulu.fi/university/">University of Oulu</a> in Finland
+                  where I worked towards a doctoral degree in Computer Science
                   {" "}
                   advised by Associate Prof. <a href="http://www.simohosio.com/">Simo Hosio</a>.
                   {/*
