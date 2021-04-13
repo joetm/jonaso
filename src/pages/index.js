@@ -100,6 +100,7 @@ console.info(process.env.NODE_ENV);
                 </p>
 
                 <p>
+                  I am a <a href="http://www.jonaso.de/kettlebells/">kettlebell</a> salesman.
                   Previously, I was a doctoral researcher
                   in the <a href="https://crowdcomputing.net/">Crowd Computing</a> group
                   {" "}
