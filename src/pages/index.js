@@ -93,7 +93,7 @@ console.info(process.env.NODE_ENV);
                   {" "}
                   I work in the 
                   {" "}
-                  <a href="https://www.fiz-karlsruhe.de/en/forschung/information-service-engineering">Information Service Engineering (ISE)</a>
+                  <a href="https://www.fiz-karlsruhe.de/en/forschung/information-service-engineering">Information Service Engineering (ISE)</a> group
                   {" "}
                   headed by
                   Prof. <a href="https://www.aifb.kit.edu/web/Harald_Sack/en">Harald Sack</a>.
