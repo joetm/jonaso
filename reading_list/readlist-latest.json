@@ -1,93 +1,347 @@
 {
+    "unrecognized_overall_percent": 0.42,
+    "unrecognized": 0,
+    "unrecognized_overall": 2621,
+    "modified": 1618649186,
+    "unrecognized_percent": 0.0,
     "documents": [
         {
-            "recog": 0,
-            "modified": 1618422765,
-            "authors": [],
+            "filename": "!!!3325285.pdf",
+            "keywords": "Design, HCI, UI, UX > Interaction",
+            "year": 2019,
+            "modified": 1618647875,
+            "level": 2,
+            "authors": [
+                "KASPER HORNB\u00c6K",
+                "ASKE MOTTELSON",
+                "JARROD KNIBBE",
+                "DANIEL VOGEL"
+            ],
+            "title": "What Do We Mean by \u201cInteraction\u201d? An Analysis of 35 Years of CHI",
+            "priority": 3,
+            "recog": 1
+        },
+        {
+            "filename": "-Foundations of Statistical Natural Language Processing by Christopher D. Manning, Hinrich Schuetze (z-lib.org).pdf",
+            "keywords": "NLP > General",
+            "year": 2000,
+            "modified": 1618647513,
+            "level": 2,
+            "authors": [
+                "Christopher D. Manning"
+            ],
+            "title": "Foundations of Statistical Natural Language Processing by Christopher D. Manning, Hinrich Schuetze (z-lib.org)",
+            "priority": 0,
+            "recog": 0
+        },
+        {
+            "filename": "!!!Arboretum_UIST2018.pdf",
+            "keywords": "Crowdsourcing, Human Computation > Applications > Accessibility > Web Acessibility",
+            "year": 2018,
+            "modified": 1618644281,
+            "level": 4,
+            "authors": [
+                "Steve Oney",
+                "Alan Lundgard",
+                "Rebecca Krosnick",
+                "Michael Nebeling",
+                "Walter S. Lasecki"
+            ],
+            "title": "Arboretum and Arbility: Improving Web Accessibility Through a Shared Browsing Architecture",
+            "priority": 3,
+            "recog": 1
+        },
+        {
+            "filename": "-Mobiilipeli yhdist\u00e4\u00e4 huvin ja hy\u00f6dyn_ tosiel\u00e4m\u00e4n Pac-Manit ker\u00e4\u00e4v\u00e4t tietoa katujen kunnosta napsimalla virtuaalimarjoja ja tienaavat samalla rahaa \u2013 katso, miten homma toimii _ Yle Uutiset _ yle.fi.pdf",
+            "keywords": "Crowdsourcing, Human Computation > Applications > Accessibility > Street Conditions",
             "year": 2021,
-            "title": "Kritik an Infektionsschutzgesetz_ _Wir setzen falsche\u00a0Priorit\u00e4ten_ _ tagesschau.de",
-            "filename": "-Kritik an Infektionsschutzgesetz_ _Wir setzen falsche\u00a0Priorit\u00e4ten_ _ tagesschau.de.pdf",
+            "modified": 1618643744,
+            "level": 4,
+            "authors": [
+                "Tomi Paju"
+            ],
+            "title": "The mobile game combines fun and bene t: real-life Pac- Manit gathers information about the condition of the streets by clicking on virtual berries and at the same time making money - see how it works",
+            "priority": 0,
+            "recog": 1
+        },
+        {
+            "filename": "!!!07_-_google.pdf",
+            "keywords": "Search > Google",
+            "year": 1999,
+            "modified": 1618643566,
+            "level": 2,
+            "authors": [
+                "Sergey Brin"
+            ],
+            "title": "The Anatomy of a Large-Scale Hypertextual Web Search Engine",
+            "priority": 3,
+            "recog": 1
+        },
+        {
+            "filename": "!!3170427.3174364.pdf",
+            "keywords": "Search > Exploratory Search > Systems > Investigative Search",
+            "year": 2017,
+            "modified": 1618643430,
+            "level": 4,
+            "authors": [
+                "Mayank Kejriwal"
+            ],
+            "title": "Technology-assisted Investigative Search: A Case Study from an Illicit Domain",
+            "priority": 2,
+            "recog": 1
+        },
+        {
+            "filename": "!!!paper3.pdf",
+            "keywords": "Linked Data > Tools > refer",
+            "year": 2016,
+            "modified": 1618596894,
             "level": 3,
+            "authors": [
+                "Tabea Tietz",
+                "Joscha J\u00e4ger",
+                "J\u00f6rg Waitelonis",
+                "Harald Sack"
+            ],
+            "title": "Semantic Annotation and Information Visualization for Blogposts with refer",
+            "priority": 3,
+            "recog": 1
+        },
+        {
+            "filename": "!!!paper_14.pdf",
+            "keywords": "NLP > Named Entity Linking, NLP > Systems > KEA-NEL",
+            "year": 2016,
+            "modified": 1618596154,
+            "level": 4,
+            "authors": [
+                "J\u00f6rg Waitelonis",
+                "Harald Sack"
+            ],
+            "title": "Named Entity Linking in #Tweets with KEA",
+            "priority": 3,
+            "recog": 1
+        },
+        {
+            "filename": "!!!paper-07.pdf",
+            "keywords": " > Research, Science > Scholarly Articles, Publications",
+            "year": 2014,
+            "modified": 1618589022,
+            "level": 3,
+            "authors": [
+                "Almudena Ruiz-Iniesta",
+                "Oscar Corcho"
+            ],
+            "title": "A review of ontologies for describing scholarly and scientific documents",
+            "priority": 3,
+            "recog": 1
+        },
+        {
+            "filename": "!!!1-s2.0-S187705091831620X-main.pdf",
+            "keywords": " > Research, Science > Results, Findings > SemSur",
+            "year": 2018,
+            "modified": 1618583799,
+            "level": 4,
+            "authors": [
+                "Said Fathallaa",
+                "Sahar Vahdatia",
+                "S\u00f6ren Auerc",
+                "Christoph Langee"
+            ],
+            "title": "SemSur: A Core Ontology for the Semantic Representation of Research Findings",
+            "priority": 3,
+            "recog": 1
+        },
+        {
+            "filename": "!The Role of a Frame-based Representation on the Semantic Web.pdf",
+            "keywords": "Ontology Engineering > General, Theory > Frames",
+            "year": "N/A",
+            "modified": 1618582743,
+            "level": 3,
+            "authors": [],
+            "title": "The Role of a Frame-based Representation on the Semantic Web",
+            "priority": 1,
+            "recog": 0
+        },
+        {
+            "filename": "!!!RIO_article_57036.pdf",
+            "keywords": "NFDI4Culture",
+            "year": 2020,
+            "modified": 1618566336,
+            "level": 1,
+            "authors": [
+                "Reinhard Altenh\u00f6ner",
+                "Ina Bl\u00fcmel",
+                "Barbara Wiermann"
+            ],
+            "title": "NFDI4Culture - Consortium for research data on material and immaterial cultural heritage",
+            "priority": 3,
+            "recog": 1
+        },
+        {
+            "filename": "!!!1-s2.0-S0142694X17300030-main.pdf",
+            "keywords": "Creativity > Collaboration, Groups > Issues > Fixation",
+            "year": 2017,
+            "modified": 1618509754,
+            "level": 4,
+            "authors": [
+                "Molly C. Martini",
+                "Maria Adriana Neroni"
+            ],
+            "title": "Where next for research on fixation, inspiration and creativity in design?",
+            "priority": 3,
+            "recog": 1
+        },
+        {
+            "filename": "!2002.09247.pdf",
+            "keywords": "Ontology Matching, Ontology Alignment > Representation Learning > Embedding Alignment",
+            "year": 2020,
+            "modified": 1618509391,
+            "level": 3,
+            "authors": [
+                "Russa Biswas",
+                "Mehwish Alam",
+                "Harald Sack"
+            ],
+            "title": "2002.09247",
+            "priority": 1,
+            "recog": 0
+        },
+        {
+            "filename": "!Zipf's law - Wikipedia.pdf",
+            "keywords": "Methods > Statistics > Distributions > Zipf\u2019s  law",
+            "year": 2020,
+            "modified": 1618475073,
+            "level": 4,
+            "authors": [
+                "Felix Auerbach"
+            ],
+            "title": "Zipf's law - Wikipedia",
+            "priority": 1,
+            "recog": 0
+        },
+        {
+            "filename": "!!1801.03400.pdf",
+            "keywords": "Communities, Networks > Power Law",
+            "year": 2018,
+            "modified": 1618468439,
+            "level": 2,
+            "authors": [
+                "Anna D. Broido",
+                "Aaron Clauset"
+            ],
+            "title": "Scale-free networks are rare",
+            "priority": 2,
+            "recog": 1
+        },
+        {
+            "filename": "!!!Forschung_und_Innovation_fuer_die_Menschen.pdf",
+            "keywords": "BMBF > Hightech Strategie 2025, HTS 2025",
+            "year": 2018,
+            "modified": 1618467500,
+            "level": 2,
+            "authors": [],
+            "title": "Forschung und Innovation fu\u0308r die Menschen ",
+            "priority": 3,
+            "recog": 1
+        },
+        {
+            "filename": "!!Fortschrittsbericht_zur_Hightech_Strategie_2025.pdf",
+            "keywords": "BMBF > Hightech Strategie 2025, HTS 2025",
+            "year": 2019,
+            "modified": 1618467095,
+            "level": 2,
+            "authors": [],
+            "title": "Fortschrittsbericht zur Hightech-Strategie 2025",
+            "priority": 2,
+            "recog": 1
+        },
+        {
+            "filename": "!!Forschung_fuer_Nachhaltigkeit.pdf",
+            "keywords": "BMBF > FONA Strategie, Nachhaltigkeit",
+            "year": 2020,
+            "modified": 1618466604,
+            "level": 2,
+            "authors": [],
+            "title": "Forschung fu\u0308r Nachhaltigkeit",
+            "priority": 2,
+            "recog": 1
+        },
+        {
             "keywords": "Pandemics > Corona Virus Pandemic > Infektionsschutzgesetz",
+            "recog": 0,
+            "filename": "-Kritik an Infektionsschutzgesetz_ _Wir setzen falsche\u00a0Priorit\u00e4ten_ _ tagesschau.de.pdf",
+            "year": 2021,
+            "modified": 1618422765,
+            "level": 3,
+            "authors": [],
+            "title": "Kritik an Infektionsschutzgesetz_ _Wir setzen falsche\u00a0Priorit\u00e4ten_ _ tagesschau.de",
             "priority": 0
         },
         {
+            "keywords": "Collecting > Dosensammlung",
             "recog": 0,
+            "filename": "-Der Dosensammler.pdf",
+            "year": 2021,
             "modified": 1618412966,
+            "level": 2,
             "authors": [
                 "Der Dosensammler",
                 "Warum Apotheker",
                 "Matthias Stoeck",
                 "Peter Ditzel"
             ],
-            "year": 2021,
             "title": "Der Dosensammler",
-            "filename": "-Der Dosensammler.pdf",
-            "level": 2,
-            "keywords": "Collecting > Dosensammlung",
             "priority": 0
         },
         {
-            "recog": 1,
-            "modified": 1618384064,
-            "authors": [
-                "Reinhard Altenh\u00f6ner",
-                "Ina Bl\u00fcmel",
-                "Barbara Wiermann"
-            ],
-            "year": 2020,
-            "title": "NFDI4Culture - Consortium for research data on material and immaterial cultural heritage",
-            "filename": "!!!RIO_article_57036.pdf",
-            "level": 1,
-            "keywords": "NFDI4Culture",
-            "priority": 3
-        },
-        {
+            "keywords": "Blockchain, Bitcoin > NFT Art",
             "recog": 0,
+            "filename": "-What's an NFT_ Behind the boom for digital collectibles.pdf",
+            "year": 2021,
             "modified": 1618339016,
+            "level": 2,
             "authors": [
                 "Diana Dasrath",
                 "Steve Aoki"
             ],
-            "year": 2021,
             "title": "What's an NFT_ Behind the boom for digital collectibles",
-            "filename": "-What's an NFT_ Behind the boom for digital collectibles.pdf",
-            "level": 2,
-            "keywords": "Blockchain, Bitcoin > NFT Art",
             "priority": 0
         },
         {
+            "keywords": "Blockchain, Bitcoin > NFT Art > Gas",
             "recog": 1,
+            "filename": "!Ethereum Gas Explained.pdf",
+            "year": 2021,
             "modified": 1618336858,
+            "level": 3,
             "authors": [
                 "William M. Peaster"
             ],
-            "year": 2021,
             "title": "Ethereum Gas Explained",
-            "filename": "!Ethereum Gas Explained.pdf",
-            "level": 3,
-            "keywords": "Blockchain, Bitcoin > NFT Art > Gas",
             "priority": 1
         },
         {
+            "keywords": "NLP > Classification > Short Text Classification > Weakly Supervised Short Text Categorization using World Knowledge (WESSTEC)",
             "recog": 1,
+            "filename": "!2020-T\u00fcrker-Zhang-Alam-Sack-ISWC-Weakly-Supervised-Short-Text-Categoriza.pdf",
+            "year": 2020,
             "modified": 1618311499,
+            "level": 4,
             "authors": [
                 "Rima T\u00fcrker",
                 "Lei Zhang",
                 "Mehwish Alam",
                 "Harald Sack"
             ],
-            "year": 2020,
             "title": "Weakly Supervised Short Text Categorization Using World Knowledge",
-            "filename": "!2020-T\u00fcrker-Zhang-Alam-Sack-ISWC-Weakly-Supervised-Short-Text-Categoriza.pdf",
-            "level": 4,
-            "keywords": "NLP > Classification > Short Text Classification > Weakly Supervised Short Text Categorization using World Knowledge (WESSTEC)",
             "priority": 1
         },
         {
+            "keywords": "Linked Data > Knowledge Graph > Nuremberg",
             "recog": 1,
+            "filename": "!2021-Tietz-Bruns-Dessi-Sack-Knowledge-Graph-enabled-Curation-and-Explora.pdf",
+            "year": 2021,
             "modified": 1618310907,
+            "level": 3,
             "authors": [
                 "Tabea Tietz",
                 "Oleksandra Bruns",
@@ -96,46 +350,46 @@
                 "Danilo Dess\u0300\u0131",
                 "Harald Sack"
             ],
-            "year": 2021,
             "title": "Knowledge Graph enabled Curation and Exploration of Nuremberg\u2019s City Heritage",
-            "filename": "!2021-Tietz-Bruns-Dessi-Sack-Knowledge-Graph-enabled-Curation-and-Explora.pdf",
-            "level": 3,
-            "keywords": "Linked Data > Knowledge Graph > Nuremberg",
             "priority": 1
         },
         {
+            "keywords": "Communities, Networks > Issues > Moderation > Toxicity Detection",
             "recog": 1,
+            "filename": "!electronics-10-00779-v2.pdf",
+            "year": 2021,
             "modified": 1618310740,
+            "level": 4,
             "authors": [
                 "Danilo Dess\u00ec",
                 "Diego Reforgiato Recupero",
                 "Harald Sack"
             ],
-            "year": 2021,
             "title": "An Assessment of Deep Learning Models and Word Embeddings for Toxicity Detection within Online Textual Comments",
-            "filename": "!electronics-10-00779-v2.pdf",
-            "level": 4,
-            "keywords": "Communities, Networks > Issues > Moderation > Toxicity Detection",
             "priority": 1
         },
         {
+            "keywords": "Machine Learning > Issues > Deepfakes",
             "recog": 1,
+            "filename": "-_Sourires_ retouch\u00e9s de victimes au Cambodge _ VICE s'excuse - Par Pauline Bock _\u00a0Arr\u00eat sur images.pdf",
+            "year": 2021,
             "modified": 1618306657,
+            "level": 3,
             "authors": [
                 "Pauline Bock",
                 "Matt Loughrey",
                 "canadien Andy Capper"
             ],
-            "year": 2021,
             "title": "Un photographe retouche des photos pour faire \"sourire\" les victimes des Khmers rouges",
-            "filename": "-_Sourires_ retouch\u00e9s de victimes au Cambodge _ VICE s'excuse - Par Pauline Bock _\u00a0Arr\u00eat sur images.pdf",
-            "level": 3,
-            "keywords": "Machine Learning > Issues > Deepfakes",
             "priority": 0
         },
         {
+            "keywords": " > Materials Science",
             "recog": 1,
+            "filename": "-ontology_modelling_for_materials_science_experiments.pdf",
+            "year": 2021,
             "modified": 1618306066,
+            "level": 2,
             "authors": [
                 "Mehwish Alam",
                 "Henk Birkholz",
@@ -149,16 +403,16 @@
                 "Harald Sack",
                 "Akhil Thomas"
             ],
-            "year": 2021,
             "title": "Ontology Modelling for Materials Science Experiments",
-            "filename": "-ontology_modelling_for_materials_science_experiments.pdf",
-            "level": 2,
-            "keywords": " > Materials Science",
             "priority": 0
         },
         {
+            "keywords": " > Materials Science",
             "recog": 1,
+            "filename": "-steps_towards_a_dislocation_ontology_for_crystalline_materials.pdf",
+            "year": 2021,
             "modified": 1618305790,
+            "level": 2,
             "authors": [
                 "Ahmad Zainul Ihsan",
                 "Danilo Dess\u0300\u0131",
@@ -166,16 +420,16 @@
                 "Harald Sack",
                 "Stefan Sandfeld"
             ],
-            "year": 2021,
             "title": "Steps towards a Dislocation Ontology for Crystalline Materials",
-            "filename": "-steps_towards_a_dislocation_ontology_for_crystalline_materials.pdf",
-            "level": 2,
-            "keywords": " > Materials Science",
             "priority": 0
         },
         {
+            "keywords": "Linked Data > Knowledge Graph > Nuremberg > Nuremberg Address",
             "recog": 1,
+            "filename": "!the_nuremberg_address_knowledge_graph.pdf",
+            "year": 2021,
             "modified": 1618305183,
+            "level": 4,
             "authors": [
                 "Oleksandra Bruns",
                 "Tabea Tietz",
@@ -184,202 +438,202 @@
                 "Felix Xiong",
                 "Harald Sack"
             ],
-            "year": 2021,
             "title": "The Nuremberg Address Knowledge Graph",
-            "filename": "!the_nuremberg_address_knowledge_graph.pdf",
-            "level": 4,
-            "keywords": "Linked Data > Knowledge Graph > Nuremberg > Nuremberg Address",
             "priority": 1
         },
         {
+            "keywords": "Visualisation > Applications > Cultural Heritage",
             "recog": 1,
+            "filename": "!!!08352050.pdf",
+            "year": 2019,
             "modified": 1618299794,
+            "level": 3,
             "authors": [
                 "Florian Windhager",
                 "unther Schreder",
                 "Katrin Glinka",
                 "Eva Mayr"
             ],
-            "year": 2019,
             "title": "Visualization of Cultural Heritage Collection Data: State of the Art and Future Challenges",
-            "filename": "!!!08352050.pdf",
-            "level": 3,
-            "keywords": "Visualisation > Applications > Cultural Heritage",
             "priority": 3
         },
         {
+            "keywords": "Confusion > Conceptual Confusion",
             "recog": 1,
+            "filename": "-jacobsson2014.pdf",
+            "year": 2014,
             "modified": 1618298557,
+            "level": 2,
             "authors": [
                 "Thomas Jacobsson",
                 "Staffan Jacobsson",
                 "Thomas Jacobssona",
                 "Staffan Jacobssonb"
             ],
-            "year": 2014,
             "title": "Conceptual confusion \u2013 an analysis of the meaning of concepts in technological innovation systems and sociological functionalism",
-            "filename": "-jacobsson2014.pdf",
-            "level": 2,
-            "keywords": "Confusion > Conceptual Confusion",
             "priority": 0
         },
         {
-            "recog": 1,
-            "modified": 1618298430,
-            "authors": [],
-            "year": 2021,
-            "title": "Understanding Creative Destruction",
-            "filename": "!Creative Destruction Definition.pdf",
-            "level": 4,
             "keywords": "Design, HCI, UI, UX > Methods, Techniques > Destruction > Creative Destruction",
+            "recog": 1,
+            "filename": "!Creative Destruction Definition.pdf",
+            "year": 2021,
+            "modified": 1618298430,
+            "level": 4,
+            "authors": [],
+            "title": "Understanding Creative Destruction",
             "priority": 1
         },
         {
+            "keywords": "Confusion > Conceptual Confusion",
             "recog": 1,
+            "filename": "-10.2307@3745675.pdf",
+            "year": 2016,
             "modified": 1618295953,
+            "level": 2,
             "authors": [
                 "William McDougall"
             ],
-            "year": 2016,
             "title": "The Confusion of the Concept",
-            "filename": "-10.2307@3745675.pdf",
-            "level": 2,
-            "keywords": "Confusion > Conceptual Confusion",
             "priority": 0
         },
         {
+            "keywords": "Confusion > Conceptual Confusion",
             "recog": 1,
-            "modified": 1618295669,
-            "authors": [],
-            "year": 2021,
-            "title": "The Continuing Problem of Conceptual Confusion",
             "filename": "-The Continuing Problem of Conceptual Confusion.pdf",
+            "year": 2021,
+            "modified": 1618295669,
             "level": 2,
-            "keywords": "Confusion > Conceptual Confusion",
+            "authors": [],
+            "title": "The Continuing Problem of Conceptual Confusion",
             "priority": 0
         },
         {
+            "keywords": "Blockchain, Bitcoin > NFT Art > Minting",
             "recog": 0,
+            "filename": "-Digital artist Pak launches NFT burning platform and token.pdf",
+            "year": 2021,
             "modified": 1618294249,
+            "level": 3,
             "authors": [
                 "Yogita Khatri"
             ],
-            "year": 2021,
             "title": "Digital artist Pak launches NFT burning platform and token",
-            "filename": "-Digital artist Pak launches NFT burning platform and token.pdf",
-            "level": 3,
-            "keywords": "Blockchain, Bitcoin > NFT Art > Minting",
             "priority": 0
         },
         {
+            "keywords": "Supporting Science > Classification > Classification of Papers",
             "recog": 1,
+            "filename": "!!!2021-Hoppe-Dessi-Sack-Sci-K-Deep-Learning-meets-Knowledge-Graphs-for-Sch.pdf",
+            "year": 2021,
             "modified": 1618235065,
+            "level": 3,
             "authors": [
                 "Fabian Hoppe",
                 "Danilo Dess\u00ec",
                 "Harald Sack"
             ],
-            "year": 2021,
             "title": "Deep Learning meets Knowledge Graphs for Scholarly Data Classification",
-            "filename": "!!!2021-Hoppe-Dessi-Sack-Sci-K-Deep-Learning-meets-Knowledge-Graphs-for-Sch.pdf",
-            "level": 3,
-            "keywords": "Supporting Science > Classification > Classification of Papers",
             "priority": 3
         },
         {
+            "keywords": "Brexit > Trade with EU",
             "recog": 0,
+            "filename": "-_My small business is in ruins and I see no way out._ - West Country Bylines.pdf",
+            "year": 2021,
             "modified": 1618233095,
+            "level": 2,
             "authors": [
                 "Anthea Simmons"
             ],
-            "year": 2021,
             "title": "_My small business is in ruins and I see no way out._ - West Country Bylines",
-            "filename": "-_My small business is in ruins and I see no way out._ - West Country Bylines.pdf",
-            "level": 2,
-            "keywords": "Brexit > Trade with EU",
             "priority": 0
         },
         {
+            "keywords": "NLP > Topic Modelling > Latent Dirichlet Allocation, LDA > Topic and Trend Detection > Segmented Author-Topic Model (S-ATM)",
             "recog": 1,
+            "filename": "!!10.1.1.155.4466.pdf",
+            "year": 2009,
             "modified": 1618232916,
+            "level": 5,
             "authors": [
                 "Levent Bolelli",
                 "\u015eeyda Ertekin",
                 "C. Lee Giles"
             ],
-            "year": 2009,
             "title": "Topic and Trend Detection in Text Collections using Latent Dirichlet Allocation",
-            "filename": "!!10.1.1.155.4466.pdf",
-            "level": 5,
-            "keywords": "NLP > Topic Modelling > Latent Dirichlet Allocation, LDA > Topic and Trend Detection > Segmented Author-Topic Model (S-ATM)",
             "priority": 2
         },
         {
+            "keywords": "NLP > Topic Modelling",
             "recog": 1,
+            "filename": "!!!blei03a.pdf",
+            "year": "N/A",
             "modified": 1618231577,
+            "level": 2,
             "authors": [
                 "David M. Blei",
                 "Andrew Y. Ng",
                 "Michael I. Jordan",
                 "John Lafferty"
             ],
-            "year": "N/A",
             "title": "Latent Dirichlet Allocation",
-            "filename": "!!!blei03a.pdf",
-            "level": 2,
-            "keywords": "NLP > Topic Modelling",
             "priority": 3
         },
         {
-            "recog": 0,
-            "modified": 1618230353,
-            "authors": [],
-            "year": 2018,
-            "title": "A topic model of PMLA 1924-2006",
-            "filename": "-A topic model of PMLA 1924-2006.pdf",
-            "level": 2,
             "keywords": "NLP > Topic Modelling",
+            "recog": 0,
+            "filename": "-A topic model of PMLA 1924-2006.pdf",
+            "year": 2018,
+            "modified": 1618230353,
+            "level": 2,
+            "authors": [],
+            "title": "A topic model of PMLA 1924-2006",
             "priority": 0
         },
         {
-            "recog": 0,
-            "modified": 1618227424,
-            "authors": [],
-            "year": 2021,
-            "title": "Nanopub Monitor",
-            "filename": "!Nanopub Monitor.pdf",
-            "level": 3,
             "keywords": "Open Science, e-Science, e-Research, Research Data > Nanopublications > Nanopub Monitor",
-            "priority": 1
-        },
-        {
-            "recog": 1,
-            "modified": 1618226158,
-            "authors": [],
+            "recog": 0,
+            "filename": "!Nanopub Monitor.pdf",
             "year": 2021,
-            "title": "ON DESTRUCTION IN DESIGN BY TAPAN PARIKH AND SAMAR SABIE",
-            "filename": "!3447913.3447921.pdf",
+            "modified": 1618227424,
             "level": 3,
-            "keywords": "Design, HCI, UI, UX > Methods, Techniques > Destruction",
+            "authors": [],
+            "title": "Nanopub Monitor",
             "priority": 1
         },
         {
+            "keywords": "Design, HCI, UI, UX > Methods, Techniques > Destruction",
             "recog": 1,
+            "filename": "!3447913.3447921.pdf",
+            "year": 2021,
+            "modified": 1618226158,
+            "level": 3,
+            "authors": [],
+            "title": "ON DESTRUCTION IN DESIGN BY TAPAN PARIKH AND SAMAR SABIE",
+            "priority": 1
+        },
+        {
+            "keywords": "Machine Learning > Explainable AI, XAI > Explanation User Interfaces",
+            "recog": 1,
+            "filename": "-2103.15462.pdf",
+            "year": 2021,
             "modified": 1618220487,
+            "level": 3,
             "authors": [
                 "Claudia M\u00fcller-Birn",
                 "Michael Tebbe"
             ],
-            "year": 2021,
             "title": "Situated Case Studies for a Human-CenteredDesign of Explanation User Interfaces",
-            "filename": "-2103.15462.pdf",
-            "level": 3,
-            "keywords": "Machine Learning > Explainable AI, XAI > Explanation User Interfaces",
             "priority": 0
         },
         {
+            "keywords": "NFDI4Culture > Wikibase",
             "recog": 1,
+            "filename": "!!!oclcresearch-creating-library-linked-data-with-wikibase-project-passage-a4.pdf",
+            "year": 2019,
             "modified": 1618167716,
+            "level": 2,
             "authors": [
                 "Jean Godby",
                 "Karen Smith-Yoshimura",
@@ -395,100 +649,100 @@
                 "Craig Thomas",
                 "Holly Tomren"
             ],
-            "year": 2019,
             "title": "Creating Library Linked Data with Wikibase: Lessons Learned from Project Passage",
-            "filename": "!!!oclcresearch-creating-library-linked-data-with-wikibase-project-passage-a4.pdf",
-            "level": 2,
-            "keywords": "NFDI4Culture > Wikibase",
             "priority": 3
         },
         {
+            "keywords": "Blockchain, Bitcoin > NFT Art > Issues > Copyright",
             "recog": 0,
+            "filename": "!NFT mania is here, and so are the scammers - The Verge.pdf",
+            "year": 2021,
             "modified": 1618152013,
+            "level": 4,
             "authors": [
                 "Derek Laufman"
             ],
-            "year": 2021,
             "title": "NFT mania is here, and so are the scammers - The Verge",
-            "filename": "!NFT mania is here, and so are the scammers - The Verge.pdf",
-            "level": 4,
-            "keywords": "Blockchain, Bitcoin > NFT Art > Issues > Copyright",
             "priority": 1
         },
         {
+            "keywords": "Blockchain, Bitcoin > NFT Art",
             "recog": 0,
+            "filename": "-PixelChain \u2014 How to create pixel art on the blockchain NFT OpenSea _ by MamaeCrypto Michelle M. _ Medium.pdf",
+            "year": 2021,
             "modified": 1618137087,
+            "level": 2,
             "authors": [
                 "Michelle M",
                 "NFT OpenSea",
                 "MamaeCrypto Michelle M. Jul"
             ],
-            "year": 2021,
             "title": "PixelChain \u2014 How to create pixel art on the blockchain NFT OpenSea _ by MamaeCrypto Michelle M. _ Medium",
-            "filename": "-PixelChain \u2014 How to create pixel art on the blockchain NFT OpenSea _ by MamaeCrypto Michelle M. _ Medium.pdf",
-            "level": 2,
-            "keywords": "Blockchain, Bitcoin > NFT Art",
             "priority": 0
         },
         {
+            "keywords": "Blockchain, Bitcoin > NFT Art",
             "recog": 0,
-            "modified": 1618137039,
-            "authors": [],
-            "year": 2021,
-            "title": "A Single Red Pixel is Selling as an NFT Artwork For Rs 6.5 Crore. Is This Peak Internet_",
             "filename": "-A Single Red Pixel is Selling as an NFT Artwork For Rs 6.5 Crore. Is This Peak Internet_.pdf",
+            "year": 2021,
+            "modified": 1618137039,
             "level": 2,
-            "keywords": "Blockchain, Bitcoin > NFT Art",
+            "authors": [],
+            "title": "A Single Red Pixel is Selling as an NFT Artwork For Rs 6.5 Crore. Is This Peak Internet_",
             "priority": 0
         },
         {
+            "keywords": "NFDI4Culture > Legal",
             "recog": 1,
+            "filename": "!9783748910664-253.pdf",
+            "year": 2021,
             "modified": 1618130510,
+            "level": 2,
             "authors": [
                 "Fabian Rack",
                 "Franziska Boehm",
                 "Matthias Pasdzierny",
                 "D\u00f6rte Schmidt"
             ],
-            "year": 2021,
             "title": "NFDI4Culture: Forschungsdaten in den Kulturwissenschaften",
-            "filename": "!9783748910664-253.pdf",
-            "level": 2,
-            "keywords": "NFDI4Culture > Legal",
             "priority": 1
         },
         {
+            "keywords": "Crowdsourcing, Human Computation > Applications > Computing Education",
             "recog": 1,
+            "filename": "!3428029.3428062.pdf",
+            "year": 2020,
             "modified": 1617977537,
+            "level": 3,
             "authors": [
                 "Arto Hellas",
                 "Albina Zavgorodniaia",
                 "Juha Sorva"
             ],
-            "year": 2020,
             "title": "Crowdsourcing in Computing Education Research: Case Amazon MTurk",
-            "filename": "!3428029.3428062.pdf",
-            "level": 3,
-            "keywords": "Crowdsourcing, Human Computation > Applications > Computing Education",
             "priority": 1
         },
         {
+            "keywords": "Knowledge > Knowledge Boundaries > Boundary Objects",
             "recog": 1,
+            "filename": "!!!star1989.pdf",
+            "year": "N/A",
             "modified": 1617977416,
+            "level": 3,
             "authors": [
                 "Susan Leigh",
                 "James R. Griesemer"
             ],
-            "year": "N/A",
             "title": "Institutional Ecology, \u2018Translations\u2019 and Boundary Objects: Amateurs and Professionals in Berkeley's Museum of Vertebrate Zoology, 1907-39",
-            "filename": "!!!star1989.pdf",
-            "level": 3,
-            "keywords": "Knowledge > Knowledge Boundaries > Boundary Objects",
             "priority": 3
         },
         {
+            "keywords": "AI > Human-AI-Interaction, Human-Machine-Interaction > Co-Creation > Systems > Creative Sketching Partner (CSP)",
             "recog": 1,
+            "filename": "!3377325.3377522.pdf",
+            "year": 2020,
             "modified": 1617976893,
+            "level": 5,
             "authors": [
                 "Pegah Karimi",
                 "Jeba Rezwana",
@@ -496,129 +750,115 @@
                 "Mary Lou Maher",
                 "Nasrin Dehbozorgi"
             ],
-            "year": 2020,
             "title": "Creative Sketching Partner: An Analysis of Human-AI Co-Creativity",
-            "filename": "!3377325.3377522.pdf",
-            "level": 5,
-            "keywords": "AI > Human-AI-Interaction, Human-Machine-Interaction > Co-Creation > Systems > Creative Sketching Partner (CSP)",
             "priority": 1
         },
         {
+            "keywords": "AI > Human-AI-Interaction, Human-Machine-Interaction > Co-Creation > Issues > Pitfalls",
             "recog": 1,
+            "filename": "!!2104.00358.pdf",
+            "year": 2021,
             "modified": 1617976813,
+            "level": 5,
             "authors": [
                 "Daniel Buscheka",
                 "Lukas Meckeb",
                 "Florian Lehmanna",
                 "Hai Danga"
             ],
-            "year": 2021,
             "title": "Nine Potential Pitfalls when Designing Human-AI Co-Creative Systems",
-            "filename": "!!2104.00358.pdf",
-            "level": 5,
-            "keywords": "AI > Human-AI-Interaction, Human-Machine-Interaction > Co-Creation > Issues > Pitfalls",
             "priority": 2
         },
         {
+            "keywords": "Design, HCI, UI, UX > Value-sensitive Design",
             "recog": 1,
-            "modified": 1617967343,
-            "authors": [
-                "Anna D. Broido",
-                "Aaron Clauset"
-            ],
-            "year": 2018,
-            "title": "Scale-free networks are rare",
-            "filename": "!!1801.03400.pdf",
-            "level": 2,
-            "keywords": "Communities, Networks > Power Law",
-            "priority": 2
-        },
-        {
-            "recog": 1,
+            "filename": "!!vsd-theory-methods-tr.pdf",
+            "year": 2002,
             "modified": 1617967260,
+            "level": 2,
             "authors": [
                 "Batya Friedman",
                 "Peter H. Kahn"
             ],
-            "year": 2002,
             "title": "Value Sensitive Design: Theory and Methods",
-            "filename": "!!vsd-theory-methods-tr.pdf",
-            "level": 2,
-            "keywords": "Design, HCI, UI, UX > Value-sensitive Design",
             "priority": 2
         },
         {
-            "recog": 1,
-            "modified": 1617967132,
-            "authors": [],
-            "year": 2021,
-            "title": "Value sensitive design as a formative framework",
-            "filename": "!Hendry2021_Article_ValueSensitiveDesignAsAFormati.pdf",
-            "level": 3,
             "keywords": "Design, HCI, UI, UX > Value-sensitive Design > Formative Framework",
+            "recog": 1,
+            "filename": "!Hendry2021_Article_ValueSensitiveDesignAsAFormati.pdf",
+            "year": 2021,
+            "modified": 1617967132,
+            "level": 3,
+            "authors": [],
+            "title": "Value sensitive design as a formative framework",
             "priority": 1
         },
         {
+            "keywords": "Blockchain, Bitcoin > NFT Art",
             "recog": 0,
+            "filename": "-Lazy.com will be a game-changer in the NFT world _ by E2Analyst _ ILLUMINATION _ Mar, 2021 _ Medium.pdf",
+            "year": 2021,
             "modified": 1617964266,
+            "level": 2,
             "authors": [
                 "Darya Tryfanava on Unsplash",
                 "Jack Dorsey",
                 "Linsey Lohan"
             ],
-            "year": 2021,
             "title": "Lazy.com will be a game-changer in the NFT world _ by E2Analyst _ ILLUMINATION _ Mar, 2021 _ Medium",
-            "filename": "-Lazy.com will be a game-changer in the NFT world _ by E2Analyst _ ILLUMINATION _ Mar, 2021 _ Medium.pdf",
-            "level": 2,
-            "keywords": "Blockchain, Bitcoin > NFT Art",
             "priority": 0
         },
         {
+            "keywords": "Medical, Health, Drugs > HIV, Aids > Vaccine",
             "recog": 0,
+            "filename": "-Research shows promising development in hunt for HIV vaccine - ABC News.pdf",
+            "year": 2021,
             "modified": 1617959323,
+            "level": 3,
             "authors": [
                 "Sara Yumeen",
                 "William Schaffner"
             ],
-            "year": 2021,
             "title": "Research shows promising development in hunt for HIV vaccine - ABC News",
-            "filename": "-Research shows promising development in hunt for HIV vaccine - ABC News.pdf",
-            "level": 3,
-            "keywords": "Medical, Health, Drugs > HIV, Aids > Vaccine",
             "priority": 0
         },
         {
+            "keywords": "Crowdsourcing, Human Computation > Issues > Bots, Automation",
             "recog": 1,
+            "filename": "!!!10.1177@1948550619875149.pdf",
+            "year": 2019,
             "modified": 1617892056,
+            "level": 3,
             "authors": [
                 "Michael Chmielewski",
                 "Sarah C. Kucker"
             ],
-            "year": 2019,
             "title": "An MTurk Crisis? Shifts in Data Quality and the Impact on Study Results",
-            "filename": "!!!10.1177@1948550619875149.pdf",
-            "level": 3,
-            "keywords": "Crowdsourcing, Human Computation > Issues > Bots, Automation",
             "priority": 3
         },
         {
+            "keywords": "Crowdsourcing, Human Computation > Issues > Quality, Accuracy > Lemons Market",
             "recog": 1,
+            "filename": "!!turk.pdf",
+            "year": 2019,
             "modified": 1617891561,
+            "level": 4,
             "authors": [
                 "Douglas J. Ahler",
                 "Carolyn E. Roush",
                 "Gaurav Sood"
             ],
-            "year": 2019,
             "title": "The Micro-Task Market for Lemons: Data Quality on Amazon\u2019s Mechanical Turk\u2217",
-            "filename": "!!turk.pdf",
-            "level": 4,
-            "keywords": "Crowdsourcing, Human Computation > Issues > Quality, Accuracy > Lemons Market",
             "priority": 2
         },
         {
+            "keywords": "Crowdsourcing, Human Computation > Issues > VPS, Fake Locations",
             "recog": 0,
+            "filename": "!dennis2018.pdf",
+            "year": 2018,
             "modified": 1617890873,
+            "level": 3,
             "authors": [
                 "Sean A. Dennis",
                 "Brian M. Goodson",
@@ -626,16 +866,16 @@
                 "Ben Commerford",
                 "Kathryn Kadous"
             ],
-            "year": 2018,
             "title": "dennis2018",
-            "filename": "!dennis2018.pdf",
-            "level": 3,
-            "keywords": "Crowdsourcing, Human Computation > Issues > VPS, Fake Locations",
             "priority": 1
         },
         {
+            "keywords": "Crowdsourcing, Human Computation > Issues > VPS, Fake Locations",
             "recog": 1,
+            "filename": "!SavingMTurk_Feb7.pdf",
+            "year": 2019,
             "modified": 1617889970,
+            "level": 3,
             "authors": [
                 "Ryan Kennedy",
                 "Philip D. Waggoner",
@@ -643,56 +883,56 @@
                 "Ryan Jewell",
                 "Tyler Burleigh"
             ],
-            "year": 2019,
             "title": "The Shape of and Solutions to the MTurk Quality Crisis",
-            "filename": "!SavingMTurk_Feb7.pdf",
-            "level": 3,
-            "keywords": "Crowdsourcing, Human Computation > Issues > VPS, Fake Locations",
             "priority": 1
         },
         {
+            "keywords": "Crowdsourcing, Human Computation > Issues > Bots, Automation > TurkPrime response",
             "recog": 1,
+            "filename": "!!Moving Beyond Bots_ MTurk as a Source of High Quality Data.pdf",
+            "year": 2020,
             "modified": 1617888673,
+            "level": 4,
             "authors": [
                 "Leib Litman"
             ],
-            "year": 2020,
             "title": "Moving Beyond Bots: MTurk as a Source of High Quality Data",
-            "filename": "!!Moving Beyond Bots_ MTurk as a Source of High Quality Data.pdf",
-            "level": 4,
-            "keywords": "Crowdsourcing, Human Computation > Issues > Bots, Automation > TurkPrime response",
             "priority": 2
         },
         {
+            "keywords": "Visualisation > Principles",
             "recog": 0,
+            "filename": "!03b principles edited.pdf",
+            "year": 2012,
             "modified": 1617885898,
+            "level": 2,
             "authors": [
                 "Jessie Kennedy"
             ],
-            "year": 2012,
             "title": "03b principles edited",
-            "filename": "!03b principles edited.pdf",
-            "level": 2,
-            "keywords": "Visualisation > Principles",
             "priority": 1
         },
         {
+            "keywords": "Creativity > Process > 2 Idea Quality, Idea Selection",
             "recog": 1,
+            "filename": "!2021_Masterarbeit_Stauss.pdf",
+            "year": 2021,
             "modified": 1617882262,
+            "level": 3,
             "authors": [
                 "Maximilian Timo Stauss",
                 "Timo Stauss"
             ],
-            "year": 2021,
             "title": "Master Thesis",
-            "filename": "!2021_Masterarbeit_Stauss.pdf",
-            "level": 3,
-            "keywords": "Creativity > Process > 2 Idea Quality, Idea Selection",
             "priority": 1
         },
         {
+            "keywords": "Privacy > Ethics > Mydata",
             "recog": 1,
+            "filename": "!chi2021mydata.pdf",
+            "year": 2021,
             "modified": 1617879239,
+            "level": 3,
             "authors": [
                 "Andy Alorwu",
                 "Saba Kheirinejad",
@@ -702,103 +942,103 @@
                 "Aku Visuri",
                 "Simo Hosio"
             ],
-            "year": 2021,
             "title": "Assessing MyData Scenarios: Ethics, Concerns, and the Promise",
-            "filename": "!chi2021mydata.pdf",
-            "level": 3,
-            "keywords": "Privacy > Ethics > Mydata",
             "priority": 1
         },
         {
+            "keywords": "Crowdsourcing, Human Computation > Tools",
             "recog": 1,
+            "filename": "!17920-77818-1-PB.pdf",
+            "year": 2018,
             "modified": 1617867458,
+            "level": 2,
             "authors": [
                 "Toni Kaplan",
                 "Susumu Saito",
                 "Kotaro Hara",
                 "Jeffrey P. Bigham"
             ],
-            "year": 2018,
             "title": "Striving to Earn More: A Survey of Work Strategies and Tool Use Among Crowd Workers",
-            "filename": "!17920-77818-1-PB.pdf",
-            "level": 2,
-            "keywords": "Crowdsourcing, Human Computation > Tools",
             "priority": 1
         },
         {
+            "keywords": "Crowdsourcing, Human Computation > General, Classification, Frameworks",
             "recog": 1,
+            "filename": "!609d5d6e2794f648228515f4739e9d1a3622.pdf",
+            "year": 2013,
             "modified": 1617867323,
+            "level": 2,
             "authors": [
                 "Lars Hetmank"
             ],
-            "year": 2013,
             "title": "Components and Functions of Crowdsourcing Systems \u2013 A Systematic Literature Review",
-            "filename": "!609d5d6e2794f648228515f4739e9d1a3622.pdf",
-            "level": 2,
-            "keywords": "Crowdsourcing, Human Computation > General, Classification, Frameworks",
             "priority": 1
         },
         {
+            "keywords": "Crowdsourcing, Human Computation > General, Classification, Frameworks",
             "recog": 1,
+            "filename": "!!!swj1066.pdf",
+            "year": 2015,
             "modified": 1617866943,
+            "level": 2,
             "authors": [
                 "Amna Basharat",
                 "I. Budak Arpinar",
                 "Khaled Rasheed"
             ],
-            "year": 2015,
             "title": "Human Computation and Crowdsourcing meet the Semantic Web: A Survey",
-            "filename": "!!!swj1066.pdf",
-            "level": 2,
-            "keywords": "Crowdsourcing, Human Computation > General, Classification, Frameworks",
             "priority": 3
         },
         {
+            "keywords": "Crowdsourcing, Human Computation > Issues > Bots, Automation > Data Contamination",
             "recog": 0,
+            "filename": "!!Data contamination on MTurk _ Timothy J. Ryan.pdf",
+            "year": 2020,
             "modified": 1617807554,
+            "level": 4,
             "authors": [
                 "Timothy J. Ryan"
             ],
-            "year": 2020,
             "title": "Data contamination on MTurk _ Timothy J. Ryan",
-            "filename": "!!Data contamination on MTurk _ Timothy J. Ryan.pdf",
-            "level": 4,
-            "keywords": "Crowdsourcing, Human Computation > Issues > Bots, Automation > Data Contamination",
             "priority": 2
         },
         {
+            "keywords": "Knowledge > Internet",
             "recog": 1,
+            "filename": "!!xge-0000070.pdf",
+            "year": 2015,
             "modified": 1617807477,
+            "level": 2,
             "authors": [
                 "Matthew Fisher",
                 "Mariel K. Goddu",
                 "Frank C. Keil"
             ],
-            "year": 2015,
             "title": "Searching for Explanations: How the Internet Inflates Estimates of Internal Knowledge",
-            "filename": "!!xge-0000070.pdf",
-            "level": 2,
-            "keywords": "Knowledge > Internet",
             "priority": 2
         },
         {
+            "keywords": "Knowledge > Internet",
             "recog": 1,
+            "filename": "!!StormEtAlInPress.pdf",
+            "year": 2016,
             "modified": 1617806787,
+            "level": 2,
             "authors": [
                 "Benjamin C. Storm",
                 "Sean M. Stone",
                 "Aaron S. Benjamin"
             ],
-            "year": 2016,
             "title": "Using the Internet to access information inflates future use of the Internet to access other information",
-            "filename": "!!StormEtAlInPress.pdf",
-            "level": 2,
-            "keywords": "Knowledge > Internet",
             "priority": 2
         },
         {
+            "keywords": "Supporting Science > Classification > Classification of Papers > HierClasSArt",
             "recog": 1,
+            "filename": "!!2021-Alam-Biswas-Chen-Dessi-Gesese-Hoppe-Sack-SciK-HierClasSArt-Knowledg.pdf",
+            "year": 2021,
             "modified": 1617806399,
+            "level": 4,
             "authors": [
                 "Mehwish Alam",
                 "Russa Biswas",
@@ -808,16 +1048,16 @@
                 "Fabian Hoppe",
                 "Harald Sack"
             ],
-            "year": 2021,
             "title": "HierClasSArt: Knowledge-Aware Hierarchical Classification of Scholarly Articles",
-            "filename": "!!2021-Alam-Biswas-Chen-Dessi-Gesese-Hoppe-Sack-SciK-HierClasSArt-Knowledg.pdf",
-            "level": 4,
-            "keywords": "Supporting Science > Classification > Classification of Papers > HierClasSArt",
             "priority": 2
         },
         {
+            "keywords": "Gender Neutrality",
             "recog": 0,
+            "filename": "!!FIZ-Leitfaden_Gendergerechte_Sprache.pdf",
+            "year": 2020,
             "modified": 1617800357,
+            "level": 1,
             "authors": [
                 "GENDERGERECHTE SPRACHE",
                 "WORUM GEHT",
@@ -826,87 +1066,87 @@
                 "WORAUF BEZIEHT",
                 "SICH DIESER"
             ],
-            "year": 2020,
             "title": "FIZ-Leitfaden_Gendergerechte_Sprache",
-            "filename": "!!FIZ-Leitfaden_Gendergerechte_Sprache.pdf",
-            "level": 1,
-            "keywords": "Gender Neutrality",
             "priority": 2
         },
         {
+            "keywords": "Precipitation > Snow > Snowfarming",
             "recog": 0,
+            "filename": "-How much is an ounce of snow worth_ - SWI swissinfo.ch.pdf",
+            "year": 2021,
             "modified": 1617779401,
+            "level": 3,
             "authors": [
                 "Dale Bechtel"
             ],
-            "year": 2021,
             "title": "How much is an ounce of snow worth_ - SWI swissinfo.ch",
-            "filename": "-How much is an ounce of snow worth_ - SWI swissinfo.ch.pdf",
-            "level": 3,
-            "keywords": "Precipitation > Snow > Snowfarming",
             "priority": 0
         },
         {
+            "keywords": "Crowdsourcing, Human Computation > Issues > Quality, Accuracy",
             "recog": 1,
+            "filename": "!!peer2013.pdf",
+            "year": 2013,
             "modified": 1617698719,
+            "level": 3,
             "authors": [
                 "Eyal Peer",
                 "Joachim Vosgerau",
                 "Alessandro Acquisti"
             ],
-            "year": 2013,
             "title": "Reputation as a sufficient condition for data quality on Amazon Mechanical Turk",
-            "filename": "!!peer2013.pdf",
-            "level": 3,
-            "keywords": "Crowdsourcing, Human Computation > Issues > Quality, Accuracy",
             "priority": 2
         },
         {
+            "keywords": "Crowdsourcing, Human Computation > Applications > Annotation > Annotator Rationales",
             "recog": 1,
+            "filename": "!!12012-Article (PDF)-24539-1-10-20200923.pdf",
+            "year": 2020,
             "modified": 1617698412,
+            "level": 4,
             "authors": [
                 "Mucahid Kutlu",
                 "Tyler McDonnell",
                 "Tamer Elsayed"
             ],
-            "year": 2020,
             "title": "Annotator Rationales for Labeling Tasks in Crowdsourcing",
-            "filename": "!!12012-Article (PDF)-24539-1-10-20200923.pdf",
-            "level": 4,
-            "keywords": "Crowdsourcing, Human Computation > Applications > Annotation > Annotator Rationales",
             "priority": 2
         },
         {
+            "keywords": "NLP > Issues > Release Strategies",
             "recog": 1,
+            "filename": "!!!1908.09203.pdf",
+            "year": 2019,
             "modified": 1617694077,
+            "level": 3,
             "authors": [
                 "Irene Solaiman",
                 "OpenAI Miles Brundage",
                 "Jong Wook Kim"
             ],
-            "year": 2019,
             "title": "Release Strategies and the Social Impacts of Language Models",
-            "filename": "!!!1908.09203.pdf",
-            "level": 3,
-            "keywords": "NLP > Issues > Release Strategies",
             "priority": 3
         },
         {
+            "keywords": "Communities, Networks > Power Law",
             "recog": 1,
+            "filename": "!Scant Evidence of Power Laws Found in Real-World Networks _ Quanta Magazine.pdf",
+            "year": 2018,
             "modified": 1617693644,
+            "level": 2,
             "authors": [
                 "Aaron Clauset"
             ],
-            "year": 2018,
             "title": "Scant Evidence of Power Laws Found in Real-World Networks",
-            "filename": "!Scant Evidence of Power Laws Found in Real-World Networks _ Quanta Magazine.pdf",
-            "level": 2,
-            "keywords": "Communities, Networks > Power Law",
             "priority": 1
         },
         {
+            "keywords": "Open Science, e-Science, e-Research, Research Data > Repositories > TRUST Principles",
             "recog": 1,
+            "filename": "!!!s41597-020-0486-7.pdf",
+            "year": 2020,
             "modified": 1617693434,
+            "level": 3,
             "authors": [
                 "Dawei Lin",
                 "Jonathan Crabtree",
@@ -922,139 +1162,125 @@
                 "Martina Stockhause",
                 "John Westbrook"
             ],
-            "year": 2020,
             "title": "the tRUSt Principles for digital repositories",
-            "filename": "!!!s41597-020-0486-7.pdf",
-            "level": 3,
-            "keywords": "Open Science, e-Science, e-Research, Research Data > Repositories > TRUST Principles",
             "priority": 3
         },
         {
+            "keywords": "Crowdsourcing, Human Computation > Issues > Bots, Automation > TurkPrime response",
             "recog": 1,
+            "filename": "!!After the Bot Scare_ Understanding What\u2019s Been Happening with Data Collection on MTurk and How to Stop it.pdf",
+            "year": 2020,
             "modified": 1617610265,
+            "level": 4,
             "authors": [
                 "Aaron Moss"
             ],
-            "year": 2020,
             "title": "After the Bot Scare: Understanding What\u2019s Been Happening with Data Collection on MTurk and How to Stop it",
-            "filename": "!!After the Bot Scare_ Understanding What\u2019s Been Happening with Data Collection on MTurk and How to Stop it.pdf",
-            "level": 4,
-            "keywords": "Crowdsourcing, Human Computation > Issues > Bots, Automation > TurkPrime response",
             "priority": 2
         },
         {
-            "recog": 1,
-            "modified": 1617609003,
-            "authors": [],
-            "year": 2020,
-            "title": "Update on keeping Mechanical Turk responses trustworthy",
-            "filename": "-Update on keeping Mechanical Turk responses trustworthy \u00ab Statistical Modeling, Causal Inference, and Social Science.pdf",
-            "level": 3,
             "keywords": "Crowdsourcing, Human Computation > Issues > Bots, Automation",
+            "recog": 1,
+            "filename": "-Update on keeping Mechanical Turk responses trustworthy \u00ab Statistical Modeling, Causal Inference, and Social Science.pdf",
+            "year": 2020,
+            "modified": 1617609003,
+            "level": 3,
+            "authors": [],
+            "title": "Update on keeping Mechanical Turk responses trustworthy",
             "priority": 0
         },
         {
+            "keywords": "Crowdsourcing, Human Computation > Issues > Bots, Automation > Sample Validity",
             "recog": 0,
+            "filename": "!cultural cognition project - Cultural Cognition Blog - Fooled twice, shame on who_ Problems with Mechanical Turk study samples, part\u00a02.pdf",
+            "year": 2020,
             "modified": 1617608422,
+            "level": 4,
             "authors": [
                 "Sarah Smaga"
             ],
-            "year": 2020,
             "title": "cultural cognition project - Cultural Cognition Blog - Fooled twice, shame on who_ Problems with Mechanical Turk study samples, part\u00a02",
-            "filename": "!cultural cognition project - Cultural Cognition Blog - Fooled twice, shame on who_ Problems with Mechanical Turk study samples, part\u00a02.pdf",
-            "level": 4,
-            "keywords": "Crowdsourcing, Human Computation > Issues > Bots, Automation > Sample Validity",
             "priority": 1
         },
         {
+            "keywords": "NLP > Sampling",
             "recog": 1,
-            "modified": 1617608089,
-            "authors": [
-                "Molly C. Martini",
-                "Maria Adriana Neroni"
-            ],
-            "year": 2017,
-            "title": "Where next for research on fixation, inspiration and creativity in design?",
-            "filename": "!!!1-s2.0-S0142694X17300030-main.pdf",
-            "level": 4,
-            "keywords": "Creativity > Collaboration, Groups > Issues > Fixation",
-            "priority": 3
-        },
-        {
-            "recog": 1,
+            "filename": "!How to sample from language models _ by Ben Mann _ Towards Data Science.pdf",
+            "year": 2021,
             "modified": 1617530497,
+            "level": 2,
             "authors": [
                 "Ben Mann"
             ],
-            "year": 2021,
             "title": "An exploration of standard sampling techniques and the new nucleus sampling",
-            "filename": "!How to sample from language models _ by Ben Mann _ Towards Data Science.pdf",
-            "level": 2,
-            "keywords": "NLP > Sampling",
             "priority": 1
         },
         {
+            "keywords": "Knowledge > Knowledge Boundaries > Boundary Objects",
             "recog": 1,
+            "filename": "!key-concept-boundary-objects.pdf",
+            "year": 2014,
             "modified": 1617525740,
+            "level": 3,
             "authors": [
                 "Wendy Leeds-Hurwitz"
             ],
-            "year": 2014,
             "title": "Boundary Objects",
-            "filename": "!key-concept-boundary-objects.pdf",
-            "level": 3,
-            "keywords": "Knowledge > Knowledge Boundaries > Boundary Objects",
             "priority": 1
         },
         {
+            "keywords": "Crowdsourcing, Human Computation > Process, Workflow, Worker Selection, Task Design > Task Design > Guidelines > Voting",
             "recog": 1,
+            "filename": "!032906PlainLanguageRpt-2.pdf",
+            "year": 2009,
             "modified": 1617456701,
+            "level": 5,
             "authors": [
                 "Janice (Ginny",
                 "Sharon J. Laskowski"
             ],
-            "year": 2009,
             "title": "Guidelines for Writing Clear Instructions and Messages for Voters and Poll Workers",
-            "filename": "!032906PlainLanguageRpt-2.pdf",
-            "level": 5,
-            "keywords": "Crowdsourcing, Human Computation > Process, Workflow, Worker Selection, Task Design > Task Design > Guidelines > Voting",
             "priority": 1
         },
         {
+            "keywords": "Crowdsourcing, Human Computation > Applications > Curation, Organising > Kurator",
             "recog": 1,
+            "filename": "!!p1835-merritt.pdf",
+            "year": 2016,
             "modified": 1617456172,
+            "level": 4,
             "authors": [
                 "David Merritt",
                 "Jasmine Jones",
                 "Mark S. Ackerman",
                 "Walter S. Lasecki"
             ],
-            "year": 2016,
             "title": "Kurator: Using the Crowd to Help Families with Personal Curation Tasks",
-            "filename": "!!p1835-merritt.pdf",
-            "level": 4,
-            "keywords": "Crowdsourcing, Human Computation > Applications > Curation, Organising > Kurator",
             "priority": 2
         },
         {
+            "keywords": "Crowdsourcing, Human Computation > Applications > Curation, Organising > GitHub",
             "recog": 1,
+            "filename": "!11622-51250-1-PB.pdf",
+            "year": 2015,
             "modified": 1617455924,
+            "level": 4,
             "authors": [
                 "Yu Wu",
                 "Jessica Kropcznyski",
                 "Raquel Prates",
                 "John M. Carroll"
             ],
-            "year": 2015,
             "title": "The Rise of Curation on GitHub",
-            "filename": "!11622-51250-1-PB.pdf",
-            "level": 4,
-            "keywords": "Crowdsourcing, Human Computation > Applications > Curation, Organising > GitHub",
             "priority": 1
         },
         {
+            "keywords": "Crowdsourcing, Human Computation > Applications > Curation, Organising > Sifter",
             "recog": 1,
+            "filename": "!2004.01790.pdf",
+            "year": 2020,
             "modified": 1617455846,
+            "level": 4,
             "authors": [
                 "Yan Chen",
                 "Andr\u00e9s Monroy-Hern\u00e1ndez",
@@ -1063,116 +1289,115 @@
                 "Walter S. Lasecki",
                 "Rajan Vaish"
             ],
-            "year": 2020,
             "title": "Sifter: A Hybrid Workflow  for Theme-based Video Curation at Scale",
-            "filename": "!2004.01790.pdf",
-            "level": 4,
-            "keywords": "Crowdsourcing, Human Computation > Applications > Curation, Organising > Sifter",
             "priority": 1
         },
         {
+            "filename": "!!!2102.07350.pdf",
+            "keywords": "NLP > Prompt Programming, Prompt Engineering",
             "year": 2021,
             "modified": 1617365680,
+            "level": 2,
             "authors": [
                 "Kyle McDonell"
             ],
-            "level": 2,
             "title": "Prompt Programming for Large Language Models: Beyond the Few-Shot Paradigm",
-            "filename": "!!!2102.07350.pdf",
-            "keywords": "NLP > Prompt Programming, Prompt Engineering",
             "priority": 3,
             "recog": 1
         },
         {
+            "filename": "!!![Lazar, Feng Hochheiser] Research Methods in Human-Computer Interaction.pdf",
+            "keywords": "Methods",
             "year": 2017,
             "modified": 1617349689,
+            "level": 1,
             "authors": [
                 "Jonathan Lazar",
                 "Jinjuan Heidi Feng",
                 "Harry Hochheiser",
                 "Morgan Kaufmann"
             ],
-            "level": 1,
             "title": "Second Edition",
-            "filename": "!!![Lazar, Feng Hochheiser] Research Methods in Human-Computer Interaction.pdf",
-            "keywords": "Methods",
             "priority": 3,
             "recog": 1
         },
         {
+            "filename": "!10.1007%2Fs11135-007-9105-3.pdf",
+            "keywords": "Methods > Mixed Methods",
             "year": 2009,
             "modified": 1617348333,
+            "level": 2,
             "authors": [
                 "Nancy L. Leech",
                 "Anthony J. Onwuegbuzie"
             ],
-            "level": 2,
             "title": "A typology of mixed methods research designs",
-            "filename": "!10.1007%2Fs11135-007-9105-3.pdf",
-            "keywords": "Methods > Mixed Methods",
             "priority": 1,
             "recog": 1
         },
         {
-            "year": 2021,
-            "modified": 1617346719,
-            "authors": [],
-            "level": 3,
-            "title": "CLIP_ Connecting Text and Images",
             "filename": "!CLIP_ Connecting Text and Images.pdf",
             "keywords": "Machine Learning > Classification > OpenAI CLIP",
+            "year": 2021,
+            "modified": 1617346719,
+            "level": 3,
+            "authors": [],
+            "title": "CLIP_ Connecting Text and Images",
             "priority": 1,
             "recog": 0
         },
         {
-            "year": 2021,
-            "modified": 1615979106,
-            "authors": [],
-            "level": 5,
-            "title": "Safety Best Practices - OpenAI API",
             "filename": "!Safety Best Practices - OpenAI API.pdf",
             "keywords": "NLP > Language Models > OpenAI GPT > GPT-3 > Beta",
+            "year": 2021,
+            "modified": 1615979106,
+            "level": 5,
+            "authors": [],
+            "title": "Safety Best Practices - OpenAI API",
             "priority": 1,
             "recog": 0
         },
         {
-            "year": 2021,
-            "modified": 1615979093,
-            "authors": [],
-            "level": 5,
-            "title": "Use Case Guidelines - OpenAI API",
             "filename": "!Use Case Guidelines - OpenAI API.pdf",
             "keywords": "NLP > Language Models > OpenAI GPT > GPT-3 > Beta",
+            "year": 2021,
+            "modified": 1615979093,
+            "level": 5,
+            "authors": [],
+            "title": "Use Case Guidelines - OpenAI API",
             "priority": 1,
             "recog": 0
         },
         {
-            "year": 2021,
-            "modified": 1615954327,
-            "authors": [],
-            "level": 5,
-            "title": "Introduction - OpenAI API",
             "filename": "!!!Introduction - OpenAI API.pdf",
             "keywords": "NLP > Language Models > OpenAI GPT > GPT-3 > Beta",
+            "year": 2021,
+            "modified": 1615954327,
+            "level": 5,
+            "authors": [],
+            "title": "Introduction - OpenAI API",
             "priority": 3,
             "recog": 0
         },
         {
+            "filename": "-BAD BAD BOY \u2013 HELSINKI\u2019S PEEING BOY.pdf",
+            "keywords": "Art > Artworks > Helsinki > Bad Bad Boy",
             "year": 2021,
             "modified": 1615919010,
+            "level": 4,
             "authors": [
                 "Katso kaikki"
             ],
-            "level": 4,
             "title": "BAD BAD BOY \u2013 HELSINKI\u2019S PEEING BOY",
-            "filename": "-BAD BAD BOY \u2013 HELSINKI\u2019S PEEING BOY.pdf",
-            "keywords": "Art > Artworks > Helsinki > Bad Bad Boy",
             "priority": 0,
             "recog": 0
         },
         {
+            "filename": "!2041-1480-4-37.pdf",
+            "keywords": " > PAV",
             "year": 2013,
             "modified": 1615730417,
+            "level": 2,
             "authors": [
                 "Paolo Ciccarese",
                 "Stian Soiland-Reyes",
@@ -1181,16 +1406,16 @@
                 "Carole Goble",
                 "Tim Clark"
             ],
-            "level": 2,
             "title": "PAV ontology: provenance, authoring and versioning",
-            "filename": "!2041-1480-4-37.pdf",
-            "keywords": " > PAV",
             "priority": 1,
             "recog": 1
         },
         {
+            "filename": "!2021-Vsesviatska-Tietz-Hoppe-Dessi-Sack-ArDO-An-Ontology-to-Describe-the.pdf",
+            "keywords": " > ArDO",
             "year": 2021,
             "modified": 1615730266,
+            "level": 2,
             "authors": [
                 "Oleksandra Vsesviatska",
                 "Tabea Tietz",
@@ -1200,287 +1425,39 @@
                 "Danilo Dess\u00ec",
                 "Harald Sack"
             ],
-            "level": 2,
             "title": "ArDO: An Ontology to Describe the Dynamics of Multimedia Archival Records",
-            "filename": "!2021-Vsesviatska-Tietz-Hoppe-Dessi-Sack-ArDO-An-Ontology-to-Describe-the.pdf",
-            "keywords": " > ArDO",
             "priority": 1,
             "recog": 1
         },
         {
+            "filename": "-LinkedDataUebersicht-Seminar-KnowledgeMining2015.pdf",
+            "keywords": "Linked Data > General",
             "year": 2015,
             "modified": 1615720884,
+            "level": 2,
             "authors": [
                 "Harald Sack",
                 "Hasso Plattner"
             ],
-            "level": 2,
             "title": "Linked Data Technologien - Ein U\u0308berblick",
-            "filename": "-LinkedDataUebersicht-Seminar-KnowledgeMining2015.pdf",
-            "keywords": "Linked Data > General",
             "priority": 0,
             "recog": 1
         },
         {
-            "recog": 1,
-            "modified": 1615720120,
-            "level": 1,
-            "year": "N/A",
             "keywords": "Impact",
             "filename": "!!2103.03398.pdf",
-            "title": "Novelty, Disruption, and the Evolution of Scientific Impact",
+            "year": "N/A",
             "priority": 2,
             "authors": [
                 "Yiling Lin",
                 "James Evans",
                 "Lingfei Wu",
                 "Derek de Sola"
-            ]
-        },
-        {
-            "recog": 1,
-            "modified": 1615719010,
-            "level": 2,
-            "year": "N/A",
-            "keywords": "Socio-technical Systems, Social Machines > Scholarly Social Machines",
-            "filename": "!!article-05.pdf",
-            "title": "Scholarly Social Machines",
-            "priority": 2,
-            "authors": [
-                "David De Roure"
-            ]
-        },
-        {
-            "recog": 1,
-            "modified": 1615649795,
-            "level": 3,
-            "year": 2020,
-            "keywords": "Benchmarks, gold standards, datasets > Science > Microsoft Academic Graph (MAG)",
-            "filename": "!!!qss_a_00021.pdf",
-            "title": "Microsoft Academic Graph: When experts are not enough",
-            "priority": 3,
-            "authors": [
-                "Kuansan Wang",
-                "Zhihong Shen",
-                "Chiyuan Huang",
-                "Chieh-Han Wu",
-                "Yuxiao Dong",
-                "Anshul Kanakia"
-            ]
-        },
-        {
-            "recog": 1,
-            "modified": 1615649512,
-            "level": 3,
-            "year": 2019,
-            "keywords": "Benchmarks, gold standards, datasets > Science > Microsoft Academic Graph (MAG)",
-            "filename": "!!fdata-02-00045.pdf",
-            "title": "A Review of Microsoft Academic Services for Science of Science Studies",
-            "priority": 2,
-            "authors": [
-                "Kuansan Wang",
-                "Zhihong Shen",
-                "Chiyuan Huang",
-                "Chieh-Han Wu",
-                "Darrin Eide",
-                "Yuxiao Dong",
-                "Junjie Qian",
-                "Anshul Kanakia",
-                "Alvin Chen",
-                "Richard Rogahn"
-            ]
-        },
-        {
-            "recog": 0,
-            "modified": 1615537301,
-            "level": 2,
-            "year": 2021,
-            "keywords": "Blockchain, Bitcoin > NFT Art",
-            "filename": "!JPG File Sells for $69 Million, as \u2018NFT Mania\u2019 Gathers Pace - The New York Times.pdf",
-            "title": "JPG File Sells for $69 Million, as \u2018NFT Mania\u2019 Gathers Pace - The New York Times",
-            "priority": 1,
-            "authors": [
-                "Scott Reyburn",
-                "Mike Winkelmann",
-                "Francisco Goya",
-                "Elon Musk"
-            ]
-        },
-        {
-            "recog": 0,
-            "modified": 1615475286,
-            "authors": [],
-            "year": 2019,
-            "title": "NFDI4Culture_UserStoryAll",
-            "filename": "!!!NFDI4Culture_UserStoryAll.pdf",
-            "level": 2,
-            "keywords": "NFDI4Culture > User Stories",
-            "priority": 3
-        },
-        {
-            "recog": 0,
-            "modified": 1615458120,
-            "level": 3,
-            "year": 2012,
-            "keywords": "Linked Data > Applications > Cultural Heritage",
-            "filename": "!!!10.2200@S00452ED1V01Y201210WBE003.pdf",
-            "title": "10.2200@S00452ED1V01Y201210WBE003",
-            "priority": 3,
-            "authors": [
-                "Ying Ding"
-            ]
-        },
-        {
-            "recog": 1,
-            "modified": 1615458024,
-            "level": 3,
-            "year": 2012,
-            "keywords": "Linked Data > Applications > Cultural Heritage",
-            "filename": "-10.1.1.248.7565.pdf",
-            "title": "Publishing and Using Cultural Heritage Linked Data on the Semantic Web",
-            "priority": 0,
-            "authors": [
-                "Ying Ding",
-                "Eero Hyv\u00f6nen",
-                "Katy B\u00f6rner",
-                "Mike Conlon",
-                "Jon Corson-Rikert",
-                "Christian Bizer"
-            ]
-        },
-        {
-            "recog": 1,
-            "modified": 1615457403,
-            "level": 3,
-            "year": 2021,
-            "keywords": "Linked Data > Applications > Cultural Heritage",
-            "filename": "-2021-Tietz-Bruns-Dessi-Sack-Knowledge-Graph-enabled-Curation-and-Explora.pdf",
-            "title": "Knowledge Graph enabled Curation and Exploration of Nuremberg\u2019s City Heritage",
-            "priority": 0,
-            "authors": [
-                "Tabea Tietz",
-                "Oleksandra Bruns",
-                "Sandra G\u00f6ller",
-                "Matthias Razum",
-                "Danilo Dess\u0300\u0131",
-                "Harald Sack"
-            ]
-        },
-        {
-            "recog": 0,
-            "modified": 1615452055,
-            "authors": [],
-            "year": 2016,
-            "title": "vered2010",
-            "level": 2,
-            "keywords": "Judaism > Pork",
-            "priority": 0,
-            "filename": "-vered2010.pdf"
-        },
-        {
-            "recog": 1,
-            "modified": 1615390366,
-            "authors": [
-                "Kieran Morris",
-                "Sebastian Wolf"
             ],
-            "year": 2021,
-            "title": "Helsinki is building itself into a city for the 21st century not by expanding upwards or outwards, but by expanding deep down into the world of the subterranean. Photographer Sebastian Wolf documented the multitude of ways that the city has brought life to its underground",
-            "level": 3,
-            "keywords": "Finland > Helsinki > Underground",
-            "priority": 0,
-            "filename": "-Deeper Underground_ How Helsinki is Building its Future Beneath the City Surface.pdf"
-        },
-        {
-            "recog": 1,
-            "modified": 1615389617,
-            "authors": [],
-            "year": 2021,
-            "title": "Helsinki Urban Underground Spaces \u2013 New guidelines for visitors",
-            "level": 3,
-            "keywords": "Finland > Helsinki > Underground",
-            "priority": 1,
-            "filename": "!esite-02-19-en.pdf"
-        },
-        {
-            "recog": 1,
-            "modified": 1615389432,
-            "authors": [
-                "Carl Gustaf Emil Mannerheim",
-                "Antti Hackzell",
-                "Urho Castr\u00e9n",
-                "J. K. Paasikivi",
-                "Karl Fredrik Wilkama"
-            ],
-            "year": 2021,
-            "title": "The Honourable Marshal of Finland Baron",
-            "level": 2,
-            "keywords": "Finland > People",
-            "priority": 0,
-            "filename": "-Carl Gustaf Emil Mannerheim - Wikipedia.pdf"
-        },
-        {
-            "recog": 1,
-            "modified": 1615384127,
-            "authors": [
-                "Santeri Palviainen",
-                "Olli Vuolteenaho",
-                "Minna Pakanen",
-                "Kari Kuutti",
-                "Leena Arhippainen"
-            ],
-            "year": 2015,
-            "title": "VISUAL DESIGN EXAMPLES IN THE EVALUATION OF ANTICIPATED USER EXPERIENCE AT THE EARLY PHASES OF RESEARCH AND DEVELOPMENT",
             "level": 1,
-            "keywords": "Design, HCI, UI, UX",
-            "priority": 0,
-            "filename": "-isbn9789526210605.pdf"
-        },
-        {
-            "recog": 0,
-            "modified": 1615383993,
-            "authors": [
-                "Santeri Palviainen",
-                "Olli Vuolteenaho",
-                "Pertti Tikkanen",
-                "Pekka Ylitalo",
-                "Marko Sepp\u00e4nen"
-            ],
-            "year": 2017,
-            "title": "isbn9789526215334",
-            "level": 4,
-            "keywords": "Creativity > Process > 1 Idea Generation, Creativity Stimulation > Metrics",
-            "priority": 1,
-            "filename": "!isbn9789526215334.pdf"
-        },
-        {
-            "recog": 0,
-            "modified": 1615367887,
-            "authors": [],
-            "year": 2021,
-            "title": "SoS - State of Sabotage _ State of Sabotage",
-            "level": 3,
-            "keywords": "Art > Artworks > Sabotage",
-            "priority": 0,
-            "filename": "-SoS - State of Sabotage _ State of Sabotage.pdf"
-        },
-        {
             "recog": 1,
-            "modified": 1615362953,
-            "authors": [
-                "Brittney Ross"
-            ],
-            "year": 2021,
-            "title": "How to Quote a Quote? In American English, use double quotation marks for quotations and single quotation marks for quotations within quotations. In British English, use single quotation marks for quotations and double quotation marks for quotations within quotations",
-            "level": 2,
-            "keywords": "Writing > Quoting Quotes",
-            "priority": 0,
-            "filename": "-How to Quote a Quote_ _ Grammarly.pdf"
+            "title": "Novelty, Disruption, and the Evolution of Scientific Impact",
+            "modified": 1615720120
         }
-    ],
-    "unrecognized_overall_percent": 0.42,
-    "unrecognized_percent": 0.0,
-    "modified": 1618466089,
-    "unrecognized": 0,
-    "unrecognized_overall": 2617
+    ]
 }
