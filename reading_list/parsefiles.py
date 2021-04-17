@@ -12,6 +12,7 @@ from libs import fileReader
 # the folders to search for
 BASEPATHS = [
     "/home/jonas/FIZ/Literatur/",
+    "/home/jonas/FIZ/Funding/",
     "/home/jonas/OULU/Literatur/",
     "/home/jonas/OULU/Courses/",
     "/home/jonas/OULU/Funding/",
