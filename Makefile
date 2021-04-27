@@ -65,6 +65,7 @@ replace-cv:
 		sed 's|\\definenewtoggle{showlanguages}{false}|\\definenewtoggle{showlanguages}{true}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showmemberships}{false}|\\definenewtoggle{showmemberships}{true}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showthesestitles}{false}|\\definenewtoggle{showthesestitles}{true}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{shownetwork}{true}|\\definenewtoggle{shownetwork}{false}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showsupervisors}{false}|\\definenewtoggle{showsupervisors}{true}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showsummary}{true}|\\definenewtoggle{showsummary}{false}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showpositiondetails}{true}|\\definenewtoggle{showpositiondetails}{false}|g' cv.tex | sponge cv.tex; \
@@ -77,6 +78,7 @@ replace-cv:
 		sed 's|\\definenewtoggle{showreferences}{true}|\\definenewtoggle{showreferences}{false}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showlinks}{false}|\\definenewtoggle{showlinks}{true}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showtotalfunding}{true}|\\definenewtoggle{showtotalfunding}{false}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showoutreach}{true}|\\definenewtoggle{showoutreach}{false}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showpublicationsummary}{false}|\\definenewtoggle{showpublicationsummary}{true}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showmoney}{true}|\\definenewtoggle{showmoney}{false}|g' cv.tex | sponge cv.tex
 
