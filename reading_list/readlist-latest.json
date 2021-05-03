@@ -1,21 +1,783 @@
 {
+    "unrecognized_overall": 2687,
+    "unrecognized_percent": 0.0,
+    "unrecognized": 0,
+    "modified": 1620048725,
+    "unrecognized_overall_percent": 0.42,
     "documents": [
         {
-            "keywords": "Methods > Literature Review > General > Categories",
-            "title": "Organizing Knowledge Syntheses: A Taxonomy of Literature Reviews",
+            "level": 2,
+            "recog": 1,
+            "authors": [
+                "Yulia Svetashova",
+                "Lars Heling",
+                "Stefan Schmid",
+                "Maribel Acosta"
+            ],
+            "keywords": "Linked Data > Population",
+            "filename": "!pay_as_you_go_population_of_an_automotive_signal_knowledge_graph.pdf",
+            "year": 2021,
+            "modified": 1620047139,
+            "title": "Pay-as-you-go Population of an Automotive Signal Knowledge Graph",
+            "priority": 1
+        },
+        {
+            "level": 3,
+            "recog": 1,
+            "authors": [
+                "Alec Radford",
+                "Jong Wook Kim",
+                "Chris Hallacy",
+                "Aditya Ramesh",
+                "Gabriel Goh",
+                "Sandhini Agarwal",
+                "Girish Sastry",
+                "Amanda Askell",
+                "Pamela Mishkin",
+                "Jack Clark",
+                "Gretchen Krueger",
+                "Ilya Sutskever"
+            ],
+            "keywords": "Machine Learning > Classification > OpenAI CLIP",
+            "filename": "!!2103.00020.pdf",
+            "year": 2021,
+            "modified": 1620046676,
+            "title": "Learning Transferable Visual Models From Natural Language Supervision",
+            "priority": 2
+        },
+        {
+            "level": 2,
+            "recog": 1,
+            "authors": [
+                "Tianyu Gao",
+                "Adam Fisch",
+                "Danqi Chen"
+            ],
+            "keywords": "NLP > Prompt Engineering, Prompt Programming",
+            "filename": "-2012.15723.pdf",
+            "year": 2021,
+            "modified": 1620046615,
+            "title": "Making Pre-trained Language Models Better Few-shot Learners",
+            "priority": 0
+        },
+        {
+            "level": 3,
+            "recog": 1,
+            "authors": [
+                "Bart Thomee",
+                "David A. Shamma",
+                "Gerald Friedland",
+                "Benjamin Elizalde",
+                "Karl Ni",
+                "Damian Borth",
+                "Li-Jia Li"
+            ],
+            "keywords": "Benchmarks, gold standards, datasets > Images > YFCC100M",
+            "filename": "!1503.01817.pdf",
+            "year": 2016,
+            "modified": 1620045491,
+            "title": "YFCC100M: The New Data in Multimedia Research",
+            "priority": 1
+        },
+        {
+            "level": 3,
+            "recog": 1,
+            "authors": [],
+            "keywords": "Future of Work > Skills, Future Workforce > Klassifikation der Berufe (Bundesagentur f\u00fcr Arbeit)",
+            "filename": "-Klassifikationen der Berufe  -  Statistik der Bundesagentur f\u00fcr Arbeit.pdf",
+            "year": 2021,
+            "modified": 1620044842,
+            "title": "Klassifikation der Berufe",
+            "priority": 0
+        },
+        {
+            "level": 3,
+            "recog": 1,
+            "authors": [],
+            "keywords": "Machine Learning > Classification > OpenAI CLIP",
+            "filename": "!!!Interacting with CLIP.ipynb - Colaboratory.pdf",
+            "year": 2021,
+            "modified": 1620043558,
+            "title": "Interacting with CLIP",
+            "priority": 3
+        },
+        {
+            "level": 4,
+            "recog": 0,
+            "authors": [],
+            "keywords": "Machine Learning > Recommender Systems > k-nn Nearest Neighbor > Annoy (Spotify)",
+            "filename": "!!spotify-annoy Approximate Nearest Neighbors.pdf",
+            "year": 2021,
+            "modified": 1620042507,
+            "title": "spotify-annoy Approximate Nearest Neighbors",
+            "priority": 2
+        },
+        {
+            "level": 3,
+            "recog": 0,
+            "authors": [],
+            "keywords": " > Time > Time Ontology",
+            "filename": "-[coursework] Time Ontology in OWL.pdf",
+            "year": "N/A",
+            "modified": 1620026430,
+            "title": "[coursework] Time Ontology in OWL",
+            "priority": 0
+        },
+        {
+            "level": 3,
+            "recog": 0,
+            "authors": [
+                "\u2014George Santayana",
+                "JUAN F. SEQUEDA"
+            ],
+            "keywords": "Linked Data > Knowledge Graph > History",
+            "filename": "-3418294.pdf",
+            "year": 2021,
+            "modified": 1619964221,
+            "title": "3418294",
+            "priority": 0
+        },
+        {
+            "level": 2,
+            "recog": 0,
+            "authors": [],
+            "keywords": "Information Technology, IT > General Purpose Technology, GPT",
+            "filename": "-3430936.pdf",
+            "year": 2021,
+            "modified": 1619963435,
+            "title": "3430936",
+            "priority": 0
+        },
+        {
+            "level": 3,
+            "recog": 1,
+            "authors": [
+                "Melissa McCradden",
+                "Shalmali Joshi",
+                "Mjaye Mazwi",
+                "James A Anderson"
+            ],
+            "keywords": "Machine Learning > Issues > Fairness",
+            "filename": "-3375627.3375824.pdf",
+            "year": 2019,
+            "modified": 1619962819,
+            "title": "When Your Only Tool Is A Hammer Ethical Limitations of Algorithmic Fairness Solutions in Healthcare Machine Learning",
+            "priority": 0
+        },
+        {
+            "level": 3,
+            "recog": 1,
+            "authors": [
+                "Filip Michalsky"
+            ],
+            "keywords": "Machine Learning > Issues > Fairness",
+            "filename": "-3306618.3314308.pdf",
+            "year": 2019,
+            "modified": 1619962716,
+            "title": "Fairness Criteria for Face Recognition Applications",
+            "priority": 0
+        },
+        {
+            "level": 4,
+            "recog": 1,
+            "authors": [
+                "Alexander G. Mirnig",
+                "Alexander Meschtscherjakov"
+            ],
+            "keywords": "Machine Learning > Issues > Ethics > Trolley Problem",
+            "filename": "!!!paper509.pdf",
+            "year": 2019,
+            "modified": 1619962509,
+            "title": "Trolled by the Trolley Problem",
+            "priority": 3
+        },
+        {
+            "level": 3,
+            "recog": 1,
+            "authors": [
+                "Inioluwa Deborah Raji",
+                "Timnit Gebru",
+                "Margaret Mitchell",
+                "Joy Buolamwini",
+                "Joonseok Lee",
+                "Emily Denton",
+                "Deborah Raji"
+            ],
+            "keywords": "Machine Learning > Issues > Facial Recognition",
+            "filename": "-3375627.3375820.pdf",
+            "year": 2019,
+            "modified": 1619962474,
+            "title": "Saving Face: Investigating the Ethical Concerns of Facial Recognition Auditing",
+            "priority": 0
+        },
+        {
+            "level": 4,
+            "recog": 0,
+            "authors": [],
+            "keywords": "Machine Learning > Issues > Facial Recognition > Bias",
+            "filename": "-3446877.pdf",
+            "year": 2021,
+            "modified": 1619962296,
+            "title": "3446877",
+            "priority": 0
+        },
+        {
+            "level": 3,
+            "recog": 0,
+            "authors": [],
+            "keywords": "Machine Learning > Issues > Deepfakes",
+            "filename": "-3447255.pdf",
+            "year": 2021,
+            "modified": 1619961121,
+            "title": "3447255",
+            "priority": 0
+        },
+        {
+            "level": 2,
+            "recog": 1,
+            "authors": [
+                "Matthias Stuermer",
+                "Gabriel Abu-Tayeh",
+                "Thomas Myrach"
+            ],
+            "keywords": "Open Science, e-Science, e-Research, Research Data > Digital Sustainability",
+            "filename": "!SustainabilityScience.pdf",
+            "year": 2016,
+            "modified": 1619960250,
+            "title": "Digital sustainability: basic conditions for sustainable digital artifacts and their ecosystems",
+            "priority": 1
+        },
+        {
+            "level": 2,
+            "recog": 0,
+            "authors": [],
+            "keywords": "Feedback > General, Theory",
+            "filename": "-criticism vs critique.pdf",
+            "year": 2020,
+            "modified": 1619958121,
+            "title": "criticism vs critique",
+            "priority": 0
+        },
+        {
+            "level": 3,
+            "recog": 1,
+            "authors": [
+                "Valerie J. Shute",
+                "Eric Hansen",
+                "Peggy Redman",
+                "Jody Underwood"
+            ],
+            "keywords": "Feedback > Types > Formative Feedback",
+            "filename": "!!!RR-07-11.pdf",
+            "year": 2007,
+            "modified": 1619958002,
+            "title": "Focus on Formative Feedback",
+            "priority": 3
+        },
+        {
+            "level": 2,
+            "recog": 0,
+            "authors": [],
+            "keywords": "Blockchain, Bitcoin > General, Theory",
+            "filename": "-p36-narayanan.pdf",
+            "year": 2017,
+            "modified": 1619957428,
+            "title": "p36-narayanan",
+            "priority": 0
+        },
+        {
+            "level": 3,
+            "recog": 0,
+            "authors": [
+                "Nicholas Weaver"
+            ],
+            "keywords": "Blockchain, Bitcoin > Issues > Risks",
+            "filename": "!!p20-weaver.pdf",
+            "year": 2018,
+            "modified": 1619957354,
+            "title": "p20-weaver",
+            "priority": 2
+        },
+        {
+            "level": 3,
+            "recog": 0,
+            "authors": [
+                "Markus Jakobsson",
+                "Ari Juels"
+            ],
+            "keywords": "Blockchain, Bitcoin > General, Theory > Proof-of-Work",
+            "filename": "!Jakobsson-Juels1999_Chapter_ProofsOfWorkAndBreadPuddingPro.pdf",
+            "year": 2013,
+            "modified": 1619955846,
+            "title": "Jakobsson-Juels1999_Chapter_ProofsOfWorkAndBreadPuddingPro",
+            "priority": 1
+        },
+        {
+            "level": 3,
+            "recog": 0,
+            "authors": [],
+            "keywords": "Blockchain, Bitcoin > Platforms > Polygon",
+            "filename": "-lightpaper-polygon.pdf",
+            "year": 2021,
+            "modified": 1619955314,
+            "title": "lightpaper-polygon",
+            "priority": 0
+        },
+        {
+            "level": 3,
+            "recog": 1,
+            "authors": [],
+            "keywords": " > GND Ontology > Bibliographic Data",
+            "filename": "!!!linkedDataModellierungTiteldaten (1).pdf",
+            "year": 2016,
+            "modified": 1619877016,
+            "title": "The Linked Data Service of the German National Library: Modelling of bibliographic data",
+            "priority": 3
+        },
+        {
+            "level": 4,
+            "recog": 1,
+            "authors": [],
+            "keywords": " > Research, Science > Bibliography, Citations > BIBFRAME (GND,DNB)",
+            "filename": "!!!DNB - BIBFRAME.pdf",
+            "year": 2021,
+            "modified": 1619876031,
+            "title": "BIBFRAME - BIBLIOGRAPHIC FRAMEWORK INITIATIVE",
+            "priority": 3
+        },
+        {
+            "level": 4,
+            "recog": 0,
+            "authors": [],
+            "keywords": " > Research, Science > Bibliography, Citations > DINI-AG KIM-recommendation (GND,DNB)",
+            "filename": "!!!Empfehlung f\u00fcr die RDF-Repr\u00e4sentation bibliografischer Daten (Textressourcen) - dini-ag-kim - Deutsche Nationalbibliothek - Wiki.pdf",
+            "year": 2021,
+            "modified": 1619876009,
+            "title": "Empfehlung f\u00fcr die RDF-Repr\u00e4sentation bibliografischer Daten (Textressourcen) - dini-ag-kim - Deutsche Nationalbibliothek - Wiki",
+            "priority": 3
+        },
+        {
+            "level": 2,
+            "recog": 0,
+            "authors": [],
+            "keywords": " > GND Ontology",
+            "filename": "!!!GND Ontology.pdf",
+            "year": 2021,
+            "modified": 1619874837,
+            "title": "GND Ontology",
+            "priority": 3
+        },
+        {
+            "level": 3,
+            "recog": 0,
+            "authors": [],
+            "keywords": " > People > Agrelon (GND,DNB)",
+            "filename": "!AgRelOn, an Agent Relationship Ontology.pdf",
+            "year": 2021,
+            "modified": 1619874711,
+            "title": "AgRelOn, an Agent Relationship Ontology",
+            "priority": 1
+        },
+        {
+            "level": 4,
+            "recog": 0,
+            "authors": [],
+            "keywords": " > Authority Files > GND (DNB) > About GND",
+            "filename": "-BLATT 6 Ihre Daten in der GND (2) .pdf",
+            "year": "N/A",
+            "modified": 1619873997,
+            "title": "BLATT 6 Ihre Daten in der GND (2) ",
+            "priority": 0
+        },
+        {
+            "level": 4,
+            "recog": 0,
+            "authors": [],
+            "keywords": " > Authority Files > GND (DNB) > About GND",
+            "filename": "!BLATT 5 Ihre Daten in der GND (1).pdf",
+            "year": "N/A",
+            "modified": 1619873920,
+            "title": "BLATT 5 Ihre Daten in der GND (1)",
+            "priority": 1
+        },
+        {
+            "level": 4,
+            "recog": 1,
+            "authors": [],
+            "keywords": " > Authority Files > GND (DNB) > About GND",
+            "filename": "-BLATT 4 Das Normative an der GND.pdf",
+            "year": "N/A",
+            "modified": 1619873531,
+            "title": "Das Normative der GND",
+            "priority": 0
+        },
+        {
+            "level": 4,
+            "recog": 1,
+            "authors": [],
+            "keywords": " > Authority Files > GND (DNB) > About GND",
+            "filename": "-BLATT 3 Ihr  Partner in der Arbeit mit GND-Normdaten.pdf",
+            "year": "N/A",
+            "modified": 1619873409,
+            "title": "Ihr Partner in der Arbeit mit GND-Normdaten",
+            "priority": 0
+        },
+        {
+            "level": 4,
+            "recog": 0,
+            "authors": [],
+            "keywords": " > Authority Files > GND (DNB) > About GND",
+            "filename": "-BLATT 2 Das GND.network.pdf",
+            "year": "N/A",
+            "modified": 1619873372,
+            "title": "BLATT 2 Das GND.network",
+            "priority": 0
+        },
+        {
+            "level": 4,
+            "recog": 0,
+            "authors": [],
+            "keywords": " > Authority Files > GND (DNB) > About GND",
+            "filename": "-BLATT 1 GND \u2013 Gru\u0308nde zum Mitmachen .pdf",
+            "year": "N/A",
+            "modified": 1619873340,
+            "title": "BLATT 1 GND \u2013 Gru\u0308nde zum Mitmachen ",
+            "priority": 0
+        },
+        {
+            "level": 3,
+            "recog": 0,
+            "authors": [],
+            "keywords": " > Authority Files > GND4C",
+            "filename": "!!!DNB - Kooperationen und Projekte - GND for Cultural Data (GND4C).pdf",
+            "year": 2021,
+            "modified": 1619873053,
+            "title": "DNB - Kooperationen und Projekte - GND for Cultural Data (GND4C)",
+            "priority": 3
+        },
+        {
+            "level": 3,
+            "recog": 1,
+            "authors": [
+                "Mohamad Yaser Jaradeh",
+                "Allard Oelen",
+                "Kheir Eddine Farfar",
+                "Manuel Prinz",
+                "Jennifer D\u2019Souza",
+                "G\u00e1bor Kismih\u00f3k",
+                "Markus Stocker",
+                "S\u00f6ren Auer"
+            ],
+            "keywords": " > Knowledge Graphs > Open Research Knowledge Graph, ORKG",
+            "filename": "!!!3360901.3364435.pdf",
+            "year": 2019,
+            "modified": 1619785321,
+            "title": "Open Research Knowledge Graph: Next Generation Infrastructure for Semantic Scholarly Knowledge",
+            "priority": 3
+        },
+        {
+            "level": 2,
+            "recog": 0,
+            "authors": [
+                "Silke Schomburg",
+                "Claus Leggewie",
+                "Henning Lobin",
+                "Sylvia Brink",
+                "Christian Frey",
+                "Andreas L. Fuchs",
+                "Roderich Henr\u00ff",
+                "Kathleen Rei\u00df",
+                "Johanna Vompras",
+                "Jochen Schirrwagen",
+                "Stephan B\u00fcttner",
+                "Susanne Haaf",
+                "Bryan Jurish",
+                "Matthias Schulz"
+            ],
+            "keywords": "Future Science > Digitale Wissenschaft",
+            "filename": "-Neue_Forschungsfelder_im_Netz_Erhebung_A.pdf",
+            "year": 2011,
+            "modified": 1619781623,
+            "title": "Neue_Forschungsfelder_im_Netz_Erhebung_A",
+            "priority": 0
+        },
+        {
+            "level": 2,
+            "recog": 1,
+            "authors": [
+                "Ilaria Tiddi",
+                "Emanuele Bastianelli",
+                "Enrico Motta"
+            ],
+            "keywords": "Robots, Bots > Robot-City Interaction",
+            "filename": "!Tiddi2019_Article_RobotCityInteractionMappingThe.pdf",
+            "year": 2020,
+            "modified": 1619780619,
+            "title": "Robot\u2013City Interaction: Mapping the Research Landscape\u2014A Survey of the Interactions Between Robots and Modern Cities",
+            "priority": 1
+        },
+        {
+            "level": 3,
+            "recog": 0,
+            "authors": [
+                "AMA ZON"
+            ],
+            "keywords": "Crowdsourcing, Human Computation > Tools > Turkopticon",
+            "filename": "-Mehr Fairness f\u00fcr die Crowd.pdf",
+            "year": 2019,
+            "modified": 1619779645,
+            "title": "Mehr Fairness f\u00fcr die Crowd",
+            "priority": 0
+        },
+        {
+            "level": 2,
+            "recog": 1,
+            "authors": [
+                "CODE OF CONDUCT"
+            ],
+            "keywords": "Crowdsourcing, Human Computation > Best Practices",
+            "filename": "!Code_of_Conduct_EN.pdf",
+            "year": 2017,
+            "modified": 1619779556,
+            "title": "Guideline for a prosperous and fair cooperation between crowdsourcing companies and crowdworkers Ground Rules for Paid Crowdsourcing / Crowdworking",
+            "priority": 1
+        },
+        {
+            "level": 2,
+            "recog": 1,
+            "authors": [
+                "Yaron Singer",
+                "Manas Mittal"
+            ],
+            "keywords": "Crowdsourcing, Human Computation > Pricing",
+            "filename": "-p1157-singer.pdf",
+            "year": 2013,
+            "modified": 1619779170,
+            "title": "Pricing Mechanisms for Crowdsourcing Markets",
+            "priority": 0
+        },
+        {
+            "level": 4,
+            "recog": 1,
+            "authors": [
+                "Matthias Tietz"
+            ],
+            "keywords": "Design, HCI, UI, UX > Persuasive Systems, Persuasive Technology > Digital Nudging > Decoy Effect",
+            "filename": "!ICIS_2016_Decoys.pdf",
+            "year": 2016,
+            "modified": 1619778789,
+            "title": "The Decoy Effect in Reward-Based Crowdfunding: Preliminary Results from an Online Experiment",
+            "priority": 1
+        },
+        {
+            "level": 3,
+            "recog": 1,
+            "authors": [
+                "Anna Lioznova",
+                "Alexey Drutsa",
+                "Vladimir Kukushkin",
+                "Anastasia Bezzubtseva"
+            ],
+            "keywords": "Crowdsourcing, Human Computation > Pricing > Predicting Hourly Earnings",
+            "filename": "-3394486.3403369.pdf",
+            "year": 2020,
+            "modified": 1619778240,
+            "title": "Prediction of Hourly Earnings and Completion Time on a Crowdsourcing Platform",
+            "priority": 0
+        },
+        {
+            "level": 3,
+            "recog": 1,
+            "authors": [
+                "David R. Karger",
+                "Sewoong Oh",
+                "Devavrat Shah"
+            ],
+            "keywords": "Crowdsourcing, Human Computation > Pricing > Budget-optimal Task Allocation",
+            "filename": "-1110.3564.pdf",
+            "year": 2013,
+            "modified": 1619777592,
+            "title": "Budget-Optimal Task Allocation for Reliable Crowdsourcing Systems",
+            "priority": 0
+        },
+        {
+            "level": 2,
+            "recog": 1,
+            "authors": [
+                "Yaron Singer",
+                "Manas Mittal"
+            ],
+            "keywords": "Crowdsourcing, Human Computation > Pricing",
+            "filename": "-10.1.1.669.9280.pdf",
+            "year": 2011,
+            "modified": 1619777163,
+            "title": "Pricing Tasks in Online Labor Markets",
+            "priority": 0
+        },
+        {
+            "level": 4,
+            "recog": 1,
+            "authors": [
+                "Akash Mankar",
+                "Riddhi J Shah"
+            ],
+            "keywords": "Crowdsourcing, Human Computation > Pricing > Design Activism > Minimum Wage API",
+            "filename": "!!1706.10097.pdf",
+            "year": 2017,
+            "modified": 1619776968,
+            "title": "Design Activism for Minimum Wage Crowd Work",
+            "priority": 2
+        },
+        {
+            "level": 3,
+            "recog": 0,
+            "authors": [
+                "BLAKE FALL-CONROY"
+            ],
+            "keywords": "Art > Artworks > Minimum Wage Machine",
+            "filename": "-Blake Fall-Conroy Art.pdf",
+            "year": 2021,
+            "modified": 1619774995,
+            "title": "Blake Fall-Conroy Art",
+            "priority": 0
+        },
+        {
+            "level": 3,
+            "recog": 1,
+            "authors": [
+                "Ben Cahill"
+            ],
+            "keywords": "Art > Artworks > Minimum Wage Machine",
+            "filename": "-The Minimum Wage Machine _ tutor2u.pdf",
+            "year": 2021,
+            "modified": 1619774937,
+            "title": "The Minimum Wage Machine",
+            "priority": 0
+        },
+        {
+            "level": 3,
+            "recog": 1,
+            "authors": [
+                "Akash Mankar",
+                "Riddhi J. Shah",
+                "Matthew Lease"
+            ],
+            "keywords": "Crowdsourcing, Human Computation > Pricing > Design Activism",
+            "filename": "!!90_Design_Activism_for_Minimum_Wage_Crowd_Work.pdf",
+            "year": 2017,
+            "modified": 1619774702,
+            "title": "Design Activism for Minimum Wage Crowd Work",
+            "priority": 2
+        },
+        {
+            "level": 3,
+            "recog": 1,
+            "authors": [
+                "Siamak Faridani",
+                "Bj\u00f6rn Hartmann",
+                "Panagiotis G. Ipeirotis"
+            ],
+            "keywords": "Crowdsourcing, Human Computation > Pricing > Completion Times",
+            "filename": "-3994-16703-1-PB.pdf",
+            "year": 2011,
+            "modified": 1619774587,
+            "title": "What\u2019s the Right Price? Pricing Tasks for Finishing on Time",
+            "priority": 0
+        },
+        {
+            "level": 2,
+            "recog": 1,
+            "authors": [
+                "KENNETH C. MANNING",
+                "DAVID E. SPROTT"
+            ],
+            "keywords": "Psychology > Price Endings",
+            "filename": "-36-2-328.pdf",
+            "year": 2009,
+            "modified": 1619774520,
+            "title": "Price Endings, Left-Digit Effects, and Choice",
+            "priority": 0
+        },
+        {
+            "level": 3,
+            "recog": 0,
+            "authors": [],
+            "keywords": "Crowdsourcing, Human Computation > Best Practices > Fair Payment",
+            "filename": "!!Guidelines_for_Academic_Requesters.pdf",
+            "year": 2014,
+            "modified": 1619773727,
+            "title": "Guidelines_for_Academic_Requesters",
+            "priority": 2
+        },
+        {
+            "level": 4,
+            "recog": 1,
+            "authors": [],
+            "keywords": "NLP > Language Models > BERT > Bert-as-a-service",
+            "filename": "!hanxiao_bert-as-service_ Mapping a variable-length sentence to a fixed-length vector using BERT model.pdf",
+            "year": 2021,
+            "modified": 1619773374,
+            "title": "hanxiao / bert-as-service Mapping a variable-length sentence to a fixed-length vector using BERT model",
+            "priority": 1
+        },
+        {
+            "level": 3,
+            "recog": 0,
+            "authors": [
+                "Ruben Verborgh"
+            ],
+            "keywords": "Linked Data > Semantic Web > Issues",
+            "filename": "-The Semantic Web identity crisis_ in search of the trivialities that never were _ Ruben Verborgh.pdf",
+            "year": 2019,
+            "modified": 1619771230,
+            "title": "The Semantic Web identity crisis_ in search of the trivialities that never were _ Ruben Verborgh",
+            "priority": 0
+        },
+        {
+            "level": 4,
+            "recog": 1,
+            "authors": [
+                "Nitisha Jain",
+                "Jan-Christoph Kalo",
+                "Wolf-Tilo Balke",
+                "Ralf Krestel"
+            ],
+            "keywords": "Linked Data > Graph Embeddings > Issues > Semantics",
+            "filename": "!do_embeddings_actually_capture_knowledge_graph_semantics_.pdf",
+            "year": 2021,
+            "modified": 1619771160,
+            "title": "Do Embeddings Actually Capture Knowledge Graph Semantics?",
+            "priority": 1
+        },
+        {
+            "level": 4,
+            "recog": 1,
+            "authors": [
+                "Lada A. Adamic"
+            ],
+            "keywords": "Methods > Statistics > Distributions > Zipf\u2019s  law",
+            "filename": "!Zipf, Power-law, Pareto - a ranking tutorial.pdf",
+            "year": 2021,
+            "modified": 1619766591,
+            "title": "Zipf, Power-laws, and Pareto - a ranking tutorial",
+            "priority": 1
+        },
+        {
+            "level": 4,
+            "recog": 1,
             "authors": [
                 "Harris M. Cooper"
             ],
-            "modified": 1619698174,
             "filename": "!Cooper_1988_Organizing knowledge syntheses.pdf",
-            "level": 4,
+            "keywords": "Methods > Literature Review > General > Categories",
+            "modified": 1619698174,
             "year": 2009,
-            "priority": 1,
-            "recog": 1
+            "title": "Organizing Knowledge Syntheses: A Taxonomy of Literature Reviews",
+            "priority": 1
         },
         {
-            "keywords": "Design, HCI, UI, UX > Time > Digital Death, End of Life, Legacy > Issues",
-            "title": "Digital Zombies - the Reanimation of our Digital Selves",
+            "level": 4,
+            "recog": 1,
             "authors": [
                 "Tabea Tietz",
                 "Francesca Pichierri",
@@ -24,27 +786,27 @@
                 "Franziska Boehm",
                 "Harald Sack"
             ],
-            "modified": 1619683899,
             "filename": "-3184558.3191606.pdf",
-            "level": 4,
+            "keywords": "Design, HCI, UI, UX > Time > Digital Death, End of Life, Legacy > Issues",
+            "modified": 1619683899,
             "year": 2018,
-            "priority": 0,
-            "recog": 1
+            "title": "Digital Zombies - the Reanimation of our Digital Selves",
+            "priority": 0
         },
         {
-            "keywords": "Linked Data > Wikidata > Development Plan",
-            "title": "Wikidata_Development plan - Wikidata",
-            "authors": [],
-            "modified": 1619679221,
-            "filename": "!Wikidata_Development plan - Wikidata.pdf",
             "level": 3,
+            "recog": 0,
+            "authors": [],
+            "filename": "!Wikidata_Development plan - Wikidata.pdf",
+            "keywords": "Linked Data > Wikidata > Development Plan",
+            "modified": 1619679221,
             "year": 2021,
-            "priority": 1,
-            "recog": 0
+            "title": "Wikidata_Development plan - Wikidata",
+            "priority": 1
         },
         {
-            "keywords": "Digital Humanities > Historical Research",
-            "title": "Semantic Technologies for Historical Research: A Survey",
+            "level": 2,
+            "recog": 1,
             "authors": [
                 "Albert Mero\u00f1o-Pe\u00f1uela",
                 "Ashkan Ashkpour",
@@ -55,29 +817,29 @@
                 "Stefan Schlobach",
                 "Frank van Harmelen"
             ],
-            "modified": 1619625474,
             "filename": "!!!43409711.pdf",
-            "level": 2,
+            "keywords": "Digital Humanities > Historical Research",
+            "modified": 1619625474,
             "year": 2014,
-            "priority": 3,
-            "recog": 1
+            "title": "Semantic Technologies for Historical Research: A Survey",
+            "priority": 3
         },
         {
-            "keywords": "Linked Data > Semantic Web > Issues > Bias > Lack of Polyvocality",
-            "title": "A Polyvocal and Contextualised Semantic Web",
+            "level": 5,
+            "recog": 1,
             "authors": [
                 "Marieke van Erp"
             ],
-            "modified": 1619619898,
             "filename": "!!!a_polyvocal_and_contextualised_semantic_web.pdf",
-            "level": 5,
+            "keywords": "Linked Data > Semantic Web > Issues > Bias > Lack of Polyvocality",
+            "modified": 1619619898,
             "year": 2021,
-            "priority": 3,
-            "recog": 1
+            "title": "A Polyvocal and Contextualised Semantic Web",
+            "priority": 3
         },
         {
-            "keywords": "Linked Data > Issues > sameAs, Equivalence",
-            "title": "When owl:sameAs Isn\u2019t the Same: An Analysis of Identity in Linked Data",
+            "level": 3,
+            "recog": 1,
             "authors": [
                 "Harry Halpin",
                 "Patrick J. Hayes",
@@ -85,16 +847,16 @@
                 "Deborah L. McGuinness",
                 "Henry S. Thompson"
             ],
-            "modified": 1619618449,
             "filename": "!!!Halpin2010_Chapter_WhenOwlSameAsIsnTTheSameAnAnal.pdf",
-            "level": 3,
+            "keywords": "Linked Data > Issues > sameAs, Equivalence",
+            "modified": 1619618449,
             "year": 2010,
-            "priority": 3,
-            "recog": 1
+            "title": "When owl:sameAs Isn\u2019t the Same: An Analysis of Identity in Linked Data",
+            "priority": 3
         },
         {
-            "keywords": "Linked Data > Multiple Views, Lenses",
-            "title": "Scientific lenses to support multiple views over linked chemistry data",
+            "level": 2,
+            "recog": 1,
             "authors": [
                 "Colin Batchelor",
                 "Christian Brenninkmeijer",
@@ -119,40 +881,40 @@
                 "Antony Williams",
                 "Egon L Willighagen"
             ],
-            "modified": 1619616159,
             "filename": "!!!87960097-scientific-lenses-to-support-multiple-views-over-linked-chemistry-data.pdf",
-            "level": 2,
+            "keywords": "Linked Data > Multiple Views, Lenses",
+            "modified": 1619616159,
             "year": 2014,
-            "priority": 3,
-            "recog": 1
+            "title": "Scientific lenses to support multiple views over linked chemistry data",
+            "priority": 3
         },
         {
-            "keywords": " > Metadata > VoiD",
-            "title": "Aether \u2013 Generating and Viewing Extended VoID Statistical Descriptions of RDF Datasets",
+            "level": 3,
+            "recog": 1,
             "authors": [
                 "Eetu M\u00e4kel\u00e4"
             ],
-            "modified": 1619615794,
             "filename": "-makela-aether-2014.pdf",
-            "level": 3,
-            "year": 2014,
-            "priority": 0,
-            "recog": 1
-        },
-        {
             "keywords": " > Metadata > VoiD",
-            "title": "Describing Linked Datasets with the VoID Vocabulary",
-            "authors": [],
-            "modified": 1619615133,
-            "filename": "!!!Describing Linked Datasets with the VoID Vocabulary.pdf",
-            "level": 3,
-            "year": 2021,
-            "priority": 3,
-            "recog": 1
+            "modified": 1619615794,
+            "year": 2014,
+            "title": "Aether \u2013 Generating and Viewing Extended VoID Statistical Descriptions of RDF Datasets",
+            "priority": 0
         },
         {
-            "keywords": "Linked Data > Multiple Views, Lenses",
-            "title": "Scientific Lenses over Linked Data: An approach to support task specific views of the data. A vision",
+            "level": 3,
+            "recog": 1,
+            "authors": [],
+            "filename": "!!!Describing Linked Datasets with the VoID Vocabulary.pdf",
+            "keywords": " > Metadata > VoiD",
+            "modified": 1619615133,
+            "year": 2021,
+            "title": "Describing Linked Datasets with the VoID Vocabulary",
+            "priority": 3
+        },
+        {
+            "level": 2,
+            "recog": 1,
             "authors": [
                 "Christian Brenninkmeijer",
                 "Chris Evelo",
@@ -164,30 +926,30 @@
                 "Antony J Williams",
                 "Egon L Willighagen"
             ],
-            "modified": 1619608395,
             "filename": "!!!paper5.pdf",
-            "level": 2,
+            "keywords": "Linked Data > Multiple Views, Lenses",
+            "modified": 1619608395,
             "year": 2012,
-            "priority": 3,
-            "recog": 1
+            "title": "Scientific Lenses over Linked Data: An approach to support task specific views of the data. A vision",
+            "priority": 3
         },
         {
-            "keywords": "Linked Data > Issues > Integration",
-            "title": "Large Scale Semantic Integration of Linked Data: A Survey",
+            "level": 3,
+            "recog": 1,
             "authors": [
                 "MICHALIS MOUNTANTONAKIS",
                 "YANNIS TZITZIKAS"
             ],
-            "modified": 1619607301,
             "filename": "!Tzitzikas_2019_LargeScaleSemanticIntegration_ACM_ComputingSurveys2019.pdf",
-            "level": 3,
+            "keywords": "Linked Data > Issues > Integration",
+            "modified": 1619607301,
             "year": 2019,
-            "priority": 1,
-            "recog": 1
+            "title": "Large Scale Semantic Integration of Linked Data: A Survey",
+            "priority": 1
         },
         {
-            "keywords": "Communities, Networks > Social Media > Facebook > Issues > Usability",
-            "title": "Exploring the Facebook Experience: A New Approach to Usability",
+            "level": 5,
+            "recog": 1,
             "authors": [
                 "Jennefer Hart",
                 "Charlene Ridley",
@@ -195,122 +957,122 @@
                 "Corina Sas",
                 "Alan Dix"
             ],
-            "modified": 1619605457,
             "filename": "!NordChi2008_-_220.pdf",
-            "level": 5,
+            "keywords": "Communities, Networks > Social Media > Facebook > Issues > Usability",
+            "modified": 1619605457,
             "year": 2008,
-            "priority": 1,
-            "recog": 1
+            "title": "Exploring the Facebook Experience: A New Approach to Usability",
+            "priority": 1
         },
         {
-            "keywords": "Psychology > Change > Psychological Future Management",
-            "title": "PROACTIVE DEVELOPMENT OF FUTURE COMPETENCE FOR INDIVIDUALS AND COMPANIES",
+            "level": 3,
+            "recog": 1,
             "authors": [
                 "WHOEVER WAITS"
             ],
-            "modified": 1619604876,
             "filename": "-Broschuere_Druyen-v8.pdf",
-            "level": 3,
+            "keywords": "Psychology > Change > Psychological Future Management",
+            "modified": 1619604876,
             "year": 2018,
-            "priority": 0,
-            "recog": 1
+            "title": "PROACTIVE DEVELOPMENT OF FUTURE COMPETENCE FOR INDIVIDUALS AND COMPANIES",
+            "priority": 0
         },
         {
-            "keywords": "Software Engineering > Thin Slicing",
-            "title": "Thin Slicing",
+            "level": 2,
+            "recog": 1,
             "authors": [
                 "Manu Sridharan",
                 "Stephen J. Fink",
                 "Rastislav Bod\u00edk"
             ],
-            "modified": 1619602088,
             "filename": "-1250734.1250748.pdf",
-            "level": 2,
+            "keywords": "Software Engineering > Thin Slicing",
+            "modified": 1619602088,
             "year": 2007,
-            "priority": 0,
-            "recog": 1
+            "title": "Thin Slicing",
+            "priority": 0
         },
         {
-            "keywords": "Neuroscience > Memory > Memory Loss",
-            "title": "Late-Stage Pandemic Is Messing With Your Brain",
+            "level": 3,
+            "recog": 1,
             "authors": [
                 "PETER MARLOW",
                 "Kylie Brakeman"
             ],
-            "modified": 1619598030,
             "filename": "-What the Pandemic Is Doing to Our Brains - The Atlantic.pdf",
-            "level": 3,
+            "keywords": "Neuroscience > Memory > Memory Loss",
+            "modified": 1619598030,
             "year": 2021,
-            "priority": 0,
-            "recog": 1
+            "title": "Late-Stage Pandemic Is Messing With Your Brain",
+            "priority": 0
         },
         {
-            "keywords": "Issues > Racism",
-            "title": "Response To CSForInclusion Letter",
-            "authors": [],
-            "modified": 1619591393,
-            "filename": "-Response To CSForInclusion Letter.pdf",
             "level": 2,
+            "recog": 0,
+            "authors": [],
+            "filename": "-Response To CSForInclusion Letter.pdf",
+            "keywords": "Issues > Racism",
+            "modified": 1619591393,
             "year": 2021,
-            "priority": 0,
-            "recog": 0
+            "title": "Response To CSForInclusion Letter",
+            "priority": 0
         },
         {
-            "keywords": "Marketing > Pet Rock",
-            "title": "Gary Dahl dies at 78; creator of Pet Rock, 1970s pop culture icon",
+            "level": 2,
+            "recog": 1,
             "authors": [
                 "Gary Dahl"
             ],
-            "modified": 1619546258,
             "filename": "-Gary Dahl dies at 78; creator of Pet Rock, 1970s pop culture icon - Los Angeles Times.pdf",
-            "level": 2,
+            "keywords": "Marketing > Pet Rock",
+            "modified": 1619546258,
             "year": 2021,
-            "priority": 0,
-            "recog": 1
+            "title": "Gary Dahl dies at 78; creator of Pet Rock, 1970s pop culture icon",
+            "priority": 0
         },
         {
-            "keywords": "Blockchain, Bitcoin > Issues > Power Consumption",
-            "title": "Cambridge Bitcoin Electricity Consumption Index (CBECI)",
-            "authors": [],
-            "modified": 1619545902,
-            "filename": "-Cambridge Bitcoin Electricity Consumption Index (CBECI).pdf",
             "level": 3,
+            "recog": 0,
+            "authors": [],
+            "filename": "-Cambridge Bitcoin Electricity Consumption Index (CBECI).pdf",
+            "keywords": "Blockchain, Bitcoin > Issues > Power Consumption",
+            "modified": 1619545902,
             "year": 2021,
-            "priority": 0,
-            "recog": 0
+            "title": "Cambridge Bitcoin Electricity Consumption Index (CBECI)",
+            "priority": 0
         },
         {
-            "keywords": "Blockchain, Bitcoin > General, Theory > Proof-of-Stake",
-            "title": "Ethereum is slowly moving to proof-of-stake. Is that good news for climate?",
+            "level": 3,
+            "recog": 1,
             "authors": [
                 "ANDREY RUDAKOV/BLOOMBERG"
             ],
-            "modified": 1619545573,
             "filename": "!A blockchain tweak could fix crypto\u2019s colossal energy problem _ WIRED UK.pdf",
-            "level": 3,
+            "keywords": "Blockchain, Bitcoin > General, Theory > Proof-of-Stake",
+            "modified": 1619545573,
             "year": 2021,
-            "priority": 1,
-            "recog": 1
+            "title": "Ethereum is slowly moving to proof-of-stake. Is that good news for climate?",
+            "priority": 1
         },
         {
-            "keywords": "Methods > Literature Review > Methodologies > Kitchenham 2004",
-            "title": "Performing systematic literature review in software engineering",
+            "level": 4,
+            "recog": 1,
             "authors": [
                 "Zlatko Stapi\u0107",
                 "Eva Garc\u00eda L\u00f3pez",
                 "Antonio Garc\u00eda Cabot",
                 "Luis de Marcos Ortega"
             ],
-            "modified": 1619541937,
             "filename": "-1d7ed9758f90d50a33b74b25097bcafaf53a.pdf",
-            "level": 4,
+            "keywords": "Methods > Literature Review > Methodologies > Kitchenham 2004",
+            "modified": 1619541937,
             "year": 2012,
-            "priority": 0,
-            "recog": 1
+            "title": "Performing systematic literature review in software engineering",
+            "priority": 0
         },
         {
-            "keywords": "Methods > Literature Review > Methodologies > Kitchenham 2004",
-            "title": "Lessons from applying the systematic literature review process within the software engineering domain",
+            "level": 4,
+            "recog": 1,
             "authors": [
                 "Pearl Brereton",
                 "Barbara A. Kitchenham",
@@ -318,67 +1080,67 @@
                 "Mark Turner",
                 "Mohamed Khalil"
             ],
-            "modified": 1619541787,
             "filename": "!!1-s2.0-S016412120600197X-main.pdf",
-            "level": 4,
+            "keywords": "Methods > Literature Review > Methodologies > Kitchenham 2004",
+            "modified": 1619541787,
             "year": 2007,
-            "priority": 2,
-            "recog": 1
+            "title": "Lessons from applying the systematic literature review process within the software engineering domain",
+            "priority": 2
         },
         {
-            "keywords": "Methods > Literature Review > Methods > Mapping Studies",
-            "title": "Using mapping studies as the basis for further research \u2013 A participant-observer case study",
+            "level": 4,
+            "recog": 1,
             "authors": [
                 "Barbara A. Kitchenham",
                 "David Budgen",
                 "O. Pearl Brereton"
             ],
-            "modified": 1619541349,
             "filename": "-1-s2.0-S0950584910002272-main.pdf",
-            "level": 4,
+            "keywords": "Methods > Literature Review > Methods > Mapping Studies",
+            "modified": 1619541349,
             "year": 2011,
-            "priority": 0,
-            "recog": 1
+            "title": "Using mapping studies as the basis for further research \u2013 A participant-observer case study",
+            "priority": 0
         },
         {
-            "keywords": "Future Science > Classification > Classification of Papers > Types of Research",
-            "title": "Requirements engineering paper classification and evaluation criteria: a proposal and a discussion",
+            "level": 4,
+            "recog": 1,
             "authors": [
                 "Nancy Mead",
                 "Colette Rolland"
             ],
-            "modified": 1619541306,
             "filename": "!!wieringa_2006_re_paper_classification_and_eval_criteria.pdf",
-            "level": 4,
+            "keywords": "Future Science > Classification > Classification of Papers > Types of Research",
+            "modified": 1619541306,
             "year": 2005,
-            "priority": 2,
-            "recog": 1
+            "title": "Requirements engineering paper classification and evaluation criteria: a proposal and a discussion",
+            "priority": 2
         },
         {
-            "keywords": "Methods > Literature Review > Reporting > PRISMA",
-            "title": "PRISMA 2009 flow diagram",
-            "authors": [],
-            "modified": 1619540753,
-            "filename": "!!!PRISMA 2009 flow diagram.pdf",
             "level": 4,
-            "year": 2016,
-            "priority": 3,
-            "recog": 0
-        },
-        {
-            "keywords": "Methods > Qualitative > Framework Approach",
-            "title": "RepositoryFrameworkNResearcher",
+            "recog": 0,
             "authors": [],
-            "modified": 1619540536,
-            "filename": "!!RepositoryFrameworkNResearcher.pdf",
-            "level": 3,
-            "year": 2013,
-            "priority": 2,
-            "recog": 0
+            "filename": "!!!PRISMA 2009 flow diagram.pdf",
+            "keywords": "Methods > Literature Review > Reporting > PRISMA",
+            "modified": 1619540753,
+            "year": 2016,
+            "title": "PRISMA 2009 flow diagram",
+            "priority": 3
         },
         {
-            "keywords": "Art > Telegarden",
-            "title": "The Distant Gardener: What Conversations in the Telegarden Reveal about Human-Telerobotic Interaction",
+            "level": 3,
+            "recog": 0,
+            "authors": [],
+            "filename": "!!RepositoryFrameworkNResearcher.pdf",
+            "keywords": "Methods > Qualitative > Framework Approach",
+            "modified": 1619540536,
+            "year": 2013,
+            "title": "RepositoryFrameworkNResearcher",
+            "priority": 2
+        },
+        {
+            "level": 2,
+            "recog": 1,
             "authors": [
                 "Peter H. Kahn",
                 "Batya Friedman",
@@ -386,51 +1148,51 @@
                 "Nathan G. Freier",
                 "Stephanie L. Collett"
             ],
-            "modified": 1619539684,
             "filename": "-43_kahn05distantgardener.pdf",
-            "level": 2,
+            "keywords": "Art > Telegarden",
+            "modified": 1619539684,
             "year": 2005,
-            "priority": 0,
-            "recog": 1
+            "title": "The Distant Gardener: What Conversations in the Telegarden Reveal about Human-Telerobotic Interaction",
+            "priority": 0
         },
         {
-            "keywords": "Art > Social Media > Youtube Non Views",
-            "title": "Non Views",
+            "level": 3,
+            "recog": 1,
             "authors": [
                 "DRIES DEPOORTER"
             ],
-            "modified": 1619539596,
             "filename": "-Non Views \u2013 Dries Depoorter.pdf",
-            "level": 3,
+            "keywords": "Art > Social Media > Youtube Non Views",
+            "modified": 1619539596,
             "year": 2020,
-            "priority": 0,
-            "recog": 1
+            "title": "Non Views",
+            "priority": 0
         },
         {
-            "keywords": "Art > Paintings",
-            "title": "The Night Watch - Wikipedia",
-            "authors": [],
-            "modified": 1619539566,
-            "filename": "-The Night Watch - Wikipedia.pdf",
             "level": 2,
-            "year": 2020,
-            "priority": 0,
-            "recog": 0
-        },
-        {
-            "keywords": "Art > Automatons > Signing Machine",
-            "title": "THE SIGNING MACHINE BY JAQUET DROZ: THE ART OF MECHANICAL ASTONISHMENT",
+            "recog": 0,
             "authors": [],
-            "modified": 1619539437,
-            "filename": "-THE SIGNING MACHINE BY JAQUET DROZ_ THE ART OF MECHANICAL ASTONISHMENT _ Jaquet Droz.pdf",
-            "level": 3,
+            "filename": "-The Night Watch - Wikipedia.pdf",
+            "keywords": "Art > Paintings",
+            "modified": 1619539566,
             "year": 2020,
-            "priority": 0,
-            "recog": 1
+            "title": "The Night Watch - Wikipedia",
+            "priority": 0
         },
         {
-            "keywords": "Hypertext, Hypermedia > Systems, Models",
-            "title": "AHA! meets Auld Linky : Integrating Designed and Free-form Hypertext Systems",
+            "level": 3,
+            "recog": 1,
+            "authors": [],
+            "filename": "-THE SIGNING MACHINE BY JAQUET DROZ_ THE ART OF MECHANICAL ASTONISHMENT _ Jaquet Droz.pdf",
+            "keywords": "Art > Automatons > Signing Machine",
+            "modified": 1619539437,
+            "year": 2020,
+            "title": "THE SIGNING MACHINE BY JAQUET DROZ: THE ART OF MECHANICAL ASTONISHMENT",
+            "priority": 0
+        },
+        {
+            "level": 2,
+            "recog": 1,
             "authors": [
                 "David Millard",
                 "Hugh Davis",
@@ -438,27 +1200,27 @@
                 "Koen Aben",
                 "Paul De Bra"
             ],
-            "modified": 1619536841,
             "filename": "!p161-millard.pdf",
-            "level": 2,
+            "keywords": "Hypertext, Hypermedia > Systems, Models",
+            "modified": 1619536841,
             "year": 2003,
-            "priority": 1,
-            "recog": 1
+            "title": "AHA! meets Auld Linky : Integrating Designed and Free-form Hypertext Systems",
+            "priority": 1
         },
         {
-            "keywords": "Linked Data > Applications > HCI",
-            "title": "HCI & Knowledge Graphs Workshop 2021 - Call for Participation",
-            "authors": [],
-            "modified": 1619535397,
-            "filename": "-HCI & Knowledge Graphs Workshop 2021 - Call for Participation.pdf",
             "level": 3,
+            "recog": 0,
+            "authors": [],
+            "filename": "-HCI & Knowledge Graphs Workshop 2021 - Call for Participation.pdf",
+            "keywords": "Linked Data > Applications > HCI",
+            "modified": 1619535397,
             "year": 2021,
-            "priority": 0,
-            "recog": 0
+            "title": "HCI & Knowledge Graphs Workshop 2021 - Call for Participation",
+            "priority": 0
         },
         {
-            "keywords": "Digital Humanities > Exploration",
-            "title": "HistorEx: Exploring Historical Text Corpora Using Word and Document Embeddings",
+            "level": 2,
+            "recog": 1,
             "authors": [
                 "Sven M\u00fcller",
                 "Michael Brunzel",
@@ -468,27 +1230,27 @@
                 "Tabea Tietz",
                 "Harald Sack"
             ],
-            "modified": 1619533051,
             "filename": "!2019-ESWC-D-HistorEx-Exploring-Historical-Text-Corpora.pdf",
-            "level": 2,
+            "keywords": "Digital Humanities > Exploration",
+            "modified": 1619533051,
             "year": 2019,
-            "priority": 1,
-            "recog": 1
+            "title": "HistorEx: Exploring Historical Text Corpora Using Word and Document Embeddings",
+            "priority": 1
         },
         {
-            "keywords": "NLP > Linguistics > Linguistic Analysis",
-            "title": "Linguistic Analysis Explained",
-            "authors": [],
-            "modified": 1619532912,
-            "filename": "-Linguistic Analysis Explained - Ascribe.pdf",
             "level": 3,
+            "recog": 1,
+            "authors": [],
+            "filename": "-Linguistic Analysis Explained - Ascribe.pdf",
+            "keywords": "NLP > Linguistics > Linguistic Analysis",
+            "modified": 1619532912,
             "year": 2021,
-            "priority": 0,
-            "recog": 1
+            "title": "Linguistic Analysis Explained",
+            "priority": 0
         },
         {
-            "keywords": "Digital Humanities > Issues > Exploration",
-            "title": "The Challenges of German Archival Document Categorization on Insufficient Labeled Data",
+            "level": 3,
+            "recog": 1,
             "authors": [
                 "Fabian Hoppe",
                 "Tabea Tietz",
@@ -498,53 +1260,53 @@
                 "Mehwish Alam",
                 "Harald Sack"
             ],
-            "modified": 1619532398,
             "filename": "!!2020-Hoppe-Tietz-Dessi-Sack-ESWC-WHiSe-The-Challenges-of-German-Archival.pdf",
-            "level": 3,
+            "keywords": "Digital Humanities > Issues > Exploration",
+            "modified": 1619532398,
             "year": 2020,
-            "priority": 2,
-            "recog": 1
+            "title": "The Challenges of German Archival Document Categorization on Insufficient Labeled Data",
+            "priority": 2
         },
         {
-            "keywords": "Open Science, e-Science, e-Research, Research Data > ACM > Agency Trilemma",
-            "title": "3459084",
+            "level": 3,
+            "recog": 0,
             "authors": [],
-            "modified": 1619531357,
             "filename": "-3459084.pdf",
-            "level": 3,
+            "keywords": "Open Science, e-Science, e-Research, Research Data > ACM > Agency Trilemma",
+            "modified": 1619531357,
             "year": 2021,
-            "priority": 0,
-            "recog": 0
+            "title": "3459084",
+            "priority": 0
         },
         {
-            "keywords": "Machine Learning > Issues > Deepfakes",
-            "title": "3453696",
+            "level": 3,
+            "recog": 0,
             "authors": [],
-            "modified": 1619531042,
             "filename": "-3453696.pdf",
-            "level": 3,
+            "keywords": "Machine Learning > Issues > Deepfakes",
+            "modified": 1619531042,
             "year": 2021,
-            "priority": 0,
-            "recog": 0
+            "title": "3453696",
+            "priority": 0
         },
         {
-            "keywords": "NLP > Word Embeddings > FastText, Skipgram",
-            "title": "Enriching Word Vectors with Subword Information",
+            "level": 3,
+            "recog": 1,
             "authors": [
                 "Piotr Bojanowski",
                 "Edouard Grave",
                 "Tomas Mikolov"
             ],
-            "modified": 1619530883,
             "filename": "!Q17-1010.pdf",
-            "level": 3,
+            "keywords": "NLP > Word Embeddings > FastText, Skipgram",
+            "modified": 1619530883,
             "year": 2017,
-            "priority": 1,
-            "recog": 1
+            "title": "Enriching Word Vectors with Subword Information",
+            "priority": 1
         },
         {
-            "keywords": "NLP > Word Embeddings > FastText, Skipgram",
-            "title": "1802.06893",
+            "level": 3,
+            "recog": 0,
             "authors": [
                 "Edouard Grave",
                 "Piotr Bojanowski",
@@ -552,58 +1314,58 @@
                 "Armand Joulin",
                 "Tomas Mikolov"
             ],
-            "modified": 1619530686,
             "filename": "-1802.06893.pdf",
-            "level": 3,
+            "keywords": "NLP > Word Embeddings > FastText, Skipgram",
+            "modified": 1619530686,
             "year": 2018,
-            "priority": 0,
-            "recog": 0
+            "title": "1802.06893",
+            "priority": 0
         },
         {
-            "keywords": "Hypertext, Hypermedia > Hypertext in other Contexts",
-            "title": "Evidence of Hypertext in the Scholarly Archive",
+            "level": 2,
+            "recog": 1,
             "authors": [
                 "Tim Brody",
                 "Leslie Carr",
                 "Stevan Harnad"
             ],
-            "modified": 1619530012,
             "filename": "-p74-brody.pdf",
-            "level": 2,
+            "keywords": "Hypertext, Hypermedia > Hypertext in other Contexts",
+            "modified": 1619530012,
             "year": 2002,
-            "priority": 0,
-            "recog": 1
+            "title": "Evidence of Hypertext in the Scholarly Archive",
+            "priority": 0
         },
         {
-            "keywords": "Hypertext, Hypermedia > Issues > Semantic Gap",
-            "title": "Mind the Semantic Gap",
+            "level": 3,
+            "recog": 1,
             "authors": [
                 "David E. Millard",
                 "Nicholas M. Gibbins",
                 "Danius T. Michaelides",
                 "Mark J. Weal"
             ],
-            "modified": 1619529674,
             "filename": "-mind-the-semantic-gap.pdf",
-            "level": 3,
+            "keywords": "Hypertext, Hypermedia > Issues > Semantic Gap",
+            "modified": 1619529674,
             "year": 2005,
-            "priority": 0,
-            "recog": 1
+            "title": "Mind the Semantic Gap",
+            "priority": 0
         },
         {
-            "keywords": "Open Science, e-Science, e-Research, Research Data > Issues > Impact",
-            "title": "Can Open Science Change the World?",
-            "authors": [],
-            "modified": 1619529627,
-            "filename": "-09206428.pdf",
             "level": 3,
+            "recog": 1,
+            "authors": [],
+            "filename": "-09206428.pdf",
+            "keywords": "Open Science, e-Science, e-Research, Research Data > Issues > Impact",
+            "modified": 1619529627,
             "year": 2020,
-            "priority": 0,
-            "recog": 1
+            "title": "Can Open Science Change the World?",
+            "priority": 0
         },
         {
-            "keywords": "Open Science, e-Science, e-Research, Research Data > Research Objects",
-            "title": "Why Linked Data is Not Enough for Scientists",
+            "level": 2,
+            "recog": 1,
             "authors": [
                 "Sean Bechhofer",
                 "John Ainsworth",
@@ -622,868 +1384,39 @@
                 "David Newman",
                 "Shoaib Sufi"
             ],
-            "modified": 1619529023,
             "filename": "!!!research-objects-final.pdf",
-            "level": 2,
+            "keywords": "Open Science, e-Science, e-Research, Research Data > Research Objects",
+            "modified": 1619529023,
             "year": 2010,
-            "priority": 3,
-            "recog": 1
+            "title": "Why Linked Data is Not Enough for Scientists",
+            "priority": 3
         },
         {
-            "keywords": "Hypertext, Hypermedia > History > Vannevar Bush, Memex",
-            "title": "Vannevar Bush - As We May Think - The Atlantic",
+            "level": 3,
+            "recog": 0,
             "authors": [],
-            "modified": 1619528460,
             "filename": "!!!Vannevar Bush - As We May Think - The Atlantic.pdf",
-            "level": 3,
+            "keywords": "Hypertext, Hypermedia > History > Vannevar Bush, Memex",
+            "modified": 1619528460,
             "year": 2016,
-            "priority": 3,
-            "recog": 0
+            "title": "Vannevar Bush - As We May Think - The Atlantic",
+            "priority": 3
         },
         {
-            "keywords": "Digital Humanities > Linked Stage Graph",
-            "title": "Knowledge Graph based Analysis and Exploration of Historical Theatre Photographs",
+            "level": 2,
+            "recog": 1,
             "authors": [
                 "Tabea Tietz",
                 "J\u00f6rg Waitelonis",
                 "Mehwish Alam",
                 "Harald Sack"
             ],
-            "modified": 1619528015,
             "filename": "!!!Qurator2020-Linked-Stage-Graph.pdf",
-            "level": 2,
-            "year": 2019,
-            "priority": 3,
-            "recog": 1
-        },
-        {
-            "keywords": "Visualisation > Exploratory Search > Systems",
-            "title": "Refinery: Visual Exploration of Large, Heterogeneous Networks through Associative Browsing",
-            "authors": [
-                "S. Kairam",
-                "N. H. Riche",
-                "S. Drucker",
-                "R. Fernandez",
-                "J. Heer"
-            ],
-            "modified": 1619527439,
-            "filename": "!!!2015-Refinery-EuroVis.pdf",
-            "level": 3,
-            "year": 2015,
-            "priority": 3,
-            "recog": 1
-        },
-        {
-            "keywords": "Digital Humanities > DDB Neustart Kultur",
-            "recog": 0,
-            "authors": [
-                "DIE DEUTSCHE",
-                "DIGITALE BIBLIOTHEK",
-                "(DDB): BEDEUTUNG",
-                "Nina Baueregger"
-            ],
-            "modified": 1619450411,
-            "filename": "-Europeana_und_die_Deutsche_Digitale_Bibliothek_DDB.pdf",
-            "year": 2012,
-            "priority": 0,
-            "level": 2,
-            "title": "Europeana_und_die_Deutsche_Digitale_Bibliothek_DDB"
-        },
-        {
-            "keywords": "Digital Humanities > DDB Neustart Kultur",
-            "recog": 0,
-            "authors": [],
-            "modified": 1619450125,
-            "filename": "!2020_07_14_PA Neustrukturierung_final.pdf",
-            "year": 2020,
-            "priority": 1,
-            "level": 2,
-            "title": "2020_07_14_PA Neustrukturierung_final"
-        },
-        {
-            "keywords": "Digital Humanities > DDB Neustart Kultur",
-            "recog": 1,
-            "authors": [
-                "Kai Stalmann",
-                "Reinhard Budde",
-                "Robert Mertens",
-                "Christoph Tornau",
-                "Dennis Wegener",
-                "Volker Heydegger",
-                "Thorsten Wunderlich",
-                "Bernd Ingenbleek",
-                "Florian Schulz"
-            ],
-            "modified": 1619449209,
-            "filename": "!2011 Stalmann - Kultur im Wissensnetz - Die Architektur der Deutschen Digitalen Bibliothek.pdf",
-            "year": 2011,
-            "priority": 1,
-            "level": 2,
-            "title": "Kultur im Wissensnetz - Die Architektur der Deutschen Digitalen Bibliothek"
-        },
-        {
-            "keywords": "Digital Humanities > DDB Neustart Kultur",
-            "recog": 1,
-            "authors": [
-                "Kai Stalmann",
-                "Marion Borowski",
-                "Sven Becker"
-            ],
-            "modified": 1619449048,
-            "filename": "-2011 Stalmann - Groundbreaking the German Digital Library.pdf",
-            "year": 2011,
-            "priority": 0,
-            "level": 2,
-            "title": "Groundbreaking the German Digital Library"
-        },
-        {
-            "keywords": "Visualisation > Linked Data > Vikus Viewer",
-            "recog": 0,
-            "authors": [
-                "Sammlungen (Vikus",
-                "Katrin Glinka",
-                "Marian D\u00f6rk"
-            ],
-            "modified": 1619428957,
-            "filename": "!!evaberlin2015.pdf",
-            "year": 2015,
-            "priority": 2,
-            "level": 3,
-            "title": "evaberlin2015"
-        },
-        {
             "keywords": "Digital Humanities > Linked Stage Graph",
-            "recog": 1,
-            "authors": [
-                "Tabea Tietz",
-                "J\u00f6rg Waitelonis",
-                "Kanran Zhou",
-                "Paul Felgentreff",
-                "Nils Meyer",
-                "Andreas Weber",
-                "Harald Sack"
-            ],
-            "modified": 1619427136,
-            "filename": "!!Semantics_2019_paper_143.pdf",
+            "modified": 1619528015,
             "year": 2019,
-            "priority": 2,
-            "level": 2,
-            "title": "Linked Stage Graph"
-        },
-        {
-            "keywords": "Digital Humanities > Applications",
-            "recog": 1,
-            "authors": [
-                "Tabea Tietz",
-                "Harald Sack"
-            ],
-            "modified": 1619426183,
-            "filename": "-2019-ESWC-P-ISECourse-Open-Cultural-Heritage-Data-in-University.pdf",
-            "year": 2019,
-            "priority": 0,
-            "level": 2,
-            "title": "Open Cultural Heritage Data in University Programming Courses"
-        },
-        {
-            "keywords": "Design of Experiments > Pre-registration, HARKing",
-            "title": "HARKing: Hypothesizing After the Results are Known",
-            "authors": [
-                "Norbert L. Kerr"
-            ],
-            "modified": 1619371107,
-            "filename": "!!!Kerr1998.pdf",
-            "level": 2,
-            "priority": 3,
-            "year": 2002,
-            "recog": 1
-        },
-        {
-            "keywords": "Crowdsourcing, Human Computation > Comparisons",
-            "title": "MTurk, Prolific or panels? Choosing the right audience for online research",
-            "authors": [
-                "Eyal Peer",
-                "David Rothschild",
-                "Zak Evernden",
-                "Andrew Gordon",
-                "Ekaterina Damer"
-            ],
-            "modified": 1619370697,
-            "filename": "!!!SSRN-id3765448.pdf",
-            "level": 2,
-            "priority": 3,
-            "year": 2021,
-            "recog": 1
-        },
-        {
-            "keywords": "NLP > Applications > Social Media > Twitter",
-            "title": "Graph Based Enhancement of Clusters for Effective Semantic Classification of Twitter Text",
-            "authors": [
-                "Russa Biswas",
-                "Thierry Declerck"
-            ],
-            "modified": 1619369823,
-            "filename": "-Thesis-Russa-Biswas.pdf",
-            "level": 4,
-            "priority": 0,
-            "year": 2016,
-            "recog": 1
-        },
-        {
-            "keywords": "Linked Data > Applications > Sociology",
-            "title": "Linked Data supported Content Analysis for Sociology",
-            "authors": [
-                "Tabea Tietz",
-                "Harald Sack"
-            ],
-            "modified": 1619369218,
-            "filename": "!!!Semantics2019_Research.pdf",
-            "level": 3,
-            "priority": 3,
-            "year": 2019,
-            "recog": 1
-        },
-        {
-            "keywords": "Ontology Engineering > Evolution, Change",
-            "title": "Management of Dynamic Biomedical Terminologies: Current Status and Future Challenges",
-            "authors": [
-                "M. Da Silveira",
-                "J. C. Dos Reis",
-                "C. Pruski"
-            ],
-            "modified": 1619367720,
-            "filename": "-Da Silveira et al. - 2015 - Management of Dynamic Biomedical Terminologies Cu.pdf",
-            "level": 2,
-            "priority": 0,
-            "year": 2015,
-            "recog": 1
-        },
-        {
-            "keywords": "Ontology Engineering > Evolution, Change > PimpMyPie",
-            "title": "Challenges of Knowledge Graph Evolution from an NLP Perspective",
-            "authors": [
-                "Tabea Tietz",
-                "Mehwish Alam",
-                "Harald Sack",
-                "Marieke van Erp"
-            ],
-            "modified": 1619367359,
-            "filename": "!!!2020-Tietz-Sack-ESWC-WHiSe-Challenges-of-Knowledg-Graph-Evolution.pdf",
-            "level": 3,
-            "priority": 3,
-            "year": 2020,
-            "recog": 1
-        },
-        {
-            "keywords": "Digital Humanities > General, Theory > Computational Turn",
-            "title": "THE COMPUTATIONAL TURN: THINKING ABOUT THE DIGITAL HUMANITIES",
-            "authors": [
-                "David M. Berry"
-            ],
-            "modified": 1619352457,
-            "filename": "!!BERRY_2011-THE_COMPUTATIONAL_TURN-_THINKING_ABOUT_THE_DIGITAL_HUMANITIES.pdf",
-            "level": 3,
-            "priority": 2,
-            "year": 2019,
-            "recog": 1
-        },
-        {
-            "keywords": "Visualisation > Exploratory Search",
-            "title": "Exploratory Search and Interactive Data Analytics",
-            "authors": [
-                "Dorota G\u0142owacka",
-                "Fernando V. Paulovich"
-            ],
-            "modified": 1619352184,
-            "filename": "-p9-glowacka.pdf",
-            "level": 2,
-            "priority": 0,
-            "year": 2017,
-            "recog": 1
-        },
-        {
-            "keywords": "NLP > Semantic Role Labeling",
-            "title": "22_SRL",
-            "authors": [],
-            "modified": 1619349806,
-            "filename": "-22_SRL.pdf",
-            "level": 2,
-            "priority": 0,
-            "year": 2015,
-            "recog": 0
-        },
-        {
-            "keywords": "NLP > Semantic Role Labeling",
-            "title": "Semantic Role Labeling: An Introduction to the Special Issue",
-            "authors": [
-                "Llu\u0131\u0301s M\u00e0rquez",
-                "Xavier Carreras",
-                "Kenneth C. Litkowski",
-                "Suzanne Stevenson"
-            ],
-            "modified": 1619349501,
-            "filename": "!J08-2001.pdf",
-            "level": 2,
-            "priority": 1,
-            "year": 2008,
-            "recog": 1
-        },
-        {
-            "keywords": "Blockchain, Bitcoin > General, Theory",
-            "title": "p38-waldo",
-            "authors": [],
-            "modified": 1619348776,
-            "filename": "!p38-waldo.pdf",
-            "level": 2,
-            "priority": 1,
-            "year": 2019,
-            "recog": 0
-        },
-        {
-            "keywords": "Blockchain, Bitcoin > General, Theory",
-            "title": "Explain like I'm 5. Blockchains",
-            "authors": [],
-            "modified": 1619347747,
-            "filename": "-Explain like I'm 5. Blockchains.pdf",
-            "level": 2,
-            "priority": 0,
-            "year": 2017,
-            "recog": 0
-        },
-        {
-            "keywords": "Blockchain, Bitcoin > General, Theory > Zero-knowledge Protocols",
-            "title": "Zero-knowledge proof - Wikipedia",
-            "authors": [],
-            "modified": 1619347578,
-            "filename": "!Zero-knowledge proof - Wikipedia.pdf",
-            "level": 3,
-            "priority": 1,
-            "year": 2021,
-            "recog": 0
-        },
-        {
-            "keywords": "Blockchain, Bitcoin > General, Theory > Zero-knowledge Protocols",
-            "title": "How to Explain Zero-Knowledge Protocols to Your Children",
-            "authors": [],
-            "modified": 1619347355,
-            "filename": "!Quisquater1990_Chapter_HowToExplainZero-KnowledgeProt.pdf",
-            "level": 3,
-            "priority": 1,
-            "year": 2001,
-            "recog": 1
-        },
-        {
-            "keywords": "Pandemics > Corona Virus Pandemic > Post-Pandemic Life > Socializing",
-            "title": "A post-pandemic discussion question: You get home from work on a Friday night",
-            "authors": [
-                "Ilona Westfall"
-            ],
-            "modified": 1619346248,
-            "filename": "-The 2 Types of Post-pandemic Socializers - The Atlantic.pdf",
-            "level": 4,
-            "priority": 0,
-            "year": 2021,
-            "recog": 1
-        },
-        {
-            "keywords": "Ontology Engineering > Selection > Re-Use > Ontology Metadata Schema > Ontology MEtadata GenerAtion (OMEGA)",
-            "title": "simperl2011",
-            "authors": [
-                "Elena Simperl",
-                "Cristina Sarasua",
-                "Rachanee Ungrangsi",
-                "Tobias B\u00fcrger"
-            ],
-            "modified": 1619343693,
-            "filename": "!!simperl2011.pdf",
-            "level": 5,
-            "priority": 2,
-            "year": 2012,
-            "recog": 0
-        },
-        {
-            "keywords": "Ontology Engineering > Selection > Re-Use > Import > MIREOT",
-            "title": "MIREOT: The minimum information to reference an external ontology term",
-            "authors": [
-                "M\u00e9lanie Courtot",
-                "Frank Gibson",
-                "Allyson L. Lister",
-                "James Malone",
-                "Daniel Schober",
-                "Ryan R. Brinkman",
-                "Alan Ruttenberg"
-            ],
-            "modified": 1619342029,
-            "filename": "!ao%2F2011%2F6-1%2FAO087-MIREOT.pdf",
-            "level": 5,
-            "priority": 1,
-            "year": 2011,
-            "recog": 1
-        },
-        {
-            "keywords": "Ontology Engineering > Selection > Re-Use > Ontology Reuse Process",
-            "title": "Reusing ontologies on the Semantic Web: A feasibility study",
-            "authors": [
-                "Elena Simperl"
-            ],
-            "modified": 1619341883,
-            "filename": "!1-s2.0-S0169023X0900007X-main.pdf",
-            "level": 4,
-            "priority": 1,
-            "year": 2009,
-            "recog": 1
-        },
-        {
-            "keywords": "Ontology Engineering > Selection > Re-Use > Ontology Reuse Process",
-            "title": "GUIDELINES FOR REUSING ONTOLOGIES ON THE SEMANTIC WEB",
-            "authors": [
-                "ELENA SIMPERL"
-            ],
-            "modified": 1619341702,
-            "filename": "!!simperl2010.pdf",
-            "level": 4,
-            "priority": 2,
-            "year": 2010,
-            "recog": 1
-        },
-        {
-            "keywords": "Ontology Engineering > General, Theory",
-            "title": "Common Errors In OWL",
-            "authors": [
-                "Alan Rector",
-                "Nick Drummond",
-                "Matthew Horridge",
-                "Holger Knublauch",
-                "Jeremy Rogers",
-                "Robert Stevens",
-                "Hai Wang",
-                "Chris Wroe",
-                "A Margherita Pizza"
-            ],
-            "modified": 1619339616,
-            "filename": "!6.1_Horridge_CommonErrorsInOWL.pdf",
-            "level": 2,
-            "priority": 1,
-            "year": 2004,
-            "recog": 1
-        },
-        {
-            "keywords": "Feedback > Feedback Properties, Best Practices > Good Feedback",
-            "title": "Formative assessment and self-regulated learning: A model and seven principles of good feedback practice",
-            "authors": [
-                "DAVID J. NICOL",
-                "DEBRA MACFARLANE-DICK",
-                "David J. Nicol"
-            ],
-            "modified": 1619289348,
-            "filename": "!!!seven-principles-of-good-feedback-practice.pdf",
-            "level": 3,
-            "priority": 3,
-            "year": 2006,
-            "recog": 1
-        },
-        {
-            "keywords": "Feedback > Effect, Reception > Feedback Intervention Theory",
-            "title": "The Effects of Feedback Interventions on Performance: A Historical Review, a Meta-Analysis, and a Preliminary Feedback Intervention Theory",
-            "authors": [
-                "Avraham N. Kluger",
-                "Angelo DeNisi"
-            ],
-            "modified": 1619289052,
-            "filename": "!!!e81ca813ed757e1e76c0023865c7dbdc7308.pdf",
-            "level": 3,
-            "priority": 3,
-            "year": 2004,
-            "recog": 1
-        },
-        {
-            "keywords": "Issues > Grade Inflation, Grading Leniency",
-            "title": "Grade inflation - Wikipedia",
-            "authors": [
-                "Louis Goldman",
-                "Harvey Mansfield"
-            ],
-            "modified": 1619257942,
-            "filename": "-Grade inflation - Wikipedia.pdf",
-            "level": 2,
-            "priority": 0,
-            "year": 2021,
-            "recog": 0
-        },
-        {
-            "keywords": "Conferences > CORE Ranking",
-            "title": "CORE Rankings Portal",
-            "authors": [
-                "Maria Garcia De La Banda",
-                "John Grundy",
-                "Ben Rubinstein",
-                "Shazia Sadiq",
-                "Michael Winikoff"
-            ],
-            "modified": 1619189217,
-            "filename": "!CORE Rankings Portal.pdf",
-            "level": 2,
-            "priority": 1,
-            "year": 2021,
-            "recog": 0
-        },
-        {
-            "keywords": "NFDI4Culture",
-            "title": "NFDI4Culture - Consortium for research data on material and immaterial cultural heritage",
-            "authors": [
-                "Reinhard Altenh\u00f6ner",
-                "Ina Bl\u00fcmel",
-                "Barbara Wiermann"
-            ],
-            "modified": 1619172507,
-            "filename": "!!!RIO_article_57036.pdf",
-            "level": 1,
-            "priority": 3,
-            "year": 2020,
-            "recog": 1
-        },
-        {
-            "keywords": "NLP > NLP APIs and Tools > Stanford Snorkel MeTaL",
-            "title": "Training Complex Models with Multi-Task Weak Supervision",
-            "authors": [
-                "Alexander Ratner",
-                "Braden Hancock",
-                "Jared Dunnmon",
-                "Frederic Sala",
-                "Shreyash Pandey",
-                "Christopher R\u00e9"
-            ],
-            "modified": 1619113543,
-            "filename": "-1810.02840.pdf",
-            "level": 3,
-            "priority": 0,
-            "year": 2018,
-            "recog": 1
-        },
-        {
-            "keywords": "AI > Issues > Governance, Regulation > Collingridge dilemma",
-            "title": "Collingridge dilemma - Wikipedia",
-            "authors": [],
-            "modified": 1619107302,
-            "filename": "!!Collingridge dilemma - Wikipedia.pdf",
-            "level": 4,
-            "priority": 2,
-            "year": 2020,
-            "recog": 0
-        },
-        {
-            "keywords": "AI > Issues > Governance, Regulation > Regulation > European Artificial Intelligence Act",
-            "title": "2AnnexestotheProposalpdf",
-            "authors": [],
-            "modified": 1619107217,
-            "filename": "-2AnnexestotheProposalpdf.pdf",
-            "level": 5,
-            "priority": 0,
-            "year": 2021,
-            "recog": 0
-        },
-        {
-            "keywords": "AI > Issues > Governance, Regulation > Regulation > European Artificial Intelligence Act",
-            "title": "1ProposalforaRegulationonaEuropeanapproachforArtificialIntelligencepdf",
-            "authors": [],
-            "modified": 1619107144,
-            "filename": "!!!1ProposalforaRegulationonaEuropeanapproachforArtificialIntelligencepdf.pdf",
-            "level": 5,
-            "priority": 3,
-            "year": 2021,
-            "recog": 0
-        },
-        {
-            "keywords": "Issues > Replication Crisis, Reproducibility Crisis",
-            "title": "Let go of your data",
-            "authors": [],
-            "modified": 1619025120,
-            "filename": "-s41563-019-0539-5.pdf",
-            "level": 2,
-            "priority": 0,
-            "year": 2019,
-            "recog": 1
-        },
-        {
-            "keywords": "AI > Issues > Malicious Use",
-            "title": "1802.07228",
-            "authors": [
-                "Sankalp Bhatnagar",
-                "Miles Brundage",
-                "Shahar Avin",
-                "Jack Clark",
-                "Helen Toner",
-                "Peter Eckersley",
-                "Ben Garfinkel",
-                "Allan Dafoe",
-                "Paul Scharre",
-                "Thomas Zeitzoff",
-                "Bobby Filar",
-                "Hyrum Anderson",
-                "Heather Roff",
-                "Gregory C. Allen",
-                "Jacob Steinhardt",
-                "Haydn Belfield",
-                "Sebastian Farquhar",
-                "Clare Lyle Rebecca Crootof",
-                "Owain Evans",
-                "Michael Page Joanna Bryson",
-                "Roman Yampolskiy",
-                "Dario Amodei"
-            ],
-            "modified": 1619021046,
-            "filename": "!1802.07228.pdf",
-            "level": 3,
-            "priority": 1,
-            "year": 2018,
-            "recog": 0
-        },
-        {
-            "keywords": "Linked Data > Knowledge Graph > Micro Knowledge Graphs",
-            "title": "Constructing Micro Knowledge Graphs from Technical Support Documents",
-            "authors": [
-                "Atul Kumar",
-                "Nisha Gupta"
-            ],
-            "modified": 1619018945,
-            "filename": "!!!constructing_micro_knowledge_graphs_from_technical_support_documents.pdf",
-            "level": 3,
-            "priority": 3,
-            "year": 2021,
-            "recog": 1
-        },
-        {
-            "keywords": "Ontology Engineering > Tools, Repositories",
-            "title": "WonderTools? A comparative study of ontological engineering tools ",
-            "authors": [
-                "A. J. DUINEVELD",
-                "R. STOTER",
-                "M. R. WEIDEN",
-                "B. KENEPA",
-                "V. R. BENJAMINS"
-            ],
-            "modified": 1619018276,
-            "filename": "-1-s2.0-S107158199990366X-main.pdf",
-            "level": 2,
-            "priority": 0,
-            "year": 2000,
-            "recog": 1
-        },
-        {
-            "keywords": "Ontology Engineering > Tools, Repositories > Neologism 2.0",
-            "title": "Towards Easy Vocabulary Drafts with Neologism 2.0",
-            "authors": [
-                "Johannes Lipp",
-                "Lars Gleim",
-                "Michael Cochez",
-                "Iraklis Dimitriadis",
-                "Daniel Hoppe Alvarez",
-                "Christoph Lange",
-                "Stefan Decker"
-            ],
-            "modified": 1619018146,
-            "filename": "!towards_easy_vocabulary_drafts_with_neologism_2_0.pdf",
-            "level": 3,
-            "priority": 1,
-            "year": 2021,
-            "recog": 1
-        },
-        {
-            "keywords": "Linked Data > Knowledge Graph > Subject Headings",
-            "title": "national_library_of_latvia_subject_headings_as_linked_open_data",
-            "authors": [
-                "Uldis Boj\u0101rs"
-            ],
-            "modified": 1619017635,
-            "filename": "-national_library_of_latvia_subject_headings_as_linked_open_data.pdf",
-            "level": 3,
-            "priority": 0,
-            "year": 2021,
-            "recog": 0
-        },
-        {
-            "keywords": " > Research, Science > Research Objects > IRAO",
-            "title": "Ontology for Informatics Research Artifacts",
-            "authors": [
-                "Viet Bach Nguyen",
-                "V. Sv\u00e1tek"
-            ],
-            "modified": 1619017367,
-            "filename": "!ontology_for_informatics_research_artifacts.pdf",
-            "level": 4,
-            "priority": 1,
-            "year": 2021,
-            "recog": 1
-        },
-        {
-            "keywords": "Supporting Science > Data Deluge > Data Synthesis",
-            "title": "Towards Scientific Data Synthesis Using Deep Learning and Semantic Web",
-            "authors": [
-                "Alsayed Algergawy",
-                "Hamdi Hamed",
-                "Birgitta K\u00f6nig-Ries"
-            ],
-            "modified": 1619017289,
-            "filename": "-towards_scientific_data_synthesis_using_deep_learning_and_semantic_web.pdf",
-            "level": 3,
-            "priority": 0,
-            "year": 2021,
-            "recog": 1
-        },
-        {
-            "keywords": "AI > General, Theory > Human-like AI, Sentient Web",
-            "title": "Human-like AI and the Sentient Web",
-            "authors": [],
-            "modified": 1619016787,
-            "filename": "-human_like_ai_and_the_sentient_web.pdf",
-            "level": 3,
-            "priority": 0,
-            "year": 2021,
-            "recog": 1
-        },
-        {
-            "keywords": "Ontology Engineering > Requirements > Ontology Requirements Specification Document (ORSD)",
-            "title": "Ontology Requirements Specification",
-            "authors": [
-                "Mari Carmen Su\u00e1rez-Figueroa"
-            ],
-            "modified": 1619016460,
-            "filename": "!!!10.1007@978-3-642-24794-15.pdf",
-            "level": 3,
-            "priority": 3,
-            "year": 2012,
-            "recog": 1
-        },
-        {
-            "keywords": "Ontology Matching, Ontology Alignment > Methods, Approaches > Chat, Dialogue, Conversation",
-            "title": "Dialogue Based Meaning Negotiation",
-            "authors": [
-                "Gabrielle Santos",
-                "Valentina Tamma",
-                "Terry R. Payne",
-                "Floriana Grasso"
-            ],
-            "modified": 1619012946,
-            "filename": "!paper 12.pdf",
-            "level": 3,
-            "priority": 1,
-            "year": 2015,
-            "recog": 1
-        },
-        {
-            "keywords": "NLP > Issues",
-            "title": "3449049",
-            "authors": [
-                "Chris Edwards"
-            ],
-            "modified": 1619012259,
-            "filename": "!!3449049.pdf",
-            "level": 2,
-            "priority": 2,
-            "year": 2021,
-            "recog": 0
-        },
-        {
-            "keywords": "NLP > Language Models > OpenAI GPT > Issues > Scaling Laws",
-            "title": "Scaling Laws for Autoregressive Generative Modeling",
-            "authors": [
-                "Tom Henighan",
-                "Jared Kaplan",
-                "Mor Katz",
-                "Mark Chen",
-                "Christopher Hesse",
-                "Jacob Jackson",
-                "Heewoo Jun",
-                "Tom B. Brown",
-                "Prafulla Dhariwal",
-                "Scott Gray Chris Hallacy",
-                "Benjamin Mann",
-                "Alec Radford",
-                "Aditya Ramesh",
-                "Nick Ryder",
-                "Daniel M. Ziegler",
-                "John Schulman",
-                "Dario Amodei",
-                "Sam McCandlish"
-            ],
-            "modified": 1619011490,
-            "filename": "-2010.14701.pdf",
-            "level": 5,
-            "priority": 0,
-            "year": 2020,
-            "recog": 1
-        },
-        {
-            "keywords": "AI > Impact, Future > Vision > Qatar",
-            "title": "3447725",
-            "authors": [],
-            "modified": 1619010944,
-            "filename": "-3447725.pdf",
-            "level": 4,
-            "priority": 0,
-            "year": 2021,
-            "recog": 0
-        },
-        {
-            "keywords": "AI > Impact, Future > Vision > UAE",
-            "title": "3447723",
-            "authors": [],
-            "modified": 1619010811,
-            "filename": "-3447723.pdf",
-            "level": 4,
-            "priority": 0,
-            "year": 2021,
-            "recog": 0
-        },
-        {
-            "keywords": "Future of Work > Mobility, Nomads",
-            "title": "3451223",
-            "authors": [],
-            "modified": 1619009056,
-            "filename": "-3451223.pdf",
-            "level": 2,
-            "priority": 0,
-            "year": 2021,
-            "recog": 0
-        },
-        {
-            "keywords": "Issues > Racism",
-            "title": "3451225",
-            "authors": [],
-            "modified": 1619008719,
-            "filename": "-3451225.pdf",
-            "level": 2,
-            "priority": 0,
-            "year": 2021,
-            "recog": 0
-        },
-        {
-            "keywords": "Information Retrieval > Information Foraging > Applications > Military",
-            "title": "Information foraging theory: A framework for intelligence analysis",
-            "authors": [
-                "David J. Bryant"
-            ],
-            "modified": 1619007182,
-            "filename": "-DRDC-RDDC-2014-R115-Document.pdf",
-            "level": 4,
-            "priority": 0,
-            "year": 2014,
-            "recog": 1
-        },
-        {
-            "keywords": "Information Retrieval > Information Foraging > Systems > BIG",
-            "title": "AAAI98-076",
-            "authors": [],
-            "modified": 1619007089,
-            "filename": "-AAAI98-076.pdf",
-            "level": 4,
-            "priority": 0,
-            "year": "N/A",
-            "recog": 0
+            "title": "Knowledge Graph based Analysis and Exploration of Historical Theatre Photographs",
+            "priority": 3
         }
-    ],
-    "unrecognized": 0,
-    "modified": 1619964547,
-    "unrecognized_percent": 0.0,
-    "unrecognized_overall": 2664,
-    "unrecognized_overall_percent": 0.42
+    ]
 }
