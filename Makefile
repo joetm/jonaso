@@ -51,6 +51,7 @@ replace-cv:
 	# set the options in the CV
 	cd academic-cv; \
 		sed 's|\\excludefromprint{.*}||g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showdatedetails}{true}|\\definenewtoggle{showdatedetails}{false}|g' cv.tex | sponge cv.tex
 		sed 's|\\definenewtoggle{showbirthdate}{true}|\\definenewtoggle{showbirthdate}{false}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{shownationality}{true}|\\definenewtoggle{shownationality}{false}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showgithub}{false}|\\definenewtoggle{showgithub}{true}|g' cv.tex | sponge cv.tex; \
