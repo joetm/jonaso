@@ -51,7 +51,7 @@ replace-cv:
 	# set the options in the CV
 	cd academic-cv; \
 		sed 's|\\excludefromprint{.*}||g' cv.tex | sponge cv.tex; \
-		sed 's|\\definenewtoggle{showdatedetails}{true}|\\definenewtoggle{showdatedetails}{false}|g' cv.tex | sponge cv.tex
+		sed 's|\\definenewtoggle{showdatedetails}{true}|\\definenewtoggle{showdatedetails}{false}|g' cv.tex | sponge cv.tex \
 		sed 's|\\definenewtoggle{showbirthdate}{true}|\\definenewtoggle{showbirthdate}{false}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{shownationality}{true}|\\definenewtoggle{shownationality}{false}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showgithub}{false}|\\definenewtoggle{showgithub}{true}|g' cv.tex | sponge cv.tex; \
@@ -81,7 +81,9 @@ replace-cv:
 		sed 's|\\definenewtoggle{showtotalfunding}{true}|\\definenewtoggle{showtotalfunding}{false}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showoutreach}{true}|\\definenewtoggle{showoutreach}{false}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showpublicationsummary}{false}|\\definenewtoggle{showpublicationsummary}{true}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showpresentations}{true}|\\definenewtoggle{showpresentations}{false}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showmoney}{true}|\\definenewtoggle{showmoney}{false}|g' cv.tex | sponge cv.tex
+
 
 build-cv:
 	# build the publication list
