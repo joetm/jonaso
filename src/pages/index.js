@@ -154,7 +154,9 @@ console.info(process.env.NODE_ENV);
                 </p>
                 */}
 
+                {/*
                 <TravelRotary />
+                */}
 
               </Grid.Column>
 
