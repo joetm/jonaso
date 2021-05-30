@@ -4,9 +4,8 @@ import { spacer } from "../common"
 import Influencer from "../components/influencer"
 import Keywords from "../components/keywords"
 import Layout from "../components/layout"
-/*
-import KeywordCloud from '../components/cloud'
-*/
+/* import KeywordCloud from '../components/cloud' */
+
 
 const _INFLUENCER = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/influencer.json'
 const _KEYWORDS = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/keywords.json'
@@ -18,7 +17,9 @@ class Interests extends React.Component {
     keywords: [],
   }
   componentDidMount = () => {
+    // --------------
     // get influencer
+    // --------------
     fetch(_INFLUENCER)
     .then(response => {
       if (response.status >= 400) {
@@ -26,8 +27,29 @@ class Interests extends React.Component {
       }
       return response.json()
     })
-    .then(influencer => this.setState({ influencer }))
+    .then(data => {
+      let influencer = {}
+      for (let i=1; i < 4; i++) {
+        // already exists?
+          data[i].forEach(el => {
+            if (influencer.hasOwnProperty(el.id)) {
+              // increase the num
+              influencer[el.id]['num'] = influencer[el.id]['num'] + el.num
+            } else {
+              influencer[el.id] = {
+                name: el.name,
+                num: el.num,
+                id: el.id,
+              }
+            }
+          })
+      }
+      // console.log('influencer', influencer)
+      this.setState({ influencer })
+    })
+    // ------------
     // get keywords
+    // ------------
     fetch(_KEYWORDS)
     .then(response => {
       if (response.status >= 400) {
@@ -44,7 +66,9 @@ class Interests extends React.Component {
       <Layout>
         <Container>
           {/* <KeywordCloud /> */}
+          {/*
           <Keywords keywords={filtered_keywords} />
+          */}
           <Influencer influencer={influencer} />
           <div style={spacer}></div>
         </Container>
