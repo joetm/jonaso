@@ -67,9 +67,11 @@ class Keywords extends React.Component {
 
           {/*
           <Button.Group style={{float: 'right'}}>
-              <Button positive={barChartActive} onClick={() => this.changeChartType('bar')}>Bar</Button>
+              <Button positive={barChartActive}
+                onClick={() => this.changeChartType('bar')}>Bar</Button>
               <Button.Or />
-              <Button positive={!barChartActive} onClick={() => this.changeChartType('tree')}>Tree</Button>
+              <Button positive={!barChartActive}
+                onClick={() => this.changeChartType('tree')}>Tree</Button>
           </Button.Group>
           */}
 
@@ -83,7 +85,7 @@ class Keywords extends React.Component {
 
           <div style={{clear:'both'}}></div>
 
-          <ResponsiveContainer width="100%" height={880}>
+          <ResponsiveContainer width="100%" height={980}>
             {/*
               barChartActive ?
             */}
