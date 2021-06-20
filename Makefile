@@ -62,6 +62,7 @@ replace-cv:
 		sed 's|\\definenewtoggle{showabitur}{true}|\\definenewtoggle{showabitur}{false}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showdoctoralstudiesasexperience}{false}|\\definenewtoggle{showdoctoralstudiesasexperience}{true}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showteaching}{false}|\\definenewtoggle{showteaching}{true}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showteachingdetails}{true}|\\definenewtoggle{showteachingdetails}{false}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showsupervisions}{false}|\\definenewtoggle{showsupervisions}{true}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showacademicservice}{false}|\\definenewtoggle{showacademicservice}{true}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showpeerreview}{false}|\\definenewtoggle{showpeerreview}{true}|g' cv.tex | sponge cv.tex; \
@@ -69,6 +70,7 @@ replace-cv:
 		sed 's|\\definenewtoggle{showlanguages}{false}|\\definenewtoggle{showlanguages}{true}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showmemberships}{false}|\\definenewtoggle{showmemberships}{true}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showthesestitles}{false}|\\definenewtoggle{showthesestitles}{true}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showgrantwriting}{true}|\\definenewtoggle{showgrantwriting}{false}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{shownetwork}{true}|\\definenewtoggle{shownetwork}{false}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showsupervisors}{false}|\\definenewtoggle{showsupervisors}{true}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showsummary}{true}|\\definenewtoggle{showsummary}{false}|g' cv.tex | sponge cv.tex; \
