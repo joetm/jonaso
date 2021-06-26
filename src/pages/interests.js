@@ -28,24 +28,24 @@ class Interests extends React.Component {
       return response.json()
     })
     .then(data => {
-      let influencer = {}
-      for (let i=1; i < 4; i++) {
-        // already exists?
-          data[i].forEach(el => {
-            if (influencer.hasOwnProperty(el.id)) {
-              // increase the num
-              influencer[el.id]['num'] = influencer[el.id]['num'] + el.num
-            } else {
-              influencer[el.id] = {
-                name: el.name,
-                num: el.num,
-                id: el.id,
-              }
-            }
-          })
-      }
+      // let influencer = {}
+      // for (let i=1; i < 4; i++) {
+      //   // already exists?
+      //     data[i].forEach(el => {
+      //       if (influencer.hasOwnProperty(el.id)) {
+      //         // increase the num
+      //         influencer[el.id]['num'] = influencer[el.id]['num'] + el.num
+      //       } else {
+      //         influencer[el.id] = {
+      //           name: el.name,
+      //           num: el.num,
+      //           id: el.id,
+      //         }
+      //       }
+      //     })
+      // }
       // console.log('influencer', influencer)
-      this.setState({ influencer })
+      this.setState({ influencer: data })
     })
     // ------------
     // get keywords
@@ -66,9 +66,7 @@ class Interests extends React.Component {
       <Layout>
         <Container>
           {/* <KeywordCloud /> */}
-          {/*
           <Keywords keywords={filtered_keywords} />
-          */}
           <Influencer influencer={influencer} />
           <div style={spacer}></div>
         </Container>

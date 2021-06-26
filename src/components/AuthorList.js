@@ -195,7 +195,7 @@ class AuthorList extends React.Component {
       <React.Fragment>
         {
           Object.keys(list).filter(author => (list[author].num >= 1)).map((author, index) => {
-            console.info('author', list[author])
+            // console.info('author', list[author])
 
             return;
             if (author.num <= 1) { return null }
