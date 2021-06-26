@@ -258,7 +258,7 @@ class Influencer extends React.Component {
   render() {
     const { influencer = [] } = this.props
     const { activeid, activeAuthors } = this.state
-    console.log('influencer', influencer)
+    // console.log('influencer', influencer)
     return (
         <Container>
           <h2>Influencers</h2>
