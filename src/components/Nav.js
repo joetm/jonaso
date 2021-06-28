@@ -43,7 +43,9 @@ export default class Nav extends React.Component {
           <MenuItem item='Publications' />
           <MenuItem item='Projects' />
           <MenuItem item='CV' />
+          {/*
           <MenuItem item='Reading' />
+          */}
           <MenuItem item='Interests' />
         </Menu>
       </header>
