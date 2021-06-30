@@ -166,12 +166,12 @@ console.info(process.env.NODE_ENV);
 
                 <Header size="tiny" style={nobottommargin}>Office Address:</Header>
                 <p>
-                    University of Oulu<br />
-                    Pentti Kaiteran katu 1<br />
-                    Room TS370<br />
-                    P.O. Box 4500<br />
-                    FI-90570 Oulu<br />
-                    E-Mail: {'{'}firstname.lastname{'}'}@oulu.fi
+                    FIZ Karlsruhe<br />
+                    Leibniz Institute for Information Infrastructure<br />
+                    Hermann-von-Helmholtz-Platz 1<br />
+                    76344 Eggenstein-Leopoldshafen<br />
+                    Germany<br /><br />
+                    E-Mail: {'{'}firstname.lastname{'}'}@fiz-karlsruhe.de
                 </p>
 
               {/*
