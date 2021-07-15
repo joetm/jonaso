@@ -27,6 +27,7 @@ if ./parsefiles.py ; then
     # echo "Command succeeded"
 	docker-stop-all
 	./update.sh
+	./analyze
 else
     # echo "Command failed"
 	docker-stop-all
@@ -38,5 +39,4 @@ ELAPSED_TIME=$(($SECONDS - $START_TIME))
 
 echo "Finished in $(($ELAPSED_TIME/60)) min $(($ELAPSED_TIME%60)) sec"
 
-./analyze
 

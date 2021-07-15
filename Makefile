@@ -90,6 +90,12 @@ replace-cv:
 		sed 's|\\definenewtoggle{showsoftware}{true}|\\definenewtoggle{showsoftware}{false}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showmoney}{true}|\\definenewtoggle{showmoney}{false}|g' cv.tex | sponge cv.tex
 
+	# set the options in the publications list
+	cd academic-cv; \
+		sed 's|\\excludefromprint{.*}||g' publication-list.tex | sponge publication-list.tex; \
+		sed 's|\\definenewtoggle{showpublicationsummary}{false}|\\definenewtoggle{showpublicationsummary}{true}|g' publication-list.tex | sponge publication-list.tex
+		sed 's|\\definenewtoggle{showmanuscripts}{true}|\\definenewtoggle{showmanuscripts}{false}|g' publication-list.tex | sponge publication-list.tex
+
 
 build-cv:
 	# build the publication list
