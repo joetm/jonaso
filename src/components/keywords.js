@@ -3,6 +3,8 @@ import { Container, Button } from 'semantic-ui-react'
 import { ResponsiveContainer, BarChart, Bar, Tooltip, XAxis, YAxis, CartesianGrid } from 'recharts' // Treemap
 
 
+const HEIGHT = 1024;
+
 
 class Keywords extends React.Component {
   constructor(props) {
@@ -85,7 +87,7 @@ class Keywords extends React.Component {
 
           <div style={{clear:'both'}}></div>
 
-          <ResponsiveContainer width="100%" height={980}>
+          <ResponsiveContainer width="100%" height={HEIGHT}>
             {/*
               barChartActive ?
             */}
