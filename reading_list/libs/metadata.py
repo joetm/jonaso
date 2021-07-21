@@ -2,8 +2,11 @@
 # -*- coding: utf-8 -*-
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
+
 import requests
 import os
+import subprocess
+import json
 # import csv
 
 
@@ -19,6 +22,11 @@ import os
     # "('sections', [{''}]",
     # ('authors', [{'name': 'Celine Latulipe', 'affiliations': []}])",
     # "('references', [{'
+
+
+class AnnotationNotFound(Exception):
+    pass
+
 
 
 def log():
@@ -76,13 +84,36 @@ def extractMetadata(fullpath):
         # if not 'title' in rawdata:
         #     skip = True # return False
 
-        # should have a title, but okay without one (using filename instead)
+        # should have a title, but okay without one. In this case, try to get title from first annotation in file, with fallback of using filename instead
         try:
             title = rawdata['title']
         except KeyError:
-            # unrecognized title: use filename instead
-            title = os.path.splitext(filename)[0].strip('!-')
-            recog = False
+            # unrecognized title
+
+            # TODO: use first annotation as title, if it exists
+
+            try:
+                # run annotation extraction
+                # !!! Python2 script (poppler not available for python3)
+                items = json.loads(subprocess.run(['extract_annotations.py', path], stdout=subprocess.PIPE))
+
+                # doc = poppler.document_new_from_file(path, None)
+                # page1 = doc.get_page(0)
+                # # get the annotations
+                # items = [i.annot.get_contents() for i in page1.get_annot_mapping()]
+                # # filter out empty annotations
+                # items = [i for i in items if i]
+
+                if len(items) > 0:
+                    title = items[0]
+                    title = title.replace("\n", "").replace("\r", "").strip()
+                else:
+                    raise AnnotationNotFound
+
+            except AnnotationNotFound:
+                # use filename instead
+                title = os.path.splitext(filename)[0].strip('!-')
+                recog = False
 
         # uncomment to capture Wikipedia articles
         # try:
