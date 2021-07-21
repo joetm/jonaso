@@ -79,8 +79,8 @@ def parsefiles(PATTERN, BASEPATHS, conn):
                         unrecognizedCounter = unrecognizedCounter + 1
                         continue
 
-                    print(name)
-                    print (counter, ": ",  thehash)
+                    # print (counter, ": ",  thehash)
+                    print (counter, ": ",  name)
 
                     # get my keywords (not the author keywords)
                     md['keywords'] = path.replace(root, '').replace('/',' > ')

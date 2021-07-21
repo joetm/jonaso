@@ -25,12 +25,12 @@ fi
 
 if ./parsefiles.py ; then
     # echo "Command succeeded"
-	docker-stop-all
+	docker-stop-all > /dev/null
 	./update.sh
 	./analyze
 else
     # echo "Command failed"
-	docker-stop-all
+	docker-stop-all > /dev/null
 fi
 
 # ./parsetoread.py
