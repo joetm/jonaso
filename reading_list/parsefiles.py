@@ -6,6 +6,7 @@ import json
 import sqlite3
 import time
 import sys
+from requests.exceptions import ConnectionError
 
 from libs import fileReader
 
@@ -88,10 +89,16 @@ try:
         json.dump(out, LISTFILE, indent=4)
 
 
-except:
-    print("Files not found. USB connected?")
-    conn.close()
-    sys.exit(1)
+except ConnectionError:
+    print("Scienceparse server is not running.")
+    # conn.close()
+    # sys.exit(1)
+
+except Exception as e:
+    print(e)
+    # print("Files not found. USB connected?")
+    # conn.close()
+    # sys.exit(1)
 
 
 # close sqlite connection
