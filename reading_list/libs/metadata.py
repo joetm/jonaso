@@ -24,9 +24,10 @@ import json
     # "('references', [{'
 
 
-class AnnotationNotFound(Exception):
-    pass
 
+# class AnnotationNotFound(Exception):
+#     """Raised when annotation could not be extracted"""
+#     pass
 
 
 def log():
@@ -75,6 +76,7 @@ def extractMetadata(fullpath):
 
         skip = False
         recog = True
+        method = ''
 
         rawdata = r.json()
 
@@ -87,6 +89,7 @@ def extractMetadata(fullpath):
         # should have a title, but okay without one. In this case, try to get title from first annotation in file, with fallback of using filename instead
         try:
             title = rawdata['title']
+            method = "SP"
         except KeyError:
             # unrecognized title
 
@@ -95,7 +98,13 @@ def extractMetadata(fullpath):
             try:
                 # run annotation extraction
                 # !!! Python2 script (poppler not available for python3)
-                items = json.loads(subprocess.run(['extract_annotations.py', path], stdout=subprocess.PIPE))
+                result = subprocess.run([
+                        'python2',
+                        '/var/www/academic-site/reading_list/libs/extract_annotations.py',
+                        path
+                ])
+
+                items = json.loads(result.stdout)
 
                 # doc = poppler.document_new_from_file(path, None)
                 # page1 = doc.get_page(0)
@@ -107,12 +116,13 @@ def extractMetadata(fullpath):
                 if len(items) > 0:
                     title = items[0]
                     title = title.replace("\n", "").replace("\r", "").strip()
-                else:
-                    raise AnnotationNotFound
 
-            except AnnotationNotFound:
+                method = 'AT'
+
+            except:
                 # use filename instead
                 title = os.path.splitext(filename)[0].strip('!-')
+                method = "TI"
                 recog = False
 
         # uncomment to capture Wikipedia articles
@@ -155,7 +165,8 @@ def extractMetadata(fullpath):
             # 'sections': rawdata['sections'],
             # 'references': rawdata['references'],
         }
-        print(rawdata['id'], ' - ', metadata['title'])
+
+        print(rawdata['id'], ' [%s]: ' % method, metadata['title'])
 
         return metadata
     else:
