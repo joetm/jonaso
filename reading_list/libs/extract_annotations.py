@@ -37,9 +37,10 @@ def extract_annotations(filename):
             # clean string
             it = it.replace("\n", "").replace("\r", "").strip()
             # write to file
-            annotations.append([page_no + 1, it])
+            # annotations.append([page_no + 1, it])
+            annotations.append(it)
 
-    json.dumps(annotations)
+    print json.dumps(annotations)
         # skipkeys=False,
         # ensure_ascii=True,
         # check_circular=True,
