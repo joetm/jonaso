@@ -91,14 +91,16 @@ try:
 
 except ConnectionError:
     print("Scienceparse server is not running.")
-    # conn.close()
-    # sys.exit(1)
+    conn.close()
+    # need to exit with a positive exit code to prevent further scripts from running
+    sys.exit(1)
 
 except Exception as e:
     print(e)
-    # print("Files not found. USB connected?")
-    # conn.close()
-    # sys.exit(1)
+    print("Files not found. USB connected?")
+    conn.close()
+    # need to exit with a positive exit code to prevent further scripts from running
+    sys.exit(1)
 
 
 # close sqlite connection

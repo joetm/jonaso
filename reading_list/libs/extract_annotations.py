@@ -39,32 +39,31 @@ def extract_annotations(filename):
             # write to file
             annotations.append([page_no + 1, it])
 
-    json.dumps(annotations,
-        skipkeys=False,
-        ensure_ascii=True,
-        check_circular=True,
-        allow_nan=True,
-        cls=None,
-        indent=4,
-        separators=None,
-        encoding="utf-8",
-        default=None,
-        sort_keys=True
-    )
+    json.dumps(annotations)
+        # skipkeys=False,
+        # ensure_ascii=True,
+        # check_circular=True,
+        # allow_nan=True,
+        # cls=None,
+        # indent=4,
+        # separators=None,
+        # encoding="utf-8",
+        # default=None,
+        # sort_keys=True
 
 
 
 if __name__ == "__main__":
 
-    if len(sys.argv) != 2:
-        print "Missing file path as argument"
-        print "Usage: %s </filepath/filename.pdf>" % sys.argv[0]
-        sys.exit(1)
+    # if len(sys.argv) != 2:
+    #     print "Missing file path as argument"
+    #     print "Usage: %s </filepath/filename.pdf>" % sys.argv[0]
+    #     sys.exit(1)
 
-    # check if argument is a pdf file
+    # # check if argument is a pdf file
     argument = sys.argv[1]
-    if not os.path.isfile(argument) and argument.endsWith('.pdf'):
-        print "Argument must be a pdf file"
-        sys.exit(1)
+    # if not os.path.isfile(argument) and argument.endsWith('.pdf'):
+    #     print "Argument must be a pdf file"
+    #     sys.exit(1)
 
     extract_annotations(argument)
