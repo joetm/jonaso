@@ -105,6 +105,7 @@ class Keywords extends React.Component {
                         <Bar
                           dataKey="num"
                           fill="#82ca9d"
+                          label={{ fontSize: 11 }}
                           className={!isZoomed ? "clickable" : ""}
                           onClick={this.handleClick}
                         >
