@@ -71,18 +71,18 @@ try:
     del documents[100:]
 
     # count unrecognized in latest-100
-    unrecognizedD = 0
-    for d in documents:
-        if not d['title']:
-            unrecognizedD = unrecognizedD + 1
+    # unrecognizedD = 0
+    # for d in documents:
+    #     if not d['title']:
+    #         unrecognizedD = unrecognizedD + 1
 
     # write the latest-100 list
     out = {
            'modified': int(time.time()),
             'unrecognized_overall': unrecognizedCounter,
             'unrecognized_overall_percent': round(unrecognizedCounterPercent, 2),
-            'unrecognized': unrecognizedD,
-            'unrecognized_percent': round(unrecognizedD / len(documents), 2),
+            # 'unrecognized': unrecognizedD,
+            # 'unrecognized_percent': round(unrecognizedD / len(documents), 2),
             'documents': documents
         }
     with open('readlist-latest.json', 'w') as LISTFILE:
