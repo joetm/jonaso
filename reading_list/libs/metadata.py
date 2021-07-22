@@ -5,7 +5,8 @@
 
 import requests
 import os
-import subprocess
+# import subprocess
+from subprocess import check_output
 import json
 # import csv
 
@@ -78,6 +79,8 @@ def extractMetadata(fullpath):
         recog = True
         method = ''
 
+        title = None
+
         rawdata = r.json()
 
         # skip conditions
@@ -98,13 +101,22 @@ def extractMetadata(fullpath):
             try:
                 # run annotation extraction
                 # !!! Python2 script (poppler not available for python3)
-                result = subprocess.run([
-                        'python2',
+
+                # print("Extracting annotations from: %s" % fullpath)
+
+                result = check_output([
+                        'python2.7',
                         '/var/www/academic-site/reading_list/libs/extract_annotations.py',
-                        path
+                        fullpath
                 ])
 
-                items = json.loads(result.stdout)
+                strResult = result.decode('utf-8').strip()
+
+                # print(strResult)
+
+                annotations = json.loads(strResult)
+
+                # print(annotations)
 
                 # doc = poppler.document_new_from_file(path, None)
                 # page1 = doc.get_page(0)
@@ -113,17 +125,14 @@ def extractMetadata(fullpath):
                 # # filter out empty annotations
                 # items = [i for i in items if i]
 
-                if len(items) > 0:
-                    title = items[0]
-                    title = title.replace("\n", "").replace("\r", "").strip()
+                if len(annotations) > 0:
+                    title = annotations[0]
+                    title = title.replace("\n", " ").replace("\r", "").replace("  ", " ").strip()
 
-                method = 'AT'
+                method = "AT"
 
-            except:
-                # use filename instead
-                title = os.path.splitext(filename)[0].strip('!-')
-                method = "TI"
-                recog = False
+            except Exception as e:
+                print(e)
 
         # uncomment to capture Wikipedia articles
         # try:
@@ -141,6 +150,14 @@ def extractMetadata(fullpath):
         # if skip == True:
         #     # log(rawdata)
         #     return False
+
+        # fallback: use filename as title
+        if not title:
+            # use filename instead
+            title = os.path.splitext(filename)[0].strip('!-')
+            method = "FI"
+            recog = False
+
 
         try:
             authors = [] if not rawdata['authors'] else [x['name'] for x in rawdata['authors']]
