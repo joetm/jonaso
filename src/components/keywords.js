@@ -97,7 +97,7 @@ class Keywords extends React.Component {
                   onClick={isZoomed ? this.zoomOut : null}>
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis type="number" dataKey="num" />
-                        <YAxis type="category" dataKey="name" width={255} />
+                        <YAxis type="category" dataKey="name" width={275} />
                         <Tooltip
                           separator=" "
                           formatter={(value, name, props) => (<span>Publications: {value}</span>)}
@@ -105,7 +105,6 @@ class Keywords extends React.Component {
                         <Bar
                           dataKey="num"
                           fill="#82ca9d"
-                          label={{ fontSize: 11 }}
                           className={!isZoomed ? "clickable" : ""}
                           onClick={this.handleClick}
                         >
