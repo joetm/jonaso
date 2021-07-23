@@ -3,7 +3,7 @@ import { Container, Button } from 'semantic-ui-react'
 import { ResponsiveContainer, BarChart, Bar, Tooltip, XAxis, YAxis, CartesianGrid } from 'recharts' // Treemap
 
 
-const HEIGHT = 1024;
+const HEIGHT = 1250;
 
 
 class Keywords extends React.Component {
