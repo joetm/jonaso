@@ -164,7 +164,6 @@ console.info(process.env.NODE_ENV);
 
                 <Image src={img} alt="Jonas Oppenlaender" rounded fluid />
 
-                <Header size="tiny" style={nobottommargin}>Other profiles:</Header>
                 <p>
                   <a href="https://www.fiz-karlsruhe.de/en/forschung/lebenslauf-und-publikationen-jonas-oppenlaender" target="_blank">FIZ Karlsruhe</a> profile
                   <br />
