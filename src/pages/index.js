@@ -13,23 +13,24 @@ import Layout from "../components/layout"
 
 const keywords = {
   primary: [
+    "human-centered computing",
     "crowdsourcing",
     "crowd feedback systems",
     "creativity support tools",
     // "human computation",
-    "collective intelligence",
-    "web science",
     "ontology engineering",
     // "collaborative ontology engineering",
-    "semantic web",
-    "linked data",
+    // "semantic web",
+    // "linked data",
   ],
   secondary: [
+    "collective intelligence",
+    "web science",
     "social machines",
-    "knowledge transfer",
+    // "knowledge transfer",
     "computer supported collaborative work",
-    "e-science",
-    "hypertext and hypermedia",
+    // "e-science",
+    // "hypertext and hypermedia",
     "online communities",
   ],
 }
@@ -127,16 +128,25 @@ console.info(process.env.NODE_ENV);
                 </p>
 
                 <p>
-                  I lived, studied and/or worked in
-                  Germany, Switzerland, France, the United Kingdom, Sweden, Macedonia, the United States, and Finland.
+                  I have lived, studied and/or worked in
+                  Germany,
+                  Switzerland,
+                  France,
+                  the United Kingdom,
+                  Sweden,
+                  Macedonia,
+                  the United States, and
+                  Finland.
                 </p>
 
                 <p>
-                  In my academic research, I am interested in building web-based socio-technical systems
+                  In my academic research, I am interested in building socio-technical systems
                   in which the human and technological elements perform complex tasks better than either
                   human or machine could independently.
                   <br />
-                  My current scientific research interests are reflected <Link to="/interests">here</Link>.
+                  In the past, I have concentrated on two topics in this research space: facilitating knowledge transfer, and supporting complex creative work.
+                  <br />
+                  My current scientific research interests, based on my reading of the literature, are reflected <Link to="/interests">here</Link>.
                   Some of my past interests include{" "}
                     { keywords.primary.join(", ") }
                   {" "} and{" "}
