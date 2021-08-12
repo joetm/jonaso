@@ -7,6 +7,7 @@ import TravelRotary from "../components/TravelRotary"
 import img from "../img/opp.jpg"
 import ACMDL from "../img/ACM-DL-Logo-size3.webp"
 import MEDIUM from "../img/monogram-mask.svg"
+import WIKIDATA from "../img/wikidata.png"
 import { nobottommargin } from "../common"
 import Layout from "../components/layout"
 
@@ -247,6 +248,13 @@ console.info(process.env.NODE_ENV);
 
           <a href="https://dblp.uni-trier.de/pers/hd/o/Oppenlaender:Jonas">
               <i style={styles.academicon} title="Jonas Oppenlaender on DBLP" className="ai ai-dblp-square ai-2x"></i>
+          </a>
+
+          <a href="https://www.wikidata.org/wiki/Q57417597" target="_blank" rel="noopener noreferrer">
+              <i style={{display:'inline-block', width: '25px', height: '25px',
+                backgroundImage: `url(${WIKIDATA})`,
+                verticalAlign: 'middle', backgroundPosition: 'center center', lineHeight: 1,
+                margin: '0px 0.5rem 0px 0.25rem', backgroundSize: 'cover', opacity: 0.45}} title="Jonas Oppenlaender on Wikidata"></i>
           </a>
 
           <a href="https://scholar.google.com/citations?hl=de&user=ucO_QYQAAAAJ" target="_blank" rel="noopener noreferrer">
