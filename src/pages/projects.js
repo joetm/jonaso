@@ -99,7 +99,7 @@ class Projects extends React.Component {
               <Header id="technical-skills" size="huge">Research Projects</Header>
 
 							<p style={spacer}>
-                &rarr; To view my web development projects, visit my <a href="http://www.jonaso.de/portfolio/">portfolio</a>.
+                &rarr; To view my web development projects, visit my <a href="https://www.jonaso.de/portfolio/">portfolio</a>.
 							</p>
 
               {
