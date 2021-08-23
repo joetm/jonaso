@@ -13,8 +13,8 @@ from libs import fileReader
 
 # the folders to search for
 BASEPATHS = [
-    "/media/jonas/Research/FIZ/Literatur/",
-    "/media/jonas/Research/FIZ/Funding/",
+    # "/media/jonas/Research/FIZ/Literatur/",
+    # "/media/jonas/Research/FIZ/Funding/",
     "/media/jonas/Research/OULU/Literatur/",
     "/media/jonas/Research/OULU/Courses/",
     "/media/jonas/Research/OULU/Funding/",
