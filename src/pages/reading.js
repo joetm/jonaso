@@ -96,8 +96,8 @@ class ReadingList extends React.Component {
                   documents.map((doc, idx) => {
                     return (
                       <Table.Row key={`id_${idx}`}>
-                        <Table.Cell textAlign="left">{doc.title}</Table.Cell>
-                        <Table.Cell textAlign="left">{doc.authors.join(', ')}</Table.Cell>
+                        <Table.Cell style={{display:'table-cell','text-wrap':'normal','word-wrap':'break-word'}} textAlign="left">{doc.title}</Table.Cell>
+                        <Table.Cell style={{display:'table-cell','text-wrap':'normal','word-wrap':'break-word'}} textAlign="left">{doc.authors.join(', ')}</Table.Cell>
                         <Table.Cell textAlign="left">{doc.year}</Table.Cell>
                         <Table.Cell textAlign="left">{doc.keywords}</Table.Cell>
                         <Table.Cell textAlign="center">{doc.priority}</Table.Cell>
