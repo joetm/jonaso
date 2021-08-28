@@ -29,12 +29,13 @@ pre-build:
 	make build-cv
 
 bib-json:
-	pandoc-citeproc --bib2json ./src/bibliography/publications.bib > ./public/static/publications.json
+	pandoc-citeproc --bib2json ./src/bibliography/publications.bib > ./src/bibliography/publications.json
 
 post-build:
 	cp ./src/travel.json ./public/
 	cp ./src/news.json ./public/
 	make move-cv
+	mv ./src/bibliography/publications.json ./public/static/publications.json
 
 fetch-cv:
 	git clone --depth=1 git@github.com:joetm/academic-cv.git
