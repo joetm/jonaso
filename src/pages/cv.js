@@ -58,22 +58,33 @@ const SupervisorWrap = ({supervisor, link = false}) => {
       return (<List.Item>Advisor: <a href={link}>{supervisor}</a></List.Item>)
   }
   return (<List.Item>Advisor: {supervisor}</List.Item>)
-}
+} //
 
 
-// TODO: ROWSPAN
-// {/*style={rowspan ? styles.rowspan2 : null}*/}
 const Row = ({left, middle, right}) => {
-	return ( //rowspan=false
+	return (
 	  <div className="row">
 	    <div className="leftCol">
-	      <Header style={styles.headline} size="large">{left}</Header>
+
+
+       {({ breakpoints, currentBreakpoint }) => {
+          switch (currentBreakpoint) {
+            case breakpoints.mobile:
+              return <div>XXX</div>
+            case breakpoints.tablet:
+              return        <Header style={styles.headline} size="large">{left}</Header>
+            case breakpoints.desktop:
+              return        <Header style={styles.headline} size="large">{left}</Header>
+          }
+        }}
+
+
 	    </div>
 	    <div className="mainCol">{middle}</div>
 	    <div style={styles.rightCol}>{right}</div>
 	  </div>
 	)
-}
+} //
 
 
 const PdfCVButton = () => (
@@ -185,21 +196,6 @@ class CV extends React.Component {
         INTERESTS
 ***********************/}
 
-{/*
-<Row left="Research Interests" middle={(
-      <Item.Group>
-        <Item>
-            <Item.Description style={styles.nomarginTop}>
-              <List>
-                <List.Item>
-                  { cv.interests.join(", ") }
-                </List.Item>
-              </List>
-            </Item.Description>
-        </Item>
-      </Item.Group>
-)} right="" rowspan={2} />
-*/}
 <Row left="Research Interests" middle={(
       <button onClick={this.redirectToInterests}>&rarr; &nbsp; See Interests</button>
 )} right="" />
