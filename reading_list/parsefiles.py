@@ -13,16 +13,11 @@ from libs import fileReader
 
 # the folders to search for
 BASEPATHS = [
-    # "/media/jonas/Research/FIZ/Literatur/",
-    # "/media/jonas/Research/FIZ/Funding/",
-    "/media/jonas/Research/OULU/Literatur/",
-    "/media/jonas/Research/OULU/Courses/",
-    "/media/jonas/Research/OULU/Funding/",
-    "/media/jonas/Research/FU/IKON/Literatur/",
-    "/media/jonas/Research/FU/Academic Working/",
-    "/media/jonas/Research/FU/ID+LAB/Literatur/",
-    # "/media/jonas/Research/FU/IKON/Ontologies",
-    "/media/jonas/Research/FU/Misc/"
+    "/home/jonas/RESEARCH/Literatur/",
+    "/home/jonas/RESEARCH/2-OULU/Courses/",
+    "/home/jonas/RESEARCH/2-OULU/Funding/",
+    "/home/jonas/RESEARCH/Academic Working/",
+    "/home/jonas/RESEARCH/Misc/"
 ]
 
 PATTERN_READ = "[\!|\-]*.pdf"
