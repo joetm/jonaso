@@ -11,14 +11,11 @@ from libs import fileReader
 
 # the folders to search for
 BASEPATHS = [
-    "/home/jonas/OULU/Literatur/",
-    "/home/jonas/OULU/Courses/",
-    "/home/jonas/OULU/Funding/",
-    "/home/jonas/FU/IKON/Literatur/",
-    "/home/jonas/FU/Academic Working/",
-    "/home/jonas/FU/ID+LAB/Literatur/",
-    "/home/jonas/FU/IKON/Ontologies",
-    "/home/jonas/FU/Misc/"
+    "/home/jonas/RESEARCH/Literatur/",
+    "/home/jonas/RESEARCH/2-OULU/Courses/",
+    "/home/jonas/RESEARCH/2-OULU/Funding/",
+    "/home/jonas/RESEARCH/Academic Working/",
+    "/home/jonas/RESEARCH/Misc/"
 ]
 
 PATTERN_TOREAD = "+*.pdf"
