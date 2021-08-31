@@ -90,20 +90,17 @@ console.info(process.env.NODE_ENV);
 				{/* in the Community Instrumentation and Awareness research group */}
 
                 <p>
-                  I am <strong>Jonas Oppenlaender</strong>,
-                  a Senior Researcher at <a href="https://www.fiz-karlsruhe.de/">FIZ Karlsruhe</a> &ndash; Leibniz Institute for Information Infrastructure.
-                  {" "}
-                  I work in the 
-                  {" "}
-                  <a href="https://www.fiz-karlsruhe.de/en/forschung/information-service-engineering">Information Service Engineering (ISE)</a> group
-                  {" "}
-                  headed by
-                  Prof. <a href="https://www.aifb.kit.edu/web/Harald_Sack/en">Harald Sack</a>.
+                  I am <strong>Jonas Oppenlaender</strong>, a Senior Researcher actively looking for employment as Lecturer, Assistant Professor, or PostDoc.
                 </p>
 
                 <p>
-                  I am a <a href="https://www.jonaso.de/kettlebells/">kettlebell</a> salesman.
-                  Previously, I was a doctoral researcher
+                  Previously, I was a Senior Researcher at <a href="https://www.fiz-karlsruhe.de/" target="_blank">FIZ Karlsruhe</a> and <a href="https://www.kit.edu/" target="_blank">Karlsruhe Institute of Technology (KIT)</a>.
+                  {/*
+                  <a href="https://www.fiz-karlsruhe.de/en/forschung/information-service-engineering">Information Service Engineering (ISE)</a> group
+                  &ndash; Leibniz Institute for Information Infrastructure
+                  */}
+                  {" "}
+                  Prior to that, I was a doctoral researcher
                   in the <a href="https://crowdcomputing.net/">Crowd Computing</a> group
                   {" "}
                   at the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a>,
@@ -129,7 +126,9 @@ console.info(process.env.NODE_ENV);
                 </p>
 
                 <p>
-                  I have lived, studied and/or worked in
+                  I am a <a href="https://www.jonaso.de/kettlebells/">kettlebell</a> salesman, and
+                  {" "}
+                  I have lived, studied, and/or worked in
                   Germany,
                   Switzerland,
                   France,
@@ -144,10 +143,10 @@ console.info(process.env.NODE_ENV);
                   In my academic research, I am interested in building socio-technical systems
                   in which the human and technological elements perform complex tasks better than either
                   human or machine could independently.
+                  {" "}
+                  In the past, I have concentrated on two topics in this research space: facilitating knowledge transfer and supporting complex creative work.
                   <br />
-                  In the past, I have concentrated on two topics in this research space: facilitating knowledge transfer, and supporting complex creative work.
-                  <br />
-                  My current scientific research interests, based on my reading of the literature, are reflected <Link to="/interests">here</Link>.
+                  My current scientific research interests, based on the academic literature I have read, are reflected <Link to="/interests">here</Link>.
                   Some of my past interests include{" "}
                     { keywords.primary.join(", ") }
                   {" "} and{" "}
@@ -177,6 +176,13 @@ console.info(process.env.NODE_ENV);
 
                 <p>
                   <br />
+                  <a href="/cv/oppenlaender-cv.pdf">CV</a><br /><br />
+                  <a href="/cv/oppenlaender-publications.pdf">Publications</a>
+                </p>
+
+                {/*
+                <p>
+                  <br />
                   <a href="https://www.fiz-karlsruhe.de/en/forschung/lebenslauf-und-publikationen-jonas-oppenlaender" target="_blank">FIZ Karlsruhe</a> profile
                   <br />
                   <a href="https://www.aifb.kit.edu/web/Jonas_Oppenl%C3%A4nder" target="_blank">Institute AIFB</a> profile
@@ -191,6 +197,7 @@ console.info(process.env.NODE_ENV);
                     Germany<br /><br />
                     E-Mail: {'{'}firstname.lastname{'}'}@fiz-karlsruhe.de
                 </p>
+                */}
 
               {/*
                 <p>
