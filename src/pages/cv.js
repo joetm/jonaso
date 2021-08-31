@@ -65,20 +65,7 @@ const Row = ({left, middle, right}) => {
 	return (
 	  <div className="row">
 	    <div className="leftCol">
-
-
-       {({ breakpoints, currentBreakpoint }) => {
-          switch (currentBreakpoint) {
-            case breakpoints.mobile:
-              return <div>XXX</div>
-            case breakpoints.tablet:
-              return        <Header style={styles.headline} size="large">{left}</Header>
-            case breakpoints.desktop:
-              return        <Header style={styles.headline} size="large">{left}</Header>
-          }
-        }}
-
-
+        <Header style={styles.headline} size="large">{left}</Header>
 	    </div>
 	    <div className="mainCol">{middle}</div>
 	    <div style={styles.rightCol}>{right}</div>
