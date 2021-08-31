@@ -58,7 +58,7 @@ replace-cv:
 		sed 's|\\definenewtoggle{showthumbnails}{true}|\\definenewtoggle{showthumbnails}{false}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showtechnicalskills}{true}|\\definenewtoggle{showtechnicalskills}{false}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showgender}{true}|\\definenewtoggle{showgender}{false}|g' cv.tex | sponge cv.tex; \
-		sed 's|\\definenewtoggle{showgithub}{false}|\\definenewtoggle{showgithub}{true}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showgithub}{true}|\\definenewtoggle{showgithub}{false}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showobjective}{true}|\\definenewtoggle{showobjective}{false}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showabitur}{true}|\\definenewtoggle{showabitur}{false}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showdoctoralstudiesasexperience}{false}|\\definenewtoggle{showdoctoralstudiesasexperience}{true}|g' cv.tex | sponge cv.tex; \
