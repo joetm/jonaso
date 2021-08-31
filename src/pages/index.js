@@ -90,7 +90,7 @@ console.info(process.env.NODE_ENV);
 				{/* in the Community Instrumentation and Awareness research group */}
 
                 <p>
-                  I am <strong>Jonas Oppenlaender</strong> and I am very near to completing my PhD in Computer Science. My doctoral defence is scheduled on September 17, 2021.
+                  I am <strong>Jonas Oppenlaender</strong> and very near to completing my PhD in Computer Science. My doctoral defence is on September 17, 2021.
                   I am actively looking for a new position and you can hire me as Lecturer, Assistant Prof., or PostDoc.
                 </p>
 
