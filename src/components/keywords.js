@@ -4,6 +4,8 @@ import { ResponsiveContainer, BarChart, Bar, Tooltip, XAxis, YAxis, CartesianGri
 
 
 const HEIGHT = 1250;
+const colorDefault = '#eb008c';
+const colorZoomed = '#FF86A6';
 
 // old green: #82ca9d
 
@@ -16,6 +18,7 @@ class Keywords extends React.Component {
       activeTooltipIndex: false,
       activeLabel: null,
       level2: [],
+      color: colorDefault,
       breadcrumb: null,
     }
   }
@@ -39,6 +42,7 @@ class Keywords extends React.Component {
             isZoomed: true,
             level2,
             breadcrumb: bar.name,
+            color: colorZoomed
           })
         })
     } else {
@@ -46,6 +50,7 @@ class Keywords extends React.Component {
           isZoomed: false,
           level2: [],
           breadcrumb: null,
+          color: colorDefault
         })
     }
   }
@@ -58,7 +63,7 @@ class Keywords extends React.Component {
   // changeChartType = (chart) => this.setState({chart})
   render() {
     const { keywords = [] } = this.props
-    const { level2, isZoomed, breadcrumb } = this.state // chart
+    const { level2, isZoomed, breadcrumb, color } = this.state // chart
     // const barChartActive = chart === 'bar'
     const displaydata = isZoomed && level2.length ? level2 : keywords;
 
@@ -105,7 +110,7 @@ class Keywords extends React.Component {
                         />
                         <Bar
                           dataKey="num"
-                          fill="#eb008c"
+                          fill={color}
                           className={!isZoomed ? "clickable" : ""}
                           onClick={this.handleClick}
                         >
