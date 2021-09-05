@@ -5,6 +5,7 @@ import { ResponsiveContainer, BarChart, Bar, Tooltip, XAxis, YAxis, CartesianGri
 
 const HEIGHT = 1250;
 
+// old green: #82ca9d
 
 class Keywords extends React.Component {
   constructor(props) {
@@ -104,7 +105,7 @@ class Keywords extends React.Component {
                         />
                         <Bar
                           dataKey="num"
-                          fill="#82ca9d"
+                          fill="#eb008c"
                           className={!isZoomed ? "clickable" : ""}
                           onClick={this.handleClick}
                         >
