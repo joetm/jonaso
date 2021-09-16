@@ -96,8 +96,7 @@
         "position": "Senior Researcher",
         "details": null,
         "keywords": ["Research", "Linked Data", "Ontology Engineering"],
-        "start": 2021,
-        "end": 2021
+        "year": 2021
     },
     {
         "group": "Crowd Computing group",
@@ -140,6 +139,17 @@
         "keywords": ["Research", "Knowledge Transfer", "Ontology Engineering", "Visualisation", "Linked Data"],
         "start": 2016,
         "end": 2017
+    }
+  ],
+  "work_experience": [
+    {
+          "organization": "Liip AG",
+          "organization_link": "https://www.liip.ch/",
+          "location": "Bern, Switzerland",
+          "position": "Full-Stack Web Developer",
+          "details": null,
+          "keywords": ["WebDev", "Open Data"],
+          "year": 2016
     },
     {
         "group": "Seme4 Ltd.",
@@ -155,17 +165,6 @@
         "keywords": ["Research", "WebDev", "Linked Data", "Open Data", "Analyst"],
         "start": 2015,
         "end": 2016
-    }
-  ],
-  "work_experience": [
-    {
-          "organization": "Liip AG",
-          "organization_link": "https://www.liip.ch/",
-          "location": "Bern, Switzerland",
-          "position": "Full-Stack Web Developer",
-          "details": null,
-          "keywords": ["WebDev", "Open Data"],
-          "year": 2016
     },
     {
           "organization": "Alstom IS&T",
@@ -544,6 +543,11 @@
   ],
   "supervisions": [
     {
+      "type": "Bachelor thesis",
+      "supervisee": "Katri Säily",
+      "year": 2021
+    },
+    {
       "type": "Master thesis",
       "supervisee": "Antonio Kongjonaj",
       "role": "Technical supervisor",
@@ -584,9 +588,19 @@
       "year": "2016 - 2017"
     },
     {
-      "type": "Research project",
-      "supervisee": "Supervision of two student research assistants",
-      "year": "2016 - 2018"
+      "type": "Research assistant",
+      "supervisee": "Tim Korjakov",
+      "year": "2017 - 2018"
+    },
+    {
+      "type": "Research assistant",
+      "supervisee": "Nicolo Knapp",
+      "year": "2017 - 2018"
+    },
+    {
+      "type": "Research assistant",
+      "supervisee": "Immanuel Pelzer",
+      "year": "2017 - 2017"
     }
   ],
   "peer-review": [
