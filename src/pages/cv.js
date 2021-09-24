@@ -1,6 +1,7 @@
 import React from "react"
 import { Icon, Header, List, Item, Container } from 'semantic-ui-react'
 import Layout from "../components/layout"
+import { Helmet } from "react-helmet"
 
 import { spacer } from "../common"
 import cv from "../cv.json"
@@ -143,6 +144,11 @@ class CV extends React.Component {
 
     return (
       <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>CV {'//'} jonaso.de</title>
+        <link rel="canonical" href="http://www.jonaso.de/cv" />
+      </Helmet>
       <Container className="print cv">
         <PdfCVButton />
         <h1 className="print-only">Jonas Oppenlaender</h1>
