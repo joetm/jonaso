@@ -5,6 +5,7 @@ import { Bar, BarChart, XAxis, YAxis, Tooltip, LabelList, CartesianGrid, Respons
 import Layout from "../components/layout"
 import "semantic-ui-css/components/grid.min.css"
 import { spacer, noMarginGrid } from "../common"
+import { Helmet } from "react-helmet"
 
 const styles = {
   menu: {
@@ -153,6 +154,11 @@ class Publications extends React.Component {
 
     return (
       <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Publications {'//'} jonaso.de</title>
+        <link rel="canonical" href="http://www.jonaso.de/publications" />
+      </Helmet>
       <Container>
 
         <ResponsiveContainer width="100%" height={150}>

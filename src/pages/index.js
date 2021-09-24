@@ -10,6 +10,7 @@ import MEDIUM from "../img/monogram-mask.svg"
 import WIKIDATA from "../img/wikidata.png"
 import { nobottommargin } from "../common"
 import Layout from "../components/layout"
+import { Helmet } from "react-helmet"
 
 
 const keywords = {
@@ -80,6 +81,11 @@ console.info(process.env.NODE_ENV);
 
     return (
       <Layout>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Jonas Oppenlaender</title>
+          <link rel="canonical" href="http://www.jonaso.de" />
+        </Helmet>
         <Container style={{marginBottom: '14px'}}>
 
           <Grid>

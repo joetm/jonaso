@@ -3,7 +3,7 @@ import 'semantic-ui-css/components/card.min.css'
 import React from "react"
 import { Header, Card, Image, Icon, Container } from 'semantic-ui-react'
 import Layout from "../components/layout"
-
+import { Helmet } from "react-helmet"
 
 // const styles = {}
 
@@ -14,6 +14,11 @@ class UX extends React.Component {
   render() {
     return (
 	   	<Layout>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>UX {'//'} jonaso.de</title>
+          <link rel="canonical" href="http://www.jonaso.de/ux" />
+        </Helmet>
 	      <Container>
 			<Header as='h1' textAlign='center' content="UX Portfolio" />
 	        <Card.Group itemsPerRow={2}>
