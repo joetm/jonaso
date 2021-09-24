@@ -4,6 +4,7 @@ import { spacer } from "../common"
 import Influencer from "../components/influencer"
 import Keywords from "../components/keywords"
 import Layout from "../components/layout"
+import { Helmet } from "react-helmet"
 /* import KeywordCloud from '../components/cloud' */
 
 
@@ -64,6 +65,11 @@ class Interests extends React.Component {
     const filtered_keywords = keywords.filter(kw => kw.num > 14)
     return (
       <Layout>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Research Interests {'//'} jonaso.de</title>
+          <link rel="canonical" href="http://www.jonaso.de/interests" />
+        </Helmet>
         <Container>
           {/* <KeywordCloud /> */}
           <Keywords keywords={filtered_keywords} />

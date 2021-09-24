@@ -3,6 +3,7 @@ import { Header, Item, Container } from 'semantic-ui-react'
 
 import Layout from "../components/layout"
 import { spacer } from "../common"
+import { Helmet } from "react-helmet"
 
 
 const styles = {
@@ -24,6 +25,11 @@ class Teaching extends React.Component {
   render() {
         return (
             <Layout>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Teaching {'//'} jonaso.de</title>
+          <link rel="canonical" href="http://www.jonaso.de/teaching" />
+        </Helmet>
               <Container>
 
                 <Header id="education" size="large">Teaching Assistant</Header>

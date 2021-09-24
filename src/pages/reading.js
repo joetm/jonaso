@@ -7,6 +7,7 @@ import { Table, Header, Container } from 'semantic-ui-react'
 import Layout from "../components/layout"
 import PubGraph from "../components/PubGraph.js"
 import { spacer } from "../common"
+import { Helmet } from "react-helmet"
 
 // import "semantic-ui-css/components/table.css"
 
@@ -70,6 +71,11 @@ class ReadingList extends React.Component {
     const { documents, modified, unrecognized_overall, unrecognized_overall_percent } = this.state
     return (
       <Layout>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Reading {'//'} jonaso.de</title>
+          <link rel="canonical" href="http://www.jonaso.de/reading" />
+        </Helmet>
         <Container>
 
             <PubGraph documents={documents} />

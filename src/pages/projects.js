@@ -3,6 +3,7 @@ import { Image, Header, Item, Grid, Container } from 'semantic-ui-react'
 import Layout from "../components/layout"
 import { spacer } from "../common.js"
 import ProjectItem from "../components/ProjectItem"
+import { Helmet } from "react-helmet"
 
 
 const _PROJECTS = 'https://raw.githubusercontent.com/joetm/jonaso/master/src/projects.json'
@@ -95,6 +96,11 @@ class Projects extends React.Component {
     // const keys = Object.keys(projects).reverse()
     return (
       <Layout>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Projects {'//'} jonaso.de</title>
+          <link rel="canonical" href="http://www.jonaso.de/projects" />
+        </Helmet>
         <Container>
               <Header id="technical-skills" size="huge">Research Projects</Header>
 
