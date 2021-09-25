@@ -97,6 +97,7 @@ console.info(process.env.NODE_ENV);
 
                 <p>
                   I am <strong>Jonas Oppenlaender</strong> and recently completed my PhD in Computer Science.
+                  My thesis work at the University of Oulu focused on crowdsourcing creative work and crowd feedback systems. 
                   I am actively looking for a new position and you can hire me as Lecturer, Assistant Prof., or PostDoc.
                 </p>
 
@@ -122,14 +123,12 @@ console.info(process.env.NODE_ENV);
                   at the <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/" rel="nofollow">Human-Centered Computing</a> group, <a href="https://www.fu-berlin.de/">Freie Universit&auml;t Berlin</a>
                   and the <a href="https://gepris.dfg.de/gepris/projekt/194453117/ergebnisse?context=projekt&task=showDetail&id=194453117">Cluster of Excellence "Bild Wissen Gestaltung"</a> in Berlin.
                   */}
-                </p>
-
-                <p>
+                  {" "}
                   I hold a MSc degree in Computer Science (with Distinction)
                   from the <a href="https://www.southampton.ac.uk/">University of Southampton</a> and studied Industrial Engineering at the <a href="https://www.tu-darmstadt.de/">Technical University of Darmstadt</a> in Germany and <a href="https://liu.se/en">Linköping University</a> in Sweden (leading to the degree of Diplom-Wirtschaftsingenieur which is equivalent to a Master of Science degree).<br />
                   Prior to starting my PhD, I worked as postgraduate research assistant (&quot;Wissenschaftlicher Mitarbeiter&quot;) at <a href="https://www.fu-berlin.de/">Freie Universität</a> and the <a href="https://gepris.dfg.de/gepris/projekt/194453117/ergebnisse?context=projekt&task=showDetail&id=194453117">Cluster of Excellence "Bild Wissen Gestaltung"</a> in Berlin.
-                   Before that, I worked in agile teams as a web developer at <a href="https://www.seme4.com/">Seme4</a> and <a href="https://www.liip.ch/">Liip</a>.
-                   Finally, I gained industry experience as Business Analyst and Strategy Analyst at <a href="https://www.alstom.com/">Alstom</a> (now <a href="https://www.ge.com/">GE</a>).
+                  Before that, I worked in agile teams as a web developer at <a href="https://www.seme4.com/">Seme4</a> and <a href="https://www.liip.ch/">Liip</a>.
+                  Finally, I gained industry experience as Business Analyst and Strategy Analyst at <a href="https://www.alstom.com/">Alstom</a> (now <a href="https://www.ge.com/">GE</a>).
                 </p>
 
                 <p>
