@@ -18,8 +18,8 @@
           "institution": "University of Oulu",
           "institution_link": "http://www.oulu.fi/university/",
           "location": "Oulu, Finland",
-          "short": "D.Sc. (Tech.)",
-          "position": "Doctor of Science (Technology), Computer Science",
+          "short": "D.Sc. (Tech.), Computer Science (with distinction)",
+          "position": "Doctor of Science (Technology), Computer Science (with distinction)",
           "supervisor": "Associate Prof. Dr. Simo Hosio",
           "supervisor_link": "http://simohosio.com/",
           "keywords": ["Creativity Support", "Crowdsourcing", "Crowd Feedback Systems"],
@@ -30,8 +30,8 @@
           "institution": "University of Southampton",
           "institution_link": "https://www.southampton.ac.uk/",
           "location": "Southampton, United Kingdom",
-          "short": "M.Sc. Computer Science",
-          "position": "Master of Science, Computer Science",
+          "short": "M.Sc., Computer Science (with distinction)",
+          "position": "Master of Science, Computer Science (with distinction)",
           "supervisor": "Associate Prof. Dr. Thanassis Tiropanis",
           "supervisor_link": "https://www.ecs.soton.ac.uk/people/tt2",
           "keywords": ["Web Science", "Crowdsourcing"],
@@ -303,6 +303,13 @@
   },
   "awards": [
     {
+      "name": "Distinction",
+      "institution": "University of Oulu",
+      "url": "https://www.oulu.fi/",
+      "month": "October",
+      "year": 2021
+    },
+    {
       "name": "Invited Member of Doctoral Consortium",
       "institution": "Mensch und Computer (MuC '20)",
       "url": "https://muc2020.mensch-und-computer.de/",
@@ -324,7 +331,7 @@
       "year": 2019
     },
     {
-      "name": "Distinction, M.Sc. Computer Science",
+      "name": "Distinction",
       "institution": "University of Southampton",
       "url": "https://www.southampton.ac.uk/",
       "month": "November",
