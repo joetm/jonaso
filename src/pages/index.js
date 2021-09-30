@@ -96,19 +96,19 @@ console.info(process.env.NODE_ENV);
 				{/* in the Community Instrumentation and Awareness research group */}
 
                 <p>
-                  I am <strong>Jonas Oppenlaender</strong> and recently completed my PhD in Computer Science.
-                  My thesis work at the University of Oulu focused on crowdsourcing creative work and crowd feedback systems. 
-                  I am actively looking for a new position and you can hire me as Lecturer, Assistant Prof., or PostDoc.
+                  I am <strong>Jonas Oppenlaender</strong> and recently completed my PhD in Computer Science with distinction from the University of Oulu, Finland.
+                  My thesis work focused on crowdsourcing creative work and crowd feedback systems. 
+                  I am actively looking for a new position and you can hire me as Lecturer, Assistant Professor, or PostDoc.
                 </p>
 
                 <p>
-                  From April to August 2021, I worked as a Senior Researcher at <a href="https://www.fiz-karlsruhe.de/" target="_blank">FIZ Karlsruhe</a> and <a href="https://www.kit.edu/" target="_blank">Karlsruhe Institute of Technology (KIT)</a>.
+                  From April to August 2021, I worked as a Senior Researcher (PostDoc) at <a href="https://www.fiz-karlsruhe.de/" target="_blank">FIZ Karlsruhe</a> and <a href="https://www.kit.edu/" target="_blank">Karlsruhe Institute of Technology (KIT)</a>.
                   {/*
                   <a href="https://www.fiz-karlsruhe.de/en/forschung/information-service-engineering">Information Service Engineering (ISE)</a> group
                   &ndash; Leibniz Institute for Information Infrastructure
                   */}
                   {" "}
-                  Prior to that, I was a doctoral researcher
+                  Prior to that, I was a Doctoral Researcher
                   in the <a href="https://crowdcomputing.net/">Crowd Computing</a> group
                   {" "}
                   at the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a>,
