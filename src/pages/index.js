@@ -171,9 +171,6 @@ console.info(process.env.NODE_ENV);
                 </p>
                 */}
 
-                {/*
-                <TravelRotary />
-                */}
 
               </Grid.Column>
 
@@ -183,9 +180,12 @@ console.info(process.env.NODE_ENV);
 
                 <p>
                   <br />
-                  <a href="/cv/oppenlaender-cv.pdf">CV</a><br /><br />
-                  <a href="/cv/oppenlaender-publications.pdf">Publications</a>
+                  <a href="/cv/">CV</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="/cv/publications">Publications</a>
                 </p>
+
+                <aside style={{marginTop:'2em'}}>
+                  <TravelRotary />
+                </aside>
 
                 {/*
                 <p>
