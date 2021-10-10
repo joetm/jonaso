@@ -10,6 +10,11 @@ class TravelRotary extends React.Component {
   state = {
     rotary: []
   }
+  stati = {
+    'canceled': 'line-through',
+    'running': 'bold',
+    'confirmed': 'initial',
+  }
   componentDidMount() {
     fetch(TRAVEL)
     .then(response => response.json())
@@ -34,6 +39,10 @@ class TravelRotary extends React.Component {
       // identify upcoming travel item in the array
       item.dateDiff = Now - (item.start || item.date)
       item.isPast = item.dateDiff > 0 ? true : false
+      item.isRunning = false
+      if (item.start < Now && Now < item.end) {
+        item.isRunning = true
+      }
       return item
     })
 
@@ -64,9 +73,10 @@ class TravelRotary extends React.Component {
     return (
       <React.Fragment>
         <Header size="tiny" style={nobottommargin}>Travel</Header>
+        {/* / */}
         <List>
             {
-                rotary.map((item) => {
+                rotary.map(item => {
                   let dateString = ""
                   if ('start' in item && 'end' in item) {
                     dateString = item.start.getDate() + '.-' + item.end.getDate() + '.' + (item.end.getMonth() + 1) + '.' + item.end.getFullYear()
@@ -75,11 +85,20 @@ class TravelRotary extends React.Component {
                     dateString = item.date.getDate() + '.' + (item.date.getMonth() + 1) + '.' + item.date.getFullYear()
                   }
                   return (
-                    <List.Item key={item.event} title={item.status} style={{
-                      color: item.isPast ? '#AAAAAA' : '#000000',
-                      textDecoration: item.status === 'canceled' ? 'line-through' : 'initial'
+                    <List.Item key={item.event}
+                      title={item.isRunning ? 'attending' : item.status}
+                      style={{
+                        color: item.isRunning ? '#008080' : item.isPast ? '#AAAAAA' : '#000000',
+                        fontWeight: item.isRunning ? 'bold' : 'inherit',
+                        textDecoration: this.stati[item.status],
+                        cursor: 'default',
                     }}>
-                        <List.Icon name={['confirmed', 'canceled'].indexOf(item.status) > -1 ? 'checkmark' : 'calendar'} />
+                        <List.Icon
+                          name={
+                            item.isRunning ? 'marker' : 
+                            ['confirmed', 'canceled'].indexOf(item.status) == -1 ? 'calendar' :
+                            item.isPast ? 'checkmark' : 'calendar'
+                        } />
                         {[item.event,dateString,item.location].join(", ")}
                     </List.Item>
                   );
