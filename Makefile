@@ -37,7 +37,7 @@ post-build:
 	cp ./src/artworks.json ./public/
 	make move-cv
 	mv ./src/bibliography/publications.json ./public/static/publications.json
-	cp ./src/img/artworks -r ./public/static/
+	# cp ./src/img/artworks -r ./public/static/
 
 fetch-cv:
 	git clone --depth=1 git@github.com:joetm/academic-cv.git

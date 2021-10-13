@@ -36,6 +36,28 @@ const artworks = [
 		    "src": null,
 		    "date": "Oct, 2021"
 		  },
+		  {
+		    "title": "",
+		    "input": "Abstract skull puking, painting by Maciej Drabik, trending on artstation",
+		    "thumb": "/static/artworks/vqganclip/skulls/run-3/50.png",
+		    "method": "VQGAN+CLIP",
+		    "model": "wikiart_16384",
+		    "initial": false,
+		    "target": false,
+		    "src": null,
+		    "date": "Oct, 2021"
+		  },
+		  {
+		    "title": "",
+		    "input": "Abstract skull puking, painting by Maciej Drabik, trending on artstation",
+		    "thumb": "/static/artworks/vqganclip/skulls/run-3/850.png",
+		    "method": "VQGAN+CLIP",
+		    "model": "wikiart_16384",
+		    "initial": false,
+		    "target": false,
+		    "src": null,
+		    "date": "Oct, 2021"
+		  },
 	  ]
 	},
 	{
