@@ -96,7 +96,7 @@ class TravelRotary extends React.Component {
                         <List.Icon
                           name={
                             item.isRunning ? 'marker' : 
-                            ['confirmed', 'canceled'].indexOf(item.status) == -1 ? 'calendar' :
+                            ['confirmed', 'canceled'].indexOf(item.status) === -1 ? 'calendar' :
                             item.isPast ? 'checkmark' : 'calendar'
                         } />
                         {[item.event,dateString,item.location].join(", ")}

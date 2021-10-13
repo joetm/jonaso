@@ -1,11 +1,24 @@
 import React from "react"
-import { Button, Responsive, Header, Item, Icon, Grid, Container } from 'semantic-ui-react'
+import { Button, Header, Item, Icon, Grid, Container } from 'semantic-ui-react'
 import { Bar, BarChart, XAxis, YAxis, Tooltip, LabelList, CartesianGrid, ResponsiveContainer } from 'recharts'
 // import useDetectPrint from 'use-detect-print'
 import Layout from "../components/layout"
 import "semantic-ui-css/components/grid.min.css"
 import { spacer, noMarginGrid } from "../common"
 import { Helmet } from "react-helmet"
+
+// replacement for Responsive component from semantic-ui-react
+// see: https://react.semantic-ui.com/migration-guide/
+// https://github.com/artsy/fresnel
+import { createMedia } from "@artsy/fresnel"
+const { MediaContextProvider, Media } = createMedia({
+  // breakpoints values can be either strings or integers
+  breakpoints: {
+    sm: 0,
+    md: 768,
+    lg: 990,
+  },
+})
 
 const styles = {
   menu: {
@@ -205,15 +218,17 @@ class Publications extends React.Component {
                             return (
                               <Grid.Row key={index}>
                                 <Grid.Column width={2}>
-                                  <Responsive maxWidth={768}>
-                                    <Icon color="grey" size="large" name={icostr} />
-                                  </Responsive>
-                                  <Responsive minWidth={769} maxWidth={990}>
-                                    <Icon color="grey" size="huge" name={icostr} />
-                                  </Responsive>
-                                  <Responsive minWidth={992}>
-                                    <Icon color="grey" size="big" name={icostr} />
-                                  </Responsive>
+                                  <MediaContextProvider>
+                                    <Media at="sm">
+                                      <Icon color="grey" size="large" name={icostr} />
+                                    </Media>
+                                    <Media at="md">
+                                      <Icon color="grey" size="huge" name={icostr} />
+                                    </Media>
+                                    <Media greaterThanOrEqual="lg">
+                                      <Icon color="grey" size="big" name={icostr} />
+                                    </Media>
+                                    </MediaContextProvider>
                                 </Grid.Column>
                                 <Grid.Column width={14}>
                                 <Item>
@@ -253,15 +268,17 @@ class Publications extends React.Component {
                             return (
                               <Grid.Row key={index}>
                                 <Grid.Column width={2}>
-                                  <Responsive maxWidth={768}>
-                                    <Icon color="grey" size="large" name={icostr} />
-                                  </Responsive>
-                                  <Responsive minWidth={769} maxWidth={990}>
-                                    <Icon color="grey" size="huge" name={icostr} />
-                                  </Responsive>
-                                  <Responsive minWidth={992}>
-                                    <Icon color="grey" size="big" name={icostr} />
-                                  </Responsive>
+                                  <MediaContextProvider>
+                                    <Media at="sm">
+                                      <Icon color="grey" size="large" name={icostr} />
+                                    </Media>
+                                    <Media at="md">
+                                      <Icon color="grey" size="huge" name={icostr} />
+                                    </Media>
+                                    <Media greaterThanOrEqual="lg">
+                                      <Icon color="grey" size="big" name={icostr} />
+                                    </Media>
+                                  </MediaContextProvider>
                                 </Grid.Column>
                                 <Grid.Column width={14}>
                                 <Item>
