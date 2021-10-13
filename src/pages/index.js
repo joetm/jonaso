@@ -1,5 +1,5 @@
 import React from "react"
-import { Header, Grid, Divider, Image, Container, Icon } from 'semantic-ui-react'
+import { Grid, Divider, Image, Container, Icon } from 'semantic-ui-react'
 import { Link } from "gatsby"
 
 import "../../libs/academicons/css/academicons.min.css"
@@ -8,7 +8,7 @@ import img from "../img/opp.jpg"
 import ACMDL from "../img/ACM-DL-Logo-size3.webp"
 import MEDIUM from "../img/monogram-mask.svg"
 import WIKIDATA from "../img/wikidata.png"
-import { nobottommargin } from "../common"
+// import { nobottommargin } from "../common"
 import Layout from "../components/layout"
 import { Helmet } from "react-helmet"
 
@@ -102,7 +102,7 @@ console.info(process.env.NODE_ENV);
                 </p>
 
                 <p>
-                  From April to August 2021, I worked as a Senior Researcher (PostDoc) at <a href="https://www.fiz-karlsruhe.de/" target="_blank">FIZ Karlsruhe</a> and <a href="https://www.kit.edu/" target="_blank">Karlsruhe Institute of Technology (KIT)</a>.
+                  From April to August 2021, I worked as a Senior Researcher (PostDoc) at <a href="https://www.fiz-karlsruhe.de/" target="_blank" rel="noopener noreferrer">FIZ Karlsruhe</a> and <a href="https://www.kit.edu/" target="_blank" rel="noopener noreferrer">Karlsruhe Institute of Technology (KIT)</a>.
                   {/*
                   <a href="https://www.fiz-karlsruhe.de/en/forschung/information-service-engineering">Information Service Engineering (ISE)</a> group
                   &ndash; Leibniz Institute for Information Infrastructure
@@ -188,13 +188,6 @@ console.info(process.env.NODE_ENV);
                 </aside>
 
                 {/*
-                <p>
-                  <br />
-                  <a href="https://www.fiz-karlsruhe.de/en/forschung/lebenslauf-und-publikationen-jonas-oppenlaender" target="_blank">FIZ Karlsruhe</a> profile
-                  <br />
-                  <a href="https://www.aifb.kit.edu/web/Jonas_Oppenl%C3%A4nder" target="_blank">Institute AIFB</a> profile
-                </p>
-
                 <Header size="tiny" style={nobottommargin}>Office Address:</Header>
                 <p>
                     FIZ Karlsruhe<br />
