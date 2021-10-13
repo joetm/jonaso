@@ -34,8 +34,10 @@ bib-json:
 post-build:
 	cp ./src/travel.json ./public/
 	cp ./src/news.json ./public/
+	cp ./src/artworks.json ./public/
 	make move-cv
 	mv ./src/bibliography/publications.json ./public/static/publications.json
+	cp ./src/img/artworks -r ./public/static/
 
 fetch-cv:
 	git clone --depth=1 git@github.com:joetm/academic-cv.git
