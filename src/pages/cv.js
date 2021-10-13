@@ -411,45 +411,6 @@ class CV extends React.Component {
 
 
 {/**********************
-    Technical Skills
-***********************/}
-
-<Row left="Technical Skills" middle={(
-    <button onClick={this.redirectToPortfolio}>&rarr; &nbsp; Visit my Web Development Portfolio</button>
-)} right="" />
-
-
-
-{/**********************
-        TEACHING
-***********************/}
-
-<Row left="Teaching Experience" middle={(
-      <Item.Group>
-        {
-          teachingPositions.map((pos, index) => {
-            return (
-              <Item key={index}>
-                <List>
-                  <List.Item>{pos}</List.Item>
-                  {
-                    cv.teaching[pos].map((row, i) => (
-                          <List.Item style={{paddingLeft:'20px'}} key={i}>
-                            {row.course}{row.coursecode && " (" + row.coursecode + ")"}, {row.institution}<br />
-                            ({row.num_students && row.num_students +  " students, "} {row.ECTS && row.ECTS + " ECTS, "} {row.level} level)
-                          </List.Item>
-                    ))
-                  }
-                </List>
-              </Item>
-            )
-          })
-        }
-      </Item.Group>
-)} right="" />
-
-
-{/**********************
     ACADEMIC SERVICE
 ***********************/}
 
@@ -515,19 +476,29 @@ class CV extends React.Component {
 
 
 {/**********************
-      CERTIFICATES
+        TEACHING
 ***********************/}
 
-<Row left="Certificates" middle={(
+<Row left="Teaching Experience" middle={(
       <Item.Group>
         {
-          cv.hasOwnProperty("certificates") &&
-            cv.certificates.map((item, i) => (
-              <Item key={i}>
-                {/*<div style={styles.datum}>{item.year}</div>*/}
-                <Item.Header style={styles.nonbold}>{item.name} ({item.institution})</Item.Header>
+          teachingPositions.map((pos, index) => {
+            return (
+              <Item key={index}>
+                <List>
+                  <List.Item>{pos}</List.Item>
+                  {
+                    cv.teaching[pos].map((row, i) => (
+                          <List.Item style={{paddingLeft:'20px'}} key={i}>
+                            {row.course}{row.coursecode && " (" + row.coursecode + ")"}, {row.institution}<br />
+                            ({row.num_students && row.num_students +  " students, "} {row.ECTS && row.ECTS + " ECTS, "} {row.level} level)
+                          </List.Item>
+                    ))
+                  }
+                </List>
               </Item>
-            ))
+            )
+          })
         }
       </Item.Group>
 )} right="" />
@@ -552,6 +523,36 @@ class CV extends React.Component {
         )} right={row.year} />
     ))
 }
+
+
+{/**********************
+    Technical Skills
+***********************/}
+
+<Row left="Technical Skills" middle={(
+    <button onClick={this.redirectToPortfolio}>&rarr; &nbsp; Visit my Web Development Portfolio</button>
+)} right="" />
+
+
+
+{/**********************
+      CERTIFICATES
+***********************/}
+
+<Row left="Certificates" middle={(
+      <Item.Group>
+        {
+          cv.hasOwnProperty("certificates") &&
+            cv.certificates.map((item, i) => (
+              <Item key={i}>
+                {/*<div style={styles.datum}>{item.year}</div>*/}
+                <Item.Header style={styles.nonbold}>{item.name} ({item.institution})</Item.Header>
+              </Item>
+            ))
+        }
+      </Item.Group>
+)} right="" />
+
 
 
 {/**********************
