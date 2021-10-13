@@ -11,12 +11,12 @@ import { spacer } from "../common"
 
 const artworks = [
 	{
-		"series": "Skulls",
+		"series": "Abstract Skulls",
 		"numtiles": 2,
 		"works": [
 		  {
 		    "title": "",
-		    "input": "",
+		    "input": "Abstract skull puking, painting by Maciej Drabik trending on artstation",
 		    "thumb": "/static/artworks/vqganclip/skulls/run-2/250.png",
 		    "method": "VQGAN+CLIP",
 		    "model": "wikiart_16384",
@@ -27,7 +27,7 @@ const artworks = [
 		  },
 		  {
 		    "title": "",
-		    "input": "",
+		    "input": "Abstract skull by Maciej Drabik trending on artstation",
 		    "thumb": "/static/artworks/vqganclip/skulls/run-1/314.png",
 		    "method": "VQGAN+CLIP",
 		    "model": "wikiart_16384",
@@ -185,7 +185,7 @@ const artworks = [
 		"numtiles": 1,
 		"works": [
 		  {
-		    "title": "Vaporwave sunset",
+		    "title": "Patriotic sunset",
 		    "input": "vaporwave sunset #80s #retro",
 		    "thumb": "/static/artworks/vqganclip/vaporwave/sunset/350.png",
 		    "method": "VQGAN+CLIP",
@@ -248,7 +248,7 @@ class ArtPage extends React.Component {
 	   	<Layout>
         <Helmet>
           <meta charSet="utf-8" />
-          <title>Art {'//'} jonaso.de</title>
+          <title>AI-generated Art {'//'} jonaso.de</title>
           <link rel="canonical" href="http://www.jonaso.de/art" />
         </Helmet>
 	      <Container>
@@ -257,7 +257,7 @@ class ArtPage extends React.Component {
 		        	<p>All credits go to Katherine Crowson (<a href="https://twitter.com/RiversHaveWings">@RiversHaveWings</a>)
 		        		for creating the VQGAN+CLIP Colab notebook
 		        		<br />
-		        		(and Ryan Murdock <a href="https://twitter.com/advadnoun">@advadnoun</a> for coming up with the original BigGAN + CLIP method).
+		        		(and Ryan Murdock <a href="https://twitter.com/advadnoun">@advadnoun</a> for coming up with the original BigGAN+CLIP method).
 		        	</p>
 		        	<p>For now, I just dabble on here with different textual input prompts, initial images, and target images.</p>
 		        </section>
