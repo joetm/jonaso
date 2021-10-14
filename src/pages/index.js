@@ -84,7 +84,7 @@ console.info(process.env.NODE_ENV);
         <Helmet>
           <meta charSet="utf-8" />
           <title>Jonas Oppenlaender</title>
-          <link rel="canonical" href="http://www.jonaso.de" />
+          <link rel="canonical" href="https://www.jonaso.de" />
         </Helmet>
         <Container style={{marginBottom: '14px'}}>
 
@@ -133,9 +133,9 @@ console.info(process.env.NODE_ENV);
 
                 <p>
                   Fun facts:
-                      I am a <a href="https://www.jonaso.de/kettlebells/">kettlebell</a> salesman,
+                      I am a <a href="/kettlebells/">kettlebell</a> salesman,
                   {" "}
-                  I dabble with <a href="https://www.jonaso.de/art/">computer-generated art</a>, and
+                  I dabble with <a href="/art/">computer-generated art</a>, and
                   {" "}
                   I have lived, studied, and/or worked in
                   Germany,
