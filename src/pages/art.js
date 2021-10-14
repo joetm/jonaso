@@ -80,6 +80,17 @@ const artworks = [
 		    "src": null,
 		    "date": "Oct, 2021"
 		  },
+		  {
+		    "title": "",
+		    "input": "a skull puking colors, painting by Maciej Drabik, trending on artstation",
+		    "thumb": "/static/artworks/vqganclip/skulls/run-7/250.png",
+		    "method": "VQGAN+CLIP",
+		    "model": "wikiart_16384",
+		    "initial": false,
+		    "target": false,
+		    "src": null,
+		    "date": "Oct, 2021"
+		  },
 	  ]
 	},
 	{
@@ -90,7 +101,18 @@ const artworks = [
 		  {
 		    "title": "Mad Max Ferrari",
 		    "input": "Mad Max ferrari by Abimelec Arellano",
-		    "thumb": "/static/artworks/vqganclip/madmax/ferrari/0057.png",
+		    "thumb": "/static/artworks/vqganclip/madmax/ferrari/run-1/0057.png",
+		    "method": "VQGAN+CLIP",
+		    "model": "wikiart_16384",
+		    "src": null,
+		    "initial": false,
+		    "target": false,
+		    "date": "Oct, 2021"
+		  },
+		  {
+		    "title": "Mad Max Ferrari",
+		    "input": "Mad Max ferrari by Abimelec Arellano",
+		    "thumb": "/static/artworks/vqganclip/madmax/ferrari/run-2/0057.png",
 		    "method": "VQGAN+CLIP",
 		    "model": "wikiart_16384",
 		    "src": null,
