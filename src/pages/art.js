@@ -83,8 +83,26 @@ const artworks = [
 	  ]
 	},
 	{
+		"series": "Movie themes",
+		"method": "vqgan+clip",
+		"numtiles": 1,
+		"works": [
+		  {
+		    "title": "Mad Max Ferrari",
+		    "input": "Mad Max ferrari by Abimelec Arellano",
+		    "thumb": "/static/artworks/vqganclip/madmax/ferrari/0057.png",
+		    "method": "VQGAN+CLIP",
+		    "model": "wikiart_16384",
+		    "src": null,
+		    "initial": false,
+		    "target": false,
+		    "date": "Oct, 2021"
+		  }
+		]
+	},
+	{
 		"series": "Cthulhu",
-		"numtiles": 3,
+		"numtiles": 4,
 		"works": [
 		  {
 		    "title": "",
@@ -112,17 +130,6 @@ const artworks = [
 		    "title": "",
 		    "input": "cthulhu swallows earth by greg rutkowski",
 		    "thumb": "/static/artworks/vqganclip/cthulhu/run-2/200.png",
-		    "method": "VQGAN+CLIP",
-		    "model": "wikiart_16384",
-		    "initial": false,
-		    "target": true,
-		    "src": null,
-		    "date": "Oct, 2021"
-		  },
-		  {
-		    "title": "",
-		    "input": "cthulhu swallows earth by greg rutkowski",
-		    "thumb": "/static/artworks/vqganclip/cthulhu/run-4/250.png",
 		    "method": "VQGAN+CLIP",
 		    "model": "wikiart_16384",
 		    "initial": false,
@@ -188,24 +195,6 @@ const artworks = [
 		]
 	},
 	{
-		"series": "Movie themes",
-		"method": "vqgan+clip",
-		"numtiles": 1,
-		"works": [
-		  {
-		    "title": "Mad Max Ferrari",
-		    "input": "Mad Max ferrari by Abimelec Arellano",
-		    "thumb": "/static/artworks/vqganclip/madmax/ferrari/0057.png",
-		    "method": "VQGAN+CLIP",
-		    "model": "wikiart_16384",
-		    "src": null,
-		    "initial": false,
-		    "target": false,
-		    "date": "Oct, 2021"
-		  }
-		]
-	},
-	{
 		"series": "Abstract",
 		"method": "vqgan+clip",
 		"numtiles": 1,
@@ -226,7 +215,7 @@ const artworks = [
 	{
 		"series": "Vaporwave",
 		"method": "vqgan+clip",
-		"numtiles": 1,
+		"numtiles": 2,
 		"works": [
 		  {
 		    "title": "Patriotic sunset",
