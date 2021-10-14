@@ -96,7 +96,7 @@ const artworks = [
 	{
 		"series": "Movie themes",
 		"method": "vqgan+clip",
-		"numtiles": 1,
+		"numtiles": 2,
 		"works": [
 		  {
 		    "title": "Mad Max Ferrari",
@@ -112,7 +112,7 @@ const artworks = [
 		  {
 		    "title": "Mad Max Ferrari",
 		    "input": "Mad Max ferrari by Abimelec Arellano",
-		    "thumb": "/static/artworks/vqganclip/madmax/ferrari/run-2/0057.png",
+		    "thumb": "/static/artworks/vqganclip/madmax/ferrari/run-2/100.png",
 		    "method": "VQGAN+CLIP",
 		    "model": "wikiart_16384",
 		    "src": null,
