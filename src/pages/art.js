@@ -69,7 +69,7 @@ class ArtPage extends React.Component {
 		        		<br />
 		        		(and Ryan Murdock <a href="https://twitter.com/advadnoun">@advadnoun</a> for coming up with the original BigGAN+CLIP method).
 		        	</p>
-		        	<p>For now, I just dabble on here with different textual input prompts, initial images, and target images.</p>
+		        	<p>For now, I just experiment with different textual input prompts, initial images, and target images.</p>
 		        </section>
 	          <div className="spacer" style={spacer}></div>
 		        {
