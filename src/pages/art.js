@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import { Helmet } from "react-helmet"
 import { spacer } from "../common"
 
-const _ARTWORKS = "https://www.jonaso.de/static/artworks.json"
+const _ARTWORKS = "/static/artworks.json"
 
 
 function Cardwork(w) {
@@ -67,7 +67,7 @@ class ArtPage extends React.Component {
 		        	<p>All credits go to Katherine Crowson (<a href="https://twitter.com/RiversHaveWings">@RiversHaveWings</a>)
 		        		for creating the VQGAN+CLIP Colab notebook
 		        		<br />
-		        		(and Ryan Murdock <a href="https://twitter.com/advadnoun">@advadnoun</a> for coming up with the original BigGAN+CLIP method).
+		        		(and Ryan Murdock <a href="https://twitter.com/advadnoun">@advadnoun</a> for coming up with the original BigSleep (BigGAN+CLIP) implementation).
 		        	</p>
 		        	<p>For now, I just experiment with different textual input prompts, initial images, and target images.</p>
 		        </section>
