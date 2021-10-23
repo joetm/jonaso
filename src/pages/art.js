@@ -19,7 +19,9 @@ function Cardwork(w) {
 	  <Card>
 	  <Image src={work.thumb} wrapped ui={false} />
 	    <Card.Content>
-	      <Card.Header>{work.title}</Card.Header>
+	    	{
+	    		work.title && <Card.Header>{work.title}</Card.Header>
+	    	}
 		    {/*
 	      <Card.Meta>
 	        <span className='date'>{work.date}</span>
