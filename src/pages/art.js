@@ -1,5 +1,7 @@
 import 'semantic-ui-css/components/card.min.css'
 
+// import '../masonry.css'
+
 import React from "react"
 import { Container, Header, Card, Image, Label } from 'semantic-ui-react'
 import Layout from "../components/layout"
@@ -76,7 +78,7 @@ class ArtPage extends React.Component {
 		        	artworks.map((series,s) => (
 						      <Container key={s}>
 										<Header as='h2' textAlign='center' content={series.series} />
-					    	    <Card.Group itemsPerRow={series.numtiles}>
+					    	    <Card.Group centered itemsPerRow={series.numtiles}>
 			    	    			{series.works.map((w,i) => <Cardwork key={i} info={w} />)}
 									  </Card.Group>
 				            <div className="spacer" style={spacer}></div>
