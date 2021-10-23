@@ -268,9 +268,9 @@
     ]
   },
   {
-    "series": "Vaporwave",
+    "series": "Vaporwave & Synthwave",
     "method": "vqgan+clip",
-    "numtiles": 3,
+    "numtiles": 4,
     "works": [
       {
         "title": "Patriotic sunset",
@@ -285,6 +285,26 @@
       {
         "title": "Cityscape sunset",
         "thumb": "/static/artworks/vqganclip/vaporwave/cityscape/200.png",
+        "method": "VQGAN+CLIP",
+        "model": "wikiart_16384",
+        "initial": false,
+        "target": false,
+        "src": null,
+        "date": "Oct, 2021"
+      },
+      {
+        "title": "City scape",
+        "thumb": "/static/artworks/vqganclip/synthwave/1/50.png",
+        "method": "VQGAN+CLIP",
+        "model": "wikiart_16384",
+        "initial": false,
+        "target": false,
+        "src": null,
+        "date": "Oct, 2021"
+      },
+      {
+        "title": "City scape",
+        "thumb": "/static/artworks/vqganclip/synthwave/2/50.png",
         "method": "VQGAN+CLIP",
         "model": "wikiart_16384",
         "initial": false,
