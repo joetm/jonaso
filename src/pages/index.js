@@ -133,9 +133,9 @@ console.info(process.env.NODE_ENV);
 
                 <p>
                   Fun facts:
-                      I am a <a href="/kettlebells/">kettlebell</a> salesman,
+                      I am a <a href="/kettlebells/">kettlebell</a> salesman and
                   {" "}
-                  I dabble with <a href="/art/">computer-generated art</a>, and
+                  I dabble with <a href="/art/">computer-generated art</a>.
                   {" "}
                   I have lived, studied, and/or worked in
                   Germany,
