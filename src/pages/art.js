@@ -7,6 +7,8 @@ import { Container, Header, Card, Image, Label } from 'semantic-ui-react'
 import Layout from "../components/layout"
 import { Helmet } from "react-helmet"
 import { spacer } from "../common"
+import SimpleReactLightbox from 'simple-react-lightbox'
+import { SRLWrapper } from "simple-react-lightbox"
 
 const _ARTWORKS = "/static/artworks.json"
 
@@ -57,6 +59,7 @@ class ArtPage extends React.Component {
   render() {
   	const { artworks } = this.state
     return (
+    	<SimpleReactLightbox>
 	   	<Layout>
         <Helmet>
           <meta charSet="utf-8" />
@@ -74,6 +77,7 @@ class ArtPage extends React.Component {
 		        	<p>For now, I just experiment with different textual input prompts, initial images, and target images.</p>
 		        </section>
 	          <div className="spacer" style={spacer}></div>
+	          <SRLWrapper>
 		        {
 		        	artworks.map((series,s) => (
 						      <Container key={s}>
@@ -85,8 +89,10 @@ class ArtPage extends React.Component {
 						      </Container>
 					  	))
 		      	}
+		      	</SRLWrapper>
 	      </Container>
         </Layout>
+        </SimpleReactLightbox>
     )
   }
 }
