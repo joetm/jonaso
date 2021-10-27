@@ -20,7 +20,7 @@ function Cardwork(w) {
 	  	{
 	  		work.src ?
 					  <a href={work.src}>
-					  	<Image src={work.thumb} wrapped ui={false} />
+					  	<Image src={work.thumb} wrapped ui={false} srl_gallery_image="true" />
 			  		</a>
 		  		:
 				  	<Image src={work.thumb} wrapped ui={false} />
