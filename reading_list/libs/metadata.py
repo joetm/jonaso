@@ -105,7 +105,7 @@ def extractMetadata(fullpath):
                 # print("Extracting annotations from: %s" % fullpath)
 
                 result = check_output([
-                        'python2.7',
+                        'python3',
                         '/var/www/academic-site/reading_list/libs/extract_annotations.py',
                         fullpath
                 ])

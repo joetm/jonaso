@@ -1,4 +1,4 @@
-#!/usr/bin/python2.7
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
 """
@@ -10,37 +10,57 @@
     ===========
 """
 
-import poppler, os.path
+import os.path
 import json
 import sys
+import copy
+
+from PyPDF2 import PdfFileReader
 
 
 def extract_annotations(filename):
 
     # see:
     # http://stackoverflow.com/a/13748949/426266
-    path = 'file://%s' % os.path.realpath('%s' % filename)
-    doc = poppler.document_new_from_file(path, None)
-    pages = [doc.get_page(i) for i in range(doc.get_n_pages())]
+    path = os.path.realpath('%s' % filename)
 
+
+    doc = PdfFileReader(open(path, "rb"))
+
+    # docInfo = doc.getDocumentInfo()
 
     annotations = []
 
-    # process annotations
-    for page_no, page in enumerate(pages):
-        # get the annotations
-        items = [i.annot.get_contents() for i in page.get_annot_mapping()]
-        # filter out empty annotations
-        items = [i for i in items if i]
-        # print "page: %s comments: %s " % (page_no + 1, items)
-        for it in items:
-            # clean string
-            it = it.replace("\n", "").replace("\r", "").strip()
-            # write to file
-            # annotations.append([page_no + 1, it])
-            annotations.append(it)
+    nPages = doc.getNumPages()
 
-    print json.dumps(annotations)
+    # {'/C': [1, 1, 0], '/F': 4, '/M': "D:20211027095158+03'00'", '/P': IndirectObject(16, 0), '/T': 'jonas', '/AP': {'/N': IndirectObject(275, 0)}, '/NM': 'ee5655bf-c3a4-4c4e-8b51c658f659019c', '/Rect': [171.94587, 462.18182, 245.49779, 470.55646], '/Subj': 'Highlight', '/Subtype': '/Highlight', '/Contents': ' contributing factor', '/QuadPoints': [173.60804, 470.55645, 243.83562, 470.55645, 173.60804, 462.18183, 243.83562, 462.18183], '/CreationDate': "D:20211027095158+03'00'"}
+
+    # process annotations
+    for i in range(nPages) :
+        page0 = doc.getPage(i)
+        try :
+            for annot in page0['/Annots']:
+                subtype = annot.getObject()['/Subtype']
+                if subtype == "/Highlight":
+                    highlight = annot.getObject()['/Contents']
+                    # some annotations are bytes, some are just strings
+                    if isinstance(highlight, bytes):
+                        highlight = highlight.decode("utf-8")
+                    # clean string
+                    highlight = highlight.replace("\n", " ").replace("\r", " ").replace("  ", " ").strip()
+                    # skip empty annotations
+                    if highlight:
+                    # print(highlight)
+                        annotations.append(highlight)
+                # filter out empty annotations
+                # if it['/AP']['/Subj'] == 'Highlight':
+                #     print('')
+        except Exception:
+            # there are no annotations on this page
+            pass
+
+
+    print(json.dumps(annotations))
         # skipkeys=False,
         # ensure_ascii=True,
         # check_circular=True,
