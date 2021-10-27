@@ -10,7 +10,7 @@ import { spacer } from "../common"
 import SimpleReactLightbox from 'simple-react-lightbox'
 import { SRLWrapper } from "simple-react-lightbox"
 
-const _ARTWORKS = "/static/artworks.json"
+const _ARTWORKS = "/static/artworks/artworks.json"
 
 
 function Cardwork(w) {
