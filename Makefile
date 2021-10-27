@@ -34,7 +34,7 @@ bib-json:
 post-build:
 	cp ./src/travel.json ./public/
 	cp ./src/news.json ./public/
-	cp ./src/artworks.json ./public/static/
+	cp -rf ./src/img/artworks ./public/static/
 	make move-cv
 	mv ./src/bibliography/publications.json ./public/static/publications.json
 	# cp ./src/img/artworks -r ./public/static/
