@@ -165,6 +165,94 @@
     ]
   },
   {
+    "series": "Cloud Assassin",
+    "numtiles": 2,
+    "works": [
+      {
+        "title": "",
+        "thumb": "/static/artworks/vqganclip/cloud-assassin/1/50.png",
+        "method": "VQGAN+CLIP",
+        "model": "wikiart_16384",
+        "initial": false,
+        "target": true,
+        "src": null,
+        "date": "Oct, 2021"
+      },
+      {
+        "title": "",
+        "thumb": "/static/artworks/vqganclip/cloud-assassin/2/300.png",
+        "method": "VQGAN+CLIP",
+        "model": "wikiart_16384",
+        "initial": false,
+        "target": true,
+        "src": null,
+        "date": "Oct, 2021"
+      },
+      {
+        "title": "",
+        "thumb": "/static/artworks/vqganclip/cloud-assassin/3/50.png",
+        "method": "VQGAN+CLIP",
+        "model": "wikiart_16384",
+        "initial": false,
+        "target": true,
+        "src": null,
+        "date": "Oct, 2021"
+      },
+      {
+        "title": "",
+        "thumb": "/static/artworks/vqganclip/cloud-assassin/4/100.png",
+        "method": "VQGAN+CLIP",
+        "model": "wikiart_16384",
+        "initial": false,
+        "target": true,
+        "src": null,
+        "date": "Oct, 2021"
+      }
+    ]
+  },
+  {
+    "series": "Human Centipede",
+    "numtiles": 2,
+    "works": [
+      {
+        "title": "",
+        "thumb": "/static/artworks/vqganclip/human-centipede/1/100.png",
+        "method": "VQGAN+CLIP",
+        "model": "wikiart_16384",
+        "initial": false,
+        "target": false,
+        "src": null,
+        "date": "Oct, 2021"
+      }
+    ]
+  },
+  {
+    "series": "Disco Ballroom",
+    "numtiles": 2,
+    "works": [
+      {
+        "title": "",
+        "thumb": "/static/artworks/vqganclip/disco-ballroom/1/175.png",
+        "src": "/static/artworks/vqganclip/disco-ballroom/1/esrgan/175.png",
+        "method": "VQGAN+CLIP",
+        "model": "wikiart_16384",
+        "initial": false,
+        "target": false,
+        "date": "Oct, 2021"
+      },
+      {
+        "title": "",
+        "thumb": "/static/artworks/vqganclip/disco-ballroom/2/250.png",
+        "src": "/static/artworks/vqganclip/disco-ballroom/2/esrgan/250.png",
+        "method": "VQGAN+CLIP",
+        "model": "wikiart_16384",
+        "initial": false,
+        "target": false,
+        "date": "Oct, 2021"
+      }
+    ]
+  },
+  {
     "series": "Cthulhu attacks planet Earth",
     "numtiles": 4,
     "works": [

@@ -17,7 +17,14 @@ function Cardwork(w) {
 	const work = w.info 
 	return (
 	  <Card>
-	  <Image src={work.thumb} wrapped ui={false} />
+	  	{
+	  		work.src ?
+					  <a href={work.src}>
+					  	<Image src={work.thumb} wrapped ui={false} />
+			  		</a>
+		  		:
+				  	<Image src={work.thumb} wrapped ui={false} />
+	  	}
 	    <Card.Content>
 	    	{
 	    		work.title && <Card.Header>{work.title}</Card.Header>
