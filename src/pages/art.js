@@ -15,6 +15,12 @@ const _ARTWORKS = "/static/artworks/artworks.json"
 
 function Cardwork(w) {
 	const work = w.info 
+	let methods = []
+	if (work.method instanceof Array) {
+		methods = work.method
+	} else {
+		methods.push(work.method)
+	}
 	return (
 	  <Card>
 	  	<Image src={work.thumb} wrapped ui={false} />
@@ -32,7 +38,9 @@ function Cardwork(w) {
 				*/}
 	    </Card.Content>
 	    <Card.Content extra>
-			    <Label as='a' tag>{work.method}</Label>
+	    		{
+	    			methods.map((m,i) => <Label as={i==0 ? 'a' : false} tag={i==0 ? true : false}>{m}</Label>)
+	    		}
 			    <Label>{work.model}</Label>
 			    {work.initial && <Label>initial</Label>}
 			    {work.target  && <Label>target</Label>}

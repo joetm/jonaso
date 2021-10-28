@@ -166,7 +166,7 @@
   },
   {
     "series": "Cloud Assassin",
-    "numtiles": 2,
+    "numtiles": 4,
     "works": [
       {
         "title": "",
@@ -212,7 +212,7 @@
   },
   {
     "series": "Athens, Greece",
-    "numtiles": 4,
+    "numtiles": 2,
     "works": [
       {
         "title": "",
@@ -280,7 +280,7 @@
         "title": "",
         "thumb": "/static/artworks/vqganclip/disco-ballroom/1/175.png",
         "src": "/static/artworks/vqganclip/disco-ballroom/1/esrgan/175.png",
-        "method": "VQGAN+CLIP",
+        "method": ["VQGAN+CLIP", "RealESRGAN"],
         "model": "wikiart_16384",
         "initial": false,
         "target": false,
@@ -290,7 +290,7 @@
         "title": "",
         "thumb": "/static/artworks/vqganclip/disco-ballroom/2/250.png",
         "src": "/static/artworks/vqganclip/disco-ballroom/2/esrgan/250.png",
-        "method": "VQGAN+CLIP",
+        "method": ["VQGAN+CLIP", "RealESRGAN"],
         "model": "wikiart_16384",
         "initial": false,
         "target": false,
