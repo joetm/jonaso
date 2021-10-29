@@ -33,6 +33,7 @@ bib-json:
 
 post-build:
 	cp ./src/travel.json ./public/
+	cp ./src/projects.json ./public/static/
 	cp ./src/news.json ./public/
 	cp -rf ./src/img/artworks ./public/static/
 	make move-cv
