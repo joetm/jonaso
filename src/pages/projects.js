@@ -6,8 +6,8 @@ import ProjectItem from "../components/ProjectItem"
 import { Helmet } from "react-helmet"
 
 
-const _PROJECTS = 'https://raw.githubusercontent.com/joetm/jonaso/master/src/projects.json'
-// const _PUBLICATIONS = 'https://raw.githubusercontent.com/joetm/jonaso/master/public/static/publications.json'
+// const _PROJECTS = 'https://raw.githubusercontent.com/joetm/jonaso/master/src/projects.json'
+const _PROJECTS = '/static/projects.json'
 
 
 const CustomImage = ({image}) => (
@@ -22,8 +22,6 @@ const CustomImage = ({image}) => (
 		fluid
 	/>
 )
-
-// const Banner = (src, alt, title) => <img style={{width:'100%'}} src={src} alt={alt} title={title} />
 
 
 class Projects extends React.Component {
@@ -40,7 +38,7 @@ class Projects extends React.Component {
       }
       return response.json()
     })
-    .then(projects => this.setState({projects}))
+    .then(projects => this.setState({ projects }))
     // get publications
     // fetch(_PUBLICATIONS)
     // .then(response => {
@@ -115,7 +113,7 @@ class Projects extends React.Component {
                   return (
                     <Grid key={`grid_${title}`} style={{marginBottom:'20px'}}>
 
-							        <Container style={{paddingLeft: 0}}>
+							        <Container>
                       <Grid.Row>
                         <Header>{title}{subtitle ? ` – ${subtitle}` : null}</Header>
                       </Grid.Row>
