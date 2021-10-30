@@ -385,6 +385,23 @@
     ]
   },
   {
+    "series": "Apparition",
+    "method": "vqgan+clip",
+    "numtiles": 1,
+    "works": [
+      {
+        "title": "",
+        "thumb": "/static/artworks/vqganclip/apparition/200.png",
+        "method": "vqgan+clip",
+        "model": "wikiart_16384",
+        "src": null,
+        "initial": false,
+        "target": false,
+        "date": "Oct, 2021"
+      }
+    ]
+  },
+  {
     "series": "Abstract",
     "method": "vqgan+clip",
     "numtiles": 1,
