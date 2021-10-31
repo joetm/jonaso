@@ -14,7 +14,9 @@ const _ARTWORKS = "/static/artworks/artworks.json"
 
 
 function Cardwork(w) {
-	const work = w.info 
+	const work = w.info
+	const numtiles = w.numtiles
+	const labelsize = numtiles == 4 ? {fontSize:".6em"} : {}
 	let methods = []
 	if (work.method instanceof Array) {
 		methods = work.method
@@ -24,8 +26,8 @@ function Cardwork(w) {
 	return (
 	  <Card>
 	  	<Image src={work.thumb} wrapped ui={false} />
-	    <Card.Content>
 		    {/*
+		    <Card.Content>
 	    	{
 	    		work.title && <Card.Header>{work.title}</Card.Header>
 	    	}
@@ -35,15 +37,15 @@ function Cardwork(w) {
 	      <Card.Description>
 	        &quot;{work.input}&quot;
 	      </Card.Description>
+		    </Card.Content>
 				*/}
-	    </Card.Content>
 	    <Card.Content extra>
 	    		{
-	    			methods.map((m,i) => <Label as={i==0 ? 'a' : false} tag={i==0 ? true : false}>{m}</Label>)
+	    			methods.map((m,i) => <Label style={labelsize} as={i==0 ? 'a' : false} tag={i==0 ? true : false}>{m}</Label>)
 	    		}
-			    <Label>{work.model}</Label>
-			    {work.initial && <Label>initial</Label>}
-			    {work.target  && <Label>target</Label>}
+			    <Label style={labelsize}>{work.model}</Label>
+			    {work.initial && <Label style={labelsize}>initial</Label>}
+			    {work.target  && <Label style={labelsize}>target</Label>}
 	    </Card.Content>
 	  </Card>
 	)
@@ -93,7 +95,7 @@ class ArtPage extends React.Component {
 						      <Container key={s}>
 										<Header as='h2' textAlign='center' content={series.series} />
 					    	    <Card.Group centered itemsPerRow={series.numtiles}>
-			    	    			{series.works.map((w,i) => <Cardwork key={i} info={w} />)}
+			    	    			{series.works.map((w,i) => <Cardwork key={i} info={w} numtiles={series.numtiles} />)}
 									  </Card.Group>
 				            <div className="spacer" style={spacer}></div>
 						      </Container>
