@@ -16,7 +16,7 @@ const _ARTWORKS = "/static/artworks/artworks.json"
 function Cardwork(w) {
 	const work = w.info
 	const numtiles = w.numtiles
-	const labelsize = numtiles == 4 ? {fontSize:".6em"} : {}
+	const labelsize = numtiles >= 3 ? {fontSize:".6em"} : {}
 	let methods = []
 	if (work.method instanceof Array) {
 		methods = work.method
@@ -25,7 +25,14 @@ function Cardwork(w) {
 	}
 	return (
 	  <Card>
-	  	<Image src={work.thumb} wrapped ui={false} />
+	  	{
+	  		work.src ?
+	  			<a href={work.src}>
+	  			<Image src={work.thumb} ui={true} />
+	  			</a>
+				:
+			  	<Image src={work.thumb} wrapped ui={true} />	  		
+	  	}
 		    {/*
 		    <Card.Content>
 	    	{
