@@ -472,7 +472,7 @@
     ]
   },
   {
-    "series": "Ring",
+    "series": "Ring World",
     "method": "vqgan+clip",
     "numtiles": 3,
     "works": [
@@ -534,6 +534,23 @@
         "initial": true,
         "target": false,
         "src": null,
+        "date": "Oct, 2021"
+      }
+    ]
+  },
+  {
+    "series": "Mark Zuckerberg's Metaverse",
+    "method": "vqgan+clip",
+    "numtiles": 1,
+    "works": [
+      {
+        "title": "",
+        "thumb": "/static/artworks/vqganclip/zuckerberg/2/325.png",
+        "method": "vqgan+clip",
+        "model": "wikiart_16384",
+        "src": null,
+        "initial": false,
+        "target": false,
         "date": "Oct, 2021"
       }
     ]
