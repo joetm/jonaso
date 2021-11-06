@@ -2,7 +2,7 @@
   {
     "title": "AI prompt engineering with focus on generative art",
     "lang": "en",
-    "description": {"__html": "<p>Since Kathleen Crowson combined VQGAN with OpenAI's CLIP (based on Ryan Murdock's work on Big Sleep), the interest in generating art with generative adverserial networks (GANs) has exploded, as is evident in the actiity in dedicated communities online. This explosion was enabled by the availability of executable notebooks on Google's Colab in which users can execute machine learning models for free and without deep knowledge of programming. Users on Google Colab interact with GAN models with input prompts. Prompts are short texts that describe the expected end result, such as \"a beautiful painting of a landscape\". The emerging AI art community was quick to discover that the quality of the generated artwork could be influenced with modifiers, such as \"trending on artstation\" or \"rendered by Unreal Engine\". 'Prompt engineering' or 'prompt programming' refers to the practice of finding effective input prompts for a model.</p><p>This project investigates 1) the emerging online AI art community and 2) the input prompts and practices of this community. A first auto-ethnographic investigation resulted in a number of <a href=\"/art/\">AI-generated artworks</a> and preliminary findings.</p>"},
+    "description": {"__html": "<p>Since Kathleen Crowson combined VQGAN with OpenAI's CLIP (based on Ryan Murdock's work on Big Sleep), the interest in generating art with generative adverserial networks (GANs) has exploded as evident on Twitter and dedicated communities online. This explosion was facilitated by the availability of executable notebooks on Google's Colab in which non-expert users can execute machine learning models for free and without deep knowledge of programming. Users on Google Colab interact with GAN models via input prompts. Prompts are short texts that describe the expected end result, such as \"a beautiful painting of a landscape\". The emerging AI art community was quick to discover that the quality of the generated artwork could be increased by using modifiers in the input prompt, such as \"trending on artstation\" or \"rendered by Unreal Engine\". 'Prompt engineering' or 'prompt programming' refers to the practice of finding effective input prompts for a model.</p><p>This project investigates 1) the emerging AI art community and 2) the input prompts and practices of this community. A first auto-ethnographic investigation resulted in a number of <a href=\"/art/\">AI-generated artworks</a> and preliminary findings.</p>"},
     "funding": "The project received funding in form of the Toloka Research grant.",
     "date": "2021-",
     "organisation": "(Independent research)",
@@ -12,14 +12,26 @@
       "src": "https://www.jonaso.de/static/ai-artworks.jpg",
       "alt": "",
       "title": ""
-    }
+    },
+    "presentations": [
+      {
+        "title": "Generative Art",
+        "year": 2021,
+        "month": "November",
+        "day": 4,
+        "conference": null,
+        "location": "Virtual",
+        "doi": "10.6084/m9.figshare.16940206",
+        "status": "virtual"
+      }
+    ]
   },
   {
     "title": "Crowd Feedback Systems",
     "lang": "en",
-    "description": {"__html": "<p>Feedback systems have become ubiquitous. You can find them in many public places, such as airports and restrooms. With these systems, people typically can give feedback using color-coded buttons with smiley faces on a scale from left (good) to right (bad). Feedback is provided in response to a prompt, such as \"How do you rate the cleanliness of this restroom?\" or \"How do you rate your experience?\".</p><p>During my PhD, I became interested in eliciting more complex feedback from situated and online crowds.</p>"},
+    "description": {"__html": "<p>Feedback systems have become ubiquitous. You can find them in many public places, such as airports and restrooms. With these systems, people typically can give feedback using color-coded buttons with smiley faces on a scale from left (good) to right (bad). Feedback is provided in response to a prompt, such as \"How do you rate the cleanliness of this restroom?\" or \"How do you rate your experience?\".</p><p>During my PhD, I became interested in eliciting more complex feedback from situated and online crowds. For instance, I created a systems to elicit feedback for digital artworks on a public display and I created CrowdUI, a system in which users can manipulate a web page and send the altered page as feedback to the web designer.</p>"},
     "funding": "The project was funded by the Center for Ubiquitous Computing at the University of Oulu, Finland.",
-    "date": "2018-",
+    "date": "2018-2021",
     "organisation": "University of Oulu, Finland",
     "organisation_href": "http://ubicomp.oulu.fi/",
     "url": "http://ubicomp.oulu.fi/",
@@ -405,6 +417,21 @@
       "hcomp2017",
       "esciencetage2017"
     ]
+  },
+  {
+    "title": "Crowdsourced Ontology Engineering",
+    "lang": "en",
+    "description": {"__html": "<p>Ontology engineering has evolved from a practice that was traditionally conducted by knowledge engineers together with domain experts towards more agile approaches that involve non-experts and end users.</p><p>This project focused on involving end users in the co-creation of an ontology via a novel crowdsourcing-based method for ontology engineering embedded in the larger socio-technical context of the project at the Museum of Natural History in Berlin.</p>"},
+    "funding": false,
+    "date": "2017-2018",
+    "organisation": "Freie Universität Berlin",
+    "organisation_href": "http://www.mi.fu-berlin.de/en/inf/groups/hcc/",
+    "url": false,
+    "img": {
+      "src": "https://www.jonaso.de/static/crowd.jpg",
+      "alt": "",
+      "title": ""
+    }
   },
   {
     "title": "ID+Lab",
