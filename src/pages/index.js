@@ -182,7 +182,7 @@ console.info(process.env.NODE_ENV);
 
                 <p>
                   <br />
-                  <a href="/cv/">CV</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="/cv/publications">Publications</a>
+                  <a href="/cv/">CV</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="/publications/">Publications</a>
                 </p>
 
                 <aside style={{marginTop:'2em'}}>

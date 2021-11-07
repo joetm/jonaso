@@ -1,32 +1,5 @@
 [
   {
-    "series": "Open Heart Engineers",
-    "numtiles": 2,
-    "works": [
-      {
-        "title": "",
-        "thumb": "/static/artworks/vqganclip/hearts/engineers/1/125-175-edited.png",
-        "method": "VQGAN+CLIP",
-        "model": "wikiart_16384",
-        "initial": false,
-        "target": false,
-        "edited": true,
-        "src": null,
-        "date": "Oct, 2021"
-      },
-      {
-        "title": "",
-        "thumb": "/static/artworks/vqganclip/hearts/engineers/3/250.png",
-        "method": "VQGAN+CLIP",
-        "model": "wikiart_16384",
-        "initial": false,
-        "target": false,
-        "src": null,
-        "date": "Oct, 2021"
-      }
-    ]
-  },
-  {
     "series": "Abstract Skulls",
     "numtiles": 3,
     "works": [
@@ -93,7 +66,7 @@
     ]
   },
   {
-    "series": "Robot in the Field by Karl Melton",
+    "series": "Robot in the Field (inspired by Karl Melton)",
     "numtiles": 2,
     "works": [
       {
@@ -104,7 +77,7 @@
         "initial": true,
         "target": false,
         "src": null,
-        "date": "Oct, 2021"
+        "date": "Nov, 2021"
       },
       {
         "title": "",
@@ -112,6 +85,33 @@
         "method": "VQGAN+CLIP",
         "model": "wikiart_16384",
         "initial": true,
+        "target": false,
+        "src": null,
+        "date": "Nov, 2021"
+      }
+    ]
+  },
+  {
+    "series": "Open Heart Engineers",
+    "numtiles": 2,
+    "works": [
+      {
+        "title": "",
+        "thumb": "/static/artworks/vqganclip/hearts/engineers/1/125-175-edited.png",
+        "method": "VQGAN+CLIP",
+        "model": "wikiart_16384",
+        "initial": false,
+        "target": false,
+        "edited": true,
+        "src": null,
+        "date": "Oct, 2021"
+      },
+      {
+        "title": "",
+        "thumb": "/static/artworks/vqganclip/hearts/engineers/3/250.png",
+        "method": "VQGAN+CLIP",
+        "model": "wikiart_16384",
+        "initial": false,
         "target": false,
         "src": null,
         "date": "Oct, 2021"
@@ -177,6 +177,22 @@
         "target": false,
         "src": null,
         "date": "Oct, 2021"
+      }
+    ]
+  },
+  {
+    "series": "Crystal in the Field",
+    "numtiles": 2,
+    "works": [
+      {
+        "title": "",
+        "thumb": "/static/artworks/vqganclip/crystals/3/106.png",
+        "method": "VQGAN+CLIP",
+        "model": "wikiart_16384",
+        "initial": false,
+        "target": false,
+        "src": null,
+        "date": "Nov, 2021"
       }
     ]
   },
@@ -552,6 +568,38 @@
         "initial": false,
         "target": false,
         "date": "Oct, 2021"
+      }
+    ]
+  },
+  {
+    "series": "Random Act of Violence",
+    "numtiles": 1,
+    "works": [
+      {
+        "title": "",
+        "thumb": "/static/artworks/vqganclip/violence/3/0031.png",
+        "method": "VQGAN+CLIP",
+        "model": "wikiart_16384",
+        "initial": false,
+        "target": false,
+        "src": null,
+        "date": "Nov, 2021"
+      }
+    ]
+  },
+  {
+    "series": "Kama Sutra",
+    "numtiles": 1,
+    "works": [
+      {
+        "title": "",
+        "thumb": "/static/artworks/rudalle/kama-sutra/1/download.png",
+        "method": "ruDalle",
+        "model": "0.0.1rc4",
+        "initial": false,
+        "target": false,
+        "src": null,
+        "date": "Nov, 2021"
       }
     ]
   },
