@@ -604,6 +604,42 @@
     ]
   },
   {
+    "series": "Obedient Robot Servant",
+    "numtiles": 3,
+    "works": [
+      {
+        "title": "",
+        "thumb": "/static/artworks/vqganclip/robot/robot-servant/1/375.png",
+        "method": "VQGAN+CLIP",
+        "model": "wikiart_16384",
+        "initial": false,
+        "target": false,
+        "src": null,
+        "date": "Nov, 2021"
+      },
+      {
+        "title": "",
+        "thumb": "/static/artworks/vqganclip/robot/robot-servant/2/250.png",
+        "method": "VQGAN+CLIP",
+        "model": "wikiart_16384",
+        "initial": false,
+        "target": false,
+        "src": null,
+        "date": "Nov, 2021"
+      },
+      {
+        "title": "",
+        "thumb": "/static/artworks/vqganclip/robot/robot-servant/3/225.png",
+        "method": "VQGAN+CLIP",
+        "model": "wikiart_16384",
+        "initial": false,
+        "target": false,
+        "src": null,
+        "date": "Nov, 2021"
+      }
+    ]
+  },
+  {
     "series": "Vaporwave & Synthwave",
     "method": "vqgan+clip",
     "numtiles": 4,
