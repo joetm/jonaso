@@ -90,8 +90,8 @@ replace-cv:
 		sed 's|\\definenewtoggle{showtotalfunding}{true}|\\definenewtoggle{showtotalfunding}{false}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showoutreach}{true}|\\definenewtoggle{showoutreach}{false}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showpublicationsummary}{false}|\\definenewtoggle{showpublicationsummary}{true}|g' cv.tex | sponge cv.tex; \
-		sed 's|\\definenewtoggle{showpresentations}{true}|\\definenewtoggle{showpresentations}{false}|g' cv.tex | sponge cv.tex; \
-		sed 's|\\definenewtoggle{showsoftware}{true}|\\definenewtoggle{showsoftware}{false}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showpresentations}{false}|\\definenewtoggle{showpresentations}{true}|g' cv.tex | sponge cv.tex; \
+		sed 's|\\definenewtoggle{showsoftware}{false}|\\definenewtoggle{showsoftware}{true}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showmoney}{true}|\\definenewtoggle{showmoney}{false}|g' cv.tex | sponge cv.tex
 
 	# set the options in the publications list
