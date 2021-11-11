@@ -196,23 +196,6 @@
     ]
   },
   {
-    "series": "Crystal in the Field",
-    "numtiles": 2,
-    "works": [
-      {
-        "title": "",
-        "thumb": "/static/artworks/vqganclip/crystals/3/106.png",
-        "method": "VQGAN+CLIP",
-        "model": "wikiart_16384",
-        "initial": false,
-        "target": false,
-        "src": null,
-        "year": "2021",
-        "month": "11"
-      }
-    ]
-  },
-  {
     "series": "Movie themes",
     "method": "vqgan+clip",
     "numtiles": 3,
@@ -636,6 +619,23 @@
     ]
   },
   {
+    "series": "Crystal in the Field",
+    "numtiles": 2,
+    "works": [
+      {
+        "title": "",
+        "thumb": "/static/artworks/vqganclip/crystals/3/106.png",
+        "method": "VQGAN+CLIP",
+        "model": "wikiart_16384",
+        "initial": false,
+        "target": false,
+        "src": null,
+        "year": "2021",
+        "month": "11"
+      }
+    ]
+  },
+  {
     "series": "Kama Sutra",
     "numtiles": 1,
     "works": [
@@ -717,19 +717,42 @@
         "thumb": "/static/artworks/vqganclip/well/1/200-edited.png",
         "method": "VQGAN+CLIP",
         "model": "wikiart_16384",
-        "initial": false,
+        "initial": true,
         "target": false,
         "edited": true,
         "src": null,
         "year": "2021",
         "month": "11"
-      },
+      }
+    ]
+  },
+  {
+    "series": "Starving Human",
+    "numtiles": 2,
+    "works": [
+      {
+        "title": "",
+        "thumb": "/static/artworks/vqganclip/humans/starving/1/450.png",
+        "method": "VQGAN+CLIP",
+        "model": "wikiart_16384",
+        "initial": true,
+        "target": false,
+        "src": null,
+        "year": "2021",
+        "month": "11"
+      }
+    ]
+  },
+  {
+    "series": "Opening into another World",
+    "numtiles": 2,
+    "works": [
       {
         "title": "",
         "thumb": "/static/artworks/vqganclip/well/2/1125.png",
         "method": "VQGAN+CLIP",
         "model": "wikiart_16384",
-        "initial": false,
+        "initial": true,
         "target": false,
         "src": null,
         "year": "2021",
