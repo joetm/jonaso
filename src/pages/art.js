@@ -12,6 +12,11 @@ import { SRLWrapper } from "simple-react-lightbox"
 
 const _ARTWORKS = "/static/artworks/artworks.json"
 
+const styles = {
+	breadcrumb: {
+		cursor: 'pointer',
+	}
+}
 
 function Cardwork(w) {
 	const work = w.info
@@ -48,7 +53,7 @@ function Cardwork(w) {
 				*/}
 	    <Card.Content extra>
 	    		{
-	    			methods.map((m,i) => <Label style={labelsize} as={i==0 ? 'a' : false} tag={i==0 ? true : false}>{m}</Label>)
+	    			methods.map((m,i) => <Label style={labelsize} key={`l${i}`} tag={i==0 ? true : false}>{m}</Label>)
 	    		}
 			    <Label style={labelsize}>{work.model}</Label>
 			    {work.initial && <Label style={labelsize}>initial</Label>}
@@ -60,7 +65,10 @@ function Cardwork(w) {
 
 class ArtPage extends React.Component {
   state = {
+    allartworks: [],
     artworks: [],
+    activebreadcrumb: null,
+    breadcrumbs: []
   }
   componentDidMount = () => {
     // get artworks
@@ -72,11 +80,44 @@ class ArtPage extends React.Component {
       return response.json()
     })
     .then(artworks => {
-			this.setState({artworks})
+    	let dates = []
+    	artworks.forEach(series => {
+    		series.works.forEach(w => {
+    			dates.push(`${w.year}-${w.month}`)
+    		})
+    	})
+    	const breadcrumbs = [...new Set(dates)];
+			this.setState({
+				artworks,
+				allartworks: artworks,
+				breadcrumbs //: ['2021-10', '2021-11']
+			})
 		})
   }
+  handleFilterClick(d) {
+  	if (!d) {
+  		// reset to all artworks
+	  	this.setState({
+	  		artworks: this.state.allartworks,
+	  		activebreadcrumb: null,
+	  	})
+  		return
+  	}
+  	this.setState({
+  		artworks: this.state.allartworks.filter(series => {
+  			const filteredworks = series.works.filter(w => `${w.year}-${w.month}` == d ? w : false)
+  			if (!filteredworks.length) {
+	  			return false	
+  			}
+  			const out = {...series}
+  			out.works = filteredworks
+  			return out
+  		}),
+  		activebreadcrumb: d,
+  	})
+  }
   render() {
-  	const { artworks } = this.state
+  	const { artworks, activebreadcrumb, breadcrumbs } = this.state
     return (
     	<SimpleReactLightbox>
 	   	<Layout>
@@ -96,11 +137,32 @@ class ArtPage extends React.Component {
 		        	<p>For now, I just experiment with different textual input prompts, initial images, and target images.</p>
 		        	<p>I post some more AI-generated artworks on the Twitter account <a href="https://twitter.com/kettlebellz">@kettlebellz</a></p>
 		        </section>
+
 	          <div className="spacer" style={spacer}></div>
+
+						<div id="breadcrumbs">
+							<span style={{...styles.breadcrumb, fontWeight: activebreadcrumb == null ? 'bold' : 'inherit'}}
+								onClick={() => this.handleFilterClick(null)}>ALL</span>
+							{
+								breadcrumbs.map((b,i) => (
+									<React.Fragment key={`f${i}`}>
+										<span> / </span>
+										<span style={{
+												...styles.breadcrumb,
+												fontWeight: activebreadcrumb == b ? 'bold' : 'inherit'
+											}}
+											onClick={() => this.handleFilterClick(b)}>{b}</span>
+									</React.Fragment>
+								))
+							}
+						</div>
+
+	          <div className="spacer" style={spacer}></div>
+
 	          <SRLWrapper>
 		        {
 		        	artworks.map((series,s) => (
-						      <Container key={s}>
+						      <Container key={`s_${s}`}>
 										<Header as='h2' textAlign='center' content={series.series} />
 					    	    <Card.Group centered itemsPerRow={series.numtiles}>
 			    	    			{series.works.map((w,i) => <Cardwork key={i} info={w} numtiles={series.numtiles} />)}
