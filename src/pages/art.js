@@ -33,7 +33,7 @@ function Cardwork(w) {
 	  	{
 	  		work.src ?
 	  			<a href={work.src}>
-	  			<Image src={work.thumb} ui={true} />
+	  			<Image src={work.thumb} style={{width: '100%', height: 'auto'}} ui={true} />
 	  			</a>
 				:
 			  	<Image src={work.thumb} wrapped ui={true} />	  		
