@@ -1,5 +1,22 @@
 [
   {
+    "series": "Opening into another World",
+    "numtiles": 2,
+    "works": [
+      {
+        "title": "",
+        "thumb": "/static/artworks/vqganclip/well/2/1125.png",
+        "method": ["VQGAN+CLIP", "RealESRGAN"],
+        "model": "wikiart_16384",
+        "initial": true,
+        "target": false,
+        "src": "/static/artworks/vqganclip/well/2/realesrgan/1125_out.png",
+        "year": "2021",
+        "month": "11"
+      }
+    ]
+  },
+  {
     "series": "Abstract Skulls",
     "numtiles": 3,
     "works": [
@@ -727,29 +744,12 @@
     ]
   },
   {
-    "series": "Starving Human",
+    "series": "Starving",
     "numtiles": 2,
     "works": [
       {
         "title": "",
         "thumb": "/static/artworks/vqganclip/humans/starving/1/450.png",
-        "method": "VQGAN+CLIP",
-        "model": "wikiart_16384",
-        "initial": true,
-        "target": false,
-        "src": null,
-        "year": "2021",
-        "month": "11"
-      }
-    ]
-  },
-  {
-    "series": "Opening into another World",
-    "numtiles": 2,
-    "works": [
-      {
-        "title": "",
-        "thumb": "/static/artworks/vqganclip/well/2/1125.png",
         "method": "VQGAN+CLIP",
         "model": "wikiart_16384",
         "initial": true,
