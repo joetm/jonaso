@@ -87,6 +87,7 @@ class ArtPage extends React.Component {
     		})
     	})
     	const breadcrumbs = [...new Set(dates)];
+    	breadcrumbs.sort()
 			this.setState({
 				artworks,
 				allartworks: artworks,
@@ -105,7 +106,7 @@ class ArtPage extends React.Component {
   	}
   	this.setState({
   		artworks: this.state.allartworks.filter(series => {
-  			const filteredworks = series.works.filter(w => `${w.year}-${w.month}` == d ? w : false)
+  			const filteredworks = series.works.filter(w => `${w.year}-${w.month}` === d ? w : false)
   			if (!filteredworks.length) {
 	  			return false	
   			}
@@ -141,7 +142,7 @@ class ArtPage extends React.Component {
 	          <div className="spacer" style={spacer}></div>
 
 						<div id="breadcrumbs">
-							<span style={{...styles.breadcrumb, fontWeight: activebreadcrumb == null ? 'bold' : 'inherit'}}
+							<span style={{...styles.breadcrumb, fontWeight: !activebreadcrumb ? 'inherit' : 'bold'}}
 								onClick={() => this.handleFilterClick(null)}>ALL</span>
 							{
 								breadcrumbs.map((b,i) => (
@@ -149,7 +150,7 @@ class ArtPage extends React.Component {
 										<span> / </span>
 										<span style={{
 												...styles.breadcrumb,
-												fontWeight: activebreadcrumb == b ? 'bold' : 'inherit'
+												fontWeight: activebreadcrumb === b ? 'bold' : 'inherit'
 											}}
 											onClick={() => this.handleFilterClick(b)}>{b}</span>
 									</React.Fragment>
