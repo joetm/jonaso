@@ -744,23 +744,6 @@
     ]
   },
   {
-    "series": "Starving",
-    "numtiles": 2,
-    "works": [
-      {
-        "title": "",
-        "thumb": "/static/artworks/vqganclip/humans/starving/1/450.png",
-        "method": "VQGAN+CLIP",
-        "model": "wikiart_16384",
-        "initial": true,
-        "target": false,
-        "src": null,
-        "year": "2021",
-        "month": "11"
-      }
-    ]
-  },
-  {
     "series": "Vaporwave & Synthwave",
     "method": "vqgan+clip",
     "numtiles": 4,
