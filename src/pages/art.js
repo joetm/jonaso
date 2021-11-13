@@ -33,7 +33,11 @@ function Cardwork(w) {
 	  	{
 	  		work.src ?
 	  			<a href={work.src}>
-	  			<Image src={work.thumb} style={{width: '100%', height: 'auto'}} ui={true} />
+	  			<Image
+	  				src={work.thumb}
+	  				style={{width: '100%', height: 'auto'}}
+	  				loading="lazy"
+	  				ui={true} />
 	  			</a>
 				:
 			  	<Image src={work.thumb} wrapped ui={true} />	  		
@@ -142,7 +146,7 @@ class ArtPage extends React.Component {
 	          <div className="spacer" style={spacer}></div>
 
 						<div id="breadcrumbs">
-							<span style={{...styles.breadcrumb, fontWeight: !activebreadcrumb ? 'inherit' : 'bold'}}
+							<span style={{...styles.breadcrumb, fontWeight: activebreadcrumb == null ? 'inherit' : 'bold'}}
 								onClick={() => this.handleFilterClick(null)}>ALL</span>
 							{
 								breadcrumbs.map((b,i) => (
