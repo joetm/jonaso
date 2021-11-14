@@ -146,7 +146,7 @@ class ArtPage extends React.Component {
 	          <div className="spacer" style={spacer}></div>
 
 						<div id="breadcrumbs">
-							<span style={{...styles.breadcrumb, fontWeight: activebreadcrumb == null ? 'inherit' : 'bold'}}
+							<span style={{...styles.breadcrumb, fontWeight: activebreadcrumb == null ? 'bold' : 'normal'}}
 								onClick={() => this.handleFilterClick(null)}>ALL</span>
 							{
 								breadcrumbs.map((b,i) => (
