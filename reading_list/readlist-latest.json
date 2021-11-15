@@ -1,8 +1,567 @@
 {
-    "modified": 1636704243,
-    "unrecognized_overall": 1341,
+    "modified": 1636968196,
+    "unrecognized_overall": 1339,
     "unrecognized_overall_percent": 0.18,
     "documents": [
+        {
+            "title": "PaperHunter : A System for Exploring Papers and Citation Contexts",
+            "year": 2019,
+            "authors": [
+                "Michael F\u00e4rber",
+                "Ashwath Sampath",
+                "Adam Jatowt"
+            ],
+            "filename": "!PaperHunter_Demo_ECIR2019.pdf",
+            "recog": 1,
+            "modified": 1636967879,
+            "keywords": "Future Science > Citations > Citation Polarity > PaperHunter",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "Mobile Augmented Reality: User Interfaces, Frameworks, and Intelligence",
+            "year": 2021,
+            "authors": [
+                "JACKY CAO",
+                "Hong Kong",
+                "LIK-HANG LEE",
+                "XIAOLI LIU"
+            ],
+            "filename": "!!2106.08710.pdf",
+            "recog": 1,
+            "modified": 1636916107,
+            "keywords": "Virtual Reality > Augmented Reality, AR, Mixed Reality > General",
+            "level": 3,
+            "priority": 2
+        },
+        {
+            "title": "Art Completes STEM Learning",
+            "year": 2021,
+            "authors": [
+                "Paul Fishwick"
+            ],
+            "filename": "!Art Completes STEM Learning. STEM (Science, Technology, Engineering\u2026 _ by Paul Fishwick _ Creative Automata _ Medium.pdf",
+            "recog": 1,
+            "modified": 1636914654,
+            "keywords": "Education > STEAM Education",
+            "level": 2,
+            "priority": 1
+        },
+        {
+            "title": "You/We/Us Inside the Coronavirus System",
+            "year": 2021,
+            "authors": [
+                "Paul Fishwick"
+            ],
+            "filename": "-You_We_Us Inside the Coronavirus System _ by Paul Fishwick _ Medium.pdf",
+            "recog": 1,
+            "modified": 1636914479,
+            "keywords": "Pandemics > Corona Virus Pandemic > Corona Virus System",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Special Issue on Arts, Aesthetics, and Performance in Telepresence Guest Editors\u2019 Introduction: Homo Ludens in Virtual Environments",
+            "year": 2018,
+            "authors": [],
+            "filename": "-pres_e_00295.pdf",
+            "recog": 1,
+            "modified": 1636914127,
+            "keywords": "Aesthetics > Aesthetic Computing",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "Aesthetic Computing",
+            "year": 2003,
+            "authors": [
+                "Christa Sommerer",
+                "Olav W. Bertelsen",
+                "Paul Fishwick"
+            ],
+            "filename": "-DagSemRep-348.pdf",
+            "recog": 1,
+            "modified": 1636913819,
+            "keywords": "Aesthetics > Aesthetic Computing",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "Ecce Homo (Mart\u00ednez and Gim\u00e9nez)",
+            "year": 2021,
+            "authors": [
+                "El\u00edas Garc\u00eda"
+            ],
+            "filename": "-Ecce Homo (Mart\u00ednez and Gim\u00e9nez) - Wikipedia.pdf",
+            "recog": 1,
+            "modified": 1636909553,
+            "keywords": "Memes, Internet Culture > Memes > Monkey Christ",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Spanish statue bodge up is a new rival to Borja's",
+            "year": 2021,
+            "authors": [
+                "Monkey Christ",
+                "Sam Jones"
+            ],
+            "filename": "-Spanish statue bodge-up is a new rival to Borja's Monkey Christ _ Spain _ The Guardian.pdf",
+            "recog": 1,
+            "modified": 1636909500,
+            "keywords": "Memes, Internet Culture > Memes > Monkey Christ",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "The Future Of AI Image Synthesis",
+            "year": 2021,
+            "authors": [],
+            "filename": "-The Future Of AI Image Synthesis - Ross Dawson.pdf",
+            "recog": 1,
+            "modified": 1636906622,
+            "keywords": "Machine Learning > Art",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "The Future of Art with Machine Learning",
+            "year": 2021,
+            "authors": [
+                "Hannah Johnston",
+                "Katherine Crowson",
+                "Sam King",
+                "David Bowie"
+            ],
+            "filename": "!The Future of Art with Machine Learning _ by Hannah Johnston _ Medium.pdf",
+            "recog": 1,
+            "modified": 1636906229,
+            "keywords": "Machine Learning > Art",
+            "level": 2,
+            "priority": 1
+        },
+        {
+            "title": "VQGAN+CLIP \u2014 How does it work?",
+            "year": 2021,
+            "authors": [
+                "Katherine Crowson"
+            ],
+            "filename": "-VQGAN+CLIP \u2014 How does it work_. The synthetic imagery (\u201cGAN Art\u201d) scene\u2026 _ by Alexa Steinbr\u00fcck _ Medium.pdf",
+            "recog": 1,
+            "modified": 1636905526,
+            "keywords": "Machine Learning > Generative Adversarial Networks, GAN > GAN Models > VQGAN+CLIP",
+            "level": 4,
+            "priority": 0
+        },
+        {
+            "title": "Aside",
+            "year": 2021,
+            "authors": [
+                "David Scott Kastan"
+            ],
+            "filename": "-Aside - Wikipedia.pdf",
+            "recog": 1,
+            "modified": 1636904045,
+            "keywords": "Movies > Aside",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "\ue049\u00edch \ue048\u1ea3ng \u0110\u1ee9c",
+            "year": 2021,
+            "authors": [
+                "Qu\u1ea3ng \u0110\u1ee9c"
+            ],
+            "filename": "-Th\u00edch Qu\u1ea3ng \u0110\u1ee9c - Wikipedia.pdf",
+            "recog": 1,
+            "modified": 1636895601,
+            "keywords": "Protests > Self-Immolation",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "Fake News Flags, Cognitive Dissonance, and the Believability of Social Media Posts",
+            "year": 2019,
+            "authors": [
+                "Kathrin Figl",
+                "Svitlana Vakulenko"
+            ],
+            "filename": "!FakeNewsFlagsandBelievabilityonSocialMedia-revised.pdf",
+            "recog": 1,
+            "modified": 1636894815,
+            "keywords": "Communities, Networks > Social Media > Issues > Misinformation > Fake News > Fake News Flags",
+            "level": 6,
+            "priority": 1
+        },
+        {
+            "title": "Survey of Post-OCR Processing Approaches",
+            "year": 2021,
+            "authors": [
+                "THI TUYET",
+                "HAI NGUYEN",
+                "ADAM JATOWT"
+            ],
+            "filename": "-cs21.pdf",
+            "recog": 1,
+            "modified": 1636886310,
+            "keywords": "NLP > Applications > OCR > Post-OCR Processing",
+            "level": 4,
+            "priority": 0
+        },
+        {
+            "title": "Chapter 10 Computational approaches to lexical semantic change: Visualization systems and novel applications",
+            "year": 2021,
+            "authors": [
+                "Adam Jatowta",
+                "Nina Tahmasebib",
+                "Lars Borinb",
+                "Adam Jatowt",
+                "Nina Tahmasebi",
+                "Lars Borin"
+            ],
+            "filename": "!303-Book Manuscript-2383-1-10-20210827.pdf",
+            "recog": 1,
+            "modified": 1636885861,
+            "keywords": "Machine Learning > Concept Drift > Lexical Semantic Change",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "Multi-TimeLine Summarization (MTLS): Improving Timeline Summarization by Generating Multiple Summaries",
+            "year": 2021,
+            "authors": [
+                "Yi Yu",
+                "Adam Jatowt",
+                "Antoine Doucet",
+                "Kazunari Sugiyama",
+                "Masatoshi Yoshikawa",
+                "Michael Jordan"
+            ],
+            "filename": "!2021.acl-long.32.pdf",
+            "recog": 1,
+            "modified": 1636884151,
+            "keywords": "NLP > Natural Language Generation, NLG > Summarization > Multiple TimeLine Summarization (MTLS)",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "Making Time Fly: Using Fillers to Improve Perceived Latency in Crowd-Powered Conversational Systems",
+            "year": 2021,
+            "authors": [
+                "Tahir Abbas",
+                "Ujwal Gadiraju",
+                "Vassilis-Javed Khan",
+                "Panos Markopoulos"
+            ],
+            "filename": "!!18935-Article Text-22701-1-2-20211004 (1).pdf",
+            "recog": 1,
+            "modified": 1636881248,
+            "keywords": "Crowdsourcing, Human Computation > Issues > Delays, Idle Time > Fillers",
+            "level": 4,
+            "priority": 2
+        },
+        {
+            "title": "A Checklist to Combat Cognitive Biases in Crowdsourcing",
+            "year": 2021,
+            "authors": [
+                "Tim Draws",
+                "Alisa Rieger",
+                "Oana Inel",
+                "Ujwal Gadiraju",
+                "Nava Tintarev"
+            ],
+            "filename": "!!!18939-Article Text-22705-1-2-20211004.pdf",
+            "recog": 1,
+            "modified": 1636879852,
+            "keywords": "Crowdsourcing, Human Computation > Issues > Bias > Bias Checklist",
+            "level": 4,
+            "priority": 3
+        },
+        {
+            "title": "Iterative Quality Control Strategies for Expert Medical Image Labeling",
+            "year": 2021,
+            "authors": [
+                "Beverly Freeman",
+                "Naama Hammel",
+                "Sonia Phene",
+                "Abigail Huang",
+                "Rebecca Ackermann",
+                "Olga Kanzheleva",
+                "Miles Hutson",
+                "Caitlin Taggart",
+                "Quang Duong",
+                "Rory Sayres"
+            ],
+            "filename": "!!18940-Article Text-22706-1-2-20211004.pdf",
+            "recog": 1,
+            "modified": 1636879408,
+            "keywords": "Crowdsourcing, Human Computation > Issues > Quality, Accuracy > Quality Control > Medical Image Labelling",
+            "level": 5,
+            "priority": 2
+        },
+        {
+            "title": "Rapid Instance-Level Knowledge Acquisition for Google Maps from Class-Level Common Sense",
+            "year": 2021,
+            "authors": [
+                "Chris Welty",
+                "Lora Aroyo",
+                "Flip Korn",
+                "Sara M. McCarthy",
+                "Shubin Zhao"
+            ],
+            "filename": "-18947-Article Text-22713-1-2-20211004.pdf",
+            "recog": 1,
+            "modified": 1636878348,
+            "keywords": "Crowdsourcing, Human Computation > Applications > Knowledge Bases > Knowledge Base Completion",
+            "level": 4,
+            "priority": 0
+        },
+        {
+            "title": "Exploring the Music Perception Skills of Crowd Workers",
+            "year": 2021,
+            "authors": [
+                "Ioannis Petros Samiotis",
+                "Sihang Qiu",
+                "Christoph Lofi",
+                "Jie Yang",
+                "Ujwal Gadiraju",
+                "Alessandro Bozzon"
+            ],
+            "filename": "!18944-Article Text-22710-1-2-20211004.pdf",
+            "recog": 1,
+            "modified": 1636876688,
+            "keywords": "Crowdsourcing, Human Computation > Applications > Music > Auditory Perception Skills",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "Utility of Crowdsourced User Experiments for Measuring the Central Tendency of User Performance to Evaluate Error-Rate Models on GUIs",
+            "year": 2021,
+            "authors": [
+                "Shota Yamanaka"
+            ],
+            "filename": "-18948-Article Text-22714-1-2-20211004.pdf",
+            "recog": 1,
+            "modified": 1636876441,
+            "keywords": "Crowdsourcing, Human Computation > Applications > User Interfaces, UI",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Pterodactyl: Two-Step Redaction of Images for Robust Face Deidentification",
+            "year": 2021,
+            "authors": [
+                "Abdullah B. Alshaibani",
+                "Alexander J. Quinn"
+            ],
+            "filename": "-18937-Article Text-22703-1-2-20211004.pdf",
+            "recog": 1,
+            "modified": 1636875449,
+            "keywords": "Crowdsourcing, Human Computation > Applications > Moderation",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Crowdsourcing with Meta-Workers: A New Way to Save the Budget",
+            "year": 2021,
+            "authors": [
+                "Guangyang Han",
+                "Guoxian Yu",
+                "Lizhen Cui",
+                "Carlotta Domeniconi",
+                "Xiangliang Zhang"
+            ],
+            "filename": "-2111.04068.pdf",
+            "recog": 1,
+            "modified": 1636817787,
+            "keywords": "Crowdsourcing, Human Computation > Applications > Clustering > Meta Workers",
+            "level": 4,
+            "priority": 0
+        },
+        {
+            "title": "Three Forms of Meaning and the Management of Complexity",
+            "year": 2011,
+            "authors": [
+                "Jordan B Peterson"
+            ],
+            "filename": "-BC122013PetersonJBThreeKindsofMeaningFinal.pdf",
+            "recog": 1,
+            "modified": 1636808592,
+            "keywords": "Philosophy > Complexity",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "COMPLEXITY MANAGEMENT THEORY: MOTIVATION FOR IDEOLOGICAL RIGIDITY AND SOCIAL CONFLICT",
+            "year": 2002,
+            "authors": [
+                "Jordan B. Peterson"
+            ],
+            "filename": "-peterson2002.pdf",
+            "recog": 1,
+            "modified": 1636808384,
+            "keywords": "Philosophy > Complexity",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "Personality and Ethics on Online Labor Markets: How mood influences ethical perceptions",
+            "year": 2021,
+            "authors": [
+                "Evangelos Mourelatos"
+            ],
+            "filename": "!Manuscript _Author.pdf",
+            "recog": 1,
+            "modified": 1636791671,
+            "keywords": "Crowdsourcing, Human Computation > Issues > Mood",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "Drawing Together. INFRASTRUCTURING AND POLITICS FOR PARTICIPATORY DESIGN",
+            "year": 2019,
+            "authors": [
+                "Andrea Botero",
+                "Helena Karasti",
+                "Joanna Saad-Sulonen",
+                "Hanne Cecilie Geirbo",
+                "Karen S. Baker",
+                "Elena Parmiggiani",
+                "Sanna Marttila",
+                "Christopher Frauenberger",
+                "Amanda Geppert",
+                "Alix Gerber",
+                "Christine Hegel",
+                "Giacomo Poderi",
+                "Cathrine Seidelin",
+                "Anna Seravalli",
+                "Laura Scheepmaker",
+                "Jesper Simonsen",
+                "Joanna Saad Sulonen"
+            ],
+            "filename": "-zine-infrastructuring-low2019.pdf",
+            "recog": 1,
+            "modified": 1636787081,
+            "keywords": "Design, HCI, UI, UX > Participatory Design",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "A measure of \u2018environmental happiness\u2019: Infrastructuring environmental risk in oil and gas off shore operations",
+            "year": 2016,
+            "authors": [
+                "Elena Parmiggiani",
+                "Eric Monteiro"
+            ],
+            "filename": "-STS_29%281%29_Parmiggiani.pdf",
+            "recog": 1,
+            "modified": 1636786913,
+            "keywords": "Environment > Environmental Happiness",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "How Much Does It Cost to Mint an NFT?",
+            "year": 2021,
+            "authors": [],
+            "filename": "-How Much Does It Cost to Mint an NFT_.pdf",
+            "recog": 1,
+            "modified": 1636719249,
+            "keywords": "Blockchain, Bitcoin > NFT Art > Minting > Minting Costs",
+            "level": 4,
+            "priority": 0
+        },
+        {
+            "title": "the only real cure is long-term policy, thought and investment",
+            "year": 2021,
+            "authors": [
+                "Roberto Saviano"
+            ],
+            "filename": "-Naples is demolishing Le Vele, symbol of its Camorra past. But I\u2019m not celebrating _ Italy _ The Guardian.pdf",
+            "recog": 1,
+            "modified": 1636710823,
+            "keywords": "Buildings > Le Vele, Naples",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "Warum Spaniens Impfkampagne so gut l\u00e4uft",
+            "year": 2021,
+            "authors": [],
+            "filename": "-Coronavirus_ Warum Spaniens Impfkampagne so gut l\u00e4uft _ tagesschau.de.pdf",
+            "recog": 1,
+            "modified": 1636709946,
+            "keywords": "Pandemics > Corona Virus Pandemic > Spain",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Teile Madrids abgeriegelt",
+            "year": 2020,
+            "authors": [
+                "Steigende Corona-Zahlen",
+                "Madrids abgeriegelt"
+            ],
+            "filename": "-Steigende Corona-Zahlen _ Teile Madrids abgeriegelt _ tagesschau.de.pdf",
+            "recog": 1,
+            "modified": 1636709941,
+            "keywords": "Pandemics > Corona Virus Pandemic > Spain",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Fast 400 neue Todesfa\u0308lle in Spanien",
+            "year": 2020,
+            "authors": [],
+            "filename": "-Coronavirus in Europa_ Fast 400 neue Todesf\u00e4lle in Spanien _ tagesschau.de.pdf",
+            "recog": 1,
+            "modified": 1636709930,
+            "keywords": "Pandemics > Corona Virus Pandemic > Spain",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "\"Alle Pl\u00e4ne \u00fcber den Haufen geworfen\"",
+            "year": 2020,
+            "authors": [
+                "Haufen geworfen"
+            ],
+            "filename": "-Corona-Krise in Spanien_ _Alle Pl\u00e4ne \u00fcber den Haufen geworfen_ _ tagesschau.de.pdf",
+            "recog": 1,
+            "modified": 1636709923,
+            "keywords": "Pandemics > Corona Virus Pandemic > Spain",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Co-designing Data Experiments",
+            "year": 2020,
+            "authors": [
+                "Cathrine Seidelin",
+                "Yvonne Dittrich",
+                "Erik Gr\u00f6nvall"
+            ],
+            "filename": "!3419249.3420152.pdf",
+            "recog": 1,
+            "modified": 1636708321,
+            "keywords": "Experimentation > Data Exploration > Data Sphere and Data Template",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "Flexible work and personal digital infrastructures",
+            "year": 2020,
+            "authors": [
+                "Mohammad Hossein Jarrahi",
+                "Gemma Newlands"
+            ],
+            "filename": "!Jarrahi et al. - Flexible work and personal digital infrastructures.pdf",
+            "recog": 1,
+            "modified": 1636707395,
+            "keywords": "CSCW > Virtual Work, Distributed Work, Remote Work > Bring Your Own Environment > Personal Digital Infrastructures (PDIs)",
+            "level": 4,
+            "priority": 1
+        },
         {
             "title": "Challenges in Designing Interfaces for Large Displays:  the Practitioners' Point of View",
             "year": 2020,
@@ -929,669 +1488,6 @@
             "keywords": "Machine Learning > Art > Autonomous Artificial Artist, AAA > Curation Markets",
             "level": 4,
             "priority": 2
-        },
-        {
-            "title": "A curation market sells tokens for ETH through a continuous token model.",
-            "year": 2021,
-            "authors": [
-                "Simon de la Rouviere"
-            ],
-            "filename": "!Let\u2019s Summon An Autonomous Artist - A Bot That Creates, Owns and Sells Its Own Art. _ by Simon de la Rouviere _ Medium.pdf",
-            "recog": 1,
-            "modified": 1636138980,
-            "keywords": "Machine Learning > Art > Autonomous Artificial Artist, AAA > ArtDAO",
-            "level": 4,
-            "priority": 1
-        },
-        {
-            "title": "Artist in the Cloud",
-            "year": 2021,
-            "authors": [
-                "Gene Kogan"
-            ],
-            "filename": "!!Artist in the Cloud. Towards the summit of AI, art, and\u2026 _ by Gene Kogan _ Medium.pdf",
-            "recog": 1,
-            "modified": 1636138449,
-            "keywords": "Machine Learning > Art > Autonomous Artificial Artist, AAA > Abraham.ai",
-            "level": 4,
-            "priority": 2
-        },
-        {
-            "title": "On the Opportunities and Risks of Foundation Models",
-            "year": 2021,
-            "authors": [
-                "Rishi Bommasani",
-                "Drew A. Hudson",
-                "Ehsan Adeli",
-                "Russ Altman",
-                "Simran Arora",
-                "Sydney von Arx",
-                "Michael S. Bernstein",
-                "Jeannette Bohg",
-                "Antoine Bosselut",
-                "Emma Brunskill",
-                "Erik Brynjolfsson",
-                "Shyamal Buch",
-                "Dallas Card Rodrigo Castellon",
-                "Niladri Chatterji",
-                "Annie Chen",
-                "Kathleen Creel",
-                "Jared Quincy Davis",
-                "Dorottya Demszky",
-                "Chris Donahue",
-                "Moussa Doumbouya",
-                "Esin Durmus",
-                "Stefano Ermon",
-                "John Etchemendy",
-                "Kawin Ethayarajh",
-                "Li Fei-Fei",
-                "Chelsea Finn",
-                "Trevor Gale",
-                "Lauren Gillespie",
-                "Karan Goel",
-                "Noah Goodman",
-                "Shelby Grossman",
-                "Neel Guha",
-                "Tatsunori Hashimoto",
-                "Peter Henderson",
-                "John Hewitt",
-                "Daniel E. Ho",
-                "Jenny Hong Kyle Hsu",
-                "Jing Huang",
-                "Thomas Icard Saahil Jain",
-                "Dan Jurafsky",
-                "Pratyusha Kalluri",
-                "Siddharth Karamcheti",
-                "Geoff Keeling",
-                "Fereshte Khani",
-                "Omar Khattab Pang",
-                "Wei Koh",
-                "Mark Krass",
-                "Ranjay Krishna Rohith Kuditipudi",
-                "Ananya Kumar Faisal Ladhak",
-                "Mina Lee",
-                "Tony Lee Jure Leskovec",
-                "Isabelle Levent",
-                "Xiang Lisa Li",
-                "Xuechen Li",
-                "Tengyu Ma Ali Malik",
-                "Christopher D. Manning",
-                "Suvir Mirchandani",
-                "Eric Mitchell",
-                "Zanele Munyikwa",
-                "Suraj Nair Avanika Narayan",
-                "Deepak Narayanan",
-                "Ben Newman",
-                "Allen Nie",
-                "Juan Carlos Niebles",
-                "Hamed Nilforoshan",
-                "Julian Nyarko",
-                "Giray Ogut",
-                "Laurel Orr Isabel Papadimitriou",
-                "Joon Sung Park",
-                "Chris Piech",
-                "Eva Portelance",
-                "Rob Reich",
-                "Hongyu Ren",
-                "Frieda Rong",
-                "Yusuf Roohani Camilo Ruiz",
-                "Jack Ryan Christopher R\u00e9",
-                "Dorsa Sadigh",
-                "Shiori Sagawa",
-                "Keshav Santhanam",
-                "Andy Shih Krishnan",
-                "Srinivasan Alex Tamkin",
-                "Rohan Taori",
-                "Armin W. Thomas",
-                "Florian Tram\u00e8r",
-                "Rose E. Wang",
-                "William Wang",
-                "Bohan Wu",
-                "Jiajun Wu",
-                "Yuhuai Wu",
-                "Sang Michael Xie",
-                "Michihiro Yasunaga",
-                "Jiaxuan You Matei Zaharia",
-                "Michael Zhang",
-                "Tianyi Zhang",
-                "Xikun Zhang",
-                "Yuhui Zhang",
-                "Lucia Zheng",
-                "Kaitlyn Zhou",
-                "Percy Liang"
-            ],
-            "filename": "!!!2108.07258.pdf",
-            "recog": 1,
-            "modified": 1636121607,
-            "keywords": "AI > Foundation Models",
-            "level": 2,
-            "priority": 3
-        },
-        {
-            "title": "CogView: Mastering Text-to-Image Generation via Transformers",
-            "year": 2021,
-            "authors": [
-                "Ming Ding",
-                "Zhuoyi Yang",
-                "Wenyi Hong",
-                "Wendi Zheng",
-                "Chang Zhou",
-                "Da Yin",
-                "Junyang Lin",
-                "Xu Zou",
-                "Zhou Shao",
-                "Hongxia Yang",
-                "Jie Tang"
-            ],
-            "filename": "-2105.13290.pdf",
-            "recog": 1,
-            "modified": 1636103617,
-            "keywords": "Machine Learning > Generative Adversarial Networks, GAN > GAN Models > CogView",
-            "level": 4,
-            "priority": 0
-        },
-        {
-            "title": "Artbreeder. Draw me an Electric Sheep.",
-            "year": 2021,
-            "authors": [
-                "Vlad Alex (Merzmensch",
-                "Ian Goodfellow"
-            ],
-            "filename": "!Artbreeder. Draw me an Electric Sheep. _ by Vlad Alex (Merzmensch) _ Towards Data Science.pdf",
-            "recog": 1,
-            "modified": 1636096270,
-            "keywords": "Machine Learning > Art > Services > Artbreeder",
-            "level": 4,
-            "priority": 1
-        },
-        {
-            "title": "Projected GANs Converge Faster",
-            "year": 2021,
-            "authors": [
-                "Axel Sauer Kashyap",
-                "Chitta Jens M\u00fcller",
-                "Andreas Geiger"
-            ],
-            "filename": "-2111.01007.pdf",
-            "recog": 1,
-            "modified": 1635836942,
-            "keywords": "Machine Learning > Generative Adversarial Networks, GAN > GAN Models > Projected GANs",
-            "level": 4,
-            "priority": 0
-        },
-        {
-            "title": "Passive attention in artificial neural networks predicts human visual selectivity",
-            "year": 2021,
-            "authors": [
-                "Thomas A. Langlois",
-                "H. Charles Zhao",
-                "Erin Grantd",
-                "Ishita Dasguptae",
-                "Thomas L. Griffiths",
-                "Nori Jacoby"
-            ],
-            "filename": "!2107.07013.pdf",
-            "recog": 1,
-            "modified": 1635774698,
-            "keywords": "Machine Learning > Explainable AI, XAI > Interpretability > Visual Selectivity",
-            "level": 4,
-            "priority": 1
-        },
-        {
-            "title": "Gibbs Sampling with People",
-            "year": 2020,
-            "authors": [
-                "Peter M. C. Harrison",
-                "Raja Marjieh"
-            ],
-            "filename": "!!!NeurIPS-2020-gibbs-sampling-with-people-Paper.pdf",
-            "recog": 1,
-            "modified": 1635755079,
-            "keywords": "Aesthetics > Semantic Representations > Gibbs Sampling with People",
-            "level": 3,
-            "priority": 3
-        },
-        {
-            "title": "Responsible Computing During COVID-19 and Beyond",
-            "year": 2021,
-            "authors": [],
-            "filename": "!3466612.pdf",
-            "recog": 1,
-            "modified": 1635700548,
-            "keywords": "Issues > Ethics > Responsible Computing",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "Manipulating and Measuring Model lnterpretability",
-            "year": 2021,
-            "authors": [
-                "FOROUGH POURSABZFSANGDEH",
-                "Forough Poursabzi\u2014Sangdeh",
-                "Daniel G. Goldstein",
-                "Jake M. Hofman",
-                "Jennifer Wortman Vaughan"
-            ],
-            "filename": "!!!1802.07810.pdf",
-            "recog": 1,
-            "modified": 1635700496,
-            "keywords": "Machine Learning > Explainable AI, XAI > Interpretability",
-            "level": 3,
-            "priority": 3
-        },
-        {
-            "title": "Structured Imagination: The Flole of Category Structure in Exemplar Generation",
-            "year": 1999,
-            "authors": [
-                "THOMAS B. WARD"
-            ],
-            "filename": "!!!ward1994-decrypted.pdf",
-            "recog": 1,
-            "modified": 1635700251,
-            "keywords": "Creativity > Process > 1 Idea Generation, Creativity Stimulation > Examples > Category Structure",
-            "level": 5,
-            "priority": 3
-        },
-        {
-            "title": "Servant Leadership, Third-Party Behavior, and Emotional Exhaustion of Followers",
-            "year": 2020,
-            "authors": [
-                "Innocentina-Marie O. Obi",
-                "Katalien Bollen",
-                "Hillie Aaldering",
-                "Wouter Robijn",
-                "Martin C. Euwema"
-            ],
-            "filename": "-ncmr-380-obi.pdf",
-            "recog": 1,
-            "modified": 1635700090,
-            "keywords": "Leadership, Management > Managing Conflict",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "How Siraj Raval\u2019s machine learning videos were the victim of their own success",
-            "year": 2021,
-            "authors": [
-                "Vicki Boykis",
-                "Siraj Raval",
-                "Vicki B\ud83c\udf83ykis"
-            ],
-            "filename": "-The curse of being Big on the Internet _ Vicki Boykis.pdf",
-            "recog": 1,
-            "modified": 1635694974,
-            "keywords": "Issues > Plagiarism > Siraj Raval",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "The Rise and Fall of Siraj Raval",
-            "year": 2021,
-            "authors": [
-                "Siraj Raval"
-            ],
-            "filename": "-The Rise and Fall of Siraj Raval \u2014 Steemit.pdf",
-            "recog": 1,
-            "modified": 1635694737,
-            "keywords": "Issues > Plagiarism > Siraj Raval",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "IdeateRelate: An Examples Gallery That Helps Creators Explore Ideas in Relation to Their Own",
-            "year": 2021,
-            "authors": [
-                "XIAQTQ N G (TQN",
-                "RQSALEE N XIQN",
-                "BQYAN CI WANG",
-                "Rosaleen Xiong",
-                "Boyang Wang",
-                "David Min"
-            ],
-            "filename": "!!3479496.pdf",
-            "recog": 1,
-            "modified": 1635668036,
-            "keywords": "Creativity > Process > 1 Idea Generation, Creativity Stimulation > Examples > IdeaRelate",
-            "level": 5,
-            "priority": 2
-        },
-        {
-            "title": "We Are What We Watch: Movie Plots Predict the Personalities of Those who \u201cLike\u201d Them",
-            "year": 2020,
-            "authors": [
-                "Gideon Nave"
-            ],
-            "filename": "!!We are what we watch.pdf",
-            "recog": 1,
-            "modified": 1635605816,
-            "keywords": "Psychology > Personality > Movies",
-            "level": 3,
-            "priority": 2
-        },
-        {
-            "title": "Behavioral Study of Obedience",
-            "year": 2014,
-            "authors": [
-                "Stanley Milgram"
-            ],
-            "filename": "!MilgramOriginalWork.pdf",
-            "recog": 1,
-            "modified": 1635604413,
-            "keywords": "Psychology > Social Psychology > Milgram Experiment",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "Intersectional feminism: what it means and why it matters right now",
-            "year": 2021,
-            "authors": [
-                "Women/Ryan Brown",
-                "In Brazil",
-                "Valdecir Nascimento",
-                "Sonia Maribel Sontay"
-            ],
-            "filename": "-Intersectional feminism_ what it means and why it matters right now _ UN Women \u2013 Headquarters.pdf",
-            "recog": 1,
-            "modified": 1635599877,
-            "keywords": "Feminism, Gender Bias, Female Empowerment > Intersectional Feminism",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "\ue049e Ocean Cleanup",
-            "year": 2021,
-            "authors": [],
-            "filename": "-The Ocean Cleanup - Wikipedia.pdf",
-            "recog": 1,
-            "modified": 1635582031,
-            "keywords": "Environment > Trash > Ocean Cleanup",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "Re-evaluating my position on NFTs",
-            "year": 2021,
-            "authors": [],
-            "filename": "!Re-evaluating my position on NFTs.pdf",
-            "recog": 1,
-            "modified": 1635509356,
-            "keywords": "Blockchain, Bitcoin > NFT Art > Issues > Ethics",
-            "level": 4,
-            "priority": 1
-        },
-        {
-            "title": "Ohi Day",
-            "year": 2021,
-            "authors": [],
-            "filename": "-Ohi Day - Wikipedia.pdf",
-            "recog": 1,
-            "modified": 1635430466,
-            "keywords": "Countries > Greece",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "Inedia",
-            "year": 2021,
-            "authors": [
-                "Ram Bahadur",
-                "Bomjon (\"Bakji",
-                "Prahlad Jani (\"Mataji",
-                "Jasmuheen Wiley Brooks",
-                "Hira Ratan Manek",
-                "Ray Maor",
-                "Prahlad Jani"
-            ],
-            "filename": "-Inedia - Wikipedia.pdf",
-            "recog": 1,
-            "modified": 1635355797,
-            "keywords": "Cults > Breatharianism",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "Art Connects Us",
-            "year": 2021,
-            "authors": [
-                "Hannah Johnston"
-            ],
-            "filename": "-Art Connects Us - Hannah Johnston - Medium.pdf",
-            "recog": 1,
-            "modified": 1635354142,
-            "keywords": "Machine Learning > Art > Art Projects > Personalized Art",
-            "level": 4,
-            "priority": 0
-        },
-        {
-            "title": "Art Connects Us",
-            "year": "N/A",
-            "authors": [],
-            "filename": "-Art Connects Us.pdf",
-            "recog": 0,
-            "modified": 1635353797,
-            "keywords": "Machine Learning > Art > Art Projects > Personalized Art",
-            "level": 4,
-            "priority": 0
-        },
-        {
-            "title": "Mehran Karimi Nasseri",
-            "year": 2021,
-            "authors": [
-                "Mehran Karimi Nasseri"
-            ],
-            "filename": "-Mehran Karimi Nasseri - Wikipedia.pdf",
-            "recog": 1,
-            "modified": 1635351769,
-            "keywords": "Migration, Asylum, Immigration > Living in Airports > Mehran Karimi Nasseri",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "Bob's Game",
-            "year": 2021,
-            "authors": [
-                "Robert Pelloni"
-            ],
-            "filename": "-Bob's Game - Wikipedia.pdf",
-            "recog": 1,
-            "modified": 1635350071,
-            "keywords": "Games, Game Design > Bob's Game",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "Selecting Semantically-Resonant Colors for Data Visualization",
-            "year": 2013,
-            "authors": [
-                "Sharon Lin",
-                "Julie Fortuna",
-                "Chinmay Kulkarni",
-                "Maureen Stone",
-                "Jeffrey Heer"
-            ],
-            "filename": "!2013-SemanticColor-EuroVis.pdf",
-            "recog": 1,
-            "modified": 1635344310,
-            "keywords": "Visualisation > Colors > Color Selection > Semantic Color Selection",
-            "level": 4,
-            "priority": 1
-        },
-        {
-            "title": "Intrinsic Colorization",
-            "year": 2008,
-            "authors": [
-                "Xiaopei Liu",
-                "Liang Wan",
-                "Yingge Qu",
-                "Tien-Tsin Wong",
-                "Stephen Lin",
-                "Chi-Sing Leung",
-                "Pheng-Ann Heng"
-            ],
-            "filename": "-a152-liu.pdf",
-            "recog": 1,
-            "modified": 1635343669,
-            "keywords": "Machine Learning > Applications > Colorization > Intrinsic Colorization",
-            "level": 4,
-            "priority": 0
-        },
-        {
-            "title": "Brain Relevance Feedback for Interactive Image Generation",
-            "year": 2020,
-            "authors": [
-                "Carlos de la Torre-Ortiz",
-                "Michiel M. Spap\u00e9",
-                "Lauri Kangassalo",
-                "Tuukka Ruotsalo"
-            ],
-            "filename": "!!!3379337.3415821.pdf",
-            "recog": 1,
-            "modified": 1635334690,
-            "keywords": "Neuroscience > Brain Computer Interfaces, BCI > Brain Relevance Feedback",
-            "level": 3,
-            "priority": 3
-        },
-        {
-            "title": "Generating Images Instead of Retrieving Them: Relevance Feedback on Generative Adversarial Networks",
-            "year": 2020,
-            "authors": [
-                "Antti Ukkonen",
-                "Pyry Joona",
-                "Tuukka Ruotsalo"
-            ],
-            "filename": "!!!3397271.3401129.pdf",
-            "recog": 1,
-            "modified": 1635334544,
-            "keywords": "Neuroscience > Brain Computer Interfaces, BCI > Brain Relevance Feedback",
-            "level": 3,
-            "priority": 3
-        },
-        {
-            "title": "Brain-computer interface for generating personally attractive images",
-            "year": 2021,
-            "authors": [
-                "Michiel Spap\u00e9",
-                "Keith M. Davis",
-                "Lauri Kangassalo",
-                "Niklas Ravaja",
-                "Zania Sovij\u00e4rvi-Spap\u00e9",
-                "Tuukka Ruotsalo"
-            ],
-            "filename": "!!!Brain-computer_interface_for_generating_personally_attractive_images.pdf",
-            "recog": 1,
-            "modified": 1635333777,
-            "keywords": "Neuroscience > Brain Computer Interfaces, BCI > Brain Relevance Feedback > Generative Brain-Computer Interfaces (GBCI)",
-            "level": 4,
-            "priority": 3
-        },
-        {
-            "title": "Meta-Gig: Empowering anyone to create crowd marketplaces",
-            "year": 2021,
-            "authors": [
-                "Carlos Toxtli",
-                "Saiph Savage"
-            ],
-            "filename": "!!!62-13-129-2-10-20210201.pdf",
-            "recog": 1,
-            "modified": 1635330846,
-            "keywords": "Crowdsourcing, Human Computation > Configurable Crowdsourcing Platforms > Meta-Gig",
-            "level": 3,
-            "priority": 3
-        },
-        {
-            "title": "Narratives + Diagrams: An Integrated Approach for Externalizing and Sharing People\u2019s Causal Beliefs",
-            "year": 2021,
-            "authors": [
-                "HAOCONG CHENG",
-                "BRIAN P. BAILEY",
-                "YUN HUANG"
-            ],
-            "filename": "!!!3479588.pdf",
-            "recog": 1,
-            "modified": 1635330579,
-            "keywords": "Sensemaking > Causal Beliefs > Externalizing Causal Beliefs",
-            "level": 3,
-            "priority": 3
-        },
-        {
-            "title": "Crowd-Feedback in Information Systems Development: A State-of-the-Art Review",
-            "year": "N/A",
-            "authors": [
-                "Alexander Maedche",
-                "Saskia Haug"
-            ],
-            "filename": "!!!Crowd-FeedbackinInformationSystemsDevelopmentAState-of-the-ArtReview.pdf",
-            "recog": 1,
-            "modified": 1635330259,
-            "keywords": "Feedback > General, Theory",
-            "level": 2,
-            "priority": 3
-        },
-        {
-            "title": "Putting Tools in Their Place: The Role of Time and Perspective in Human-AI Collaboration for Qualitative Analysis",
-            "year": 2021,
-            "authors": [
-                "JESSICA L. FEUSTON",
-                "JED R. BRUBAKER"
-            ],
-            "filename": "!3479856.pdf",
-            "recog": 1,
-            "modified": 1635316418,
-            "keywords": "AI > Collaboration, Cooperation > Applications > Qualitative Analysis",
-            "level": 4,
-            "priority": 1
-        },
-        {
-            "title": "\u201cI always assumed that I wasn\u2019t really that close to [her]\u201d: Reasoning about Invisible Algorithms in News Feeds",
-            "year": 2020,
-            "authors": [
-                "Motahhare Eslami",
-                "Aimee Rickman",
-                "Kristen Vaccaro",
-                "Amirhossein Aleyasen",
-                "Andy Vuong",
-                "Karrie Karahalios",
-                "Kevin Hamilton",
-                "Christian Sandvig"
-            ],
-            "filename": "!2702123.2702556.pdf",
-            "recog": 1,
-            "modified": 1635246377,
-            "keywords": "Machine Learning > Explainable AI, XAI > Folk Theories",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "Understanding User Beliefs About Algorithmic Curation in the Facebook News Feed",
-            "year": 2020,
-            "authors": [
-                "Emilee Rader"
-            ],
-            "filename": "!2702123.2702174.pdf",
-            "recog": 1,
-            "modified": 1635246247,
-            "keywords": "Machine Learning > Explainable AI, XAI > Folk Theories",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "First I \u201clike\u201d it, then I hide it: Folk Theories of Social Feeds",
-            "year": 2020,
-            "authors": [
-                "Motahhare Eslami",
-                "Karrie Karahalios",
-                "Christian Sandvig",
-                "Kristen Vaccaro",
-                "Aimee Rickman",
-                "Kevin Hamilton",
-                "Alex Kirlik"
-            ],
-            "filename": "!!!2858036.2858494.pdf",
-            "recog": 1,
-            "modified": 1635245845,
-            "keywords": "Machine Learning > Explainable AI, XAI > Folk Theories",
-            "level": 3,
-            "priority": 3
         }
     ]
 }
