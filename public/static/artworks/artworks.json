@@ -1,5 +1,44 @@
 [
   {
+    "series": "UFO Landing",
+    "numtiles": 3,
+    "works": [
+      {
+        "title": "",
+        "thumb": "/static/artworks/vqganclip/ufo/2/75.png",
+        "method": ["VQGAN+CLIP"],
+        "model": "vqgan_imagenet_f16_16384",
+        "initial": false,
+        "target": false,
+        "src": null,
+        "year": "2021",
+        "month": "11"
+      },
+      {
+        "title": "",
+        "thumb": "/static/artworks/vqganclip/ufo/1/150.png",
+        "method": ["VQGAN+CLIP"],
+        "model": "vqgan_imagenet_f16_16384",
+        "initial": false,
+        "target": false,
+        "src": null,
+        "year": "2021",
+        "month": "11"
+      },
+      {
+        "title": "",
+        "thumb": "/static/artworks/vqganclip/ufo/3/175.png",
+        "method": ["VQGAN+CLIP"],
+        "model": "vqgan_imagenet_f16_16384",
+        "initial": false,
+        "target": false,
+        "src": null,
+        "year": "2021",
+        "month": "11"
+      }
+    ]
+  },
+  {
     "series": "Opening into another World",
     "numtiles": 2,
     "works": [
@@ -11,6 +50,23 @@
         "initial": true,
         "target": false,
         "src": "/static/artworks/vqganclip/well/2/realesrgan/1125_out.png",
+        "year": "2021",
+        "month": "11"
+      }
+    ]
+  },
+  {
+    "series": "UFO Landing",
+    "numtiles": 2,
+    "works": [
+      {
+        "title": "",
+        "thumb": "/static/artworks/vqganclip/ufo/4/50.png",
+        "method": ["VQGAN+CLIP"],
+        "model": "vqgan_imagenet_f16_16384",
+        "initial": false,
+        "target": false,
+        "src": null,
         "year": "2021",
         "month": "11"
       }
@@ -791,6 +847,79 @@
         "src": null,
         "year": "2021",
         "month": "10"
+      }
+    ]
+  },
+  {
+    "series": "Rage Against The Human",
+    "method": "vqgan+clip",
+    "numtiles": 3,
+    "works": [
+      {
+        "title": "",
+        "thumb": "/static/artworks/vqganclip/robot/burning/20/175.png",
+        "method": "VQGAN+CLIP",
+        "model": "vqgan_imagenet_f16_16384",
+        "initial": false,
+        "target": false,
+        "src": null,
+        "year": "2021",
+        "month": "11"
+      },
+      {
+        "title": "",
+        "thumb": "/static/artworks/vqganclip/robot/burning/21/175.png",
+        "method": "VQGAN+CLIP",
+        "model": "vqgan_imagenet_f16_16384",
+        "initial": false,
+        "target": false,
+        "src": null,
+        "year": "2021",
+        "month": "11"
+      },
+      {
+        "title": "",
+        "thumb": "/static/artworks/vqganclip/robot/burning/22/75.png",
+        "method": "VQGAN+CLIP",
+        "model": "vqgan_imagenet_f16_16384",
+        "initial": false,
+        "target": false,
+        "src": null,
+        "year": "2021",
+        "month": "11"
+      },
+      {
+        "title": "",
+        "thumb": "/static/artworks/vqganclip/robot/burning/23/75.png",
+        "method": "VQGAN+CLIP",
+        "model": "vqgan_imagenet_f16_16384",
+        "initial": false,
+        "target": false,
+        "src": null,
+        "year": "2021",
+        "month": "11"
+      },
+      {
+        "title": "",
+        "thumb": "/static/artworks/vqganclip/robot/burning/24/100.png",
+        "method": "VQGAN+CLIP",
+        "model": "vqgan_imagenet_f16_16384",
+        "initial": false,
+        "target": false,
+        "src": null,
+        "year": "2021",
+        "month": "11"
+      },
+      {
+        "title": "",
+        "thumb": "/static/artworks/vqganclip/robot/burning/26/75.png",
+        "method": "VQGAN+CLIP",
+        "model": "vqgan_imagenet_f16_16384",
+        "initial": false,
+        "target": false,
+        "src": null,
+        "year": "2021",
+        "month": "11"
       }
     ]
   }
