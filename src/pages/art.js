@@ -109,11 +109,14 @@ class ArtPage extends React.Component {
   		return
   	}
   	this.setState({
-  		artworks: this.state.allartworks.filter(series => {
+  		artworks: this.state.allartworks.map(series => {
   			const filteredworks = series.works.filter(w => `${w.year}-${w.month}` === d ? w : false)
+  			// filter the whole series if empty
   			if (!filteredworks.length) {
 	  			return false	
   			}
+  			console.log('works', filteredworks)
+  			// replace works in series with the filtered ones
   			const out = {...series}
   			out.works = filteredworks
   			return out
@@ -166,15 +169,15 @@ class ArtPage extends React.Component {
 
 	          <SRLWrapper>
 		        {
-		        	artworks.map((series,s) => (
+		        	artworks.map((series,s) => series.works ? (
 						      <Container key={`s_${s}`}>
 										<Header as='h2' textAlign='center' content={series.series} />
 					    	    <Card.Group centered itemsPerRow={series.numtiles}>
-			    	    			{series.works.map((w,i) => <Cardwork key={i} info={w} numtiles={series.numtiles} />)}
+			    	    			{series.works && series.works.map((w,i) => <Cardwork key={i} info={w} numtiles={series.numtiles} />)}
 									  </Card.Group>
 				            <div className="spacer" style={spacer}></div>
 						      </Container>
-					  	))
+					  	) : null)
 		      	}
 		      	</SRLWrapper>
 	      </Container>
