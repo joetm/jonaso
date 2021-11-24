@@ -10,6 +10,17 @@ import { spacer } from "../common"
 import SimpleReactLightbox from 'simple-react-lightbox'
 import { SRLWrapper } from "simple-react-lightbox"
 
+// responsiveness
+import { createMedia } from "@artsy/fresnel"
+const { MediaContextProvider, Media } = createMedia({
+  breakpoints: {
+    sm: 0,
+    md: 768,
+    lg: 990,
+  },
+})
+
+
 const _ARTWORKS = "/static/artworks/artworks.json"
 
 const styles = {
@@ -42,12 +53,11 @@ function Cardwork(w) {
 				:
 			  	<Image src={work.thumb} wrapped ui={true} />	  		
 	  	}
-		    {/*
-		    <Card.Content>
 	    	{
-	    		work.title && <Card.Header>{work.title}</Card.Header>
+	    		work.title && <Card.Content><Card.Header style={{fontWeight:'normal'}}>{work.title}</Card.Header></Card.Content>
 	    	}
-	      <Card.Meta>
+		    {/*
+		    	      <Card.Meta>
 	        <span className='date'>{work.date}</span>
 	      </Card.Meta>
 	      <Card.Description>
@@ -172,9 +182,27 @@ class ArtPage extends React.Component {
 		        	artworks.map((series,s) => series.works ? (
 						      <Container key={`s_${s}`}>
 										<Header as='h2' textAlign='center' content={series.series} />
-					    	    <Card.Group centered itemsPerRow={series.numtiles}>
-			    	    			{series.works && series.works.map((w,i) => <Cardwork key={i} info={w} numtiles={series.numtiles} />)}
-									  </Card.Group>
+
+                    <MediaContextProvider>
+                      <Media at="sm">
+							    	    <Card.Group centered itemsPerRow={1}>
+					    	    			{series.works && series.works.map((w,i) => <Cardwork key={i} info={w} numtiles={series.numtiles} />)}
+											  </Card.Group>
+                      </Media>
+                      <Media at="md">
+							    	    <Card.Group centered itemsPerRow={series.numtiles == 2 ? 1 : 2}>
+					    	    			{series.works && series.works.map((w,i) => <Cardwork key={i} info={w} numtiles={series.numtiles} />)}
+											  </Card.Group>
+                      </Media>
+                      <Media greaterThanOrEqual="lg">
+							    	    <Card.Group centered itemsPerRow={series.numtiles}>
+					    	    			{series.works && series.works.map((w,i) => <Cardwork key={i} info={w} numtiles={series.numtiles} />)}
+											  </Card.Group>
+                      </Media>
+                    </MediaContextProvider>
+
+
+
 				            <div className="spacer" style={spacer}></div>
 						      </Container>
 					  	) : null)
