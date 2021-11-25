@@ -136,6 +136,24 @@ class ArtPage extends React.Component {
   }
   render() {
   	const { artworks, activebreadcrumb, breadcrumbs } = this.state
+  	// resizing series with only 1 artwork
+  	const resizeMapSingle = {
+  		"1": 1,
+  		"2": 1,
+  		"3": 2,
+  		"4": 2,
+  		"5": 2,
+  		"6": 2,
+  	}
+  	// resizing series with > 1 artworks
+  	const resizeMapMultiple = {
+  		"1": 1,
+  		"2": 2,
+  		"3": 2,
+  		"4": 2,
+  		"5": 2,
+  		"6": 2,
+  	}
     return (
     	<SimpleReactLightbox>
 	   	<Layout>
@@ -190,7 +208,7 @@ class ArtPage extends React.Component {
 											  </Card.Group>
                       </Media>
                       <Media at="md">
-							    	    <Card.Group centered itemsPerRow={series.numtiles == 2 ? 1 : 2}>
+							    	    <Card.Group centered itemsPerRow={series.works.length === 1 ? resizeMapSingle[series.numtiles] : resizeMapMultiple[series.numtiles]}>
 					    	    			{series.works && series.works.map((w,i) => <Cardwork key={i} info={w} numtiles={series.numtiles} />)}
 											  </Card.Group>
                       </Media>
