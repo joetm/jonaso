@@ -94,6 +94,10 @@ replace-cv:
 		sed 's|\\definenewtoggle{showsoftware}{false}|\\definenewtoggle{showsoftware}{true}|g' cv.tex | sponge cv.tex; \
 		sed 's|\\definenewtoggle{showmoney}{true}|\\definenewtoggle{showmoney}{false}|g' cv.tex | sponge cv.tex
 
+	# set the options in resume.tex
+	cd academic-cv; \
+		sed 's|\\excludefromprint{.*}||g' resume.tex | sponge resume.tex;
+
 	# set the options in the publications list
 	cd academic-cv; \
 		sed 's|\\excludefromprint{.*}||g' publication-list.tex | sponge publication-list.tex; \
@@ -112,12 +116,17 @@ build-cv:
 		pdflatex -halt-on-error -synctex=1 -interaction=batchmode cv.tex; \
 		pdflatex -halt-on-error -synctex=1 -interaction=batchmode cv.tex
 
+	# build the resume
+	cd academic-cv; \
+		pdflatex -halt-on-error -synctex=1 -interaction=batchmode resume.tex; \
+		pdflatex -halt-on-error -synctex=1 -interaction=batchmode resume.tex
+
 
 move-cv:
 	mv academic-cv/cv.pdf "public/cv/oppenlaender-cv.pdf"
 	mv academic-cv/publications.pdf "public/cv/oppenlaender-publications.pdf"
-	# TODO
-	# mv academic-cv/out.pdf "public/cv/cv-jonas-oppenlaender-`date '+%Y.%m.%d'`.pdf"
+	# TODO # mv academic-cv/out.pdf "public/cv/cv-jonas-oppenlaender-`date '+%Y.%m.%d'`.pdf"
+	mv academic-cv/resume.pdf "public/cv/resume.pdf"
 	rm -rf academic-cv
 
 pubs:

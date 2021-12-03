@@ -179,8 +179,14 @@ console.info(process.env.NODE_ENV);
                 <Image src={img} alt="Jonas Oppenlaender" rounded fluid />
 
                 <p>
+                  <a href="mailto:oppenlaenderj@acm.org">oppenlaenderj@acm.org</a>
+                </p>
+
+                <p>
                   <br />
-                  <a href="/cv/">CV</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="/publications/">Publications</a>
+                  <a href="/cv/oppenlaender-cv.pdf">CV</a> [pdf]
+                  &nbsp;&nbsp;|&nbsp;&nbsp;
+                  <a href="/cv/resume.pdf">Resume</a> [pdf]
                 </p>
 
                 <aside style={{marginTop:'2em'}}>
