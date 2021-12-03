@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "cp -r ./src/img/artworks ./public/static && yarn pubjson && yarn develop",
     "develop": "gatsby develop --open",
-    "build": "make pre-build && gatsby build && yarn pubjson && make post-build && yarn push",
+    "build": "gatsby clean && make pre-build && gatsby build && yarn pubjson && make post-build && yarn push",
     "pubjson": "make refs",
     "serve": "gatsby serve",
     "push": "git add -A && git commit && git push",
