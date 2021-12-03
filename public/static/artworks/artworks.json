@@ -1,5 +1,22 @@
 [
   {
+    "series": "American Beauty",
+    "numtiles": 2,
+    "works": [
+      {
+        "title": "",
+        "thumb": "/static/artworks/vqganclip/american-beauty/1/0077.png",
+        "method": "VQGAN+CLIP",
+        "model": "vqgan_imagenet_f16_16384",
+        "src": null,
+        "initial": false,
+        "target": false,
+        "year": "2021",
+        "month": "11"
+      }
+    ]
+  },
+  {
     "series": "UFO Landing",
     "numtiles": 3,
     "works": [
@@ -668,7 +685,7 @@
         "month": "11"
       },
       {
-        "title": "\"When the moon is in the Seventh House And Jupiter aligns with Mars Then peace will guide the planets And love will steer the stars\" Painting, trending on artstation",
+        "title": "When the moon is in the Seventh House And Jupiter aligns with Mars Then peace will guide the planets And love will steer the stars",
         "thumb": "/static/artworks/vqganclip/lyrics/aquarius/125.png",
         "method": "vqgan+clip",
         "model": "vqgan_imagenet_f16_16384",
@@ -679,7 +696,7 @@
         "month": "11"
       },
       {
-        "title": "\"When the moon is in the Seventh House And Jupiter aligns with Mars Then peace will guide the planets And love will steer the stars\" Painting, trending on artstation",
+        "title": "When the moon is in the Seventh House And Jupiter aligns with Mars Then peace will guide the planets And love will steer the stars",
         "thumb": "/static/artworks/vqganclip/lyrics/aquarius/325.png",
         "method": "vqgan+clip",
         "model": "vqgan_imagenet_f16_16384",
@@ -701,7 +718,7 @@
         "month": "11"
       },
       {
-        "title": "Do you have the time to listen to me whine About nothing and everything all at once? I am one of those Melodramatic fools Neurotic to the bone No doubt about it Sometimes I give myself the creeps. painting. trending on /r/art",
+        "title": "Do you have the time to listen to me whine About nothing and everything all at once? I am one of those Melodramatic fools Neurotic to the bone No doubt about it Sometimes I give myself the creeps.",
         "thumb": "/static/artworks/vqganclip/lyrics/basket-case/125.png",
         "method": "vqgan+clip",
         "model": "wikiart_16384",
@@ -712,7 +729,7 @@
         "month": "11"
       },
       {
-        "title": "So leave me at the roadside And hang me up and out to dry So leave me at the roadside And hang me up and out to dry. painting. trending on /r/art",
+        "title": "So leave me at the roadside And hang me up and out to dry So leave me at the roadside And hang me up and out to dry.",
         "thumb": "/static/artworks/vqganclip/lyrics/roadside/150.png",
         "method": "vqgan+clip",
         "model": "wikiart_16384",
@@ -723,7 +740,7 @@
         "month": "11"
       },
       {
-        "title": "\"Wenn dies der tiefere Sinn dieser Reise ist, dann nimm mich so wie du bist.\" Painting, trending on artstation",
+        "title": "Wenn dies der tiefere Sinn dieser Reise ist, dann nimm mich so wie du bist.",
         "thumb": "/static/artworks/vqganclip/lyrics/selig/125.png",
         "method": "vqgan+clip",
         "model": "vqgan_imagenet_f16_16384",
@@ -751,17 +768,6 @@
     "method": "vqgan+clip",
     "numtiles": 3,
     "works": [
-      {
-        "title": "Spiral Drawing",
-        "thumb": "/static/artworks/vqganclip/geometric-abstractions/1/100.png",
-        "method": "vqgan+clip",
-        "model": "vqgan_imagenet_f16_16384",
-        "src": null,
-        "initial": false,
-        "target": false,
-        "year": "2021",
-        "month": "11"
-      },
       {
         "title": "Spiral Drawing",
         "thumb": "/static/artworks/vqganclip/geometric-abstractions/1/150.png",
