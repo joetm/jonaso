@@ -182,7 +182,7 @@ console.info(process.env.NODE_ENV);
                   <a href="mailto:oppenlaenderj@acm.org">oppenlaenderj@acm.org</a>
                   <span style={{float:'right'}}>
                     <a href="/cv/oppenlaender-cv.pdf">CV</a>
-                    &nbsp;&nbsp;|&nbsp;&nbsp;
+                    &nbsp;or&nbsp;
                     <a href="/cv/resume.pdf">Resume</a>
                   </span>
                 </p>
