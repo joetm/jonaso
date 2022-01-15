@@ -83,7 +83,7 @@ console.info(process.env.NODE_ENV);
       <Layout>
         <Helmet>
           <meta charSet="utf-8" />
-          <title>Jonas Oppenlaender, Ph.D.</title>
+          <title>Jonas Oppenlaender, Doctor of Technology</title>
           <link rel="canonical" href="https://www.jonaso.de" />
         </Helmet>
         <Container style={{marginBottom: '14px'}}>
