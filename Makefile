@@ -96,7 +96,7 @@ replace-cv:
 
 	# set the options in resume.tex
 	cd academic-cv; \
-		sed 's|\\excludefromprint{.*}||g' resume.tex | sponge resume.tex;
+		sed 's|\\excludefromprint{.*}||g' resume.tex | sponge resume.tex
 
 	# set the options in the publications list
 	cd academic-cv; \
