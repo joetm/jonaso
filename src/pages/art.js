@@ -166,12 +166,12 @@ class ArtPage extends React.Component {
 					<Header as='h1' textAlign='center' content="AI-generated Artworks" />
 		        <section style={{textAlign:'center'}}>
 		        	<p>All credits go to Katherine Crowson (<a href="https://twitter.com/RiversHaveWings">@RiversHaveWings</a>)
-		        		for creating the VQGAN+CLIP Colab notebook
-		        		<br />
-		        		(and Ryan Murdock <a href="https://twitter.com/advadnoun">@advadnoun</a> for coming up with the original BigSleep (BigGAN+CLIP) implementation).
+		        		for creating the VQGAN+CLIP and clip guided diffusion notebooks. <br />
+		        		For now, I just experiment with different textual input prompts, initial images, and target images.
 		        	</p>
-		        	<p>For now, I just experiment with different textual input prompts, initial images, and target images.</p>
-		        	<p>I post some more AI-generated artworks on the Twitter account <a href="https://twitter.com/kettlebellz">@kettlebellz</a></p>
+		        	<p>
+		        		I post some more AI-generated artworks on the Twitter account <a href="https://twitter.com/kettlebellz">@kettlebellz</a>
+		        	</p>
 		        </section>
 
 	          <div className="spacer" style={spacer}></div>
