@@ -1,6 +1,6 @@
 import React from "react"
 import { Container, Button } from 'semantic-ui-react'
-import { ResponsiveContainer, BarChart, Bar, Tooltip, XAxis, YAxis, CartesianGrid } from 'recharts' // Treemap
+import { ResponsiveContainer, LabelList, BarChart, Bar, Tooltip, XAxis, YAxis, CartesianGrid } from 'recharts'
 
 
 const HEIGHT = 1250;
@@ -101,23 +101,27 @@ class Keywords extends React.Component {
                   layout="vertical"
                   data={displaydata}
                   onClick={isZoomed ? this.zoomOut : null}>
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis type="number" dataKey="num" />
-                        <YAxis type="category" dataKey="name" width={275} />
-                        <Tooltip
-                          separator=" "
-                          formatter={(value, name, props) => (<span>Publications: {value}</span>)}
-                        />
-                        <Bar
-                          dataKey="num"
-                          fill={color}
-                          className={!isZoomed ? "clickable" : ""}
-                          onClick={this.handleClick}
-                        >
-                        {/*
-                          <LabelList dataKey="num" position="insideRight" />
-                        */}
-                        </Bar>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis type="number" dataKey="num" />
+                    <YAxis type="category" dataKey="name" width={275} />
+                    {/*
+                    <Tooltip
+                      separator=" "
+                      formatter={(value, name, props) => (<span>publications: {value}</span>)}
+                    />
+                    */}
+                    <Bar
+                      dataKey="num"
+                      fill={color}
+                      className={!isZoomed ? "clickable" : ""}
+                      onClick={this.handleClick}
+                    >
+                      <LabelList
+                        dataKey="num"
+                        position="insideRight"
+                        style={{ fontSize: '80%', fill: '#ffffff' }}
+                      />
+                    </Bar>
                 </BarChart>
             {/*
               :
