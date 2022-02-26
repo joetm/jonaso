@@ -2,6 +2,17 @@
 /* Force scrollbar to prevent jumping */
 body {
     overflow-y: scroll;
+    font-size: 1.1rem;
+}
+
+/*
+.ui.menu {
+    font-size: 1.1rem;
+}
+*/
+
+#___gatsby {
+    padding-bottom: 2rem;
 }
 
 /*--------------

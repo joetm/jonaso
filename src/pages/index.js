@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 import "../../libs/academicons/css/academicons.min.css"
 import TravelRotary from "../components/TravelRotary"
-import img from "../img/opp.jpg"
+import img from "../img/Jonas-Oppenlaender-500x500.jpg"
 import ACMDL from "../img/ACM-DL-Logo-size3.webp"
 import MEDIUM from "../img/monogram-mask.svg"
 import WIKIDATA from "../img/wikidata.png"
@@ -83,56 +83,47 @@ console.info(process.env.NODE_ENV);
       <Layout>
         <Helmet>
           <meta charSet="utf-8" />
-          <title>Jonas Oppenlaender, Doctor of Technology</title>
+          <title>Jonas Oppenlaender, Doctor of Science (Technology)</title>
           <link rel="canonical" href="https://www.jonaso.de" />
         </Helmet>
-        <Container style={{marginBottom: '14px'}}>
+        <Container>
 
-          <Grid>
-            <Grid.Row>
+          <Grid columns={2} divided reversed='mobile vertically'>
+            <Grid.Column
+              mobile={16}
+              tablet={10}
+              computer={11}
+              widescreen={11}
+              largeScreen={11}>
 
-              <Grid.Column mobile={9} tablet={9} computer={9} widescreen={9} largeScreen={9}>
-
-				{/* in the Community Instrumentation and Awareness research group */}
+              <Grid.Row>
 
                 <p>
-                  I am <strong>Jonas Oppenlaender</strong> and recently completed my PhD in Computer Science with distinction from the University of Oulu, Finland.
-                  My thesis work focused on crowdsourcing creative work and crowd feedback systems. 
-                  I am actively looking for a new position and you can hire me as Lecturer, Assistant Professor, or PostDoc.
+                  I am <strong>Jonas Oppenlaender</strong>, a postdoctoral researcher at the <a href="https://www.jyu.fi/en" target="_blank">University of Jyv&auml;skyl&auml;</a> in Central Finland.
                 </p>
 
                 <p>
-                  From April to August 2021, I worked as a Senior Researcher (PostDoc) at <a href="https://www.fiz-karlsruhe.de/" target="_blank" rel="noopener noreferrer">FIZ Karlsruhe</a> and <a href="https://www.kit.edu/" target="_blank" rel="noopener noreferrer">Karlsruhe Institute of Technology (KIT)</a>.
-                  {/*
-                  <a href="https://www.fiz-karlsruhe.de/en/forschung/information-service-engineering">Information Service Engineering (ISE)</a> group
-                  &ndash; Leibniz Institute for Information Infrastructure
-                  */}
+                  I completed my PhD in Associate Prof. <a href="https://simohosio.com/">Simo Hosio</a>'s <a href={'https://ubicomp.oulu.fi/research/cc/'}>Crowd Computing Group</a> at the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a>, <a href={"https://www.oulu.fi/"}>University of Oulu</a> in Northern Finland.
+                  {' '}
+                  My doctoral thesis was awarded a disctinction and focused on how creative work is perceived by workers on microtask crowdsourcing platforms as well as crowd feedback systems.
+                </p>
+
+                <p>
+                  Previously, I was a Senior Researcher/PostDoc at <a href="https://www.fiz-karlsruhe.de/" target="_blank" rel="noopener noreferrer nofollow">FIZ Karlsruhe</a> (Leibniz Institute for Information Infrastructure) and <a href="https://www.kit.edu/" rel="noopener noreferrer nofollow" target="_blank" rel="noopener noreferrer">Karlsruhe Institute of Technology (KIT)</a>.
                   {" "}
-                  Prior to that, I was a Doctoral Researcher
-                  in the <a href="https://crowdcomputing.net/">Crowd Computing</a> group
+                  Prior to that, I was a researcher (Wissenschaftlicher Mitarbeiter) at the <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/" rel="nofollow">Human-Centered Computing</a> group, <a href="https://www.fu-berlin.de/">Freie Universit&auml;t Berlin</a>
                   {" "}
-                  at the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a>,
-                  {" "}
-                  <a href="http://www.oulu.fi/university/">University of Oulu</a> in Finland
-                  where I worked towards a doctoral degree in Computer Science
-                  {" "}
-                  advised by Associate Prof. <a href="http://www.simohosio.com/">Simo Hosio</a>.
-                  {/*
-                  Previously, I was a research assistant (Wissenschaftlicher Mitarbeiter)
-                  {" "}
-                  at the <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/" rel="nofollow">Human-Centered Computing</a> group, <a href="https://www.fu-berlin.de/">Freie Universit&auml;t Berlin</a>
                   and the <a href="https://gepris.dfg.de/gepris/projekt/194453117/ergebnisse?context=projekt&task=showDetail&id=194453117">Cluster of Excellence "Bild Wissen Gestaltung"</a> in Berlin.
-                  */}
                   {" "}
                   I hold a MSc degree in Computer Science (with Distinction)
-                  from the <a href="https://www.southampton.ac.uk/">University of Southampton</a> and studied Industrial Engineering at the <a href="https://www.tu-darmstadt.de/">Technical University of Darmstadt</a> in Germany and <a href="https://liu.se/en">Linköping University</a> in Sweden (leading to the degree of Diplom-Wirtschaftsingenieur which is equivalent to a Master of Science degree).<br />
-                  Prior to starting my PhD, I worked as postgraduate research assistant (&quot;Wissenschaftlicher Mitarbeiter&quot;) at <a href="https://www.fu-berlin.de/">Freie Universität</a> and the <a href="https://gepris.dfg.de/gepris/projekt/194453117/ergebnisse?context=projekt&task=showDetail&id=194453117">Cluster of Excellence "Bild Wissen Gestaltung"</a> in Berlin.
+                  from the <a href="https://www.southampton.ac.uk/">University of Southampton</a> and studied Industrial Engineering at the <a href={'https://www.tu-darmstadt.de/'}>Technical University of Darmstadt</a> in Germany and <a href={'https://liu.se/en'}>Link&ouml;ping University</a> in Sweden (leading to the degree of Diplom-Wirtschaftsingenieur).
+                  {" "}
                   Before that, I worked in agile teams as a web developer at <a href="https://www.seme4.com/">Seme4</a> and <a href="https://www.liip.ch/">Liip</a>.
-                  Finally, I gained industry experience as Business Analyst and Strategy Analyst at <a href="https://www.alstom.com/">Alstom</a> (now <a href="https://www.ge.com/">GE</a>).
+                  I also gained industry experience as Business Analyst and Strategy Analyst at <a href="https://www.alstom.com/">Alstom</a> (now <a href="https://www.ge.com/">GE</a>).
                 </p>
 
                 <p>
-                  Fun facts:
+                  Fun facts about me:
                   I dabble with <a href="/art/">AI-generated art</a> and I am a <a href="/kettlebells/">kettlebell</a> salesman.
                   {" "}
                   I have lived, studied, and/or worked in
@@ -152,12 +143,14 @@ console.info(process.env.NODE_ENV);
                   human or machine could independently.
                   {" "}
                   In the past, I have concentrated on two topics in this research space: facilitating knowledge transfer and supporting complex creative work.
-                  <br />
+                  {" "}
                   My current scientific research interests, based on the academic literature I have read, are reflected <Link to="/interests">here</Link>.
+                  {/*
                   Some of my past interests include{" "}
                     { keywords.primary.join(", ") }
                   {" "} and{" "}
                     { keywords.secondary.join(", ") }.
+                  */}
                 </p>
 
                 {/*
@@ -171,14 +164,17 @@ console.info(process.env.NODE_ENV);
                 </p>
                 */}
 
+              </Grid.Row>
 
-              </Grid.Column>
+            </Grid.Column>
 
-              <Grid.Column mobile={7} tablet={7} computer={5}>
+            <Grid.Column mobile={16} tablet={6} computer={5}>
+
+              <Grid.Row>
 
                 <Image src={img} alt="Jonas Oppenlaender" rounded fluid />
 
-                <p style={{marginTop:'2em'}}>
+                <p style={{marginTop:'1em'}}>
                   <a href="mailto:oppenlaenderj@acm.org">oppenlaenderj@acm.org</a>
                   <span style={{float:'right'}}>
                     <a href="/cv/oppenlaender-cv.pdf">CV</a>
@@ -213,8 +209,9 @@ console.info(process.env.NODE_ENV);
                 </p>
 	            */}
 
-              </Grid.Column>
-            </Grid.Row>
+              </Grid.Row>
+
+            </Grid.Column>
           </Grid>
 
           <Divider />
