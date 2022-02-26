@@ -1,7 +1,13 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import { Container, Button } from 'semantic-ui-react'
-import { ResponsiveContainer, LabelList, BarChart, Bar, Tooltip, XAxis, YAxis, CartesianGrid } from 'recharts'
+import { ResponsiveContainer, LabelList, Treemap, XAxis, YAxis, CartesianGrid } from 'recharts'
+import { spacer } from "../../../common"
+import Layout from "../../../components/layout"
+import GraphSwitcher from "../../../components/GraphSwitcher"
 
+
+const _KEYWORDS = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/keywords.json'
 
 const HEIGHT = 1250;
 const colorDefault = '#eb008c';
@@ -9,7 +15,7 @@ const colorZoomed = '#FF86A6';
 
 // old green: #82ca9d
 
-class Keywords extends React.Component {
+class TreeComponent extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -60,16 +66,20 @@ class Keywords extends React.Component {
       level2: [],
     })
   }
-  // changeChartType = (chart) => this.setState({chart})
   render() {
     const { keywords = [] } = this.props
     const { level2, isZoomed, breadcrumb, color } = this.state // chart
+    // const barChartActive = chart === 'bar'
     const displaydata = isZoomed && level2.length ? level2 : keywords;
-
-    // filtered_keywords = keywords.map(kw => kw.num > 1 ? kw : null);
 
     return (
         <Container>
+          <h2>
+            Research Interests
+            {' '}
+            <GraphSwitcher active="treemap" />
+          </h2>
+
           {
             isZoomed &&
               <div style={{float: 'right', marginRight: '1em'}}>
@@ -81,32 +91,12 @@ class Keywords extends React.Component {
           <div style={{clear:'both'}}></div>
 
           <ResponsiveContainer width="100%" height={HEIGHT} width='100%'>
-                <BarChart
-                  layout="vertical"
+                <Treemap
                   data={displaydata}
-                  onClick={isZoomed ? this.zoomOut : null}>
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis type="number" dataKey="num" />
-                    <YAxis type="category" dataKey="name" width={275} style={{fontSize: '1rem'}} />
-                    {/*
-                    <Tooltip
-                      separator=" "
-                      formatter={(value, name, props) => (<span>publications: {value}</span>)}
-                    />
-                    */}
-                    <Bar
-                      dataKey="num"
-                      fill={color}
-                      className={!isZoomed ? "clickable" : ""}
-                      onClick={this.handleClick}
-                    >
-                      <LabelList
-                        dataKey="num"
-                        position="insideRight"
-                        style={{ fontSize: '80%', fill: '#ffffff' }}
-                      />
-                    </Bar>
-                </BarChart>
+                  isAnimationActive={true}
+                  animationDuration={800}
+                  dataKey="num"
+                />
           </ResponsiveContainer>
 
         </Container>
@@ -114,4 +104,42 @@ class Keywords extends React.Component {
   }
 }
 
-export default Keywords
+
+
+class Interests extends React.Component {
+  state = {
+    keywords: [],
+  }
+  componentDidMount = () => {
+    // ------------
+    // get keywords
+    // ------------
+    fetch(_KEYWORDS)
+    .then(response => {
+      if (response.status >= 400) {
+        throw new Error("Bad response from server")
+      }
+      return response.json()
+    })
+    .then(keywords => this.setState({ keywords }))
+  }
+  render() {
+    const { keywords } = this.state
+    const filtered_keywords = keywords.filter(kw => kw.num > 19)
+    return (
+      <Layout>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Research Interests {'//'} jonaso.de</title>
+          <link rel="canonical" href="https://www.jonaso.de/research/interests/treemap" />
+        </Helmet>
+        <Container>
+          <TreeComponent keywords={filtered_keywords} />
+          <div style={spacer}></div>
+        </Container>
+      </Layout>
+    )
+  }
+}
+
+export default Interests
