@@ -1,7 +1,6 @@
 #!/usr/bin/env php
 <?php
 
-
 /**
  * show a status bar in the console
  * 
@@ -162,6 +161,26 @@ while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 			$author = normalize_name($author);
 			$authorid = md5($author);
 
+			$thedoc = array(
+						"title" => $jsondoc->title,
+						"priority" => $jsondoc->priority,
+						);
+
+			// duplicate check
+			// skip if this publication is already listed for this author
+			if (isset($influencers[$author]) && isset($influencers[$author]['docs']) {
+				$found = false;
+				foreach ($influencers[$author]['docs'] as $doc) {
+					if ($doc['title'] === $jsondoc->title) {
+						$found = true;
+						break;
+					}
+				}
+				if ($found) {
+					continue;
+				}
+			}
+
 			// increase publication counter for this author
 			if (isset($authors[$author][$jsondoc->priority])) {
 				$authors[$author][$jsondoc->priority] = $authors[$author][$jsondoc->priority] + 1;
@@ -170,11 +189,6 @@ while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 			}
 
 			// store the title in the respective author details
-			// var_dump($author, $jsondoc->title);
-			$thedoc = array(
-						"title" => $jsondoc->title,
-						"priority" => $jsondoc->priority,
-						);
 			//first publication for this author
 			if (!isset($influencers[$author])) {
 				$influencers[$author] = [

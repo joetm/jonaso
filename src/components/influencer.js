@@ -261,7 +261,6 @@ class Influencer extends React.Component {
     // console.log('influencer', influencer)
     return (
         <Container>
-          <h2>Influencers</h2>
           <div className="clear">
             <h3>Highly influential</h3>
             <AuthorList

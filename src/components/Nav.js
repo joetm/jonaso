@@ -1,6 +1,6 @@
 import React from 'react'
-import { Menu, Icon } from 'semantic-ui-react'
 import { navigate } from "gatsby"
+import { Menu, Icon } from 'semantic-ui-react'
 
 import { createMedia } from "@artsy/fresnel"
 const { MediaContextProvider, Media } = createMedia({
@@ -23,22 +23,32 @@ export default class Nav extends React.Component {
     activeItem: 'home',
     menuIsOpen: false,
   }
-  createMenu = ({item}) => {
+  createMenu = ({item, url = null}) => {
     const { activeItem } = this.state
     const lcitem = item.toLowerCase()
     return (
-      <Menu.Item name={lcitem} active={activeItem === lcitem} onClick={this.handleItemClick}>
+      <Menu.Item
+        name={lcitem}
+        url={url}
+        active={activeItem === lcitem}
+        onClick={this.handleItemClick}
+      >
         {item}
       </Menu.Item>
-    )
-  }
-  handleItemClick = (e, { name }) => {
+    ) //
+  } 
+  handleItemClick = (e, { name, url }) => {
     e.preventDefault()
     this.setState({activeItem: name})
     if (name === 'home') {
       navigate('/')
     } else {
-      navigate(`/${name}`)
+      if (url) {
+        url = url.charAt(0) === '/' ? url.slice(1) : url;
+        navigate(`/${url}`)
+      } else {
+        navigate(`/${name}`)
+      }
     }
   }
   toggleMenu = (e) => {
@@ -51,12 +61,11 @@ export default class Nav extends React.Component {
   render() {
     const MenuItem = this.createMenu
     const menuIsOpen = this.state.menuIsOpen
-    console.log('menuIsOpen', menuIsOpen)
     return (
       <header>
         <MediaContextProvider>
           <Media at="sm">
-            <Menu fluid pointing stackable secondary widths="6" style={styles.navSpacer}>
+            <Menu fluid pointing stackable secondary widths="7" style={styles.navSpacer}>
               <Menu.Item style={{cursor:'pointer'}} onClick={this.toggleMenu}>
                 <Icon name="sidebar" size="large" />
               </Menu.Item>
@@ -66,18 +75,19 @@ export default class Nav extends React.Component {
                 <MenuItem item='Projects' />
                 <MenuItem item='CV' />
                 <MenuItem item='Reading' />
-                <MenuItem item='Interests' />
+                <MenuItem item='Interests' url='/research/interests' />
               </div>
             </Menu>
           </Media>
           <Media at="md">
-            <Menu fluid pointing stackable secondary widths="6" style={styles.navSpacer}>
+            <Menu fluid pointing stackable secondary widths="7" style={styles.navSpacer}>
               <MenuItem item='Home' />
               <MenuItem item='Publications' />
               <MenuItem item='Projects' />
               <MenuItem item='CV' />
               <MenuItem item='Reading' />
-              <MenuItem item='Interests' />
+              <MenuItem item='Interests' url='/research/interests' />
+              <MenuItem item='Influences' url='/research/influences' />
             </Menu>
           </Media>
         </MediaContextProvider>
