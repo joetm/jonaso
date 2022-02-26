@@ -103,7 +103,7 @@ console.info(process.env.NODE_ENV);
                 </p>
 
                 <p>
-                  I completed my PhD in Associate Prof. <a href="https://simohosio.com/">Simo Hosio</a>'s <a href={'https://ubicomp.oulu.fi/research/cc/'}>Crowd Computing Group</a> at the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a>, <a href={"https://www.oulu.fi/"}>University of Oulu</a> in Northern Finland.
+                  I completed my PhD in Associate Prof. <a href="https://simohosio.com/">Simo Hosio</a>'s <a href={'https://ubicomp.oulu.fi/research/cc/'}>Crowd Computing Group</a> at the <a href={"https://www.oulu.fi/"}>University of Oulu</a> in Northern Finland.
                   {' '}
                   My doctoral thesis was awarded a disctinction and focused on how creative work is perceived by workers on microtask crowdsourcing platforms as well as crowd feedback systems.
                 </p>
@@ -111,7 +111,7 @@ console.info(process.env.NODE_ENV);
                 <p>
                   Previously, I was a Senior Researcher/PostDoc at <a href="https://www.fiz-karlsruhe.de/" target="_blank" rel="noopener noreferrer nofollow">FIZ Karlsruhe</a> (Leibniz Institute for Information Infrastructure) and <a href="https://www.kit.edu/" rel="noopener noreferrer nofollow" target="_blank" rel="noopener noreferrer">Karlsruhe Institute of Technology (KIT)</a>.
                   {" "}
-                  Prior to that, I was a researcher (Wissenschaftlicher Mitarbeiter) at the <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/" rel="nofollow">Human-Centered Computing</a> group, <a href="https://www.fu-berlin.de/">Freie Universit&auml;t Berlin</a>
+                  Prior to my doctoral position at the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a>, I was a researcher (Wissenschaftlicher Mitarbeiter) at the <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/" rel="nofollow">Human-Centered Computing</a> group, <a href="https://www.fu-berlin.de/">Freie Universit&auml;t Berlin</a>
                   {" "}
                   and the <a href="https://gepris.dfg.de/gepris/projekt/194453117/ergebnisse?context=projekt&task=showDetail&id=194453117">Cluster of Excellence "Bild Wissen Gestaltung"</a> in Berlin.
                   {" "}
