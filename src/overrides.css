@@ -38,12 +38,6 @@ body {
     background-color: grey;
 }
 
-/* first headline to have top margin
-h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child {
-	margin-top: inherit;
-}
-*/
-
 .clickable {
 	cursor: pointer;
 }

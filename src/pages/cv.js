@@ -1,5 +1,5 @@
 import React from "react"
-import { Icon, Header, List, Item, Container } from 'semantic-ui-react'
+import { Grid, Icon, List, Segment, Item, Container } from 'semantic-ui-react'
 import Layout from "../components/layout"
 import { Helmet } from "react-helmet"
 
@@ -20,33 +20,21 @@ const _PEERREVIEWS_URL = 'https://raw.githubusercontent.com/joetm/jonaso/master/
 
 
 const styles = {
-  datum: {
-    minWidth: '200px',
-  },
   nonbold: {
     fontWeight: 'normal',
     fontSize: '1em',
   },
   headline: {
-    maxWidth: '180px',
     fontWeight: 'normal',
     textTransform: 'uppercase',
     fontSize: '1em',
-  },
-  rowspan2: {
-   flex: 4,
-   textAlign: 'left',
-  },
-  table: {
-    display: 'flex',
-  },
-  rightCol: {
-    flex: 1,
-    verticalAlign: 'top',
-    textAlign: 'right',
+    display: 'inline',
   },
   nomarginTop: {
     marginTop: 0,
+  },
+  nomargin: {
+    margin: 0,
   },
 }
 
@@ -62,15 +50,36 @@ const SupervisorWrap = ({supervisor, link = false}) => {
 } //
 
 
-const Row = ({left, middle, right}) => {
+const Row = ({left, middle, right, stretched = true}) => {
 	return (
-	  <div className="row">
-	    <div className="leftCol">
-        <Header style={styles.headline} size="large">{left}</Header>
-	    </div>
-	    <div className="mainCol">{middle}</div>
-	    <div style={styles.rightCol}>{right}</div>
-	  </div>
+    <Segment>
+    <Grid>
+      <Grid.Column
+        mobile={16}
+        tablet={3}
+        computer={4}
+        stretched={stretched}
+      >
+        <span style={styles.headline} size="large">{left}</span>
+      </Grid.Column>
+      <Grid.Column
+        mobile={16}
+        tablet={10}
+        computer={10}
+        stretched={stretched}
+      >
+        {middle}
+      </Grid.Column>
+      <Grid.Column
+        mobile={16}
+        tablet={3}
+        computer={2}
+        stretched={stretched}
+      >
+        {right}
+      </Grid.Column>
+    </Grid>
+    </Segment>
 	)
 } //
 
@@ -156,31 +165,43 @@ class CV extends React.Component {
 {/**********************
         CONTACT
 ***********************/}
-<Row left="Contact Information" middle={(
-      <Item.Group>
-        <Item>
-            <Item.Description style={styles.nomarginTop}>
-              <List>
-                <List.Item><a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a></List.Item>
-                <List.Item><a href="http://www.oulu.fi/university/">University of Oulu</a></List.Item>
-                <List.Item>Pentti Kaiteran katu 1</List.Item>
-                <List.Item>90570 Oulu, Finland</List.Item>
-              </List>
-            </Item.Description>
-        </Item>
-      </Item.Group>
-)} right={(
-      <Item.Group>
-        <Item>
-            <Item.Description style={styles.nomarginTop}>
-              <List>
-                <List.Item>E-Mail: {'{'}firstname.lastname{'}'}@oulu.fi</List.Item>
-                <List.Item>www: jonaso.de</List.Item>
-              </List>
-            </Item.Description>
-        </Item>
-      </Item.Group>
-)} />
+    <Segment>
+      <Grid columns={2} stackable>
+      <Grid.Row>
+        <Grid.Column
+          mobile={16}
+          tablet={3}
+          computer={4}
+          stretched
+        >
+            <span style={styles.headline} size="large">Contact Information</span>
+        </Grid.Column>
+        <Grid.Column
+          mobile={16}
+          tablet={13}
+          computer={12}
+          stretched
+        >
+          <Item.Group>
+            <Item style={styles.nomargin}>
+                <Item.Description style={styles.nomarginTop}>
+                  <List>
+                    <List.Item><a href="https://www.jyu.fi/">University of Jyv&auml;skyl&auml;</a></List.Item>
+                    <List.Item>Seminaarinkatu 15</List.Item>
+                    <List.Item>40014 Jyväskylän yliopisto</List.Item>
+                    <List.Item>Finland</List.Item>
+                  </List>
+                  <List>
+                    <List.Item>E-Mail: {'{'}firstname.lastname{'}'}@jyu.fi</List.Item>
+                    <List.Item><a href="https://www.jonaso.de/">www.jonaso.de</a></List.Item>
+                  </List>
+                </Item.Description>
+            </Item>
+          </Item.Group>
+        </Grid.Column>
+      </Grid.Row>
+      </Grid>
+    </Segment>
 
 
 {/**********************
@@ -189,7 +210,10 @@ class CV extends React.Component {
 
 <Row left="Research Interests" middle={(
       <button onClick={this.redirectToInterests}>&rarr; &nbsp; See Interests</button>
-)} right="" />
+)}
+  right=""
+  stretched={false}
+/>
 
 
 {/**********************
@@ -200,7 +224,7 @@ class CV extends React.Component {
   cv.education.map((row, i) => (
       <Row key={i} left={row.left} middle={(
             <Item.Group>
-              <Item>
+              <Item style={styles.nomargin}>
                 <Item.Description style={styles.nomarginTop}>
                   <List>
                     <List.Item><a href={row.institution_link}>{row.institution}</a>, {row.location}</List.Item>
@@ -240,7 +264,7 @@ class CV extends React.Component {
     <Row key={i} left={row.left}
         middle={(
           <Item.Group>
-            <Item>
+            <Item style={styles.nomargin}>
               <Item.Description style={styles.nomarginTop}>
                 <List>
                   {
@@ -293,7 +317,7 @@ class CV extends React.Component {
   cv.work_experience.map((row, i) => (
     <Row key={i} left={row.left} middle={(
           <Item.Group>
-            <Item>
+            <Item style={styles.nomargin}>
               <Item.Description style={styles.nomarginTop}>
                 <List>
                   <List.Item><a href={row.organization_link}>{row.organization}</a>, {row.location}</List.Item>
@@ -329,7 +353,10 @@ class CV extends React.Component {
 
 <Row left="Publications" middle={(
       <button onClick={this.redirectToPublications}>&rarr; &nbsp; See Publications</button>
-)} right="" />
+)}
+  right=""
+  stretched={false}
+ />
 
 
 
@@ -341,7 +368,7 @@ class CV extends React.Component {
   cv.awards.map((row, i) => (
     <Row key={i} left={row.left} middle={(
           <Item.Group>
-            <Item>
+            <Item style={styles.nomargin}>
               <List>
                 <List.Item>
                   {row.name}
@@ -379,7 +406,7 @@ class CV extends React.Component {
   cv.grants.map((row, i) => (
     <Row key={i} left={row.left} middle={(
           <Item.Group>
-            <Item>
+            <Item style={styles.nomargin}>
               <List>
                 <List.Item>
                   {row.name}
@@ -418,7 +445,7 @@ class CV extends React.Component {
     cv.academicservice.map((row, i) => (
         <Row key={i} left={row.left} middle={(
           <Item.Group>
-            <Item>
+            <Item style={styles.nomargin}>
               <List>
                 <List.Item>
                   {row.name}, <a href={row.url}>{row.venue}{row.series && " (" + row.series + ")"}</a>{row.location && ", " + row.location}
@@ -438,7 +465,7 @@ class CV extends React.Component {
 {/*
 <Row left="Peer Reviewer" middle={(
       <Item.Group>
-        <Item>
+        <Item style={styles.nomargin}>
           <List>
             <List.Item>
               {
@@ -457,7 +484,7 @@ class CV extends React.Component {
     Object.keys(peerreviews).reverse().map(year => (
         <Row key={`pr${year}`} left={peerreviews[year].left} middle={(
           <Item.Group>
-            <Item>
+            <Item style={styles.nomargin}>
               <List>
                 <List.Item>
                   {
@@ -484,7 +511,7 @@ class CV extends React.Component {
         {
           teachingPositions.map((pos, index) => {
             return (
-              <Item key={index}>
+              <Item key={index} style={styles.nomargin}>
                 <List>
                   <List.Item>{pos}</List.Item>
                   {
@@ -512,7 +539,7 @@ class CV extends React.Component {
     cv.supervisions.map((row, i) => (
         <Row key={i} left={row.left} middle={(
           <Item.Group>
-            <Item>
+            <Item style={styles.nomargin}>
               <List>
                 <List.Item>
                   {row.type}, {row.supervisee}
@@ -531,7 +558,10 @@ class CV extends React.Component {
 
 <Row left="Technical Skills" middle={(
     <button onClick={this.redirectToPortfolio}>&rarr; &nbsp; Visit my Web Development Portfolio</button>
-)} right="" />
+)}
+  right=""
+  stretched={false}
+ />
 
 
 
@@ -544,7 +574,7 @@ class CV extends React.Component {
         {
           cv.hasOwnProperty("certificates") &&
             cv.certificates.map((item, i) => (
-              <Item key={i}>
+              <Item key={i} style={styles.nomargin}>
                 {/*<div style={styles.datum}>{item.year}</div>*/}
                 <Item.Header style={styles.nonbold}>{item.name} ({item.institution})</Item.Header>
               </Item>
@@ -564,7 +594,7 @@ class CV extends React.Component {
         {
           cv.hasOwnProperty("languages") &&
             cv.languages.map((item, i) => (
-              <Item key={i}>
+              <Item key={i} style={styles.nomargin}>
                 <Item.Content>
                   <Item.Header style={styles.nonbold}>{item.name} ({item.level})</Item.Header>
                 </Item.Content>
@@ -584,7 +614,7 @@ class CV extends React.Component {
         {
           cv.hasOwnProperty("associations") &&
             cv.associations.map((item, i) => (
-              <Item key={i}>
+              <Item key={i} style={styles.nomargin}>
                 <Item.Content>
                   <Item.Header style={styles.nonbold}>{item}</Item.Header>
                 </Item.Content>
