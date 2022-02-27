@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkjonas_de=self.webpackChunkjonas_de||[]).push([[883],{9616:function(e,n,t){t.r(n);var u=t(1721),r=t(7294),o=t(2945),l=t(3925),a=function(e){function n(){return e.apply(this,arguments)||this}return(0,u.Z)(n,e),n.prototype.render=function(){return r.createElement(l.Z,null,r.createElement(o.Z,null,"404 - Not Found."))},n}(r.Component);n.default=a}}]);
