@@ -15,12 +15,14 @@ body {
     padding-bottom: 2rem;
 }
 
+/*
 .ui.positive.button {
     background-color: #e03997;
 }
+*/
 
 /*--------------
- Reading Table
+ hide on mobile
 ---------------*/
 
 @media only screen and (max-width: 768px) {
