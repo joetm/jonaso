@@ -13,29 +13,29 @@ import Layout from "../components/layout"
 import { Helmet } from "react-helmet"
 
 
-const keywords = {
-  primary: [
-    "human-centered computing",
-    "crowdsourcing",
-    "crowd feedback systems",
-    "creativity support tools",
-    // "human computation",
-    "ontology engineering",
-    // "collaborative ontology engineering",
-    // "semantic web",
-    // "linked data",
-  ],
-  secondary: [
-    "collective intelligence",
-    "web science",
-    "social machines",
-    // "knowledge transfer",
-    "computer supported collaborative work",
-    // "e-science",
-    // "hypertext and hypermedia",
-    "online communities",
-  ],
-}
+// const keywords = {
+//   primary: [
+//     "human-centered computing",
+//     "crowdsourcing",
+//     "crowd feedback systems",
+//     "creativity support tools",
+//     // "human computation",
+//     "ontology engineering",
+//     // "collaborative ontology engineering",
+//     // "semantic web",
+//     // "linked data",
+//   ],
+//   secondary: [
+//     "collective intelligence",
+//     "web science",
+//     "social machines",
+//     // "knowledge transfer",
+//     "computer supported collaborative work",
+//     // "e-science",
+//     // "hypertext and hypermedia",
+//     "online communities",
+//   ],
+// }
 
 const styles = {
     tag: {
@@ -77,8 +77,6 @@ class Home extends React.Component {
   }
   render() {
 
-console.info(process.env.NODE_ENV);
-
     return (
       <Layout>
         <Helmet>
@@ -99,7 +97,7 @@ console.info(process.env.NODE_ENV);
               <Grid.Row>
 
                 <p>
-                  I am <strong>Jonas Oppenlaender</strong>, a postdoctoral researcher at the <a href="https://www.jyu.fi/en" target="_blank">University of Jyv&auml;skyl&auml;</a> in Central Finland.
+                  I am <strong>Jonas Oppenlaender</strong>, a postdoctoral researcher at the <a href="https://www.jyu.fi/en" target="_blank" rel="noreferrer">University of Jyv&auml;skyl&auml;</a> in Central Finland.
                 </p>
 
                 <p>
@@ -109,7 +107,7 @@ console.info(process.env.NODE_ENV);
                 </p>
 
                 <p>
-                  Previously, I was a Senior Researcher/PostDoc at <a href="https://www.fiz-karlsruhe.de/" target="_blank" rel="noopener noreferrer nofollow">FIZ Karlsruhe</a> (Leibniz Institute for Information Infrastructure) and <a href="https://www.kit.edu/" rel="noopener noreferrer nofollow" target="_blank" rel="noopener noreferrer">Karlsruhe Institute of Technology (KIT)</a>.
+                  Previously, I was a Senior Researcher/PostDoc at <a href="https://www.fiz-karlsruhe.de/" target="_blank" rel="noopener noreferrer nofollow">FIZ Karlsruhe</a> (Leibniz Institute for Information Infrastructure) and <a href="https://www.kit.edu/" rel="noopener noreferrer nofollow" target="_blank">Karlsruhe Institute of Technology (KIT)</a>.
                   {" "}
                   Prior to my doctoral position at the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a>, I was a researcher (Wissenschaftlicher Mitarbeiter) at the <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/" rel="nofollow">Human-Centered Computing</a> group, <a href="https://www.fu-berlin.de/">Freie Universit&auml;t Berlin</a>
                   {" "}
@@ -175,12 +173,16 @@ console.info(process.env.NODE_ENV);
                 <Image src={img} alt="Jonas Oppenlaender" rounded fluid />
 
                 <p style={{marginTop:'1em'}}>
+                Tutkijatohtori (Postdoctoral Researcher)
+                </p>
+
+                <p>
                   <a href="mailto:oppenlaenderj@acm.org">oppenlaenderj@acm.org</a>
-                  <span style={{float:'right'}}>
-                    <a href="/cv/oppenlaender-cv.pdf">CV</a>
+                </p>
+                <p>
+                    Academic <a href="/cv/oppenlaender-cv.pdf">CV</a>
                     &nbsp;or&nbsp;
-                    <a href="/cv/resume.pdf">Resume</a>
-                  </span>
+                    Professional <a href="/cv/resume.pdf">Resume</a>
                 </p>
 
                 <aside style={{marginTop:'2em'}}>
@@ -235,14 +237,14 @@ console.info(process.env.NODE_ENV);
               	margin: '0 0.25rem 0 0.3rem', backgroundSize: 'cover', opacity: 0.45}} title="Jonas Oppenlaender on Medium"></i>
           </a>
 
-          <a href="https://dl.acm.org/author_page.cfm?id=99659312669" target="_blank" rel="noopener noreferrer">
+          <a className="mobilehide" href="https://dl.acm.org/author_page.cfm?id=99659312669" target="_blank" rel="noopener noreferrer">
               <i style={{display:'inline-block', width: '25px', height: '25px',
               	backgroundImage: `url(${ACMDL})`,
               	verticalAlign: 'middle', backgroundPosition: 'center center', lineHeight: 1,
               	margin: '0px 0.4rem 0px 0.4rem', backgroundSize: 'cover', opacity: 0.45}} title="Jonas Oppenlaender on ACM DL"></i>
           </a>
 
-          <a href="https://arxiv.org/search/cs?searchtype=author&query=Oppenlaender%2C+J" target="_blank" rel="noopener noreferrer">
+          <a className="mobilehide" href="https://arxiv.org/search/cs?searchtype=author&query=Oppenlaender%2C+J" target="_blank" rel="noopener noreferrer">
               <i style={styles.academicon} title="Jonas Oppenlaender on ArXiv" className="ai ai-arxiv-square ai-2x"></i>
           </a>
 
@@ -254,11 +256,11 @@ console.info(process.env.NODE_ENV);
               <i style={styles.academicon} title="Jonas Oppenlaender on Figshare" className="ai ai-figshare-square ai-2x"></i>
           </a>
 
-          <a href="https://dblp.uni-trier.de/pers/hd/o/Oppenlaender:Jonas">
+          <a className="mobilehide" href="https://dblp.uni-trier.de/pers/hd/o/Oppenlaender:Jonas">
               <i style={styles.academicon} title="Jonas Oppenlaender on DBLP" className="ai ai-dblp-square ai-2x"></i>
           </a>
 
-          <a href="https://www.wikidata.org/wiki/Q57417597" target="_blank" rel="noopener noreferrer">
+          <a className="mobilehide" href="https://www.wikidata.org/wiki/Q57417597" target="_blank" rel="noopener noreferrer">
               <i style={{display:'inline-block', width: '25px', height: '25px',
                 backgroundImage: `url(${WIKIDATA})`,
                 verticalAlign: 'middle', backgroundPosition: 'center center', lineHeight: 1,
