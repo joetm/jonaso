@@ -59,8 +59,8 @@ export default class Nav extends React.Component {
     this.setState({activeItem: window.location.pathname.replace(/\//g, '') || 'home'})
   }
   render() {
+    const { activeItem, menuIsOpen } = this.state
     const MenuItem = this.createMenu
-    const menuIsOpen = this.state.menuIsOpen
     return (
       <header>
         <MediaContextProvider>
@@ -70,24 +70,25 @@ export default class Nav extends React.Component {
                 <Icon name="sidebar" size="large" />
               </Menu.Item>
               <div style={{display: menuIsOpen ? 'block' : 'none'}}>
-                <MenuItem item='Home' />
-                <MenuItem item='Publications' />
-                <MenuItem item='Projects' />
-                <MenuItem item='CV' />
-                <MenuItem item='Reading' />
-                <MenuItem item='Interests' url='/research/interests' />
+                <MenuItem active={activeItem === 'Home' ? true : false} item='Home' />
+                <MenuItem active={activeItem === 'Publications' ? true : false} item='Publications' />
+                <MenuItem active={activeItem === 'Projects' ? true : false} item='Projects' />
+                <MenuItem active={activeItem === 'CV' ? true : false} item='CV' />
+                <MenuItem active={activeItem === 'Reading' ? true : false} item='Reading' />
+                <MenuItem active={activeItem === 'ResearchInterests' ? true : false} item='Interests' url='/research/interests' />
+                <MenuItem active={activeItem === 'ResearchInfluences' ? true : false} item='Influences' url='/research/influences' />
               </div>
             </Menu>
           </Media>
           <Media at="md">
             <Menu fluid pointing stackable secondary widths="7" style={styles.navSpacer}>
-              <MenuItem item='Home' />
-              <MenuItem item='Publications' />
-              <MenuItem item='Projects' />
-              <MenuItem item='CV' />
-              <MenuItem item='Reading' />
-              <MenuItem item='Interests' url='/research/interests' />
-              <MenuItem item='Influences' url='/research/influences' />
+              <MenuItem active={activeItem === 'Home' ? true : false} item='Home' />
+              <MenuItem active={activeItem === 'Publications' ? true : false} item='Publications' />
+              <MenuItem active={activeItem === 'Projects' ? true : false} item='Projects' />
+              <MenuItem active={activeItem === 'CV' ? true : false} item='CV' />
+              <MenuItem active={activeItem === 'Reading' ? true : false} item='Reading' />
+              <MenuItem active={activeItem === 'ResearchInterests' ? true : false} item='Interests' url='/research/interests' />
+              <MenuItem active={activeItem === 'ResearchInfluences' ? true : false} item='Influences' url='/research/influences' />
             </Menu>
           </Media>
         </MediaContextProvider>
