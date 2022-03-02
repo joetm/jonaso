@@ -1,6 +1,6 @@
 [
   {
-    "title": "AI prompt engineering with focus on generative art",
+    "title": "Prompt engineering for AI-generated art",
     "lang": "en",
     "description": {"__html": "<p>Since Kathleen Crowson combined VQGAN with OpenAI's CLIP (based on Ryan Murdock's work on Big Sleep), the interest in generating art with generative adverserial networks (GANs) has exploded as evident on Twitter and dedicated communities online. This explosion was facilitated by the availability of executable notebooks on Google's Colab in which non-expert users can execute machine learning models for free and without deep knowledge of programming. Users on Google Colab interact with GAN models via input prompts. Prompts are short texts that describe the expected end result, such as \"a beautiful painting of a landscape\". The emerging AI art community was quick to discover that the quality of the generated artwork could be increased by using modifiers in the input prompt, such as \"trending on artstation\" or \"rendered by Unreal Engine\". 'Prompt engineering' or 'prompt programming' refers to the practice of finding effective input prompts for a model.</p><p>This project investigates 1) the emerging AI art community and 2) the input prompts and practices of this community. A first auto-ethnographic investigation resulted in a number of <a href=\"/art/\">AI-generated artworks</a> and preliminary findings.</p>"},
     "funding": "The project received funding in form of the Toloka Research grant.",
