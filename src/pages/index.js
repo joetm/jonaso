@@ -177,7 +177,17 @@ class Home extends React.Component {
                 </p>
 
                 <p>
-                  <a href="mailto:oppenlaenderj@acm.org">oppenlaenderj@acm.org</a>
+                    <strong>Office</strong><br />
+                    Room C415.1<br />
+                    University of Jyv&auml;skyl&auml;<br />
+                    {/* Software and Communications Engineering<br /> */}
+                    Faculty of Information Technology<br />
+                    40014 University of Jyv&auml;skyl&auml;<br />
+                    Finland<br />
+                </p>
+
+                <p>
+                  E-Mail: {'{'}firstname.x1.lastname{'}'}@jyu.fi
                 </p>
                 <p>
                     Academic <a href="/cv/oppenlaender-cv.pdf">CV</a>
@@ -191,14 +201,6 @@ class Home extends React.Component {
 
                 {/*
                 <Header size="tiny" style={nobottommargin}>Office Address:</Header>
-                <p>
-                    FIZ Karlsruhe<br />
-                    Leibniz Institute for Information Infrastructure<br />
-                    Hermann-von-Helmholtz-Platz 1<br />
-                    76344 Eggenstein-Leopoldshafen<br />
-                    Germany<br /><br />
-                    E-Mail: {'{'}firstname.lastname{'}'}@fiz-karlsruhe.de
-                </p>
                 */}
 
               {/*
