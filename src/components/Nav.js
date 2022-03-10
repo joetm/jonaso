@@ -61,12 +61,12 @@ export default class Nav extends React.Component {
   render() {
     const { activeItem, menuIsOpen } = this.state
     const MenuItem = this.createMenu
-    console.log('activeItem', activeItem)
+    const secondaryNavOpen = activeItem.startsWith('research')
     return (
       <header>
         <MediaContextProvider>
           <Media at="sm">
-            <Menu fluid pointing stackable secondary widths="7" style={styles.navSpacer}>
+            <Menu fluid pointing stackable secondary widths="7">
               <Menu.Item style={{cursor:'pointer'}} onClick={this.toggleMenu}>
                 <Icon name="sidebar" size="large" />
               </Menu.Item>
@@ -75,24 +75,33 @@ export default class Nav extends React.Component {
                 <MenuItem active={activeItem === 'publications' ? true : false} item='Publications' />
                 <MenuItem active={activeItem === 'projects' ? true : false} item='Projects' />
                 <MenuItem active={activeItem === 'cv' ? true : false} item='CV' />
-                <MenuItem active={activeItem === 'reading' ? true : false} item='Reading' />
+                <MenuItem active={activeItem === 'researchreading' ? true : false} item='Reading' />
                 <MenuItem active={activeItem === 'researchinterests' ? true : false} item='Interests' url='/research/interests' />
                 <MenuItem active={activeItem === 'researchinfluences' ? true : false} item='Influences' url='/research/influences' />
               </div>
             </Menu>
           </Media>
           <Media at="md">
-            <Menu fluid pointing stackable secondary widths="7" style={styles.navSpacer}>
+            <Menu fluid pointing stackable primary widths="7">
               <MenuItem active={activeItem === 'home' ? true : false} item='Home' />
               <MenuItem active={activeItem === 'publications' ? true : false} item='Publications' />
               <MenuItem active={activeItem === 'projects' ? true : false} item='Projects' />
               <MenuItem active={activeItem === 'cv' ? true : false} item='CV' />
-              <MenuItem active={activeItem === 'reading' ? true : false} item='Reading' />
+              <MenuItem
+                active={activeItem.startsWith('research') ? true : false}
+                item='Research'
+                link={false}
+                header={true}
+              />
+            </Menu>
+            <Menu pointing stackable secondary size="small" widths="7" style={{display: secondaryNavOpen ? 'block' : 'none'}}>
               <MenuItem active={activeItem === 'researchinterests' ? true : false} item='Interests' url='/research/interests' />
+              <MenuItem active={activeItem === 'researchreading' ? true : false} item='Reading' url='/research/reading' />
               <MenuItem active={activeItem === 'researchinfluences' ? true : false} item='Influences' url='/research/influences' />
             </Menu>
           </Media>
         </MediaContextProvider>
+        <div style={styles.navSpacer}></div>
       </header>
     )
   }
