@@ -3,11 +3,11 @@
 */
 
 import React from "react"
-import { Table, Header, Container } from 'semantic-ui-react'
-import Layout from "../components/layout"
-import PubGraph from "../components/PubGraph.js"
-import { spacer } from "../common"
 import { Helmet } from "react-helmet"
+import { Table, Header, Container } from 'semantic-ui-react'
+import Layout from "../../components/layout"
+import PubGraph from "../../components/PubGraph.js"
+import { spacer } from "../../common"
 
 // import "semantic-ui-css/components/table.css"
 
