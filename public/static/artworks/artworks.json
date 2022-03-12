@@ -89,6 +89,23 @@
     ]
   },
   {
+    "series": "Portrait",
+    "numtiles": 2,
+    "works": [
+      {
+        "title": "",
+        "thumb": "/static/artworks/diffusion/cc12m/portrait/1-8.png",
+        "src": null,
+        "method": ["v-diffusion-pytorch"],
+        "model": "cc2m-1",
+        "initial": false,
+        "target": false,
+        "year": "2022",
+        "month": "03"
+      }
+    ]
+  },
+  {
     "series": "Bruteforce Centauri",
     "numtiles": 2,
     "works": [
