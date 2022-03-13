@@ -108,6 +108,14 @@ class ArtPage extends React.Component {
 				breadcrumbs //: ['2021-10', '2021-11']
 			})
 		})
+
+		// inject Twitter timeline script
+		const script = document.createElement("script");
+		script.type = "text/javascript";
+		script.src = 'https://platform.twitter.com/widgets.js';
+		script.charset = 'utf-8';
+		document.body.appendChild(script);
+
   }
   handleFilterClick(d) {
   	if (!d) {
@@ -172,6 +180,10 @@ class ArtPage extends React.Component {
 		        	<p>
 		        		I post some more AI-generated artworks on the Twitter account <a href="https://twitter.com/kettlebellz">@kettlebellz</a>
 		        	</p>
+		        </section>
+
+		        <section id="twitter-timeline-container">
+			        <a class="twitter-timeline" data-lang="en" data-dnt="true" href="https://twitter.com/kettlebellz?ref_src=twsrc%5Etfw">Tweets by kettlebellz</a>
 		        </section>
 
 	          <div className="spacer" style={spacer}></div>
