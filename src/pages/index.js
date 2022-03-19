@@ -178,7 +178,7 @@ class Home extends React.Component {
 
                 <p>
                     <strong>Office</strong><br />
-                    Room C415.1<br />
+                    Room C223.2<br />
                     University of Jyv&auml;skyl&auml;<br />
                     {/* Software and Communications Engineering<br /> */}
                     Faculty of Information Technology<br />
