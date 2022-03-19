@@ -174,9 +174,9 @@ class ArtPage extends React.Component {
 	      <Container>
 					<Header as='h1' textAlign='center' content="AI-generated Artworks" />
 		        <section style={{textAlign:'center'}}>
-		        	<p>All credits go to Katherine Crowson (<a href="https://twitter.com/RiversHaveWings">@RiversHaveWings</a>)
-		        		for creating the VQGAN+CLIP and clip guided diffusion notebooks. <br />
-		        		For now, I just experiment with different textual input prompts, initial images, and target images.
+		        	<p>I like to experiment with text-to-image synthesis. The digital artworks below were created with 
+		        		Katherine Crowson's (<a href="https://twitter.com/RiversHaveWings">@RiversHaveWings</a>)
+		        		VQGAN+CLIP, CLIP guided diffusion, etc.
 		        	</p>
 		        	<p>
 		        		I post my AI-generated artworks on the Twitter account <a href="https://twitter.com/kettlebellz">@kettlebellz</a>
