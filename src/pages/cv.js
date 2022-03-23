@@ -192,7 +192,7 @@ class CV extends React.Component {
                     <List.Item>Finland</List.Item>
                   </List>
                   <List>
-                    <List.Item>E-Mail: {'{'}firstname.lastname{'}'}@jyu.fi</List.Item>
+                    <List.Item>E-Mail: {/*'{'}firstname.lastname{'}'*/} jonas.x1.oppenlander@jyu.fi</List.Item>
                     <List.Item><a href="https://www.jonaso.de/">www.jonaso.de</a></List.Item>
                   </List>
                 </Item.Description>
