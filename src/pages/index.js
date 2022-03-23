@@ -187,7 +187,7 @@ class Home extends React.Component {
                 </p>
 
                 <p>
-                  E-Mail: {'{'}firstname.x1.lastname{'}'}@jyu.fi
+                  E-Mail: jonas.x1.oppenlander@jyu.fi
                 </p>
                 <p>
                     Academic <a href="/cv/oppenlaender-cv.pdf">CV</a>
