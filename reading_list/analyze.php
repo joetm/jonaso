@@ -168,7 +168,7 @@ while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 
 			// duplicate check
 			// skip if this publication is already listed for this author
-			if (isset($influencers[$author]) && isset($influencers[$author]['docs']) {
+			if (isset($influencers[$author]) && isset($influencers[$author]['docs'])) {
 				$found = false;
 				foreach ($influencers[$author]['docs'] as $doc) {
 					if ($doc['title'] === $jsondoc->title) {
