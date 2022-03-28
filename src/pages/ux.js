@@ -17,7 +17,7 @@ class UX extends React.Component {
         <Helmet>
           <meta charSet="utf-8" />
           <title>UX {'//'} jonaso.de</title>
-          <link rel="canonical" href="http://www.jonaso.de/ux" />
+          <link rel="canonical" href="https://www.jonaso.de/ux" />
         </Helmet>
 	      <Container>
 			<Header as='h1' textAlign='center' content="UX Portfolio" />

@@ -97,7 +97,7 @@ class Projects extends React.Component {
         <Helmet>
           <meta charSet="utf-8" />
           <title>Projects {'//'} jonaso.de</title>
-          <link rel="canonical" href="http://www.jonaso.de/projects" />
+          <link rel="canonical" href="https://www.jonaso.de/projects" />
         </Helmet>
         <Container>
               <Header id="technical-skills" size="huge">Research Projects</Header>
