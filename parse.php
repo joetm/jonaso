@@ -33,8 +33,8 @@ $rows = $finder->query("//*[contains(@class, '$classname')]");
 $references = [];
 
 foreach ($rows as $bibitem) {
-        // var_dump(DOMinnerHTML($bibitem));
-        $references[] = DOMinnerHTML($bibitem);
+    // var_dump(DOMinnerHTML($bibitem));
+    $references[] = DOMinnerHTML($bibitem);
 }
 
 $fp = fopen('references.json', 'w');

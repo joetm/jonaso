@@ -152,8 +152,7 @@ refs:
 	php ./parsePerType.php
 	# move json file to public folder
 	# mv ./references-type.json ./public/static/
-	# rm publications.html
-	mv ./publications.html ./public/static/
+	rm publications.html
 
 	# move bib.html file to public folder
 	mv ./publications_bib.html ./public/static/
