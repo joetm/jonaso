@@ -1,6 +1,7 @@
 [
   {
     "DOI": "10.1145/3488541",
+    "abstract": "Spatial experience, or how humans experience a given space, has been a pivotal topic especially in urban-scale environments. On the human scale, HCI researchers have mostly investigated personal meanings or aesthetic and embodied experiences. In this paper, we investigate the human scale as an ensemble of individual spatial features. Through large-scale online questionnaires we first collected a rich set of spatial features that people generally use to characterize their surroundings. Second, we conducted a set of field interviews to develop a more nuanced understanding of the feature identified as most important: perceived safety. Our combined quantitative and qualitative analysis contributes to spatial understanding as a form of context information and presents a timely investigation into the perceived safety of human scale spaces. By connecting our results to the broader scientific literature, we contribute to the field of HCI spatial understanding.",
     "author": [
       {
         "family": "Paananen",
@@ -23,20 +24,23 @@
         "given": "Simo"
       }
     ],
-    "collection-title": "ISS ’21",
-    "container-title": "International conference on interactive surfaces and spaces",
-    "id": "isspaper",
+    "container-title": "Proc. ACM Hum.-Comput. Interact.",
+    "id": "10.1145/3488541",
+    "issue": "ISS",
     "issued": {
       "date-parts": [
         [
-          2021
+          2021,
+          11
         ]
       ]
     },
+    "keyword": "spatial experience, interaction design, architecture",
     "publisher": "Peer-reviewed Conference Papers; Association for Computing Machinery",
     "publisher-place": "New York, NY, USA",
     "title": "Investigating human scale spatial experience",
-    "type": "paper-conference"
+    "type": "article-journal",
+    "volume": "5"
   },
   {
     "author": [
@@ -88,35 +92,21 @@
     "type": "paper-conference"
   },
   {
-    "author": [
-      {
-        "family": "Tan",
-        "given": "Mary Ann"
-      },
-      {
-        "family": "Tietz",
-        "given": "Tabea"
-      },
-      {
-        "family": "Bruns",
-        "given": "Oleksandra"
-      },
-      {
-        "family": "Oppenlaender",
-        "given": "Jonas"
-      },
-      {
-        "family": "Dess",
-        "given": "Danilo"
-      },
-      {
-        "family": "Sack",
-        "given": "Harald"
-      }
-    ],
-    "collection-title": "JCDL2021",
-    "container-title": "HistoInformatics 2021 workshop",
-    "id": "histoinformaticsworkshop",
+    "ISSN": "1613-0073",
+    "collection-title": "CEUR workshop proceedings",
+    "container-title": "The 6th international workshop on computational history (histoinformatics2021 - jcdl2021). Ed.: y. Sumikawa",
+    "event": "6th international workshop on computational history - acm/ieee-cs joint conference on digital libraries",
+    "event-date": {
+      "date-parts": [
+        [
+          2021,
+          9,
+          30
+        ]
+      ]
+    },
+    "event-place": "Online",
+    "id": "TanTietzBruns2021_1000139475",
     "issued": {
       "date-parts": [
         [
@@ -124,12 +114,16 @@
         ]
       ]
     },
-    "publisher": "Peer-reviewed Workshop Proceedings; ACM/IEEE-CS Joint Conference on Digital Libraries",
+    "keyword": "Cultural Heritage, Digital Library, Ontology, Knowledge Graph",
+    "page": "8",
+    "publisher": "Peer-reviewed Workshop Proceedings; RWTH Aachen",
     "title": "DDB-kg: The german bibliographic heritage in a knowledge graph",
     "title-short": "DDB-kg",
-    "type": "paper-conference"
+    "type": "paper-conference",
+    "volume": "2981"
   },
   {
+    "URL": "http://ceur-ws.org/Vol-2980/paper348.pdf",
     "author": [
       {
         "family": "Tan",
@@ -148,7 +142,7 @@
         "given": "Jonas"
       },
       {
-        "family": "Dessì",
+        "family": "Dessı̀",
         "given": "Danilo"
       },
       {
@@ -156,8 +150,27 @@
         "given": "Harald"
       }
     ],
-    "container-title": "Proceedings of the international semantic web conference",
-    "id": "iswc2021poster",
+    "collection-title": "CEUR workshop proceedings",
+    "container-title": "Proceedings of the ISWC 2021 posters, demos and industry tracks: From novel ideas to industrial practice co-located with 20th international semantic web conference (ISWC 2021), virtual conference, october 24-28, 2021",
+    "editor": [
+      {
+        "family": "Seneviratne",
+        "given": "Oshani"
+      },
+      {
+        "family": "Pesquita",
+        "given": "Catia"
+      },
+      {
+        "family": "Sequeda",
+        "given": "Juan"
+      },
+      {
+        "family": "Etcheverry",
+        "given": "Lorena"
+      }
+    ],
+    "id": "DBLP:conf/semweb/TanTBODS21",
     "issued": {
       "date-parts": [
         [
@@ -165,10 +178,11 @@
         ]
       ]
     },
-    "publisher": "Peer-reviewed Conference Posters and Position Papers; Springer",
-    "title": "DDB-edm to fabio: The case of the german digital library",
-    "title-short": "DDB-edm to fabio",
-    "type": "paper-conference"
+    "publisher": "Peer-reviewed Conference Posters and Position Papers; CEUR-WS.org",
+    "title": "DDB-EDM to FaBiO: The case of the German digital library",
+    "title-short": "DDB-EDM to FaBiO",
+    "type": "paper-conference",
+    "volume": "2980"
   },
   {
     "DOI": "10.1145/3411764.3445380",

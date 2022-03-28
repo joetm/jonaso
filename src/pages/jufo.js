@@ -1,0 +1,59 @@
+// import 'semantic-ui-css/components/card.min.css'
+
+import React from "react"
+// Card, Image, Label
+import { Container, Header } from 'semantic-ui-react'
+import Layout from "../components/layout"
+import { Helmet } from "react-helmet"
+import { spacer } from "../common"
+
+const styles = {
+	breadcrumb: {
+		cursor: 'pointer',
+	}
+}
+
+
+class JufoPage extends React.Component {
+  state = {
+    jufo: false,
+  }
+  componentDidMount = () => {
+    fetch('https://www.jonaso.de/static/publications.json')
+    .then(response => {
+      if (response.status >= 400) {
+        throw new Error("Bad response from server: Could not get jufo points")
+      }
+      return response.json()
+    })
+    .then(publications => {
+			console.log(publications)
+			let jufo = publications.map(x => x.jufo).reduce(( previousValue, currentValue ) => previousValue + currentValue, 0)
+			this.setState({
+				jufo,
+			})
+		})
+  }
+  render() {
+  	const { jufo } = this.state
+    return (
+	   	<Layout>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Jufo {'//'} jonaso.de</title>
+          <link rel="canonical" href="https://www.jonaso.de/jufo" />
+        </Helmet>
+	      <Container>
+					<Header as='h1' textAlign='center' content="Jufo Points" />
+	        <section style={{textAlign:'center'}}>
+	        	<p>{jufo ? `&asymp; ${jufo}` : 'loading'}</p>
+	        </section>
+          <div className="spacer" style={spacer}></div>
+	      </Container>
+        </Layout>
+    )
+  }
+}
+
+
+export default JufoPage

@@ -169,7 +169,7 @@ class ArtPage extends React.Component {
         <Helmet>
           <meta charSet="utf-8" />
           <title>AI-generated Art {'//'} jonaso.de</title>
-          <link rel="canonical" href="http://www.jonaso.de/art" />
+          <link rel="canonical" href="https://www.jonaso.de/art" />
         </Helmet>
 	      <Container>
 					<Header as='h1' textAlign='center' content="AI-generated Artworks" />

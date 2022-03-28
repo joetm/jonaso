@@ -156,7 +156,7 @@ class CV extends React.Component {
       <Helmet>
         <meta charSet="utf-8" />
         <title>CV {'//'} jonaso.de</title>
-        <link rel="canonical" href="http://www.jonaso.de/cv" />
+        <link rel="canonical" href="https://www.jonaso.de/cv" />
       </Helmet>
       <Container className="print cv">
         <PdfCVButton />
