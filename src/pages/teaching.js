@@ -28,7 +28,7 @@ class Teaching extends React.Component {
         <Helmet>
           <meta charSet="utf-8" />
           <title>Teaching {'//'} jonaso.de</title>
-          <link rel="canonical" href="http://www.jonaso.de/teaching" />
+          <link rel="canonical" href="https://www.jonaso.de/teaching" />
         </Helmet>
               <Container>
 

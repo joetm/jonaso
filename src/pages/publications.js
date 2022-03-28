@@ -170,7 +170,7 @@ class Publications extends React.Component {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Publications {'//'} jonaso.de</title>
-        <link rel="canonical" href="http://www.jonaso.de/publications" />
+        <link rel="canonical" href="https://www.jonaso.de/publications" />
       </Helmet>
       <Container>
 
