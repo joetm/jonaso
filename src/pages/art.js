@@ -179,8 +179,8 @@ class ArtPage extends React.Component {
 		        		VQGAN+CLIP, CLIP guided diffusion, etc.
 		        	</p>
 		        	<p>
-		        		I post my AI-generated artworks on the Twitter account <a href="https://twitter.com/kettlebellz">@kettlebellz</a>
-		        	</p>        	
+		        		I post my AI-generated images on the Twitter account <a href="https://twitter.com/kettlebellz">@kettlebellz</a>.
+		        	</p>
 		        </section>
 
 		        <section id="twitter-timeline-container">
