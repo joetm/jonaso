@@ -1,8 +1,580 @@
 {
-    "modified": 1648559420,
-    "unrecognized_overall": 1339,
+    "modified": 1649700420,
+    "unrecognized_overall": 1340,
     "unrecognized_overall_percent": 0.17,
     "documents": [
+        {
+            "title": "Multimodal neural networks better explain multivoxel patterns in the hippocampus",
+            "year": 2021,
+            "authors": [
+                "Bhavin Choksi",
+                "Milad Mozafari"
+            ],
+            "filename": "!!multimodal_neural_networks_bet.pdf",
+            "recog": 1,
+            "modified": 1649699981,
+            "keywords": "Machine Learning > Applications > Neurosciene > CLIP",
+            "level": 4,
+            "priority": 2
+        },
+        {
+            "title": "PaLM: Scaling Language Modeling with Pathways",
+            "year": 2022,
+            "authors": [
+                "Aakanksha Chowdhery",
+                "Sharan Narang",
+                "Jacob Devlin",
+                "Maarten Bosma",
+                "Gaurav Mishra",
+                "Adam Roberts",
+                "Paul Barham",
+                "Hyung Won Chung",
+                "Charles Sutton",
+                "Sebastian Gehrmann",
+                "Parker Schuh",
+                "Kensen Shi",
+                "Sasha Tsvyashchenko",
+                "Joshua Maynez",
+                "Abhishek Rao",
+                "Parker Barnes",
+                "Yi Tay",
+                "Noam Shazeer",
+                "Vinodkumar Prabhakaran",
+                "Emily Reif",
+                "Nan Du",
+                "Ben Hutchinson",
+                "Reiner Pope",
+                "James Bradbury",
+                "Jacob Austin Michael Isard",
+                "Guy Gur-Ari",
+                "Pengcheng Yin Toju",
+                "Duke Anselm Levskaya",
+                "Sanjay Ghemawat",
+                "Sunipa Dev",
+                "Henryk Michalewski",
+                "Xavier Garcia Vedant Misra",
+                "Kevin Robinson",
+                "Liam Fedus",
+                "Denny Zhou",
+                "Daphne Ippolito",
+                "David Luan",
+                "Hyeontaek Lim Barret Zoph",
+                "Alexander Spiridonov",
+                "Ryan Sepassi",
+                "David Dohan Shivani Agrawal",
+                "Mark Omernick",
+                "Andrew M. Dai",
+                "Marie Pellat Aitor Lewkowycz",
+                "Erica Moreira",
+                "Rewon Child Oleksandr Polozov",
+                "Katherine Lee",
+                "Zongwei Zhou",
+                "Xuezhi Wang",
+                "Brennan Saeta",
+                "Mark Diaz",
+                "Orhan Firat Michele Catasta",
+                "Jason Wei",
+                "Kathy Meier-Hellstern",
+                "Douglas Eck",
+                "Jeff Dean Slav Petrov",
+                "Noah Fiedel"
+            ],
+            "filename": "!!2204.02311.pdf",
+            "recog": 1,
+            "modified": 1649606422,
+            "keywords": "NLP > Language Models > Google PaLM",
+            "level": 3,
+            "priority": 2
+        },
+        {
+            "title": "Can Computers Outperform Humans in Detecting User Zone-Outs? Implications for Intelligent Interfaces",
+            "year": 2022,
+            "authors": [
+                "NIGEL BOSCH",
+                "SIDNEY K. D\u2019MELLO"
+            ],
+            "filename": "!3481889.pdf",
+            "recog": 1,
+            "modified": 1649340550,
+            "keywords": "Future of Work > Virtual Work, Distributed Work, Remote Work > Zone Out > Human-Machine Fusion",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "Personality, Gender, and Age in the Language of Social Media: The Open-Vocabulary Approach",
+            "year": 2013,
+            "authors": [
+                "H. Andrew Schwartz",
+                "Johannes C. Eichstaedt",
+                "Margaret L. Kern",
+                "Lukasz Dziurzynski",
+                "Stephanie M. Ramones",
+                "Megha Agrawal",
+                "Achal Shah",
+                "Michal Kosinski",
+                "David Stillwell",
+                "Martin E. P. Seligman",
+                "Lyle H. Ungar"
+            ],
+            "filename": "!!!file.pdf",
+            "recog": 1,
+            "modified": 1649320991,
+            "keywords": "NLP > Open Vocabulary Technique > Point-wise Mutual Information (PMI)",
+            "level": 3,
+            "priority": 3
+        },
+        {
+            "title": "Hierarchical Text-Conditional Image Generation with CLIP Latents",
+            "year": 2022,
+            "authors": [
+                "Aditya Ramesh",
+                "Prafulla Dhariwal",
+                "Alex Nichol",
+                "Mark Chen"
+            ],
+            "filename": "!!dall-e-2.pdf",
+            "recog": 1,
+            "modified": 1649315371,
+            "keywords": "Machine Learning > Generative Adversarial Networks, GAN > GAN Models > Dall-E 2",
+            "level": 4,
+            "priority": 2
+        },
+        {
+            "title": "Design and Evaluation of Accessible Collaborative Writing Techniques for People with Vision Impairments",
+            "year": 2022,
+            "authors": [
+                "MAITRAYE DAS",
+                "ANNE MARIE PIPER",
+                "DARREN GERGLE"
+            ],
+            "filename": "-3480169.pdf",
+            "recog": 1,
+            "modified": 1649305954,
+            "keywords": "Creativity > Creativity Support Tools > Writing Support > Vision Impairment",
+            "level": 4,
+            "priority": 0
+        },
+        {
+            "title": "Past, present, and future of decision support technology",
+            "year": 2002,
+            "authors": [
+                "J.P. Shim",
+                "Merrill Warkentin",
+                "James F. Courtney",
+                "Daniel J. Power",
+                "Ramesh Sharda",
+                "Christer Carlsson"
+            ],
+            "filename": "!1-s2.0-S0167923601001397-main.pdf",
+            "recog": 1,
+            "modified": 1649075563,
+            "keywords": "Decision Support",
+            "level": 1,
+            "priority": 1
+        },
+        {
+            "title": "Creepy Technology:What Is It and How Do You Measure It?",
+            "year": 2021,
+            "authors": [
+                "Pawe\u0142 W. Wo\u017aniak",
+                "Jakob Karolus",
+                "Florian Lang",
+                "Caroline Eckerth",
+                "Johannes Sch\u00f6ning",
+                "Yvonne Rogers",
+                "Jasmin Niess"
+            ],
+            "filename": "!!!3411764.3445299.pdf",
+            "recog": 1,
+            "modified": 1649075205,
+            "keywords": "Technology > Creepy Technology > Perceived Creepiness of Technology Scale (PCTS)",
+            "level": 3,
+            "priority": 3
+        },
+        {
+            "title": "Once a mechanism is in place to open the black box, how do we, as a soci- ety, prepare to deal with the consequenc- es of exposing the reasoning that gener- ates the output from AI models?",
+            "year": 2022,
+            "authors": [
+                "Jeffrey Parsons"
+            ],
+            "filename": "!3490699.pdf",
+            "recog": 1,
+            "modified": 1648903345,
+            "keywords": "Machine Learning > Explainable AI, XAI > General",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "The Need for Open Source Software in Machine Learning",
+            "year": "N/A",
+            "authors": [
+                "Geoffrey Holmes",
+                "S\u00f6ren Sonnenburg",
+                "Mikio L. Braun",
+                "Cheng Soon Ong",
+                "Samy Bengio",
+                "Leon Bottou",
+                "Yann LeCun",
+                "Klaus-Robert M\u00fcller",
+                "Fernando Pereira",
+                "Carl Edward Rasmussen",
+                "Robert Williamson",
+                "Gunnar R\u00e4tsch",
+                "Bernhard Sch\u00f6lkopf",
+                "Alexander Smola",
+                "Pascal Vincent",
+                "Jason Weston",
+                "Robert C. Williamson",
+                "David Cohn"
+            ],
+            "filename": "!download.pdf",
+            "recog": 1,
+            "modified": 1648903134,
+            "keywords": "Machine Learning > Issues > Open Source",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "Computational Creativity: The Final Frontier?",
+            "year": 2012,
+            "authors": [
+                "Simon Colton",
+                "Geraint A. Wiggins"
+            ],
+            "filename": "!!!ComputationalCreativity.pdf",
+            "recog": 1,
+            "modified": 1648813021,
+            "keywords": "Creativity > General, Theory > Types > Computational Creativity",
+            "level": 4,
+            "priority": 3
+        },
+        {
+            "title": "The world's most agile countries",
+            "year": 2022,
+            "authors": [],
+            "filename": "-The world's most agile countries - BBC Travel.pdf",
+            "recog": 1,
+            "modified": 1648811416,
+            "keywords": "Countries > Agility of Country",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "Interactionist Approach to Visual Aesthetics in HCI",
+            "year": 2021,
+            "authors": [
+                "Johanna Silvennoinen(B"
+            ],
+            "filename": "!Silvennoinen2021_Chapter_InteractionistApproachToVisual.pdf",
+            "recog": 1,
+            "modified": 1648711898,
+            "keywords": "Aesthetics > Visual Aesthetics > Interactionist Approach ",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "Visual Indeterminacy in Generative Neural Art",
+            "year": 2019,
+            "authors": [
+                "Aaron Hertzmann",
+                "Refik Anadol",
+                "Robbie Barrat",
+                "Sofia Crespo",
+                "Mario Klingemann",
+                "Jason Salavon",
+                "Helena Sarin"
+            ],
+            "filename": "!!Visual_Indeterminacy_in_Generative_Neural_Art.pdf",
+            "recog": 1,
+            "modified": 1648649720,
+            "keywords": "Machine Learning > Art > Visual Indeterminancy",
+            "level": 3,
+            "priority": 2
+        },
+        {
+            "title": "Co-Creation: Human and AI Collaboration in Creative Expression",
+            "year": 2017,
+            "authors": [
+                "Sara (Salevati"
+            ],
+            "filename": "!!422_Feldman.pdf",
+            "recog": 1,
+            "modified": 1648649213,
+            "keywords": "AI > Human-AI-Interaction, Human-Machine-Interaction > Co-Creation > Systems > Evolver",
+            "level": 5,
+            "priority": 2
+        },
+        {
+            "title": "Utopian or Dystopian?: using a ML-assisted image generation game to empower the general public to envision the future",
+            "year": 2021,
+            "authors": [
+                "Janet F. Rafner",
+                "Steven Langsford",
+                "Lotte Philipsen",
+                "Sebastian Risi",
+                "Arthur Hjorth",
+                "Joel Simon",
+                "Miroslav Gajdacz",
+                "Jacob Sherson"
+            ],
+            "filename": "!!!3450741.3466815.pdf",
+            "recog": 1,
+            "modified": 1648648249,
+            "keywords": "Creativity > Creativity Measurement, Tests, Questionnaires > Games > crea.blender > Public Debates",
+            "level": 5,
+            "priority": 3
+        },
+        {
+            "title": "GANterpretations",
+            "year": 2020,
+            "authors": [
+                "Pablo Samuel Castro"
+            ],
+            "filename": "-ganterpretations.pdf",
+            "recog": 1,
+            "modified": 1648648028,
+            "keywords": "Machine Learning > Art > Music",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Has Artificial Intelligence Given Us the Next Great Art Movement? Experts Say Slow Down, the \u2018Field Is in Its Infancy\u2019",
+            "year": 2022,
+            "authors": [
+                "Ian Goodfellow"
+            ],
+            "filename": "-Has Artificial Intelligence Given Us the Next Great Art Movement_ Experts Say Slow Down, the 'Field Is in Its Infancy'.pdf",
+            "recog": 1,
+            "modified": 1648647928,
+            "keywords": "Machine Learning > Art > General, Theory",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Improved Techniques for Training GANs",
+            "year": 2016,
+            "authors": [
+                "Tim Salimans",
+                "Ian Goodfellow",
+                "Wojciech Zaremba",
+                "Vicki Cheung"
+            ],
+            "filename": "!1606.03498.pdf",
+            "recog": 1,
+            "modified": 1648647238,
+            "keywords": "Machine Learning > Generative Adversarial Networks, GAN > General, Theory",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "Visual Indeterminacy in GAN Art Aaron Hertzmann",
+            "year": 2020,
+            "authors": [
+                "Aaron Hertzmann",
+                "Refik Anadol",
+                "Robbie Barrat",
+                "Sofia Crespo",
+                "Mario Klingemann",
+                "Trevor Paglen",
+                "Jason Salavon",
+                "Helena Sarin"
+            ],
+            "filename": "!!3386567.3388574.pdf",
+            "recog": 1,
+            "modified": 1648646994,
+            "keywords": "Machine Learning > Art > Visual Indeterminancy",
+            "level": 3,
+            "priority": 2
+        },
+        {
+            "title": "crea.blender: A Neural Network-Based Image Generation Game to Assess Creativity",
+            "year": 2020,
+            "authors": [
+                "Janet Rafner",
+                "Arthur Hjorth",
+                "Sebastian Risi",
+                "Lotte Philipsen",
+                "Charles Dumas",
+                "Michael Mose Biskj\u00e6r",
+                "Lior Noy",
+                "Kristian Tyl\u00e9n",
+                "Carsten Bergenholtz",
+                "Jesse Lynch",
+                "Blanka Zana",
+                "Jacob Sherson"
+            ],
+            "filename": "!!!3383668.3419907.pdf",
+            "recog": 1,
+            "modified": 1648646229,
+            "keywords": "Creativity > Creativity Measurement, Tests, Questionnaires > Games > crea.blender",
+            "level": 4,
+            "priority": 3
+        },
+        {
+            "title": "Creating point clouds with Google Street View",
+            "year": 2022,
+            "authors": [
+                "Marco Cavallo"
+            ],
+            "filename": "!Creating point clouds with Google Street View _ by nocomputer _ Medium.pdf",
+            "recog": 1,
+            "modified": 1648645738,
+            "keywords": "Street View > Depth Map",
+            "level": 2,
+            "priority": 1
+        },
+        {
+            "title": "Can Unhappy Pictures Enhance the Effect of Personas? A User Experiment",
+            "year": 2022,
+            "authors": [
+                "JONI SALMINEN",
+                "Hamad Bin Khalifa",
+                "SERCAN \u015eENG\u00dcN",
+                "JO\u00c3O M. SANTOS",
+                "BERNARD JANSEN",
+                "Joni Salminen",
+                "Sercan \u015eeng\u00fcn",
+                "Jo\u00e3o M. Santos"
+            ],
+            "filename": "!!3485872.pdf",
+            "recog": 1,
+            "modified": 1648644437,
+            "keywords": "Design, HCI, UI, UX > Personas > Unhappy Personas",
+            "level": 3,
+            "priority": 2
+        },
+        {
+            "title": "3drecomstrictionmcavallo",
+            "year": 2022,
+            "authors": [],
+            "filename": "!!3drecomstrictionmcavallo.pdf",
+            "recog": 0,
+            "modified": 1648642611,
+            "keywords": "Street View > Depth Map > Street View Explorer",
+            "level": 3,
+            "priority": 2
+        },
+        {
+            "title": "3D City Reconstruction From Google Street View",
+            "year": 2016,
+            "authors": [
+                "Marco Cavallo"
+            ],
+            "filename": "!!3drecomstrictionmcavallo.pdf",
+            "recog": 1,
+            "modified": 1648642487,
+            "keywords": "Street View > Depth Map",
+            "level": 2,
+            "priority": 2
+        },
+        {
+            "title": "UbiNIRS: A Software Framework for Miniaturized NIRS-based Applications",
+            "year": 2021,
+            "authors": [
+                "Weiwei Jiang",
+                "Zhanna Sarsenbayeva",
+                "Difeng Yu",
+                "Jing Wei",
+                "Niels van Berkel"
+            ],
+            "filename": "-2112.05905.pdf",
+            "recog": 1,
+            "modified": 1648636557,
+            "keywords": "Mobile Phones > NIRS > UbiNIRS",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Don\u2019t look at me that way! \u2013 Understanding User Attitudes Towards Data Glasses Usage",
+            "year": 2015,
+            "authors": [
+                "Marion Koelle",
+                "Matthias Kranz",
+                "Andreas M\u00f6ller"
+            ],
+            "filename": "!2785830.2785842.pdf",
+            "recog": 1,
+            "modified": 1648636345,
+            "keywords": "Virtual Reality > Augmented Reality, AR, Mixed Reality > Issues > User Attitudes",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "Evaluating AI-Based Games Through Retellings",
+            "year": 2019,
+            "authors": [
+                "Max Kreminski",
+                "Ben Samuel",
+                "Edward Melcer",
+                "Noah Wardrip-Fruin"
+            ],
+            "filename": "!!!EvaluatingViaRetellings.pdf",
+            "recog": 1,
+            "modified": 1648571009,
+            "keywords": "Machine Learning > Evaluation > Retellings",
+            "level": 3,
+            "priority": 3
+        },
+        {
+            "title": "Tohme: Detecting Curb Ramps in Google Street View Using Crowdsourcing, Computer Vision, and Machine Learning",
+            "year": 2014,
+            "authors": [
+                "Kotaro Hara",
+                "Jin Sun",
+                "Robert Moore",
+                "David Jacobs",
+                "Jon E. Froehlich"
+            ],
+            "filename": "!Hara_TohmeDetectingCurbRampsInGoogleStreetViewUsingCrowdsourcingComputerVisionAndMachineLearning_2014.pdf",
+            "recog": 1,
+            "modified": 1648566872,
+            "keywords": "Crowdsourcing, Human Computation > Applications > Accessibility > Street View",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "Direct Manipulation",
+            "year": 1997,
+            "authors": [
+                "BEN SHNEIDERMAN"
+            ],
+            "filename": "-ShneidermanMaes-Interactions97.pdf",
+            "recog": 1,
+            "modified": 1648566071,
+            "keywords": "AI > Human-AI-Interaction, Human-Machine-Interaction > Direct Manipulation",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Confronting the Tensions Where UX Meets AI",
+            "year": 2019,
+            "authors": [
+                "Henriette Cramer"
+            ],
+            "filename": "-3364625.pdf",
+            "recog": 1,
+            "modified": 1648565676,
+            "keywords": "Design, HCI, UI, UX > User Experience, UX > UX and AI Tensions",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "A New Chatbot for Customer Service on Social Media",
+            "year": 2017,
+            "authors": [
+                "Anbang Xu",
+                "Zhe Liu",
+                "Yufan Guo",
+                "Vibha Sinha",
+                "Rama Akkiraju"
+            ],
+            "filename": "!!3025453.3025496.pdf",
+            "recog": 1,
+            "modified": 1648564982,
+            "keywords": "Chat Bots, Conversational AI",
+            "level": 1,
+            "priority": 2
+        },
         {
             "title": "The AI Hiring Manager Will See You Now",
             "year": 2022,
@@ -1023,433 +1595,6 @@
             "modified": 1648030702,
             "keywords": "Design, HCI, UI, UX > HCI for Peace",
             "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "Mastering the Art of War: How Patterns of Gameplay Influence Skill in Halo",
-            "year": 2013,
-            "authors": [
-                "Jeff Huang",
-                "Thomas Zimmermann",
-                "Nachiappan Nagappan",
-                "Charles Harrison",
-                "Bruce Phillips"
-            ],
-            "filename": "-2470654.2470753.pdf",
-            "recog": 1,
-            "modified": 1648030631,
-            "keywords": "Gaming > Gaming Skills",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "HISTORY OF TIMEKEEPING FOR DUMMIES",
-            "year": 2011,
-            "authors": [
-                "Will You Die"
-            ],
-            "filename": "-1966989.1967009.pdf",
-            "recog": 1,
-            "modified": 1648023811,
-            "keywords": "Design, HCI, UI, UX > Time > Leap Seconds",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "The New War Correspondents: The Rise of Civic Media Curation in Urban Warfare",
-            "year": 2012,
-            "authors": [
-                "Andr\u00e9s Monroy-Hern\u00e1ndez",
-                "danah boyd Emre Kiciman",
-                "Munmun De Choudhury",
-                "Scott Counts"
-            ],
-            "filename": "!2441776.2441938.pdf",
-            "recog": 1,
-            "modified": 1648019471,
-            "keywords": "Journalism > Citizen Journalism",
-            "level": 2,
-            "priority": 1
-        },
-        {
-            "title": "Computing in Post-War Afghanistan",
-            "year": 2006,
-            "authors": [
-                "Muhammad Aimal Marjan"
-            ],
-            "filename": "-1113034.1113055.pdf",
-            "recog": 1,
-            "modified": 1648016321,
-            "keywords": "War > Computing in Afghanistan",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "The U.S. probably outspends the rest of the planet combined on high technology, and particularly on IT, for military and intelligence purposes.",
-            "year": 1996,
-            "authors": [
-                "E. Goodman"
-            ],
-            "filename": "-240483.240485.pdf",
-            "recog": 1,
-            "modified": 1648015970,
-            "keywords": "War > IT",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "The War against Spam; and more",
-            "year": 2010,
-            "authors": [],
-            "filename": "!1787234.1787238.pdf",
-            "recog": 1,
-            "modified": 1648015322,
-            "keywords": "Spam > Big Work, little work",
-            "level": 2,
-            "priority": 1
-        },
-        {
-            "title": "1056018.1056026",
-            "year": 2005,
-            "authors": [],
-            "filename": "-1056018.1056026.pdf",
-            "recog": 0,
-            "modified": 1648013680,
-            "keywords": "Software Development > War Room Command Console Visualization",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "Expanding a Country\u2019s Borders During War: The Internet War Diary",
-            "year": 2008,
-            "authors": [
-                "Gloria Mark",
-                "Bryan Semaan"
-            ],
-            "filename": "!1499224.1499228.pdf",
-            "recog": 1,
-            "modified": 1648013417,
-            "keywords": "Journalism > Citizen Journalism > War Diary",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "Pink Floyd's burning man: Aubrey Powell's best photograph",
-            "year": 2022,
-            "authors": [
-                "Joobin Bekhrad"
-            ],
-            "filename": "-Music recording certification - Wikipedia.pdf",
-            "recog": 1,
-            "modified": 1647964493,
-            "keywords": "Music Industry > Album Covers",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "PRINCE- Preparedness Response for CBRNE INCidEnts",
-            "year": 2022,
-            "authors": [],
-            "filename": "-PRINCE- Preparedness Response for CBRNE INCidEnts - Center for Ubiquitous Computing.pdf",
-            "recog": 1,
-            "modified": 1647949693,
-            "keywords": "Crisis Informatics > Project PRINCE",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "CUTLER - Coastal Urban developmenT through the LEnses of Resiliency",
-            "year": 2020,
-            "authors": [
-                "Giorgio Costantino"
-            ],
-            "filename": "!!cutler_d11.6_DMP_final_version.pdf",
-            "recog": 1,
-            "modified": 1647942430,
-            "keywords": "Data, Research Data, Forschungsdaten > Data Management Plans > CUTLER",
-            "level": 3,
-            "priority": 2
-        },
-        {
-            "title": "Horizon Europe Data Management Plan Template",
-            "year": 2022,
-            "authors": [],
-            "filename": "!!data-management-plan-template_he_en.pdf",
-            "recog": 1,
-            "modified": 1647936700,
-            "keywords": "Data, Research Data, Forschungsdaten > Data Management Plans > H2020 DMP Template",
-            "level": 3,
-            "priority": 2
-        },
-        {
-            "title": "CUTLER - Coastal Urban developmenT through the LEnses of Resiliency",
-            "year": 2019,
-            "authors": [],
-            "filename": "-cutler_d11.2_DMP_updated_final.pdf",
-            "recog": 1,
-            "modified": 1647936487,
-            "keywords": "Data, Research Data, Forschungsdaten > Data Management Plans > CUTLER",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "Stepping into the Era of Personal Big Data: a Roadmap to the Design of a Personal Digital Life Coach",
-            "year": 2019,
-            "authors": [
-                "Nuno M. Garcia",
-                "Nuno Pombo",
-                "Torsten Braun",
-                "Francisco Fl\u00f3rez-Revuelta",
-                "Ivan Chorbev",
-                "Susanna Spinsante",
-                "David Lamas",
-                "Rossitza Goleva"
-            ],
-            "filename": "!preprint-6315-submitted.pdf",
-            "recog": 1,
-            "modified": 1647935978,
-            "keywords": "Data > Big Data > Personal Big Data > Personal Digital Life Coach",
-            "level": 4,
-            "priority": 1
-        },
-        {
-            "title": "Data Engineering for Beginners \u2014 Get Acquainted with the Spark Architecture",
-            "year": 2022,
-            "authors": [],
-            "filename": "-Spark Architecture _ Architecture of Apache Spark for Data Engineers.pdf",
-            "recog": 1,
-            "modified": 1647935895,
-            "keywords": "Data > Big Data > Spark",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "Framework for Implementing a Big Data Ecosystem in Organizations",
-            "year": 2018,
-            "authors": [],
-            "filename": "!p58-orenga-rogla.pdf",
-            "recog": 1,
-            "modified": 1647933638,
-            "keywords": "Data > Big Data > BD-IRIS Framework",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "Apache Spark Solutions for Scientific Computing",
-            "year": 2020,
-            "authors": [
-                "Ella Peltonen"
-            ],
-            "filename": "!Ubicomp-Spark-Scientific-Computing.pdf",
-            "recog": 1,
-            "modified": 1647933513,
-            "keywords": "Data > Big Data > Spark",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "Computing Infrastructure for Big Data Processing",
-            "year": 2012,
-            "authors": [
-                "Ling LIU"
-            ],
-            "filename": "-LingLiu-FCS.pdf",
-            "recog": 1,
-            "modified": 1647932379,
-            "keywords": "Data > Big Data",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "Casual Creators A C&C 2022 Workshop",
-            "year": 2022,
-            "authors": [],
-            "filename": "!Casual Creators Workshop 2022.pdf",
-            "recog": 1,
-            "modified": 1647870655,
-            "keywords": "Workshop Proposals",
-            "level": 1,
-            "priority": 1
-        },
-        {
-            "title": "Madman theory",
-            "year": 2022,
-            "authors": [
-                "Richard Nixon",
-                "Donald Trump",
-                "Vladimir Putin"
-            ],
-            "filename": "-Madman theory - Wikipedia.pdf",
-            "recog": 1,
-            "modified": 1647764417,
-            "keywords": "War > Madman Theory",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "Ukraine war_ Western agents seek to get inside Putin's head - BBC News",
-            "year": 2022,
-            "authors": [],
-            "filename": "-Ukraine war_ Western agents seek to get inside Putin's head - BBC News.pdf",
-            "recog": 0,
-            "modified": 1647764228,
-            "keywords": "War > Madman Theory",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "Characterizing Human vs. Automated Coaching: Preliminary Results",
-            "year": 2020,
-            "authors": [
-                "Elliot G Mitchell"
-            ],
-            "filename": "!3334480.3383081.pdf",
-            "recog": 1,
-            "modified": 1647762519,
-            "keywords": "Healthcare > Health Coaching > Human versus Automated Health Coaching",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "Scaling Up HCI Research: from Clinical Trials to Deployment in the Wild",
-            "year": 2021,
-            "authors": [
-                "Lena",
-                "Mamykina",
-                "Arlene M. Smaldone",
-                "Suzanne R. Bakken",
-                "Noemie Elhadad",
-                "Elliot G. Mitchell",
-                "Pooja M. Desai",
-                "Matthew E. Levine",
-                "Jonathan N. Tobin",
-                "Andrea Cassells",
-                "Patricia G. Davidson",
-                "David J. Albers",
-                "George Hripcsak"
-            ],
-            "filename": "-3411763.3443437.pdf",
-            "recog": 1,
-            "modified": 1647761290,
-            "keywords": "Design, HCI, UI, UX > Issues > Scalability > Design for Longevity, Diversity, Adoption, Abandonment",
-            "level": 4,
-            "priority": 0
-        },
-        {
-            "title": "Troubling Care: Four Orientations for Wickedness in Design",
-            "year": 2021,
-            "authors": [
-                "Karey Helms",
-                "Ylva Fernaeus"
-            ],
-            "filename": "-3461778.3462025.pdf",
-            "recog": 1,
-            "modified": 1647712685,
-            "keywords": "Design, HCI, UI, UX > Design Patterns > Wickedness in Design",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "An Investigation of Player Motivations in Eyewire, a Gamified Citizen Science Project",
-            "year": 2016,
-            "authors": [
-                "Ramine Tinati",
-                "Markus Luczak-Roesch",
-                "Elena Simperl",
-                "Wendy Hall"
-            ],
-            "filename": "!!!2017___CIHB___Citizen_Science_with_authors.pdf",
-            "recog": 1,
-            "modified": 1647708530,
-            "keywords": "Motivation, Incentives > Citizen Science > EyeWire",
-            "level": 3,
-            "priority": 3
-        },
-        {
-            "title": "Bridging the Gap between Design Space Exploration and Generative Design Interfaces: An Exploratory Study",
-            "year": 2021,
-            "authors": [
-                "Naghmi Shireen"
-            ],
-            "filename": "!!!etd20895.decrypted.pdf",
-            "recog": 1,
-            "modified": 1647708424,
-            "keywords": "Creativity > Process > 2 Idea Quality, Idea Selection > Design Space Exploration, Evaluating Alternatives",
-            "level": 4,
-            "priority": 3
-        },
-        {
-            "title": "Confessions in Social Media \u2013 Performative, Constrained, Authentic and Participatory Self- Representations in Vlogs",
-            "year": 2014,
-            "authors": [
-                "Karoliina Talvitie-Lamberg",
-                "Janne Matikainen",
-                "Hannu Nieminen",
-                "Anu Kantola"
-            ],
-            "filename": "-talvitie-lamberg_dissertation.pdf",
-            "recog": 1,
-            "modified": 1647707923,
-            "keywords": "Communities, Networks > Social Media > Confessions",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "Improving the Performance of Early-Stage Software Startups",
-            "year": 2021,
-            "authors": [
-                "Juhani Risku",
-                "JYU DISSERTATIONS"
-            ],
-            "filename": "-2108.00521.pdf",
-            "recog": 1,
-            "modified": 1647707751,
-            "keywords": "Startup",
-            "level": 1,
-            "priority": 0
-        },
-        {
-            "title": "Methods of prompt programming",
-            "year": 2022,
-            "authors": [],
-            "filename": "!!!Methods of prompt programming __ \u2014 Moire.pdf",
-            "recog": 1,
-            "modified": 1647707606,
-            "keywords": "NLP > Prompt Engineering, Prompt Programming",
-            "level": 2,
-            "priority": 3
-        },
-        {
-            "title": "Exploring Characteristics of Collective Content \u2013 a Field Study with Four User Communities",
-            "year": 2008,
-            "authors": [],
-            "filename": "!1358628.1358792.pdf",
-            "recog": 1,
-            "modified": 1647703229,
-            "keywords": "Communities, Networks > Collective Content",
-            "level": 2,
-            "priority": 1
-        },
-        {
-            "title": "GPT-3 Creative Fiction",
-            "year": 2022,
-            "authors": [],
-            "filename": "!!!GPT-3 Creative Fiction \u00b7 Gwern.net.pdf",
-            "recog": 1,
-            "modified": 1647702873,
-            "keywords": "NLP > Prompt Engineering, Prompt Programming",
-            "level": 2,
-            "priority": 3
-        },
-        {
-            "title": "L   C   S",
-            "year": 2022,
-            "authors": [],
-            "filename": "-Lizardman Constant in Surveys \u00b7 Gwern.net.pdf",
-            "recog": 1,
-            "modified": 1647699986,
-            "keywords": "Research Methods > Surveys, Umfrage > Issues > Lizardman Constant",
-            "level": 4,
             "priority": 0
         }
     ]
