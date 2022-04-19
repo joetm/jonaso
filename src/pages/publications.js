@@ -157,10 +157,11 @@ class Publications extends React.Component {
       customSortOrder = [
         "Peer-reviewed Conference Papers",
         "Peer-reviewed Journal Articles",
-        "Peer-reviewed Workshops Organized",
-        "Doctoral Consortia",
+        "Peer-reviewed Workshops",
         "Peer-reviewed Workshop Proceedings",
+        "Doctoral Consortia",
         "Peer-reviewed Conference Posters and Position Papers",
+        "Pre-prints",
         "Theses and Seminal Papers",
       ]
     }
