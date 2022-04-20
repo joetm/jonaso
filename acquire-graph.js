@@ -18,7 +18,7 @@ const puppeteer = require('puppeteer');
   const page = await browser.newPage();
 
   // 3. Navigate to URL
-  await page.goto('http://jonaso.de/publications/', { waitUntil: 'networkidle0' });
+  await page.goto('https://jonaso.de/publications/', { waitUntil: 'networkidle0' });
 
 	// // 4. Take screenshot
   //  await page.screenshot({path: 'graph.png'});

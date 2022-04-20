@@ -212,7 +212,7 @@ class Publications extends React.Component {
                           <Header size="large">{typ}</Header>
                         </Grid.Row>
                         {
-                          referencesDetail[typ].map((ref, index) => {
+                          referencesDetail[typ] && referencesDetail[typ].map((ref, index) => {
                             let title = ref.title.replace('Jonas Oppenlaender', '<strong>Jonas Oppenlaender</strong>')
                             title = title.replace('Jonas Oppenländer', '<strong>Jonas Oppenländer</strong>')
                             const icostr = title.indexOf('.pdf') === -1 ? 'file outline' : 'file alternate outline'
