@@ -101,7 +101,7 @@ replace-cv:
 	cd academic-cv; \
 		sed 's|\\excludefromprint{.*}||g' publication-list.tex | sponge publication-list.tex; \
 		sed 's|\\definenewtoggle{showpublicationsummary}{false}|\\definenewtoggle{showpublicationsummary}{true}|g' publication-list.tex | sponge publication-list.tex
-		sed 's|\\definenewtoggle{showmanuscripts}{true}|\\definenewtoggle{showmanuscripts}{false}|g' publication-list.tex | sponge publication-list.tex
+		sed 's|\\definenewtoggle{showmanuscripts}{false}|\\definenewtoggle{showmanuscripts}{true}|g' publication-list.tex | sponge publication-list.tex
 
 
 build-cv:
