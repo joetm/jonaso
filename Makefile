@@ -40,11 +40,19 @@ post-build:
 	mv ./src/bibliography/publications.json ./public/static/publications.json
 
 fetch-cv:
+	[ -d "./academic-cv" ] && rm -rf ./academic-cv
+
 	git clone --depth=1 git@github.com:joetm/academic-cv.git
 
 	# get an up-to-date graph of the publications from the homepage to use in the latex CV
 	./acquire-graph.js
-	mv ./graph.png ./academic-cv/
+
+	# TODO: the above currently fails (after Ubuntu upgrade)
+	if [ -f 'graph.png' ];then \
+		mv ./graph.png ./academic-cv/; \
+	else \
+	    cp ./graph-BAK.png ./academic-cv/; \
+	fi
 
 replace-cv:
 	# modify publication-list.tex to use the downloaded graph
