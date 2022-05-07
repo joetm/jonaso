@@ -44,10 +44,7 @@ export default class Nav extends React.Component {
   handleItemClick = (e, { name, url }) => {
     e.preventDefault()
     let activeItem = name.toLowerCase()
-    this.setState({
-      activeItem,
-      secondaryNavOpen: activeItem.startsWith('research'),
-    })
+    this.setState({ activeItem })
     if (name === 'home') {
       navigate('/')
     } else {
@@ -63,8 +60,16 @@ export default class Nav extends React.Component {
     e.preventDefault()
     this.setState({mobileMenuIsOpen: !this.state.mobileMenuIsOpen})
   }
+  prepareUrl(url) {
+    return url.replace(/\//g, '').toLowerCase()
+  }
   componentDidMount() {
-    this.setState({activeItem: window.location.pathname.replace(/\//g, '').toLowerCase() || 'home'})
+    let url = this.prepareUrl(window.location.pathname)
+    let secondaryNavOpen = url.startsWith('research')
+    this.setState({
+      activeItem: url || 'home',
+      secondaryNavOpen,
+    })
   }
   render() {
     const { activeItem, secondaryNavOpen, mobileMenuIsOpen } = this.state
@@ -73,7 +78,7 @@ export default class Nav extends React.Component {
       <header>
         <MediaContextProvider>
           <Media at="md">
-            <Menu fluid pointing stackable primary widths="7">
+            <Menu fluid pointing stackable primary="true" widths="7">
               <MenuItem active={activeItem === 'home'} item='Home' />
               <MenuItem active={activeItem === 'publications'} item='Publications' />
               <MenuItem active={activeItem === 'projects'} item='Projects' />

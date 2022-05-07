@@ -13,9 +13,11 @@ class GraphSwitcher extends React.Component {
           <Button.Or />
           <Button positive={active === 'wordcloud'}
             onClick={() => navigate('/research/interests/wordcloud')}>Cloud</Button>
-          <Button.Or />
-          <Button positive={active === 'treemap'}
-            onClick={() => navigate('/research/interests/treemap')}>Tree</Button>
+          {/*
+            <Button.Or />
+            <Button positive={active === 'treemap'}
+              onClick={() => navigate('/research/interests/treemap')}>Tree</Button>
+          */}
       </Button.Group>
     )
   }
