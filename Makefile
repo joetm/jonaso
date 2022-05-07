@@ -40,7 +40,9 @@ post-build:
 	mv ./src/bibliography/publications.json ./public/static/publications.json
 
 fetch-cv:
-	[ -d "./academic-cv" ] && rm -rf ./academic-cv
+	if [ -d "./academic-cv" ];then \
+		rm -rf ./academic-cv; \
+	fi
 
 	git clone --depth=1 git@github.com:joetm/academic-cv.git
 
