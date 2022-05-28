@@ -1,8 +1,1070 @@
 {
-    "modified": 1652374306,
-    "unrecognized_overall": 1361,
-    "unrecognized_overall_percent": 0.17,
+    "modified": 1653720231,
+    "unrecognized_overall": 1360,
+    "unrecognized_overall_percent": 0.16,
     "documents": [
+        {
+            "title": "A Deeper Understanding of Deep Learning",
+            "year": 2022,
+            "authors": [
+                "Gintare Karolina Dziugaite"
+            ],
+            "filename": "-3530686.pdf",
+            "recog": 1,
+            "modified": 1653659739,
+            "keywords": "Machine Learning > Issues > Generalization",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "GPT-NeoX-20B: An Open-Source Autoregressive Language Model",
+            "year": 2022,
+            "authors": [
+                "Sid Black",
+                "Stella Biderman",
+                "Eric Hallahan",
+                "Quentin Anthony",
+                "Leo Gao",
+                "Laurence Golding",
+                "Horace He",
+                "Connor Leahy",
+                "Kyle McDonell",
+                "Jason Phang",
+                "Michael Pieler",
+                "USVSN Sai Prashanth",
+                "Shivanshu Purohit",
+                "Laria Reynolds",
+                "Jonathan Tow",
+                "Ben Wang",
+                "Samuel Weinbach"
+            ],
+            "filename": "!2022.bigscience-1.9.pdf",
+            "recog": 1,
+            "modified": 1653659043,
+            "keywords": "NLP > Language Models > GPT > GPT-Neo > GPT-NeoX-20B",
+            "level": 5,
+            "priority": 1
+        },
+        {
+            "title": "The wide-ranging benefits of textless NLP",
+            "year": 2022,
+            "authors": [],
+            "filename": "!Textless NLP_ Generating expressive speech from raw audio.pdf",
+            "recog": 1,
+            "modified": 1653579213,
+            "keywords": "Machine Learning > Applications > Text-to-Speech > Textless NLP > Generative Spoken Language Model (GSLM)",
+            "level": 5,
+            "priority": 1
+        },
+        {
+            "title": "Computing Aesthetics with Image Judgement Systems",
+            "year": 2012,
+            "authors": [
+                "Juan Romero",
+                "Penousal Machado",
+                "Adrian Carballal",
+                "Jo\u00e3o Correia"
+            ],
+            "filename": "-Romero2012_Chapter_ComputingAestheticsWithImageJu.pdf",
+            "recog": 1,
+            "modified": 1653563495,
+            "keywords": "Creativity > Creativity Measurement, Tests, Questionnaires > Creative Aesthetics > Image Judgment Systems",
+            "level": 4,
+            "priority": 0
+        },
+        {
+            "title": "From Likert scales to images: Validating a novel creativity measure with image based response scales",
+            "year": 2016,
+            "authors": [
+                "Franziska Leutner",
+                "Adam Yearsley",
+                "Sonia-Cristina Codreanu",
+                "Yossi Borenstein",
+                "Gorkan Ahmetoglu"
+            ],
+            "filename": "!From_Likert_scales_to_images_Validating_a_novel_cr.pdf",
+            "recog": 1,
+            "modified": 1653561211,
+            "keywords": "Creativity > Creativity Measurement, Tests, Questionnaires > Image-based Measurement of Creativity",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "Keyword Extraction with BERT",
+            "year": 2022,
+            "authors": [
+                "Maarten Grootendorst"
+            ],
+            "filename": "-Keyword Extraction with BERT _ Towards Data Science.pdf",
+            "recog": 1,
+            "modified": 1653558279,
+            "keywords": "NLP > Phrase Detection, Phrase Extraction > Algorithms, Models > KeyBert",
+            "level": 4,
+            "priority": 0
+        },
+        {
+            "title": "Using noun phrase preprocessing to enhance BERT-based keyword extraction",
+            "year": 2022,
+            "authors": [
+                "Tim Schopf"
+            ],
+            "filename": "!Keyphrase Extraction with BERT Transformers and Noun Phrases _ Towards Data Science.pdf",
+            "recog": 1,
+            "modified": 1653558218,
+            "keywords": "NLP > Phrase Detection, Phrase Extraction > Algorithms, Models > KeyBert",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "Self-supervised Contextual Keyword and Keyphrase Retrieval with Self-Labelling",
+            "year": 2019,
+            "authors": [
+                "Prafull Sharma",
+                "Yingbo Li"
+            ],
+            "filename": "!!preprints201908.0073.v1.pdf",
+            "recog": 1,
+            "modified": 1653557045,
+            "keywords": "NLP > Phrase Detection, Phrase Extraction > Algorithms, Models > SCKKRS (Self-supervised Contextual Keyword and Keyphrase Retrieval with Self-Labelling)",
+            "level": 4,
+            "priority": 2
+        },
+        {
+            "title": "Evaluation of Creative Aesthetics",
+            "year": 2012,
+            "authors": [
+                "Harold Cohen",
+                "Frieder Nake",
+                "David C. Brown",
+                "Paul Brown",
+                "Philip Galanter",
+                "Jon McCormack",
+                "David Brown"
+            ],
+            "filename": "-Cohen2012_Chapter_EvaluationOfCreativeAesthetics.pdf",
+            "recog": 1,
+            "modified": 1653552336,
+            "keywords": "Creativity > Creativity Measurement, Tests, Questionnaires > Creative Aesthetics > Computational Aesthetic Evaluation",
+            "level": 4,
+            "priority": 0
+        },
+        {
+            "title": "\u201cGirl With a Pearl Earring\u201d in a full face of makeup. The first Queen Elizabeth contoured from her neck ruff up. Severus Snape with jet-black hair",
+            "year": 2022,
+            "authors": [
+                "Shane O\u2019Neill"
+            ],
+            "filename": "-YassifyBot and 'Yassification' Memes, Explained - The New York Times.pdf",
+            "recog": 1,
+            "modified": 1653543118,
+            "keywords": "Memes, Internet Culture > Memes > Yassification",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Disco Di\ufb00usion Cheat Sheet",
+            "year": 2022,
+            "authors": [],
+            "filename": "!Disco Diffusion Cheatsheet \u2013 Eliso's Generative Art Guides.pdf",
+            "recog": 1,
+            "modified": 1653494376,
+            "keywords": "NLP > Prompt Engineering, Prompt Programming",
+            "level": 2,
+            "priority": 1
+        },
+        {
+            "title": "Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding",
+            "year": 2022,
+            "authors": [
+                "Chitwan Saharia",
+                "William Chan",
+                "Saurabh Saxena",
+                "Lala Li",
+                "Jay Whang",
+                "Emily Denton",
+                "Seyed Kamyar Seyed Ghasemipour",
+                "Burcu Karagol Ayan",
+                "S. Sara Mahdavi",
+                "Rapha Gontijo Lopes",
+                "Tim Salimans",
+                "Jonathan Ho",
+                "David J Fleet",
+                "Mohammad Norouzi"
+            ],
+            "filename": "!!!2205.11487.pdf",
+            "recog": 1,
+            "modified": 1653492878,
+            "keywords": "Machine Learning > Generative Models > Generative Models > Imagen (Google)",
+            "level": 4,
+            "priority": 3
+        },
+        {
+            "title": "Can you measure \u2018great\u2019 art?",
+            "year": 2022,
+            "authors": [
+                "Simon Mellor"
+            ],
+            "filename": "-Can you measure \u2018great\u2019 art_ _ Arts Council England.pdf",
+            "recog": 1,
+            "modified": 1653492396,
+            "keywords": "Art > Measuring Art",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "The Art of Measuring the Arts",
+            "year": 2019,
+            "authors": [
+                "Shawn Goh",
+                "Ze Song",
+                "Audrey Wong"
+            ],
+            "filename": "-the-art-of-measuring-the-arts_full-report-on-the-roundtable-on-bang-for-the-funding-buck_final.pdf",
+            "recog": 1,
+            "modified": 1653492278,
+            "keywords": "Art > Measuring Art",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "Aesthetic Judgment",
+            "year": 2022,
+            "authors": [],
+            "filename": "-Aesthetic Judgment (Stanford Encyclopedia of Philosophy).pdf",
+            "recog": 1,
+            "modified": 1653490947,
+            "keywords": "Aesthetics > Aesthetic Judgment",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "Lamboozling Attackers: A New Generation of Deception",
+            "year": 2022,
+            "authors": [
+                "RYAN PETRICH"
+            ],
+            "filename": "-3498578.pdf",
+            "recog": 1,
+            "modified": 1653457226,
+            "keywords": "Security > Cybersecurity > Deception Environments",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Deepfake videos: Can you really believe what you see?",
+            "year": 2022,
+            "authors": [],
+            "filename": "-Deepfake of murdered teen created to aid cold case - BBC News.pdf",
+            "recog": 1,
+            "modified": 1653401464,
+            "keywords": "Machine Learning > Issues > Deepfakes > Deepfake for Good",
+            "level": 4,
+            "priority": 0
+        },
+        {
+            "title": "INTEREST AND PLEASURE AS DIMENSIONS OF AESTHETIC RESPONSE*",
+            "year": 2012,
+            "authors": [
+                "GERALD C. CUPCHIK",
+                "Wilfrid Laurier",
+                "R. J. GEBOTYS"
+            ],
+            "filename": "!cupchik1990.pdf",
+            "recog": 1,
+            "modified": 1653321008,
+            "keywords": "Aesthetics > Measuring Aesthetics, Scales > Interest and Pleasure",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "Designing Biofeedback Artworks For Relaxation",
+            "year": 2016,
+            "authors": [],
+            "filename": "-2851581.2891089.pdf",
+            "recog": 1,
+            "modified": 1653231207,
+            "keywords": "Art > Applications > Art Therapy > Biofeedback Artworks",
+            "level": 4,
+            "priority": 0
+        },
+        {
+            "title": "Abstract art grandmasters score like class D amateurs",
+            "year": 2011,
+            "authors": [
+                "D amateurs",
+                "Mikhail Simkin"
+            ],
+            "filename": "-1106.1915.pdf",
+            "recog": 1,
+            "modified": 1653230668,
+            "keywords": "Art > Comparing Beginners with Expert Artists",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "How can one measure the quality of art?",
+            "year": 2022,
+            "authors": [],
+            "filename": "-aesthetics - How can one measure the quality of art_ - Philosophy Stack Exchange.pdf",
+            "recog": 1,
+            "modified": 1653228931,
+            "keywords": "Art > Measuring Art",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "MEASURING AESTHETIC IN DESIGN",
+            "year": 2014,
+            "authors": [
+                "S. Khalighy",
+                "G. Green",
+                "C. Scheepers",
+                "C. Whittet"
+            ],
+            "filename": "!DS77_158.pdf",
+            "recog": 1,
+            "modified": 1653228725,
+            "keywords": "Aesthetics > Measuring Aesthetics, Scales",
+            "level": 2,
+            "priority": 1
+        },
+        {
+            "title": "Context effects on emotional and aesthetic evaluations of artworks and IAPS pictures",
+            "year": 2014,
+            "authors": [
+                "Gernot Gerger",
+                "Helmut Leder",
+                "Alexandra Kremer"
+            ],
+            "filename": "!!gerger2014.pdf",
+            "recog": 1,
+            "modified": 1653223359,
+            "keywords": "Art > Art Perception > Appreciation Context",
+            "level": 3,
+            "priority": 2
+        },
+        {
+            "title": "Appreciation Contexts Modulate Aesthetic Evaluation and Perceived Duration of Pictures",
+            "year": 2016,
+            "authors": [
+                "Shihoko Arai",
+                "Hideaki Kawabata"
+            ],
+            "filename": "!!10.1163@22134913-00002052.pdf",
+            "recog": 1,
+            "modified": 1653223259,
+            "keywords": "Art > Art Perception > Appreciation Context",
+            "level": 3,
+            "priority": 2
+        },
+        {
+            "title": "Implicit emotion regulation in the context of viewing artworks: ERP evidence in response to pleasant and unpleasant pictures",
+            "year": 2017,
+            "authors": [
+                "Noah N.N. Van Dongen",
+                "Jan W. Van Strien",
+                "Katinka Dijkstra"
+            ],
+            "filename": "!!auteursversie_art_photo_final.pdf",
+            "recog": 1,
+            "modified": 1653221099,
+            "keywords": "Art > Art Perception > Appreciation Context",
+            "level": 3,
+            "priority": 2
+        },
+        {
+            "title": "Kopimashin",
+            "year": 2019,
+            "authors": [],
+            "filename": "-Konsthack _ KH000_ Kopimashin.pdf",
+            "recog": 1,
+            "modified": 1653219612,
+            "keywords": "Art > Kopimashin",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "Visual Art Rating Scale",
+            "year": 2014,
+            "authors": [],
+            "filename": "!VAratingscale.pdf",
+            "recog": 1,
+            "modified": 1653216240,
+            "keywords": "Art > Measuring Art > Visual Art Rating Scale",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "PII: S0953-5438(00)00031-X",
+            "year": 2000,
+            "authors": [
+                "N. Tractinsky",
+                "A.S. Katz",
+                "D. Ikar"
+            ],
+            "filename": "!!tractinsky2000.pdf",
+            "recog": 1,
+            "modified": 1653215674,
+            "keywords": "Aesthetics > Aesthetics and Usability",
+            "level": 2,
+            "priority": 2
+        },
+        {
+            "title": "Emad on Twitter_ _\ud83e\uddf5 about representation and bias in #AI models.",
+            "year": 2022,
+            "authors": [
+                "Emad @EMostaque"
+            ],
+            "filename": "!Emad on Twitter_ _\ud83e\uddf5 about representation and bias in #AI models..pdf",
+            "recog": 0,
+            "modified": 1653132458,
+            "keywords": "Machine Learning > Art > Issues > Bias",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "On the Misuse of Slovin\u2019s Formula",
+            "year": 2012,
+            "authors": [
+                "Jeffry J. Tejada",
+                "Raymond B. Punzalan"
+            ],
+            "filename": "!2012_611_9_On_the_Misuse_of_Slovin_s_Formula.pdf",
+            "recog": 1,
+            "modified": 1652966082,
+            "keywords": "Research Methods > Statistics > Sampling > Sample Size > Slovin's Formula",
+            "level": 5,
+            "priority": 1
+        },
+        {
+            "title": "Demographics and Dynamics of Mechanical Turk Workers",
+            "year": 2017,
+            "authors": [
+                "Djellel Difallah",
+                "Elena Filatova",
+                "Panos Ipeirotis"
+            ],
+            "filename": "!!p135-difallah.pdf",
+            "recog": 1,
+            "modified": 1652965543,
+            "keywords": "Crowdsourcing, Human Computation > Demographics > Size of Worker Pool",
+            "level": 3,
+            "priority": 2
+        },
+        {
+            "title": "Entity Recommendation for Everyday Digital Tasks",
+            "year": 2021,
+            "authors": [
+                "GIULIO JACUCCI",
+                "PEDRAM DAEE",
+                "SALVATORE ANDOLINA"
+            ],
+            "filename": "!3458919.pdf",
+            "recog": 1,
+            "modified": 1652955263,
+            "keywords": "Creativity > Creativity Support Tools > Applications > Recommendations for Digital Tasks",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "Purposeful sampling for qualitative data collection and analysis in mixed method implementation research",
+            "year": 2015,
+            "authors": [
+                "Lawrence A. Palinkas",
+                "Sarah M. Horwitz",
+                "Jennifer P. Wisdom",
+                "Naihua Duan",
+                "Kimberly Hoagwood"
+            ],
+            "filename": "!!nihms-538401.pdf",
+            "recog": 1,
+            "modified": 1652953302,
+            "keywords": "Research Methods > Statistics > Sampling > Purposeful Sampling",
+            "level": 4,
+            "priority": 2
+        },
+        {
+            "title": "Crowdsourcing-based Multimedia Subjective Evaluations: A Case Study on Image Recognizability and Aesthetic Appeal",
+            "year": 2013,
+            "authors": [
+                "Judith Redi",
+                "Tobias Ho\u00dffeld",
+                "Pavel Korshunov",
+                "Filippo Mazza",
+                "Isabel Povoa",
+                "Christian Keimel"
+            ],
+            "filename": "!!2506364.2506368.pdf",
+            "recog": 1,
+            "modified": 1652951461,
+            "keywords": "Crowdsourcing, Human Computation > Applications > Quality of Experience (QoE)",
+            "level": 3,
+            "priority": 2
+        },
+        {
+            "title": "TAGATUNE: A GAME FOR MUSIC AND SOUND ANNOTATION",
+            "year": 2007,
+            "authors": [
+                "Edith L. M. Law",
+                "Luis von Ahn",
+                "Roger B. Dannenberg",
+                "Mike Crawford"
+            ],
+            "filename": "-e0a30cf26601cb14574a53c990bda744e7fa.pdf",
+            "recog": 1,
+            "modified": 1652947141,
+            "keywords": "Crowdsourcing, Human Computation > Applications > Tagging, Annotation > Music Annotation > TagATune",
+            "level": 5,
+            "priority": 0
+        },
+        {
+            "title": "Scaling Creative Inspiration with Fine-Grained Functional Aspects of Ideas",
+            "year": 2022,
+            "authors": [
+                "Tom Hope",
+                "Ronen Tamari",
+                "Hyeonsu Kang",
+                "Daniel Hershcovich",
+                "Joel Chan",
+                "Aniket Kittur",
+                "Dafna Shahaf"
+            ],
+            "filename": "!!!3491102.3517434.pdf",
+            "recog": 1,
+            "modified": 1652946455,
+            "keywords": "Product Development > Functional Decomposition",
+            "level": 2,
+            "priority": 3
+        },
+        {
+            "title": "Inter-rater reliability",
+            "year": 2018,
+            "authors": [],
+            "filename": "!!!Inter-rater reliability.pdf",
+            "recog": 1,
+            "modified": 1652941504,
+            "keywords": "Research Methods > Inter-rater agreement, Inter-rater reliability",
+            "level": 2,
+            "priority": 3
+        },
+        {
+            "title": "High-Resolution Image Synthesis with Latent Diffusion Models",
+            "year": 2022,
+            "authors": [
+                "Robin Rombach",
+                "Andreas Blattmann",
+                "Dominik Lorenz",
+                "Patrick Esser",
+                "Bj\u00f6rn Ommer"
+            ],
+            "filename": "!!2112.10752.pdf",
+            "recog": 1,
+            "modified": 1652791935,
+            "keywords": "Machine Learning > Generative Models > Diffusion > Latent Diffusion",
+            "level": 4,
+            "priority": 2
+        },
+        {
+            "title": "High-Resolution Image Synthesis with Latent Diffusion Models",
+            "year": 2022,
+            "authors": [
+                "Andreas Blattmann",
+                "Dominik Lorenz",
+                "Patrick Esser",
+                "Bj\u00f6rn Ommer",
+                "Katherine Crowson"
+            ],
+            "filename": "!CompVis_latent-diffusion_ High-Resolution Image Synthesis with Latent Diffusion Models.pdf",
+            "recog": 1,
+            "modified": 1652791823,
+            "keywords": "Machine Learning > Generative Models > Diffusion > Latent Diffusion",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "Development of the Adolescent Measure of Empathy and Sympathy (AMES)",
+            "year": 2014,
+            "authors": [
+                "Helen G.M. Vossen",
+                "Jessica T. Piotrowski",
+                "Patti M. Valkenburg"
+            ],
+            "filename": "!!153898_432523.pdf",
+            "recog": 1,
+            "modified": 1652785347,
+            "keywords": "Affect, Emotion > Empathy > Adolescent Measure of Empathy and Sympathy (AMES)",
+            "level": 3,
+            "priority": 2
+        },
+        {
+            "title": "Why an Indian couple is suing their son over grandchildren",
+            "year": 2022,
+            "authors": [
+                "Geeta Pandey",
+                "Sadhana Prasad"
+            ],
+            "filename": "-Why an Indian couple is suing their son over grandchildren - BBC News.pdf",
+            "recog": 1,
+            "modified": 1652774134,
+            "keywords": "Countries > India",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "CALCULATING WATERFOWL ABUNDANCE ON THE BASIS OF BANDING RETURNS",
+            "year": 2013,
+            "authors": [],
+            "filename": "-calculatingwater118linc.pdf",
+            "recog": 1,
+            "modified": 1652773936,
+            "keywords": "Research Methods > Capture-recapture analysis",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "Being White in Philly",
+            "year": 2022,
+            "authors": [
+                "ROBERT HUBER"
+            ],
+            "filename": "-Being White in Philly _ Philadelphia magazine.pdf",
+            "recog": 1,
+            "modified": 1652773457,
+            "keywords": "Racism > Wokeness",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "Philadelphia\u2019s Changing Middle Class",
+            "year": 2014,
+            "authors": [
+                "Jessica M. Lydon",
+                "John Kromer",
+                "Elaine Simon",
+                "Frank Furstenberg",
+                "Annette Lareau",
+                "Michael Nutter",
+                "Leonard Nakamura",
+                "Sharon Crawford",
+                "Catherine Evans",
+                "Danielle Forte",
+                "Jack Harmer"
+            ],
+            "filename": "-PRIPhiladelphiaChangingMiddleClassReportFebruary2014pdf.pdf",
+            "recog": 1,
+            "modified": 1652772965,
+            "keywords": "Milieu > Philadelphia",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "Motive based segmentation to optimize marketing activities",
+            "year": 2019,
+            "authors": [
+                "Luonnonihmeiden mets\u00e4st\u00e4j\u00e4t"
+            ],
+            "filename": "-suomen-vetovoimatekijat-segmentointimalli.pdf",
+            "recog": 1,
+            "modified": 1652772542,
+            "keywords": "Milieu > Finland Segmentation",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "The Potential for Consumer Segmentation in the Finnish Housing Market",
+            "year": 2017,
+            "authors": [
+                "KAREN M. GIBLER",
+                "TANJA TYVIMAA"
+            ],
+            "filename": "!43861444.pdf",
+            "recog": 1,
+            "modified": 1652771966,
+            "keywords": "Milieu > Finland Segmentation",
+            "level": 2,
+            "priority": 1
+        },
+        {
+            "title": "Finpro segmentation Cross country summary",
+            "year": 2017,
+            "authors": [],
+            "filename": "-2017-segmentation-cross-country-summary.pdf",
+            "recog": 1,
+            "modified": 1652770349,
+            "keywords": "Milieu > Finland Segmentation",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "\u00dcbertragung in den Raum: Die Sinus-Geo-Milieus",
+            "year": 2017,
+            "authors": [
+                "Die Sinus-Geo-Milieus",
+                "Von Rolf K\u00fcppers",
+                "Rolf K\u00fcppers"
+            ],
+            "filename": "-10.1007@978-3-658-19335-56.pdf",
+            "recog": 1,
+            "modified": 1652769453,
+            "keywords": "Milieu > Sinus Milieu",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "Understanding Multi-Device Usage Patterns: Physical Device Configurations and Fragmented Workflows",
+            "year": 2022,
+            "authors": [
+                "Ye Yuan",
+                "Nathalie Riche",
+                "Nicolai Marquardt",
+                "Molly ]ane Nicholas",
+                "Teddy Seyed",
+                "Hugo Romat",
+                "Bongshin Lee",
+                "Michel Pahud",
+                "Jonathan Goldstein",
+                "Rojin Vishkaie",
+                "Christian Holz",
+                "Ken Hinckleyl",
+                "Molly ]ane"
+            ],
+            "filename": "!3491102.3517702.pdf",
+            "recog": 1,
+            "modified": 1652707039,
+            "keywords": "Mobile Phones > Notifications > Multi-Device",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "A Generalist Agent",
+            "year": "N/A",
+            "authors": [
+                "Scott Reed*=l",
+                "Konrad Zoh1a",
+                "Emilio Parisottofi",
+                "Sergio Gomez Colmenarejol",
+                "Alexander Novikov",
+                "Gabriel Barth-Maron",
+                "Mai Gim\u00e9nez",
+                "Yury Sulsky",
+                "Jackie Kay",
+                "Jost Tobias Springenberg",
+                "Tom Eccles",
+                "Jake Bruce",
+                "Ali Razavi",
+                "Ashley Edwards",
+                "Nicolas Heess",
+                "Yutian Chen",
+                "Raia Hadsell",
+                "Oriol Vinyals",
+                "Mahyar Bordbar"
+            ],
+            "filename": "!!!2205.06175.pdf",
+            "recog": 1,
+            "modified": 1652705986,
+            "keywords": "AI > General Intelligence > General Agent > Gato (Deepmind)",
+            "level": 4,
+            "priority": 3
+        },
+        {
+            "title": "The big question",
+            "year": 2021,
+            "authors": [],
+            "filename": "!s42256-021-00395-y.pdf",
+            "recog": 1,
+            "modified": 1652705192,
+            "keywords": "AI > Foundation Models",
+            "level": 2,
+            "priority": 1
+        },
+        {
+            "title": "Mapping the latent spaces of culture",
+            "year": 2021,
+            "authors": [],
+            "filename": "!!Mapping the latent spaces of culture \u2013 The Stone and the Shell.pdf",
+            "recog": 1,
+            "modified": 1652704411,
+            "keywords": "NLP > Issues > Stochastic Parrots > Models of Culture",
+            "level": 4,
+            "priority": 2
+        },
+        {
+            "title": "On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? \"1F99C",
+            "year": 2021,
+            "authors": [
+                "Emily M. Bender",
+                "Timnit Gebru",
+                "Angelina McMillan-Major",
+                "Shmargaret Shmitchell"
+            ],
+            "filename": "!!!3442188.3445922.pdf",
+            "recog": 1,
+            "modified": 1652703349,
+            "keywords": "NLP > Issues > Stochastic Parrots",
+            "level": 3,
+            "priority": 3
+        },
+        {
+            "title": "A LITTLE BIT ABOUT NIM\u2019S HISTORY",
+            "year": 2020,
+            "authors": [
+                "Andreas Rumpf"
+            ],
+            "filename": "-Chapter 1. Why Nim_ - Nim in Action.pdf",
+            "recog": 1,
+            "modified": 1652696427,
+            "keywords": "Programming Languages > Nim",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "Crowdsourcing to Service Users: Work for Yourself and Get Reward",
+            "year": 2022,
+            "authors": [
+                "Jing Hou",
+                "Li Sun",
+                "Tao Shu"
+            ],
+            "filename": "-Crowdsourcing_to_Service_Users_Work_for_Yourself_and_Get_Reward.pdf",
+            "recog": 1,
+            "modified": 1652689591,
+            "keywords": "Crowdsourcing, Human Computation > General, Classification, Frameworks > Crowdsourcing to Service Users",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "TinyGenius: Intertwining Natural Language Processing with Microtask Crowdsourcing for Scholarly Knowledge Graph Creation",
+            "year": 2022,
+            "authors": [
+                "Allard Oelen",
+                "Markus Stocker",
+                "S\u00f6ren Auer"
+            ],
+            "filename": "!2205.04504.pdf",
+            "recog": 1,
+            "modified": 1652688885,
+            "keywords": "Crowdsourcing, Human Computation > Applications > Knowledge Graphs > Science Knowledge Graph > TinyGenius",
+            "level": 5,
+            "priority": 1
+        },
+        {
+            "title": "The Posttraumatic Growth Inventory: Measuring the positive legacy of trauma",
+            "year": 2005,
+            "authors": [
+                "Richard G. Tedeschi",
+                "Lawrence G. Calhoun"
+            ],
+            "filename": "-tedeschi1996.pdf",
+            "recog": 1,
+            "modified": 1652687545,
+            "keywords": "Psychology > Post Traumatic Growth, PTG > Posttraumatic Growth Inventory, PTGI",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Growth after trauma",
+            "year": 2022,
+            "authors": [
+                "Lorna Collier"
+            ],
+            "filename": "-Growth after trauma.pdf",
+            "recog": 1,
+            "modified": 1652686961,
+            "keywords": "Psychology > Post Traumatic Growth, PTG",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "Evaluating the Ethics of Inversion",
+            "year": 2005,
+            "authors": [
+                "Susan H. Godar",
+                "Patricia J. O\u2019Connor",
+                "Virginia Anne Taylor"
+            ],
+            "filename": "-Inversion.pdf",
+            "recog": 1,
+            "modified": 1652680803,
+            "keywords": "Ethics > Ethical Inversion",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "A Stanford Proposal Over AI's 'Foundations' Ignites Debate _ WIRED",
+            "year": 2021,
+            "authors": [
+                "Thomas Dietterich"
+            ],
+            "filename": "-A Stanford Proposal Over AI's 'Foundations' Ignites Debate _ WIRED.pdf",
+            "recog": 0,
+            "modified": 1652614854,
+            "keywords": "AI > Foundation Models",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "dmarx / Multi-Modal-Comparators: Unified API to facilitate usage of pre-trained \"perceptor\" models, a la CLIP",
+            "year": 2022,
+            "authors": [],
+            "filename": "!dmarx_Multi-Modal-Comparators_ Unified API to facilitate usage of pre-trained _perceptor_ models, a la CLIP.pdf",
+            "recog": 1,
+            "modified": 1652612946,
+            "keywords": "Machine Learning > Contrastive Learning, Multimodal Models > Multi-Modal-Comparators",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "Unihemispheric slow-wave sleep",
+            "year": 2022,
+            "authors": [],
+            "filename": "-Unihemispheric slow-wave sleep - Wikipedia.pdf",
+            "recog": 1,
+            "modified": 1652611460,
+            "keywords": "Sleep, Dreaming > Unihemispheric Sleep",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "gpt-2-simple",
+            "year": 2022,
+            "authors": [],
+            "filename": "!minimaxir_gpt-2-simple_ Python package to easily retrain OpenAI's GPT-2 text-generating model on new texts.pdf",
+            "recog": 1,
+            "modified": 1652514054,
+            "keywords": "NLP > Language Models > GPT > GPT-2 > gpt-2-simple",
+            "level": 5,
+            "priority": 1
+        },
+        {
+            "title": "Word embeddings quantify 100 years of gender and ethnic stereotypes",
+            "year": 2018,
+            "authors": [
+                "Nikhil Garg",
+                "Londa Schiebinger",
+                "Dan Jurafsky",
+                "James Zou"
+            ],
+            "filename": "!!pnas.201720347.pdf",
+            "recog": 1,
+            "modified": 1652512201,
+            "keywords": "NLP > Issues > Bias > Word Embeddings Bias > Framework for Temporal Analysis of Word Embedding",
+            "level": 5,
+            "priority": 2
+        },
+        {
+            "title": "Data Statements for Natural Language Processing: Toward Mitigating System Bias and Enabling Better Science",
+            "year": 2019,
+            "authors": [
+                "Emily M. Bender",
+                "Batya Friedman"
+            ],
+            "filename": "!!Q18-1041.pdf",
+            "recog": 1,
+            "modified": 1652511820,
+            "keywords": "NLP > Issues > Bias > Data Statements for NLP",
+            "level": 4,
+            "priority": 2
+        },
+        {
+            "title": "Meet these incredible animal breathers!",
+            "year": 2022,
+            "authors": [
+                "David A. Northcott"
+            ],
+            "filename": "-Meet these incredible animal breathers! _ BBC Earth.pdf",
+            "recog": 1,
+            "modified": 1652465643,
+            "keywords": "Animals > Breathing in Animals",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "How do we know whales and dolphins are conscious breathers?",
+            "year": 2022,
+            "authors": [
+                "Malcolm J. Brenner",
+                "Stephen DeLacy",
+                "Samantha Wong"
+            ],
+            "filename": "-How do we know whales and dolphins are conscious breathers_ - Quora.pdf",
+            "recog": 1,
+            "modified": 1652465285,
+            "keywords": "Animals > Conscious Breathers",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "DRONES MADE IN THE USA: THE AMERICAN DRONE COMPANIES YOU NEED TO KNOW",
+            "year": 2022,
+            "authors": [],
+            "filename": "!Drones made in the USA_ the American drone companies you should know.pdf",
+            "recog": 1,
+            "modified": 1652464631,
+            "keywords": "Drones > Issues > Drones made in China",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "Ethical and social risks of harm from Language Models",
+            "year": 2021,
+            "authors": [
+                "Laura Weidinger",
+                "John Mellor",
+                "Maribeth Rauh",
+                "Conor Griffin",
+                "Jonathan Uesato",
+                "Po-Sen Huang",
+                "Myra Cheng",
+                "Mia Glaese",
+                "Borja Balle",
+                "Atoosa Kasirzadeh",
+                "Zac Kenton",
+                "Sasha Brown",
+                "Will Hawkins",
+                "Tom Stepleton",
+                "Courtney Biles",
+                "Abeba Birhane",
+                "Julia Haas",
+                "Laura Rimell",
+                "Lisa Anne Hendricks",
+                "William Isaac",
+                "Sean Legassick",
+                "Geoffrey Irving",
+                "Iason Gabriel"
+            ],
+            "filename": "!!!2112.04359.pdf",
+            "recog": 1,
+            "modified": 1652459842,
+            "keywords": "NLP > Language Models > Gopher (DeepMind)",
+            "level": 3,
+            "priority": 3
+        },
+        {
+            "title": "Design is Worth a Thousand Words: The Effect of Digital Interaction Design on Picture-Prompted Reminiscence",
+            "year": 2022,
+            "authors": [
+                "Benett Axtell",
+                "Raheleh Saryazdi",
+                "Cosmin Munteanu"
+            ],
+            "filename": "-3491102.3517692.pdf",
+            "recog": 1,
+            "modified": 1652438233,
+            "keywords": "Design, HCI, UI, UX > Time > Reminiscence",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Managing the Risks of AI Research",
+            "year": 2021,
+            "authors": [],
+            "filename": "!!!Managing-the-Risks-of-AI-Research-Responsible-Publication.pdf",
+            "recog": 1,
+            "modified": 1652438051,
+            "keywords": "Machine Learning > Issues > Risk Management > Publication Guidelines",
+            "level": 4,
+            "priority": 3
+        },
         {
             "title": "CoCa: Contrastive Captioners are Image-Text Foundation Models",
             "year": 2022,
@@ -15,21 +1077,76 @@
             ],
             "filename": "!!!2205.01917.pdf",
             "recog": 1,
-            "modified": 1652373650,
+            "modified": 1652437900,
             "keywords": "Machine Learning > Contrastive Learning, Multimodal Models > CoCa",
             "level": 3,
             "priority": 3
         },
         {
-            "title": "Managing-the-Risks-of-AI-Research-Responsible-Publication",
-            "year": 2021,
-            "authors": [],
-            "filename": "!!!Managing-the-Risks-of-AI-Research-Responsible-Publication.pdf",
-            "recog": 0,
-            "modified": 1652372174,
-            "keywords": "Machine Learning > Issues > Risk Management > Publication Guidelines",
-            "level": 4,
+            "title": "Visual aesthetics and the user experience",
+            "year": 2008,
+            "authors": [
+                "Sascha Mahlke"
+            ],
+            "filename": "-Visual_aesthetics_and_the_user_experience.pdf",
+            "recog": 1,
+            "modified": 1652434267,
+            "keywords": "Aesthetics > Visual Aesthetics > Visual Usability",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "The Digital Landscape of Nudging: A Systematic Literature Review of Empirical Research on Digital Nudges",
+            "year": 2022,
+            "authors": [
+                "Kristofer Bergram",
+                "Marija Djokovic",
+                "Val\u00e9ry Bezen\u00e7on",
+                "Adrian Holzer"
+            ],
+            "filename": "!!!3491102.3517638.pdf",
+            "recog": 1,
+            "modified": 1652429235,
+            "keywords": "Design, HCI, UI, UX > Persuasive Systems, Persuasive Technology > Digital Nudging",
+            "level": 3,
             "priority": 3
+        },
+        {
+            "title": "THE COMMON STRUCTURE GRAPH: COMMON STRUCTURAL FEATURES OF A SET OF GRAPHS",
+            "year": 2001,
+            "authors": [
+                "Phillip BONACICH"
+            ],
+            "filename": "-1-s2.0-0165489682910824-main.pdf",
+            "recog": 1,
+            "modified": 1652426085,
+            "keywords": "Communities, Networks > Network Analysis > Network Structure > Common Structure Graphs",
+            "level": 4,
+            "priority": 0
+        },
+        {
+            "title": "Making neural nets uncool again",
+            "year": 2022,
+            "authors": [
+                "Lone Genius"
+            ],
+            "filename": "-There's no such thing as not a math person \u00b7 fast.ai.pdf",
+            "recog": 1,
+            "modified": 1652422872,
+            "keywords": "Machine Learning > Issues > Mathematics > Math Person",
+            "level": 4,
+            "priority": 0
+        },
+        {
+            "title": "huggingface / accelerate",
+            "year": 2022,
+            "authors": [],
+            "filename": "!huggingface_accelerate_ \ud83d\ude80 A simple way to train and use PyTorch models with multi-GPU, TPU, mixed-precision.pdf",
+            "recog": 1,
+            "modified": 1652419021,
+            "keywords": "NLP > Tools, NLP APIs > Accelerate (Huggingface)",
+            "level": 3,
+            "priority": 1
         },
         {
             "title": "OPT: Open Pre-trained Transformer Language Models",
@@ -323,25 +1440,6 @@
             "priority": 2
         },
         {
-            "title": "Scaling Creative Inspiration with Fine-Grained Functional Aspects of Ideas",
-            "year": 2022,
-            "authors": [
-                "Tom Hope",
-                "Ronen Tamari",
-                "Hyeonsu Kang",
-                "Daniel Hershcovich",
-                "Joel Chan",
-                "Aniket Kittur",
-                "Dafna Shahaf"
-            ],
-            "filename": "!!!3491102.3517434.pdf",
-            "recog": 1,
-            "modified": 1652100155,
-            "keywords": "Product Development > Functional Decomposition",
-            "level": 2,
-            "priority": 3
-        },
-        {
             "title": "Open Language Learning for Information Extraction",
             "year": 2012,
             "authors": [
@@ -387,1210 +1485,6 @@
             "keywords": "NLP > Open Information Extraction, OIE > Systems > SRLIE",
             "level": 4,
             "priority": 0
-        },
-        {
-            "title": "Open_Information_Extraction_Using_Wikipedia",
-            "year": 2010,
-            "authors": [
-                "Fei Wu",
-                "Daniel S. Weld"
-            ],
-            "filename": "-Open_Information_Extraction_Using_Wikipedia.pdf",
-            "recog": 0,
-            "modified": 1652099177,
-            "keywords": "NLP > Open Information Extraction, OIE > Systems > WOE",
-            "level": 4,
-            "priority": 0
-        },
-        {
-            "title": "Open Information Extraction from the Web",
-            "year": 2006,
-            "authors": [
-                "Michele Banko",
-                "Michael J Cafarella",
-                "Stephen Soderland",
-                "Matt Broadhead"
-            ],
-            "filename": "!IJCAI07-429.pdf",
-            "recog": 1,
-            "modified": 1652099118,
-            "keywords": "NLP > Open Information Extraction, OIE > Systems > TEXTRUNNER",
-            "level": 4,
-            "priority": 1
-        },
-        {
-            "title": "TextRunner: Open Information Extraction on the Web",
-            "year": 2007,
-            "authors": [
-                "Alexander Yates",
-                "Michael Cafarella",
-                "Michele Banko",
-                "Oren Etzioni",
-                "Matthew Broadhead",
-                "Stephen Soderland"
-            ],
-            "filename": "!N07-4013.pdf",
-            "recog": 1,
-            "modified": 1652099069,
-            "keywords": "NLP > Open Information Extraction, OIE > Systems > TEXTRUNNER",
-            "level": 4,
-            "priority": 1
-        },
-        {
-            "title": "Pooled Contextualized Embeddings for Named Entity Recognition",
-            "year": 2019,
-            "authors": [
-                "Alan Akbik",
-                "Tanja Bergmann",
-                "Roland Vollgraf"
-            ],
-            "filename": "-N19-1078.pdf",
-            "recog": 1,
-            "modified": 1652097483,
-            "keywords": "NLP > Named Entity Recognition, NER > Pooled Contextualized Embeddings",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "Strategies for Theorizing from Process Data",
-            "year": 2016,
-            "authors": [
-                "Ann Langley",
-                "ANN LANGLEY"
-            ],
-            "filename": "!259349.pdf",
-            "recog": 1,
-            "modified": 1652080419,
-            "keywords": "Research Methods > Qualitative > Process Data, Timeseries",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "QuAD: Deep-Learning Assisted Qualitative Data Analysis with Affinity Diagrams",
-            "year": 2022,
-            "authors": [
-                "Ariel Goldman",
-                "Francesca Cavuoti",
-                "Sabrina Meng",
-                "Cindy Espinosa",
-                "]ade Chen",
-                "Sarah Morrison-Smith",
-                "Shivani Patel",
-                "Alexandra Cheng",
-                "Lydia B. Chilton",
-                "jade Chen",
-                "Aditi Patil"
-            ],
-            "filename": "!3491101.3519863.pdf",
-            "recog": 1,
-            "modified": 1652019996,
-            "keywords": "Research Methods > Qualitative > Affinity Diagramming > AI-Assisted Qualitative Data Analysis",
-            "level": 4,
-            "priority": 1
-        },
-        {
-            "title": "Human vs. supervised machine learning:  Who learns patterns faster?",
-            "year": 2020,
-            "authors": [
-                "Niklas K\u00fchl",
-                "Marc Goutier",
-                "Lucas Baier",
-                "Clemens Wolff",
-                "Dominik Martin"
-            ],
-            "filename": "-2012.03661.pdf",
-            "recog": 1,
-            "modified": 1652019295,
-            "keywords": "Machine Learning > Humans vs Machines",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "3475167",
-            "year": 2021,
-            "authors": [],
-            "filename": "!!!3475167.pdf",
-            "recog": 0,
-            "modified": 1652019183,
-            "keywords": "Machine Learning > Declarative Machine Learning",
-            "level": 2,
-            "priority": 3
-        },
-        {
-            "title": "Understanding HCI Practices and Challenges of Experiment Reporting with Brain Signals: Towards Reproducibility and Reuse",
-            "year": 2022,
-            "authors": [
-                "FELIX PUTZE",
-                "SUSANNE PUTZE",
-                "ERIN T. SOLOVEY",
-                "WPI"
-            ],
-            "filename": "!!!3490554.pdf",
-            "recog": 1,
-            "modified": 1652004140,
-            "keywords": "Neuroscience > Issues > Reproducibility, Reuse > Reporting Brain Research in HCI",
-            "level": 4,
-            "priority": 3
-        },
-        {
-            "title": "An Unsupervised Model for Joint Phrase Alignment and Extraction",
-            "year": 2011,
-            "authors": [
-                "Graham Neubig",
-                "Taro Watanabe",
-                "Eiichiro Sumita",
-                "Shinsuke Mori",
-                "Tatsuya Kawahara"
-            ],
-            "filename": "-P11-1064.pdf",
-            "recog": 1,
-            "modified": 1652002489,
-            "keywords": "NLP > Phrase Detection, Phrase Extraction",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "Mental Models of AI Agents in a Cooperative Game Setting",
-            "year": 2020,
-            "authors": [
-                "Katy Ilonka Gero",
-                "Zahra Ashktorab",
-                "Casey Dugan",
-                "Qian Pan",
-                "James Johnson",
-                "Werner Geyer",
-                "Maria Ruiz",
-                "Sarah Miller",
-                "David R Millen",
-                "Murray Campbell",
-                "Sadhana Kumaravel",
-                "Wei Zhang"
-            ],
-            "filename": "!3313831.3376316.pdf",
-            "recog": 1,
-            "modified": 1652002386,
-            "keywords": "AI > Human-AI-Interaction, Human-Machine-Interaction",
-            "level": 2,
-            "priority": 1
-        },
-        {
-            "title": "\u2018It Is Not Always Discovery Time\u2019: Four Pragmatic Approaches in Designing Al Systems",
-            "year": 2022,
-            "authors": [
-                "Maximiliane Windl",
-                "Sebastian S. Feger",
-                "Lara Zijlstra",
-                "Albrecht Schmidt",
-                "Pawel W. Woiniak"
-            ],
-            "filename": "!3491102.3501943.pdf",
-            "recog": 1,
-            "modified": 1652000890,
-            "keywords": "AI > Designing AI Systems",
-            "level": 2,
-            "priority": 1
-        },
-        {
-            "title": "Virtual communication curbs creative idea generation",
-            "year": 2022,
-            "authors": [
-                "Melanie S. Brucks",
-                "Jonathan Levav"
-            ],
-            "filename": "!!s41586-022-04643-y.pdf",
-            "recog": 1,
-            "modified": 1651997751,
-            "keywords": "Creativity > Issues > Virtual Brainstorming",
-            "level": 3,
-            "priority": 2
-        },
-        {
-            "title": "\u201cForward Flow\u201d: A New Measure to Quantify Free Thought and Predict Creativity",
-            "year": 2018,
-            "authors": [
-                "Kurt Gray",
-                "Stephen Anderson",
-                "Eric Evan Chen",
-                "John Michael Kelly",
-                "John Patrick",
-                "Laura Huang",
-                "Yoed N. Kenett",
-                "Kevin Lewis"
-            ],
-            "filename": "!!AmPsy--Forward Flow.pdf",
-            "recog": 1,
-            "modified": 1651985515,
-            "keywords": "Creativity > Creativity Measurement, Tests, Questionnaires > Forward Flow",
-            "level": 3,
-            "priority": 2
-        },
-        {
-            "title": "Flud: A Hybrid Crowd\u2013Algorithm Approach for Visualizing Biological Networks",
-            "year": 2022,
-            "authors": [
-                "ADITYA BHARADWAJ",
-                "Virginia Tech",
-                "DAVID GWIZDALA",
-                "Bridgewater Associates",
-                "YOONJIN KIM",
-                "T. M. MURALI"
-            ],
-            "filename": "-3479196.pdf",
-            "recog": 1,
-            "modified": 1651983828,
-            "keywords": "Crowdsourcing, Human Computation > Applications > Visualizing Networks > Flud",
-            "level": 4,
-            "priority": 0
-        },
-        {
-            "title": "Researcher introspection for experience-driven design research",
-            "year": 2019,
-            "authors": [
-                "Haian Xue",
-                "Pieter M. A. Desmet"
-            ],
-            "filename": "!!1-s2.0-S0142694X19300158-main.pdf",
-            "recog": 1,
-            "modified": 1651936004,
-            "keywords": "Research Methods > Ethnographic Research > Introspection",
-            "level": 3,
-            "priority": 2
-        },
-        {
-            "title": "Implications for Design",
-            "year": 2006,
-            "authors": [
-                "Paul Dourish"
-            ],
-            "filename": "!1124772.1124855.pdf",
-            "recog": 1,
-            "modified": 1651935539,
-            "keywords": "Research Methods > Ethnographic Research > Metrics for Evaluating Ethnographies",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "Improving reporting of meta-ethnography: the eMERGe reporting guidance",
-            "year": 2019,
-            "authors": [
-                "Emma F. France",
-                "Maggie Cunningham",
-                "Nicola Ring",
-                "Isabelle Uny",
-                "Edward A. S. Duncan",
-                "Ruth G. Jepson",
-                "Margaret Maxwell",
-                "Rachel J. Roberts",
-                "Ruth L. Turley",
-                "Andrew Booth",
-                "Nicky Britten",
-                "Kate Flemming",
-                "Ian Gallagher",
-                "Ruth Garside",
-                "Karin Hannes",
-                "Simon Lewin",
-                "George W. Noblit",
-                "Catherine Pope",
-                "James Thomas",
-                "Meredith Vanstone",
-                "Gina M. A. Higginbottom",
-                "Jane Noyes"
-            ],
-            "filename": "!10.1186@s12874-018-0600-0.pdf",
-            "recog": 1,
-            "modified": 1651935448,
-            "keywords": "Research Methods > Ethnographic Research > Meta-Ethnography > Refutational Translation",
-            "level": 4,
-            "priority": 1
-        },
-        {
-            "title": "Enhancing transparency in reporting the synthesis of qualitative research: ENTREQ",
-            "year": 2013,
-            "authors": [
-                "Allison Tong",
-                "Kate Flemming",
-                "Elizabeth McInnes",
-                "Sandy Oliver",
-                "Jonathan Craig"
-            ],
-            "filename": "!1471-2288-12-181.pdf",
-            "recog": 1,
-            "modified": 1651935324,
-            "keywords": "Research Methods > Ethnographic Research > Meta-Ethnography > ENTREQ, Enhancing transparency in reporting the synthesis of qualitative research",
-            "level": 4,
-            "priority": 1
-        },
-        {
-            "title": "CrowDEA: Multi-View Idea Prioritization with Crowds",
-            "year": 2020,
-            "authors": [
-                "Yukino Baba",
-                "Jiyi Li",
-                "Hisashi Kashima"
-            ],
-            "filename": "!!!7460-Article Text-10894-1-10-20200930.pdf",
-            "recog": 1,
-            "modified": 1651932598,
-            "keywords": "Creativity > Process > 2 Idea Quality, Idea Selection > Systems > CrowDEA",
-            "level": 5,
-            "priority": 3
-        },
-        {
-            "title": "Spacewalker: Rapid UI Design Exploration Using Lightweight Markup Enhancement and Crowd Genetic Programming",
-            "year": 2021,
-            "authors": [
-                "Mingyuan Zhong",
-                "Gang Li",
-                "Yang Li"
-            ],
-            "filename": "!!!2102.09039.pdf",
-            "recog": 1,
-            "modified": 1651932280,
-            "keywords": "CrowdUI > Systems > Spacewalker",
-            "level": 3,
-            "priority": 3
-        },
-        {
-            "title": "CrowdCO-OP: Sharing Risks and Rewards in Crowdsourcing",
-            "year": 2020,
-            "authors": [
-                "SHAOYANG FAN",
-                "UJWAL GADIRAJU",
-                "ALESSANDRO CHECCO",
-                "GIANLUCA DEMARTINI",
-                "Shaoyang Fan",
-                "Ujwal Gadiraju",
-                "Alessandro Checco"
-            ],
-            "filename": "!!!CrowdCOOP.pdf",
-            "recog": 1,
-            "modified": 1651931962,
-            "keywords": "Crowdsourcing, Human Computation > Revenue Sharing, Subcontracting",
-            "level": 2,
-            "priority": 3
-        },
-        {
-            "title": "Crowdsourcing performance evaluations of user interfaces",
-            "year": 2014,
-            "authors": [
-                "Katharina Reinecke",
-                "Krzysztof Z. Gajos",
-                "Steven Komarov"
-            ],
-            "filename": "!!!Crowdsourcing Performance Evaluations.pdf",
-            "recog": 1,
-            "modified": 1651931934,
-            "keywords": "CrowdUI",
-            "level": 1,
-            "priority": 3
-        },
-        {
-            "title": "Estimating Relative User Expertise for Content\u0083ality Prediction on Reddit",
-            "year": 2017,
-            "authors": [
-                "Wern Han Lim",
-                "Mark James Carman",
-                "Jojo Wong"
-            ],
-            "filename": "!!!p55-lim.pdf",
-            "recog": 1,
-            "modified": 1651931826,
-            "keywords": "Communities, Networks > Quality",
-            "level": 2,
-            "priority": 3
-        },
-        {
-            "title": "The Knowledge Accelerator: Big Picture Thinking in Small Pieces",
-            "year": 2016,
-            "authors": [
-                "Nathan Hahn",
-                "Joseph Chang",
-                "Ji Eun Kim",
-                "Aniket Kittur"
-            ],
-            "filename": "!!!p2258-hahn.pdf",
-            "recog": 1,
-            "modified": 1651931765,
-            "keywords": "Knowledge Accelerator",
-            "level": 1,
-            "priority": 3
-        },
-        {
-            "title": "THE METHOD OF PAIRED COMPARISONS FOR SOCIAL VALUES \"",
-            "year": 2004,
-            "authors": [
-                "L. L. THURSTONE",
-                "JUVENILE ass:-zasca",
-                "L. L. Thurstonc"
-            ],
-            "filename": "!thurstone1927.pdf",
-            "recog": 1,
-            "modified": 1651930965,
-            "keywords": "Design of Experiments > Pairwise comparison > Thurstone Model",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "whats-the-folk-theory-reasoning-about-cybersocial-systems",
-            "year": 2016,
-            "authors": [],
-            "filename": "!!!whats-the-folk-theory-reasoning-about-cybersocial-systems.pdf",
-            "recog": 0,
-            "modified": 1651930118,
-            "keywords": "AI > Explainable AI, XAI > Folk Theories",
-            "level": 3,
-            "priority": 3
-        },
-        {
-            "title": "Modelling Pairwise Comparisons using the Bradley-Terry-Luce (BTL) Model",
-            "year": 2020,
-            "authors": [
-                "Alvin Vista",
-                "Ray Adams",
-                "Dan Cloney"
-            ],
-            "filename": "-Tutorial-13--Pairwise-comparisons.pdf",
-            "recog": 1,
-            "modified": 1651926742,
-            "keywords": "Design of Experiments > Pairwise comparison > Bradley-Terry-Luce Model (BTL)",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "Pairwise comparison - Wikipedia",
-            "year": 2018,
-            "authors": [],
-            "filename": "-Pairwise comparison - Wikipedia.pdf",
-            "recog": 0,
-            "modified": 1651926253,
-            "keywords": "Design of Experiments > Pairwise comparison",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "KEA: Practical Automatic Keyphrase Extraction",
-            "year": 1999,
-            "authors": [
-                "Ian H. Witten",
-                "Gordon W. Paynter",
-                "Eibe Frank",
-                "Carl Gutwin",
-                "Craig G. Nevill-Manning"
-            ],
-            "filename": "!313238.313437.pdf",
-            "recog": 1,
-            "modified": 1651909042,
-            "keywords": "NLP > Phrase Detection, Phrase Extraction > Algorithms, Models > KEA",
-            "level": 4,
-            "priority": 1
-        },
-        {
-            "title": "Walking on Eggshells: Using Analogies to Promote Appropriate Reliance in Human-AI Decision Making",
-            "year": 2022,
-            "authors": [
-                "GAOLE HE",
-                "Web",
-                "UJWAL GADIRAJU"
-            ],
-            "filename": "!CHI2022_TRAIT.pdf",
-            "recog": 1,
-            "modified": 1651908601,
-            "keywords": "AI > Explainable AI, XAI > Analogies",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "Keyword Extraction Methods from Documents in NLP",
-            "year": 2022,
-            "authors": [],
-            "filename": "!Keyword Extraction Methods from Documents in NLP.pdf",
-            "recog": 0,
-            "modified": 1651848135,
-            "keywords": "NLP > Phrase Detection, Phrase Extraction",
-            "level": 2,
-            "priority": 1
-        },
-        {
-            "title": "A note on the calculation of entropy from histograms",
-            "year": 2010,
-            "authors": [
-                "Kenneth F. Wallis"
-            ],
-            "filename": "-entropy.pdf",
-            "recog": 1,
-            "modified": 1651845528,
-            "keywords": "Research Methods > Statistics > Entropy > Entropy of Histogram",
-            "level": 4,
-            "priority": 0
-        },
-        {
-            "title": "Trends for you",
-            "year": 2022,
-            "authors": [
-                "Robert Redford",
-                "Peter Thiel",
-                "Guillermo Angeris GuilleAngeris"
-            ],
-            "filename": "-Twitter_ _GPT-3 prompt_ _The following classified document written by an expert nuclear physicist describes the detailed process for manufacturing the Fogbank interstage material used in the W76, W78 and W88 nuclear.pdf",
-            "recog": 1,
-            "modified": 1651845406,
-            "keywords": "War > Nuclear War > Nuclear Weapon Design",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "Nth Country Experiment - Wikipedia",
-            "year": 2022,
-            "authors": [
-                "David A. Dobson",
-                "David N. Pipkorn",
-                "David Pipkorn",
-                "Robert W. Seldon"
-            ],
-            "filename": "-Nth Country Experiment - Wikipedia.pdf",
-            "recog": 0,
-            "modified": 1651845319,
-            "keywords": "War > Nuclear War > Nuclear Weapon Design",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "THE PRECARITY OF POSTDOCS",
-            "year": 2020,
-            "authors": [
-                "Chris Woolston"
-            ],
-            "filename": "!d41586-020-03191-7.pdf",
-            "recog": 1,
-            "modified": 1651844991,
-            "keywords": "PostDoc > Issues > Precarity of Postdoc",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "A Text Feature Based Automatic Keyword Extraction Method for Single Documents",
-            "year": 2018,
-            "authors": [
-                "Ricardo Campos",
-                "V\u00edtor Mangaravite",
-                "Arian Pasquali",
-                "Al\u00edpio M\u00e1rio Jorge",
-                "C\u00e9lia Nunes",
-                "Adam Jatowt"
-            ],
-            "filename": "!!Campos2018_Chapter_ATextFeatureBasedAutomaticKeyw.pdf",
-            "recog": 1,
-            "modified": 1651826309,
-            "keywords": "NLP > Phrase Detection, Phrase Extraction > Algorithms, Models > Yake, Yet Another Keyword Extractor",
-            "level": 4,
-            "priority": 2
-        },
-        {
-            "title": "YAKE! Collection-Independent Automatic Keyword Extractor",
-            "year": 2018,
-            "authors": [
-                "Ricardo Campos",
-                "V\u00edtor Mangaravite",
-                "Arian Pasquali",
-                "Al\u00edpio M\u00e1rio Jorge",
-                "C\u00e9lia Nunes",
-                "Adam Jatowt"
-            ],
-            "filename": "!Campos2018_Chapter_YAKECollection-IndependentAuto.pdf",
-            "recog": 1,
-            "modified": 1651822776,
-            "keywords": "NLP > Phrase Detection, Phrase Extraction > Algorithms, Models > Yake, Yet Another Keyword Extractor",
-            "level": 4,
-            "priority": 1
-        },
-        {
-            "title": "Biased TextRank: Unsupervised Graph-Based Content Extraction",
-            "year": 2020,
-            "authors": [
-                "Ashkan Kazemi",
-                "Ver\u00f3nica P\u00e9rez-Rosas",
-                "Rada Mihalcea"
-            ],
-            "filename": "-2020.coling-main.144.pdf",
-            "recog": 1,
-            "modified": 1651819386,
-            "keywords": "NLP > Phrase Detection, Phrase Extraction > Algorithms, Models > Textrank > Biased textrank",
-            "level": 5,
-            "priority": 0
-        },
-        {
-            "title": "From Who You Know to What You Read: Augmenting Scientific Recommendations with Implicit Social Networks",
-            "year": 2022,
-            "authors": [
-                "Hyeonsu B. Kang",
-                "Rafal Kocielnik",
-                "Andrew Head",
-                "jiangjiang Yang",
-                "Matt Latzke",
-                "Daniel S. Weld",
-                "Doug Downey",
-                "Aniket Kittur",
-                "Jonathan Bragg",
-                "Jiangjiang Yang"
-            ],
-            "filename": "!!!KANG2022-from-who-you-know-to-what-you-read.pdf",
-            "recog": 1,
-            "modified": 1651815716,
-            "keywords": "Future Science > Recommendations",
-            "level": 2,
-            "priority": 3
-        },
-        {
-            "title": "From Word Embeddings To Document Distances",
-            "year": 2015,
-            "authors": [
-                "Matt J. Kusner",
-                "Yu Sun",
-                "Nicholas I. Kolkin",
-                "Kilian Q. Weinberger"
-            ],
-            "filename": "!kusnerb15.pdf",
-            "recog": 1,
-            "modified": 1651813997,
-            "keywords": "NLP > String Similarity > Word Mover's Distance, WMD",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "Importance of Feature Scaling \u2014 scikit-learn 1.0.2 documentation",
-            "year": 2022,
-            "authors": [],
-            "filename": "!Importance of Feature Scaling \u2014 scikit-learn 1.0.2 documentation.pdf",
-            "recog": 0,
-            "modified": 1651763507,
-            "keywords": "Machine Learning > Features > Feature Scaling",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "Document Embedding Techniques. A review of notable literature on the\u2026 _ by Shay Palachy _ Towards Data Science",
-            "year": 2022,
-            "authors": [
-                "Shay Palachy"
-            ],
-            "filename": "!!Document Embedding Techniques. A review of notable literature on the\u2026 _ by Shay Palachy _ Towards Data Science.pdf",
-            "recog": 0,
-            "modified": 1651760599,
-            "keywords": "NLP > Embeddings",
-            "level": 2,
-            "priority": 2
-        },
-        {
-            "title": "A very preliminary analysis of DALL-E 2",
-            "year": 2022,
-            "authors": [
-                "Gary Marcus",
-                "Scott Aaronson"
-            ],
-            "filename": "!2204.13807.pdf",
-            "recog": 1,
-            "modified": 1651744632,
-            "keywords": "Machine Learning > Generative Models > Generative Models > Dall-E 2",
-            "level": 4,
-            "priority": 1
-        },
-        {
-            "title": "Reflective Creators",
-            "year": 2021,
-            "authors": [
-                "Max Kreminski",
-                "Michael Mateas"
-            ],
-            "filename": "!ICCC_2021_paper_11.pdf",
-            "recog": 1,
-            "modified": 1651730009,
-            "keywords": "Creativity > Creativity Support Tools > Casual Creators",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "TextRank: Bringing Order into Texts",
-            "year": "N/A",
-            "authors": [
-                "Rada Mihalcea",
-                "Paul Tarau"
-            ],
-            "filename": "!!mihalcea.emnlp04.pdf",
-            "recog": 1,
-            "modified": 1651729962,
-            "keywords": "NLP > Natural Language Generation, NLG > Summarization > Textrank",
-            "level": 4,
-            "priority": 2
-        },
-        {
-            "title": "CogView2: Faster and Better Text-to-Image Generation via Hierarchical Transformers",
-            "year": 2022,
-            "authors": [
-                "Ming Ding",
-                "Wendi Zheng",
-                "Wenyi Hong",
-                "Jie Tang"
-            ],
-            "filename": "!!!2204.14217.pdf",
-            "recog": 1,
-            "modified": 1651729823,
-            "keywords": "Machine Learning > Generative Models > Generative Models > CogView > CogView2",
-            "level": 5,
-            "priority": 3
-        },
-        {
-            "title": "OpenAI's CLIP is the most important advancement in computer vision this year",
-            "year": 2022,
-            "authors": [
-                "Brad Dwyer"
-            ],
-            "filename": "!OpenAI's CLIP is the most important advancement in computer vision this year.pdf",
-            "recog": 0,
-            "modified": 1651677855,
-            "keywords": "Machine Learning > Contrastive Learning, Multimodal Models > CLIP > CLIP Use Cases",
-            "level": 4,
-            "priority": 1
-        },
-        {
-            "title": "Measuring Creativity for Innovation Management",
-            "year": 2011,
-            "authors": [
-                "David H. Cropley",
-                "James C. Kaufman",
-                "Arthur J. Cropley"
-            ],
-            "filename": "!art02.pdf",
-            "recog": 1,
-            "modified": 1651659436,
-            "keywords": "Creativity > Creativity Measurement, Tests, Questionnaires > Creative Solution Diagnosis Scale (CSDS)",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "Crowdsourcing, innovation and firm performance",
-            "year": 2015,
-            "authors": [
-                "Yejun Xu",
-                "D. Enrique Ribeiro-Soriano"
-            ],
-            "filename": "!10-1108_MD-06-2014-0408.pdf",
-            "recog": 1,
-            "modified": 1651658213,
-            "keywords": "Collective Intelligence > Applications > Open Innovation > Measuring Crowdsourcing",
-            "level": 4,
-            "priority": 1
-        },
-        {
-            "title": "CROWDSOURCING AND ORGANISATIONAL LEARNING \u2013 A SYSTEMATIC LITERATURE REVIEW",
-            "year": 2017,
-            "authors": [
-                "Regina LENART-GANSINIEC"
-            ],
-            "filename": "!2_2.pdf",
-            "recog": 1,
-            "modified": 1651654267,
-            "keywords": "Crowdsourcing, Human Computation > Applications > Organizational Learning",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "1-s2.0-S2713374521000169-main",
-            "year": 2021,
-            "authors": [],
-            "filename": "-1-s2.0-S2713374521000169-main.pdf",
-            "recog": 0,
-            "modified": 1651651490,
-            "keywords": "Creativity > Creativity at Work > Creativity at Work vs. Outside of Work",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "Deep Residual Learning for Image Recognition",
-            "year": 2015,
-            "authors": [
-                "Kaiming He",
-                "Xiangyu Zhang",
-                "Shaoqing Ren",
-                "Jian Sun"
-            ],
-            "filename": "!!!1512.03385.pdf",
-            "recog": 1,
-            "modified": 1651640211,
-            "keywords": "Machine Learning > Deep Learning > Convolutional Neural Networks, CNN > Image recognition > Resnet",
-            "level": 5,
-            "priority": 3
-        },
-        {
-            "title": "Facial Attractiveness and CEO Compensation: Evidence from the Banking Industry",
-            "year": 2021,
-            "authors": [
-                "Shaker Ahmed",
-                "Mikko Ranta",
-                "Sami V\u00e4h\u00e4maa",
-                "John Broussard",
-                "Gonul Colak",
-                "Denis Davydov",
-                "Nebojsa Dimic",
-                "Michal Dzieli\u0144ski",
-                "Veda Fatmy",
-                "Bj\u00f6rn Hagstr\u00f6mer",
-                "Jamshed Iqbal",
-                "Markku Kaustia",
-                "Mikko Lepp\u00e4m\u00e4ki",
-                "Lars Nord\u00e9n",
-                "Jarkko Peltom\u00e4ki",
-                "Vanja Piljak",
-                "Elias Rantapuska",
-                "Elena Shakina",
-                "Jukka Sihvonen",
-                "Janne \u00c4ij\u00f6"
-            ],
-            "filename": "!SSRN-id3744808.pdf",
-            "recog": 1,
-            "modified": 1651592773,
-            "keywords": "Income Inequality > Beauty Premium > Facial Attractiveness",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "Evaluating the Effect of Beauty on Labor Market Outcomes: A Review of the Literature",
-            "year": 2014,
-            "authors": [
-                "Xing (Michelle) Liu",
-                "Eva Sierminska"
-            ],
-            "filename": "!dp8526.pdf",
-            "recog": 1,
-            "modified": 1651591942,
-            "keywords": "Income Inequality > Beauty Premium",
-            "level": 2,
-            "priority": 1
-        },
-        {
-            "title": "Beauty and the Labor Market",
-            "year": 2016,
-            "authors": [
-                "JEFF E. B1DDLE"
-            ],
-            "filename": "!!2117767.pdf",
-            "recog": 1,
-            "modified": 1651591870,
-            "keywords": "Income Inequality > Beauty Premium",
-            "level": 2,
-            "priority": 2
-        },
-        {
-            "title": "Board Composition and Workplace Diversity: A Machine Learning Approach",
-            "year": 2021,
-            "authors": [
-                "Mikko Ranta",
-                "Mika Ylinen"
-            ],
-            "filename": "-SSRN-id3812296.pdf",
-            "recog": 1,
-            "modified": 1651590045,
-            "keywords": "Gender > Gender Equality > Workplace Diversity",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "Machine learning in management accounting research: Literature review and pathways for the future",
-            "year": 2022,
-            "authors": [
-                "Mikko Ranta",
-                "Mika Ylinen",
-                "Marko J\u00e4rvenp\u00e4\u00e4"
-            ],
-            "filename": "-SSRN-id3822650.pdf",
-            "recog": 1,
-            "modified": 1651589407,
-            "keywords": "Finance > Accounting > ML in Accounting Research",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "Bag of What? Simple Noun Phrase Extraction for Text Analysis",
-            "year": 2016,
-            "authors": [
-                "Abram Handler",
-                "Matthew J. Denny",
-                "Hanna Wallach",
-                "Brendan O\u2019Connor"
-            ],
-            "filename": "-W16-5615.pdf",
-            "recog": 1,
-            "modified": 1651588813,
-            "keywords": "NLP > Phrase Detection, Phrase Extraction",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "Applying Data Mining Techniques for Descriptive Phrase Extraction in Digital Document Collections",
-            "year": 2007,
-            "authors": [
-                "Helena Ahonen",
-                "Oskari Heinonen",
-                "Mika Klemettinen",
-                "A. Inkeri Verkamo"
-            ],
-            "filename": "-10.1.1.42.4269.pdf",
-            "recog": 1,
-            "modified": 1651588203,
-            "keywords": "NLP > Phrase Detection, Phrase Extraction",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "A New Approach to Keyphrase Extraction Using Neural Networks",
-            "year": 2010,
-            "authors": [
-                "Kamal Sarkar",
-                "Mita Nasipuri",
-                "Suranjan Ghose"
-            ],
-            "filename": "-1004.3274.pdf",
-            "recog": 1,
-            "modified": 1651587622,
-            "keywords": "NLP > Phrase Detection, Phrase Extraction",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "Phrase detection Project proposal for Machine Learning course project",
-            "year": 2006,
-            "authors": [
-                "Suyash S Shringarpure"
-            ],
-            "filename": "!!shringarpure.pdf",
-            "recog": 1,
-            "modified": 1651586973,
-            "keywords": "NLP > Phrase Detection, Phrase Extraction",
-            "level": 2,
-            "priority": 2
-        },
-        {
-            "title": "\u201cI Will Not Drink With You Today\u201d: A Topic-Guided Thematic Analysis of Addiction Recovery on Reddit",
-            "year": 2021,
-            "authors": [
-                "Robert P. Gauthier",
-                "Mary Jean Costello",
-                "James R. Wallace"
-            ],
-            "filename": "!3491102.3502076.pdf",
-            "recog": 1,
-            "modified": 1651569536,
-            "keywords": "Addiction > Addiction Recovery > LDA for Thematic Analysis",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "Designing for the Bittersweet: Improving Sensitive Experiences with Recommender Systems",
-            "year": 2021,
-            "authors": [
-                "Caitlin Lustig",
-                "Artie Konrad",
-                "Jed R. Brubaker"
-            ],
-            "filename": "!3491102.3502049.pdf",
-            "recog": 1,
-            "modified": 1651568102,
-            "keywords": "Sensemaking > Technology-mediated Re\ufb02ection (TMR) > Affective Sensemaking > Bittersweet Content",
-            "level": 4,
-            "priority": 1
-        },
-        {
-            "title": "Blind source separation of oscillating components from electroencephalography data",
-            "year": 2022,
-            "authors": [
-                "Tuomas Puoliv\u00e4li",
-                "Tapani Ristaniemi",
-                "Tiina Parviainen"
-            ],
-            "filename": "!bss-apr-2022.pdf",
-            "recog": 1,
-            "modified": 1651400804,
-            "keywords": "Neuroscience > Oszillation Detection, Oszillation Filtering",
-            "level": 2,
-            "priority": 1
-        },
-        {
-            "title": "Musicianship can be decoded from magnetic resonance images",
-            "year": 2021,
-            "authors": [
-                "Tuomas Puoliv\u00e4lia",
-                "Tuomo Sipolaa",
-                "Anja Thiedeb",
-                "Marina Kliuchkoe",
-                "Brigitte Bogerte",
-                "Petri Toiviainenc",
-                "Asoke K. Nandid",
-                "Lauri Parkkonenb",
-                "Elvira Bratticoh",
-                "Tapani Ristaniemia",
-                "Tiina Parviainenf"
-            ],
-            "filename": "!!decoding-preprint.pdf",
-            "recog": 1,
-            "modified": 1651400336,
-            "keywords": "Neuroscience > Applications > Musicianship",
-            "level": 3,
-            "priority": 2
-        },
-        {
-            "title": "Model-driven deep-learning",
-            "year": 2018,
-            "authors": [],
-            "filename": "-nwx137.pdf",
-            "recog": 1,
-            "modified": 1651387591,
-            "keywords": "Machine Learning > Causal Discovery",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "M-Nauta_TCDF_ Temporal Causal Discovery Framework (PyTorch)_ discovering causal relationships between time series",
-            "year": 2022,
-            "authors": [],
-            "filename": "-M-Nauta_TCDF_ Temporal Causal Discovery Framework (PyTorch)_ discovering causal relationships between time series.pdf",
-            "recog": 0,
-            "modified": 1651387280,
-            "keywords": "Machine Learning > Causal Discovery > Temporal Causal Discovery Framework (TCDF)",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "Causal Discovery with Attention-Based Convolutional Neural Networks",
-            "year": 2019,
-            "authors": [
-                "Meike Nauta",
-                "Christin Seifert"
-            ],
-            "filename": "!make-01-00019-v2.pdf",
-            "recog": 1,
-            "modified": 1651387246,
-            "keywords": "Machine Learning > Causal Discovery > Temporal Causal Discovery Framework (TCDF)",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "Honda\u2019s muscle-flexing cruiser that cost $225m \u2014 the outrageous Rune \u2013 The Bike Shed Times",
-            "year": 2022,
-            "authors": [
-                "Peter Terlick",
-                "Then-love Katie Holmes"
-            ],
-            "filename": "-Honda\u2019s muscle-flexing cruiser that cost $225m \u2014 the outrageous Rune \u2013 The Bike Shed Times.pdf",
-            "recog": 0,
-            "modified": 1651383206,
-            "keywords": "Motorcycle > Honda > Honda Rune",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "Co-Orb: Fostering Remote Workplace Gratitude with IoT Technology",
-            "year": 2022,
-            "authors": [
-                "Xinmu Hu",
-                "Ziwen Zeng",
-                "Qiao Tang",
-                "Yufeng Zhao"
-            ],
-            "filename": "!3491101.3514488.pdf",
-            "recog": 1,
-            "modified": 1651313646,
-            "keywords": "CSCW > Thank You Systems, Workplace Appreciation Systems > Co-Orb",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "Repurposing Emoji for Personalised Communication: Why \ud83c\udf55 means \u201cI love you\u201d",
-            "year": 2018,
-            "authors": [
-                "Sarah Wiseman"
-            ],
-            "filename": "-a3-Volkel.pdf",
-            "recog": 1,
-            "modified": 1651311402,
-            "keywords": "Communities, Networks > Social Media > Emojis, Emoticons, Smilieys > Repurposing Emojis",
-            "level": 4,
-            "priority": 0
-        },
-        {
-            "title": "Ethical and social risks of harm from Language Models",
-            "year": 2021,
-            "authors": [
-                "Laura Weidinger",
-                "John Mellor",
-                "Maribeth Rauh",
-                "Conor Griffin",
-                "Jonathan Uesato",
-                "Po-Sen Huang",
-                "Myra Cheng",
-                "Mia Glaese",
-                "Borja Balle",
-                "Atoosa Kasirzadeh",
-                "Zac Kenton",
-                "Sasha Brown",
-                "Will Hawkins",
-                "Tom Stepleton",
-                "Courtney Biles",
-                "Abeba Birhane",
-                "Julia Haas",
-                "Laura Rimell",
-                "Lisa Anne Hendricks",
-                "William Isaac",
-                "Sean Legassick",
-                "Geoffrey Irving",
-                "Iason Gabriel"
-            ],
-            "filename": "!!!2112.04359.pdf",
-            "recog": 1,
-            "modified": 1651303680,
-            "keywords": "NLP > Language Models > Gopher (DeepMind)",
-            "level": 3,
-            "priority": 3
-        },
-        {
-            "title": "Predictability and Surprise in Large Generative Models",
-            "year": 2022,
-            "authors": [
-                "Deep Ganguli",
-                "Danny Hernandez",
-                "Liane Lovitt",
-                "Nova DasSarma",
-                "Tom Henighan",
-                "Andy Jones",
-                "Nicholas Joseph",
-                "Jackson Kernion",
-                "Ben Mann",
-                "Amanda Askell",
-                "Yuntao Bai",
-                "Anna Chen",
-                "Tom Conerly",
-                "Dawn Drain",
-                "Nelson Elhage",
-                "Sheer El Showk",
-                "Stanislav Fort",
-                "Zac Hatfield-Dodds",
-                "Scott Johnston",
-                "Shauna Kravec",
-                "Neel Nanda",
-                "Kamal Ndousse",
-                "Catherine Olsson",
-                "Daniela Amodei",
-                "Dario Amodei",
-                "Tom Brown",
-                "Jared Kaplan",
-                "Sam McCandlish",
-                "Chris Olah",
-                "Jack Clark"
-            ],
-            "filename": "!!2202.07785.pdf",
-            "recog": 1,
-            "modified": 1651303136,
-            "keywords": "AI > Issues > Predictability and Surprise",
-            "level": 3,
-            "priority": 2
         }
     ]
 }
