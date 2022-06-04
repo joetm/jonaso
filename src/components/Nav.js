@@ -81,6 +81,7 @@ export default class Nav extends React.Component {
             <Menu fluid pointing stackable primary="true" widths="7">
               <MenuItem active={activeItem === 'home'} item='Home' />
               <MenuItem active={activeItem === 'publications'} item='Publications' />
+              <MenuItem active={activeItem === 'artworks'} item='Artworks' />
               <MenuItem active={activeItem === 'projects'} item='Projects' />
               <MenuItem active={activeItem === 'cv'} item='CV' />
               <MenuItem active={activeItem.startsWith('research')} item='Research' link={false} header={true} />
@@ -105,6 +106,7 @@ export default class Nav extends React.Component {
                   <React.Fragment>
                     <MenuItem active={activeItem === 'home'} item='Home' />
                     <MenuItem active={activeItem === 'publications'} item='Publications' />
+                    <MenuItem active={activeItem === 'artworks'} item='Artworks' />
                     <MenuItem active={activeItem === 'projects'} item='Projects' />
                     <MenuItem active={activeItem === 'cv'} item='CV' />
                     <MenuItem active={activeItem === 'researchreading'} item='Reading' />
