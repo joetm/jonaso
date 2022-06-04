@@ -122,7 +122,7 @@ class Home extends React.Component {
 
                 <p>
                   Fun facts about me:
-                  I dabble with <a href="/art/">AI-generated art</a> and I am a <a href="/kettlebells/">kettlebell</a> salesman.
+                  I dabble with <a href="/artworks/">AI-generated art</a> and I am a <a href="/kettlebells/">kettlebell</a> salesman.
                   {" "}
                   I have lived, studied, and/or worked in
                   Germany,

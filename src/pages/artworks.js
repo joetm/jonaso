@@ -31,9 +31,20 @@ const ArtPage = ({data}) => {
 //     breadcrumbs: []
 //   }
   // render() {
-  	// console.log(data.allFile.edges)
   	let images = data.allFile.edges || []
+  	console.log(data.allFile.edges)
+  	// sort images by modifiedTime
+  // 	images.sort(function(a, b) {
+		//   var keyA = new Date(a.modifiedTime),
+		//     keyB = new Date(b.modifiedTime);
+		//   // Compare the 2 dates
+		//   if (keyA < keyB) return 1;
+		//   if (keyA > keyB) return -1;
+		//   return 0;
+		// });
+  	
     return (
+    	<React.Fragment>
 	   	<Layout>
         <Helmet>
           <meta charSet="utf-8" />
@@ -42,27 +53,25 @@ const ArtPage = ({data}) => {
         </Helmet>
 	      <Container>
 					<Header as='h1' textAlign='center' content="AI-generated Artworks" />
-		        <section style={{textAlign:'center'}}>
-		        {/*
-		        	<p>I experiment with text-based image generation.</p>
-		        */}
+		        <section style={{textAlign:'center',marginBottom:'2em'}}>
+		        	<p>Generating digital artworks from text prompts (never edited).</p>
 		        </section>
 
-		        <section style={{textAlign:'center'}}>
+	      </Container>
+        </Layout>
 
+		        <section style={{textAlign:'center', marginLeft: '30px', marginRight: '30px'}}>
 							<Masonry
-							  breakpointCols={3}
+							  breakpointCols={5}
 							  className="my-masonry-grid"
 							  columnClassName="my-masonry-grid_column">
 							  	{
 							  		images.map(img => {
-							  			let imgUrl = `../../artworks/${img.node.relativePath}`
-							  			console.log(imgUrl)
+							  			// let imgUrl = `../../artworks/${img.node.relativePath}`
 							  			let image = getImage(img.node)
-							  			console.log(image)
 							  			return (
 								  		<GatsbyImage
-									  			key={img.node.relativePath}
+									  			key={img.node.id}
 										      image={image}
 										      alt=""
 										      placeholder="blurred"
@@ -74,13 +83,11 @@ const ArtPage = ({data}) => {
 							  		)
 							  	}
 							</Masonry>
-
 		        </section>
 
 	          <div className="spacer" style={spacer}></div>
 
-	      </Container>
-        </Layout>
+    	</React.Fragment>
     )
   // }
 }
@@ -88,14 +95,15 @@ const ArtPage = ({data}) => {
 
 export const query = graphql`
 query ArtworksQuery {
-  allFile {
+  allFile(sort: {fields: modifiedTime, order: DESC}) {
+  	totalCount
     edges {
       node {
-        name
-        changeTime
+      	id
+        modifiedTime
         childImageSharp {
           gatsbyImageData(
-						placeholder: BLURRED
+						placeholder: DOMINANT_COLOR
           )
         }
       }
