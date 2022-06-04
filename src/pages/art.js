@@ -9,7 +9,8 @@ import { Container, Header } from 'semantic-ui-react'
 import Layout from "../components/layout"
 import { Helmet } from "react-helmet"
 import { spacer } from "../common"
-import { StaticImage } from "gatsby-plugin-image"
+
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Masonry from 'react-masonry-css'
 
 import { graphql } from 'gatsby'
@@ -55,12 +56,14 @@ const ArtPage = ({data}) => {
 							  columnClassName="my-masonry-grid_column">
 							  	{
 							  		images.map(img => {
-							  			const imgUrl = `../../artworks/${img.node.relativePath}`
-							  			console.log(img.node.relativePath)
+							  			let imgUrl = `../../artworks/${img.node.relativePath}`
+							  			console.log(imgUrl)
+							  			let image = getImage(img.node)
+							  			console.log(image)
 							  			return (
-								  		<StaticImage
+								  		<GatsbyImage
 									  			key={img.node.relativePath}
-										      src={imgUrl}
+										      image={image}
 										      alt=""
 										      placeholder="blurred"
 										      layout="constrained"
@@ -85,17 +88,19 @@ const ArtPage = ({data}) => {
 
 export const query = graphql`
 query ArtworksQuery {
-	allFile {
-	    edges {
-	      node {
-	        id
-	        relativePath
-	        base
-	        name
-	        changeTime
-	      }
-	    }
-	  }
+  allFile {
+    edges {
+      node {
+        name
+        changeTime
+        childImageSharp {
+          gatsbyImageData(
+						placeholder: BLURRED
+          )
+        }
+      }
+    }
+  }
 }`
 
 export default ArtPage
