@@ -9,4 +9,4 @@ const dev = {
   _REFERENCES_PER_TYPE: "http://localhost:8000/static/references-type.json",
 }
 
-export const config = process.env.NODE_ENV === ‘development’ ? dev : prod
+export const config = process.env.NODE_ENV === "development" ? dev : prod
