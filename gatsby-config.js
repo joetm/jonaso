@@ -7,6 +7,16 @@ module.exports = {
     {
       resolve: "gatsby-plugin-no-sourcemaps",
     },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `artworks`,
+        path: `${__dirname}/artworks/`,
+      },
+    },
     "gatsby-plugin-react-helmet"
   ],
   siteMetadata: {
