@@ -1,0 +1,23 @@
+{
+  "clip_model": "ViT-B/32",
+  "cut_pow": 1.0,
+  "cutn": 64,
+  "display_freq": 25,
+  "image_prompts": [],
+  "init_image": "/content/175-edited-2-zoomed.png",
+  "init_weight": 0.0,
+  "noise_prompt_seeds": [],
+  "noise_prompt_weights": [],
+  "prompts": [
+    "man encounters demon, painting in the style of Picasso, trending on wikiart"
+  ],
+  "seed": 11901679977813320246,
+  "size": [
+    550,
+    275
+  ],
+  "step_size": 0.1,
+  "url": "https://colab.research.google.com/gist/joetm/c8088ffb2a68250cb3c16e34bc34677b/vqgan-clip-updated.ipynb?authuser=3#scrollTo=coQoDIfsFtgv",
+  "vqgan_checkpoint": "wikiart_16384.ckpt",
+  "vqgan_config": "wikiart_16384.yaml"
+}

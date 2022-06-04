@@ -1,0 +1,22 @@
+https://colab.research.google.com/gist/joetm/33b5d0bcc86a35c74ebceb5d130ad4a3/pixray-aesthetic.ipynb#scrollTo=696nYXtg7BjJ
+
+#aesthetic
+pixray.run(
+    "Catholic priest abuses child. church is cancelled. painting by James Gurney, trending on artstation #metoo",
+    "vdiff",
+    size=[512,512],
+    learning_rate=0.01,
+    custom_loss="aesthetic",
+    aesthetic_weight=0.01,
+    output="aes.png"
+)
+
+#no aesthetic
+pixray.run(
+    "Catholic priest abuses child. church is cancelled. painting by James Gurney, trending on artstation #metoo",
+    "vdiff",
+    size=[512,512],
+    learning_rate=0.01,
+    output="noaes.png"
+)
+

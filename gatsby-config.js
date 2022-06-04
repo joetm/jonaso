@@ -15,6 +15,7 @@ module.exports = {
       options: {
         name: `artworks`,
         path: `${__dirname}/artworks/`,
+        ignore: [`**/info.txt`],
       },
     },
     "gatsby-plugin-react-helmet"

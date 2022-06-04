@@ -1,0 +1,25 @@
+{
+  "clip_model": "ViT-B/32",
+  "cut_pow": 1.0,
+  "cutn": 64,
+  "display_freq": 25,
+  "image_prompts": [],
+  "init_image": "",
+  "init_weight": 0.0,
+  "noise_prompt_seeds": [],
+  "noise_prompt_weights": [],
+  "prompts": [
+    "\"When I see the man in the mirror I see an animal clearer\"",
+    "man sees beast in mirror",
+    "by Ivan Aivazovsky, trending on wikiart"
+  ],
+  "seed": 419934438398348045,
+  "size": [
+    390,
+    500
+  ],
+  "step_size": 0.1,
+  "url": "https://colab.research.google.com/gist/joetm/c8088ffb2a68250cb3c16e34bc34677b/vqgan-clip-updated.ipynb?authuser=3#scrollTo=coQoDIfsFtgv",
+  "vqgan_checkpoint": "wikiart_16384.ckpt",
+  "vqgan_config": "wikiart_16384.yaml"
+}

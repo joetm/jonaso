@@ -95,7 +95,12 @@ const ArtPage = ({data}) => {
 
 export const query = graphql`
 query ArtworksQuery {
-  allFile(sort: {fields: modifiedTime, order: DESC}) {
+  allFile(
+  	sort: {fields: modifiedTime, order: DESC},
+    filter: {
+      extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+    }
+  ) {
   	totalCount
     edges {
       node {
