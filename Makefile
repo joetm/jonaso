@@ -1,3 +1,7 @@
+ifndef VERBOSE
+.SILENT:
+endif
+
 .PHONY: tests dist public
 
 default:

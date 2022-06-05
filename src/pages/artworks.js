@@ -95,7 +95,6 @@ const ArtPage = ({data}) => {
 export const query = graphql`
 query ArtworksQuery {
   allFile(
-	  limit: 50,
   	sort: {fields: modifiedTime, order: DESC},
     filter: {
       extension: { regex: "/(jpg)|(png)|(jpeg)/" }

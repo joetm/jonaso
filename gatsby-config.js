@@ -4,9 +4,7 @@
 
 module.exports = {
   plugins: [
-    {
-      resolve: "gatsby-plugin-no-sourcemaps",
-    },
+    "gatsby-plugin-no-sourcemaps",
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-sharp`,
