@@ -3,6 +3,7 @@
 
 import '../react-masonry.css'
 
+// { useState, useEffect }
 import React from "react"
 // Card, Image, Label
 import { Container, Header } from 'semantic-ui-react'
@@ -15,34 +16,48 @@ import Masonry from 'react-masonry-css'
 
 import { graphql } from 'gatsby'
 
+const breakpointColumnsObj = {
+  default: 5,
+  1200: 4,
+  980: 3,
+  700: 2
+};
 
-const styles = {
-	breadcrumb: {
-		cursor: 'pointer',
+
+// const styles = {
+// 	breadcrumb: {
+// 		cursor: 'pointer',
+// 	}
+// }
+
+
+const Artwork = ({image}) => {
+	// componentDidMount
+	// useEffect(() => {
+	// 		updateLoading()
+	// }, [keyVal, updateLoading])
+	if (!image) {
+		return
 	}
+	return (
+		<GatsbyImage
+	      image={image}
+	      alt=""
+	      layout="constrained"
+	      placeholder="dominantColor"
+	      loading="lazy"
+    />
+	)
 }
 
 
 const ArtPage = ({data}) => {
-// class ArtPage extends React.Component {
-//   state = {
-//     artworks: [],
-//     activebreadcrumb: null,
-//     breadcrumbs: []
-//   }
-  // render() {
   	let images = data.allFile.edges || []
-  	console.log(data.allFile.edges)
-  	// sort images by modifiedTime
-  // 	images.sort(function(a, b) {
-		//   var keyA = new Date(a.modifiedTime),
-		//     keyB = new Date(b.modifiedTime);
-		//   // Compare the 2 dates
-		//   if (keyA < keyB) return 1;
-		//   if (keyA > keyB) return -1;
-		//   return 0;
-		// });
-  	
+  	// state hook
+  	// const [count, setCount] = useState(0);
+  	// const updateLoading = () => {
+  	// }
+  	// const totalCount = data?.allFile?.totalCount
     return (
     	<React.Fragment>
 	   	<Layout>
@@ -57,30 +72,31 @@ const ArtPage = ({data}) => {
 		        	<p>Generating digital artworks from text prompts (never edited).</p>
 		        </section>
 
+			      {/*
+						<div style={{textAlign:'center'}}>
+							Loading: {count}/{totalCount}
+							<div style={{height:'10px',width:'100%',position:'relative',margin:'1rem',border:'1px solid #AAAAAA',overflow:'hidden'}}>
+								<div style={{height:'10px',margin:0,padding:0,position:'relative',width:`${count/totalCount || 0}`,backgroundColor:'#FFFF00'}}>
+								</div>
+							</div>
+						</div>
+						*/}
+
 	      </Container>
         </Layout>
 
 		        <section style={{textAlign:'center', marginLeft: '30px', marginRight: '30px'}}>
 							<Masonry
-							  breakpointCols={5}
+							  breakpointCols={breakpointColumnsObj}
 							  className="my-masonry-grid"
 							  columnClassName="my-masonry-grid_column">
 							  	{
-							  		images.map(img => {
-							  			// let imgUrl = `../../artworks/${img.node.relativePath}`
-							  			let image = getImage(img.node)
-							  			return (
-								  		<GatsbyImage
-									  			key={img.node.id}
-										      image={image}
-										      alt=""
-										      layout="constrained"
-										      placeholder="dominantColor"
-										      loading="lazy"
-										      maxWidth={400}
-									    />
+							  		images.map((img, index) => (
+							  				<Artwork
+							  					key={`a${index}`}
+							  					image={getImage(img.node)}
+							  				/>
 							  			)
-							  		}
 							  		)
 							  	}
 							</Masonry>
@@ -105,8 +121,6 @@ query ArtworksQuery {
   	totalCount
     edges {
       node {
-      	id
-        modifiedTime
         childImageSharp {
           gatsbyImageData(
             width: 400

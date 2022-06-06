@@ -1,7 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import { navigate } from 'gatsby'
-import { Container, Button } from 'semantic-ui-react'
+// import { navigate } from 'gatsby'
+import { Container } from 'semantic-ui-react'
 import { spacer } from "../../../common"
 import Layout from "../../../components/layout"
 import KeywordCloud from '../../../components/cloud'
@@ -29,8 +29,8 @@ class Interests extends React.Component {
     .then(keywords => this.setState({ keywords }))
   }
   render() {
-    const { keywords } = this.state
-    const filtered_keywords = keywords.filter(kw => kw.num > 9)
+    // const { keywords } = this.state
+    // const filtered_keywords = keywords.filter(kw => kw.num > 9)
     return (
       <Layout>
         <Helmet>

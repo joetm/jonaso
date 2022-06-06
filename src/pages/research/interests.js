@@ -1,6 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import { Container, Button } from 'semantic-ui-react'
+import { Container } from 'semantic-ui-react'
 import { spacer } from "../../common"
 import Keywords from "../../components/keywords"
 import Layout from "../../components/layout"
