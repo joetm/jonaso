@@ -24,11 +24,11 @@ import { spacer } from "../common"
 
 // const _ARTWORKS = "/static/artworks/artworks.json"
 
-const styles = {
-	breadcrumb: {
-		cursor: 'pointer',
-	}
-}
+// const styles = {
+// 	breadcrumb: {
+// 		cursor: 'pointer',
+// 	}
+// }
 
 // function Cardwork(w) {
 // 	const work = w.info

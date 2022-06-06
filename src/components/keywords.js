@@ -1,6 +1,6 @@
 import React from "react"
 import { Container, Button } from 'semantic-ui-react'
-import { ResponsiveContainer, LabelList, BarChart, Bar, Tooltip, XAxis, YAxis, CartesianGrid } from 'recharts'
+import { ResponsiveContainer, LabelList, BarChart, Bar, XAxis, YAxis, CartesianGrid } from 'recharts'
 
 
 const HEIGHT = 1250;
@@ -80,7 +80,7 @@ class Keywords extends React.Component {
 
           <div style={{clear:'both'}}></div>
 
-          <ResponsiveContainer width="100%" height={HEIGHT} width='100%'>
+          <ResponsiveContainer width="100%" height={HEIGHT}>
                 <BarChart
                   layout="vertical"
                   data={displaydata}

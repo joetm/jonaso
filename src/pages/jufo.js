@@ -7,12 +7,6 @@ import Layout from "../components/layout"
 import { Helmet } from "react-helmet"
 import { spacer } from "../common"
 
-const styles = {
-	breadcrumb: {
-		cursor: 'pointer',
-	}
-}
-
 
 class JufoPage extends React.Component {
   state = {

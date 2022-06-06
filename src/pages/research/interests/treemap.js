@@ -1,7 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { Container, Button } from 'semantic-ui-react'
-import { ResponsiveContainer, LabelList, Treemap, XAxis, YAxis, CartesianGrid } from 'recharts'
+import { ResponsiveContainer, Treemap } from 'recharts'
 import { spacer } from "../../../common"
 import Layout from "../../../components/layout"
 import GraphSwitcher from "../../../components/GraphSwitcher"
@@ -68,7 +68,7 @@ class TreeComponent extends React.Component {
   }
   render() {
     const { keywords = [] } = this.props
-    const { level2, isZoomed, breadcrumb, color } = this.state // chart
+    const { level2, isZoomed, breadcrumb } = this.state // chart
     // const barChartActive = chart === 'bar'
     const displaydata = isZoomed && level2.length ? level2 : keywords;
 
@@ -90,7 +90,7 @@ class TreeComponent extends React.Component {
 
           <div style={{clear:'both'}}></div>
 
-          <ResponsiveContainer width="100%" height={HEIGHT} width='100%'>
+          <ResponsiveContainer width="100%" height={HEIGHT}>
                 <Treemap
                   data={displaydata}
                   isAnimationActive={true}
