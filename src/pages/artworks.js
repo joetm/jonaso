@@ -75,7 +75,9 @@ const ArtPage = ({data}) => {
 										      image={image}
 										      alt=""
 										      layout="constrained"
+										      placeholder="dominantColor"
 										      loading="lazy"
+										      maxWidth={400}
 									    />
 							  			)
 							  		}
@@ -107,6 +109,7 @@ query ArtworksQuery {
         modifiedTime
         childImageSharp {
           gatsbyImageData(
+            width: 400
 						placeholder: DOMINANT_COLOR
           )
         }

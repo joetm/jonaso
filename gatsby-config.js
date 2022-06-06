@@ -9,7 +9,6 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
-        // Defaults used for gatsbyImageData and StaticImage
         defaults: {
           backgroundColor: "#EDEDED",
           placeholder: "dominantColor",

@@ -32,6 +32,12 @@ pre-build:
 	make bib-json
 	make build-cv
 
+	# make rename-artworks
+
+rename-artworks:
+	cd artworks; \
+		./rename-midjourney.sh
+
 bib-json:
 	pandoc-citeproc --bib2json ./src/bibliography/publications.bib > ./src/bibliography/publications.json
 
