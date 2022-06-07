@@ -3,7 +3,7 @@
 
 import '../react-masonry.css'
 
-// { useState, useEffect }
+// { useState }
 import React from "react"
 // Card, Image, Label
 import { Container, Header } from 'semantic-ui-react'
@@ -54,7 +54,7 @@ const Artwork = ({image}) => {
 const ArtPage = ({data}) => {
   	let images = data.allFile.edges || []
   	// state hook
-  	// const [count, setCount] = useState(0);
+  	// const [hidden, updateHidden] = useState(['cc12m-1']);
   	// const updateLoading = () => {
   	// }
   	// const totalCount = data?.allFile?.totalCount
@@ -64,7 +64,7 @@ const ArtPage = ({data}) => {
         <Helmet>
           <meta charSet="utf-8" />
           <title>AI-generated Art {'//'} jonaso.de</title>
-          <link rel="canonical" href="https://www.jonaso.de/art" />
+          <link rel="canonical" href="https://www.jonaso.de/artworks" />
         </Helmet>
 	      <Container>
 					<Header as='h1' textAlign='center' content="AI-generated Artworks" />
@@ -90,14 +90,19 @@ const ArtPage = ({data}) => {
 							  breakpointCols={breakpointColumnsObj}
 							  className="my-masonry-grid"
 							  columnClassName="my-masonry-grid_column">
+{/*
+							  			.filter(img => img.node.relativeDirectory.split('/', 1)[0] in hidden ? false : true)
+*/}
 							  	{
-							  		images.map((img, index) => (
-							  				<Artwork
-							  					key={`a${index}`}
-							  					image={getImage(img.node)}
-							  				/>
-							  			)
-							  		)
+							  		images
+							  			.map((img, index) => {
+								  			return (
+								  				<Artwork
+								  					key={`a${index}`}
+								  					image={getImage(img.node)}
+								  				/>
+								  			)
+								  		})
 							  	}
 							</Masonry>
 		        </section>
@@ -127,6 +132,7 @@ query ArtworksQuery {
 						placeholder: DOMINANT_COLOR
           )
         }
+        relativeDirectory
       }
     }
   }
