@@ -85,7 +85,7 @@ const ArtPage = ({data}) => {
 	      </Container>
         </Layout>
 
-		        <section style={{textAlign:'center', marginLeft: '30px', marginRight: '30px'}}>
+		        <section style={{textAlign:'center', marginLeft: '30px', marginRight: '30px', maxWidth: '2000px', margin: 'auto'}}>
 							<Masonry
 							  breakpointCols={breakpointColumnsObj}
 							  className="my-masonry-grid"
