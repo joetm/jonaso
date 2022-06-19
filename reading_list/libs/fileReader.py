@@ -4,9 +4,11 @@
 
 import json
 import os
+import sys
 from fnmatch import fnmatch
 import hashlib
 import time
+import subprocess
 
 from libs import metadata
 
@@ -33,6 +35,13 @@ def parsefiles(PATTERN, BASEPATHS, conn):
 
                 fullpath = os.path.join(path, name)
 
+                # create a temporary pdf that holds only the title page
+                # this speeds up processing in science-parse
+                tmpfile = './tmp.pdf'
+                subprocess.run(["pdftk", fullpath, "cat", "1", "output", tmpfile])
+                print('created tmp.pdf')
+                sys.exit()            
+
                 # skip symlinks
                 if os.path.islink(fullpath):
                     continue
@@ -55,11 +64,12 @@ def parsefiles(PATTERN, BASEPATHS, conn):
                     # print("SHA1: {0}".format(sha1.hexdigest()))
                     thehash = sha1.hexdigest()
 
-                    # cache check
+                    print(name, thehash)
+
+                    # check cache
                     c.execute('SELECT * FROM documents WHERE hash=?', (thehash,))
                     res = c.fetchone()
-
-                    # cached?
+                    # is cached?
                     if res != None:
                         print ('cache hit', counter, ": ",  thehash)
                         parseJSON = json.loads(res[2])
@@ -70,6 +80,8 @@ def parsefiles(PATTERN, BASEPATHS, conn):
                         else:
                             unrecognizedCounter = unrecognizedCounter + 1
                         continue
+
+
 
                     md = metadata.extractMetadata(fullpath)
                     if not md:
