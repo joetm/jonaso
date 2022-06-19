@@ -17,10 +17,10 @@ import Masonry from 'react-masonry-css'
 import { graphql } from 'gatsby'
 
 const breakpointColumnsObj = {
-  default: 5,
   1200: 4,
   980: 3,
-  700: 2
+  700: 2,
+  default: 5,
 };
 
 
@@ -95,13 +95,18 @@ const ArtPage = ({data}) => {
 */}
 							  	{
 							  		images
-							  			.map((img, index) => {
-								  			return (
-								  				<Artwork
-								  					key={`a${index}`}
-								  					image={getImage(img.node)}
-								  				/>
-								  			)
+							  			.map(img => {
+							  				  let key = img?.node?.childImageSharp?.gatsbyImageData?.images?.fallback?.src
+							  				  let imgnode = getImage(img.node)
+							  				  if (!imgnode) {
+							  				  	return ''
+							  				  }
+									  			return (
+									  				<Artwork
+									  					key={key}
+									  					image={imgnode}
+									  				/>
+									  			)
 								  		})
 							  	}
 							</Masonry>
