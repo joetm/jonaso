@@ -8,20 +8,20 @@ START_TIME=$SECONDS
 
 # ./start-docker.sh &
 
-echo "Enter:"
-echo "[0] for local (localhost)"
-echo "[1] for remote (IP 192.168.0.53)"
+# echo "Enter:"
+# echo "[0] for local (localhost)"
+# echo "[1] for remote (IP 192.168.0.53)"
 
-read runlocal
+# read runlocal
 
-if [ $runlocal -gt 0 ]
-then
-	echo Running remotely on 192.168.0.53.
-	export IPADDRESS="192.168.0.53"
-else
-	echo Running locally on localhost.
-	export IPADDRESS="localhost"
-fi
+# if [ $runlocal -gt 0 ]
+# then
+# 	echo Running remotely on 192.168.0.53.
+# 	export IPADDRESS="192.168.0.53"
+# else
+echo Running locally on localhost.
+export IPADDRESS="localhost"
+# fi
 
 if ./parsefiles.py ; then
     # echo "Command succeeded"
