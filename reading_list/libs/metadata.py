@@ -57,7 +57,7 @@ def log():
 
 
 
-def extractMetadata(fullpath):
+def extractMetadata(fullpath, origpath):
     files = {'upload_file': open(fullpath,'rb')}
     headers = {'Content-type': 'application/pdf'}
     # params = {'skipFields': 'references,sections'}
@@ -154,7 +154,7 @@ def extractMetadata(fullpath):
         # fallback: use filename as title
         if not title:
             # use filename instead
-            title = os.path.splitext(filename)[0].strip('!-')
+            title = os.path.splitext(origpath)[0].strip('!-')
             method = "FI"
             recog = False
 

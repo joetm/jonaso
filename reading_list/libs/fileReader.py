@@ -35,13 +35,6 @@ def parsefiles(PATTERN, BASEPATHS, conn):
 
                 fullpath = os.path.join(path, name)
 
-                # create a temporary pdf that holds only the title page
-                # this speeds up processing in science-parse
-                tmpfile = './tmp.pdf'
-                subprocess.run(["pdftk", fullpath, "cat", "1", "output", tmpfile])
-                print('created tmp.pdf')
-                sys.exit()            
-
                 # skip symlinks
                 if os.path.islink(fullpath):
                     continue
@@ -81,9 +74,13 @@ def parsefiles(PATTERN, BASEPATHS, conn):
                             unrecognizedCounter = unrecognizedCounter + 1
                         continue
 
+                    # create a temporary pdf that holds only the title page
+                    # this speeds up processing in science-parse
+                    tmpfile = './tmp.pdf'
+                    subprocess.run(["pdftk", fullpath, "cat", "1", "output", tmpfile])
 
-
-                    md = metadata.extractMetadata(fullpath)
+                    # extract metadata
+                    md = metadata.extractMetadata(tmpfile, name)
                     if not md:
                         # speed up future processing for these misses
                         c.execute("INSERT INTO documents VALUES (?,?,?)", (thehash, int(time.time()), '{}'))
