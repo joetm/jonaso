@@ -57,8 +57,8 @@ def log():
 
 
 
-def extractMetadata(fullpath, origpath):
-    files = {'upload_file': open(fullpath,'rb')}
+def extractMetadata(tmppath, origfilename, origpath):
+    files = {'upload_file': open(tmppath,'rb')}
     headers = {'Content-type': 'application/pdf'}
     # params = {'skipFields': 'references,sections'}
 
@@ -73,7 +73,7 @@ def extractMetadata(fullpath, origpath):
 
     if r.status_code == 200:
 
-        path, filename = os.path.split(fullpath)
+        path, filename = os.path.split(tmppath)
 
         skip = False
         recog = True
@@ -102,12 +102,12 @@ def extractMetadata(fullpath, origpath):
                 # run annotation extraction
                 # !!! Python2 script (poppler not available for python3)
 
-                # print("Extracting annotations from: %s" % fullpath)
+                # print("Extracting annotations from: %s" % tmppath)
 
                 result = check_output([
                         'python3',
                         '/var/www/academic-site/reading_list/libs/extract_annotations.py',
-                        fullpath
+                        tmppath
                 ])
 
                 strResult = result.decode('utf-8').strip()
@@ -154,7 +154,7 @@ def extractMetadata(fullpath, origpath):
         # fallback: use filename as title
         if not title:
             # use filename instead
-            title = os.path.splitext(origpath)[0].strip('!-')
+            title = os.path.splitext(origfilename)[0].strip('!-')
             method = "FI"
             recog = False
 
@@ -176,8 +176,8 @@ def extractMetadata(fullpath, origpath):
             'authors': authors,
             'filename': filename,
             'recog': int(recog),
-            'modified': int(os.path.getmtime(fullpath)),
-            # 'created': int(os.path.getctime(fullpath)),
+            'modified': int(os.path.getmtime(origpath)),
+            # 'created': int(os.path.getctime(tmppath)),
             # 'abstractText': rawdata['abstractText'],
             # 'sections': rawdata['sections'],
             # 'references': rawdata['references'],
