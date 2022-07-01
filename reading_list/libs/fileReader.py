@@ -77,7 +77,7 @@ def parsefiles(PATTERN, BASEPATHS, conn):
                     # create a temporary pdf that holds only the title page
                     # this speeds up processing in science-parse
                     tmpfile = './tmp.pdf'
-                    subprocess.run(["pdftk", fullpath, "cat", "1-5", "output", tmpfile])
+                    subprocess.run(["pdftk", fullpath, "cat", "1-3", "output", tmpfile])
 
                     # extract metadata
                     md = metadata.extractMetadata(tmppath=tmpfile, origfilename=name, origpath=fullpath)
