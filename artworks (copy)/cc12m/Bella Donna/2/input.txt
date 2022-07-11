@@ -1,0 +1,66 @@
+https://colab.research.google.com/gist/joetm/b01ba68c0b6b33c2fc3aae7f6967d8f9/clip-conditioned-clip-guided-diffusion-cc12m_1-256x256.ipynb#scrollTo=h-hZ1MbgvR0Y
+
+prompts: the text prompts to use. Relative weights for text prompts can be specified by putting the weight after a colon. The vertical bar character can be used to denote multiple prompts.
+
+prompts:
+bella donna, painting by Alex Grey, trending on /r/art
+batch_size: sample this many images at a time (default 1)
+
+batch_size:
+1
+checkpoint: manually specify the model checkpoint file
+
+checkpoint:
+Insert text here
+clip_guidance_scale: how strongly the result should match the text prompt (default 500). If set to 0, the cc12m_1 model will still be CLIP conditioned and sampling will go faster and use less memory.
+
+clip_guidance_scale:
+150
+device: the PyTorch device name to use (default autodetects)
+
+device:
+cuda:0
+eta: set to 0 for deterministic (DDIM) sampling, 1 (the default) for stochastic (DDPM) sampling, and in between to interpolate between the two. DDIM is preferred for low numbers of timesteps (default: 1.0).
+
+eta:
+0.5
+images: the image prompts to use (local files or HTTP(S) URLs). Relative weights for image prompts can be specified by putting the weight after a colon, for example: "image_1.png:0.5".
+
+images:
+Insert text here
+model: specify the model to use (default cc12m_1)
+
+model:
+cc12m_1
+n: sample until this many images are sampled (default 1)
+
+n:
+3
+seed: specify the random seed (default 0)
+
+seed:
+0
+steps: specify the number of diffusion timesteps (default is 1000, can lower for faster but lower quality sampling)
+
+steps:
+1200
+check_in: specify the number of steps between each image update
+
+check_in:
+50
+cutn: specify the number of cuts to observe when guiding
+
+cutn:
+16
+cut_pow: specify the cut power
+
+cut_pow:
+1.0
+width: specify the width
+
+width:
+256
+height: specify the height
+
+height:
+256

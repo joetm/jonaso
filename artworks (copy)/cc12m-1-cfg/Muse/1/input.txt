@@ -1,0 +1,33 @@
+https://colab.research.google.com/gist/joetm/0e59d686328e7e4f5da125e7ff5aa4ff/text-to-image-cc12m-diffusion.ipynb#scrollTo=MnjPM_PUkYui
+
+
+The text prompt
+
+prompt:
+The Muse:2|by Jules Joseph Lefebvre:2|oil on canvas, trending on artstation:1|nude woman:1.5
+
+The strength of the text conditioning (0 means don't condition on text, 1 means sample images that match the text about as well as the images match the text captions in the training set, 3+ is recommended).
+
+weight:
+5
+Sample this many images.
+
+n_images:
+4
+Specify the number of diffusion timesteps (default is 500, can lower for faster but lower quality sampling).
+
+steps:
+580
+Set to 0 for deterministic (DDIM) sampling, 1 (the default) for stochastic (DDPM) sampling, and in between to interpolate between the two. 0 is preferred for low numbers of timesteps.
+
+eta:
+1
+The random seed. Change this to sample different images.
+
+seed:
+0
+Display progress every this many timesteps.
+
+display_every:
+50
+
