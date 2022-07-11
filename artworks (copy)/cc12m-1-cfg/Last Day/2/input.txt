@@ -1,0 +1,30 @@
+https://colab.research.google.com/gist/joetm/42dd5bfbe7f08add5d46dc84b9dfc9ed/text-to-image-cc12m-diffusion.ipynb#scrollTo=MnjPM_PUkYui
+
+
+The text prompt
+
+prompt:
+Smile. It's your last day on earth. figurative oil painting by David Bomberg. trending on /r/art
+
+The strength of the text conditioning (0 means don't condition on text, 1 means sample images that match the text about as well as the images match the text captions in the training set, 3+ is recommended).
+
+weight:
+2
+Sample this many images.
+
+n_images:
+9
+Specify the number of diffusion timesteps (default is 50, can lower for faster but lower quality sampling).
+
+steps:
+55
+The random seed. Change this to sample different images.
+
+seed:
+33
+Display progress every this many timesteps.
+
+display_every:
+10
+
+

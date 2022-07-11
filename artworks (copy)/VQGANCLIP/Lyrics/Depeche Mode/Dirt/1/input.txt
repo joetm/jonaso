@@ -1,0 +1,23 @@
+{
+  "clip_model": "ViT-B/32",
+  "cut_pow": 1.0,
+  "cutn": 64,
+  "display_freq": 25,
+  "image_prompts": [],
+  "init_image": "",
+  "init_weight": 0.0,
+  "noise_prompt_seeds": [],
+  "noise_prompt_weights": [],
+  "prompts": [
+    "I've been dirt And I don't care Because I'm burning inside I'm the fire of life, painting by Zdzislaw Beksinski, trending on /r/art #amazing #fantastic"
+  ],
+  "seed": 15345446405388708777,
+  "size": [
+    400,
+    460
+  ],
+  "step_size": 0.1,
+  "url": "https://colab.research.google.com/gist/joetm/c8088ffb2a68250cb3c16e34bc34677b/vqgan-clip-updated.ipynb?authuser=3#scrollTo=coQoDIfsFtgv",
+  "vqgan_checkpoint": "vqgan_imagenet_f16_16384.ckpt",
+  "vqgan_config": "vqgan_imagenet_f16_16384.yaml"
+}

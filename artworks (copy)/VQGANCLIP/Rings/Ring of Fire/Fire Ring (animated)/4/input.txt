@@ -1,0 +1,40 @@
+https://colab.research.google.com/drive/1ifBoRDrn5JdGtggshuoP3HmVnLz65ALs#scrollTo=g7EDme5RYCrt
+
+Input: ring of fire, fire ring, trending on artstation
+
+model: wikiart_16384
+
+Initial: firering.png
+
+key_frames:
+
+text_prompts:
+ring of electricity, electricity ring, trending on artstation
+width:
+400
+height:
+400
+model:
+
+wikiart_16384
+interval:
+1
+initial_image:
+/content/firering.png
+target_images:
+Insert text here
+seed:
+-1
+max_frames:
+720
+angle:
+10
+zoom:
+0.8
+translation_x:
+0
+translation_y:
+0
+iterations_per_frame:
+1
+save_all_iterations:

@@ -1,0 +1,15 @@
+https://colab.research.google.com/gist/joetm/33b5d0bcc86a35c74ebceb5d130ad4a3/pixray-aesthetic.ipynb#scrollTo=D4M7gWSh6oRp
+
+
+#aesthetic
+pixray.run(
+    "witch burns at the stake, burning witch, oil on canvas, trending on wikiart",
+    "vdiff",
+    size=[512,512],
+    learning_rate=0.05,
+    custom_loss="aesthetic",
+    aesthetic_weight=0.9,
+    output="aes.png"
+)
+
+Using seed: 11008101636563103958

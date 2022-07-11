@@ -1,0 +1,34 @@
+https://colab.research.google.com/gist/joetm/6532afc10019c895004f6e76d31fc4aa/copy_of_zooming_vqgan-clip_-z-quantize_method_with_additions.ipynb#scrollTo=g7EDme5RYCrt
+
+key_frames:
+
+text_prompts:
+0: ("ghost in the shell" movie poster, painting by Glenn Retkuwski, trending on artstation:1)
+width:
+380
+height:
+570
+model:
+
+wikiart_16384
+interval:
+1
+initial_image:
+Insert text here
+target_images:
+0: (/content/Ghost_in_the_Shell-446755661-large-scaled.jpg:1)
+seed:
+1
+max_frames:
+720
+angle:
+2:(0),3:(10)
+zoom:
+0: (1)
+translation_x:
+0: (0)
+translation_y:
+0: (0)
+iterations_per_frame:
+0:(25)
+save_all_iterations:

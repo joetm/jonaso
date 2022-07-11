@@ -1,0 +1,35 @@
+
+https://colab.research.google.com/drive/1ifBoRDrn5JdGtggshuoP3HmVnLz65ALs#scrollTo=ZdlpRFL8UAlW
+
+key_frames:
+true
+text_prompts:
+ring of fire, fire ring, trending on artstation
+width:
+400
+height:
+400
+model:
+
+wikiart_16384
+interval:
+1
+initial_image:
+/content/firering.png
+target_images:
+Insert text here
+seed:
+-1
+max_frames:
+720
+angle:
+1:(0)
+zoom:
+1:(1), 25:(1), 26:(0.95)
+translation_x:
+1:(0)
+translation_y:
+1:(0)
+iterations_per_frame:
+1:(25),2:(1)
+save_all_iterations:
