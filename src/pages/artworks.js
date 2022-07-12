@@ -70,6 +70,23 @@ const ArtPage = ({data}) => {
 					<Header as='h1' textAlign='center' content="AI-generated Artworks" />
 		        <section style={{textAlign:'center',marginBottom:'2em'}}>
 		        	<p>Generating digital artworks from text prompts (never edited).</p>
+		        	{/*
+		        	<p>
+		        		The digital artworks on this page were created with:
+		        			Midjourney,
+		        			DALL-E 2,
+		        			DALL-E mini,
+		        			Latent Diffusion,
+		        			Majesty diffusion,
+		        			DISCO Diffusion,
+		        			Pixray,
+		        			Glide,
+			        		ruDALL-E,
+		        			CLIP-guided diffusion,
+		        			and
+		        			VQGAN-CLIP.
+		        	</p>
+		        	*/}
 		        </section>
 
 			      {/*
