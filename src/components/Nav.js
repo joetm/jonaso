@@ -24,7 +24,7 @@ export default class Nav extends React.Component {
     this.state = { 
       activeItem: 'home',
       mobileMenuIsOpen: false,
-      secondaryNavOpen: false,
+      researchNavOpen: false,
     };
   }
   createMenu = ({item, url = null}) => {
@@ -65,14 +65,14 @@ export default class Nav extends React.Component {
   }
   componentDidMount() {
     let url = this.prepareUrl(window.location.pathname)
-    let secondaryNavOpen = url.startsWith('research')
+    let researchNavOpen = url.startsWith('research')
     this.setState({
       activeItem: url || 'home',
-      secondaryNavOpen,
+      researchNavOpen,
     })
   }
   render() {
-    const { activeItem, secondaryNavOpen, mobileMenuIsOpen } = this.state
+    const { activeItem, researchNavOpen, mobileMenuIsOpen } = this.state
     const MenuItem = this.createMenu
     return (
       <header>
@@ -81,13 +81,13 @@ export default class Nav extends React.Component {
             <Menu fluid pointing stackable primary="true" widths="7">
               <MenuItem active={activeItem === 'home'} item='Home' />
               <MenuItem active={activeItem === 'publications'} item='Publications' />
-              <MenuItem active={activeItem === 'artworks'} item='Artworks' />
+              <MenuItem active={activeItem.startsWith('artworks')} item='Artworks' />
               <MenuItem active={activeItem === 'projects'} item='Projects' />
               <MenuItem active={activeItem === 'cv'} item='CV' />
               <MenuItem active={activeItem.startsWith('research')} item='Research' link={false} header={true} />
             </Menu>
             {
-              secondaryNavOpen &&
+              researchNavOpen &&
                 <Menu pointing stackable secondary size="small" widths="7">
                   <MenuItem active={activeItem === 'researchinterests'} item='Interests' url='/research/interests' />
                   <MenuItem active={activeItem === 'researchreading'} item='Reading' url='/research/reading' />
@@ -106,7 +106,7 @@ export default class Nav extends React.Component {
                   <React.Fragment>
                     <MenuItem active={activeItem === 'home'} item='Home' />
                     <MenuItem active={activeItem === 'publications'} item='Publications' />
-                    <MenuItem active={activeItem === 'artworks'} item='Artworks' />
+                    <MenuItem active={activeItem.startsWith('artworks')} item='Artworks' />
                     <MenuItem active={activeItem === 'projects'} item='Projects' />
                     <MenuItem active={activeItem === 'cv'} item='CV' />
                     <MenuItem active={activeItem === 'researchreading'} item='Reading' />
