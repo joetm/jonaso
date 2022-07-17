@@ -1,6 +1,6 @@
 
 import React from "react"
-import { Divider, Menu } from 'semantic-ui-react'
+import { Menu } from 'semantic-ui-react'
 import { navigate } from 'gatsby'
 
 const PageSwitcher = ({generator}) => {
@@ -12,7 +12,7 @@ const PageSwitcher = ({generator}) => {
 
 	      <section style={{textAlign:'center', marginBottom:'2em'}}>
 
-			<Menu pointing secondary fluid widths={5}>
+			<Menu pointing secondary fluid widths={6}>
 		        <Menu.Item
     		      name='Midjourney'
     		      folder='midjourney'
@@ -29,6 +29,12 @@ const PageSwitcher = ({generator}) => {
     		      name='Latent Diffusion'
     		      folder='latent-diffusion'
         		  active={generator === 'Latent Diffusion'}
+							onClick={handleMenuClick}
+		        />
+		        <Menu.Item
+    		      name='CLIP Guided Diffusion'
+    		      folder='CLIP-guided-diffusion'
+        		  active={generator === 'CLIP Guided Diffusion'}
 							onClick={handleMenuClick}
 		        />
 		        <Menu.Item
