@@ -6,7 +6,7 @@
     "dev": "export NODE_OPTIONS=--no-experimental-fetch yarn pubjson && yarn develop",
     "dev-with-art": "cp -r ./src/img/artworks ./public/static && ",
     "develop": "gatsby develop --open",
-    "build": "./artworks/resort.sh && gatsby clean && make pre-build && gatsby build && yarn pubjson && make post-build && yarn push",
+    "build": "gatsby clean && make pre-build && gatsby build && yarn pubjson && make post-build && yarn push",
     "pubjson": "make refs",
     "serve": "gatsby serve",
     "push": "git add -A && git commit && git push",
