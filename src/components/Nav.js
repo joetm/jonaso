@@ -4,7 +4,6 @@ import { Menu, Icon } from 'semantic-ui-react'
 
 import { createMedia } from "@artsy/fresnel"
 const { MediaContextProvider, Media } = createMedia({
-  // breakpoints values can be either strings or integers
   breakpoints: {
     sm: 0,
     md: 768,
@@ -77,7 +76,8 @@ export default class Nav extends React.Component {
     return (
       <header>
         <MediaContextProvider>
-          <Media at="md">
+
+          <Media greaterThan="md">
             <Menu fluid pointing stackable primary="true" widths="7">
               <MenuItem active={activeItem === 'home'} item='Home' />
               <MenuItem active={activeItem === 'publications'} item='Publications' />
@@ -95,9 +95,10 @@ export default class Nav extends React.Component {
                 </Menu>
             }
           </Media>
+
           {/* Mobile Navigation Menu */}
           <Media at="sm">
-            <Menu fluid pointing stackable secondary widths="7">
+            <Menu fluid pointing stackable secondary widths="7" style={{display: 'none'}}>
               <Menu.Item style={{cursor:'pointer'}} onClick={this.toggleMenu}>
                 <Icon name="sidebar" size="large" />
               </Menu.Item>
@@ -116,6 +117,7 @@ export default class Nav extends React.Component {
               }
             </Menu>
           </Media>
+
         </MediaContextProvider>
         <div style={styles.navSpacer}></div>
       </header>
