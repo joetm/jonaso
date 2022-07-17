@@ -77,7 +77,7 @@ export default class Nav extends React.Component {
       <header>
         <MediaContextProvider>
 
-          <Media greaterThan="md">
+          <Media at="md">
             <Menu fluid pointing stackable primary="true" widths="7">
               <MenuItem active={activeItem === 'home'} item='Home' />
               <MenuItem active={activeItem === 'publications'} item='Publications' />
