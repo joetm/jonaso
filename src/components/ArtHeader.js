@@ -3,7 +3,7 @@ import React from "react"
 import { Container, Header } from 'semantic-ui-react'
 import Layout from "./layout"
 import { Helmet } from "react-helmet"
-import PageSwitcher from './PageSwitcher'
+import ArtPageSwitcher from './ArtPageSwitcher'
 
 const ArtHeader = ({generator, byline, totalCount}) => {
 	return (
@@ -28,7 +28,7 @@ const ArtHeader = ({generator, byline, totalCount}) => {
 							</p>
 		        </section>
 
-				<PageSwitcher generator={generator} />
+				<ArtPageSwitcher generator={generator} />
 
 	      </Container>
         </Layout>
