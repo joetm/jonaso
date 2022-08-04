@@ -3,7 +3,7 @@ import React from "react"
 import { Menu } from 'semantic-ui-react'
 import { navigate } from 'gatsby'
 
-const PageSwitcher = ({generator}) => {
+const ArtPageSwitcher = ({generator}) => {
 	const handleMenuClick = (e, { name, folder }) => {
 		navigate(`/artworks/${folder}`)
 	}
@@ -13,41 +13,41 @@ const PageSwitcher = ({generator}) => {
 	      <section style={{textAlign:'center', marginBottom:'2em'}}>
 
 			<Menu pointing secondary fluid widths={6}>
-		        <Menu.Item
-    		      name='Midjourney'
-    		      folder='midjourney'
-        		  active={generator === 'Midjourney'}
-							onClick={handleMenuClick}
-		        />
     		    <Menu.Item
         		  name='DALL-E 2'
     		      folder='dalle'
 		          active={generator === 'DALL-E'}
-							onClick={handleMenuClick}
+				  onClick={handleMenuClick}
     		    />
+		        <Menu.Item
+    		      name='Midjourney'
+    		      folder='midjourney'
+        		  active={generator === 'Midjourney'}
+				  onClick={handleMenuClick}
+		        />
 		        <Menu.Item
     		      name='Latent Diffusion'
     		      folder='latent-diffusion'
         		  active={generator === 'Latent Diffusion'}
-							onClick={handleMenuClick}
+				  onClick={handleMenuClick}
 		        />
 		        <Menu.Item
     		      name='CLIP Guided Diffusion'
     		      folder='CLIP-guided-diffusion'
         		  active={generator === 'CLIP Guided Diffusion'}
-							onClick={handleMenuClick}
+				  onClick={handleMenuClick}
 		        />
 		        <Menu.Item
     		      name='VQGAN-CLIP'
     		      folder='vqganclip'
         		  active={generator === 'VQGAN-CLIP'}
-							onClick={handleMenuClick}
+				  onClick={handleMenuClick}
 		        />
 		        <Menu.Item
     		      name='Misc.'
     		      folder='misc'
         		  active={generator === 'Others'}
-							onClick={handleMenuClick}
+				  onClick={handleMenuClick}
 		        />
       		</Menu>
 
@@ -61,4 +61,4 @@ const PageSwitcher = ({generator}) => {
 	)
 }
 
-export default PageSwitcher
+export default ArtPageSwitcher
