@@ -2,14 +2,6 @@ import React from 'react'
 import { navigate } from "gatsby"
 import { Menu, Icon } from 'semantic-ui-react'
 
-import { createMedia } from "@artsy/fresnel"
-const { MediaContextProvider, Media } = createMedia({
-  breakpoints: {
-    sm: 0,
-    md: 768,
-  },
-})
-
 const styles = {
   navSpacer: {
     marginBottom: '2em',
@@ -75,10 +67,9 @@ export default class Nav extends React.Component {
     const MenuItem = this.createMenu
     return (
       <header>
-        <MediaContextProvider>
 
           {/* Desktop Navigation Menu */}
-          <Media at="md">
+          <div id="desktopmenu">
             <Menu fluid pointing stackable primary="true" widths="7">
               <MenuItem active={activeItem === 'home'} item='Home' />
               <MenuItem active={activeItem === 'publications'} item='Publications' />
@@ -95,10 +86,10 @@ export default class Nav extends React.Component {
                   <MenuItem active={activeItem === 'researchinfluences'} item='Influences' url='/research/influences' />
                 </Menu>
             }
-          </Media>
+            </div>
 
           {/* Mobile Navigation Menu */}
-          <Media at="sm">
+          <div id="mobilemenu">
             <Menu fluid pointing stackable secondary widths="7">
               <Menu.Item style={{cursor:'pointer'}} onClick={this.toggleMenu}>
                 <Icon name="sidebar" size="large" />
@@ -117,9 +108,8 @@ export default class Nav extends React.Component {
                   </React.Fragment>
               }
             </Menu>
-          </Media>
+          </div>
 
-        </MediaContextProvider>
         <div style={styles.navSpacer}></div>
       </header>
     )
