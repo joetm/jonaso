@@ -57,3 +57,25 @@ body {
 .clickable {
 	cursor: pointer;
 }
+
+/*--------------
+ Nav Menu Media Queries
+---------------*/
+
+@media only screen and (max-width: 600px) {
+  #desktopmenu {
+    display: none;
+  }
+  #mobilemenu {
+    display: inline;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  #desktopmenu {
+    display: inline;
+  }
+  #mobilemenu {
+    display: none;
+  }
+}
