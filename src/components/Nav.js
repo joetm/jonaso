@@ -77,11 +77,12 @@ export default class Nav extends React.Component {
       <header>
         <MediaContextProvider>
 
+          {/* Desktop Navigation Menu */}
           <Media at="md">
             <Menu fluid pointing stackable primary="true" widths="7">
               <MenuItem active={activeItem === 'home'} item='Home' />
               <MenuItem active={activeItem === 'publications'} item='Publications' />
-              <MenuItem active={activeItem.startsWith('artworks')} item='Artworks' />
+              <MenuItem active={activeItem.startsWith('artworks')} item='Artworks' link={false} header={true} />
               <MenuItem active={activeItem === 'projects'} item='Projects' />
               <MenuItem active={activeItem === 'cv'} item='CV' />
               <MenuItem active={activeItem.startsWith('research')} item='Research' link={false} header={true} />
@@ -98,7 +99,7 @@ export default class Nav extends React.Component {
 
           {/* Mobile Navigation Menu */}
           <Media at="sm">
-            <Menu fluid pointing stackable secondary widths="7" style={{display: 'none'}}>
+            <Menu fluid pointing stackable secondary widths="7">
               <Menu.Item style={{cursor:'pointer'}} onClick={this.toggleMenu}>
                 <Icon name="sidebar" size="large" />
               </Menu.Item>
