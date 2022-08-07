@@ -1,6 +1,4 @@
 
-import '../react-masonry.css'
-
 import React from "react"
 import Masonry from 'react-masonry-css'
 import { getImage } from "gatsby-plugin-image"
