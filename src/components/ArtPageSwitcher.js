@@ -13,14 +13,12 @@ const ArtPageSwitcher = ({generator}) => {
 	      <section style={{textAlign:'center', marginBottom:'2em'}}>
 
 			<Menu pointing secondary fluid widths={7}>			
-{/*
     		    <Menu.Item
         		  name='Stable Diffusion'
     		      folder='stablediffusion'
 		          active={generator === 'Stable Diffusion'}
 				  onClick={handleMenuClick}
     		    />
-*/}
     		    <Menu.Item
         		  name='DALL-E 2'
     		      folder='dalle'
