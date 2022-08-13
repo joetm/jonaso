@@ -61,23 +61,32 @@ const MobileMenu = ({activeItem, mobileMenuIsOpen, handleItemClick}) => (
           </div>
 ) //
 
+// Faux Menu on first render
+const FauxMenu = () => (
+          <div id="fauxmenu">
+            <Menu fluid pointing stackable secondary primary="true" widths="7"></Menu>
+          </div>
+) //
 
 const ResponsiveMenu = ({active, researchNavOpen, mobileMenuIsOpen, handleItemClick}) => {
+  const breakpoint = 620
   const isBrowser = typeof window !== 'undefined'
-  if (isBrowser) {
-    const [width, setWidth] = React.useState(window.innerWidth)
-    const breakpoint = 620
-    React.useEffect(() => {
+  const [width, setWidth] = React.useState(isBrowser ? window.innerWidth : breakpoint)
+  React.useEffect(() => {
+    if (isBrowser) {
       const handleWindowResize = () => setWidth(window.innerWidth)
        window.addEventListener("resize", handleWindowResize)
       // Return a function from the effect that removes the event listener
       return () => window.removeEventListener("resize", handleWindowResize)
-    }, [])
+    }
+    return () => {}
+  }, [isBrowser])
+  if (isBrowser) {
     return width < breakpoint ?
         <MobileMenu  activeItem={active} handleItemClick={handleItemClick} mobileMenuIsOpen={mobileMenuIsOpen} />
       : <DesktopMenu activeItem={active} handleItemClick={handleItemClick} researchNavOpen={researchNavOpen}   />
   }
-  return null
+  return <FauxMenu />
 }
 
 export default ResponsiveMenu

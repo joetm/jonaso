@@ -4,11 +4,10 @@
 
 module.exports = {
   flags: {
-    DEV_WEBPACK_CACHE: true,
     PARALLEL_SOURCING: false,
+    FAST_DEV: true,
+    PRESERVE_FILE_DOWNLOAD_CACHE: true,
     // trying to lower memory requirements during build
-    LMDB_STORE: true,
-    GATSBY_EXPERIMENTAL_QUERY_CONCURRENCY: 2
   },
   plugins: [
     "gatsby-plugin-no-sourcemaps",
