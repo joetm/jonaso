@@ -1,5 +1,6 @@
 import React from 'react'
 import { navigate } from "gatsby"
+import { Menu } from 'semantic-ui-react'
 import ResponsiveMenu from './ResponsiveMenu'
 
 const styles = {
@@ -48,11 +49,24 @@ export default class Nav extends React.Component {
       researchNavOpen,
     })
   }
+  // Faux Menu on first render
+  FauxMenu() {
+    return (
+      <div id="fauxmenu">
+        <Menu fluid pointing stackable secondary primary="true" widths="7"></Menu>
+      </div>
+    )
+  }
   render() {
     const { activeItem, researchNavOpen, mobileMenuIsOpen } = this.state
+    const isBrowser = typeof window !== 'undefined'
     return (
       <header>
-        <ResponsiveMenu active={activeItem}  handleItemClick={this.handleItemClick} mobileMenuIsOpen={mobileMenuIsOpen} researchNavOpen={researchNavOpen} />
+        {
+          isBrowser ? 
+            <ResponsiveMenu active={activeItem} handleItemClick={this.handleItemClick} mobileMenuIsOpen={mobileMenuIsOpen} researchNavOpen={researchNavOpen} />
+            : this.FauxMenu()
+        }
         <div style={styles.navSpacer}></div>
       </header>
     )

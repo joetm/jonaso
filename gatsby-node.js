@@ -6,6 +6,23 @@ exports.onPreBuild = () => {
 };
 
 
+// https://blog.greenroots.info/gatsby-the-window-is-not-defined-error-what-and-how-to-fix-it
+// exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+//   if (stage === "build-html") {
+//     actions.setWebpackConfig({
+//       module: {
+//         rules: [
+//           {
+//             test: /offending-module/,
+//             use: loaders.null(),
+//           },
+//         ],
+//       },
+//     })
+//   }
+// }
+
+
 // PAGINATION
 // const path = require("path")
 // // const { createFilePath } = require("gatsby-source-filesystem")
