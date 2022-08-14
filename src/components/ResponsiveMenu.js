@@ -62,18 +62,49 @@ const MobileMenu = ({activeItem, mobileMenuIsOpen, handleItemClick}) => (
 ) //
 
 
-const ResponsiveMenu = ({active, researchNavOpen, mobileMenuIsOpen, handleItemClick}) => {
-  // const isBrowser = typeof window !== 'undefined'
-  const [width, setWidth] = React.useState(window.innerWidth)
-  const breakpoint = 620
-  React.useEffect(() => {
-    const handleWindowResize = () => setWidth(window.innerWidth)
-     window.addEventListener("resize", handleWindowResize)
-    return () => window.removeEventListener("resize", handleWindowResize)
-  }, [])
-  return width < breakpoint ?
-      <MobileMenu  activeItem={active} handleItemClick={handleItemClick} mobileMenuIsOpen={mobileMenuIsOpen} />
-    : <DesktopMenu activeItem={active} handleItemClick={handleItemClick} researchNavOpen={researchNavOpen}   />
+// Faux Menu on first render
+const FauxMenu = () => {
+  return (
+    <div id="fauxmenu">
+      <Menu fluid pointing stackable secondary primary="true" widths="7"></Menu>
+    </div>
+  )
 }
 
-export default ResponsiveMenu
+
+// const ResponsiveMenu = ({active, researchNavOpen, mobileMenuIsOpen, handleItemClick}) => {
+//   // const isBrowser = typeof window !== 'undefined'
+//   const breakpoint = 620
+//   const [width, setWidth] = React.useState(window.innerWidth)
+//   React.useEffect(() => {
+//     const handleWindowResize = () => setWidth(window.innerWidth)
+//      window.addEventListener("resize", handleWindowResize)
+//     return () => window.removeEventListener("resize", handleWindowResize)
+//   }, [])
+//   return width < breakpoint ?
+//       <MobileMenu  activeItem={active} handleItemClick={handleItemClick} mobileMenuIsOpen={mobileMenuIsOpen} />
+//     : <DesktopMenu activeItem={active} handleItemClick={handleItemClick} researchNavOpen={researchNavOpen}   />
+// }
+
+export default class ResponsiveMenu extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { 
+      M: FauxMenu(),
+    };
+  }
+  componentDidMount() {
+    const { active, researchNavOpen, mobileMenuIsOpen, handleItemClick } = this.props
+    const breakpoint = 620
+    const width = window.innerWidth
+    this.setState({
+      M: width < breakpoint ?
+        <MobileMenu  activeItem={active} handleItemClick={handleItemClick} mobileMenuIsOpen={mobileMenuIsOpen} />
+        : <DesktopMenu activeItem={active} handleItemClick={handleItemClick} researchNavOpen={researchNavOpen}   />
+    })
+  }
+  render() {
+    const { M } = this.state
+    return ( M )
+  }
+}

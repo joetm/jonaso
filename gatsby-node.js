@@ -7,13 +7,14 @@ exports.onPreBuild = () => {
 
 
 // https://blog.greenroots.info/gatsby-the-window-is-not-defined-error-what-and-how-to-fix-it
+// skip file during server-side rendering
 // exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
 //   if (stage === "build-html") {
 //     actions.setWebpackConfig({
 //       module: {
 //         rules: [
 //           {
-//             test: /offending-module/,
+//             test: 'ResponsiveMenu',
 //             use: loaders.null(),
 //           },
 //         ],
