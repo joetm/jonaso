@@ -2,10 +2,11 @@
   {
     "title": "Prompt engineering for AI-generated art",
     "lang": "en",
-    "description": {"__html": "<p>Since Kathleen Crowson combined <em>VQGAN</em> with OpenAI's <em>CLIP</em> (based on Ryan Murdock's work on <em>Big Sleep</em>), the interest in generating art with generative adversarial networks (GANs) has exploded as evident on Twitter and dedicated communities online. This explosion was facilitated by the availability of executable notebooks on Google's Colab in which non-expert users can execute machine learning models for free and without deep knowledge of programming. Users on Google Colab interact with GAN models via input prompts. Prompts are short texts that describe the expected end result, such as \"a beautiful painting of a landscape\". The emerging AI art community was quick to discover that the quality of the generated artwork could be increased by using modifiers in the input prompt, such as \"trending on artstation\" or \"rendered by Unreal Engine\". 'Prompt engineering' or 'prompt programming' refers to the practice of finding effective input prompts for a model.</p><p>This project investigates 1) the emerging AI art community and 2) the input prompts and practices of this community. A first auto-ethnographic investigation resulted in a number of <a href=\"/art/\">AI-generated artworks</a> and preliminary findings.</p>"},
-    "funding": "The project received funding in form of the Toloka Research grant.",
+    "description": {"__html": "<p>Text-to-image generation with deep generative models has made giant leaps towards becoming a mainstream phenomenon since OpenAI's introduction of the multimodal CLIP model in 2021. This explosion of interest was facilitated by the availability of executable notebooks on Google's Colaboratory in which non-expert users can execute machine learning models for free and without deep knowledge of programming. Users on Google Colab interact with generative models via input prompts. Prompts are short texts that describe the expected end result, such as \"a beautiful painting of a landscape\". The online community that quickly emerged around this novel way of synthesizing artworks found that the quality of the generated artworks can be increased by using so-called prompt modifiers in the input prompt, such as \"trending on artstation\" or \"rendered by Unreal Engine\". 'Prompt engineering' or 'prompting' refers to the practice and skill of finding effective input prompts for a text-to-image model.</p><p>This project investigates 1) the skill and practice of prompt engineering, 2) the emerging AI art community, and 3) the specific input prompts and modifiers used in this community.</p>"},
+    "funding-OLD": "The project received funding in form of the Toloka Research grant.",
+    "funding": null,
     "date": "2021-",
-    "organisation": "(Independent research)",
+    "organisation": "University of Jyväskylä",
     "organisation_href": "https://www.jonaso.de/art/",
     "url": "https://www.jonaso.de/art/",
     "img": {
@@ -15,23 +16,23 @@
     },
     "presentations": [
       {
-        "title": "The Creativity of Text-based Generative Art",
+        "title": "A Taxonomy of Prompt Modifiers for Text-To-Image Generation",
+        "year": 2022,
+        "month": "April",
+        "day": 20,
+        "conference": "arXiv",
+        "location": null,
+        "doi": "10.48550/ARXIV.2204.13988",
+        "status": null
+      },
+      {
+        "title": "The Creativity of Text-to-Image Generation",
         "year": 2022,
         "month": "June",
         "day": 7,
         "conference": "arXiv",
         "location": null,
         "doi": "10.48550/ARXIV.2206.02904",
-        "status": null
-      },
-      {
-        "title": "Prompt Engineering for Text-Based Generative Art",
-        "year": 2022,
-        "month": "April",
-        "day": 20,
-        "conference": "arXiv",
-        "location": null,
-        "doi": "10.48550/arXiv.2204.13988",
         "status": null
       },
       {
