@@ -6,8 +6,15 @@ module.exports = {
   flags: {
     PARALLEL_SOURCING: false,
     FAST_DEV: true,
+    QUERY_ON_DEMAND: true,
+    LAZY_IMAGES: true,
+    PRESERVE_WEBPACK_CACHE: true,
+    DEV_WEBPACK_CACHE: true,
     PRESERVE_FILE_DOWNLOAD_CACHE: true,
     // trying to lower memory requirements during build
+    LMDB_STORE: true, // store nodes in a persistent embedded database (vs in-memory). Lowers peak memory usage. Requires Node v14.10 or above.
+    // PARALLEL_QUERY_RUNNING: false,
+    PARTIAL_HYDRATION: true,
   },
   plugins: [
     "gatsby-plugin-no-sourcemaps",
@@ -42,7 +49,7 @@ module.exports = {
     "gatsby-plugin-react-helmet"
   ],
   siteMetadata: {
-    url: "https://www.jonaso.de", // No trailing slash allowed!
+    siteUrl: "https://www.jonaso.de", // No trailing slash allowed!
     twitterUsername: "@duesynapse"
   }
 }
