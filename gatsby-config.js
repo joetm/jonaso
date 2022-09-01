@@ -14,7 +14,7 @@ module.exports = {
     // trying to lower memory requirements during build
     LMDB_STORE: true, // store nodes in a persistent embedded database (vs in-memory). Lowers peak memory usage. Requires Node v14.10 or above.
     // PARALLEL_QUERY_RUNNING: false,
-    PARTIAL_HYDRATION: true,
+    // PARTIAL_HYDRATION: true,
   },
   plugins: [
     "gatsby-plugin-no-sourcemaps",

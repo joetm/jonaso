@@ -280,10 +280,16 @@ class CV extends React.Component {
                       <List.Item><a href={row.university_link}>{row.university}</a>, {row.location}</List.Item>
                   }
                   <List.Item>{row.position}</List.Item>
-                  {/*
-                    row.supervisor &&
-                      <List.Item>Supervisor: <a href={row.supervisor_link}>{row.supervisor}</a></List.Item>
-                  */}
+                  {
+                    row.double_affiliation &&
+                    (
+                      <React.Fragment>
+                        <List.Item>&amp; <a href={row.double_affiliation.group_link}>{row.double_affiliation.group}</a></List.Item>
+                        <List.Item><a href={row.double_affiliation.university_link}>{row.double_affiliation.university}</a>, {row.location}</List.Item>
+                        <List.Item>{row.double_affiliation.position}</List.Item>
+                      </React.Fragment>
+                    )
+                  }
                   {/*
                     row.keywords.length > 0 && (
                       <List.Item>

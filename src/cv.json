@@ -87,19 +87,6 @@
         "end": null
     },
     {
-        "group": "Institute of Applied Informatics and Formal Description Methods (AIFB)",
-        "group_link": "https://www.aifb.kit.edu/web/Hauptseite/en",
-        "institute": "",
-        "institute_link": null,
-        "university": "Karlsruhe Institute of Technology (KIT)",
-        "university_link": "https://www.kit.edu/",
-        "location": "Karlsruhe, Germany",
-        "position": "Postdoctoral Researcher",
-        "details": null,
-        "keywords": ["Research", "Linked Data", "Ontology Engineering"],
-        "year": 2021
-    },
-    {
         "group": "Information Service Engineering (ISE)",
         "group_link": "https://www.fiz-karlsruhe.de/en/forschung/information-service-engineering",
         "institute": "",
@@ -109,8 +96,15 @@
         "location": "Karlsruhe, Germany",
         "position": "Senior Researcher/PostDoc",
         "details": null,
-        "keywords": ["Research", "Linked Data", "Ontology Engineering"],
-        "year": 2021
+        "keywords": ["Research", "Linked Data", "Ontology Engineering", "Cultural Heritage"],
+        "year": 2021,
+        "double_affiliation": {
+          "group": "Institute of Applied Informatics and Formal Description Methods (AIFB)",
+          "group_link": "https://www.aifb.kit.edu/web/Hauptseite/en",
+          "university": "Karlsruhe Institute of Technology (KIT)",
+          "university_link": "https://www.kit.edu/",
+          "position": "Postdoctoral Researcher"
+        }
     },
     {
         "group": "Crowd Computing group",

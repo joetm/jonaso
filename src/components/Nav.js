@@ -30,7 +30,6 @@ export default class Nav extends React.Component {
     super(props);
     this.state = { 
       activeItem: 'home',
-      mobileMenuIsOpen: false,
       researchNavOpen: false,
     };
   }
@@ -49,10 +48,6 @@ export default class Nav extends React.Component {
       }
     }
   }
-  toggleMenu = (e) => {
-    e.preventDefault()
-    this.setState({mobileMenuIsOpen: !this.state.mobileMenuIsOpen})
-  }
   prepareUrl(url) {
     return url.replace(/\//g, '').toLowerCase()
   }
@@ -65,7 +60,7 @@ export default class Nav extends React.Component {
     })
   }
   render() {
-    const { activeItem, researchNavOpen, mobileMenuIsOpen } = this.state
+    const { activeItem, researchNavOpen } = this.state
     return (
       <header>
         {/*
