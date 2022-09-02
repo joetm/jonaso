@@ -9,7 +9,6 @@ import json
 # split into howpublished and publisher
 
 f = open('./src/bibliography/publications.json')
-# f = open('./public/static/publications.json')
 data = json.load(f)
 f.close()
 
@@ -23,5 +22,5 @@ for obj in data:
 	obj['howpublished'] = howpublished
 	obj['publisher'] = publisher
 
-with open('./public/static/publications.json', 'w') as f:
+with open('./src/bibliography/publications.json', 'w') as f:
     json.dump(data, f, indent=2, sort_keys=True)
