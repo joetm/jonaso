@@ -23,5 +23,5 @@ for obj in data:
 	obj['howpublished'] = howpublished
 	obj['publisher'] = publisher
 
-with open('./public/static/publications-TEST.json', 'w') as f:
+with open('./public/static/publications.json', 'w') as f:
     json.dump(data, f, indent=2, sort_keys=True)
