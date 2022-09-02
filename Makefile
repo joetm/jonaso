@@ -40,6 +40,7 @@ rename-artworks:
 
 bib-json:
 	pandoc-citeproc --bib2json ./src/bibliography/publications.bib > ./src/bibliography/publications.json
+	python3 fix-publications-json.py
 
 post-build:
 	cp ./src/travel.json ./public/
@@ -162,7 +163,7 @@ refs:
 	# move json file to public folder
 	mv "./references.json" ./public/static/
 	# copy bib file to public folder
-	cp "src/bibliography//publications.bib" ./public/static/
+	cp "src/bibliography/publications.bib" ./public/static/
 
 	# create detailed references json
 	python3 ./pyparse.py
