@@ -4,10 +4,9 @@
 
 import React from "react"
 import { Container, Label, Checkbox } from 'semantic-ui-react'
+import md5 from "md5"
 
 import "./influencer.css"
-
-import md5 from "md5"
 
 
 const styles = {
@@ -15,6 +14,9 @@ const styles = {
     marginBottom: '0.5em',
     marginRight: '1em',
     float:'left',
+  },
+  coauthor: {
+    textDecoration: 'underline',
   },
 }
 
@@ -68,7 +70,7 @@ const DetailContainer = ({authorid, details, priority, keywordClick, activeKeywo
       <Wrapper.PubWrapper title="Publications" items={publist} />
     </div>
   )
-} //`
+} //
 
 
 class AuthorList extends React.Component {
@@ -76,6 +78,36 @@ class AuthorList extends React.Component {
     details: {}, // cache of details
     activeKeyword: null,
     coauthorToggleActive: false,
+    coauthors: [],
+  }
+  componentDidMount() {
+    const url = `https://jonaso.de/static/publications.json`
+    const coauthors = []
+    fetch(url).then(response => {
+      if (response.status === 404) {
+        return []
+      } else {
+        if (response.status >= 400) {
+          throw new Error("Bad response from server")
+        }
+      }
+      return response.json()
+    })
+    .then(ownPublications => {
+      ownPublications.filter(pub => typeof pub['author'] != "undefined").forEach(pub => {
+          pub.author.forEach(author => {
+            if (author['dropping-particle']) {
+              author = `${author.given} ${author['dropping-particle']} ${author.family}`
+            } else {
+              author = `${author.given} ${author.family}`
+            }
+            if (!coauthors.includes(author)) {
+              coauthors.push(author)
+            }
+          })
+      })
+      this.setState({ coauthors })
+    })
   }
   keywordClick = (e) => {
     const { updateActive } = this.props
@@ -195,7 +227,7 @@ class AuthorList extends React.Component {
   }
   render () {
     const { list, priority, activeid, activeAuthors } = this.props
-    const { details, activeKeyword, coauthorToggleActive } = this.state
+    const { details, activeKeyword, coauthorToggleActive, coauthors } = this.state
     // console.log('list', list)
     if (!list) {
       return null
@@ -223,7 +255,9 @@ class AuthorList extends React.Component {
                 title={author.num > 1 ? author.num + ' publications' : author.num + ' publication'}
                 onClick={() => this.getAuthorDetails(author)}
               >
-                {author.name}
+                {
+                  coauthors.includes(author.name) ? (<span style={styles.coauthor}>{author.name}</span>) : author.name
+                }
                 <Label.Detail>{author.num}</Label.Detail>
               </Label>
                 {details[author.id] && activeid === author.id &&
