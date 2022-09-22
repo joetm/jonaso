@@ -74,10 +74,17 @@ def parsefiles(PATTERN, BASEPATHS, conn):
                             unrecognizedCounter = unrecognizedCounter + 1
                         continue
 
-                    # create a temporary pdf that holds only the title page
+                    # create a temporary pdf that holds only the title page + a few more pages
                     # this speeds up processing in science-parse
+                    # but do not do this for short pdfs
                     tmpfile = './tmp.pdf'
-                    subprocess.run(["pdftk", fullpath, "cat", "1-3", "output", tmpfile])
+
+                    num = subprocess.check_output(['qpdf', '--show-npages', tmpfile])
+                    print(num)
+                    import sys
+                    sys.exit()
+
+                    subprocess.run(["pdftk", fullpath, "cat", "1-5", "output", tmpfile])
 
                     # extract metadata
                     md = metadata.extractMetadata(tmppath=tmpfile, origfilename=name, origpath=fullpath)
