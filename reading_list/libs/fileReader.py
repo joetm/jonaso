@@ -80,6 +80,7 @@ def parsefiles(PATTERN, BASEPATHS, conn):
                     tmpfile = './tmp.pdf'
 
                     num = subprocess.check_output(['qpdf', '--show-npages', tmpfile])
+                    num = int(num.strip())
                     print(num)
                     import sys
                     sys.exit()
