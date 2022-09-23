@@ -80,16 +80,21 @@ def parsefiles(PATTERN, BASEPATHS, conn):
                     # but do not do this for short pdfs
                     tmpfile = './tmp.pdf'
                     CUTOFF = 5
+                    shutil.copy(fullpath, tmpfile)
                     try:
-                        num = subprocess.check_output(['qpdf', '--show-npages', tmpfile], shell=True, stderr=subprocess.STDOUT)
+                        # print(f"qpdf --show-npages {fullpath}")
+                        num = subprocess.check_output(['qpdf', '--show-npages', tmpfile], stderr=subprocess.STDOUT)
+                        # sp = subprocess.Popen(f"qpdf --show-npages {fullpath}", shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+                        # num = sp.stdout.read()
                         num = int(num.strip())
-                        if not num or num < CUTOFF:
-                            shutil.copy(fullpath, tmpfile)
-                        else:
-                            subprocess.run(["pdftk", fullpath, "cat", f"1-{CUTOFF}", "output", tmpfile], shell=True, check=True)
+                        if num and num > CUTOFF:
+                            try:
+                                subprocess.run(["pdftk", fullpath, "cat", f"1-{CUTOFF}", "output", tmpfile], stderr=subprocess.STDOUT)
+                            except subprocess.CalledProcessError as e:
+                                print(f"pdftk error: {e.output}")
+                                shutil.copy(fullpath, tmpfile)
                     except subprocess.CalledProcessError as e:
-                        print(f"qpdf/pdftk error: {e.output}")
-                        shutil.copy(fullpath, tmpfile)
+                        print(f"qpdf error: {e.output}")
 
                     # extract metadata
                     md = metadata.extractMetadata(tmppath=tmpfile, origfilename=name, origpath=fullpath)
