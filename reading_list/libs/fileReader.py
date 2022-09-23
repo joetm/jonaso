@@ -5,6 +5,7 @@
 import json
 import os
 import sys
+import shutil
 from fnmatch import fnmatch
 import hashlib
 import time
@@ -78,14 +79,17 @@ def parsefiles(PATTERN, BASEPATHS, conn):
                     # this speeds up processing in science-parse
                     # but do not do this for short pdfs
                     tmpfile = './tmp.pdf'
-
-                    num = subprocess.check_output(['qpdf', '--show-npages', tmpfile])
-                    num = int(num.strip())
-                    print(num)
-                    import sys
-                    sys.exit()
-
-                    subprocess.run(["pdftk", fullpath, "cat", "1-5", "output", tmpfile])
+                    CUTOFF = 5
+                    try:
+                        num = subprocess.check_output(['qpdf', '--show-npages', tmpfile], shell=True, stderr=subprocess.STDOUT)
+                        num = int(num.strip())
+                        if not num or num < CUTOFF:
+                            shutil.copy(fullpath, tmpfile)
+                        else:
+                            subprocess.run(["pdftk", fullpath, "cat", f"1-{CUTOFF}", "output", tmpfile], shell=True, check=True)
+                    except subprocess.CalledProcessError as e:
+                        print(f"qpdf/pdftk error: {e.output}")
+                        shutil.copy(fullpath, tmpfile)
 
                     # extract metadata
                     md = metadata.extractMetadata(tmppath=tmpfile, origfilename=name, origpath=fullpath)
