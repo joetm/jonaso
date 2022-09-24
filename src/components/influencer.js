@@ -97,9 +97,9 @@ class AuthorList extends React.Component {
       ownPublications.filter(pub => typeof pub['author'] != "undefined").forEach(pub => {
           pub.author.forEach(author => {
             if (author['dropping-particle']) {
-              author = `${author.given} ${author['dropping-particle']} ${author.family}`
+              author = `${author.given} ${author['dropping-particle']} ${author.family}`.toLowerCase()
             } else {
-              author = `${author.given} ${author.family}`
+              author = `${author.given} ${author.family}`.toLowerCase()
             }
             if (!coauthors.includes(author)) {
               coauthors.push(author)
@@ -256,7 +256,7 @@ class AuthorList extends React.Component {
                 onClick={() => this.getAuthorDetails(author)}
               >
                 {
-                  coauthors.includes(author.name) ? (<span style={styles.coauthor}>{author.name}</span>) : author.name
+                  coauthors.includes(author.name.toLowerCase()) ? (<span style={styles.coauthor}>{author.name}</span>) : author.name
                 }
                 <Label.Detail>{author.num}</Label.Detail>
               </Label>
