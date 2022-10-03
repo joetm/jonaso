@@ -1,7 +1,3 @@
-/*
-  DEV: this is supposed to become an up-to-date reading list synced from my PC
-*/
-
 import React from "react"
 import { Container, Label, Checkbox } from 'semantic-ui-react'
 import md5 from "md5"
@@ -58,11 +54,9 @@ const DetailContainer = ({authorid, details, priority, keywordClick, activeKeywo
       key={`kw${i}${authorid}${kw}`}
     >{kw}</Label>
   )) //`;
-
   const publist = docs.filter(doc => doc.priority === priority).map((doc, i) => (
             <li key={`p${i}${authorid}${doc.priority}${doc.title}`}>{doc.title}</li>
         )) //`
-
   return (
     <div className="clear" key={`a-a${authorid}`}>
       <Wrapper.KeywordWrapper title="Keywords" items={kwlist} />
@@ -113,7 +107,6 @@ class AuthorList extends React.Component {
     const { updateActive } = this.props
     const { activeKeyword } = this.state
     const keyword = e.target.innerText
-    // console.info('Querying keyword:', keyword)
     // toggle the checkbox off
     this.setState({coauthorToggleActive: false})
     // click on already active author?
@@ -233,19 +226,18 @@ class AuthorList extends React.Component {
       return null
     }
     return (
-      <React.Fragment>
+      <>
         {
-          list.map((author, index) => {
-            if (author.num <= 1) { return null }
+          list.filter(author => author.num > 1).map((author, index) => {
             // label color
             let labelColor = null
-        	if (activeAuthors.includes(author.id)) {
-        		labelColor = 'yellow'
-        	}
-        	if (activeid === author.id) {
-        		labelColor = 'red'
-        	}
-        	// return the list of authors
+          	if (activeAuthors.includes(author.id)) {
+          		labelColor = 'yellow'
+          	}
+          	if (activeid === author.id) {
+          		labelColor = 'red'
+        	 }
+        	 // return the list of authors
             return (
               <div key={`${index}_${author.id}`} id={author.id}>
               <Label
@@ -275,7 +267,7 @@ class AuthorList extends React.Component {
             )
           })
         }
-      </React.Fragment>
+      </>
     )
   }
 }

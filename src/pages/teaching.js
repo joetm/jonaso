@@ -1,9 +1,9 @@
 import React from "react"
 import { Header, Item, Container } from 'semantic-ui-react'
+import { Seo } from "../components/Seo"
 
 import Layout from "../components/layout"
 import { spacer } from "../common"
-import { Helmet } from "react-helmet"
 
 
 const styles = {
@@ -17,6 +17,15 @@ const styles = {
   },
 }
 
+export function Head() {
+  return (
+    <Seo
+      title="Teaching // jonaso.de"
+    >
+      <link id="canonical" rel="canonical" href="https://www.jonaso.de/teaching" />
+    </Seo>
+  )
+}
 
 class Teaching extends React.Component {
   // redirectToPortfolio = () => {
@@ -25,11 +34,6 @@ class Teaching extends React.Component {
   render() {
         return (
             <Layout>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>Teaching {'//'} jonaso.de</title>
-          <link rel="canonical" href="https://www.jonaso.de/teaching" />
-        </Helmet>
               <Container>
 
                 <Header id="education" size="large">Teaching Assistant</Header>

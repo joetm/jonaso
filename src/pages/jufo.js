@@ -4,9 +4,19 @@ import React from "react"
 // Card, Image, Label
 import { Container, Header } from 'semantic-ui-react'
 import Layout from "../components/layout"
-import { Helmet } from "react-helmet"
 import { spacer } from "../common"
+import { Seo } from "../components/Seo"
 
+
+export function Head() {
+  return (
+    <Seo
+      title="Jufo // jonaso.de"
+    >
+      <link id="canonical" rel="canonical" href="https://www.jonaso.de/jufo" />
+    </Seo>
+  )
+}
 
 class JufoPage extends React.Component {
   state = {
@@ -32,11 +42,6 @@ class JufoPage extends React.Component {
   	const { jufo } = this.state
     return (
 	   	<Layout>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>Jufo {'//'} jonaso.de</title>
-          <link rel="canonical" href="https://www.jonaso.de/jufo" />
-        </Helmet>
 	      <Container>
 					<Header as='h1' textAlign='center' content="Jufo Points" />
 	        <section style={{textAlign:'center'}}>

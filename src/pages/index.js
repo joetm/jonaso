@@ -1,6 +1,7 @@
 import React from "react"
 import { Grid, Divider, Image, Container, Icon } from 'semantic-ui-react'
 import { Link } from "gatsby"
+import { Seo } from "../components/Seo"
 
 import "../../libs/academicons/css/academicons.min.css"
 import TravelRotary from "../components/TravelRotary"
@@ -10,32 +11,7 @@ import img from "../img/Jonas-Oppenlaender-500x500.jpg"
 // import WIKIDATA from "../img/wikidata.png"
 // import { nobottommargin } from "../common"
 import Layout from "../components/layout"
-import { Helmet } from "react-helmet"
 
-
-// const keywords = {
-//   primary: [
-//     "human-centered computing",
-//     "crowdsourcing",
-//     "crowd feedback systems",
-//     "creativity support tools",
-//     // "human computation",
-//     "ontology engineering",
-//     // "collaborative ontology engineering",
-//     // "semantic web",
-//     // "linked data",
-//   ],
-//   secondary: [
-//     "collective intelligence",
-//     "web science",
-//     "social machines",
-//     // "knowledge transfer",
-//     "computer supported collaborative work",
-//     // "e-science",
-//     // "hypertext and hypermedia",
-//     "online communities",
-//   ],
-// }
 
 const styles = {
     tag: {
@@ -68,6 +44,16 @@ const styles = {
 }
 
 
+export function Head() {
+  return (
+    <Seo
+      title="Jonas Oppenlaender, Doctor of Science (Technology)"
+    >
+      <link id="canonical" rel="canonical" href="https://www.jonaso.de" />
+    </Seo>
+  )
+}
+
 class Home extends React.Component {
   constructor (props) {
     super(props)
@@ -79,11 +65,6 @@ class Home extends React.Component {
 
     return (
       <Layout>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>Jonas Oppenlaender, Doctor of Science (Technology)</title>
-          <link rel="canonical" href="https://www.jonaso.de" />
-        </Helmet>
         <Container>
 
           <Grid columns={2} divided reversed='mobile vertically'>

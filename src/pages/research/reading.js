@@ -3,11 +3,11 @@
 */
 
 import React from "react"
-import { Helmet } from "react-helmet"
 import { Table, Header, Container } from 'semantic-ui-react'
 import Layout from "../../components/layout"
 import PubGraph from "../../components/PubGraph.js"
 import { spacer } from "../../common"
+import { Seo } from "../../components/Seo"
 
 // import "semantic-ui-css/components/table.css"
 
@@ -30,6 +30,16 @@ const styles = {
 
 const zeroPadding = v => (v < 10 ? '0' : '') + v
 
+
+export function Head() {
+  return (
+    <Seo
+      title="Reading // jonaso.de"
+    >
+      <link id="canonical" rel="canonical" href="https://www.jonaso.de/reading" />
+    </Seo>
+  )
+}
 
 class ReadingList extends React.Component {
   state = {
@@ -71,11 +81,6 @@ class ReadingList extends React.Component {
     const { documents, modified, unrecognized_overall, unrecognized_overall_percent } = this.state
     return (
       <Layout>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>Reading {'//'} jonaso.de</title>
-          <link rel="canonical" href="http://www.jonaso.de/reading" />
-        </Helmet>
         <Container>
 
             <PubGraph documents={documents} />

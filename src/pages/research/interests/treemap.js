@@ -1,10 +1,10 @@
 import React from "react"
-import { Helmet } from "react-helmet"
 import { Container, Button } from 'semantic-ui-react'
 import { ResponsiveContainer, Treemap } from 'recharts'
 import { spacer } from "../../../common"
 import Layout from "../../../components/layout"
 import GraphSwitcher from "../../../components/GraphSwitcher"
+import { Seo } from "../../../components/Seo"
 
 
 const _KEYWORDS = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/keywords.json'
@@ -14,6 +14,16 @@ const colorDefault = '#eb008c';
 const colorZoomed = '#FF86A6';
 
 // old green: #82ca9d
+
+export function Head() {
+  return (
+    <Seo
+      title="Research Interests // jonaso.de"
+    >
+      <link id="canonical" rel="canonical" href="https://www.jonaso.de/interests/treemap" />
+    </Seo>
+  )
+}
 
 class TreeComponent extends React.Component {
   constructor(props) {
@@ -128,11 +138,6 @@ class Interests extends React.Component {
     const filtered_keywords = keywords.filter(kw => kw.num > 19)
     return (
       <Layout>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>Research Interests {'//'} jonaso.de</title>
-          <link rel="canonical" href="https://www.jonaso.de/research/interests/treemap" />
-        </Helmet>
         <Container>
           <TreeComponent keywords={filtered_keywords} />
           <div style={spacer}></div>

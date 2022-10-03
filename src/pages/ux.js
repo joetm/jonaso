@@ -3,22 +3,27 @@ import 'semantic-ui-css/components/card.min.css'
 import React from "react"
 import { Header, Card, Image, Icon, Container } from 'semantic-ui-react'
 import Layout from "../components/layout"
-import { Helmet } from "react-helmet"
+import { Seo } from "../components/Seo"
 
 // const styles = {}
 
 const src = "http://localhost:8000/static/opp-1924a88836b85f62ee5d9a0754979b59.jpg"
 
 
+export function Head() {
+  return (
+    <Seo
+      title="UX // jonaso.de"
+    >
+      <link id="canonical" rel="canonical" href="https://www.jonaso.de/ux" />
+    </Seo>
+  )
+}
+
 class UX extends React.Component {
   render() {
     return (
 	   	<Layout>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>UX {'//'} jonaso.de</title>
-          <link rel="canonical" href="https://www.jonaso.de/ux" />
-        </Helmet>
 	      <Container>
 			<Header as='h1' textAlign='center' content="UX Portfolio" />
 	        <Card.Group itemsPerRow={2}>
