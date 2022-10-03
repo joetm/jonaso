@@ -58,10 +58,8 @@ def parsefiles(PATTERN, BASEPATHS, conn):
                     # print("SHA1: {0}".format(sha1.hexdigest()))
                     thehash = sha1.hexdigest()
 
-                    print(name, thehash)
-
                     # check cache
-                    c.execute('SELECT * FROM documents WHERE hash=?', (thehash,))
+                    c.execute('SELECT * FROM documents WHERE hash=? AND filepath=?', (thehash, fullpath))
                     res = c.fetchone()
                     # is cached?
                     if res != None:
@@ -73,7 +71,10 @@ def parsefiles(PATTERN, BASEPATHS, conn):
                                 unrecognizedCounter = unrecognizedCounter + 1
                         else:
                             unrecognizedCounter = unrecognizedCounter + 1
+                        # we have the cached file info, skip the parsing
                         continue
+
+                    print(name, thehash)
 
                     # create a temporary pdf that holds only the title page + a few more pages
                     # this speeds up processing in science-parse
@@ -98,9 +99,10 @@ def parsefiles(PATTERN, BASEPATHS, conn):
 
                     # extract metadata
                     md = metadata.extractMetadata(tmppath=tmpfile, origfilename=name, origpath=fullpath)
+                    # failed to get metadata?
                     if not md:
                         # speed up future processing for these misses
-                        c.execute("INSERT INTO documents VALUES (?,?,?)", (thehash, int(time.time()), '{}'))
+                        c.execute("INSERT INTO documents VALUES (?,?,?,?)", (thehash, int(time.time()), '{}', fullpath))
                         conn.commit()
                         unrecognizedCounter = unrecognizedCounter + 1
                         continue
@@ -119,7 +121,7 @@ def parsefiles(PATTERN, BASEPATHS, conn):
                         md['priority'] = len(name) - len(name.lstrip('!'))
 
                     # save cache
-                    c.execute("INSERT INTO documents VALUES (?,?,?)", (thehash, int(time.time()), json.dumps(md, ensure_ascii=True)))
+                    c.execute("INSERT INTO documents VALUES (?,?,?,?)", (thehash, int(time.time()), json.dumps(md, ensure_ascii=True), fullpath))
                     conn.commit()
 
                     if not md['title'] or not md['recog']:

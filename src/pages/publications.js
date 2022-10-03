@@ -5,7 +5,7 @@ import { Bar, BarChart, XAxis, YAxis, Tooltip, LabelList, CartesianGrid, Respons
 import Layout from "../components/layout"
 import "semantic-ui-css/components/grid.min.css"
 import { spacer, noMarginGrid } from "../common"
-import { Helmet } from "react-helmet"
+import { Seo } from "../components/Seo"
 
 // replacement for Responsive component from semantic-ui-react
 // see: https://react.semantic-ui.com/migration-guide/
@@ -34,6 +34,15 @@ const _REFERENCES_PER_YEAR = "https://raw.githubusercontent.com/joetm/jonaso/mas
 const _REFERENCES_PER_TYPE = "https://raw.githubusercontent.com/joetm/jonaso/master/public/static/references-type.json"
 
 
+export function Head() {
+  return (
+    <Seo
+      title="Publications // jonaso.de"
+    >
+      <link id="canonical" rel="canonical" href="https://www.jonaso.de/publications" />
+    </Seo>
+  )
+}
 
 /**
  * Group publications by year
@@ -168,11 +177,6 @@ class Publications extends React.Component {
 
     return (
       <Layout>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Publications {'//'} jonaso.de</title>
-        <link rel="canonical" href="https://www.jonaso.de/publications" />
-      </Helmet>
       <Container>
 
         <ResponsiveContainer width="100%" height={150}>

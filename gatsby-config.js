@@ -17,7 +17,8 @@ module.exports = {
     // PARTIAL_HYDRATION: true,
   },
   plugins: [
-    "gatsby-plugin-no-sourcemaps",
+    // "gatsby-plugin-no-sourcemaps",
+    `gatsby-plugin-react-head`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-sharp`,
@@ -46,10 +47,30 @@ module.exports = {
         ignore: [`**/info.txt`],
       },
     },
-    "gatsby-plugin-react-helmet"
+    // "gatsby-plugin-react-helmet"
+    {
+      resolve: 'gatsby-plugin-minify-html',
+      options: {
+        debug: true, // debug optional, default false
+        config: {
+          // Enabled default by this plugin
+          collapseWhitespace: false,
+          minifyCSS: true,
+          minifyJS: true,
+          removeComments: true,
+          removeScriptTypeAttributes: true,
+          removeStyleLinkTypeAttributes: true,
+          // Disabled default by html-minifier-terser
+          sortAttributes: false,
+          useShortDoctype: true,
+        }
+      }
+    },
   ],
   siteMetadata: {
     siteUrl: "https://www.jonaso.de", // No trailing slash allowed!
-    twitterUsername: "@duesynapse"
+    twitterUsername: "@duesynapse",
+    title: 'jonaso.de',
+    description: '',
   }
 }

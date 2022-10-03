@@ -1,7 +1,7 @@
 import React from "react"
 import { Grid, Icon, List, Segment, Item, Container } from 'semantic-ui-react'
 import Layout from "../components/layout"
-import { Helmet } from "react-helmet"
+import { Seo } from "../components/Seo"
 
 import { spacer } from "../common"
 import cv from "../cv.json"
@@ -36,6 +36,17 @@ const styles = {
   nomargin: {
     margin: 0,
   },
+}
+
+
+export function Head() {
+  return (
+    <Seo
+      title="CV // jonaso.de"
+    >
+      <link id="canonical" rel="canonical" href="https://www.jonaso.de/cv" />
+    </Seo>
+  )
 }
 
 
@@ -153,11 +164,6 @@ class CV extends React.Component {
 
     return (
       <Layout>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>CV {'//'} jonaso.de</title>
-        <link rel="canonical" href="https://www.jonaso.de/cv" />
-      </Helmet>
       <Container className="print cv">
         <PdfCVButton />
         <h1 className="print-only">Jonas Oppenlaender</h1>

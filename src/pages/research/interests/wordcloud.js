@@ -1,15 +1,25 @@
 import React from "react"
-import { Helmet } from "react-helmet"
 // import { navigate } from 'gatsby'
 import { Container } from 'semantic-ui-react'
 import { spacer } from "../../../common"
 import Layout from "../../../components/layout"
 import KeywordCloud from '../../../components/cloud'
 import GraphSwitcher from "../../../components/GraphSwitcher"
+import { Seo } from "../../../components/Seo"
 
 
 const _KEYWORDS = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/keywords.json'
 
+
+export function Head() {
+  return (
+    <Seo
+      title="Research Interests (Cloud) // jonaso.de"
+    >
+      <link id="canonical" rel="canonical" href="https://www.jonaso.de/interests/wordcloud" />
+    </Seo>
+  )
+}
 
 class Interests extends React.Component {
   state = {
@@ -33,11 +43,6 @@ class Interests extends React.Component {
     // const filtered_keywords = keywords.filter(kw => kw.num > 9)
     return (
       <Layout>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>Research Interests (Cloud) {'//'} jonaso.de</title>
-          <link rel="canonical" href="https://www.jonaso.de/research/interests/wordcloud" />
-        </Helmet>
         <Container>
           <h2>
             Research Interests

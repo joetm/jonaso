@@ -18,7 +18,7 @@ c = conn.cursor()
 
 # -----------------
 # first-time setup
-c.execute('''CREATE TABLE documents (hash text PRIMARY KEY, parse_date integer, json text)''')
+c.execute('''CREATE TABLE documents (hash text PRIMARY KEY, parse_date integer, json text, filepath text)''')
 conn.commit()
 # -----------------
 
