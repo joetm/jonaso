@@ -292,33 +292,11 @@ usort($priorities[1], 'sortFunc');
 usort($priorities[2], 'sortFunc');
 usort($priorities[3], 'sortFunc');
 
+
 // save influencers to json file
 $fp = fopen('influencer.json', 'w');
 fwrite($fp, json_encode($priorities));
 fclose($fp);
-unset($priorities);
-
-
-$allauthors = [];
-foreach ($authors as $name => $arr) {
-	for ($i = 1; $i < 4; $i++) {
-		if (isset($arr[$i])) {
-			// alternative: flat array
-			array_push($allauthors, [
-				'name' => $name,
-				'num' => $arr[$i],
-				'id' => md5($name),
-				'priority' => $i,
-			]);
-		}
-	}
-}
-usort($allauthors, 'sortFunc');
-$fp = fopen('allauthors.json', 'w');
-fwrite($fp, json_encode($allauthors));
-fclose($fp);
-unset($allauthors);
-
 
 // keywords (only level 1)
 $kws = array();

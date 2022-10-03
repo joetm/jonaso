@@ -66,6 +66,8 @@ module.exports = {
         }
       }
     },
+    'gatsby-plugin-remove-generator',
+    `gatsby-plugin-remove-fingerprints`,
   ],
   siteMetadata: {
     siteUrl: "https://www.jonaso.de", // No trailing slash allowed!

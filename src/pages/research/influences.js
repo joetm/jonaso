@@ -24,9 +24,7 @@ class Influencers extends React.Component {
     influencer: [],
   }
   componentDidMount = () => {
-    // --------------
     // get influencer
-    // --------------
     fetch(_INFLUENCER)
     .then(response => {
       if (response.status >= 400) {
