@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkjonaso_de=self.webpackChunkjonaso_de||[]).push([[494],{29976:function(e,t,a){a.r(t);var r=a(67294),n=a(36204),l=a(3439),s=a(12076);t.default=function(e){var t=e.data.allFile.edges;return r.createElement(r.Fragment,null,r.createElement(n.Z,{generator:"AI-generated Artworks",byline:"Latest digital artworks generated from text prompts (never edited). Click links below for more."}),r.createElement(l.Z,{images:t}),r.createElement("div",{className:"spacer",style:s.OF}))}}}]);
+//# sourceMappingURL=component---src-pages-artworks-index-js.js.map
