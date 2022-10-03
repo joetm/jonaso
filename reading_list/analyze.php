@@ -284,13 +284,6 @@ foreach ($authors as $name => $arr) {
 				'num' => $arr[$i],
 				'id' => md5($name),
 			]);
-			// alternative: flat array
-			array_push($allauthors, [
-				'name' => $name,
-				'num' => $arr[$i],
-				'id' => md5($name),
-				'priority' => $i,
-			]);
 		}
 	}
 }
