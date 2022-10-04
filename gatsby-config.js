@@ -68,6 +68,7 @@ module.exports = {
     },
     'gatsby-plugin-remove-generator',
     `gatsby-plugin-remove-fingerprints`,
+    `gatsby-plugin-purgecss`,
   ],
   siteMetadata: {
     siteUrl: "https://www.jonaso.de", // No trailing slash allowed!
