@@ -9,6 +9,12 @@
 
 .wrapperBox {
   clear:both;
-  margin-top: 1rem;
   padding-top: 1rem;
+}
+
+.authordetails {
+  margin-top: .5rem;
+  border-top: 1px dashed #696969;
+  margin-bottom: 1rem;
+  border-bottom: 1px dashed #696969;
 }
