@@ -1,7 +1,6 @@
 import React from "react"
 import { Container, Label, Checkbox } from 'semantic-ui-react'
 import md5 from "md5"
-import { sortByKey } from "../common"
 
 import "./influencer.css"
 
@@ -16,27 +15,6 @@ const styles = {
     textDecoration: 'underline',
   },
 }
-
-// ----------------
-
-// https://stackoverflow.com/a/63775249/426266
-// function interpolateColor(c0, c1, f){
-//     c0 = c0.match(/.{1,2}/g).map((oct)=>parseInt(oct, 16) * (1-f))
-//     c1 = c1.match(/.{1,2}/g).map((oct)=>parseInt(oct, 16) * f)
-//     let ci = [0,1,2].map(i => Math.min(Math.round(c0[i]+c1[i]), 255))
-//     return ci.reduce((a,v) => ((a << 8) + v), 0).toString(16).padStart(6, "0")
-// }
-
-// scale the available colors of semantic ui label with percentage
-// function scaleLabelColor(perc) {
-//   // invert colors
-//   perc = 1 - perc
-//   // const colors = ['red','orange','pink','brown','grey','black']
-//   const colors = ['red','orange','olive','green','blue','violet','purple','pink','brown','grey','black']
-//   const colMaxIndex = colors.length - 1
-//   const key = Math.round(perc * colMaxIndex)
-//   return colors[key]
-// }
 
 
 // ----------------
@@ -59,7 +37,7 @@ const Wrapper = {
       <h4>{title}</h4>
       <ol>{items}</ol>
     </div>
-  ), //
+  ),
 }
 
 // ----------------
@@ -75,24 +53,19 @@ const DetailContainer = ({authorid, details, priority, keywordClick, activeKeywo
       onClick={(e) => keywordClick(e)}
       key={`kw${i}${authorid}${kw}`}
     >{kw}</Label>
-  )) //
-  // .filter(doc => doc.priority > 0)
-  const publist = sortByKey(docs, 'priority').map((doc, i) => (
-            <li key={`p${i}${authorid}${doc.priority}${doc.title}`}>({doc.priority}) {doc.title}</li>
-        )) //
+  )) //`;
+  const publist = docs.filter(doc => doc.priority === priority).map((doc, i) => (
+            <li key={`p${i}${authorid}${doc.priority}${doc.title}`}>{doc.title}</li>
+        )) //`
   return (
-    <>
-      <div className="clear"></div>
-      <div className="authordetails clear" key={`a-a${authorid}`}>
-        <Wrapper.KeywordWrapper title="Keywords" items={kwlist} />
-        <Wrapper.CoauthorWrapper title="Co-Authors" authorid={authorid} toggleCoauthors={toggleCoauthors} coauthorToggleActive={coauthorToggleActive} />
-        <Wrapper.PubWrapper title="Publications" items={publist} />
-      </div>
-    </>
+    <div className="clear" key={`a-a${authorid}`}>
+      <Wrapper.KeywordWrapper title="Keywords" items={kwlist} />
+      <Wrapper.CoauthorWrapper title="Co-Authors" authorid={authorid} toggleCoauthors={toggleCoauthors} coauthorToggleActive={coauthorToggleActive} />
+      <Wrapper.PubWrapper title="Publications" items={publist} />
+    </div>
   )
 } //
 
-// ----------------
 
 class AuthorList extends React.Component {
   state = {
@@ -198,21 +171,19 @@ class AuthorList extends React.Component {
   }
   getAuthorDetails = (author) => {
   	const { activeid, updateActive } = this.props
-    // up to three requests to fetch author details
     const id = author.id
-    // if (!id) { return }
+    // ------
+    // remove, when the same author is clicked a second time
+    // ------
     if (id === activeid) {
-      // ------
-      // remove, when the same author is clicked a second time
-      // ------
-        const details = this.state.details
-        delete details[id];
-        this.setState({
-          details,
-          coauthorToggleActive: false,
-        })
-        updateActive({activeid: null, activeAuthors: []})
-        return
+      const details = this.state.details
+      delete details[id];
+      this.setState({
+        details,
+        coauthorToggleActive: false,
+      })
+      updateActive({activeid: null, activeAuthors: []})
+      return
     }
     // reset the highlighted labels
     this.setState({
@@ -226,12 +197,10 @@ class AuthorList extends React.Component {
     // cache check
     const details = this.state.details
     if (details[id]) {
-      // console.log('cache hit for', id)
       updateActive({activeid: id})
       return
-    }
+    }    
     // load from remote
-    // console.log('querying id:', id)
     const url = `https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/influencers/${id}.json`
     fetch(url)
     .then(response => {
@@ -241,8 +210,9 @@ class AuthorList extends React.Component {
       return response.json()
     })
     .then(res => {
+      // console.info("Ajax response", res)
+      // update cache with details
       const details = this.state.details
-      // example: {"docs":[{"title":"Arboretum and Arbility: Improving Web Accessibility Through a Shared Browsing Architecture","priority":3}]}
       details[id] = res
       this.setState({ details })
       updateActive({activeid: id})
@@ -252,42 +222,35 @@ class AuthorList extends React.Component {
     const { list, priority, activeid, activeAuthors } = this.props
     const { details, activeKeyword, coauthorToggleActive, coauthors } = this.state
     // console.log('list', list)
-    // need to get min and max for color scaling:
-    // const maxNum = Math.max.apply(Math, list.map(o => o.num))
-    // const maxPrio = Math.max.apply(Math, list.map(o => o.priority))
     if (!list) {
       return null
     }
     return (
       <>
         {
-          list.map((author, index) => {
+          list.filter(author => author.num > 1).map((author, index) => {
             // label color
             let labelColor = null
-            // TODO
           	if (activeAuthors.includes(author.id)) {
           		labelColor = 'yellow'
           	}
-            // TODO
           	if (activeid === author.id) {
           		labelColor = 'red'
         	 }
-           // color scaling based on priority of this author
-        	 // labelColor = scaleLabelColor(author.priority / maxPrio)
-           // return the list of authors
+        	 // return the list of authors
             return (
               <div key={`${index}_${author.id}`} id={author.id}>
               <Label
                 style={styles.label}
                 as="a"
                 color={labelColor}
-                title={(author.num > 1 ? author.num + ' publications' : author.num + ' publication') + ', priority ' + author.priority}
+                title={author.num > 1 ? author.num + ' publications' : author.num + ' publication'}
                 onClick={() => this.getAuthorDetails(author)}
               >
                 {
                   coauthors.includes(author.name.toLowerCase()) ? (<span style={styles.coauthor}>{author.name}</span>) : author.name
                 }
-                <Label.Detail>{author.num} | {author.priority}</Label.Detail>
+                <Label.Detail>{author.num}</Label.Detail>
               </Label>
                 {details[author.id] && activeid === author.id &&
                   <DetailContainer
@@ -321,12 +284,34 @@ class Influencer extends React.Component {
   render() {
     const { influencer = [] } = this.props
     const { activeid, activeAuthors } = this.state
+    // console.log('influencer', influencer)
     return (
         <Container>
           <div className="clear">
+            <h3>Highly influential</h3>
             <AuthorList
             	priority={3}
-            	list={influencer}
+            	list={influencer[3]}
+            	activeid={activeid}
+            	activeAuthors={activeAuthors}
+            	updateActive={this.updateActive}
+            />
+          </div>
+          <div className="clear">
+            <h3>Influential</h3>
+            <AuthorList
+            	priority={2}
+            	list={influencer[2]}
+            	activeid={activeid}
+            	activeAuthors={activeAuthors}
+            	updateActive={this.updateActive}
+            />
+          </div>
+          <div className="clear">
+            <h3>Relevant</h3>
+            <AuthorList
+            	priority={1}
+            	list={influencer[1]}
             	activeid={activeid}
             	activeAuthors={activeAuthors}
             	updateActive={this.updateActive}
@@ -334,7 +319,7 @@ class Influencer extends React.Component {
           </div>
           <div className="clear"></div>
         </Container>
-    ) //
+    )
   }
 }
 

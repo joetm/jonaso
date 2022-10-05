@@ -26,9 +26,10 @@ module.exports = {
         defaults: {
           backgroundColor: "#EDEDED",
           placeholder: "dominantColor",
+          breakpoints: [50, 100, 200, 400],
         },
         // Set to false to allow builds to continue on image errors
-        failOnError: false,
+        failOn: `none`,
         // deprecated options and their defaults:
         stripMetadata: true,
       },
@@ -58,8 +59,8 @@ module.exports = {
           minifyCSS: true,
           minifyJS: true,
           removeComments: true,
-          removeScriptTypeAttributes: true,
-          removeStyleLinkTypeAttributes: true,
+          removeScriptTypeAttributes: false,
+          removeStyleLinkTypeAttributes: false,
           // Disabled default by html-minifier-terser
           sortAttributes: false,
           useShortDoctype: true,
