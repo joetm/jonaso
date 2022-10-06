@@ -49,26 +49,26 @@ module.exports = {
         ignore: [`**/info.txt`],
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-minify-html',
-    //   options: {
-    //     debug: true, // debug optional, default false
-    //     config: {
-    //       // Enabled default by this plugin
-    //       collapseWhitespace: false,
-    //       minifyCSS: true,
-    //       minifyJS: true,
-    //       removeComments: true,
-    //       removeScriptTypeAttributes: false,
-    //       removeStyleLinkTypeAttributes: false,
-    //       // Disabled default by html-minifier-terser
-    //       sortAttributes: false,
-    //       useShortDoctype: true,
-    //     }
-    //   }
-    // },
+    {
+      resolve: 'gatsby-plugin-minify-html',
+      options: {
+        debug: true, // debug optional, default false
+        config: {
+          // Enabled default by this plugin
+          collapseWhitespace: false,
+          minifyCSS: true,
+          minifyJS: false,
+          removeComments: true,
+          removeScriptTypeAttributes: true,
+          removeStyleLinkTypeAttributes: true,
+          // Disabled default by html-minifier-terser
+          sortAttributes: false,
+          useShortDoctype: true,
+        }
+      }
+    },
     'gatsby-plugin-remove-generator',
-    `gatsby-plugin-remove-fingerprints`,
+    // `gatsby-plugin-remove-fingerprints`,
     // `gatsby-plugin-purgecss`,
   ],
   siteMetadata: {

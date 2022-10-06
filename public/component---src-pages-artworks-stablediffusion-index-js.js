@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkjonaso_de=self.webpackChunkjonaso_de||[]).push([[458],{27458:function(e,t,a){a.r(t);var l=a(67294),n=a(36204),r=a(66709),s=a(12076);t.default=function(e){var t=e.data,a=t.allFile.edges;return l.createElement(l.Fragment,null,l.createElement(n.Z,{generator:"Stable Diffusion",totalCount:t.allFile.totalCount}),l.createElement(r.Z,{images:a}),l.createElement("div",{className:"spacer",style:s.OF}))}}}]);
-//# sourceMappingURL=component---src-pages-artworks-stablediffusion-index-js.js.map

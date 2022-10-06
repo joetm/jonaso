@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkjonaso_de=self.webpackChunkjonaso_de||[]).push([[392],{49555:function(e,t,a){a.r(t);var l=a(67294),n=a(36204),s=a(66709),r=a(12076);t.default=function(e){var t=e.data,a=t.allFile.edges;return l.createElement(l.Fragment,null,l.createElement(n.Z,{generator:"Misc. Text-To-Image Systems",totalCount:t.allFile.totalCount}),l.createElement(s.Z,{images:a}),l.createElement("div",{className:"spacer",style:r.OF}))}}}]);
-//# sourceMappingURL=component---src-pages-artworks-misc-index-js.js.map
