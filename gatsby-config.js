@@ -18,6 +18,7 @@ module.exports = {
   },
   plugins: [
     // "gatsby-plugin-no-sourcemaps",
+    // "gatsby-plugin-react-helmet"
     `gatsby-plugin-react-head`,
     `gatsby-plugin-image`,
     {
@@ -48,25 +49,24 @@ module.exports = {
         ignore: [`**/info.txt`],
       },
     },
-    // "gatsby-plugin-react-helmet"
-    {
-      resolve: 'gatsby-plugin-minify-html',
-      options: {
-        debug: true, // debug optional, default false
-        config: {
-          // Enabled default by this plugin
-          collapseWhitespace: false,
-          minifyCSS: true,
-          minifyJS: true,
-          removeComments: true,
-          removeScriptTypeAttributes: false,
-          removeStyleLinkTypeAttributes: false,
-          // Disabled default by html-minifier-terser
-          sortAttributes: false,
-          useShortDoctype: true,
-        }
-      }
-    },
+    // {
+    //   resolve: 'gatsby-plugin-minify-html',
+    //   options: {
+    //     debug: true, // debug optional, default false
+    //     config: {
+    //       // Enabled default by this plugin
+    //       collapseWhitespace: false,
+    //       minifyCSS: true,
+    //       minifyJS: true,
+    //       removeComments: true,
+    //       removeScriptTypeAttributes: false,
+    //       removeStyleLinkTypeAttributes: false,
+    //       // Disabled default by html-minifier-terser
+    //       sortAttributes: false,
+    //       useShortDoctype: true,
+    //     }
+    //   }
+    // },
     'gatsby-plugin-remove-generator',
     `gatsby-plugin-remove-fingerprints`,
     // `gatsby-plugin-purgecss`,
