@@ -57,7 +57,7 @@ module.exports = {
           // Enabled default by this plugin
           collapseWhitespace: false,
           minifyCSS: true,
-          minifyJS: false,
+          minifyJS: true,
           removeComments: true,
           removeScriptTypeAttributes: true,
           removeStyleLinkTypeAttributes: true,
@@ -68,7 +68,7 @@ module.exports = {
       }
     },
     'gatsby-plugin-remove-generator',
-    `gatsby-plugin-remove-fingerprints`,
+    // `gatsby-plugin-remove-fingerprints`, // <-- breaks some pages
     // `gatsby-plugin-purgecss`,
   ],
   siteMetadata: {
