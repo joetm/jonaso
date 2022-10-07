@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkjonaso_de=self.webpackChunkjonaso_de||[]).push([[991],{60483:function(e,t,a){a.r(t);var l=a(67294),n=a(36204),r=a(66709),s=a(12076);t.default=function(e){var t=e.data,a=t.allFile.edges;return l.createElement(l.Fragment,null,l.createElement(n.Z,{generator:"CLIP Guided Diffusion",totalCount:t.allFile.totalCount}),l.createElement(r.Z,{images:a}),l.createElement("div",{className:"spacer",style:s.OF}))}}}]);
-//# sourceMappingURL=component---src-pages-artworks-clip-guided-diffusion-index-js-5b7b08101a4edf5cacf2.js.map

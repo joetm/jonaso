@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkjonaso_de=self.webpackChunkjonaso_de||[]).push([[358],{32388:function(e,t,a){a.r(t);var l=a(67294),n=a(36204),r=a(66709),s=a(12076);t.default=function(e){var t=e.data,a=t.allFile.edges;return l.createElement(l.Fragment,null,l.createElement(n.Z,{generator:"Midjourney",totalCount:t.allFile.totalCount}),l.createElement(r.Z,{images:a}),l.createElement("div",{className:"spacer",style:s.OF}))}}}]);
-//# sourceMappingURL=component---src-pages-artworks-midjourney-index-js-773654cfe093cf70a33a.js.map
