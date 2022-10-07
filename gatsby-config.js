@@ -68,7 +68,7 @@ module.exports = {
       }
     },
     'gatsby-plugin-remove-generator',
-    // `gatsby-plugin-remove-fingerprints`,
+    `gatsby-plugin-remove-fingerprints`,
     // `gatsby-plugin-purgecss`,
   ],
   siteMetadata: {
