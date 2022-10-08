@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>PCS</title>
+    <title>Reviewing History</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/static/css/normalize.css" />
@@ -13,13 +13,31 @@
   <script src="/static/js/pcs.js"></script>
   <script> $.ajaxSetup( { cache: false } ); </script>
 
+  <style>
+  table {
+      border-collapse: collapse;
+  }
+  table td, table th {
+      border: 1px solid #808080;
+      text-align: center;
+      padding: 0.1em 0.5em;
+  }
+  table tr:first-child th {
+      border-top: 0;
+  }
+  table tr:last-child td {
+      border-bottom: 0;
+  }
+  table tr td:first-child,
+  table tr th:first-child {
+      border-left: 0;
+  }
+  table tr td:last-child,
+  table tr th:last-child {
+      border-right: 0;
+  }
+
   
-    <script type="text/javascript">
-    $(document).ready( function () { $('input:text:first').focus() } ); // focus on first text box
-  </script>
-<style>
-  footer { text-align: center; padding-bottom: 6px; font-size: 90%; color: blue }
-  footer a { padding: 3px; text-decoration: underline; font-size: 90%; color: blue }
 </style>
 
  
@@ -29,109 +47,334 @@
 <body>
 
   <header>
-      <div class="logos">
+      <div class="logos" aria-hidden="true">
 
       <div class="left">
-	  <a href="/pcs"><img src="/static/images/pcsLogo2.png" alt="PCS logo"></a>
+          <a href="/pcs"><img src="/static/images/pcsLogo2.png" alt="PCS logo"></a>
       </div>
 
       <div class="middle">
       </div>
 
       <div class="right">
+        
       </div>
   </div>
-
+  
 
       <nav>
-    <div class="middle">
-      <ul id="navToggleItems" data-state="hidden">
-        <li class="confName">Precision Conference Solutions</li>
-      </ul>
+
+    <div class="toggle">
+      <span class="hint">hide/show navigation links</span>
+      <label id="navToggleGlyph" for="navToggleBox">&equiv;</label>
+      <input id="navToggleBox" type="checkbox" onchange="toggle_nav(this)">
     </div>
+
+      <div class="left">
+        &nbsp;
+      </div>
+
+      <div class="middle">
+        <ul id="navToggleItems" data-state="hidden" role="menubar" aria-label="main navigation menu">
+
+            <li>
+              <a role="menuitem" href="/submissions">Submissions</a>
+            </li>
+
+            <li>
+              <a role="menuitem" href="/reviews" class="active" >Reviews</a>
+            </li>
+
+            <li><a role="menuitem" href="/account">Account</a></li>
+          
+
+        </ul>
+
+      </div>
+
+      <div class="right">
+          <a role="menuitem" class="signout" href="/user/logout">sign out</a>
+      </div>
   </nav>
   
+
+  
+
+
 
   </header>
 
   <main>
     
 
-      <!-- flashed messages -->
+    <h1>Reviewing History</h1>
 
-      
-        <div class="alert" aria-hidden="true">
-          <a href=# class="alert notice" onclick="this.setAttribute('data-state','hidden')">You must be signed in to access 'https://new.precisionconference.com/reviewing_history'.</a>
-        </div>
-        <div class="visually-hidden" role="alert">Notice: You must be signed in to access 'https://new.precisionconference.com/reviewing_history'.</div> 
-      
+    <ul class=plain>
+      <li>Jonas Oppenlaender
+      <li>joppenlu@jyu.fi
+        <li>University of Jyväskylä, Jyväskylä, Finland, joppenlu@jyu.fi
+    </ul>
 
-    
+  <div class=indent>
+  <p style="margin-bottom: -1em"><a href="/reviewing_history/import">Import reviewing history from the old PCS system.</a>
+  </div>
 
-    
+  <h2>Summary</h2>
 
-<h1 style="display: none">PCS login page</h1>
-  
-<center>
+  <div class=indent>
 
-<p style="margin-top:4em; margin-bottom: 4em;">Sign in below to <b>submit</b> a contribution, to <b>sign up</b> as
-a reviewer, or to <b>review</b> assigned submissions.
+    <p>This summary is visible to conference chairs and committee members to help them in assigning reviews.
 
-<form action="" method="POST">
+    <h3>Timeliness of Reviews</h3>
 
-  <div style="display:none;"><input id="csrf_token" name="csrf_token" type="hidden" value="1582892597##de7c966d4950bc0eaadb4199599736a8558ecdfd"><input id="next" name="next" type="hidden" value="https://new.precisionconference.com/reviewing_history"><input id="reg_next" name="reg_next" type="hidden" value="/user/login"><input id="society" name="society" type="hidden" value=""></div>
-  <input id="society" name="society" type="hidden" value="">
+    <div class=indent>
+      <table>
+        <tr><th>on time</th><th>delayed</th><th>not submitted</th><th>unspecified</th></tr>
+        <tr><td>57</td><td>0</td><td>0</td><td>21</td></tr>
+      </table>
+    </div>
 
-  <table>
-    <tr>
-      <td><label for="username">Username or Email</label></td>
-      <td><input id="username" name="username" type="text" value=""></td>
-    </tr>
+    <h3>Quality of Reviews</h3>
 
-    <tr>
-      <td><label for="password">Password</label></td>
-      <td><input id="password" name="password" type="password" value=""></td>
-    </tr>
+    <div class=indent>
+      <table>
+        <tr><th>highly useful</th><th>useful</th><th>not useful</th><th>unspecified</th></tr>
+        <tr><td>2</td><td>2</td><td>0</td><td>74</td></tr>
+      </table>
+    </div>
 
-    <tr>
-      <td></td>
-      <td><input id="remember_me" name="remember_me" type="checkbox" value="y"> <label for="remember_me">Remember me</label></td>
-    </tr>
+  </div>
 
-    <tr>
-      <td></td>
-      <td><input type="submit" value="Sign in"></td>
-    </tr>
-  </table>
 
-</form>
+  <h2>Details</h2>
 
-<br />
-<br />
+  <div class=indent>
 
-<p><a href="/user/register">Create an account</a></p>
+    <p>These details are not visible to anybody except you.
 
-<p><a href="/user/forgot-password">Reset my password</a></p>
+    <h3>Reviews</h3>
 
-<br />
-<br />
+    <div class=indent>
 
-</center>
+        <p>Only the notations of "highly useful", "not useful", "delayed", and "not submitted" are shown beside the submission numbers.
 
-<script>
-window.onload = function() { document.getElementById("username").focus(); }
-</script>
+        <ul class="plain dense">
+          <li style="margin-top:1em">CHI 2023 Papers
+	    <br><span style="margin-left: 1.5em">
+                5677,
+                3702,
+                8990,
+                2103
+	    </span>
+          <li style="margin-top:1em">CSCW 2023 July 2022
+	    <br><span style="margin-left: 1.5em">
+                6979
+	    </span>
+          <li style="margin-top:1em">CHI 2022 Late-Breaking Work
+	    <br><span style="margin-left: 1.5em">
+                5441
+	    </span>
+          <li style="margin-top:1em">CHI 2022 Papers
+	    <br><span style="margin-left: 1.5em">
+                1554,
+                6552
+	    </span>
+          <li style="margin-top:1em">CSCW 2022 January 2022
+	    <br><span style="margin-left: 1.5em">
+                5766
+	    </span>
+          <li style="margin-top:1em">CSCW 2022 July 2021
+	    <br><span style="margin-left: 1.5em">
+                2085,
+                9986,
+                8756
+	    </span>
+          <li style="margin-top:1em">Creativity &amp; Cognition 2022 Papers
+	    <br><span style="margin-left: 1.5em">
+                9887
+	    </span>
+          <li style="margin-top:1em">EICS PACM 2022 Full Papers - Round 1
+	    <br><span style="margin-left: 1.5em">
+                4136
+	    </span>
+          <li style="margin-top:1em">HAI 2022 Papers
+	    <br><span style="margin-left: 1.5em">
+                1025
+	    </span>
+          <li style="margin-top:1em">NordiCHI 2022 Papers
+	    <br><span style="margin-left: 1.5em">
+                1131,
+                1250,
+                1159,
+                1234,
+                1274,
+                1129
+	    </span>
+          <li style="margin-top:1em">UIST 2022 Papers
+	    <br><span style="margin-left: 1.5em">
+                7162
+	    </span>
+          <li style="margin-top:1em">CHI 2021 Papers
+	    <br><span style="margin-left: 1.5em">
+                1798,
+                4462
+	    </span>
+          <li style="margin-top:1em">CHI PLAY 2021 Work-In-Progress
+	    <br><span style="margin-left: 1.5em">
+                1059,
+                1045
+	    </span>
+          <li style="margin-top:1em">CSCW 2021 Posters
+	    <br><span style="margin-left: 1.5em">
+                1050
+	    </span>
+          <li style="margin-top:1em">Creativity &amp; Cognition 2021 Posters
+	    <br><span style="margin-left: 1.5em">
+                1017
+	    </span>
+          <li style="margin-top:1em">DIS 2021 Papers and Pictorials
+	    <br><span style="margin-left: 1.5em">
+                8871
+	    </span>
+          <li style="margin-top:1em">INTERACT 2021 Full Papers
+	    <br><span style="margin-left: 1.5em">
+                1196 (<span style="color: green">highly useful</span>)
+	    </span>
+          <li style="margin-top:1em">ISS 2021 Papers 2021 Summer
+	    <br><span style="margin-left: 1.5em">
+                9246
+	    </span>
+          <li style="margin-top:1em">UIST 2021 Papers
+	    <br><span style="margin-left: 1.5em">
+                2156 (<span style="color: green">highly useful</span>)
+	    </span>
+          <li style="margin-top:1em">CHI 2020 Late Breaking Works
+	    <br><span style="margin-left: 1.5em">
+                1076,
+                1355,
+                1971
+	    </span>
+          <li style="margin-top:1em">CHI 2020 Papers
+	    <br><span style="margin-left: 1.5em">
+                8326
+	    </span>
+          <li style="margin-top:1em">CSCW 2020 January 2020 submissions
+	    <br><span style="margin-left: 1.5em">
+                1719,
+                8937,
+                8776,
+                1637
+	    </span>
+          <li style="margin-top:1em">CSCW 2020 June 2020 submissions
+	    <br><span style="margin-left: 1.5em">
+                8734,
+                5558
+	    </span>
+          <li style="margin-top:1em">CSCW 2020 October 2019 CSCW submissions
+	    <br><span style="margin-left: 1.5em">
+                3155
+	    </span>
+          <li style="margin-top:1em">EICS PACM 2020 Q1
+	    <br><span style="margin-left: 1.5em">
+                8684
+	    </span>
+          <li style="margin-top:1em">IUI 2020 Demos and Posters
+	    <br><span style="margin-left: 1.5em">
+                1166
+	    </span>
+          <li style="margin-top:1em">MobileHCI 2020 Papers
+	    <br><span style="margin-left: 1.5em">
+                1173
+	    </span>
+          <li style="margin-top:1em">UIST 2020 Papers
+	    <br><span style="margin-left: 1.5em">
+                5155
+	    </span>
+          <li style="margin-top:1em">CHI 2019 Late Breaking Work
+	    <br><span style="margin-left: 1.5em">
+                1114,
+                1122,
+                1200,
+                1418,
+                1622,
+                1691,
+                1123,
+                1270,
+                1329,
+                1404,
+                1465,
+                1507,
+                1590
+	    </span>
+          <li style="margin-top:1em">CHI 2019 Papers
+	    <br><span style="margin-left: 1.5em">
+                2941,
+                7871
+	    </span>
+          <li style="margin-top:1em">CHI 2019 Workshops/Symposia
+	    <br><span style="margin-left: 1.5em">
+                7788,
+                4756,
+                2959
+	    </span>
+          <li style="margin-top:1em">CSCW 2019 Papers
+	    <br><span style="margin-left: 1.5em">
+                1530
+	    </span>
+          <li style="margin-top:1em">Creativity &amp; Cognition 2019 Papers
+	    <br><span style="margin-left: 1.5em">
+                1045
+	    </span>
+          <li style="margin-top:1em">EICS PACM 2019 Q4
+	    <br><span style="margin-left: 1.5em">
+                3484
+	    </span>
+          <li style="margin-top:1em">INTERACT 2019 Full Papers
+	    <br><span style="margin-left: 1.5em">
+                1520,
+                1215
+	    </span>
+          <li style="margin-top:1em">INTERACT 2019 Short Papers
+	    <br><span style="margin-left: 1.5em">
+                1298
+	    </span>
+          <li style="margin-top:1em">UIST 2019 Papers
+	    <br><span style="margin-left: 1.5em">
+                8593
+	    </span>
+          <li style="margin-top:1em">CHI PLAY 2018 Works-in-Progress
+	    <br><span style="margin-left: 1.5em">
+                1022,
+                1094
+	    </span>
+          <li style="margin-top:1em">CSCW 2018 Interactive Posters - Final Submissions
+	    <br><span style="margin-left: 1.5em">
+                1067
+	    </span>
+          <li style="margin-top:1em">ICMI 2018 Late Breaking Results
+	    <br><span style="margin-left: 1.5em">
+                1001
+	    </span>
+          <li style="margin-top:1em">IMWUT 2018 August 2018
+	    <br><span style="margin-left: 1.5em">
+                1029
+	    </span>
+          <li style="margin-top:1em">ICWSM 22 Posters, Demos, and Datasets
+	    <br><span style="margin-left: 1.5em">
+                1051
+	    </span>
+        </ul>
+
+    </div>
+  </div>
 
 
     <div aria-live="polite" class="visually-hidden" id="aria-alert-message"></div>
   </main>
 
   <footer>
-      <a href="mailto:support@precisionconference.com">support</a>
-  |
-  <a href="/privacy_policy">privacy policy</a>
-  |
-  <a href="/terms_of_use">terms of use</a>
+      
+
 
   </footer>
 
