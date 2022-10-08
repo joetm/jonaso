@@ -143,6 +143,7 @@ class CV extends React.Component {
   // }
   render() {
     // const { activeTag, isHovered } = this.state
+    const { reviews } = this.state
     const startEndYear = this.startEndYear
     const teachingPositions = Object.keys(cv.teaching)
 
@@ -158,9 +159,10 @@ class CV extends React.Component {
             }
         })
     })
+
     // add section header to first item
-    const key1 = Object.keys(peerreviews).reverse()[0]
-    peerreviews[key1].left = "Peer Reviewer"
+    // const key1 = Object.keys(peerreviews).reverse()[0]
+    // peerreviews[key1].left = "Peer Reviewer"
 
     return (
       <Layout>
@@ -491,6 +493,18 @@ class CV extends React.Component {
       </Item.Group>
 )} right="" />
 */}
+
+        <Row key="pr-header" left="Peer Reviewer" middle={(
+          <Item.Group>
+            <Item style={styles.nomargin}>
+              <List>
+                <List.Item>
+                  {reviews.total} reviews in PCS
+                </List.Item>
+              </List>
+            </Item>
+          </Item.Group>
+        )} right={""} />
 
 {
     Object.keys(peerreviews).reverse().map(year => (

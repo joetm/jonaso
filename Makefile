@@ -49,6 +49,10 @@ post-build:
 	# cp -rf ./src/img/artworks ./public/static/
 	make move-cv
 	mv ./src/bibliography/publications.json ./public/static/publications.json
+	# PCS fetching
+	cd stat_aggregator; \
+		python3 fetch_PCS.py
+	cp ./stat_aggregator/peer-reviews.json ./public/peer-reviews.json
 
 fetch-cv:
 	if [ -d "./academic-cv" ];then \
