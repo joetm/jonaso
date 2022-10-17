@@ -42,18 +42,24 @@ const styles = {
 // ----------------
 
 const Wrapper = {
-  KeywordWrapper: ({title, items}) => (
+  KeywordWrapper: ({title, items, updateActive}) => (
     <div className="wrapperBox">
-      <h4>{title}</h4>
+      <h4 style={{float:'left', display:'inline-block'}}>{title}</h4>
+      <i class="close icon"
+        role="button" aria-label="close" tabIndex={0}
+         style={{float:'right', cursor:'pointer'}}
+        onClick={() => updateActive({activeid: null, activeAuthors: []})}
+        onKeyDown={() => updateActive({activeid: null, activeAuthors: []})}
+      ></i>
       <div style={{clear:'both'}}>{items}</div>
     </div>
-  ),
+  ), //
   CoauthorWrapper: ({title, authorid, toggleCoauthors, coauthorToggleActive}) => (
     <div className="wrapperBox">
       <h4>{title}</h4>
       <div><Checkbox checked={coauthorToggleActive} onChange={() => toggleCoauthors(authorid)} label='Show co-authors' toggle /></div>
     </div>
-  ),
+  ), //
   PubWrapper: ({title, items}) => (
     <div className="wrapperBox">
       <h4>{title}</h4>
@@ -64,7 +70,7 @@ const Wrapper = {
 
 // ----------------
 
-const DetailContainer = ({authorid, details, priority, keywordClick, activeKeyword, toggleCoauthors, coauthorToggleActive}) => {
+const DetailContainer = ({authorid, details, priority, keywordClick, activeKeyword, toggleCoauthors, coauthorToggleActive, updateActive}) => {
   const { docs=[], keywords=[] } = details
   // const kwlist = keywords.join(", ")
   const kwlist = keywords.map((kw, i) => (
@@ -78,13 +84,13 @@ const DetailContainer = ({authorid, details, priority, keywordClick, activeKeywo
   )) //
   // .filter(doc => doc.priority > 0)
   const publist = sortByKey(docs, 'priority').map((doc, i) => (
-            <li key={`p${i}${authorid}${doc.priority}${doc.title}`}>({doc.priority}) {doc.title}</li>
-        )) //
+          <li key={`p${i}${authorid}${doc.priority}${doc.title}`}>({doc.priority}) {doc.title}</li>
+      )) //
   return (
     <>
       <div className="clear"></div>
       <div className="authordetails clear" key={`a-a${authorid}`}>
-        <Wrapper.KeywordWrapper title="Keywords" items={kwlist} />
+        <Wrapper.KeywordWrapper title="Keywords" items={kwlist} updateActive={updateActive} />
         <Wrapper.CoauthorWrapper title="Co-Authors" authorid={authorid} toggleCoauthors={toggleCoauthors} coauthorToggleActive={coauthorToggleActive} />
         <Wrapper.PubWrapper title="Publications" items={publist} />
       </div>
@@ -249,9 +255,8 @@ class AuthorList extends React.Component {
     })
   }
   render () {
-    const { list, priority, activeid, activeAuthors } = this.props
+    const { list, priority, activeid, activeAuthors, updateActive } = this.props
     const { details, activeKeyword, coauthorToggleActive, coauthors } = this.state
-    // console.log('list', list)
     // need to get min and max for color scaling:
     // const maxNum = Math.max.apply(Math, list.map(o => o.num))
     // const maxPrio = Math.max.apply(Math, list.map(o => o.priority))
@@ -298,6 +303,7 @@ class AuthorList extends React.Component {
                   	keywordClick={this.keywordClick}
                     toggleCoauthors={this.toggleCoauthors}
                     coauthorToggleActive={coauthorToggleActive}
+                    updateActive={updateActive}
                   />
                 }
               </div>

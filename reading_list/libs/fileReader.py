@@ -59,7 +59,8 @@ def parsefiles(PATTERN, BASEPATHS, conn):
                     thehash = sha1.hexdigest()
 
                     # check cache
-                    c.execute('SELECT * FROM documents WHERE hash=? AND filepath=?', (thehash, fullpath))
+                    # c.execute('SELECT * FROM documents WHERE hash=? AND filepath=?', (thehash, fullpath))
+                    c.execute('SELECT * FROM documents WHERE hash=?', frozenset([thehash]))
                     res = c.fetchone()
                     # is cached?
                     if res != None:
@@ -72,6 +73,7 @@ def parsefiles(PATTERN, BASEPATHS, conn):
                         else:
                             unrecognizedCounter = unrecognizedCounter + 1
                         # we have the cached file info, skip the parsing
+                        # TODO: update filepath in DB
                         continue
 
                     print(name, thehash)

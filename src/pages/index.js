@@ -147,7 +147,13 @@ class Home extends React.Component {
 
             </Grid.Column>
 
-            <Grid.Column mobile={16} tablet={6} computer={5}>
+            <Grid.Column
+              mobile={16}
+              tablet={6}
+              computer={5}
+              widescreen={5}
+              largeScreen={5}
+            >
 
               <Grid.Row>
 
