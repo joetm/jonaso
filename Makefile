@@ -21,37 +21,41 @@ default:
 	##
 
 pre-build:
-	# 	cd ./stat_aggregator; \
-	# 		./fetch_PCS.py
-
 	# academic-cv folder exists?
 	# [ -d "academic-cv" ] && rm -rf academic-cv
 
 	make fetch-cv
+	make fetch-pcs
 	make replace-cv
 	make bib-json
 	make build-cv
 
 	# make rename-artworks
 
+fetch-pcs:
+	# PCS fetching
+	cd stat_aggregator; \
+		python3 fetch_PCS.py # $? -eq 0 || echo "failed PCS lookup (no internet?)"
+
 rename-artworks:
 	cd artworks; \
+		./rename-dalle.sh
 		./rename-midjourney.sh
+		./rename-stablediffusion.sh
 
 bib-json:
 	pandoc-citeproc --bib2json ./src/bibliography/publications.bib > ./src/bibliography/publications.json
 	python3 fix-publications-json.py
 
 post-build:
+	make move-cv
+
 	cp ./src/travel.json ./public/
 	cp ./src/projects.json ./public/static/
 	cp ./src/news.json ./public/
 	# cp -rf ./src/img/artworks ./public/static/
-	make move-cv
 	mv ./src/bibliography/publications.json ./public/static/publications.json
-	# PCS fetching
-	cd stat_aggregator; \
-		python3 fetch_PCS.py
+	# copy fetched PCS data
 	cp ./stat_aggregator/peer-reviews.json ./public/peer-reviews.json
 
 fetch-cv:

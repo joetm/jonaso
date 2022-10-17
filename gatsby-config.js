@@ -13,7 +13,7 @@ module.exports = {
     PRESERVE_FILE_DOWNLOAD_CACHE: true,
     // trying to lower memory requirements during build
     LMDB_STORE: true, // store nodes in a persistent embedded database (vs in-memory). Lowers peak memory usage. Requires Node v14.10 or above.
-    // PARALLEL_QUERY_RUNNING: false,
+    PARALLEL_QUERY_RUNNING: false,
     // PARTIAL_HYDRATION: true,
   },
   plugins: [
@@ -27,7 +27,7 @@ module.exports = {
         defaults: {
           backgroundColor: "#EDEDED",
           placeholder: "dominantColor",
-          breakpoints: [50, 100, 200, 400],
+          breakpoints: [100, 200, 400],
         },
         // Set to false to allow builds to continue on image errors
         failOn: `none`,
