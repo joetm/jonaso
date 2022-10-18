@@ -62,8 +62,8 @@ class TravelRotary extends React.Component {
     }
 
     // show some rows above and below the current travel item
-    const sliceMin = index - 5 <= 0 ? 0 : index - 5;
-    const sliceMax = index + 6 >= rotary.length ? rotary.length : index + 6;
+    const sliceMin = index - 3 <= 0 ? 0 : index - 3;
+    const sliceMax = index + 4 >= rotary.length ? rotary.length : index + 4;
     rotary = rotary.slice(sliceMin, sliceMax)
 
     this.setState({ rotary })

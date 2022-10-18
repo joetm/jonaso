@@ -27,7 +27,7 @@ module.exports = {
         defaults: {
           backgroundColor: "#EDEDED",
           placeholder: "dominantColor",
-          breakpoints: [100, 200, 400],
+          breakpoints: [200, 400],
         },
         // Set to false to allow builds to continue on image errors
         failOn: `none`,
