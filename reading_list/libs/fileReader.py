@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
-import json
 import os
 import sys
+import json
 import shutil
 from fnmatch import fnmatch
 import hashlib
@@ -31,7 +31,15 @@ def parsefiles(PATTERN, BASEPATHS, conn):
     print(PATTERN)
 
     for root in BASEPATHS:
+        # list_of_files = os.walk(root, followlinks=False)
+        # list_of_files = [ os.path.join(f[0], f[2]) for f in list_of_files]
+        # efficiency mod
+        # sort by modification date and then abort once we reach the first cached result
+        # list_of_files = sorted([ f[2] for f in list_of_files], key = lambda x: os.path.getmtime(x), reverse=True)
+        # thisPathIsDone = False
         for path, subdirs, files in os.walk(root, followlinks=False):
+            # if thisPathIsDone:
+            #     break
             for name in files:
 
                 fullpath = os.path.join(path, name)
@@ -44,9 +52,8 @@ def parsefiles(PATTERN, BASEPATHS, conn):
 
                     counter = counter + 1
 
-                    sha1 = hashlib.sha1()
-
                     # calculate hash
+                    sha1 = hashlib.sha1()
                     with open(fullpath, 'rb') as f:
                         while True:
                             data = f.read(BUF_SIZE)
@@ -54,13 +61,12 @@ def parsefiles(PATTERN, BASEPATHS, conn):
                                 break
                             # md5.update(data)
                             sha1.update(data)
-
                     # print("SHA1: {0}".format(sha1.hexdigest()))
                     thehash = sha1.hexdigest()
 
                     # check cache
                     # c.execute('SELECT * FROM documents WHERE hash=? AND filepath=?', (thehash, fullpath))
-                    c.execute('SELECT * FROM documents WHERE hash=?', frozenset([thehash]))
+                    c.execute('SELECT * FROM documents WHERE hash=?', (thehash,))
                     res = c.fetchone()
                     # is cached?
                     if res != None:
@@ -74,6 +80,9 @@ def parsefiles(PATTERN, BASEPATHS, conn):
                             unrecognizedCounter = unrecognizedCounter + 1
                         # we have the cached file info, skip the parsing
                         # TODO: update filepath in DB
+                        # break, since we hit the first cached result in this folder
+                        # thisPathIsDone = True
+                        # break
                         continue
 
                     print(name, thehash)
