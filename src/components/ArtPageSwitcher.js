@@ -12,7 +12,7 @@ const ArtPageSwitcher = ({generator}) => {
 
 	      <section style={{textAlign:'center', marginBottom:'2em'}}>
 
-			<Menu pointing secondary fluid widths={7}>			
+			<Menu pointing secondary fluid widths={6}>			
     		    <Menu.Item
         		  name='Stable Diffusion'
     		      folder='stablediffusion'
@@ -35,12 +35,6 @@ const ArtPageSwitcher = ({generator}) => {
     		      name='Latent Diffusion'
     		      folder='latent-diffusion'
         		  active={generator === 'Latent Diffusion'}
-				  onClick={handleMenuClick}
-		        />
-		        <Menu.Item
-    		      name='CLIP Guided Diffusion'
-    		      folder='CLIP-guided-diffusion'
-        		  active={generator === 'CLIP Guided Diffusion'}
 				  onClick={handleMenuClick}
 		        />
 		        <Menu.Item
