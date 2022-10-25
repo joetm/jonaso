@@ -220,92 +220,110 @@
           "end": 2002
     }
   ],
-  "teaching": {
-    "Co-Teacher": [
-        {
-          "position": "Teaching Assistant",
-          "course": "Social Computing",
+  "teaching": [
+    {
+          "coursename": "Social Computing",
           "coursecode": "521044A",
-          "institution": "University of Oulu",
+          "organization": "University of Oulu",
+          "location": "Oulu, Finland",
+          "position": "Teaching Assistant",
           "num_students": 50,
+          "keywords": [],
           "ECTS": 5,
           "level": "Bachelor",
+          "period": "Autumn",
           "year": 2020
-        },
-        {
-          "position": "Teaching Assistant",
-          "course": "Social Computing",
+    },
+    {
+          "coursename": "Social Computing",
           "coursecode": "521044A",
-          "institution": "University of Oulu",
+          "organization": "University of Oulu",
+          "location": "Oulu, Finland",
+          "position": "Teaching Assistant",
           "num_students": 33,
+          "keywords": [],
           "ECTS": 5,
           "level": "Bachelor",
+          "period": "Spring",
           "year": 2020
-        },
-        {
-          "position": "Teaching Assistant",
-          "course": "Social Computing",
+    },
+    {
+          "coursename": "Social Computing",
           "coursecode": "521044A",
-          "institution": "University of Oulu",
+          "organization": "University of Oulu",
+          "location": "Oulu, Finland",
+          "position": "Teaching Assistant",
           "num_students": 14,
+          "keywords": [],
           "ECTS": 5,
           "level": "Bachelor",
+          "period": "Spring",
           "year": 2019
-        }
-      ],
-      "Curriculum Planning": [
-        {
+    },
+    {
+          "coursename": "Human Computer Interaction",
+          "coursecode": "521145A",
+          "organization": "University of Oulu",
+          "location": "Oulu, Finland",
           "position": "Teaching Assistant",
-          "course": "Social Computing",
-          "coursecode": "521044A",
-          "institution": "University of Oulu",
+          "num_students": 151,
+          "keywords": [],
           "ECTS": 5,
           "level": "Bachelor",
-          "year": 2019
-        },
-        {
+          "period": "Autumn",
+          "year": 2020
+    },
+    {
+          "coursename": "Human Computer Interaction",
+          "coursecode": "521145A",
+          "organization": "University of Oulu",
+          "location": "Oulu, Finland",
           "position": "Teaching Assistant",
-          "course": "Semantic Web Technologies",
-          "coursecode": "19305401",
-          "institution": "Freie Universität Berlin",
+          "num_students": 139,
+          "keywords": [],
           "ECTS": 5,
-          "level": "Master",
+          "level": "Bachelor",
+          "period": "Autumn",
+          "year": 2019
+    },
+    {
+          "coursename": "Human Computer Interaction",
+          "coursecode": "521145A",
+          "organization": "University of Oulu",
+          "location": "Oulu, Finland",
+          "position": "Teaching Assistant",
+          "num_students": 161,
+          "keywords": [],
+          "ECTS": 5,
+          "level": "Bachelor",
+          "period": "Autumn",
           "year": 2018
-        }
-      ],
-      "Teaching Assistant": [
-      {
-        "position": "Teaching Assistant",
-        "course": "Human Computer Interaction",
-        "coursecode": "521145A",
-        "institution": "University of Oulu",
-        "num_students": 146,
-        "ECTS": 5,
-        "level": "Bachelor",
-        "year": 2019
-      },
-      {
-        "position": "Teaching Assistant",
-        "course": "Human Computer Interaction",
-        "coursecode": "521145A",
-        "institution": "University of Oulu",
-        "num_students": 164,
-        "ECTS": 5,
-        "level": "Bachelor",
-        "year": 2018
-      },
-      {
-        "position": "Teaching Assistant",
-        "course": "Applied Computing Project I",
-        "coursecode": "521152S",
-        "institution": "University of Oulu",
-        "num_students": 3,
-        "ECTS": 10,
-        "level": "Bachelor",
-        "year": 2018
-      }
-    ]
-  },
+    },
+    {
+          "coursename": "Applied Computing Project I",
+          "coursecode": "521152S",
+          "organization": "University of Oulu",
+          "location": "Oulu, Finland",
+          "position": "Teaching Assistant",
+          "num_students": 3,
+          "keywords": [],
+          "ECTS": 10,
+          "level": "Bachelor",
+          "year": 2018
+    },
+    {
+          "coursename": "Software Project",
+          "coursecode": null,
+          "organization": "Freie Universität Berlin",
+          "location": "Berlin, Germany",
+          "position": "Teaching Assistant",
+          "num_students": 4,
+          "keywords": [],
+          "ECTS": 10,
+          "level": "Bachelor and Master",
+          "year": 2016
+    }
+  ],
   "awards": [
     {
       "name": "Distinction",
