@@ -13,6 +13,7 @@ cv.awards[0].left = "Recognition & Awards" // Honors & Awards
 cv.grants[0].left = "Scholarships & Grants"
 cv.academicservice[0].left = "Academic Service"
 cv.supervisions[0].left = "Student Supervisions"
+cv.teaching[0].left = "Teaching"
 
 
 const _PORTFOLIO_URL = 'https://www.jonaso.de/portfolio/'
@@ -41,13 +42,11 @@ const styles = {
 
 export function Head() {
   return (
-    <Seo
-      title="CV // jonaso.de"
-    >
+    <Seo title="CV // jonaso.de">
       <link id="canonical" rel="canonical" href="https://www.jonaso.de/cv" />
     </Seo>
   )
-}
+} //
 
 
 const SupervisorWrap = ({supervisor, link = false}) => {
@@ -145,7 +144,7 @@ class CV extends React.Component {
     // const { activeTag, isHovered } = this.state
     const { reviews } = this.state
     const startEndYear = this.startEndYear
-    const teachingPositions = Object.keys(cv.teaching)
+    // const teachingPositions = Object.keys(cv.teaching)
 
     // const keyword_count = this.countKeywords()
 
@@ -532,6 +531,7 @@ class CV extends React.Component {
         TEACHING
 ***********************/}
 
+{/*
 <Row left="Teaching Experience" middle={(
       <Item.Group>
         {
@@ -555,7 +555,27 @@ class CV extends React.Component {
         }
       </Item.Group>
 )} right="" />
+*/}
 
+{
+    cv.teaching.map((row, i) => (
+        <Row key={i} left={row.left} middle={(
+          <Item.Group>
+            <Item style={styles.nomargin}>
+              <List>
+                <List.Item>
+                  {row.coursename}{row.coursecode && <> ({row.coursecode})</>}{row.period && ", " + row.period}, {row.num_students} students, {row.level}<br />
+                  {
+                    row.url ? <a href={row.url}>{row.organization}</a> : row.organization
+                  }
+                  {row.location && ", " + row.location}
+                </List.Item>
+              </List>
+            </Item>
+          </Item.Group>
+        )} right={row.year} />
+    ))
+}
 
 {/**********************
       SUPERVISIONS
