@@ -108,7 +108,7 @@ $done = 0;
 
 $i = 0;
 $result = $db->query('SELECT `json` FROM `documents`');
-while ($doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
+while ($result && $doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 
 	$i++;
 
