@@ -3,7 +3,7 @@
 */
 
 import React from "react"
-import { Table, Header, Container } from 'semantic-ui-react'
+import { Table, Header, Container, Loader, Segment, Dimmer } from 'semantic-ui-react'
 import Layout from "../../components/layout"
 import PubGraph from "../../components/PubGraph.js"
 import { spacer } from "../../common"
@@ -38,12 +38,13 @@ export function Head() {
     >
       <link id="canonical" rel="canonical" href="https://www.jonaso.de/reading" />
     </Seo>
-  )
+  ) //
 }
 
 class ReadingList extends React.Component {
   state = {
     documents: [],
+    isLoading: true,
     modified: 'loading',
     unrecognized_overall: undefined,
     unrecognized_overall_percent: undefined,
@@ -58,12 +59,12 @@ class ReadingList extends React.Component {
       return response.json()
     })
     .then(documents => {
-      // console.log(documents);
       this.setState({
         modified: this.getDate(documents.modified * 1000),
         documents: documents.documents,
         unrecognized_overall: documents.unrecognized_overall,
         unrecognized_overall_percent: documents.unrecognized_overall_percent,
+        isLoading: false,
       })
     })
   }
@@ -78,7 +79,7 @@ class ReadingList extends React.Component {
     return `${year}-${month}-${day} ${zeroPadding(hour)}:${zeroPadding(min)}`
   }
   render() {
-    const { documents, modified, unrecognized_overall, unrecognized_overall_percent } = this.state
+    const { isLoading, documents, modified, unrecognized_overall, unrecognized_overall_percent } = this.state
     return (
       <Layout>
         <Container>
@@ -91,6 +92,14 @@ class ReadingList extends React.Component {
               <div style={styles.unrecognized}>Unrecognized overall: <span>{unrecognized_overall} ({unrecognized_overall_percent * 100}%)</span></div>
             </Header>
 
+{
+  isLoading ?
+    <Segment>
+      <Dimmer active inverted>
+        <Loader inverted>Loading</Loader>
+      </Dimmer>
+    </Segment>
+  :
             <Table padded collapsing={false} stackable striped size='small'>
               <Table.Header>
                 <Table.Row>
@@ -104,21 +113,22 @@ class ReadingList extends React.Component {
               </Table.Header>
               <Table.Body>
                 {
-                  documents.map((doc, idx) => {
-                    return (
-                      <Table.Row key={`id_${idx}`}>
-                        <Table.Cell style={{wordBreak:'break-all'}} textAlign="left">{doc.title}</Table.Cell>
-                        <Table.Cell style={{wordBreak:'break-all',maxWidth:'450px'}} textAlign="left">{doc.authors.join(', ')}</Table.Cell>
-                        <Table.Cell className="mobilehide" textAlign="left">{doc.year}</Table.Cell>
-                        <Table.Cell textAlign="left">{doc.keywords}</Table.Cell>
-                        <Table.Cell className="mobilehide" textAlign="center">{doc.priority}</Table.Cell>
-                        <Table.Cell className="mobilehide" textAlign="left">{this.getDate(doc.modified * 1000)}</Table.Cell>
-                      </Table.Row>
-                    )
-                  })
+                    documents.map((doc, idx) => {
+                      return (
+                        <Table.Row key={`id_${idx}`}>
+                          <Table.Cell style={{wordBreak:'break-all'}} textAlign="left">{doc.title}</Table.Cell>
+                          <Table.Cell singleLine style={{wordBreak:'break-all',maxWidth:'450px'}} textAlign="left">{doc.authors.join(', ')}</Table.Cell>
+                          <Table.Cell className="mobilehide" textAlign="left">{doc.year}</Table.Cell>
+                          <Table.Cell textAlign="left">{doc.keywords}</Table.Cell>
+                          <Table.Cell className="mobilehide" textAlign="center">{doc.priority}</Table.Cell>
+                          <Table.Cell className="mobilehide" textAlign="left">{this.getDate(doc.modified * 1000)}</Table.Cell>
+                        </Table.Row>
+                      )
+                    })
                 }
               </Table.Body>
             </Table>
+}
 
             <div style={spacer}></div>
 

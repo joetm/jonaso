@@ -2,6 +2,7 @@ import React from "react"
 import { Container } from 'semantic-ui-react'
 import { spacer } from "../../common"
 import Influencer from "../../components/influencer"
+import Loading from "../../components/influencerLoading"
 import Layout from "../../components/layout"
 import { Seo } from "../../components/Seo"
 import { sortByKey } from "../../common"
@@ -17,9 +18,11 @@ export function Head() {
   ) //
 }
 
+
 class Influencers extends React.Component {
   state = {
     influencer: [],
+    isLoading: true,
   }
   componentDidMount = () => {
     // get influencer
@@ -32,18 +35,6 @@ class Influencers extends React.Component {
     })
     .then(data => {
       const authors = data // .filter(author => author.num > 1)
-      // aggregate the authors
-      // example what one entry should look like:
-      // tmp['<authorname>'] = {
-      //   'name': '<authorname>',
-      //   'priorities': {
-      //     1: { num: 9 },
-      //     2: { num: 2 },
-      //     3: { num: 1 },
-      //   },
-      //   'num': 13, // overall number of articles
-      //   'priority': 28, // score: level1 * num + level2 * num + level3 * num
-      // }
       const tmp = {}
       authors.forEach(author => {
         if (tmp[author.name]) {
@@ -75,18 +66,24 @@ class Influencers extends React.Component {
       influencer = influencer.filter(author => author.num > 1)
       // influencer = sortByKey(influencer, 'num')
       influencer = sortByKey(influencer, 'priority') // priority score consisting of: 1 * num(1) + 2 * num(2) + 3 * num(3)
-      this.setState({ influencer })
+      this.setState({ influencer, isLoading: false })
     })
   }
   render() {
-    const { influencer } = this.state
+    const { influencer, isLoading } = this.state
     return (
       <Layout>
         <Container>
           <h2 style={{float:'left', display:'inline-block'}}>
             Research Influences
+            { isLoading && <span style={{marginLeft:'1em', fontWeight:100, fontSize:'1em'}}>...loading...</span>}
           </h2>
-          <Influencer influencer={influencer} />
+          {
+            isLoading ?
+              <Loading />
+              :
+              <Influencer influencer={influencer} />
+          }
           <div style={spacer}></div>
         </Container>
       </Layout>
