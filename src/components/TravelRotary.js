@@ -19,6 +19,9 @@ class TravelRotary extends React.Component {
     fetch(TRAVEL)
     .then(response => response.json())
     .then(travel => this.setRotary(travel))
+    .catch(() => {
+        console.error("Error fetching travel.json");
+    });
   }
   setRotary(travel) {
     const Now = new Date()
@@ -70,6 +73,7 @@ class TravelRotary extends React.Component {
   }
   render() {
     const { rotary } = this.state
+    if (!rotary.length) return null;
     return (
       <React.Fragment>
         <Header size="tiny" style={nobottommargin}>Travel</Header>
