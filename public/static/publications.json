@@ -1,17 +1,19 @@
 [
   {
     "DOI": "10.1145/3569219.3569352",
+    "ISBN": "9781450399555",
     "URL": "https://dl.acm.org/doi/10.1145/3569219.3569352",
+    "abstract": "Text-guided synthesis of images has made a giant leap towards becoming a mainstream phenomenon. With text-to-image generation systems, anybody can create digital images and artworks. This provokes the question of whether text-to-image generation is creative. This paper expounds on the nature of human creativity involved in text-to-image art (so-called \u201cAI art\u201d) with a specific focus on the practice of prompt engineering. The paper argues that the current product-centered view of creativity falls short in the context of text-to-image generation. A case exemplifying this shortcoming is provided and the importance of online communities for the creative ecosystem of text-to-image art is highlighted. The paper provides a high-level summary of this online ecosystem drawing on Rhodes\u2019 conceptual four P model of creativity. Challenges for evaluating the creativity of text-to-image generation and opportunities for research on text-to-image generation in the field of Human-Computer Interaction (HCI) are discussed.",
     "author": [
       {
         "family": "Oppenlaender",
         "given": "Jonas"
       }
     ],
-    "collection-title": "Academic Mindtrek \u201922",
-    "container-title": "Proceedings of the 25th international academic mindtrek conference",
+    "collection-title": "Academic mindtrek 2022",
+    "container-title": "25th international academic mindtrek conference",
     "howpublished": "Peer-reviewed Conference Papers",
-    "id": "MindtrekPromptEngineeringCreativity",
+    "id": "10.1145/3569219.3569352",
     "issued": {
       "date-parts": [
         [
@@ -19,7 +21,10 @@
         ]
       ]
     },
-    "publisher": "ACM",
+    "keyword": "prompt engineering, creativity, text-guided image synthesis, text-to-image generation, AI art, generative art, Midjourney",
+    "page": "192-202",
+    "publisher": "Association for Computing Machinery",
+    "publisher-place": "New York, NY, USA",
     "title": "The creativity of text-to-image generation",
     "type": "paper-conference"
   },
@@ -47,17 +52,19 @@
   },
   {
     "DOI": "10.1145/3569219.3569300",
+    "ISBN": "9781450399555",
     "URL": "https://dl.acm.org/doi/10.1145/3569219.3569300",
+    "abstract": "Smart contracts are a method for implementing direct democracy in virtual worlds. However, it is not clear whether voting preferences in the virtual world will mirror real-world voting preferences. We present a within-subject study in which participants were asked to allocate voting power in two scenarios. The first scenario probed participants\u2019 opinion about the divisibility of voting rights. The second scenario presented participants with the case of unequal allocation of voting power in a virtual world, enforced by smart contracts. In both scenarios, participants allocated voting power and rated the fairness of their decision. Our study finds that participants\u2019 voting preferences in the virtual world scenario did not mirror their real-world preferences and beliefs. Voting systems in the metaverse need to be carefully designed to align with human values and ethics.",
     "author": [
       {
         "family": "Oppenlaender",
         "given": "Jonas"
       }
     ],
-    "collection-title": "Academic Mindtrek \u201922",
-    "container-title": "Proceedings of the 25th international academic mindtrek conference",
+    "collection-title": "Academic mindtrek 2022",
+    "container-title": "25th international academic mindtrek conference",
     "howpublished": "Peer-reviewed Conference Papers",
-    "id": "MindtrekMetaverse",
+    "id": "10.1145/3569219.3569300",
     "issued": {
       "date-parts": [
         [
@@ -65,7 +72,10 @@
         ]
       ]
     },
-    "publisher": "ACM",
+    "keyword": "smart contracts, democratic DAO, virtual reality, digital democracy, e-voting, metaverse, participatory decision-making",
+    "page": "1-8",
+    "publisher": "Association for Computing Machinery",
+    "publisher-place": "New York, NY, USA",
     "title": "The perception of smart contracts for governance of the metaverse",
     "type": "paper-conference"
   },
@@ -952,7 +962,7 @@
   {
     "DOI": "10.1145/3321335.3324943",
     "ISBN": "978-1-4503-6751-6",
-    "URL": "https://dl.acm.org/doi/10.1145/3321335.3324943",
+    "URL": "https://public-display-ai.github.io/",
     "author": [
       {
         "family": "Hosio",
@@ -985,7 +995,7 @@
       }
     ],
     "collection-title": "PerDis \u201919",
-    "container-title": "Proceedings of the 8th acm international symposium on pervasive displays",
+    "container-title": "Proceedings of the 8th ACM international symposium on pervasive displays",
     "howpublished": "Peer-reviewed Conference Papers",
     "id": "Hosio:2019:FAP:3321335.3324943",
     "issued": {
