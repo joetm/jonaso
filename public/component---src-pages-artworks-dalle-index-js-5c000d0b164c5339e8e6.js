@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkjonaso_de=self.webpackChunkjonaso_de||[]).push([[133],{82766:function(e,t,a){a.r(t);var l=a(67294),n=a(36204),r=a(66709),s=a(12076);t.default=function(e){var t=e.data,a=t.allFile.edges;return l.createElement(l.Fragment,null,l.createElement(n.Z,{generator:"DALL-E",totalCount:t.allFile.totalCount}),l.createElement(r.Z,{images:a}),l.createElement("div",{className:"spacer",style:s.OF}))}}}]);
-//# sourceMappingURL=component---src-pages-artworks-dalle-index-js-5c000d0b164c5339e8e6.js.map

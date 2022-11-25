@@ -11,10 +11,8 @@ default:
 	##   make pre-build		pre-build actions
 	##   make post-build	post build actions
 	##   make fetch-cv		get the latex cv from overleaf/github and build it
-	##   make move-cv		move the finished cv and clean up directory
 	##   make dev			run the development version of the site
 	##   make refs			build the publication list from .bib file
-	##   make pubs			alias of make refs
 	##   make cv			build the cv pdf
 	##   make tests			run tests (TODO)
 	##   make push   		push to github
@@ -23,14 +21,16 @@ default:
 pre-build:
 	# academic-cv folder exists?
 	# [ -d "academic-cv" ] && rm -rf academic-cv
-
 	make fetch-cv
 	make fetch-pcs
 	make replace-cv
-	make bib-json
+
+	# make bib-json
+	pandoc-citeproc --bib2json ./src/bibliography/publications.bib > ./src/bibliography/publications.json
+	python3 fix-publications-json.py
+
 	make build-cv
 
-	# make rename-artworks
 
 fetch-pcs:
 	# PCS fetching
@@ -43,13 +43,38 @@ rename-artworks:
 		./rename-midjourney.sh
 		./rename-stablediffusion.sh
 
-bib-json:
-	pandoc-citeproc --bib2json ./src/bibliography/publications.bib > ./src/bibliography/publications.json
-	python3 fix-publications-json.py
-
 post-build:
-	make move-cv
+	# move cv
+	mv academic-cv/cv.pdf "public/cv/oppenlaender-cv.pdf"
+	mv academic-cv/publications.pdf "public/cv/oppenlaender-publications.pdf"
+	# TODO # mv academic-cv/out.pdf "public/cv/cv-jonas-oppenlaender-`date '+%Y.%m.%d'`.pdf"
+	mv academic-cv/resume.pdf "public/cv/resume.pdf"
+	rm -rf academic-cv
 
+	# make refs
+	# _dir="$(pwd)/src/bibliography"
+	# create bibliography html
+	# --style "SIGCHI-Reference-Format"
+	# -- style "ACM-Reference-Format"
+	bibtex2html -noheader -nofooter --style "SIGCHI-Reference-Format-MOD" "src/bibliography/publications.bib"
+	# convert html to json
+	php ./parse.php
+	# move json file to public folder
+	mv "./references.json" ./public/static/
+	# copy bib file to public folder
+	cp "src/bibliography/publications.bib" ./public/static/
+	# create detailed references json
+	python3 ./pyparse.py
+	# move json file to public folder
+	# mv ./references-detail.json ./public/static/
+	php ./parsePerType.php
+	# move json file to public folder
+	# mv ./references-type.json ./public/static/
+	rm publications.html
+	# move bib.html file to public folder
+	mv ./publications_bib.html ./public/static/
+
+	# move other files
 	cp ./src/travel.json ./public/
 	cp ./src/projects.json ./public/static/
 	cp ./src/news.json ./public/
@@ -148,43 +173,6 @@ build-cv:
 	cd academic-cv; \
 		pdflatex -halt-on-error -synctex=1 -interaction=batchmode resume.tex; \
 		pdflatex -halt-on-error -synctex=1 -interaction=batchmode resume.tex
-
-
-move-cv:
-	mv academic-cv/cv.pdf "public/cv/oppenlaender-cv.pdf"
-	mv academic-cv/publications.pdf "public/cv/oppenlaender-publications.pdf"
-	# TODO # mv academic-cv/out.pdf "public/cv/cv-jonas-oppenlaender-`date '+%Y.%m.%d'`.pdf"
-	mv academic-cv/resume.pdf "public/cv/resume.pdf"
-	rm -rf academic-cv
-
-pubs:
-	make refs
-	
-refs:
-	# _dir="$(pwd)/src/bibliography"
-	# create bibliography html
-	# --style "SIGCHI-Reference-Format"
-	# -- style "ACM-Reference-Format"
-	bibtex2html -noheader -nofooter --style "SIGCHI-Reference-Format-MOD" "src/bibliography/publications.bib"
-	# convert html to json
-	php ./parse.php
-	# move json file to public folder
-	mv "./references.json" ./public/static/
-	# copy bib file to public folder
-	cp "src/bibliography/publications.bib" ./public/static/
-
-	# create detailed references json
-	python3 ./pyparse.py
-	# move json file to public folder
-	# mv ./references-detail.json ./public/static/
-
-	php ./parsePerType.php
-	# move json file to public folder
-	# mv ./references-type.json ./public/static/
-	rm publications.html
-
-	# move bib.html file to public folder
-	mv ./publications_bib.html ./public/static/
 
 push:
 	# push to github
