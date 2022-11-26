@@ -19,18 +19,18 @@ const ArtPageSwitcher = ({generator}) => {
 		          active={generator === 'Stable Diffusion'}
 				  onClick={handleMenuClick}
     		    />
-    		    <Menu.Item
-        		  name='DALL-E 2'
-    		      folder='dalle'
-		          active={generator === 'DALL-E'}
-				  onClick={handleMenuClick}
-    		    />
 		        <Menu.Item
     		      name='Midjourney'
     		      folder='midjourney'
         		  active={generator === 'Midjourney'}
 				  onClick={handleMenuClick}
 		        />
+    		    <Menu.Item
+        		  name='DALL-E 2'
+    		      folder='dalle'
+		          active={generator === 'DALL-E'}
+				  onClick={handleMenuClick}
+    		    />
 		        <Menu.Item
     		      name='Latent Diffusion'
     		      folder='latent-diffusion'
