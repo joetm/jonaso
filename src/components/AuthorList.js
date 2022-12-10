@@ -1,3 +1,6 @@
+import 'semantic-ui-css/components/label.min.css'
+import 'semantic-ui-css/components/checkbox.min.css'
+
 import React from "react"
 import { Container, Label, Checkbox } from 'semantic-ui-react'
 import md5 from "md5"

@@ -18,10 +18,22 @@ module.exports = {
     // PARTIAL_HYDRATION: true,
   },
   plugins: [
+    // replace react with preact
+    // "gatsby-plugin-preact", // not compatible with React 18
+    // do not generate source maps
     "gatsby-plugin-no-sourcemaps",
     // "gatsby-plugin-react-helmet"
     `gatsby-plugin-react-head`,
     `gatsby-plugin-image`,
+    // performance monitoring
+    "gatsby-plugin-perf-budgets",
+    {
+      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+      options: {
+        devMode: true,
+        disable: false,
+      },
+    },
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
@@ -53,7 +65,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-minify-html',
       options: {
-        debug: true, // debug optional, default false
+        debug: false, // debug optional, default false
         config: {
           // Enabled default by this plugin
           collapseWhitespace: false,

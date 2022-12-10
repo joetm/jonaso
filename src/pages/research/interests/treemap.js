@@ -1,4 +1,5 @@
 import React from "react"
+import 'semantic-ui-css/components/button.min.css'
 import { Container, Button } from 'semantic-ui-react'
 import { ResponsiveContainer, Treemap } from 'recharts'
 import { spacer } from "../../../common"

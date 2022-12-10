@@ -1,5 +1,8 @@
+import 'semantic-ui-css/components/grid.min.css'
+import 'semantic-ui-css/components/item.min.css'
+
 import React from "react"
-import { Image, Header, Item, Grid, Container } from 'semantic-ui-react'
+import { Image, Item, Grid, Container } from 'semantic-ui-react'
 import Layout from "../components/layout"
 import { spacer } from "../common.js"
 import ProjectItem from "../components/ProjectItem"
@@ -12,9 +15,7 @@ const _PROJECTS = '/static/projects.json'
 
 export function Head() {
   return (
-    <Seo
-      title="Projects // jonaso.de"
-    >
+    <Seo title="Projects // jonaso.de">
       <link id="canonical" rel="canonical" href="https://www.jonaso.de/projects" />
     </Seo>
   )
@@ -105,7 +106,7 @@ class Projects extends React.Component {
     return (
       <Layout>
         <Container>
-              <Header id="technical-skills" size="huge">Research Projects</Header>
+              <h1 id="projects">Research Projects</h1>
 
 							<p style={spacer}>
                 &rarr; To view my web development projects, visit my <a href="https://www.jonaso.de/portfolio/">portfolio</a>.
@@ -120,7 +121,7 @@ class Projects extends React.Component {
 
 							        <Container>
                       <Grid.Row>
-                        <Header>{title}{subtitle ? ` – ${subtitle}` : null}</Header>
+                        <h2>{title}{subtitle ? ` – ${subtitle}` : null}</h2>
                       </Grid.Row>
 							        </Container>
 
@@ -153,7 +154,7 @@ class Projects extends React.Component {
 
                             {
                               medium.length > 0 &&
-                                <Header size="small">Medium</Header>
+                                <h3>Medium</h3>
                             }
                             {
                               medium.map((post, i) => <ProjectItem key={`${title}_${i}`} item={post} i={i} /> )
@@ -161,7 +162,7 @@ class Projects extends React.Component {
 
                             {
                               presentations.length > 0 &&
-                                <Header size="small">Presentations</Header>
+                                <h3>Presentations</h3>
                             }
                             {
                               presentations.map((pres, i) => <ProjectItem key={`${title}_${i}`} item={pres} i={i} /> )
@@ -169,7 +170,7 @@ class Projects extends React.Component {
 
                             {
                               workshops.length > 0 &&
-                                <Header size="small">Workshops</Header>
+                                <h3>Workshops</h3>
                             }
                             {
                               workshops.map((pres, i) => <ProjectItem key={`${title}_${i}`} item={pres} i={i} /> )
@@ -178,7 +179,7 @@ class Projects extends React.Component {
                             {
                               /*
                               publications.length > 0 &&
-                                <Header size="small">Publications</Header>
+                                <h3>Publications</h3>
                             }
                             {
                               publications.map(pubkey => <div key={pubkey}>

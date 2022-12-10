@@ -1,9 +1,15 @@
+import 'semantic-ui-css/components/button.min.css'
+import 'semantic-ui-css/components/grid.min.css'
+import 'semantic-ui-css/components/icon.min.css'
+import 'semantic-ui-css/components/item.min.css'
+
 import React from "react"
-import { Button, Header, Item, Icon, Grid, Container } from 'semantic-ui-react'
+import { Item, Grid, Container } from 'semantic-ui-react'
+import Button from 'semantic-ui-react/dist/es/elements/Button/Button.js'
+import Icon from 'semantic-ui-react/dist/es/elements/Icon/Icon.js'
 import { Bar, BarChart, XAxis, YAxis, Tooltip, LabelList, CartesianGrid, ResponsiveContainer } from 'recharts'
 // import useDetectPrint from 'use-detect-print'
 import Layout from "../components/layout"
-import "semantic-ui-css/components/grid.min.css"
 import { spacer, noMarginGrid } from "../common"
 import { Seo } from "../components/Seo"
 
@@ -36,13 +42,11 @@ const _REFERENCES_PER_TYPE = "https://raw.githubusercontent.com/joetm/jonaso/mas
 
 export function Head() {
   return (
-    <Seo
-      title="Publications // jonaso.de"
-    >
+    <Seo title="Publications // jonaso.de">
       <link id="canonical" rel="canonical" href="https://www.jonaso.de/publications" />
     </Seo>
   )
-}
+} //
 
 /**
  * Group publications by year
@@ -67,7 +71,7 @@ function categorizeListPerYear(pubList) {
       }
     })
     return categorizedList
-}
+} //
 
 
 const PdfPubsButton = () => (
@@ -76,7 +80,7 @@ const PdfPubsButton = () => (
       <Icon size='large' name='file pdf outline' />
     </a>
   </div>
-)
+) //
 
 const SwitchBtn = ({active, switchPubView}) => (
   <Button.Group>
@@ -213,7 +217,7 @@ class Publications extends React.Component {
                   return (
                     <Grid key={typ} style={noMarginGrid}>
                         <Grid.Row>
-                          <Header size="large">{typ}</Header>
+                          <h1>{typ}</h1>
                         </Grid.Row>
                         {
                           referencesDetail[typ] && referencesDetail[typ].map((ref, index) => {
@@ -262,7 +266,7 @@ class Publications extends React.Component {
                   return (
                     <Grid key={year} style={noMarginGrid}>
                         <Grid.Row>
-                          <Header size="large">{year}</Header>
+                          <h2>{year}</h2>
                         </Grid.Row>
                         {
                           references[year].map((item, index) => {

@@ -1,5 +1,8 @@
+import 'semantic-ui-css/components/icon.min.css'
+
 import React from 'react'
-import { Menu, Icon } from 'semantic-ui-react'
+import { Menu } from 'semantic-ui-react'
+import Icon from 'semantic-ui-react/dist/es/elements/Icon/Icon.js'
 
 const MenuItem = ({activeItem, handleItemClick, item, url = null}) => {
     const lcitem = item.toLowerCase()

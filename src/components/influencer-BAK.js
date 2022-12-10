@@ -1,6 +1,8 @@
 /*
   DEV: this is supposed to become an up-to-date reading list synced from my PC
 */
+import 'semantic-ui-css/components/label.min.css'
+import 'semantic-ui-css/components/checkbox.min.css'
 
 import React from "react"
 import { Container, Label, Checkbox } from 'semantic-ui-react'

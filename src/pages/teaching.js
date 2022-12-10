@@ -1,5 +1,7 @@
+import 'semantic-ui-css/components/item.min.css'
+
 import React from "react"
-import { Header, Item, Container } from 'semantic-ui-react'
+import { Item, Container } from 'semantic-ui-react'
 import { Seo } from "../components/Seo"
 
 import Layout from "../components/layout"
@@ -25,18 +27,15 @@ export function Head() {
       <link id="canonical" rel="canonical" href="https://www.jonaso.de/teaching" />
     </Seo>
   )
-}
+} //
 
 class Teaching extends React.Component {
-  // redirectToPortfolio = () => {
-  //   window.location = _PORTFOLIO_URL
-  // }
   render() {
         return (
             <Layout>
               <Container>
 
-                <Header id="education" size="large">Teaching Assistant</Header>
+                <h1 id="education" style={{textAlign:'center'}}>Teaching Assistant</h1>
 
                   <Item.Group>
 
