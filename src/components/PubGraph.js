@@ -1,5 +1,5 @@
 import React from "react"
-import { Header, Container } from 'semantic-ui-react'
+import { Container } from 'semantic-ui-react'
 import { Bar, BarChart, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts'
 import moment from 'moment'
 
@@ -61,7 +61,7 @@ class PubGraph extends React.Component {
     const { docs } = this.state
     return (
         <Container>
-          <Header size="large">Timeline</Header>
+          <h1>Timeline</h1>
           <ResponsiveContainer width="100%" height={150}>
           <BarChart data={docs}>
             <XAxis

@@ -1,9 +1,10 @@
 /*
   DEV: this is supposed to become an up-to-date reading list synced from my PC
 */
+import 'semantic-ui-css/components/loader.min.css'
 
 import React from "react"
-import { Table, Header, Container, Loader, Segment, Dimmer } from 'semantic-ui-react'
+import { Table, Container, Loader, Segment, Dimmer } from 'semantic-ui-react'
 import Layout from "../../components/layout"
 import PubGraph from "../../components/PubGraph.js"
 import { spacer } from "../../common"
@@ -86,11 +87,11 @@ class ReadingList extends React.Component {
 
             <PubGraph documents={documents} />
 
-            <Header size="large">
+            <h1>
               100 Recently Read Publications
               <div style={styles.lastupdate}><span className="mobilehide">Last updated:</span> <span>{modified}</span></div>
               <div style={styles.unrecognized}>Unrecognized overall: <span>{unrecognized_overall} ({unrecognized_overall_percent * 100}%)</span></div>
-            </Header>
+            </h1>
 
 {
   isLoading ?

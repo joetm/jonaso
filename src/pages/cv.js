@@ -1,5 +1,10 @@
+import 'semantic-ui-css/components/grid.min.css'
+import 'semantic-ui-css/components/icon.min.css'
+import 'semantic-ui-css/components/item.min.css'
+
 import React from "react"
-import { Grid, Icon, List, Segment, Item, Container } from 'semantic-ui-react'
+import { Grid, List, Segment, Item, Container } from 'semantic-ui-react'
+import Icon from 'semantic-ui-react/dist/es/elements/Icon/Icon.js'
 import Layout from "../components/layout"
 import { Seo } from "../components/Seo"
 

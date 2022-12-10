@@ -1,8 +1,7 @@
 // import 'semantic-ui-css/components/card.min.css'
 
 import React from "react"
-// Card, Image, Label
-import { Container, Header } from 'semantic-ui-react'
+import { Container } from 'semantic-ui-react'
 import Layout from "../components/layout"
 import { spacer } from "../common"
 import { Seo } from "../components/Seo"
@@ -43,7 +42,7 @@ class JufoPage extends React.Component {
     return (
 	   	<Layout>
 	      <Container>
-					<Header as='h1' textAlign='center' content="Jufo Points" />
+					<h1>Jufo Points</h1>
 	        <section style={{textAlign:'center'}}>
 	        	<p style={{fontSize:'22pt'}}>{jufo ? <span>&asymp; {jufo}</span> : 'loading'}</p>
 	        </section>

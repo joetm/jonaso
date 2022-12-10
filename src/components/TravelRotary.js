@@ -1,6 +1,6 @@
 import React from "react"
-import { Header, List } from 'semantic-ui-react'
-import { nobottommargin } from '../common'
+import { List } from 'semantic-ui-react'
+// import { nobottommargin } from '../common'
 
 
 const TRAVEL = 'https://raw.githubusercontent.com/joetm/jonaso/master/public/travel.json'
@@ -76,9 +76,9 @@ class TravelRotary extends React.Component {
     if (!rotary.length) return null;
     return (
       <React.Fragment>
-        <Header size="tiny" style={nobottommargin}>Travel</Header>
+        <strong>Travel</strong>
         {/* / */}
-        <List>
+        <List style={{marginTop:0}}>
             {
                 rotary.map(item => {
                   let dateString = ""

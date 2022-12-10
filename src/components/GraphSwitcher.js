@@ -1,5 +1,6 @@
 import React from "react"
 import { navigate } from 'gatsby'
+import 'semantic-ui-css/components/button.min.css'
 import { Button } from 'semantic-ui-react'
 
 

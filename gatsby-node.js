@@ -5,6 +5,22 @@ exports.onPreBuild = () => {
   rimraf.sync(PUBLIC_FOLDER + '/*');
 };
 
+// replace react with preact
+// exports.onCreateWebpackConfig = ({ actions }) => {
+//   // React-dom is hardcoded as part of react-hot-loader
+//   // in the development server. So we either avoid Preact
+//   // during development or switch to fast-refresh and loose
+//   // hot reloading capabilities.
+//   actions.setWebpackConfig({
+//     resolve: {
+//       alias: {
+//         react: `preact/compat`,
+//         "react-dom": `preact/compat`,
+//         "react-dom/server": `preact/compat`,
+//       },
+//     },
+//   })
+// }
 
 // https://blog.greenroots.info/gatsby-the-window-is-not-defined-error-what-and-how-to-fix-it
 // skip file during server-side rendering

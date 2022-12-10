@@ -1,5 +1,9 @@
+import 'semantic-ui-css/components/grid.min.css'
+import 'semantic-ui-css/components/icon.min.css'
+
 import React from "react"
-import { Grid, Divider, Image, Container, Icon } from 'semantic-ui-react'
+import { Grid, Divider, Image, Container } from 'semantic-ui-react'
+import Icon from 'semantic-ui-react/dist/es/elements/Icon/Icon.js'
 import { Link } from "gatsby"
 import { Seo } from "../components/Seo"
 
@@ -134,11 +138,11 @@ class Home extends React.Component {
 
                 {/*
                 <p>
-        	        <Header size="tiny" style={{...nobold, ...notopmargin, ...nobottommargin}}>My <strong>primary research interests</strong> are:</Header>
+        	        <h4 style={{...nobold, ...notopmargin, ...nobottommargin}}>My <strong>primary research interests</strong> are:</h4>
             	      { keywords.primary.join(", ") }
                 </p>
                 <p>
-	                <Header size="tiny" style={{...nobold, ...notopmargin, ...nobottommargin}}><strong>Further research interests</strong> include:</Header>
+	                <h4 style={{...nobold, ...notopmargin, ...nobottommargin}}><strong>Further research interests</strong> include:</h4>
     	              { keywords.secondary.join(", ") }
                 </p>
                 */}
@@ -187,7 +191,7 @@ class Home extends React.Component {
                 </aside>
 
                 {/*
-                <Header size="tiny" style={nobottommargin}>Office Address:</Header>
+                <h4 style={nobottommargin}>Office Address:</h4>
                 */}
 
               {/*
