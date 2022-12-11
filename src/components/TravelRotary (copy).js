@@ -1,4 +1,5 @@
 import React from "react"
+import { List } from 'semantic-ui-react'
 // import { nobottommargin } from '../common'
 
 
@@ -77,8 +78,7 @@ class TravelRotary extends React.Component {
       <React.Fragment>
         <strong>Travel</strong>
         {/* / */}
-
-        <div role="list" class="ui list" style={{marginTop: "0px"}}>
+        <List style={{marginTop:0}}>
             {
                 rotary.map(item => {
                   let dateString = ""
@@ -88,26 +88,27 @@ class TravelRotary extends React.Component {
                   if ('date' in item) {
                     dateString = item.date.getDate() + '.' + (item.date.getMonth() + 1) + '.' + item.date.getFullYear()
                   }
-                  let icnName = item.isRunning ? 'marker' : ['confirmed', 'canceled'].indexOf(item.status) === -1 ? 'calendar' : item.isPast ? 'checkmark' : 'calendar'
-                  icnName = icnName + " icon"
                   return (
-                    <div role="listitem"
-                      key={item.event}
-                      className="item"
+                    <List.Item key={item.event}
                       title={item.isRunning ? 'attending' : item.status}
                       style={{
                         color: item.isRunning ? '#008080' : item.isPast ? '#AAAAAA' : '#000000',
                         fontWeight: item.isRunning ? 'bold' : 'inherit',
                         textDecoration: this.stati[item.status],
                         cursor: 'default',
-                      }}>
-                        <i aria-hidden="true" className={icnName}></i>{[item.event,dateString,item.location].join(", ")}
-                    </div>
+                    }}>
+                        <List.Icon
+                          name={
+                            item.isRunning ? 'marker' : 
+                            ['confirmed', 'canceled'].indexOf(item.status) === -1 ? 'calendar' :
+                            item.isPast ? 'checkmark' : 'calendar'
+                        } />
+                        {[item.event,dateString,item.location].join(", ")}
+                    </List.Item>
                   );
                 })
             }
-        </div>
-
+        </List>
       </React.Fragment>
     )
   }

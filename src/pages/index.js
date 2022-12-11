@@ -1,13 +1,13 @@
 import 'semantic-ui-css/components/grid.min.css'
 import 'semantic-ui-css/components/icon.min.css'
+import "../../libs/academicons/css/academicons.min.css"
 
 import React from "react"
-import { Grid, Divider, Image, Container } from 'semantic-ui-react'
+import { Grid } from 'semantic-ui-react'
 import Icon from 'semantic-ui-react/dist/es/elements/Icon/Icon.js'
 import { Link } from "gatsby"
 import { Seo } from "../components/Seo"
 
-import "../../libs/academicons/css/academicons.min.css"
 import TravelRotary from "../components/TravelRotary"
 import img from "../img/Jonas-Oppenlaender-500x500.jpg"
 // import ACMDL from "../img/ACM-DL-Logo-size3.webp"
@@ -50,13 +50,11 @@ const styles = {
 
 export function Head() {
   return (
-    <Seo
-      title="Jonas Oppenlaender, Doctor of Science (Technology)"
-    >
+    <Seo title="Jonas Oppenlaender, Doctor of Science (Technology)">
       <link id="canonical" rel="canonical" href="https://www.jonaso.de" />
     </Seo>
   )
-}
+} //
 
 class Home extends React.Component {
   constructor (props) {
@@ -69,7 +67,8 @@ class Home extends React.Component {
 
     return (
       <Layout>
-        <Container>
+        {/* <Container> */}
+        <div className="ui container">
 
           <Grid columns={2} divided reversed='mobile vertically'>
             <Grid.Column
@@ -161,7 +160,7 @@ class Home extends React.Component {
 
               <Grid.Row>
 
-                <Image src={img} alt="Jonas Oppenlaender" rounded fluid />
+                <img src={img} alt="Jonas Oppenlaender" className="ui fluid rounded image" />
 
                 <p style={{marginTop:'1em'}}>
                 Tutkijatohtori (Postdoctoral Researcher)
@@ -209,7 +208,7 @@ class Home extends React.Component {
             </Grid.Column>
           </Grid>
 
-          <Divider />
+          <div className="ui divider"></div>
 
           <a href="https://www.linkedin.com/in/jonasopp/" target="_blank" rel="noopener noreferrer">
               <Icon title="Jonas Oppenlaender on LinkedIn" link={true} color="grey" size="big" name='linkedin square' />
@@ -226,6 +225,7 @@ class Home extends React.Component {
           <a href="https://orcid.org/0000-0002-2342-1540">
               <i style={styles.academicon} title="Jonas Oppenlaender on ORCID" className="ai ai-orcid-square ai-2x"></i>
           </a>
+      }
 
 {/*
           <a href="https://medium.com/@j.oppenlaender" target="_blank" rel="noopener noreferrer">
@@ -266,7 +266,7 @@ class Home extends React.Component {
               <i style={styles.academicon} title="Jonas Oppenlaender on Google Scholar" className="ai ai-google-scholar-square ai-2x"></i>
           </a>
 
-        </Container>
+        </div>
       </Layout>
     )
   }
