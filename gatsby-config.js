@@ -26,14 +26,14 @@ module.exports = {
     `gatsby-plugin-react-head`,
     `gatsby-plugin-image`,
     // performance monitoring
-    "gatsby-plugin-perf-budgets",
-    {
-      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
-      options: {
-        devMode: true,
-        disable: false,
-      },
-    },
+    // "gatsby-plugin-perf-budgets",
+    // {
+    //   resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+    //   options: {
+    //     devMode: true,
+    //     disable: false,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
