@@ -64,7 +64,6 @@ class Influencers extends React.Component {
         influencer.push(tmp[key])
       }
       influencer = influencer.filter(author => author.num > 1)
-      // influencer = sortByKey(influencer, 'num')
       influencer = sortByKey(influencer, 'priority') // priority score consisting of: 1 * num(1) + 2 * num(2) + 3 * num(3)
       this.setState({ influencer, isLoading: false })
     })

@@ -73,7 +73,7 @@ const Wrapper = {
 
 // ----------------
 
-const DetailContainer = ({authorid, details, priority, keywordClick, activeKeyword, toggleCoauthors, coauthorToggleActive, updateActive}) => {
+const DetailContainer = ({authorid, details, keywordClick, activeKeyword, toggleCoauthors, coauthorToggleActive, updateActive}) => {
   const { docs=[], keywords=[] } = details
   // const kwlist = keywords.join(", ")
   const kwlist = keywords.map((kw, i) => (
@@ -258,7 +258,7 @@ class AuthorList extends React.Component {
     })
   }
   render () {
-    const { list, priority, activeid, activeAuthors, updateActive } = this.props
+    const { list, activeid, activeAuthors, updateActive } = this.props
     const { details, activeKeyword, coauthorToggleActive, coauthors } = this.state
     // need to get min and max for color scaling:
     // const maxNum = Math.max.apply(Math, list.map(o => o.num))
@@ -301,7 +301,6 @@ class AuthorList extends React.Component {
                   <DetailContainer
                   	authorid={author.id}
                   	activeKeyword={activeKeyword}
-                  	priority={priority}
                   	details={details[author.id]}
                   	keywordClick={this.keywordClick}
                     toggleCoauthors={this.toggleCoauthors}
@@ -334,7 +333,6 @@ class Influencer extends React.Component {
         <Container>
           <div className="clear">
             <AuthorList
-            	priority={3}
             	list={influencer}
             	activeid={activeid}
             	activeAuthors={activeAuthors}

@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
 ./analyze.php
+
+# produce a flat file of influencers but with duplicates (influencer prio 1, influencer prio 2, influencer prio 3)
+./create_allauthors.py
+
 git add -A
 git commit -m "update influencers"
 git push
