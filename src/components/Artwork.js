@@ -1,18 +1,18 @@
 import React from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
+// import { GatsbyImage } from "gatsby-plugin-image"
 
 const Artwork = ({image}) => {
-	if (!image) {
-		return
-	}
+	// if (!image) {
+	// 	return
+	// }
+	let src = `https://www.jonaso.de/{image}`
+	console.log(src)
 	return (
-		<GatsbyImage
-	      image={image}
+		<img
+	      src={src}
 	      alt=""
-	      layout="constrained"
-	      placeholder="dominantColor"
 	      loading="lazy"
-    />
+	    />
 	)
 }
 

@@ -83,6 +83,14 @@ post-build:
 	# copy fetched PCS data
 	cp ./stat_aggregator/peer-reviews.json ./public/peer-reviews.json
 
+	# PROCESS ARTWORK IMAGES
+	python3 processImages.py
+	if [ -d "./artworks-json" ];then \
+		rm -rf ./artworks-json; \
+	fi
+	
+
+
 fetch-cv:
 	if [ -d "./academic-cv" ];then \
 		rm -rf ./academic-cv; \
