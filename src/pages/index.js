@@ -81,27 +81,27 @@ class Home extends React.Component {
               <Grid.Row>
 
                 <p>
+
                   I am <strong>Jonas Oppenlaender</strong>, a postdoctoral researcher at the <a href="https://www.jyu.fi/en" target="_blank" rel="noreferrer">University of Jyv&auml;skyl&auml;</a> in Central Finland.
-                </p>
+                  </p>
 
-                <p>
-                  I completed my PhD in Associate Prof. <a href="https://simohosio.com/">Simo Hosio</a>'s <a href={'https://ubicomp.oulu.fi/research/cc/'}>Crowd Computing Group</a> at the <a href={"https://www.oulu.fi/"}>University of Oulu</a> in Northern Finland.
-                  {' '}
-                  My doctoral thesis was awarded a disctinction and focused on how creative work is perceived by workers on microtask crowdsourcing platforms as well as crowd feedback systems.
-                </p>
-
-                <p>
-                  Previously, I was a Senior Researcher/PostDoc at <a href="https://www.fiz-karlsruhe.de/" target="_blank" rel="noopener noreferrer nofollow">FIZ Karlsruhe</a> (Leibniz Institute for Information Infrastructure) and <a href="https://www.kit.edu/" rel="noopener noreferrer nofollow" target="_blank">Karlsruhe Institute of Technology (KIT)</a>.
+                  <p>
+                  Before, I was a Senior Researcher/PostDoc at <a href="https://www.fiz-karlsruhe.de/" target="_blank" rel="noopener noreferrer nofollow">FIZ Karlsruhe</a> (Leibniz Institute for Information Infrastructure) and <a href="https://www.kit.edu/" rel="noopener noreferrer nofollow" target="_blank">Karlsruhe Institute of Technology (KIT)</a>.
                   {" "}
                   Prior to my doctoral position at the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a>, I was a researcher (Wissenschaftlicher Mitarbeiter) at the <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/" rel="nofollow">Human-Centered Computing</a> group, <a href="https://www.fu-berlin.de/">Freie Universit&auml;t Berlin</a>
                   {" "}
                   and the <a href="https://gepris.dfg.de/gepris/projekt/194453117/ergebnisse?context=projekt&task=showDetail&id=194453117">Cluster of Excellence "Bild Wissen Gestaltung"</a> in Berlin.
                   {" "}
-                  I hold a MSc degree in Computer Science (with Distinction)
-                  from the <a href="https://www.southampton.ac.uk/">University of Southampton</a> and studied Industrial Engineering at the <a href={'https://www.tu-darmstadt.de/'}>Technical University of Darmstadt</a> in Germany and <a href={'https://liu.se/en'}>Link&ouml;ping University</a> in Sweden (leading to the degree of Diplom-Wirtschaftsingenieur).
-                  {" "}
                   Before that, I worked in agile teams as a web developer at <a href="https://www.seme4.com/">Seme4</a> and <a href="https://www.liip.ch/">Liip</a>.
                   I also gained industry experience as Business Analyst and Strategy Analyst at <a href="https://www.alstom.com/">Alstom</a> (now <a href="https://www.ge.com/">GE</a>).
+                  </p>
+
+                <p>                  
+                  I received my PhD from the <a href={"https://www.oulu.fi/"}>University of Oulu</a> in Associate Prof. <a href="https://simohosio.com/">Simo Hosio</a>'s <a href={'https://ubicomp.oulu.fi/research/cc/'}>Crowd Computing Group</a>.
+                  {' '}
+                  My doctoral thesis was awarded a disctinction and focused on creativity in microtask crowdsourcing platforms as well as creativity support tools and crowd feedback systems.
+                                    I hold a MSc degree in Computer Science (with Distinction)
+                  from the <a href="https://www.southampton.ac.uk/">University of Southampton</a> and studied Industrial Engineering at the <a href='https://www.tu-darmstadt.de/'>Technical University of Darmstadt</a> in Germany and <a href="https://liu.se/en">Link&ouml;ping University</a> in Sweden (leading to the degree of Diplom-Wirtschaftsingenieur).
                 </p>
 
                 <p>
