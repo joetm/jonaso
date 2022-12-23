@@ -19,7 +19,7 @@ const ArtHeader = ({generator, byline, totalCount}) => {
                 byline ?
                   byline
                     :
-                  `${totalCount} images`
+                  totalCount === 0 ? (<span>&nbsp;</span>) : `${totalCount} images`
               }
               </p>
             </section>
