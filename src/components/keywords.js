@@ -59,6 +59,7 @@ class Keywords extends React.Component {
     this.setState({
       isZoomed: false,
       level2: [],
+      color: colorDefault
     })
   }
   // changeChartType = (chart) => this.setState({chart})
