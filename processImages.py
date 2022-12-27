@@ -7,6 +7,7 @@ Resize images and copy them to the static folder
 import os, sys
 import json
 from PIL import Image
+import numpy as np
 # for getting dominany color
 # from colorthief import ColorThief
 
@@ -58,6 +59,10 @@ with open(f'artworks-json/latest.json', 'w') as f:
 
 
 
+def rgb_to_hex(r, g, b):
+  return ('{:X}{:X}{:X}').format(r, g, b)
+
+
 # PROCESS IMAGES
 
 root = 'artworks-json'
@@ -99,6 +104,11 @@ for path, subdirs, files in os.walk(root):
       width = 400
       height = int(400/ar)
 
+      average_color_row = np.average(im, axis=0)
+      average_color = np.average(average_color_row, axis=0)
+      average_color = [ int(x) for x in average_color ]
+      # average_color = "#" + rgb_to_hex(average_color[0], average_color[1], average_color[2])
+
       # cache check - skip if file already exists
       if not os.path.isfile(webpoutpath):
         im400 = im.resize((width,height))
@@ -113,7 +123,7 @@ for path, subdirs, files in os.walk(root):
       webpoutpath = webpoutpath.split('/')[1:]
       webpoutpath = "https://www.jonaso.de/" + "/".join(webpoutpath)
 
-      convertedimgs.append((webpoutpath, width, height))
+      convertedimgs.append((webpoutpath, width, height, average_color))
 
     # write json with webp
     json.dump(convertedimgs, open(os.path.join(outroot, 'artworks',  f'webp-{cat}.json'), 'w'))

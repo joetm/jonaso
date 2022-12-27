@@ -33,7 +33,7 @@ const MasonryGallery = ({images}) => {
 							</div>
 							<div
 								aria-hidden="true"
-								style={{opacity: 0, transition: 'opacity 500ms linear 0s', backgroundCcolor: 'rgb(248, 248, 232)', position: 'absolute', inset: '0px', objectFit: 'cover'}}
+								style={{opacity: 0, transition: 'opacity 500ms linear 0s', backgroundCcolor: 'rgb({img[3][0]}, {img[3][1]}, {img[3][2]})', position: 'absolute', inset: '0px', objectFit: 'cover'}}
 							></div>
 							<picture>
 								<source
