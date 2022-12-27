@@ -92,11 +92,6 @@ for path, subdirs, files in os.walk(root):
 
       im = Image.open(imgpath)
 
-      # very slow!
-      # color_thief = ColorThief(imgpath)
-      # # get the dominant color
-      # dominant_color = color_thief.get_color(quality=1)
-
       # resize with aspect ratio
       w, h = im.size
       ar = w/h
@@ -104,10 +99,13 @@ for path, subdirs, files in os.walk(root):
       width = 400
       height = int(400/ar)
 
-      average_color_row = np.average(im, axis=0)
-      average_color = np.average(average_color_row, axis=0)
-      average_color = [ int(x) for x in average_color ]
-      # average_color = "#" + rgb_to_hex(average_color[0], average_color[1], average_color[2])
+      try:
+        average_color_row = np.average(im, axis=0)
+        average_color = np.average(average_color_row, axis=0)
+        average_color = [ int(x) for x in average_color ]
+        average_color = "#" + rgb_to_hex(average_color[0], average_color[1], average_color[2])
+      except:
+        average_color = "#" + rgb_to_hex(222, 222, 222)
 
       # cache check - skip if file already exists
       if not os.path.isfile(webpoutpath):
