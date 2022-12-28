@@ -10,6 +10,7 @@ import { Seo } from "../components/Seo"
 
 import TravelRotary from "../components/TravelRotary"
 import img from "../img/Jonas-Oppenlaender-500x500.jpg"
+import LINKEDIN from "../img/linkedin.png"
 // import ACMDL from "../img/ACM-DL-Logo-size3.webp"
 // import MEDIUM from "../img/monogram-mask.svg"
 // import WIKIDATA from "../img/wikidata.png"
@@ -222,11 +223,10 @@ class Home extends React.Component {
           <div className="ui divider"></div>
 
           <a href="https://www.linkedin.com/in/jonasopp/" target="_blank" rel="noopener noreferrer">
-              <Icon title="Jonas Oppenlaender on LinkedIn" link={true} color="grey" size="big" name='linkedin square' />
-          </a>
-
-          <a href="https://twitter.com/Duesynapse" target="_blank" rel="noopener noreferrer">
-              <Icon title="Jonas Oppenlaender on Twitter" link={true} color="grey" size="big" name='twitter square' />
+              <i style={{display:'inline-block', width: '25px', height: '25px',
+                backgroundImage: `url(${LINKEDIN})`,
+                verticalAlign: 'middle', backgroundPosition: 'center center', lineHeight: 1,
+                margin: '0 0.5rem 0 0rem', backgroundSize: 'cover', opacity: 0.45}} title="Jonas Oppenlaender on LinkedIn"></i>
           </a>
 
           <a href="https://github.com/joetm" target="_blank" rel="noopener noreferrer">
@@ -236,9 +236,16 @@ class Home extends React.Component {
           <a href="https://orcid.org/0000-0002-2342-1540">
               <i style={styles.academicon} title="Jonas Oppenlaender on ORCID" className="ai ai-orcid-square ai-2x"></i>
           </a>
-      }
 
 {/*
+          <a href="https://twitter.com/Duesynapse" target="_blank" rel="noopener noreferrer">
+              <Icon title="Jonas Oppenlaender on Twitter" link={true} color="grey" size="big" name='twitter square' />
+          </a>
+
+          <a href="https://www.linkedin.com/in/jonasopp/" target="_blank" rel="noopener noreferrer">
+              <Icon title="Jonas Oppenlaender on LinkedIn" link={true} color="grey" size="big" name='linkedin square' />
+          </a>
+
           <a href="https://medium.com/@j.oppenlaender" target="_blank" rel="noopener noreferrer">
               <i style={{display:'inline-block', width: '25px', height: '25px',
                 backgroundImage: `url(${MEDIUM})`,
@@ -257,9 +264,6 @@ class Home extends React.Component {
               <i style={styles.academicon} title="Jonas Oppenlaender on ArXiv" className="ai ai-arxiv-square ai-2x"></i>
           </a>
 
-          <a href="https://figshare.com/authors/Jonas_Oppenlaender/4813044">
-              <i style={styles.academicon} title="Jonas Oppenlaender on Figshare" className="ai ai-figshare-square ai-2x"></i>
-          </a>
 
           <a className="mobilehide" href="https://dblp.uni-trier.de/pers/hd/o/Oppenlaender:Jonas">
               <i style={styles.academicon} title="Jonas Oppenlaender on DBLP" className="ai ai-dblp-square ai-2x"></i>
@@ -270,6 +274,10 @@ class Home extends React.Component {
                 backgroundImage: `url(${WIKIDATA})`,
                 verticalAlign: 'middle', backgroundPosition: 'center center', lineHeight: 1,
                 margin: '0px 0.5rem 0px 0.25rem', backgroundSize: 'cover', opacity: 0.45}} title="Jonas Oppenlaender on Wikidata"></i>
+          </a>
+
+          <a href="https://figshare.com/authors/Jonas_Oppenlaender/4813044">
+              <i style={styles.academicon} title="Jonas Oppenlaender on Figshare" className="ai ai-figshare-square ai-2x"></i>
           </a>
 */}
 
