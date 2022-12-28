@@ -2,6 +2,12 @@
   display: block;
 }
 
+/*
+.my-masonry-grid_column > div {
+  background: inherit;
+}
+*/
+
 @media only screen and (min-width: 768px) {
   .masonry.grid {
     -webkit-column-count: 2;
