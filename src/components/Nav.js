@@ -9,13 +9,12 @@ const styles = {
 }
 
 
-const MenuItem = ({activeItem, handleItemClick, item, url = null}) => {
-    const lcitem = item.toLowerCase()
+const MenuItem = ({active, handleItemClick, item, url = null}) => {
     return (
       <Menu.Item
-        name={lcitem}
+        name={item}
         url={url}
-        active={activeItem === lcitem}
+        active={active}
         onClick={handleItemClick}
       >
         {item}
@@ -28,22 +27,22 @@ export default class Nav extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      activeItem: 'home',
+      activeItem: '',
       researchNavOpen: false,
     };
   }
   handleItemClick = (e, { name, url }) => {
     e.preventDefault()
-    let activeItem = name.toLowerCase()
+    const activeItem = name.toLowerCase()
     this.setState({ activeItem })
-    if (name === 'home') {
+    if (activeItem === 'home') {
       navigate('/')
     } else {
       if (url) {
         url = url.charAt(0) === '/' ? url.slice(1) : url;
         navigate(`/${url}`)
       } else {
-        navigate(`/${name}`)
+        navigate(`/${activeItem}`)
       }
     }
   }
@@ -52,7 +51,7 @@ export default class Nav extends React.Component {
   }
   componentDidMount() {
     let url = this.prepareUrl(window.location.pathname)
-    let researchNavOpen = url.startsWith('research')
+    let researchNavOpen = url.startsWith('research') || url.startsWith('publications') || url.startsWith('projects')
     this.setState({
       activeItem: url || 'home',
       researchNavOpen,
@@ -60,23 +59,24 @@ export default class Nav extends React.Component {
   }
   render() {
     const { activeItem, researchNavOpen } = this.state
+
     return (
       <header>
         <div id="desktopmenu">
           <Menu fluid pointing stackable primary="true" widths="7">
-            <MenuItem active={activeItem === 'home'} item='Home' handleItemClick={this.handleItemClick} />
-            <MenuItem active={activeItem === 'publications'} item='Publications' handleItemClick={this.handleItemClick} />
-            <MenuItem active={activeItem.startsWith('artworks')} item='Artworks' link={false} header={true} handleItemClick={this.handleItemClick} />
-            <MenuItem active={activeItem === 'projects'} item='Projects' handleItemClick={this.handleItemClick} />
-            <MenuItem active={activeItem === 'cv'} item='CV' handleItemClick={this.handleItemClick} />
-            <MenuItem active={activeItem.startsWith('research')} item='Research' link={false} header={true} handleItemClick={this.handleItemClick} />
+            <MenuItem key="home" active={activeItem === 'home'} item='Home' handleItemClick={this.handleItemClick} />
+            <MenuItem key="artworks" active={activeItem.startsWith('artworks')} item='Artworks' link={false} header={true} handleItemClick={this.handleItemClick} />
+            <MenuItem key="cv" active={activeItem === 'cv'} item='CV' handleItemClick={this.handleItemClick} />
+            <MenuItem key="research" active={activeItem.startsWith('research') || activeItem === 'publications' || activeItem === 'projects'} item='Research' link={false} header={true} handleItemClick={this.handleItemClick} />
           </Menu>
           {
             researchNavOpen &&
               <Menu pointing stackable secondary size="small" widths="7">
-                <MenuItem active={activeItem === 'researchinterests'} item='Interests' url='/research/interests' handleItemClick={this.handleItemClick} />
-                <MenuItem active={activeItem === 'researchreading'} item='Reading' url='/research/reading' handleItemClick={this.handleItemClick} />
-                <MenuItem active={activeItem === 'researchinfluences'} item='Influences' url='/research/influences' handleItemClick={this.handleItemClick} />
+                <MenuItem key="publications" active={activeItem === 'research' || activeItem === 'publications'} item='Publications' handleItemClick={this.handleItemClick} />
+                <MenuItem key="projects" active={activeItem === 'projects'} item='Projects' handleItemClick={this.handleItemClick} />
+                <MenuItem key="researchinterests" active={activeItem === 'researchinterests'} item='Interests' url='/research/interests' handleItemClick={this.handleItemClick} />
+                <MenuItem key="researchreading" active={activeItem === 'researchreading'} item='Reading' url='/research/reading' handleItemClick={this.handleItemClick} />
+                <MenuItem key="researchinfluences" active={activeItem === 'researchinfluences'} item='Influences' url='/research/influences' handleItemClick={this.handleItemClick} />
               </Menu>
           }
         </div>

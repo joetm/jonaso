@@ -78,7 +78,7 @@ class TravelRotary extends React.Component {
         <strong>Travel</strong>
         {/* / */}
 
-        <div role="list" class="ui list" style={{marginTop: "0px"}}>
+        <div role="list" className="ui list" style={{marginTop: "0px"}}>
             {
                 rotary.map(item => {
                   let dateString = ""
