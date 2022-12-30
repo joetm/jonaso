@@ -4,7 +4,7 @@ import { Container, Button } from 'semantic-ui-react'
 import { ResponsiveContainer, LabelList, BarChart, Bar, XAxis, YAxis, CartesianGrid } from 'recharts'
 
 
-const HEIGHT = 1250;
+const HEIGHT = 1350;
 const colorDefault = '#eb008c';
 const colorZoomed = '#FF86A6';
 
