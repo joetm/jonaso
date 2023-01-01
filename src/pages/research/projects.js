@@ -3,10 +3,10 @@ import 'semantic-ui-css/components/item.min.css'
 
 import React from "react"
 import { Image, Item, Grid, Container } from 'semantic-ui-react'
-import Layout from "../components/layout"
-import { spacer } from "../common.js"
-import ProjectItem from "../components/ProjectItem"
-import { Seo } from "../components/Seo"
+import Layout from "../../components/layout"
+import { spacer } from "../../common.js"
+import ProjectItem from "../../components/ProjectItem"
+import { Seo } from "../../components/Seo"
 
 
 // const _PROJECTS = 'https://raw.githubusercontent.com/joetm/jonaso/master/src/projects.json'
@@ -18,8 +18,8 @@ export function Head() {
     <Seo title="Projects // jonaso.de">
       <link id="canonical" rel="canonical" href="https://www.jonaso.de/projects" />
     </Seo>
-  )
-}
+  ) //
+} 
 
 const CustomImage = ({image}) => (
 	<Image
@@ -50,56 +50,7 @@ class Projects extends React.Component {
       return response.json()
     })
     .then(projects => this.setState({ projects }))
-    // get publications
-    // fetch(_PUBLICATIONS)
-    // .then(response => {
-    //   if (response.status >= 400) {
-    //     throw new Error("Bad response from server: Could not get publications")
-    //   }
-    //   return response.json()
-    // })
-    // .then(publications => this.setState({publications}))
   }
-  // findPublicationByKey = (key) => {
-  //   // get the right publication
-  //   let thePub = this.state.publications.filter(pub => {
-  //     return pub.id === key
-  //   })
-  //   thePub = thePub[0]
-  //   if (!thePub) {
-  //     return
-  //   }
-  //   console.log(thePub)
-  //   return (
-  //     <List key={key}>
-  //       <List.Item>
-  //         <List.Icon name='newspaper' />
-  //         <List.Content>{
-  //           thePub.URL ?
-  //             <a href={thePub.URL}>{thePub.title}</a>
-  //             :
-  //             `${thePub.title}`
-  //         }
-  //         </List.Content>
-  //       </List.Item>
-  //     </List>
-  //   )
-  // }
-
-/*
-      <span>{thePub.author.map(a => <span>{a.family}, {a.given}</span>)}: {thePub.title}. ({thePub.year})
-        {thePub.DOI &&
-          <span>https://doi.org/{thePub.DOI}</span>
-        }
-      </span>
-*/
-
-      // { (month && year) &&
-      //   <List.Item>
-      //     <List.Content>{joinIfNotNull([metadata, joinIfNotNull([month, year], ' ')])}</List.Content>
-      //   </List.Item>
-      // }
-
   render() {
     const { projects } = this.state
     // const keys = Object.keys(projects).reverse()
