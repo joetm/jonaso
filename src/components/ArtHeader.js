@@ -1,5 +1,4 @@
 import React from "react"
-import Container from 'semantic-ui-react/dist/es/elements/Container/Container.js'
 import Layout from "./layout"
 import { Title, Link, Meta } from "react-head"
 import ArtPageSwitcher from './ArtPageSwitcher'
@@ -11,7 +10,7 @@ const ArtHeader = ({generator, byline, totalCount}) => {
           <Meta charSet="utf-8" />
           <Title>{generator} Art {'//'} jonaso.de</Title>
           <Link rel="canonical" href="https://www.jonaso.de/artworks" />
-          <Container>
+          <div className="ui container">
             <h1>{generator}</h1>
             <section style={{textAlign:'center', marginBottom:'2em'}}>
               <p>
@@ -26,7 +25,7 @@ const ArtHeader = ({generator, byline, totalCount}) => {
 
             <ArtPageSwitcher generator={generator} />
 
-          </Container>
+          </div>
         </Layout>
   )
 }
