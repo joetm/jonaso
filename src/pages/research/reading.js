@@ -2,15 +2,14 @@
   DEV: this is supposed to become an up-to-date reading list synced from my PC
 */
 import 'semantic-ui-css/components/loader.min.css'
+// import "semantic-ui-css/components/table.css"
 
 import React from "react"
-import { Table, Container, Loader, Segment, Dimmer } from 'semantic-ui-react'
+import { Loader, Dimmer } from 'semantic-ui-react'
 import Layout from "../../components/layout"
 import PubGraph from "../../components/PubGraph.js"
 import { spacer } from "../../common"
 import { Seo } from "../../components/Seo"
-
-// import "semantic-ui-css/components/table.css"
 
 
 const _LIST_URL = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/readlist-latest.json'
@@ -83,7 +82,7 @@ class ReadingList extends React.Component {
     const { isLoading, documents, modified, unrecognized_overall, unrecognized_overall_percent } = this.state
     return (
       <Layout>
-        <Container>
+        <div className="ui container">
 
             <PubGraph documents={documents} />
 
@@ -95,45 +94,45 @@ class ReadingList extends React.Component {
 
 {
   isLoading ?
-    <Segment>
+    <div className="ui segment">
       <Dimmer active inverted>
         <Loader inverted>Loading</Loader>
       </Dimmer>
-    </Segment>
+    </div>
   :
-            <Table padded collapsing={false} stackable striped size='small'>
-              <Table.Header>
-                <Table.Row>
-                  <Table.HeaderCell>Title</Table.HeaderCell>
-                  <Table.HeaderCell style={{maxWidth:'450px'}}>Author(s)</Table.HeaderCell>
-                  <Table.HeaderCell className="mobilehide" collapsing>Year</Table.HeaderCell>
-                  <Table.HeaderCell collapsing>Keywords</Table.HeaderCell>
-                  <Table.HeaderCell className="mobilehide" title="Relevance to my past or current research OR importance to the respective field">Relevance/<br />Importance</Table.HeaderCell>
-                  <Table.HeaderCell className="mobilehide">Read</Table.HeaderCell>
-                </Table.Row>
-              </Table.Header>
-              <Table.Body>
+            <table className="ui small stackable striped padded table">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th style={{maxWidth:'450px'}}>Author(s)</th>
+                  <th className="mobilehide collapsing">Year</th>
+                  <th className="collapsing">Keywords</th>
+                  <th className="mobilehide" title="Relevance to my past or current research OR importance to the respective field">Relevance/<br />Importance</th>
+                  <th className="mobilehide">Read</th>
+                </tr>
+              </thead>
+              <tbody>
                 {
                     documents.map((doc, idx) => {
                       return (
-                        <Table.Row key={`id_${idx}`}>
-                          <Table.Cell style={{wordBreak:'break-all'}} textAlign="left">{doc.title}</Table.Cell>
-                          <Table.Cell singleLine style={{wordBreak:'break-all',maxWidth:'450px'}} textAlign="left">{doc.authors.join(', ')}</Table.Cell>
-                          <Table.Cell className="mobilehide" textAlign="left">{doc.year}</Table.Cell>
-                          <Table.Cell textAlign="left">{doc.keywords}</Table.Cell>
-                          <Table.Cell className="mobilehide" textAlign="center">{doc.priority}</Table.Cell>
-                          <Table.Cell className="mobilehide" textAlign="left">{this.getDate(doc.modified * 1000)}</Table.Cell>
-                        </Table.Row>
+                        <tr key={`id_${idx}`}>
+                          <td className="left aligned" style={{wordBreak:'break-all'}}>{doc.title}</td>
+                          <td className="single line left aligned" style={{wordBreak:'break-all',maxWidth:'450px'}}>{doc.authors.join(', ')}</td>
+                          <td className="left aligned mobilehide">{doc.year}</td>
+                          <td className="left aligned">{doc.keywords}</td>
+                          <td className="center aligned mobilehide">{doc.priority}</td>
+                          <td className="left aligned mobilehide">{this.getDate(doc.modified * 1000)}</td>
+                        </tr>
                       )
                     })
                 }
-              </Table.Body>
-            </Table>
+              </tbody>
+            </table>
 }
 
             <div style={spacer}></div>
 
-        </Container>
+        </div>
       </Layout>
     )
   }

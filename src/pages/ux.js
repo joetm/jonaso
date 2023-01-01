@@ -1,9 +1,7 @@
 import 'semantic-ui-css/components/card.min.css'
-import 'semantic-ui-css/components/icon.min.css'
 
 import React from "react"
-import { Card, Image, Container } from 'semantic-ui-react'
-import Icon from 'semantic-ui-react/dist/es/elements/Icon/Icon.js'
+import { Card, Image } from 'semantic-ui-react'
 import Layout from "../components/layout"
 import { Seo } from "../components/Seo"
 
@@ -24,7 +22,7 @@ class UX extends React.Component {
   render() {
     return (
 	   	<Layout>
-	      <Container>
+	      <div className="ui container">
 	 			  <h1>UX Portfolio</h1>
 	        <Card.Group itemsPerRow={2}>
 				    <Card>
@@ -39,12 +37,11 @@ class UX extends React.Component {
 					      </Card.Description>
 					    </Card.Content>
 					    <Card.Content extra>
-					        <Icon name='user' />
 					        22 Friends
 					    </Card.Content>
 				    </Card>
 			  </Card.Group>
-	      </Container>
+	      </div>
         </Layout>
     )
   }

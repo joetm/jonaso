@@ -1,5 +1,4 @@
 import React from "react"
-import { Container } from 'semantic-ui-react'
 import { spacer } from "../../common"
 import Keywords from "../../components/keywords"
 import Layout from "../../components/layout"
@@ -40,7 +39,7 @@ class Interests extends React.Component { //
     const filtered_keywords = keywords.filter(kw => kw.num > 19)
     return (
       <Layout>
-        <Container>
+        <div className="ui container">
           <h2 style={{float:'left', display:'inline-block'}}>
             Research Interests
             {' '}
@@ -48,7 +47,7 @@ class Interests extends React.Component { //
           </h2>
           <Keywords keywords={filtered_keywords} />
           <div style={spacer}></div>
-        </Container>
+        </div>
       </Layout>
     )
   }

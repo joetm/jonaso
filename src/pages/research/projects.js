@@ -2,7 +2,7 @@ import 'semantic-ui-css/components/grid.min.css'
 import 'semantic-ui-css/components/item.min.css'
 
 import React from "react"
-import { Image, Item, Grid, Container } from 'semantic-ui-react'
+import { Image, Item, Grid } from 'semantic-ui-react'
 import Layout from "../../components/layout"
 import { spacer } from "../../common.js"
 import ProjectItem from "../../components/ProjectItem"
@@ -56,7 +56,7 @@ class Projects extends React.Component {
     // const keys = Object.keys(projects).reverse()
     return (
       <Layout>
-        <Container>
+        <div className="ui container">
               <h1 id="projects">Research Projects</h1>
 
 							<p style={spacer}>
@@ -70,11 +70,11 @@ class Projects extends React.Component {
                   return (
                     <Grid key={`grid_${title}`} style={{marginBottom:'20px'}}>
 
-							        <Container>
+							        <div className="ui container">
                       <Grid.Row>
                         <h2>{title}{subtitle ? ` – ${subtitle}` : null}</h2>
                       </Grid.Row>
-							        </Container>
+							        </div>
 
                       <Grid.Row key={`row_${title}`}>
 
@@ -152,7 +152,7 @@ class Projects extends React.Component {
 
             <div style={spacer}></div>
 
-        </Container>
+        </div>
       </Layout>
     )
   }

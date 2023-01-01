@@ -1,5 +1,4 @@
 import React from "react"
-import { Container } from 'semantic-ui-react'
 import Layout from "../components/layout"
 
 
@@ -13,16 +12,12 @@ import Layout from "../components/layout"
 //   )
 // }
 
-class Page404 extends React.Component {
-    render() {
-        return (
-            <Layout>
-                <Container>
-                  404 - Not Found.
-                </Container>
-            </Layout>
-        )
-    }
-}
+const Page404 = () => (
+    <Layout>
+        <div className="ui container">
+          404 &ndash; Not Found.
+        </div>
+    </Layout>
+)
 
 export default Page404
