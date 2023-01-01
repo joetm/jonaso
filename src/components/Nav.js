@@ -34,15 +34,16 @@ export default class Nav extends React.Component {
   handleItemClick = (e) => {
     e.preventDefault()
     const name = e.target.name
-    const url = e.target.url
+    let url = e.target.getAttribute('url')
+    console.log(name, url)
     const activeItem = name.toLowerCase()
     this.setState({ activeItem })
-    if (activeItem === 'home') {
-      navigate('/')
+    if (url) {
+      url = url.charAt(0) === '/' ? url.slice(1) : url;
+      navigate(`/${url}`)
     } else {
-      if (url) {
-        url = url.charAt(0) === '/' ? url.slice(1) : url;
-        navigate(`/${url}`)
+      if (activeItem === 'home') {
+        navigate('/')
       } else {
         navigate(`/${activeItem}`)
       }
@@ -53,7 +54,7 @@ export default class Nav extends React.Component {
   }
   componentDidMount() {
     let url = this.prepareUrl(window.location.pathname)
-    let researchNavOpen = url.startsWith('research') || url.startsWith('publications') || url.startsWith('projects')
+    let researchNavOpen = url.startsWith('research') || url.startsWith('projects')
     this.setState({
       activeItem: url || 'home',
       researchNavOpen,

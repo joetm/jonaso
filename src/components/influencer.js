@@ -2,7 +2,7 @@ import 'semantic-ui-css/components/label.min.css'
 import 'semantic-ui-css/components/checkbox.min.css'
 
 import React from "react"
-import { Container, Label, Checkbox } from 'semantic-ui-react'
+import { Label, Checkbox } from 'semantic-ui-react'
 import md5 from "md5"
 import { sortByKey } from "../common"
 
@@ -330,7 +330,7 @@ class Influencer extends React.Component {
     const { influencer = [] } = this.props
     const { activeid, activeAuthors } = this.state
     return (
-        <Container>
+        <div className="ui container">
           <div className="clear">
             <AuthorList
             	list={influencer}
@@ -340,7 +340,7 @@ class Influencer extends React.Component {
             />
           </div>
           <div className="clear"></div>
-        </Container>
+        </div>
     ) //
   }
 }

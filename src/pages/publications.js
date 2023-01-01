@@ -4,7 +4,7 @@ import 'semantic-ui-css/components/icon.min.css'
 import 'semantic-ui-css/components/item.min.css'
 
 import React from "react"
-import { Item, Grid, Container } from 'semantic-ui-react'
+import { Item, Grid } from 'semantic-ui-react'
 import Button from 'semantic-ui-react/dist/es/elements/Button/Button.js'
 import Icon from 'semantic-ui-react/dist/es/elements/Icon/Icon.js'
 import { Bar, BarChart, XAxis, YAxis, Tooltip, LabelList, CartesianGrid, ResponsiveContainer } from 'recharts'
@@ -181,7 +181,7 @@ class Publications extends React.Component {
 
     return (
       <Layout>
-      <Container>
+      <div className="ui container">
 
         <ResponsiveContainer width="100%" height={150}>
           <BarChart data={graphdata.refsByYear}>
@@ -210,7 +210,7 @@ class Publications extends React.Component {
           />
         </div>
 
-        <Container id="publications-type" style={{display: typeIsActive ? 'block' : 'none'}}>
+        <div className="ui container" id="publications-type" style={{display: typeIsActive ? 'block' : 'none'}}>
 
               {
                 customSortOrder.map(typ => {
@@ -257,9 +257,9 @@ class Publications extends React.Component {
 
             <div style={spacer}></div>
 
-        </Container>
+        </div>
 
-        <Container id="publications-year" style={{display: typeIsActive ? 'none' : 'block'}}>
+        <div className="ui container" id="publications-year" style={{display: typeIsActive ? 'none' : 'block'}}>
 
               {
                 keysYear.map(year => {
@@ -307,8 +307,9 @@ class Publications extends React.Component {
 
             <div style={spacer}></div>
 
-        </Container>
-      </Container>
+        </div>
+
+      </div>
       </Layout>
     )
   }

@@ -1,9 +1,7 @@
 import 'semantic-ui-css/components/item.min.css'
 
 import React from "react"
-import { Item, Container } from 'semantic-ui-react'
 import { Seo } from "../components/Seo"
-
 import Layout from "../components/layout"
 import { spacer } from "../common"
 
@@ -33,35 +31,35 @@ class Teaching extends React.Component {
   render() {
         return (
             <Layout>
-              <Container>
+              <div className="ui container">
 
                 <h1 id="education" style={{textAlign:'center'}}>Teaching Assistant</h1>
 
-                  <Item.Group>
+                  <div className="ui items">
 
-                    <Item>
+                    <div className="item">
                       <div style={styles.datum}>Autumn term 2018</div>
-                      <Item.Content>
-                        <Item.Header>
+                      <div className="content">
+                        <div className="header">
                             Social Computing
-                        </Item.Header>
-                      </Item.Content>
-                    </Item>
+                        </div>
+                      </div>
+                    </div>
 
-                    <Item>
+                    <div className="item">
                       <div style={styles.datum}>Autumn term 2018</div>
-                      <Item.Content>
-                        <Item.Header>
+                      <div className="content">
+                        <div className="header">
                             Human Computer Interaction
-                        </Item.Header>
-                      </Item.Content>
-                    </Item>
+                        </div>
+                      </div>
+                    </div>
 
-                  </Item.Group>
+                  </div>
 
                   <div style={spacer}></div>
 
-              </Container>
+              </div>
             </Layout>
         )
   }

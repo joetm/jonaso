@@ -1,11 +1,10 @@
 import React from "react"
-import { Container } from 'semantic-ui-react'
-import { spacer } from "../../common"
 import Influencer from "../../components/influencer"
 import Loading from "../../components/influencerLoading"
 import Layout from "../../components/layout"
 import { Seo } from "../../components/Seo"
 import { sortByKey } from "../../common"
+import { spacer } from "../../common"
 
 // const _INFLUENCER = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/influencer.json'
 const _FLATINFLUENCER = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/allauthors.json'
@@ -72,7 +71,7 @@ class Influencers extends React.Component {
     const { influencer, isLoading } = this.state
     return (
       <Layout>
-        <Container>
+        <div className="ui container">
           <h2 style={{float:'left', display:'inline-block'}}>
             Research Influences
             { isLoading && <span style={{marginLeft:'1em', fontWeight:100, fontSize:'1em'}}>...loading...</span>}
@@ -84,7 +83,7 @@ class Influencers extends React.Component {
               <Influencer influencer={influencer} />
           }
           <div style={spacer}></div>
-        </Container>
+        </div>
       </Layout>
     )
   }

@@ -1,16 +1,15 @@
 import React from "react"
 import Masonry from 'react-masonry-css'
 import breakpointColumnsObj from './breakpoints.js' 
-import { Loader, Segment, Dimmer } from 'semantic-ui-react'
 
 const MasonryGallery = ({images}) => {
 	if (!images.length) {
 		return (
-		    <Segment>
-		      <Dimmer active inverted>
-		        <Loader inverted>Loading</Loader>
-		      </Dimmer>
-		    </Segment>
+		    <div className="ui segment">
+		      <div className="ui active transition visible inverted dimmer" style={{display: 'flex !important'}}>
+		        <div className="ui inverted text loader">Loading</div>
+		      </div>
+		    </div>
 		) //
 	}
 	return (
