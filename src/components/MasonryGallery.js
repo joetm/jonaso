@@ -21,7 +21,7 @@ const MasonryGallery = ({images}) => {
 			  columnClassName="my-masonry-grid_column">
 			  	{
 			  		images.map(img => (
-						<div className="gatsby-image-wrapper gatsby-image-wrapper-constrained"
+						<div key={encodeURI(img[0])} className="gatsby-image-wrapper gatsby-image-wrapper-constrained"
 							style={{backgroundColor: img[3]}}>
 							<div style={{maxWidth:'400px',display:'block'}}>
 								<img

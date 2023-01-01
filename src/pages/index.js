@@ -3,8 +3,6 @@ import 'semantic-ui-css/components/icon.min.css'
 import "../../libs/academicons/css/academicons.min.css"
 
 import React from "react"
-import { Grid } from 'semantic-ui-react'
-import Icon from 'semantic-ui-react/dist/es/elements/Icon/Icon.js'
 import { Link } from "gatsby"
 import { Seo } from "../components/Seo"
 
@@ -14,8 +12,8 @@ import LINKEDIN from "../img/linkedin.png"
 // import ACMDL from "../img/ACM-DL-Logo-size3.webp"
 // import MEDIUM from "../img/monogram-mask.svg"
 // import WIKIDATA from "../img/wikidata.png"
-// import { nobottommargin } from "../common"
 import Layout from "../components/layout"
+// import { nobottommargin } from "../common"
 
 
 const styles = {
@@ -68,18 +66,12 @@ class Home extends React.Component {
 
     return (
       <Layout>
-        {/* <Container> */}
         <div className="ui container">
 
-          <Grid columns={2} divided reversed='mobile vertically'>
-            <Grid.Column
-              mobile={16}
-              tablet={10}
-              computer={11}
-              widescreen={11}
-              largeScreen={11}>
+          <div className="ui divided mobile vertically reversed two column grid">
+            <div className="eleven wide computer eleven wide large screen sixteen wide mobile ten wide tablet eleven wide widescreen column">
 
-              <Grid.Row>
+              <div className="row">
 
                 {/*
                   I am <strong>Jonas Oppenlaender</strong>, a postdoctoral researcher at the <a href="https://www.jyu.fi/en" target="_blank" rel="noreferrer">University of Jyv&auml;skyl&auml;</a> in Central Finland.
@@ -158,19 +150,13 @@ class Home extends React.Component {
                     Finland.
                 </p>
 
-              </Grid.Row>
+              </div>
 
-            </Grid.Column>
+            </div>
 
-            <Grid.Column
-              mobile={16}
-              tablet={6}
-              computer={5}
-              widescreen={5}
-              largeScreen={5}
-            >
+            <div className="five wide computer five wide large screen sixteen wide mobile six wide tablet five wide widescreen column">
 
-              <Grid.Row>
+              <div className="row">
 
                 <img src={img} alt="Jonas Oppenlaender" className="ui fluid rounded image" />
 
@@ -215,10 +201,10 @@ class Home extends React.Component {
                 </p>
 	            */}
 
-              </Grid.Row>
+              </div>
 
-            </Grid.Column>
-          </Grid>
+            </div>
+          </div>
 
           <div className="ui divider"></div>
 
@@ -230,14 +216,14 @@ class Home extends React.Component {
           </a>
 
           <a href="https://github.com/joetm" target="_blank" rel="noopener noreferrer">
-              <Icon title="Jonas Oppenlaender on GitHub" link={true} color="grey" size="big" name='github square' />
+              <i title="Jonas Oppenlaender on GitHub" aria-hidden="true" className="grey github square big link icon"></i>
           </a>
 
           <a href="https://orcid.org/0000-0002-2342-1540">
               <i style={styles.academicon} title="Jonas Oppenlaender on ORCID" className="ai ai-orcid-square ai-2x"></i>
           </a>
 
-{/*
+          {/*
           <a href="https://twitter.com/Duesynapse" target="_blank" rel="noopener noreferrer">
               <Icon title="Jonas Oppenlaender on Twitter" link={true} color="grey" size="big" name='twitter square' />
           </a>
@@ -279,7 +265,7 @@ class Home extends React.Component {
           <a href="https://figshare.com/authors/Jonas_Oppenlaender/4813044">
               <i style={styles.academicon} title="Jonas Oppenlaender on Figshare" className="ai ai-figshare-square ai-2x"></i>
           </a>
-*/}
+          */}
 
           <a href="https://scholar.google.com/citations?hl=de&user=ucO_QYQAAAAJ" target="_blank" rel="noopener noreferrer">
               <i style={styles.academicon} title="Jonas Oppenlaender on Google Scholar" className="ai ai-google-scholar-square ai-2x"></i>

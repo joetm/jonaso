@@ -3,8 +3,7 @@ import 'semantic-ui-css/components/icon.min.css'
 import 'semantic-ui-css/components/item.min.css'
 
 import React from "react"
-import { Grid, List, Segment, Item, Container } from 'semantic-ui-react'
-import Icon from 'semantic-ui-react/dist/es/elements/Icon/Icon.js'
+import { List, Item, Container } from 'semantic-ui-react'
 import Layout from "../components/layout"
 import { Seo } from "../components/Seo"
 
@@ -65,36 +64,31 @@ const SupervisorWrap = ({supervisor, link = false}) => {
 } //
 
 
+const Left = ({content}) => (
+  <div className="four wide computer sixteen wide mobile three wide tablet column">
+    <span style={styles.headline} size="large">{content}</span>
+  </div>
+) //
+const Right = ({content}) => (
+  <div className="stretched two wide computer sixteen wide mobile three wide tablet column">
+    {content}
+  </div>
+) //
+const Center = ({content}) => (
+  <div className="stretched ten wide computer sixteen wide mobile ten wide tablet column">
+    {content}
+  </div>
+) //
+
 const Row = ({left, middle, right, stretched = true}) => {
 	return (
-    <Segment>
-    <Grid>
-      <Grid.Column
-        mobile={16}
-        tablet={3}
-        computer={4}
-        stretched={stretched}
-      >
-        <span style={styles.headline} size="large">{left}</span>
-      </Grid.Column>
-      <Grid.Column
-        mobile={16}
-        tablet={10}
-        computer={10}
-        stretched={stretched}
-      >
-        {middle}
-      </Grid.Column>
-      <Grid.Column
-        mobile={16}
-        tablet={3}
-        computer={2}
-        stretched={stretched}
-      >
-        {right}
-      </Grid.Column>
-    </Grid>
-    </Segment>
+    <div className="ui clearing segment">
+      <div className="ui mobile vertically reversed three column grid">
+        <Left content={left} />
+        <Center content={middle} />
+        <Right content={right} />
+      </div>
+    </div>
 	)
 } //
 
@@ -102,7 +96,7 @@ const Row = ({left, middle, right, stretched = true}) => {
 const PdfCVButton = () => (
   <div style={{float:'right',marginTop:'0.5em'}}>
     <a title="Download cv as pdf" href="/cv/oppenlaender-cv.pdf" target="_blank">
-      <Icon size='large' name='file pdf outline' />
+      <i aria-hidden="true" className="file pdf outline large icon"></i>
     </a>
   </div>
 )
@@ -177,43 +171,33 @@ class CV extends React.Component {
 {/**********************
         CONTACT
 ***********************/}
-    <Segment>
-      <Grid columns={2} stackable>
-      <Grid.Row>
-        <Grid.Column
-          mobile={16}
-          tablet={3}
-          computer={4}
-          stretched
-        >
-            <span style={styles.headline} size="large">Contact Information</span>
-        </Grid.Column>
-        <Grid.Column
-          mobile={16}
-          tablet={13}
-          computer={12}
-          stretched
-        >
-          <Item.Group>
-            <Item style={styles.nomargin}>
-                <Item.Description style={styles.nomarginTop}>
-                  <List>
-                    <List.Item><a href="https://www.jyu.fi/">University of Jyv&auml;skyl&auml;</a></List.Item>
-                    <List.Item>Seminaarinkatu 15</List.Item>
-                    <List.Item>40014 Jyväskylän yliopisto</List.Item>
-                    <List.Item>Finland</List.Item>
-                  </List>
-                  <List>
-                    <List.Item>E-Mail: {/*'{'}firstname.lastname{'}'*/} jonas.x1.oppenlander@jyu.fi</List.Item>
-                    <List.Item><a href="https://www.jonaso.de/">www.jonaso.de</a></List.Item>
-                  </List>
-                </Item.Description>
-            </Item>
-          </Item.Group>
-        </Grid.Column>
-      </Grid.Row>
-      </Grid>
-    </Segment>
+    <div className="ui segment">
+      <div className="ui stackable two column grid">
+        <div className="row">
+          <div className="stretched four wide computer sixteen wide mobile three wide tablet column">
+              <span style={styles.headline} size="large">Contact Information</span>
+          </div>
+          <div className="stretched twelve wide computer sixteen wide mobile thirteen wide tablet column">
+            <Item.Group>
+              <Item style={styles.nomargin}>
+                  <Item.Description style={styles.nomarginTop}>
+                    <List>
+                      <List.Item><a href="https://www.jyu.fi/">University of Jyv&auml;skyl&auml;</a></List.Item>
+                      <List.Item>Seminaarinkatu 15</List.Item>
+                      <List.Item>40014 Jyväskylän yliopisto</List.Item>
+                      <List.Item>Finland</List.Item>
+                    </List>
+                    <List>
+                      <List.Item>E-Mail: {/*'{'}firstname.lastname{'}'*/} jonas.x1.oppenlander@jyu.fi</List.Item>
+                      <List.Item><a href="https://www.jonaso.de/">www.jonaso.de</a></List.Item>
+                    </List>
+                  </Item.Description>
+              </Item>
+            </Item.Group>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 {/**********************

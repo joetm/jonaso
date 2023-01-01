@@ -1,62 +1,61 @@
 import React from "react"
-import { Menu } from 'semantic-ui-react'
 import { navigate } from 'gatsby'
 
 const ArtPageSwitcher = ({generator}) => {
-	const handleMenuClick = (e, { name, folder }) => {
+	const handleMenuClick = (e) => {
+		e.preventDefault()
+		const folder = e.target.getAttribute('folder')
 		navigate(`/artworks/${folder}`)
 	}
 	return (
-	   	<React.Fragment>
-
 	      <section style={{textAlign:'center', marginBottom:'2em'}}>
 
-			<Menu pointing secondary fluid widths={6}>			
-		        <Menu.Item
-    		      name='Midjourney'
-    		      folder='midjourney'
-        		  active={generator === 'Midjourney'}
-				  onClick={handleMenuClick}
-		        />
-    		    <Menu.Item
-        		  name='Stable Diffusion'
-    		      folder='stablediffusion'
-		          active={generator === 'Stable Diffusion'}
-				  onClick={handleMenuClick}
-    		    />
-    		    <Menu.Item
-        		  name='DALL-E 2'
-    		      folder='dalle'
-		          active={generator === 'DALL-E'}
-				  onClick={handleMenuClick}
-    		    />
-		        <Menu.Item
-    		      name='Latent Diffusion'
-    		      folder='latent-diffusion'
-        		  active={generator === 'Latent Diffusion'}
-				  onClick={handleMenuClick}
-		        />
-		        <Menu.Item
-    		      name='VQGAN-CLIP'
-    		      folder='vqganclip'
-        		  active={generator === 'VQGAN-CLIP'}
-				  onClick={handleMenuClick}
-		        />
-		        <Menu.Item
-    		      name='Misc.'
-    		      folder='misc'
-        		  active={generator === 'Others'}
-				  onClick={handleMenuClick}
-		        />
-      		</Menu>
+			<div className="ui fluid pointing secondary six item menu">
+				<a
+					folder="midjourney"
+					className={"item" + (generator === 'Midjourney' ? ' active' : '')}
+					onClick={handleMenuClick}
+				>
+					Midjourney
+				</a>
+				<a
+					folder="stablediffusion"
+					className={"item" + (generator === 'Stable Diffusion' ? ' active' : '')}
+					onClick={handleMenuClick}
+				>
+					Stable Diffusion
+				</a>
+				<a
+					folder="dalle"
+					className={"item" + (generator === 'DALL-E' ? ' active' : '')}
+					onClick={handleMenuClick}
+				>
+					DALL-E 2
+				</a>
+				<a
+					folder="latent-diffusion"
+					className={"item" + (generator === 'Latent Diffusion' ? ' active' : '')}
+					onClick={handleMenuClick}
+				>
+					Latent Diffusion
+				</a>
+				<a
+					folder="vqganclip"
+					className={"item" + (generator === 'VQGAN-CLIP' ? ' active' : '')}
+					onClick={handleMenuClick}
+				>
+					VQGAN-CLIP
+				</a>
+				<a
+					folder="misc"
+					className={"item" + (generator === 'Others' ? ' active' : '')}
+					onClick={handleMenuClick}
+				>
+					Misc.
+				</a>
+      		</div>
 
 		</section>
-
-		{/*
-        <Divider horizontal>Selected Images</Divider>
-		*/}
-
-      </React.Fragment>
 	)
 }
 
