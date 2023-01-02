@@ -5,6 +5,7 @@ import 'semantic-ui-css/components/item.min.css'
 import React from "react"
 import Layout from "../components/layout"
 import { Seo } from "../components/Seo"
+import { navigate } from "gatsby"
 import { spacer } from "../common"
 
 import cv from "../cv.json"
@@ -113,8 +114,8 @@ class CV extends React.Component {
   // 	this.setState({isHovered})
   // }
   redirectToPortfolio = () => window.location = _PORTFOLIO_URL
-  redirectToPublications = () => window.location = '/publications/'
-  redirectToInterests = () => window.location = '/interests/'
+  redirectToPublications = () => navigate("/publications") // window.location = '/publications/'
+  redirectToInterests = () => navigate("/research/interests") // window.location = '/research/interests/'
   componentDidMount() {
     fetch(_PEERREVIEWS_URL)
     .then(response => response.json())
