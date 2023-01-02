@@ -1,5 +1,4 @@
 import React from "react"
-import { Container } from 'semantic-ui-react'
 import { Bar, BarChart, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts'
 import moment from 'moment'
 
@@ -60,7 +59,7 @@ class PubGraph extends React.Component {
   render() {
     const { docs } = this.state
     return (
-        <Container>
+        <div className="ui container">
           <h1>Timeline</h1>
           <ResponsiveContainer width="100%" height={150}>
           <BarChart data={docs}>
@@ -75,7 +74,7 @@ class PubGraph extends React.Component {
             <Bar type="step" dataKey="num" fill="#4183c4" />
           </BarChart>
           </ResponsiveContainer>
-        </Container>
+        </div>
     )
   }
 }

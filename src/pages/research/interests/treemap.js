@@ -1,6 +1,7 @@
-import React from "react"
 import 'semantic-ui-css/components/button.min.css'
-import { Container, Button } from 'semantic-ui-react'
+
+import React from "react"
+import { Button } from 'semantic-ui-react'
 import { ResponsiveContainer, Treemap } from 'recharts'
 import { spacer } from "../../../common"
 import Layout from "../../../components/layout"
@@ -84,7 +85,7 @@ class TreeComponent extends React.Component {
     const displaydata = isZoomed && level2.length ? level2 : keywords;
 
     return (
-        <Container>
+        <div className="ui container">
           <h2>
             Research Interests
             {' '}
@@ -110,7 +111,7 @@ class TreeComponent extends React.Component {
                 />
           </ResponsiveContainer>
 
-        </Container>
+        </div>
     )
   }
 }
@@ -139,10 +140,10 @@ class Interests extends React.Component {
     const filtered_keywords = keywords.filter(kw => kw.num > 19)
     return (
       <Layout>
-        <Container>
+        <div className="ui container">
           <TreeComponent keywords={filtered_keywords} />
           <div style={spacer}></div>
-        </Container>
+        </div>
       </Layout>
     )
   }

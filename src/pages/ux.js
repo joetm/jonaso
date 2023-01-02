@@ -1,7 +1,6 @@
 import 'semantic-ui-css/components/card.min.css'
 
 import React from "react"
-import { Card, Image } from 'semantic-ui-react'
 import Layout from "../components/layout"
 import { Seo } from "../components/Seo"
 
@@ -24,23 +23,25 @@ class UX extends React.Component {
 	   	<Layout>
 	      <div className="ui container">
 	 			  <h1>UX Portfolio</h1>
-	        <Card.Group itemsPerRow={2}>
-				    <Card>
-  				    <Image src={src} wrapped ui={false} />
-					    <Card.Content>
-					      <Card.Header>Matthew</Card.Header>
-					      <Card.Meta>
+	        <div className="ui two cards">
+				    <div className="ui card">
+  				    <div className="image">
+	  				    <img src={src} alt="" />
+  				    </div>
+					    <div className="content">
+					      <div className="header">Matthew</div>
+					      <div className="meta">
 					        <span className='date'>Joined in 2015</span>
-					      </Card.Meta>
-					      <Card.Description>
+					      </div>
+					      <div className="description">
 					        Matthew is a musician living in Nashville.
-					      </Card.Description>
-					    </Card.Content>
-					    <Card.Content extra>
+					      </div>
+					    </div>
+					    <div className="extra content">
 					        22 Friends
-					    </Card.Content>
-				    </Card>
-			  </Card.Group>
+					    </div>
+				    </div>
+				  </div>
 	      </div>
         </Layout>
     )

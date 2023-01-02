@@ -1,9 +1,9 @@
 import React from "react"
-import { spacer } from "../../common"
 import Keywords from "../../components/keywords"
 import Layout from "../../components/layout"
 import GraphSwitcher from "../../components/GraphSwitcher"
 import { Seo } from "../../components/Seo"
+import { spacer } from "../../common"
 
 
 const _KEYWORDS = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/keywords.json'
@@ -22,9 +22,6 @@ class Interests extends React.Component { //
     keywords: [],
   }
   componentDidMount = () => {
-    // ------------
-    // get keywords
-    // ------------
     fetch(_KEYWORDS)
     .then(response => {
       if (response.status >= 400) {
@@ -40,7 +37,7 @@ class Interests extends React.Component { //
     return (
       <Layout>
         <div className="ui container">
-          <h2 style={{float:'left', display:'inline-block'}}>
+          <h2>
             Research Interests
             {' '}
             <GraphSwitcher active="interests" />

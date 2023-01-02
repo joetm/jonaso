@@ -5,7 +5,6 @@ import 'semantic-ui-css/components/loader.min.css'
 // import "semantic-ui-css/components/table.css"
 
 import React from "react"
-import { Loader, Dimmer } from 'semantic-ui-react'
 import Layout from "../../components/layout"
 import PubGraph from "../../components/PubGraph.js"
 import { spacer } from "../../common"
@@ -95,9 +94,9 @@ class ReadingList extends React.Component {
 {
   isLoading ?
     <div className="ui segment">
-      <Dimmer active inverted>
-        <Loader inverted>Loading</Loader>
-      </Dimmer>
+      <div className="ui active transition visible inverted dimmer" style={{display: 'flex !important'}}>
+        <div className="ui inverted text loader">Loading</div>
+      </div>
     </div>
   :
             <table className="ui small stackable striped padded table">

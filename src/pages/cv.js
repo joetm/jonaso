@@ -3,12 +3,12 @@ import 'semantic-ui-css/components/icon.min.css'
 import 'semantic-ui-css/components/item.min.css'
 
 import React from "react"
-import { List, Item, Container } from 'semantic-ui-react'
 import Layout from "../components/layout"
 import { Seo } from "../components/Seo"
-
 import { spacer } from "../common"
+
 import cv from "../cv.json"
+
 // headlines
 cv.education[0].left = "Education"
 cv.research_experience[0].left = "Research Experience"
@@ -58,9 +58,9 @@ const SupervisorWrap = ({supervisor, link = false}) => {
     return null;
   }
   if (link) {
-      return (<List.Item>Advisor: <a href={link}>{supervisor}</a></List.Item>)
+      return (<div className="item" role="listitem">Advisor: <a href={link}>{supervisor}</a></div>)
   }
-  return (<List.Item>Advisor: {supervisor}</List.Item>)
+  return (<div className="item" role="listitem">Advisor: {supervisor}</div>)
 } //
 
 
@@ -164,7 +164,7 @@ class CV extends React.Component {
 
     return (
       <Layout>
-      <Container className="print cv">
+      <div className="ui container print cv">
         <PdfCVButton />
         <h1 className="print-only">Jonas Oppenlaender</h1>
 
@@ -178,22 +178,22 @@ class CV extends React.Component {
               <span style={styles.headline} size="large">Contact Information</span>
           </div>
           <div className="stretched twelve wide computer sixteen wide mobile thirteen wide tablet column">
-            <Item.Group>
-              <Item style={styles.nomargin}>
-                  <Item.Description style={styles.nomarginTop}>
-                    <List>
-                      <List.Item><a href="https://www.jyu.fi/">University of Jyv&auml;skyl&auml;</a></List.Item>
-                      <List.Item>Seminaarinkatu 15</List.Item>
-                      <List.Item>40014 Jyväskylän yliopisto</List.Item>
-                      <List.Item>Finland</List.Item>
-                    </List>
-                    <List>
-                      <List.Item>E-Mail: {/*'{'}firstname.lastname{'}'*/} jonas.x1.oppenlander@jyu.fi</List.Item>
-                      <List.Item><a href="https://www.jonaso.de/">www.jonaso.de</a></List.Item>
-                    </List>
-                  </Item.Description>
-              </Item>
-            </Item.Group>
+            <div className="ui items">
+              <div className="item" style={styles.nomargin}>
+                  <div className="description" style={styles.nomarginTop}>
+                    <div className="ui list" role="list">
+                      <div className="item" role="listitem"><a href="https://www.jyu.fi/">University of Jyv&auml;skyl&auml;</a></div>
+                      <div className="item" role="listitem">Seminaarinkatu 15</div>
+                      <div className="item" role="listitem">40014 Jyväskylän yliopisto</div>
+                      <div className="item" role="listitem">Finland</div>
+                    </div>
+                    <div className="ui list" role="list">
+                      <div className="item" role="listitem">E-Mail: {/*'{'}firstname.lastname{'}'*/} jonas.x1.oppenlander@jyu.fi</div>
+                      <div className="item" role="listitem"><a href="https://www.jonaso.de/">www.jonaso.de</a></div>
+                    </div>
+                  </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -219,16 +219,16 @@ class CV extends React.Component {
 {
   cv.education.map((row, i) => (
       <Row key={i} left={row.left} middle={(
-            <Item.Group>
-              <Item style={styles.nomargin}>
-                <Item.Description style={styles.nomarginTop}>
-                  <List>
-                    <List.Item><a href={row.institution_link}>{row.institution}</a>, {row.location}</List.Item>
-                    <List.Item>{row.position}</List.Item>
+            <div className="ui items">
+              <div className="item" style={styles.nomargin}>
+                <div className="description" style={styles.nomarginTop}>
+                  <div className="ui list" role="list">
+                    <div className="item" role="listitem"><a href={row.institution_link}>{row.institution}</a>, {row.location}</div>
+                    <div className="item" role="listitem">{row.position}</div>
                     <SupervisorWrap supervisor={row.supervisor} link={row.supervisor_link} />
                     {/*
                       row.keywords.length > 0 && (
-                        <List.Item>
+                        <div className="item" role="listitem">
                           <Label.Group>
                           {
                             row.keywords.sort().map(kw => <Label
@@ -239,13 +239,13 @@ class CV extends React.Component {
                                                             as='a'>{kw}</Label>)
                           }
                           </Label.Group>
-                        </List.Item>
+                        </div>
                       )
                     */}
-                  </List>
-                </Item.Description>
-              </Item>
-            </Item.Group>
+                  </div>
+                </div>
+              </div>
+            </div>
       )} right={startEndYear(row)} />
     ))
 }
@@ -259,36 +259,36 @@ class CV extends React.Component {
   cv.research_experience.map((row, i) => (
     <Row key={i} left={row.left}
         middle={(
-          <Item.Group>
-            <Item style={styles.nomargin}>
-              <Item.Description style={styles.nomarginTop}>
-                <List>
+          <div className="ui items">
+            <div className="item" style={styles.nomargin}>
+              <div className="description" style={styles.nomarginTop}>
+                <div className="ui list" role="list">
                   {
                     row.group &&
-                      <List.Item><a href={row.group_link}>{row.group}</a></List.Item>
+                      <div className="item" role="listitem"><a href={row.group_link}>{row.group}</a></div>
                   }
                   {
                     row.institute &&
-                      <List.Item><a href={row.institute_link}>{row.institute}</a></List.Item>
+                      <div className="item" role="listitem"><a href={row.institute_link}>{row.institute}</a></div>
                   }
                   {
                     row.university &&
-                      <List.Item><a href={row.university_link}>{row.university}</a>, {row.location}</List.Item>
+                      <div className="item" role="listitem"><a href={row.university_link}>{row.university}</a>, {row.location}</div>
                   }
-                  <List.Item>{row.position}</List.Item>
+                  <div className="item" role="listitem">{row.position}</div>
                   {
                     row.double_affiliation &&
                     (
                       <React.Fragment>
-                        <List.Item>&amp; <a href={row.double_affiliation.group_link}>{row.double_affiliation.group}</a></List.Item>
-                        <List.Item><a href={row.double_affiliation.university_link}>{row.double_affiliation.university}</a>, {row.location}</List.Item>
-                        <List.Item>{row.double_affiliation.position}</List.Item>
+                        <div className="item" role="listitem">&amp; <a href={row.double_affiliation.group_link}>{row.double_affiliation.group}</a></div>
+                        <div className="item" role="listitem"><a href={row.double_affiliation.university_link}>{row.double_affiliation.university}</a>, {row.location}</div>
+                        <div className="item" role="listitem">{row.double_affiliation.position}</div>
                       </React.Fragment>
                     )
                   }
                   {/*
                     row.keywords.length > 0 && (
-                      <List.Item>
+                      <div className="item" role="listitem">
                         <Label.Group>
                         {
                           row.keywords.sort().map(kw => <Label
@@ -299,13 +299,13 @@ class CV extends React.Component {
                                                           as='a'>{kw}</Label>)
                         }
                         </Label.Group>
-                      </List.Item>
+                      </div>
                     )
                   */}
-                </List>
-              </Item.Description>
-            </Item>
-          </Item.Group>
+                </div>
+              </div>
+            </div>
+          </div>
     )} right={startEndYear(row)} />
   ))
 }
@@ -318,15 +318,15 @@ class CV extends React.Component {
 {
   cv.work_experience.map((row, i) => (
     <Row key={i} left={row.left} middle={(
-          <Item.Group>
-            <Item style={styles.nomargin}>
-              <Item.Description style={styles.nomarginTop}>
-                <List>
-                  <List.Item><a href={row.organization_link}>{row.organization}</a>, {row.location}</List.Item>
-                  <List.Item>{row.position}</List.Item>
+          <div className="ui items">
+            <div className="item" style={styles.nomargin}>
+              <div className="description" style={styles.nomarginTop}>
+                <div className="ui list" role="list">
+                  <div className="item" role="listitem"><a href={row.organization_link}>{row.organization}</a>, {row.location}</div>
+                  <div className="item" role="listitem">{row.position}</div>
                   {/*
                     row.keywords.length > 0 && (
-                      <List.Item>
+                      <div className="item" role="listitem">
                         <Label.Group>
                         {
                           row.keywords.sort().map(kw => <Label
@@ -337,13 +337,13 @@ class CV extends React.Component {
                                                           as='a'>{kw}</Label>)
                         }
                         </Label.Group>
-                      </List.Item>
+                      </div>
                     )
                   */}
-                </List>
-              </Item.Description>
-            </Item>
-          </Item.Group>
+                </div>
+              </div>
+            </div>
+          </div>
     )} right={startEndYear(row)} />
   ))
 }
@@ -369,10 +369,10 @@ class CV extends React.Component {
 {
   cv.awards.map((row, i) => (
     <Row key={i} left={row.left} middle={(
-          <Item.Group>
-            <Item style={styles.nomargin}>
-              <List>
-                <List.Item>
+          <div className="ui items">
+            <div className="item" style={styles.nomargin}>
+              <div className="ui list" role="list">
+                <div className="item" role="listitem">
                   {row.name}
                   {
                     row.event && row.institution &&
@@ -392,10 +392,10 @@ class CV extends React.Component {
                     row.event && !row.url && !row.institution &&
                         <span>, {row.event}</span>
                   }
-                </List.Item>
-              </List>
-            </Item>
-          </Item.Group>
+                </div>
+              </div>
+            </div>
+          </div>
     )} right={row.year} />
   ))
 }
@@ -407,10 +407,10 @@ class CV extends React.Component {
 {
   cv.grants.map((row, i) => (
     <Row key={i} left={row.left} middle={(
-          <Item.Group>
-            <Item style={styles.nomargin}>
-              <List>
-                <List.Item>
+          <div className="ui items">
+            <div className="item" style={styles.nomargin}>
+              <div className="ui list" role="list">
+                <div className="item" role="listitem">
                   {row.name}
                   {
                     row.event && row.institution &&
@@ -430,10 +430,10 @@ class CV extends React.Component {
                     row.event && !row.url && !row.institution &&
                         <span>, {row.event}</span>
                   }
-                </List.Item>
-              </List>
-            </Item>
-          </Item.Group>
+                </div>
+              </div>
+            </div>
+          </div>
     )} right={row.year} />
   ))
 }
@@ -446,15 +446,15 @@ class CV extends React.Component {
 {
     cv.academicservice.map((row, i) => (
         <Row key={i} left={row.left} middle={(
-          <Item.Group>
-            <Item style={styles.nomargin}>
-              <List>
-                <List.Item>
+          <div className="ui items">
+            <div className="item" style={styles.nomargin}>
+              <div className="ui list" role="list">
+                <div className="item" role="listitem">
                   {row.name}, <a href={row.url}>{row.venue}{row.series && " (" + row.series + ")"}</a>{row.location && ", " + row.location}
-                </List.Item>
-              </List>
-            </Item>
-          </Item.Group>
+                </div>
+              </div>
+            </div>
+          </div>
         )} right={row.year} />
     ))
 }
@@ -469,13 +469,13 @@ class CV extends React.Component {
       <Item.Group>
         <Item style={styles.nomargin}>
           <List>
-            <List.Item>
+            <div className="item" role="listitem">
               {
                 Object.keys(peerreviews).map(year => peerreviews[year].map((item, i) => (
                   <div key={item.series + i}><a href={item.url} title={item.title}>{item.series} {item.years.join(", ")}</a></div>
                 )))
               }
-            </List.Item>
+            </div>
           </List>
         </Item>
       </Item.Group>
@@ -483,33 +483,33 @@ class CV extends React.Component {
 */}
 
         <Row key="pr-header" left="Peer Reviewer" middle={(
-          <Item.Group>
-            <Item style={styles.nomargin}>
-              <List>
-                <List.Item>
+          <div className="ui items">
+            <div className="item" style={styles.nomargin}>
+              <div className="ui list" role="list">
+                <div className="item" role="listitem">
                   {reviews.total} reviews in PCS
-                </List.Item>
-              </List>
-            </Item>
-          </Item.Group>
+                </div>
+              </div>
+            </div>
+          </div>
         )} right={""} />
 
 {
     Object.keys(peerreviews).reverse().map(year => (
         <Row key={`pr${year}`} left={peerreviews[year].left} middle={(
-          <Item.Group>
-            <Item style={styles.nomargin}>
-              <List>
-                <List.Item>
+          <div className="ui items">
+            <div className="item" style={styles.nomargin}>
+              <div className="ui list" role="list">
+                <div className="item" role="listitem">
                   {
                     peerreviews[year].map((item, i) => (
                        <a key={item.series + i} href={item.url} title={item.title}>{item.series}</a>
                     )).reduce((prev, next) => [prev, ', ', next])
                   }
-                </List.Item>
-              </List>
-            </Item>
-          </Item.Group>
+                </div>
+              </div>
+            </div>
+          </div>
         )} right={year} />
     ))
 }
@@ -522,12 +522,12 @@ class CV extends React.Component {
 
 {/*
 <Row left="Teaching Experience" middle={(
-      <Item.Group>
+      <div className="ui items">
         {
           teachingPositions.map((pos, index) => {
             return (
               <Item key={index} style={styles.nomargin}>
-                <List>
+                <div className="ui list" role="list">
                   <List.Item>{pos}</List.Item>
                   {
                     cv.teaching[pos].map((row, i) => (
@@ -537,31 +537,31 @@ class CV extends React.Component {
                           </List.Item>
                     ))
                   }
-                </List>
+                </div>
               </Item>
             )
           })
         }
-      </Item.Group>
+      </div>
 )} right="" />
 */}
 
 {
     cv.teaching.map((row, i) => (
         <Row key={i} left={row.left} middle={(
-          <Item.Group>
-            <Item style={styles.nomargin}>
-              <List>
-                <List.Item>
+          <div className="ui items">
+            <div className="item" style={styles.nomargin}>
+              <div className="ui list" role="list">
+                <div className="item" role="listitem">
                   {row.coursename}{row.coursecode && <> ({row.coursecode})</>}{row.period && ", " + row.period}, {row.num_students} students, {row.level}<br />
                   {
                     row.url ? <a href={row.url}>{row.organization}</a> : row.organization
                   }
                   {row.location && ", " + row.location}
-                </List.Item>
-              </List>
-            </Item>
-          </Item.Group>
+                </div>
+              </div>
+            </div>
+          </div>
         )} right={row.year} />
     ))
 }
@@ -573,15 +573,15 @@ class CV extends React.Component {
 {
     cv.supervisions.map((row, i) => (
         <Row key={i} left={row.left} middle={(
-          <Item.Group>
-            <Item style={styles.nomargin}>
-              <List>
-                <List.Item>
+          <div className="ui items">
+            <div className="item" style={styles.nomargin}>
+              <div className="ui list" role="list">
+                <div className="item" role="listitem">
                   {row.type}, {row.supervisee}
-                </List.Item>
-              </List>
-            </Item>
-          </Item.Group>
+                </div>
+              </div>
+            </div>
+          </div>
         )} right={row.year} />
     ))
 }
@@ -605,17 +605,17 @@ class CV extends React.Component {
 ***********************/}
 
 <Row left="Certificates" middle={(
-      <Item.Group>
+      <div className="ui items">
         {
           cv.hasOwnProperty("certificates") &&
             cv.certificates.map((item, i) => (
-              <Item key={i} style={styles.nomargin}>
+              <div className="item" key={i} style={styles.nomargin}>
                 {/*<div style={styles.datum}>{item.year}</div>*/}
-                <Item.Header style={styles.nonbold}>{item.name} ({item.institution})</Item.Header>
-              </Item>
+                <div className="header" style={styles.nonbold}>{item.name} ({item.institution})</div>
+              </div>
             ))
         }
-      </Item.Group>
+      </div>
 )} right="" />
 
 
@@ -625,18 +625,18 @@ class CV extends React.Component {
 ***********************/}
 
 <Row left="Languages" middle={(
-      <Item.Group>
+      <div className="ui items">
         {
           cv.hasOwnProperty("languages") &&
             cv.languages.map((item, i) => (
-              <Item key={i} style={styles.nomargin}>
-                <Item.Content>
-                  <Item.Header style={styles.nonbold}>{item.name} ({item.level})</Item.Header>
-                </Item.Content>
-              </Item>
+              <div className="item" key={i} style={styles.nomargin}>
+                <div className="content">
+                  <div className="header" style={styles.nonbold}>{item.name} ({item.level})</div>
+                </div>
+              </div>
             ))
         }
-      </Item.Group>
+      </div>
 )} right="" />
 
 
@@ -645,24 +645,23 @@ class CV extends React.Component {
 ***********************/}
 
 <Row left="Memberships in Scientific Associations" middle={(
-      <Item.Group>
+      <div className="ui items">
         {
           cv.hasOwnProperty("associations") &&
             cv.associations.map((item, i) => (
-              <Item key={i} style={styles.nomargin}>
-                <Item.Content>
-                  <Item.Header style={styles.nonbold}>{item}</Item.Header>
-                </Item.Content>
-              </Item>
+              <div className="item" key={i} style={styles.nomargin}>
+                <div className="content">
+                  <div className="header" style={styles.nonbold}>{item}</div>
+                </div>
+              </div>
             ))
         }
-      </Item.Group>
+      </div>
 )} right="" />
-
 
                   <div className="spacer" style={spacer}></div>
 
-              </Container>
+              </div>
         </Layout>
         )
   }
