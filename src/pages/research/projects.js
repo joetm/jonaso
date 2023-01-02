@@ -2,7 +2,6 @@ import 'semantic-ui-css/components/grid.min.css'
 import 'semantic-ui-css/components/item.min.css'
 
 import React from "react"
-import { Image, Item, Grid } from 'semantic-ui-react'
 import Layout from "../../components/layout"
 import { spacer } from "../../common.js"
 import ProjectItem from "../../components/ProjectItem"
@@ -22,15 +21,16 @@ export function Head() {
 } 
 
 const CustomImage = ({image}) => (
-	<Image
+	<img className="ui fluid image"
 		style={{
 			padding:'0 0 20px 0',
 			maxHeight: '410px',
 			width: 'auto',
 			margin: 'auto auto',
 		}}
-		{...image}
-		fluid
+    src={image.src}
+    title={image.title}
+    alt=""
 	/>
 )
 
@@ -68,39 +68,39 @@ class Projects extends React.Component {
                 	const { title, subtitle, description, date, organisation, organisation_href, funding, img,
                     medium = [], presentations = [], workshops = [] } = project
                   return (
-                    <Grid key={`grid_${title}`} style={{marginBottom:'20px'}}>
+                    <div className="ui grid" key={`grid_${title}`} style={{marginBottom:'20px'}}>
 
 							        <div className="ui container">
-                      <Grid.Row>
-                        <h2>{title}{subtitle ? ` – ${subtitle}` : null}</h2>
-                      </Grid.Row>
+                        <div className="row">
+                          <h2>{title}{subtitle ? ` – ${subtitle}` : null}</h2>
+                        </div>
 							        </div>
 
-                      <Grid.Row key={`row_${title}`}>
+                      <div className="row" key={`row_${title}`}>
 
-                        <Grid.Column width={2}>{date}</Grid.Column>
+                        <div className="two wide column">{date}</div>
 
-                        <Grid.Column width={14}>
-                        <Item>
+                        <div className="fourteen wide column">
+                        <div className="item">
 
                           <CustomImage image={img} />
 
-                          <Item.Content>
-                            <Item.Extra>
+                          <div className="content">
+                            <div className="extra">
                               {
                               	organisation_href ?
                               	  <a href={organisation_href}>{organisation}</a>
                               	:
                               	  organisation
                               }
-                            </Item.Extra>
-                            <Item.Header dangerouslySetInnerHTML={description}></Item.Header>
+                            </div>
+                            <div className="header" dangerouslySetInnerHTML={description}></div>
 
                             {
                             	funding &&
-	                            <Item.Extra>
-    	                        	<p>{funding}</p>
-        	                    </Item.Extra>
+  	                            <div className="extra">
+      	                        	<p>{funding}</p>
+          	                    </div>
          	                  }
 
                             {
@@ -139,13 +139,13 @@ class Projects extends React.Component {
                                 */
                             }
 
-                          </Item.Content>
+                          </div>
 
-                        </Item>
-                        </Grid.Column>
-                      </Grid.Row>
+                        </div>
+                        </div>
+                      </div>
 
-                    </Grid>
+                    </div>
                   )
                 })
               }

@@ -1,11 +1,10 @@
 import React from "react"
 // import { navigate } from 'gatsby'
-import { Container } from 'semantic-ui-react'
-import { spacer } from "../../../common"
 import Layout from "../../../components/layout"
 import KeywordCloud from '../../../components/cloud'
 import GraphSwitcher from "../../../components/GraphSwitcher"
 import { Seo } from "../../../components/Seo"
+import { spacer } from "../../../common"
 
 
 const _KEYWORDS = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/keywords.json'
@@ -13,22 +12,17 @@ const _KEYWORDS = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading
 
 export function Head() {
   return (
-    <Seo
-      title="Research Interests (Cloud) // jonaso.de"
-    >
+    <Seo title="Research Interests (Cloud) // jonaso.de">
       <link id="canonical" rel="canonical" href="https://www.jonaso.de/interests/wordcloud" />
     </Seo>
-  )
-}
+  ) //
+} 
 
 class Interests extends React.Component {
   state = {
     keywords: [],
   }
   componentDidMount = () => {
-    // ------------
-    // get keywords
-    // ------------
     fetch(_KEYWORDS)
     .then(response => {
       if (response.status >= 400) {
@@ -39,11 +33,9 @@ class Interests extends React.Component {
     .then(keywords => this.setState({ keywords }))
   }
   render() {
-    // const { keywords } = this.state
-    // const filtered_keywords = keywords.filter(kw => kw.num > 9)
     return (
       <Layout>
-        <Container>
+        <div className="ui container">
           <h2>
             Research Interests
             {' '}
@@ -51,9 +43,9 @@ class Interests extends React.Component {
           </h2>
           <KeywordCloud />
           <div style={spacer}></div>
-        </Container>
+        </div>
       </Layout>
-    )
+    ) //
   }
 }
 

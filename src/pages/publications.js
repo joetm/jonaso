@@ -4,7 +4,6 @@ import 'semantic-ui-css/components/icon.min.css'
 import 'semantic-ui-css/components/item.min.css'
 
 import React from "react"
-import { Item, Grid } from 'semantic-ui-react'
 import Button from 'semantic-ui-react/dist/es/elements/Button/Button.js'
 import Icon from 'semantic-ui-react/dist/es/elements/Icon/Icon.js'
 import { Bar, BarChart, XAxis, YAxis, Tooltip, LabelList, CartesianGrid, ResponsiveContainer } from 'recharts'
@@ -83,17 +82,17 @@ const PdfPubsButton = () => (
 ) //
 
 const SwitchBtn = ({active, switchPubView}) => (
-  <Button.Group>
+  <div className="ui buttons">
     <Button disabled={!active} positive={!active}
       onClick={switchPubView}
       title="Publications per year"
     >YEAR</Button>
-    <Button.Or />
+    <div className="or"></div>
     <Button disabled={active} positive={active}
       onClick={switchPubView}
       title="Publications per type"
     >TYPE</Button>
-  </Button.Group>
+  </div>
 )
 
 
@@ -215,18 +214,18 @@ class Publications extends React.Component {
               {
                 customSortOrder.map(typ => {
                   return (
-                    <Grid key={typ} style={noMarginGrid}>
-                        <Grid.Row>
+                    <div className="ui grid" key={typ} style={noMarginGrid}>
+                        <div className="row">
                           <h1>{typ}</h1>
-                        </Grid.Row>
+                        </div>
                         {
                           referencesDetail[typ] && referencesDetail[typ].map((ref, index) => {
                             let title = ref.title.replace('Jonas Oppenlaender', '<strong>Jonas Oppenlaender</strong>')
                             title = title.replace('Jonas Oppenländer', '<strong>Jonas Oppenländer</strong>')
                             const icostr = title.indexOf('.pdf') === -1 ? 'file outline' : 'file alternate outline'
                             return (
-                              <Grid.Row key={index}>
-                                <Grid.Column width={2}>
+                              <div className="row" key={index}>
+                                <div className="two wide column">
                                   <MediaContextProvider>
                                     <Media at="sm">
                                       <Icon color="grey" size="large" name={icostr} />
@@ -238,19 +237,19 @@ class Publications extends React.Component {
                                       <Icon color="grey" size="big" name={icostr} />
                                     </Media>
                                     </MediaContextProvider>
-                                </Grid.Column>
-                                <Grid.Column width={14}>
-                                <Item>
-                                  <Item.Content>
-                                    <Item.Header dangerouslySetInnerHTML={{__html: title}} />
-                                  </Item.Content>
-                                </Item>
-                                </Grid.Column>
-                              </Grid.Row>
+                                </div>
+                                <div className="fourteen wide column">
+                                  <div className="item">
+                                    <div className="content">
+                                      <div className="header" dangerouslySetInnerHTML={{__html: title}}></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             )
                           })
                         }
-                    </Grid>
+                    </div>
                   )
                 })
               }
@@ -264,10 +263,10 @@ class Publications extends React.Component {
               {
                 keysYear.map(year => {
                   return (
-                    <Grid key={year} style={noMarginGrid}>
-                        <Grid.Row>
-                          <h2>{year}</h2>
-                        </Grid.Row>
+                    <div className="ui grid" key={year} style={noMarginGrid}>
+                        <div className="row">
+                          <h1>{year}</h1>
+                        </div>
                         {
                           references[year].map((item, index) => {
                             item.__html = item.__html.replace('Jonas Oppenlaender', '<strong>Jonas Oppenlaender</strong>')
@@ -275,8 +274,8 @@ class Publications extends React.Component {
                             item.__html = item.__html.replace('--', '–')
                             const icostr = item.__html.indexOf('.pdf') === -1 ? 'file outline' : 'file alternate outline'
                             return (
-                              <Grid.Row key={index}>
-                                <Grid.Column width={2}>
+                              <div className="row" key={index}>
+                                <div className="two wide column">
                                   <MediaContextProvider>
                                     <Media at="sm">
                                       <Icon color="grey" size="large" name={icostr} />
@@ -288,19 +287,19 @@ class Publications extends React.Component {
                                       <Icon color="grey" size="big" name={icostr} />
                                     </Media>
                                   </MediaContextProvider>
-                                </Grid.Column>
-                                <Grid.Column width={14}>
-                                <Item>
-                                  <Item.Content>
-                                    <Item.Header dangerouslySetInnerHTML={item}></Item.Header>
-                                  </Item.Content>
-                                </Item>
-                                </Grid.Column>
-                              </Grid.Row>
+                                </div>
+                                <div className="fourteen wide column">
+                                  <div className="item">
+                                    <div className="content">
+                                      <div className="header" dangerouslySetInnerHTML={item}></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             )
                           })
                         }
-                    </Grid>
+                    </div>
                   )
                 })
               }
