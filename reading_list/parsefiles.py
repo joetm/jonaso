@@ -17,7 +17,9 @@ BASEPATHS = [
     "/home/jonas/RESEARCH/2-OULU/Courses/",
     "/home/jonas/RESEARCH/2-OULU/Funding/",
     "/home/jonas/RESEARCH/Academic Working/",
-    "/home/jonas/RESEARCH/Misc/"
+    "/home/jonas/RESEARCH/Misc/",
+    "/home/jonas/RESEARCH/Papers/7-Accepted/",
+    "/home/jonas/RESEARCH/Papers/9-Others/",
 ]
 
 PATTERN_READ = "[\!|\-]*.pdf"
