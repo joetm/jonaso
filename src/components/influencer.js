@@ -49,8 +49,9 @@ const Wrapper = {
     <div className="wrapperBox">
       <h4 style={{float:'left', display:'inline-block'}}>{title}</h4>
       <i class="close icon"
-        role="button" aria-label="close" tabIndex={0}
-         style={{float:'right', cursor:'pointer'}}
+        role="button" aria-label="close"
+        tabIndex={0}
+        style={{float:'right', cursor:'pointer'}}
         onClick={() => updateActive({activeid: null, activeAuthors: []})}
         onKeyDown={() => updateActive({activeid: null, activeAuthors: []})}
       ></i>
@@ -60,7 +61,9 @@ const Wrapper = {
   CoauthorWrapper: ({title, authorid, toggleCoauthors, coauthorToggleActive}) => (
     <div className="wrapperBox">
       <h4>{title}</h4>
-      <div><Checkbox checked={coauthorToggleActive} onChange={() => toggleCoauthors(authorid)} label='Show co-authors' toggle /></div>
+      <div>
+        <Checkbox checked={coauthorToggleActive} onChange={() => toggleCoauthors(authorid)} label='Show co-authors' toggle />
+      </div>
     </div>
   ), //
   PubWrapper: ({title, items}) => (
@@ -211,17 +214,15 @@ class AuthorList extends React.Component {
     const id = author.id
     // if (!id) { return }
     if (id === activeid) {
-      // ------
       // remove, when the same author is clicked a second time
-      // ------
-        const details = this.state.details
-        delete details[id];
-        this.setState({
-          details,
-          coauthorToggleActive: false,
-        })
-        updateActive({activeid: null, activeAuthors: []})
-        return
+      const details = this.state.details
+      delete details[id];
+      this.setState({
+        details,
+        coauthorToggleActive: false,
+      })
+      updateActive({activeid: null, activeAuthors: []})
+      return
     }
     // reset the highlighted labels
     this.setState({
@@ -229,9 +230,6 @@ class AuthorList extends React.Component {
       coauthorToggleActive: false,
     })
     updateActive({activeAuthors: []})
-    // ------
-    // add
-    // ------
     // cache check
     const details = this.state.details
     if (details[id]) {
@@ -240,7 +238,6 @@ class AuthorList extends React.Component {
       return
     }
     // load from remote
-    // console.log('querying id:', id)
     const url = `https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/influencers/${id}.json`
     fetch(url)
     .then(response => {
@@ -273,21 +270,23 @@ class AuthorList extends React.Component {
             // label color
             let labelColor = null
             // TODO
-          	if (activeAuthors.includes(author.id)) {
+            if (activeAuthors.includes(author.id)) {
           		labelColor = 'yellow'
-          	}
-            // TODO
-          	if (activeid === author.id) {
+            }
+            if (activeid === author.id) {
           		labelColor = 'red'
-        	 }
+            }
+            if (author.name === 'Jonas Oppenlaender') {
+              labelColor = 'grey'
+            }
            // color scaling based on priority of this author
         	 // labelColor = scaleLabelColor(author.priority / maxPrio)
            // return the list of authors
             return (
               <div key={`${index}_${author.id}`} id={author.id}>
-              <Label
-                style={styles.label}
-                as="a"
+              <a
+                className={"ui label " + labelColor}
+                style={{...styles.label, opacity: author.name === 'Jonas Oppenlaender' ? 0.6 : 1}}
                 color={labelColor}
                 title={(author.num > 1 ? author.num + ' publications' : author.num + ' publication') + ', priority ' + author.priority}
                 onClick={() => this.getAuthorDetails(author)}
@@ -295,8 +294,8 @@ class AuthorList extends React.Component {
                 {
                   coauthors.includes(author.name.toLowerCase()) ? (<span style={styles.coauthor}>{author.name}</span>) : author.name
                 }
-                <Label.Detail>{author.num} | {author.priority}</Label.Detail>
-              </Label>
+                <div className="detail">{author.num} | {author.priority}</div>
+              </a>
                 {details[author.id] && activeid === author.id &&
                   <DetailContainer
                   	authorid={author.id}
