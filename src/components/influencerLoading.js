@@ -20,12 +20,14 @@ function randomInt(min=15, max=40) {
   return Math.floor(Math.random() * (max - min + 1) ) + min
 }
 
-const AuthorList = () => {
+// ----------------
+
+const InfluencerLoading = () => {
   const numPlaceholders = 200
   const placeholders = [ ...Array(numPlaceholders).keys() ];
-  let labelColor = null
   return (
-    <>
+  <div className="ui container">
+    <div className="clear">
       {
         placeholders.map((num, index) => (
           <div className="ui label" key={`${index}`} style={styles.label}>
@@ -34,19 +36,9 @@ const AuthorList = () => {
           </div>
         ))
       }
-    </>
-  )
-}
-
-// ----------------
-
-const InfluencerLoading = () => (
-  <div className="ui container">
-    <div className="clear">
-      <AuthorList />
     </div>
     <div className="clear"></div>
   </div>
-) //
+)} //
 
 export default InfluencerLoading
