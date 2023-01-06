@@ -1,5 +1,4 @@
 import React from "react"
-import { Label } from 'semantic-ui-react'
 
 import "./influencer.css"
 
@@ -28,25 +27,16 @@ const AuthorList = () => {
   return (
     <>
       {
-        placeholders.map((num, index) => {
-          return (
-            <div key={`${index}`}>
-              <Label
-                style={styles.label}
-                as="a"
-                color={labelColor}
-              >
-                { ".".repeat(randomInt()) }
-                <Label.Detail>x | x</Label.Detail>
-              </Label>
-            </div>
-          )
-        })
+        placeholders.map((num, index) => (
+          <div className="ui label" key={`${index}`} style={styles.label}>
+            { ".".repeat(randomInt()) }
+            <div className="detail">x | x</div>
+          </div>
+        ))
       }
     </>
   )
 }
-
 
 // ----------------
 
