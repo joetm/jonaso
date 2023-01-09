@@ -17,6 +17,7 @@ cv.work_experience[0].left = "Professional Experience"
 cv.awards[0].left = "Recognition & Awards" // Honors & Awards
 cv.grants[0].left = "Scholarships & Grants"
 cv.academicservice[0].left = "Academic Service"
+cv.studentvolunteering[0].left = "Student Volunteering"
 cv.supervisions[0].left = "Student Supervisions"
 cv.teaching[0].left = "Teaching"
 
@@ -452,6 +453,27 @@ class CV extends React.Component {
               <div className="ui list" role="list">
                 <div className="item" role="listitem">
                   {row.name}, <a href={row.url}>{row.venue}{row.series && " (" + row.series + ")"}</a>{row.location && ", " + row.location}
+                </div>
+              </div>
+            </div>
+          </div>
+        )} right={row.year} />
+    ))
+}
+
+
+{/**********************
+   STUDENT VOLUNTEERING
+***********************/}
+
+{
+    cv.studentvolunteering.map((row, i) => (
+        <Row key={i} left={row.left} middle={(
+          <div className="ui items">
+            <div className="item" style={styles.nomargin}>
+              <div className="ui list" role="list">
+                <div className="item" role="listitem">
+                  <a href={row.url}>{row.venue}{row.series && " (" + row.series + ")"}</a>{row.location && ", " + row.location}
                 </div>
               </div>
             </div>

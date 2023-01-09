@@ -267,6 +267,10 @@ class AuthorList extends React.Component {
       <>
         {
           list.map((author, index) => {
+            if (author.name === 'Jonas Oppenlaender') {
+              // labelColor = 'grey'
+              return (<></>) //
+            }
             // label color
             let labelColor = null
             // TODO
@@ -275,9 +279,6 @@ class AuthorList extends React.Component {
             }
             if (activeid === author.id) {
           		labelColor = 'red'
-            }
-            if (author.name === 'Jonas Oppenlaender') {
-              labelColor = 'grey'
             }
            // color scaling based on priority of this author
         	 // labelColor = scaleLabelColor(author.priority / maxPrio)
