@@ -1,5 +1,6 @@
 import 'semantic-ui-css/components/grid.min.css'
 import 'semantic-ui-css/components/icon.min.css'
+import 'semantic-ui-css/components/comment.min.css'
 import "../../libs/academicons/css/academicons.min.css"
 
 import React from "react"
@@ -9,6 +10,7 @@ import { Seo } from "../components/Seo"
 import TravelRotary from "../components/TravelRotary"
 import img from "../img/Jonas-Oppenlaender-500x500.jpg"
 import LINKEDIN from "../img/linkedin.png"
+import CHATGPT from "../img/chatgpt.gif"
 // import ACMDL from "../img/ACM-DL-Logo-size3.webp"
 // import MEDIUM from "../img/monogram-mask.svg"
 // import WIKIDATA from "../img/wikidata.png"
@@ -72,6 +74,27 @@ class Home extends React.Component {
             <div className="eleven wide computer eleven wide large screen sixteen wide mobile ten wide tablet eleven wide widescreen column">
 
               <div className="row">
+
+              <div className="ui comments">
+                <div class="comment">
+                  <a class="avatar" style={{width: '35px', backgroundColor: "rgb(16, 163, 127)"}}>
+                    <img src={CHATGPT} alt="" />
+                  </a>
+                  <div className="content">
+                    <a className="author">ChatGPT</a>
+                    <div className="metadata">
+                      <span className="date">Jan 12, 2023</span>
+                    </div>
+                    <div className="text">
+                        <em>
+                        A researcher true,<br />
+                        With diverse background and flair,<br />
+                        Jonas Oppenlaender
+                        </em>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
                 {/*
                   I am <strong>Jonas Oppenlaender</strong>, a postdoctoral researcher at the <a href="https://www.jyu.fi/en" target="_blank" rel="noreferrer">University of Jyv&auml;skyl&auml;</a> in Central Finland.
