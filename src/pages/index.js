@@ -76,12 +76,12 @@ class Home extends React.Component {
               <div className="row">
 
               <div className="ui comments">
-                <div class="comment">
-                  <a class="avatar" style={{width: '35px', backgroundColor: "rgb(16, 163, 127)"}}>
+                <div className="comment">
+                  <i className="avatar" style={{width: '35px', backgroundColor: "rgb(16, 163, 127)"}}>
                     <img src={CHATGPT} alt="" />
-                  </a>
+                  </i>
                   <div className="content">
-                    <a className="author">ChatGPT</a>
+                    <span className="author">ChatGPT</span>
                     <div className="metadata">
                       <span className="date">Jan 12, 2023</span>
                     </div>
@@ -100,7 +100,7 @@ class Home extends React.Component {
                   I am <strong>Jonas Oppenlaender</strong>, a postdoctoral researcher at the <a href="https://www.jyu.fi/en" target="_blank" rel="noreferrer">University of Jyv&auml;skyl&auml;</a> in Central Finland.
                   </p>
 
-                  <p>
+                <p>
                   Before, I was a Senior Researcher/PostDoc at <a href="https://www.fiz-karlsruhe.de/" target="_blank" rel="noopener noreferrer nofollow">FIZ Karlsruhe</a> (Leibniz Institute for Information Infrastructure) and <a href="https://www.kit.edu/" rel="noopener noreferrer nofollow" target="_blank">Karlsruhe Institute of Technology (KIT)</a>.
                   {" "}
                   Prior to my doctoral position at the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a>, I was a researcher (Wissenschaftlicher Mitarbeiter) at the <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/" rel="nofollow">Human-Centered Computing</a> group, <a href="https://www.fu-berlin.de/">Freie Universit&auml;t Berlin</a>
@@ -109,7 +109,7 @@ class Home extends React.Component {
                   {" "}
                   Before that, I worked in agile teams as a web developer at <a href="https://www.seme4.com/">Seme4</a> and <a href="https://www.liip.ch/">Liip</a>.
                   I also gained industry experience as Business Analyst and Strategy Analyst at <a href="https://www.alstom.com/">Alstom</a> (now <a href="https://www.ge.com/">GE</a>).
-                  </p>
+                </p>
 
                 <p>                  
                   I received my PhD from the <a href={"https://www.oulu.fi/"}>University of Oulu</a> in Associate Prof. <a href="https://simohosio.com/">Simo Hosio</a>'s <a href={'https://ubicomp.oulu.fi/research/cc/'}>Crowd Computing Group</a>.
@@ -146,7 +146,13 @@ class Home extends React.Component {
                 */}
 
                 <p>
-                Hi, my name is <strong>Jonas Oppenlaender</strong> and I am a postdoctoral researcher at the <a href="https://www.jyu.fi/en" target="_blank" rel="noreferrer">University of Jyv&auml;skyl&auml;</a> in Central Finland. I have a diverse background with a range of academic and professional experiences.
+                Hi, my name is <strong>Jonas Oppenlaender</strong>
+                  {' '}
+                  <a title="How to pronounce Oppenländer" href="https://www.howtopronounce.com/oppenlander" target="_blank" rel="noopener noreferrer">
+                    <i className="fitted assistive listening systems icon"></i>
+                  </a>
+                  {' '}
+                and I am a postdoctoral researcher at the <a href="https://www.jyu.fi/en" target="_blank" rel="noreferrer">University of Jyv&auml;skyl&auml;</a> in Central Finland. I have a diverse background with a range of academic and professional experiences.
                 </p>
 
                 <p>
