@@ -1,87 +1,147 @@
 import React from "react"
-import InfluencerNetwork from "../../components/influences-network"
-import Loading from "../../components/influencerLoading"
 import Layout from "../../components/layout"
 import { Seo } from "../../components/Seo"
-import { sortByKey } from "../../common"
 import { spacer } from "../../common"
 
-// const _INFLUENCER = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/influencer.json'
-const _FLATINFLUENCER = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/allauthors.json'
+// fix window SSR error
+// import ForceGraph2D from 'react-force-graph-2d'
+// import { ForceGraph2D } from 'react-force-graph'
+import loadable from '@loadable/component'
+const ForceGraph2D = loadable(() => import('react-force-graph-2d'))
+
+
+const _PUBLICATIONS = 'https://raw.githubusercontent.com/joetm/jonaso/master/public/static/publications.json'
 
 export function Head() {
   return (
-    <Seo title="Research Influences (Network) // jonaso.de">
+    <Seo title="Collaboration Network // jonaso.de">
       <link id="canonical" rel="canonical" href="https://www.jonaso.de/influencers" />
     </Seo>
   ) //
 }
 
 
-class InfluencersNetwork extends React.Component {
-  state = {
-    influencer: [],
-    isLoading: true,
+function buildAuthorname(a) {
+  let authorname = a.given + ' ' + (a['dropping-particle'] ? a['dropping-particle'] + ' ' : '') + a.family
+  if (authorname === 'Jonas Oppenländer') {
+    authorname = 'Jonas Oppenlaender'
+  }
+  return authorname
+}
+
+
+class CollaborationNetwork extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      nodes: [],
+      edges: [],
+      isLoading: true,
+    }
   }
   componentDidMount = () => {
-    // get influencer
-    fetch(_FLATINFLUENCER)
+    fetch(_PUBLICATIONS)
     .then(response => {
       if (response.status >= 400) {
         throw new Error("Bad response from server")
       }
       return response.json()
     })
-    .then(data => {
-      const authors = data // .filter(author => author.num > 1)
-      const tmp = {}
-      authors.forEach(author => {
-        if (tmp[author.name]) {
-          // author already exists: update only the respective fields
-          tmp[author.name]['num'] += author.num
-          tmp[author.name]['priority'] += author.priority * author.num
-          tmp[author.name]['priorities'][""+author.priority] = { 'num': author.num }
-        } else {
-          // first init
-          tmp[author.name] = {
-            'id': author.id,
-            'name': author.name,
-            'num': author.num,
-            'priority': author.priority * author.num,
-            'priorities': {
-              '1': { 'num': 0, },
-              '2': { 'num': 0, },
-              '3': { 'num': 0, },
-            },
-          }
-          tmp[author.name]['priorities'][""+author.priority] = { 'num': author.num }
+    .then(publications => {
+      const uniquenodes = {}
+      const uniqueedges = {}
+      const nodes = []
+      const edges = []
+      const _self = 'Jonas Oppenlaender'
+      publications.forEach(pub => {
+        if (pub.author) {
+          pub.author.forEach(a => {
+            let authorname = buildAuthorname(a)
+            if (!uniquenodes[authorname]) {
+              let group = 2
+              if (authorname === _self) {
+                group = 1
+              }
+              uniquenodes[authorname] = { id: authorname, group }
+            }
+            //edges to all other co-authors of this publication
+            if (authorname !== _self) { // skip self
+              // edge to JO
+              pub.author.forEach(a2 => {
+                let authorname2 = buildAuthorname(a2)
+                //skip self
+                if (authorname2 !== authorname) {
+                  if (!uniqueedges[authorname + '-' + authorname2]) {
+                    uniqueedges[authorname + '-' + authorname2] = { source: authorname, target: authorname2, val: 1 }
+                  } else {
+                    uniqueedges[authorname + '-' + authorname2].val += 1
+                  }
+                }
+              })
+            }
+          })
         }
       })
-      // convert object back to array for easier handling in the render
-      let influencer = []
-      for (const key in tmp) {
-        influencer.push(tmp[key])
-      }
-      influencer = influencer.filter(author => author.num > 1)
-      influencer = sortByKey(influencer, 'priority') // priority score consisting of: 1 * num(1) + 2 * num(2) + 3 * num(3)
-      this.setState({ influencer, isLoading: false })
+      Object.keys(uniquenodes).forEach(key => {
+        nodes.push(uniquenodes[key])
+      })
+      Object.keys(uniqueedges).forEach(key => {
+        // only add unidirectional edges
+        // const [source, target] = key.split('-')
+        // if (!uniqueedges[target + '-' + source]) {
+          edges.push(uniqueedges[key])
+        // }
+      })
+      this.setState({ nodes, edges, isLoading: false })
     })
   }
   render() {
-    const { influencer, isLoading } = this.state
+    const { nodes, edges, isLoading } = this.state
+    const graph = {
+      nodes,
+      links: edges,
+    }
+
     return (
       <Layout>
         <div className="ui container">
           <h2 style={{float:'left', display:'inline-block'}}>
-            Research Influences (Network)
-            { isLoading && <span style={{marginLeft:'1em', fontWeight:100, fontSize:'1em'}}>...loading...</span>}
+            Collaboration Network
+            { isLoading && <span style={{marginLeft: '1em', fontWeight: 100, fontSize: '1em'}}>...loading...</span>}
           </h2>
-          {
-            isLoading ?
-              <Loading />
-              :
-              <InfluencerNetwork influencer={influencer} />
-          }
+
+          <div style={{clear:'both'}}>
+
+            <ForceGraph2D
+              graphData={graph}
+              width={1000}
+              height={600}
+              backgroundColor="#FAFAFA"
+              nodeAutoColorBy="group"
+              linkWidth="val"
+              nodeCanvasObject={(node, ctx, globalScale) => {
+                const label = node.id
+                const fontSize = 12/globalScale
+                ctx.font = `${fontSize}px sans-serif`
+                const textWidth = ctx.measureText(label).width
+                const bckgDimensions = [textWidth, fontSize].map(n => n + fontSize * 0.2) // some padding
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.8)'
+                // ctx.fillRect(node.x - bckgDimensions[0] / 2, node.y - bckgDimensions[1] / 2, ...bckgDimensions)
+                ctx.textAlign = 'center'
+                ctx.textBaseline = 'middle'
+                ctx.fillStyle = node.color
+                ctx.fillText(label, node.x, node.y)
+                node.__bckgDimensions = bckgDimensions // to re-use in nodePointerAreaPaint
+              }}
+              nodePointerAreaPaint={(node, color, ctx) => {
+                ctx.fillStyle = color
+                const bckgDimensions = node.__bckgDimensions
+                bckgDimensions && ctx.fillRect(node.x - bckgDimensions[0] / 2, node.y - bckgDimensions[1] / 2, ...bckgDimensions)
+              }}
+            />
+
+          </div>
+
           <div style={spacer}></div>
         </div>
       </Layout>
@@ -89,4 +149,4 @@ class InfluencersNetwork extends React.Component {
   }
 }
 
-export default InfluencersNetwork
+export default CollaborationNetwork

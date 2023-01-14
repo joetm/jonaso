@@ -46,6 +46,10 @@ const styles = {
     defaultcursor: {
     	cursor: 'default',
     },
+    chatgptQuote: {
+      paddingTop: '1.5rem',
+      paddingBottom: '1rem',
+    },
 }
 
 
@@ -75,7 +79,7 @@ class Home extends React.Component {
 
               <div className="row">
 
-              <div className="ui comments">
+              <div className="ui comments" style={styles.chatgptQuote}>
                 <div className="comment">
                   <i className="avatar" style={{width: '35px', backgroundColor: "rgb(16, 163, 127)"}}>
                     <img src={CHATGPT} alt="" />
@@ -87,9 +91,9 @@ class Home extends React.Component {
                     </div>
                     <div className="text">
                         <em>
-                        A researcher true,<br />
+                        &ldquo;A researcher true,<br />
                         With diverse background and flair,<br />
-                        Jonas Oppenlaender
+                        Jonas Oppenlaender&rdquo;
                         </em>
                     </div>
                   </div>
@@ -148,9 +152,9 @@ class Home extends React.Component {
                 <p>
                 Hi, my name is <strong>Jonas Oppenlaender</strong>
                   {' '}
-                  <a title="How to pronounce Oppenländer" href="https://www.howtopronounce.com/oppenlander" target="_blank" rel="noopener noreferrer">
+                  (<a title="How to pronounce Oppenländer" href="https://www.howtopronounce.com/oppenlander" target="_blank" rel="noopener noreferrer">
                     <i className="fitted assistive listening systems icon"></i>
-                  </a>
+                  </a>)
                   {' '}
                 and I am a postdoctoral researcher at the <a href="https://www.jyu.fi/en" target="_blank" rel="noreferrer">University of Jyv&auml;skyl&auml;</a> in Central Finland. I have a diverse background with a range of academic and professional experiences.
                 </p>
