@@ -5,6 +5,47 @@ exports.onPreBuild = () => {
   rimraf.sync(PUBLIC_FOLDER + '/*');
 };
 
+
+// fix build errors related to react-force-graph on /research/network page
+// WebpackError: ReferenceError: self is not defined
+/*
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  if (stage === "build-html" || stage === "develop-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /aframe/,
+            use: loaders.null(),
+          },
+          // {
+          //   test: /3d-force-graph-vr/,
+          //   use: loaders.null(),
+          // },
+          // {
+          //   test: /three-forcegraph/,
+          //   use: loaders.null(),
+          // },
+          // {
+          //   test: /three-render-objects/,
+          //   use: loaders.null(),
+          // },
+          // {
+          //   test: /3d-force-graph/,
+          //   use: loaders.null(),
+          // },
+          // {
+          //   test: /force-graph/,
+          //   use: loaders.null(),
+          // },
+        ],
+      },
+    })
+  }
+}
+*/
+
+
 // replace react with preact
 // exports.onCreateWebpackConfig = ({ actions }) => {
 //   // React-dom is hardcoded as part of react-hot-loader
