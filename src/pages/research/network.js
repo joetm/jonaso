@@ -1,3 +1,5 @@
+import 'semantic-ui-css/components/dropdown.min.css'
+
 import React from "react"
 import Layout from "../../components/layout"
 import { Seo } from "../../components/Seo"
@@ -36,6 +38,7 @@ class CollaborationNetwork extends React.Component {
     this.state = {
       nodes: [],
       edges: [],
+      mincollabs: 1,
       isLoading: true,
     }
     this.gContainer = React.createRef()
@@ -58,6 +61,7 @@ class CollaborationNetwork extends React.Component {
         if (pub.author) {
           pub.author.forEach(a => {
             let authorname = buildAuthorname(a)
+            // NODES
             if (!uniquenodes[authorname]) {
               let group = 2
               if (authorname === _self) {
@@ -65,7 +69,8 @@ class CollaborationNetwork extends React.Component {
               }
               uniquenodes[authorname] = { id: authorname, group }
             }
-            //edges to all other co-authors of this publication
+            // EDGES
+            // edges to all other co-authors of this publication
             if (authorname !== _self) { // skip self
               // edge to JO
               pub.author.forEach(a2 => {
@@ -96,11 +101,14 @@ class CollaborationNetwork extends React.Component {
       this.setState({ nodes, edges, isLoading: false })
     })
   }
+  changeFilter = (e) => {
+    this.setState({ mincollabs: e.target.value })
+  }
   render() {
-    const { nodes, edges, isLoading } = this.state
+    const { nodes, edges, mincollabs, isLoading } = this.state
     const graph = {
       nodes,
-      links: edges,
+      links: edges.filter(e => e.val >= mincollabs),
     }
 
     return (
@@ -110,7 +118,16 @@ class CollaborationNetwork extends React.Component {
             Collaboration Network
             { isLoading && <span style={{marginLeft: '1em', fontWeight: 100, fontSize: '1em'}}>...loading...</span>}
           </h2>
-
+          <div style={{float:'right'}}>
+            # publications: {' '}
+            <select className="ui inline compact selection dropdown" onChange={this.changeFilter}>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
           <div
             style={{clear:'both'}}
             ref={(ref) => this.gContainer = ref}
