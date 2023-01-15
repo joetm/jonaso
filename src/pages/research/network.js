@@ -38,6 +38,7 @@ class CollaborationNetwork extends React.Component {
       edges: [],
       isLoading: true,
     }
+    this.gContainer = React.createRef()
   }
   componentDidMount = () => {
     fetch(_PUBLICATIONS)
@@ -110,11 +111,14 @@ class CollaborationNetwork extends React.Component {
             { isLoading && <span style={{marginLeft: '1em', fontWeight: 100, fontSize: '1em'}}>...loading...</span>}
           </h2>
 
-          <div style={{clear:'both'}}>
+          <div
+            style={{clear:'both'}}
+            ref={(ref) => this.gContainer = ref}
+          >
 
             <ForceGraph2D
               graphData={graph}
-              width={1000}
+              width={this.gContainer.offsetWidth}
               height={600}
               backgroundColor="#FAFAFA"
               nodeAutoColorBy="group"
