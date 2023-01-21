@@ -79,7 +79,9 @@ export default class Nav extends React.Component {
                 <MenuItem key="researchinterests"  active={activeItem === 'research' || activeItem === 'researchinterests'}  item='Interests' url='/research/interests' handleItemClick={this.handleItemClick} />
                 <MenuItem key="researchprojects"   active={activeItem === 'researchprojects'}   item='Projects' url='/research/projects' handleItemClick={this.handleItemClick} />
                 <MenuItem key="researchreading"    active={activeItem === 'researchreading'}    item='Reading' url='/research/reading' handleItemClick={this.handleItemClick} />
+                {/*
                 <MenuItem key="researchnetwork"    active={activeItem === 'researchnetwork'}    item='Network' url='/research/network' handleItemClick={this.handleItemClick} />
+                */}
                 <MenuItem key="researchinfluences" active={activeItem === 'researchinfluences'} item='Influences' url='/research/influences' handleItemClick={this.handleItemClick} />
               </div>
           }
