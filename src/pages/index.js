@@ -79,6 +79,7 @@ class Home extends React.Component {
 
               <div className="row">
 
+{/*
               <div className="ui comments" style={styles.chatgptQuote}>
                 <div className="comment">
                   <i className="avatar" style={{width: '35px', backgroundColor: "rgb(16, 163, 127)"}}>
@@ -99,6 +100,7 @@ class Home extends React.Component {
                   </div>
                 </div>
               </div>
+*/}
 
                 {/*
                   I am <strong>Jonas Oppenlaender</strong>, a postdoctoral researcher at the <a href="https://www.jyu.fi/en" target="_blank" rel="noreferrer">University of Jyv&auml;skyl&auml;</a> in Central Finland.
