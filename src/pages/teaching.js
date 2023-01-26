@@ -2,7 +2,6 @@ import 'semantic-ui-css/components/item.min.css'
 
 import React from "react"
 import { Seo } from "../components/Seo"
-import Layout from "../components/layout"
 import { spacer } from "../common"
 
 
@@ -30,7 +29,6 @@ export function Head() {
 class Teaching extends React.Component {
   render() {
         return (
-            <Layout>
               <div className="ui container">
 
                 <h1 id="education" style={{textAlign:'center'}}>Teaching Assistant</h1>
@@ -60,7 +58,6 @@ class Teaching extends React.Component {
                   <div style={spacer}></div>
 
               </div>
-            </Layout>
         )
   }
 }

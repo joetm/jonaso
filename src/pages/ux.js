@@ -1,10 +1,9 @@
 import 'semantic-ui-css/components/card.min.css'
 
 import React from "react"
-import Layout from "../components/layout"
+// import Layout from "../components/layout"
 import { Seo } from "../components/Seo"
 
-// const styles = {}
 
 const src = "http://localhost:8000/static/opp-1924a88836b85f62ee5d9a0754979b59.jpg"
 
@@ -20,8 +19,7 @@ export function Head() {
 class UX extends React.Component {
   render() {
     return (
-	   	<Layout>
-	      <div className="ui container">
+      <div className="ui container">
 	 			  <h1>UX Portfolio</h1>
 	        <div className="ui two cards">
 				    <div className="ui card">
@@ -42,8 +40,7 @@ class UX extends React.Component {
 					    </div>
 				    </div>
 				  </div>
-	      </div>
-        </Layout>
+      </div>
     )
   }
 }
