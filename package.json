@@ -29,10 +29,8 @@
     "gatsby-plugin-react-helmet": "^6.4.0",
     "gatsby-plugin-remove-fingerprints": "^0.0.2",
     "gatsby-plugin-remove-generator": "^1.2.0",
-    "gatsby-plugin-sharp": "^5.4.0",
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.30",
     "gatsby-source-filesystem": "^5.4.0",
-    "gatsby-transformer-sharp": "^5.4.0",
     "hoist-non-react-statics": "^3.3.2",
     "latex.js": "^0.12.4",
     "md5": "^2.2.1",
@@ -40,7 +38,6 @@
     "moment-range": "^4.0.2",
     "process": "^0.11.10",
     "puppeteer": "^19.5.2",
-    "randomcolor": "^0.6.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-force-graph": "^1.41.18",
@@ -58,5 +55,11 @@
   },
   "devDependencies": {
     "bundle-buddy": "^0.2.2"
+  },
+  "BAK": {
+    "react-query": "^3.39.2",
+    "gatsby-plugin-sharp": "^5.4.0",
+    "gatsby-transformer-sharp": "^5.4.0",
+    "randomcolor": "^0.6.2"
   }
 }

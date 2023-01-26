@@ -24,7 +24,7 @@ module.exports = {
     "gatsby-plugin-no-sourcemaps",
     // "gatsby-plugin-react-helmet"
     `gatsby-plugin-react-head`,
-    `gatsby-plugin-image`,
+    // `gatsby-plugin-image`,
     // performance monitoring
     // "gatsby-plugin-perf-budgets",
     // {
@@ -34,34 +34,34 @@ module.exports = {
     //     disable: false,
     //   },
     // },
-    {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        defaults: {
-          backgroundColor: "#EDEDED",
-          placeholder: "dominantColor",
-          breakpoints: [300, 400],
-        },
-        // Set to false to allow builds to continue on image errors
-        failOn: `none`,
-        // deprecated options and their defaults:
-        stripMetadata: true,
-      },
-    },
-    {
-      resolve: `gatsby-transformer-sharp`,
-      options: {
-        checkSupportedExtensions: true,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `artworks`,
-        path: `${__dirname}/artworks/`,
-        ignore: [`**/info.txt`],
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-sharp`,
+    //   options: {
+    //     defaults: {
+    //       backgroundColor: "#EDEDED",
+    //       placeholder: "dominantColor",
+    //       breakpoints: [300, 400],
+    //     },
+    //     // Set to false to allow builds to continue on image errors
+    //     failOn: `none`,
+    //     // deprecated options and their defaults:
+    //     stripMetadata: true,
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-transformer-sharp`,
+    //   options: {
+    //     checkSupportedExtensions: true,
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `artworks`,
+    //     path: `${__dirname}/artworks/`,
+    //     ignore: [`**/info.txt`],
+    //   },
+    // },
     {
       resolve: 'gatsby-plugin-minify-html',
       options: {
