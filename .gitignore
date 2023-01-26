@@ -4,6 +4,7 @@ ENV
 # public/static/**/
 ./artworks/
 ./public/artworks/**/*.webp
+./public/cv/**/*.pdf
 reading_list/tmp.pdf
 public/~partytown/
 .env.development
