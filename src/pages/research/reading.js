@@ -62,7 +62,7 @@ class ReadingList extends React.Component {
         modified: this.getDate(documents.modified * 1000),
         documents: documents.documents,
         unrecognized_overall: documents.unrecognized_overall,
-        unrecognized_overall_percent: documents.unrecognized_overall_percent,
+        unrecognized_overall_percent: documents.unrecognized_overall_percent * 100,
         isLoading: false,
       })
     })
@@ -85,14 +85,14 @@ class ReadingList extends React.Component {
 
             <PubGraph documents={documents} />
 
-            <h1>
+            <h1 style={{textAlign: 'left'}}>
               100 Recently Read Publications
               <div style={styles.lastupdate}><span className="mobilehide">Last updated:</span> <span>{modified}</span></div>
               <div style={styles.unrecognized}>
-                Unrecognized overall:
-                <span>{unrecognized_overall}
+                Unrecognized overall: <span>{unrecognized_overall}
+                {' '}
                 {
-                  unrecognized_overall_percent && `(${parseFloat(unrecognized_overall_percent).toPrecision(12) * 100}%)`
+                  unrecognized_overall_percent && `(${parseFloat(unrecognized_overall_percent).toPrecision(2)}%)`
                 }
                 </span>
               </div>
