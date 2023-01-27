@@ -74,7 +74,7 @@ class TravelRotary extends React.Component {
     const { rotary } = this.state
     if (!rotary.length) return null;
     return (
-      <React.Fragment>
+      <>
         <strong>Travel</strong>
         {/* / */}
 
@@ -108,7 +108,7 @@ class TravelRotary extends React.Component {
             }
         </div>
 
-      </React.Fragment>
+      </>
     )
   }
 }
