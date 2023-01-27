@@ -88,46 +88,56 @@ class ReadingList extends React.Component {
             <h1>
               100 Recently Read Publications
               <div style={styles.lastupdate}><span className="mobilehide">Last updated:</span> <span>{modified}</span></div>
-              <div style={styles.unrecognized}>Unrecognized overall: <span>{unrecognized_overall} ({unrecognized_overall_percent * 100}%)</span></div>
+              <div style={styles.unrecognized}>
+                Unrecognized overall:
+                <span>{unrecognized_overall}
+                {
+                  unrecognized_overall_percent && `(${parseFloat(unrecognized_overall_percent).toPrecision(12) * 100}%)`
+                }
+                </span>
+              </div>
             </h1>
 
-{
-  isLoading ?
-    <div className="ui segment">
-      <div className="ui active transition visible inverted dimmer" style={{display: 'flex !important'}}>
-        <div className="ui inverted text loader">Loading</div>
-      </div>
-    </div>
-  :
-            <table className="ui small stackable striped padded table">
-              <thead>
-                <tr>
-                  <th>Title</th>
-                  <th style={{maxWidth:'450px'}}>Author(s)</th>
-                  <th className="mobilehide collapsing">Year</th>
-                  <th className="collapsing">Keywords</th>
-                  <th className="mobilehide" title="Relevance to my past or current research OR importance to the respective field">Relevance/<br />Importance</th>
-                  <th className="mobilehide">Read</th>
-                </tr>
-              </thead>
-              <tbody>
-                {
-                    documents.map((doc, idx) => {
-                      return (
-                        <tr key={`id_${idx}`}>
-                          <td className="left aligned" style={{wordBreak:'break-all'}}>{doc.title}</td>
-                          <td className="single line left aligned" style={{wordBreak:'break-all',maxWidth:'450px'}}>{doc.authors.join(', ')}</td>
-                          <td className="left aligned mobilehide">{doc.year}</td>
-                          <td className="left aligned">{doc.keywords}</td>
-                          <td className="center aligned mobilehide">{doc.priority}</td>
-                          <td className="left aligned mobilehide">{this.getDate(doc.modified * 1000)}</td>
-                        </tr>
-                      )
-                    })
-                }
-              </tbody>
-            </table>
-}
+            {
+              isLoading &&
+                <div className="ui segment">
+                  <div className="ui active transition visible inverted dimmer" style={{display: 'flex !important'}}>
+                    <div className="ui inverted text loader">Loading</div>
+                  </div>
+                </div>
+            }
+
+            {
+              documents &&
+                <table className="ui small stackable striped padded table">
+                  <thead>
+                    <tr>
+                      <th>Title</th>
+                      <th style={{maxWidth:'450px'}}>Author(s)</th>
+                      <th className="mobilehide collapsing">Year</th>
+                      <th className="collapsing">Keywords</th>
+                      <th className="mobilehide" title="Relevance to my past or current research OR importance to the respective field">Relevance/<br />Importance</th>
+                      <th className="mobilehide">Read</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {
+                        documents.map((doc, idx) => {
+                          return (
+                            <tr key={`id_${idx}`}>
+                              <td className="left aligned" style={{wordBreak:'break-all'}}>{doc.title}</td>
+                              <td className="single line left aligned" style={{wordBreak:'break-all',maxWidth:'450px'}}>{doc.authors.join(', ')}</td>
+                              <td className="left aligned mobilehide">{doc.year}</td>
+                              <td className="left aligned">{doc.keywords}</td>
+                              <td className="center aligned mobilehide">{doc.priority}</td>
+                              <td className="left aligned mobilehide">{this.getDate(doc.modified * 1000)}</td>
+                            </tr>
+                          )
+                        })
+                    }
+                  </tbody>
+                </table>
+            }
 
             <div style={spacer}></div>
 
