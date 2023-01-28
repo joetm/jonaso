@@ -24,7 +24,7 @@ module.exports = {
     "gatsby-plugin-no-sourcemaps",
     // "gatsby-plugin-react-helmet"
     `gatsby-plugin-react-head`,
-    // `gatsby-plugin-image`,
+    `gatsby-plugin-image`,
     // performance monitoring
     // "gatsby-plugin-perf-budgets",
     // {
