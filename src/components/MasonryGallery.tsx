@@ -5,7 +5,7 @@ import useIntersectionObserver from '../hooks/use-intersect'
 
 
 
-function MasonryGallery({ images, fetchMore, isFetching }) {
+function MasonryGallery({ images, next, fetchMore, isFetching }) {
 
 	let trackerOffset = 0
 
@@ -42,7 +42,7 @@ function MasonryGallery({ images, fetchMore, isFetching }) {
 		trackerOffset = colHeight - minH
 	}
 
-	if(isVisible && !isFetching) {
+	if(next && isVisible && !isFetching) {
 		console.log('fetching MOAR!')
 		fetchMore()
 	}
