@@ -6,6 +6,7 @@ Resize images and copy them to the static folder
 
 import os, sys
 import json
+import shutil
 from PIL import Image
 import numpy as np
 # for getting dominany color
@@ -67,8 +68,15 @@ def rgb_to_hex(r, g, b):
 
 root = 'artworks-json'
 filetypes = ['json']
-
 outroot = 'public'
+chunkspath = 'public/artworks/json'
+
+try:
+  os.makedirs(chunkspath)
+except FileExistsError:
+  pass
+
+
 
 for path, subdirs, files in os.walk(root):
   for name in files:
@@ -124,4 +132,27 @@ for path, subdirs, files in os.walk(root):
       convertedimgs.append((webpoutpath, width, height, average_color))
 
     # write json with webp
-    json.dump(convertedimgs, open(os.path.join(outroot, 'artworks',  f'webp-{cat}.json'), 'w'))
+    json.dump(convertedimgs, open(os.path.join(outroot, 'artworks', 'json',  f'webp-{cat}.json'), 'w'))
+
+    chunksize = 100
+    chunks = [convertedimgs[x:x+100] for x in range(0, len(convertedimgs), 100)]
+    total = len(convertedimgs)
+
+    k = 0
+    for batch in chunks:
+      # detect last iteration
+      outbatch = {
+        'total': total,
+        'items': batch,
+      }
+      if k == len(chunks) - 1:
+        outbatch['next'] = False
+      else:
+        outbatch['next'] = k+1
+      json.dump(outbatch, open(os.path.join(chunkspath, f'webp-{cat}-{k}.json'), 'w'))
+      k += 1
+
+
+
+shutil.rmtree('artworks-json', ignore_errors=True)
+
