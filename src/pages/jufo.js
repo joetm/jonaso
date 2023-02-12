@@ -17,7 +17,7 @@ class JufoPage extends React.Component {
     jufo: false,
   }
   componentDidMount = () => {
-    fetch('https://www.jonaso.de/static/references-detail.json')
+    fetch('/static/references-detail.json')
     .then(response => {
       if (response.status >= 400) {
         throw new Error("Bad response from server: Could not get jufo points")
