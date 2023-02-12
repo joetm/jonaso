@@ -114,7 +114,7 @@ class AuthorList extends React.Component {
     coauthors: [],
   }
   componentDidMount() {
-    const url = `https://jonaso.de/static/publications.json`
+    const url = `/static/publications.json`
     const coauthors = []
     fetch(url).then(response => {
       if (response.status === 404) {

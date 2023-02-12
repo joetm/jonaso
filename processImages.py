@@ -9,6 +9,7 @@ import json
 import shutil
 from PIL import Image
 import numpy as np
+import urllib.parse
 # for getting dominany color
 # from colorthief import ColorThief
 
@@ -123,10 +124,14 @@ for path, subdirs, files in os.walk(root):
         except FileExistsError:
           pass
         im400.save(webpoutpath, "webp")
+
+      # encode e.g. spaces and hashtags in filename
+      webpoutpath = urllib.parse.quote(webpoutpath)
       print(webpoutpath)
 
       # remove 'public/' from output path
       webpoutpath = webpoutpath.split('/')[1:]
+      # encode e.g. hashtags and spaces
       webpoutpath = "https://www.jonaso.de/" + "/".join(webpoutpath)
 
       convertedimgs.append((webpoutpath, width, height, average_color))
