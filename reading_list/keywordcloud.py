@@ -41,10 +41,8 @@ for d in docs:
 
 mindatestamp = min(times)
 print("Start:", convertToDate(mindatestamp))
-
 maxdatestamp = max(times)
 print("End:", convertToDate(maxdatestamp))
-
 print("---")
 
 # manual binning
@@ -92,6 +90,7 @@ for d in docs:
       bindocs[kw] = bindocs[kw] + 1 
 with open('keyword-cloud-full.json', 'w') as LISTFILE:
   json.dump(bindocs, LISTFILE, indent=4)
+print('Written keyword-cloud-full.json')
 
 
 # only priority 1--3
@@ -110,4 +109,5 @@ for w in bindocs.keys():
 
 with open('keyword-cloud-priority.json', 'w') as LISTFILE:
   json.dump(reformatted, LISTFILE, indent=4)
+print('Written keyword-cloud-priority.json')
 
