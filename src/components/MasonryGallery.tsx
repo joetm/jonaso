@@ -78,7 +78,7 @@ function MasonryGallery({ images, next, fetchMore, isFetching }) {
 						<picture>
 							<source
 								type="image/webp"
-								srcSet={encodeURI(img[0]) + " 400w"}
+								srcSet={img[0] + " 400w"}
 								sizes="(min-width: 400px) 400px, 100vw" />
 							<img
 								layout="constrained"
@@ -87,8 +87,8 @@ function MasonryGallery({ images, next, fetchMore, isFetching }) {
 								sizes="(min-width: 400px) 400px, 100vw"
 								decoding="async"
 								loading="lazy"
-								src={encodeURI(img[0])}
-								srcSet={encodeURI(img[0]) + " 400w"}
+								src={img[0]}
+								srcSet={img[0] + " 400w"}
 								alt=""
 								width={img[1]}
 								height={img[2]} />
@@ -97,7 +97,7 @@ function MasonryGallery({ images, next, fetchMore, isFetching }) {
 							<picture>
 								<source
 									type="image/webp"
-									srcSet={encodeURI(img[0]) + " 400w"}
+									srcSet={img[0] + " 400w"}
 									sizes="(min-width: 400px) 400px, 100vw" />
 								<img
 									layout="constrained"
@@ -108,8 +108,8 @@ function MasonryGallery({ images, next, fetchMore, isFetching }) {
 									sizes="(min-width: 400px) 400px, 100vw"
 									decoding="async"
 									loading="lazy"
-									src={encodeURI(img[0])}
-									srcSet={encodeURI(img[0]) + " 400w"}
+									src={img[0]}
+									srcSet={img[0] + " 400w"}
 									alt="" />
 							</picture>
 						</noscript>
