@@ -48,7 +48,7 @@ const ArtPageSwitcher = ({generator}) => {
 				</a>
 				<a
 					folder="misc"
-					className={"item" + (generator === 'Others' ? ' active' : '')}
+					className={"item" + (generator === 'Misc. Text-To-Image Systems' ? ' active' : '')}
 					onClick={handleMenuClick}
 				>
 					Misc.

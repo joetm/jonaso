@@ -22,9 +22,7 @@ const ArtHeader = ({generator, byline, totalCount}) => {
               }
               </p>
             </section>
-
             <ArtPageSwitcher generator={generator} />
-
           </div>
         </Layout>
   )
