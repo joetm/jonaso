@@ -66,15 +66,32 @@ const Wrapper = {
       </div>
     </div>
   ), //
-  PubWrapper: ({title, items}) => (
-    <div className="wrapperBox">
-      <h4>{title}</h4>
-      <ol>{items}</ol>
-    </div>
-  ), //
+  PubWrapper: ({title, items, ratio321}) => (
+      <div className="wrapperBox">
+        <h4>{title}</h4>
+        {
+          ratio321 && <div>ratio: {ratio321}</div>
+        }
+        <ol>{items}</ol>
+      </div>
+    ),
 }
 
 // ----------------
+
+// https://stackoverflow.com/a/14810714/426266
+Object.map = function(o, f, ctx) {
+    ctx = ctx || this;
+    var result = {};
+    Object.keys(o).forEach(function(k) {
+        result[k] = f.call(ctx, o[k], k, o); 
+    });
+    return result;
+}
+
+function roundInt(num) {
+  return Math.round((num + Number.EPSILON) * 10) / 10
+}
 
 const DetailContainer = ({authorid, details, keywordClick, activeKeyword, toggleCoauthors, coauthorToggleActive, updateActive}) => {
   const { docs=[], keywords=[] } = details
@@ -88,7 +105,14 @@ const DetailContainer = ({authorid, details, keywordClick, activeKeyword, toggle
       key={`kw${i}${authorid}${kw}`}
     >{kw}</Label>
   )) //
-  // .filter(doc => doc.priority > 0)
+  let priocount = {'3': 0, '2': 0, '1': 0, '0': 0}
+  const doctotal = docs.length
+  docs.forEach(doc => { priocount[""+doc.priority] += 1 })
+  priocount = Object.map(priocount, function(v, k, o) {
+     return roundInt(v/doctotal * 100)
+  });
+  const ratio321 = `${priocount['3']}%/${priocount['2']}%/${priocount['1']}%/${priocount['0']}%`
+  console.log(docs)
   const publist = sortByKey(docs, 'priority').map((doc, i) => (
           <li key={`p${i}${authorid}${doc.priority}${doc.title}`}>({doc.priority}) {doc.title}</li>
       )) //
@@ -98,7 +122,7 @@ const DetailContainer = ({authorid, details, keywordClick, activeKeyword, toggle
       <div className="authordetails clear" key={`a-a${authorid}`}>
         <Wrapper.KeywordWrapper title="Keywords" items={kwlist} updateActive={updateActive} />
         <Wrapper.CoauthorWrapper title="Co-Authors" authorid={authorid} toggleCoauthors={toggleCoauthors} coauthorToggleActive={coauthorToggleActive} />
-        <Wrapper.PubWrapper title="Publications" items={publist} />
+        <Wrapper.PubWrapper title="Publications" items={publist} ratio321={ratio321} />
       </div>
     </>
   )
