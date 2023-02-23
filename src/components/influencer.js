@@ -105,17 +105,30 @@ const DetailContainer = ({authorid, details, keywordClick, activeKeyword, toggle
       key={`kw${i}${authorid}${kw}`}
     >{kw}</Label>
   )) //
+
   let priocount = {'3': 0, '2': 0, '1': 0, '0': 0}
   const doctotal = docs.length
   docs.forEach(doc => { priocount[""+doc.priority] += 1 })
   priocount = Object.map(priocount, function(v, k, o) {
      return roundInt(v/doctotal * 100)
   });
-  const ratio321 = `${priocount['3']}%/${priocount['2']}%/${priocount['1']}%/${priocount['0']}%`
-  console.log(docs)
+
+  const priocolors = {
+    '3': 'red',
+    '2': 'orange',
+    '1': 'brown',
+    '0': 'black',
+  }
+  const ratios = []
+  Object.keys(priocolors).reverse().forEach(k => {
+    ratios.push(<span class={`ui ${priocolors[k]} label`}>{priocount[k]}%</span>)
+  }) //
+  const ratio321 = (<span>{ratios}</span>) //
+
   const publist = sortByKey(docs, 'priority').map((doc, i) => (
-          <li key={`p${i}${authorid}${doc.priority}${doc.title}`}>({doc.priority}) {doc.title}</li>
+          <li className="abbrev" key={`p${i}${authorid}${doc.priority}${doc.title}`}><span class={`ui ${priocolors[doc.priority]} circular label docprio`}>{doc.priority}</span> {doc.title}</li>
       )) //
+
   return (
     <>
       <div className="clear"></div>
