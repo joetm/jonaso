@@ -176,7 +176,7 @@ export default function Home() {
 
             <div className="row">
 
-              <img src={img} alt="Jonas Oppenlaender" className="ui fluid rounded image" />
+              <img src={img} alt="" className="ui fluid rounded image" />
 
               <p style={{marginTop:'1em'}}>
               Tutkijatohtori (Postdoctoral Researcher)

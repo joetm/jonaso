@@ -1,10 +1,12 @@
+import "../../components/influencer.css"
+
 import React from "react"
-import Influencer from "../../components/influencer"
 import Loading from "../../components/influencerLoading"
 import Layout from "../../components/layout"
 import { Seo } from "../../components/Seo"
 import { sortByKey } from "../../common"
 import { spacer } from "../../common"
+import AuthorList from "../../components/influencer"
 
 // const _INFLUENCER = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/influencer.json'
 const _FLATINFLUENCER = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/allauthors.json'
@@ -22,6 +24,11 @@ class Influencers extends React.Component {
   state = {
     influencer: [],
     isLoading: true,
+    activeid: null,
+    activeAuthors: [],
+  }
+  updateActive = (obj) => {
+    this.setState({ ...obj })
   }
   componentDidMount = () => {
     // get influencer
@@ -68,7 +75,7 @@ class Influencers extends React.Component {
     })
   }
   render() {
-    const { influencer, isLoading } = this.state
+    const { influencer, isLoading, activeid, activeAuthors } = this.state
     return (
       <Layout>
         <div className="ui container">
@@ -76,12 +83,18 @@ class Influencers extends React.Component {
             Research Influences
             { isLoading && <span style={{marginLeft:'1em', fontWeight:100, fontSize:'1em'}}>...loading...</span>}
           </h2>
-          {
-            isLoading ?
-              <Loading />
-              :
-              <Influencer influencer={influencer} />
-          }
+          { isLoading && <Loading /> }
+
+          <div className="clear">
+            <AuthorList
+              list={influencer}
+              activeid={activeid}
+              activeAuthors={activeAuthors}
+              updateActive={this.updateActive}
+            />
+          </div>
+          <div className="clear"></div>
+
           <div style={spacer}></div>
         </div>
       </Layout>

@@ -6,8 +6,6 @@ import { Label, Checkbox } from 'semantic-ui-react'
 import md5 from "md5"
 import { sortByKey } from "../common"
 
-import "./influencer.css"
-
 
 const styles = {
   label: {
@@ -193,7 +191,7 @@ class AuthorList extends React.Component {
       return
     }
     // load the authors of this keyword
-    const kwid = md5(keyword);
+    const kwid = md5(keyword)
     const url = `https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/keywordauthors/${kwid}.json`
     fetch(url)
     .then(response => {
@@ -323,6 +321,7 @@ class AuthorList extends React.Component {
             return (
               <div key={`${index}_${author.id}`} id={author.id}>
               <a
+                href="#"
                 className={"ui label " + labelColor}
                 style={{...styles.label, opacity: author.name === 'Jonas Oppenlaender' ? 0.6 : 1}}
                 color={labelColor}
@@ -353,33 +352,5 @@ class AuthorList extends React.Component {
     )
   }
 }
-//`
 
-class Influencer extends React.Component {
-  state = {
-    activeid: null,
-    activeAuthors: [],
-  }
-  updateActive = (obj) => {
-  	this.setState({ ...obj })
-  }
-  render() {
-    const { influencer = [] } = this.props
-    const { activeid, activeAuthors } = this.state
-    return (
-        <div className="ui container">
-          <div className="clear">
-            <AuthorList
-            	list={influencer}
-            	activeid={activeid}
-            	activeAuthors={activeAuthors}
-            	updateActive={this.updateActive}
-            />
-          </div>
-          <div className="clear"></div>
-        </div>
-    ) //
-  }
-}
-
-export default Influencer
+export default AuthorList
