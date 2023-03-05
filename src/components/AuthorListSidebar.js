@@ -68,8 +68,15 @@ const Wrapper = {
 
 
 const DetailContainer = ({authorid, details, keywordClick, activeKeyword, toggleCoauthors, coauthorToggleActive, updateActive}) => {
-  // const [visible, setVisible] = React.useState(false)
-  const { docs=[], keywords=[] } = details
+
+  // const [orcid, setOrcid] = React.useState('')
+  // React.useEffect(() => {
+  //   fetch(`/reading_list/orcids/${authorid}.json`).then(
+  //       res => setOrcid(res.data)
+  //   )
+  // }, [authorid])
+
+  const { docs=[], keywords=[], orcid='', affiliations='' } = details
   // const kwlist = keywords.join(", ")
   const kwlist = keywords.map((kw, i) => (
     <Label
@@ -108,6 +115,12 @@ const DetailContainer = ({authorid, details, keywordClick, activeKeyword, toggle
   return (
     <div className="ui right visible wide sidebar" key={`a-a${authorid}`}>
       <h2 className="ui header" style={{marginTop:'1rem'}}>Author details</h2>
+      {
+        orcid && <div style={{textAlign:'center'}}>{orcid}</div>
+      }
+      {
+        affiliations && <div style={{textAlign:'center'}}>{affiliations}</div>
+      }
       <Wrapper.CoauthorWrapper authorid={authorid} updateActive={updateActive} toggleCoauthors={toggleCoauthors} coauthorToggleActive={coauthorToggleActive} />
       <Wrapper.KeywordWrapper title="Keywords" items={kwlist} />
       <Wrapper.PubWrapper title="Publications" items={publist} ratio321={ratio321} />
