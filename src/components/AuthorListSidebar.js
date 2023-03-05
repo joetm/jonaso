@@ -119,7 +119,7 @@ const DetailContainer = ({authorid, details, keywordClick, activeKeyword, toggle
         orcid && <div style={{textAlign:'center'}}>{orcid}</div>
       }
       {
-        affiliations && <div style={{textAlign:'center'}}>{affiliations}</div>
+        affiliations && <div style={{textAlign:'center'}}>{affiliations.split(',').map(a => (<div>{a}</div>))}</div>
       }
       <Wrapper.CoauthorWrapper authorid={authorid} updateActive={updateActive} toggleCoauthors={toggleCoauthors} coauthorToggleActive={coauthorToggleActive} />
       <Wrapper.KeywordWrapper title="Keywords" items={kwlist} />
