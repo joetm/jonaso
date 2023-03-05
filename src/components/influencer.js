@@ -198,7 +198,6 @@ class AuthorList extends React.Component {
             return (
               <div key={`${index}_${author.id}`} id={author.id}>
               <a
-                href="#"
                 className={"ui label " + labelColor}
                 style={{...styles.label, opacity: author.name === 'Jonas Oppenlaender' ? 0.6 : 1}}
                 color={labelColor}

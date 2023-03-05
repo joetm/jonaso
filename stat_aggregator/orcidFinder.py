@@ -36,9 +36,13 @@ def main():
   with open(author_file, 'r') as f:
     authors = json.load(f)
 
-  # random.shuffle(authors)
+  random.shuffle(authors)
 
   for author in authors:
+
+    # skip low prio authors
+    if author['priority'] < 3:
+      continue
 
     uid = author['id']
 
@@ -123,7 +127,7 @@ def main():
           affiliations = tr.findAll('td')[4].renderContents().strip()
 
           if firstname.lower() == target_first.encode('UTF-8').lower() and lastname.lower() == target_last.encode('UTF-8').lower():
-            print(f"Author found! {firstname} {lastname} {othernames} {affiliations} {orcidid}")
+            print(f"Author found!\t{firstname} {lastname} {othernames} {affiliations} {orcidid}")
 
             # save author data
             d = {
