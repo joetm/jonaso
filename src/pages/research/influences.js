@@ -8,8 +8,12 @@ import { sortByKey } from "../../common"
 import { spacer } from "../../common"
 import AuthorList from "../../components/influencer"
 
+export const isProd = process.env.NODE_ENV !== "development"
+
+
 // const _INFLUENCER = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/influencer.json'
 const _FLATINFLUENCER = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/allauthors.json'
+
 
 export function Head() {
   return (
@@ -83,7 +87,8 @@ class Influencers extends React.Component {
             Research Influences
             { isLoading && <span style={{marginLeft:'1em', fontWeight:100, fontSize:'1em'}}>...loading...</span>}
           </h2>
-          { isLoading && <Loading /> }
+
+          { isProd && isLoading && <Loading /> }
 
           <div className="clear">
             <AuthorList
