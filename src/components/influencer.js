@@ -2,9 +2,8 @@ import 'semantic-ui-css/components/label.min.css'
 import 'semantic-ui-css/components/checkbox.min.css'
 
 import React from "react"
-import { Label, Checkbox } from 'semantic-ui-react'
 import md5 from "md5"
-import { sortByKey } from "../common"
+import Sidebar from "./AuthorListSidebar"
 
 
 const styles = {
@@ -18,128 +17,6 @@ const styles = {
   },
 }
 
-// ----------------
-
-// https://stackoverflow.com/a/63775249/426266
-// function interpolateColor(c0, c1, f){
-//     c0 = c0.match(/.{1,2}/g).map((oct)=>parseInt(oct, 16) * (1-f))
-//     c1 = c1.match(/.{1,2}/g).map((oct)=>parseInt(oct, 16) * f)
-//     let ci = [0,1,2].map(i => Math.min(Math.round(c0[i]+c1[i]), 255))
-//     return ci.reduce((a,v) => ((a << 8) + v), 0).toString(16).padStart(6, "0")
-// }
-
-// scale the available colors of semantic ui label with percentage
-// function scaleLabelColor(perc) {
-//   // invert colors
-//   perc = 1 - perc
-//   // const colors = ['red','orange','pink','brown','grey','black']
-//   const colors = ['red','orange','olive','green','blue','violet','purple','pink','brown','grey','black']
-//   const colMaxIndex = colors.length - 1
-//   const key = Math.round(perc * colMaxIndex)
-//   return colors[key]
-// }
-
-
-// ----------------
-
-const Wrapper = {
-  KeywordWrapper: ({title, items, updateActive}) => (
-    <div className="wrapperBox">
-      <h4 style={{float:'left', display:'inline-block'}}>{title}</h4>
-      <i class="close icon"
-        role="button" aria-label="close"
-        tabIndex={0}
-        style={{float:'right', cursor:'pointer'}}
-        onClick={() => updateActive({activeid: null, activeAuthors: []})}
-        onKeyDown={() => updateActive({activeid: null, activeAuthors: []})}
-      ></i>
-      <div style={{clear:'both'}}>{items}</div>
-    </div>
-  ), //
-  CoauthorWrapper: ({title, authorid, toggleCoauthors, coauthorToggleActive}) => (
-    <div className="wrapperBox">
-      <h4>{title}</h4>
-      <div>
-        <Checkbox checked={coauthorToggleActive} onChange={() => toggleCoauthors(authorid)} label='Show co-authors' toggle />
-      </div>
-    </div>
-  ), //
-  PubWrapper: ({title, items, ratio321}) => (
-      <div className="wrapperBox">
-        <h4>{title}</h4>
-        {
-          ratio321 && <div>ratio: {ratio321}</div>
-        }
-        <ol>{items}</ol>
-      </div>
-    ),
-}
-
-// ----------------
-
-// https://stackoverflow.com/a/14810714/426266
-Object.map = function(o, f, ctx) {
-    ctx = ctx || this;
-    var result = {};
-    Object.keys(o).forEach(function(k) {
-        result[k] = f.call(ctx, o[k], k, o); 
-    });
-    return result;
-}
-
-function roundInt(num) {
-  return Math.round((num + Number.EPSILON) * 10) / 10
-}
-
-const DetailContainer = ({authorid, details, keywordClick, activeKeyword, toggleCoauthors, coauthorToggleActive, updateActive}) => {
-  const { docs=[], keywords=[] } = details
-  // const kwlist = keywords.join(", ")
-  const kwlist = keywords.map((kw, i) => (
-    <Label
-      style={styles.label}
-      as="a"
-      color={activeKeyword === kw ? 'orange' : 'teal'}
-      onClick={(e) => keywordClick(e)}
-      key={`kw${i}${authorid}${kw}`}
-    >{kw}</Label>
-  )) //
-
-  let priocount = {'3': 0, '2': 0, '1': 0, '0': 0}
-  const doctotal = docs.length
-  docs.forEach(doc => { priocount[""+doc.priority] += 1 })
-  priocount = Object.map(priocount, function(v, k, o) {
-     return roundInt(v/doctotal * 100)
-  });
-
-  const priocolors = {
-    '3': 'red',
-    '2': 'orange',
-    '1': 'brown',
-    '0': 'black',
-  }
-  const ratios = []
-  Object.keys(priocolors).reverse().forEach(k => {
-    ratios.push(<span class={`ui ${priocolors[k]} label`}>{priocount[k]}%</span>)
-  }) //
-  const ratio321 = (<span>{ratios}</span>) //
-
-  const publist = sortByKey(docs, 'priority').map((doc, i) => (
-          <li className="abbrev" key={`p${i}${authorid}${doc.priority}${doc.title}`}><span class={`ui ${priocolors[doc.priority]} circular label docprio`}>{doc.priority}</span> {doc.title}</li>
-      )) //
-
-  return (
-    <>
-      <div className="clear"></div>
-      <div className="authordetails clear" key={`a-a${authorid}`}>
-        <Wrapper.KeywordWrapper title="Keywords" items={kwlist} updateActive={updateActive} />
-        <Wrapper.CoauthorWrapper title="Co-Authors" authorid={authorid} toggleCoauthors={toggleCoauthors} coauthorToggleActive={coauthorToggleActive} />
-        <Wrapper.PubWrapper title="Publications" items={publist} ratio321={ratio321} />
-      </div>
-    </>
-  )
-} //
-
-// ----------------
 
 class AuthorList extends React.Component {
   state = {
@@ -334,7 +211,7 @@ class AuthorList extends React.Component {
                 <div className="detail">{author.num} | {author.priority}</div>
               </a>
                 {details[author.id] && activeid === author.id &&
-                  <DetailContainer
+                  <Sidebar
                   	authorid={author.id}
                   	activeKeyword={activeKeyword}
                   	details={details[author.id]}
