@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "export NODE_OPTIONS=--no-experimental-fetch yarn pubjson && yarn develop",
     "develop": "gatsby develop --open",
-    "build": "GATSBY_CPU_COUNT=1 NODE_OPTIONS=--max-old-space-size=4096 gatsby clean && make pre-build && gatsby build && make post-build && yarn push",
+    "build": "GATSBY_CPU_COUNT=1 NODE_OPTIONS=--max-old-space-size=4096 gatsby clean && make pre-build && gatsby build && make post-build && yarn push && make publish",
     "build-profiling": "GATSBY_CPU_COUNT=1 NODE_OPTIONS=--max-old-space-size=4096 gatsby clean && make pre-build && npx process-top ./node_modules/.bin/gatsby build && make post-build && yarn push",
     "serve": "gatsby serve",
     "push": "git add -A && git commit && git push",
