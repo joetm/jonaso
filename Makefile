@@ -16,6 +16,7 @@ default:
 	##   make cv			build the cv pdf
 	##   make tests			run tests (TODO)
 	##   make push   		push to github
+	##   make publish  		push to s3
 	##
 
 pre-build:
@@ -187,3 +188,8 @@ push:
 	git add -A
 	git commit
 	git push
+
+publish:
+	# push to s3
+	# aws s3 sync <source> <target> [--options]
+	aws s3 sync ./public/ s3://jonaso.de
