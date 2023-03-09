@@ -82,6 +82,7 @@ const Center = ({content}) => (
   </div>
 ) //
 
+
 const Row = ({left, middle, right, stretched = true}) => {
 	return (
     <div className="ui clearing segment">
