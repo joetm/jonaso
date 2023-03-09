@@ -1,6 +1,5 @@
 import React from "react"
 import 'semantic-ui-css/components/button.min.css'
-import { Container, Button } from 'semantic-ui-react'
 import { ResponsiveContainer, LabelList, BarChart, Bar, XAxis, YAxis, CartesianGrid } from 'recharts'
 
 
@@ -8,26 +7,22 @@ const HEIGHT = 1750;
 const colorDefault = '#eb008c';
 const colorZoomed = '#FF86A6';
 
-// old green: #82ca9d
 
 class Keywords extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      // chart: 'bar',
-      isZoomed: false,
       activeTooltipIndex: false,
       activeLabel: null,
       level2: [],
       color: colorDefault,
-      breadcrumb: null,
     }
   }
   handleBackButtonClick = () => {
     this.setState({isZoomed: false})
   }
   handleClick = bar => {
-    const { isZoomed } = this.state
+    const { isZoomed, zoom } = this.props
     if (!isZoomed) {
         // query level2
         const URL = `https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/level2/${bar.id}.json`
@@ -40,46 +35,38 @@ class Keywords extends React.Component {
         })
         .then(level2 => {
           this.setState({
-            isZoomed: true,
             level2,
-            breadcrumb: bar.name,
             color: colorZoomed
           })
+          zoom(true, bar.name)
         })
     } else {
         this.setState({
-          isZoomed: false,
           level2: [],
           breadcrumb: null,
           color: colorDefault
         })
+        zoom(false)
     }
   }
   zoomOut = () => {
+    const { zoom } = this.props
     this.setState({
-      isZoomed: false,
       level2: [],
       color: colorDefault
     })
+    zoom(false)
   }
   // changeChartType = (chart) => this.setState({chart})
   render() {
-    const { keywords = [] } = this.props
-    const { level2, isZoomed, breadcrumb, color } = this.state // chart
+    const { keywords = [], isZoomed } = this.props
+    const { level2, color } = this.state // chart
     const displaydata = isZoomed && level2.length ? level2 : keywords;
 
     // filtered_keywords = keywords.map(kw => kw.num > 1 ? kw : null);
 
     return (
-        <Container>
-          {
-            isZoomed &&
-              <div style={{float: 'right', marginRight: '1em'}}>
-                <span style={{marginRight: '1em'}}>{breadcrumb}</span>
-                <Button circular onClick={this.zoomOut} icon='left arrow' />
-              </div>
-          }
-
+        <div className="ui container">
           <div style={{clear:'both'}}></div>
 
           <ResponsiveContainer width="100%" height={HEIGHT}>
@@ -111,7 +98,7 @@ class Keywords extends React.Component {
                 </BarChart>
           </ResponsiveContainer>
 
-        </Container>
+        </div>
     )
   }
 }
