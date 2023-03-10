@@ -85,7 +85,7 @@ const Center = ({content}) => (
 
 const Row = ({left, middle, right, stretched = true}) => {
 	return (
-    <div className="ui clearing segment" style={{border:'0', boxShadow:'0'}}>
+    <div className="ui clearing">
       <div className="ui mobile vertically reversed three column grid">
         <Left content={left} />
         <Center content={middle} />
