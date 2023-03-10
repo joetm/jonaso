@@ -22,7 +22,7 @@ cv.supervisions[0].left = "Student Supervisions"
 cv.teaching[0].left = "Teaching"
 
 
-const _PORTFOLIO_URL = 'https://www.jonaso.de/portfolio/'
+const _PORTFOLIO_URL = '/portfolio/'
 const _PEERREVIEWS_URL = 'https://raw.githubusercontent.com/joetm/jonaso/master/stat_aggregator/peer-reviews.json'
 
 
