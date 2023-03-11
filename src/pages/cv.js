@@ -49,7 +49,7 @@ const styles = {
 export function Head() {
   return (
     <Seo title="CV // jonaso.de">
-      <link id="canonical" rel="canonical" href="https://www.jonaso.de/cv" />
+      <link id="canonical" rel="canonical" href="https://www.jonaso.de/cv/" />
     </Seo>
   )
 } //

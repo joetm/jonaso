@@ -19,7 +19,7 @@ const _PUBLICATIONS = '/static/publications.json'
 export function Head() {
   return (
     <Seo title="Collaboration Network // jonaso.de">
-      <link id="canonical" rel="canonical" href="https://www.jonaso.de/influencers" />
+      <link id="canonical" rel="canonical" href="https://www.jonaso.de/network/" />
     </Seo>
   ) //
 }

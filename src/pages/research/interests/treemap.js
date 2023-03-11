@@ -22,7 +22,7 @@ export function Head() {
     <Seo
       title="Research Interests // jonaso.de"
     >
-      <link id="canonical" rel="canonical" href="https://www.jonaso.de/interests/treemap" />
+      <link id="canonical" rel="canonical" href="https://www.jonaso.de/interests/treemap/" />
     </Seo>
   )
 }

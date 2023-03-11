@@ -15,7 +15,7 @@ const _PROJECTS = '/static/projects.json'
 export function Head() {
   return (
     <Seo title="Projects // jonaso.de">
-      <link id="canonical" rel="canonical" href="https://www.jonaso.de/projects" />
+      <link id="canonical" rel="canonical" href="https://www.jonaso.de/projects/" />
     </Seo>
   ) //
 } 

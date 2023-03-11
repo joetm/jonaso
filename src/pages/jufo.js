@@ -7,7 +7,7 @@ import { spacer } from "../common"
 export function Head() {
   return (
     <Seo title="Jufo // jonaso.de">
-      <link id="canonical" rel="canonical" href="https://www.jonaso.de/jufo" />
+      <link id="canonical" rel="canonical" href="https://www.jonaso.de/jufo/" />
     </Seo>
   )
 } //

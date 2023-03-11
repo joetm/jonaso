@@ -191,5 +191,6 @@ push:
 
 publish:
 	# push to s3
-	# aws s3 sync <source> <target> [--options]
+	# 	aws s3 cp --recursive ./public/ s3://jonaso.de
 	aws s3 sync ./public/ s3://jonaso.de
+

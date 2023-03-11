@@ -18,7 +18,7 @@ const _FLATINFLUENCER = 'https://raw.githubusercontent.com/joetm/jonaso/master/r
 export function Head() {
   return (
     <Seo title="Research Influences // jonaso.de">
-      <link id="canonical" rel="canonical" href="https://www.jonaso.de/influencers" />
+      <link id="canonical" rel="canonical" href="https://www.jonaso.de/influencers/" />
     </Seo>
   ) //
 }
