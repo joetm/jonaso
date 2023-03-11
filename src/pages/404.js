@@ -7,7 +7,7 @@ import Layout from "../components/layout"
 //     <>
 //       <meta charSet="utf-8" />
 //       <title>CV {'//'} jonaso.de</title>
-//       <link rel="canonical" href="https://www.jonaso.de/cv" />
+//       <link rel="canonical" href="https://www.jonaso.de/cv/" />
 //     </>
 //   )
 // }

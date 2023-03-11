@@ -35,16 +35,16 @@ const styles = {
   },
 }
 
-// const _REFERENCES_PER_YEAR = "https://raw.githubusercontent.com/joetm/jonaso/master/public/static/references.json"
-// const _REFERENCES_PER_TYPE = "https://raw.githubusercontent.com/joetm/jonaso/master/public/static/references-type.json"
-const _REFERENCES_PER_YEAR = "/static/references.json"
-const _REFERENCES_PER_TYPE = "/static/references-type.json"
+const _REFERENCES_PER_YEAR = "https://raw.githubusercontent.com/joetm/jonaso/master/public/static/references.json"
+const _REFERENCES_PER_TYPE = "https://raw.githubusercontent.com/joetm/jonaso/master/public/static/references-type.json"
+// const _REFERENCES_PER_YEAR = "/static/references.json"
+// const _REFERENCES_PER_TYPE = "/static/references-type.json"
 
 
 export function Head() {
   return (
     <Seo title="Publications // jonaso.de">
-      <link id="canonical" rel="canonical" href="https://www.jonaso.de/publications" />
+      <link id="canonical" rel="canonical" href="https://www.jonaso.de/publications/" />
     </Seo>
   )
 } //

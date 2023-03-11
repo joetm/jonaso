@@ -21,7 +21,7 @@ export function Head() {
     <Seo
       title="Teaching // jonaso.de"
     >
-      <link id="canonical" rel="canonical" href="https://www.jonaso.de/teaching" />
+      <link id="canonical" rel="canonical" href="https://www.jonaso.de/teaching/" />
     </Seo>
   )
 } //

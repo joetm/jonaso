@@ -11,7 +11,7 @@ const src = "http://localhost:8000/static/opp-1924a88836b85f62ee5d9a0754979b59.j
 export function Head() {
   return (
     <Seo title="UX // jonaso.de">
-      <link id="canonical" rel="canonical" href="https://www.jonaso.de/ux" />
+      <link id="canonical" rel="canonical" href="https://www.jonaso.de/ux/" />
     </Seo>
   )
 } //

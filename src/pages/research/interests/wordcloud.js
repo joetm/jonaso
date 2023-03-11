@@ -13,7 +13,7 @@ const _KEYWORDS = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading
 export function Head() {
   return (
     <Seo title="Research Interests (Cloud) // jonaso.de">
-      <link id="canonical" rel="canonical" href="https://www.jonaso.de/interests/wordcloud" />
+      <link id="canonical" rel="canonical" href="https://www.jonaso.de/interests/wordcloud/" />
     </Seo>
   ) //
 } 
