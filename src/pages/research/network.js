@@ -12,7 +12,9 @@ import loadable from '@loadable/component'
 const ForceGraph2D = loadable(() => import('react-force-graph-2d'))
 
 
-const _PUBLICATIONS = 'https://raw.githubusercontent.com/joetm/jonaso/master/public/static/publications.json'
+// const _PUBLICATIONS = 'https://raw.githubusercontent.com/joetm/jonaso/master/public/static/publications.json'
+const _PUBLICATIONS = '/static/publications.json'
+
 
 export function Head() {
   return (

@@ -10,7 +10,6 @@ import { Seo } from "../components/Seo"
 import TravelRotary from "../components/TravelRotary"
 import img from "../img/Jonas-Oppenlaender-500x500.jpg"
 import LINKEDIN from "../img/linkedin.png"
-// import CHATGPT from "../img/chatgpt.gif"
 // import ACMDL from "../img/ACM-DL-Logo-size3.webp"
 // import MEDIUM from "../img/monogram-mask.svg"
 // import WIKIDATA from "../img/wikidata.png"
@@ -38,10 +37,6 @@ const styles = {
         backfaceVisibility: 'hidden',
         color: '#767676',
     },
-    chatgptQuote: {
-      paddingTop: '1.5rem',
-      paddingBottom: '1rem',
-    },
 }
 
 
@@ -49,7 +44,7 @@ export const Head = () => (
   <Seo title="Jonas Oppenlaender, Doctor of Science (Technology)">
     <link id="canonical" rel="canonical" href="https://www.jonaso.de" />
   </Seo>
-)
+) //
 
 
 export default function Home() {
@@ -61,29 +56,6 @@ export default function Home() {
           <div className="eleven wide computer eleven wide large screen sixteen wide mobile ten wide tablet eleven wide widescreen column">
 
             <div className="row">
-
-{/*
-            <div style={styles.chatgptQuote} className="ui comments">
-              <div className="comment">
-                <i className="avatar" style={{width: '35px', backgroundColor: "rgb(16, 163, 127)"}}>
-                  <img src={CHATGPT} alt="" />
-                </i>
-                <div className="content">
-                  <span className="author">ChatGPT</span>
-                  <div className="metadata">
-                    <span className="date">Jan 12, 2023</span>
-                  </div>
-                  <div className="text">
-                      <em>
-                      &ldquo;A researcher true,<br />
-                      With diverse background and flair,<br />
-                      Jonas Oppenlaender&rdquo;
-                      </em>
-                  </div>
-                </div>
-              </div>
-            </div>
-*/}
 
               {/*
                 I am <strong>Jonas Oppenlaender</strong>, a postdoctoral researcher at the <a href="https://www.jyu.fi/en" target="_blank" rel="noreferrer">University of Jyv&auml;skyl&auml;</a> in Central Finland.
@@ -157,138 +129,97 @@ export default function Home() {
               </p>
 
               <p>
-                In my spare time, I enjoy dabbling with <a href="/artworks/">AI-generated art</a> and am a <a href="/kettlebells/">kettlebell</a> salesman. I have lived, studied, and/or worked in several countries including
-                  Germany,
-                  Switzerland,
-                  France,
-                  the United Kingdom,
-                  Sweden,
-                  Macedonia,
-                  the United States, and
-                  Finland.
+                In my spare time, I enjoy dabbling with <Link to="/artworks/">AI-generated art</Link> and am a <Link to="/kettlebells/">kettlebell</Link> salesman.
+                  I have lived, studied, and/or worked in several countries including
+                  Germany, Switzerland, France, the United Kingdom, Sweden, Macedonia, the United States, and Finland.
               </p>
 
             </div>
-
           </div>
 
           <div className="five wide computer five wide large screen sixteen wide mobile six wide tablet five wide widescreen column">
-
             <div className="row">
-
               <img src={img} alt="" className="ui fluid rounded image" />
-
               <p style={{marginTop:'1em'}}>
               Tutkijatohtori (Postdoctoral Researcher)
               </p>
-
               <p>
+                  {/*
                   <strong>Office</strong><br />
                   Agora, Room C424.1<br />
+                  */}
                   University of Jyv&auml;skyl&auml;<br />
                   {/* Software and Communications Engineering<br /> */}
                   Faculty of Information Technology<br />
                   40014 University of Jyv&auml;skyl&auml;<br />
                   Finland<br />
               </p>
-
               <p>
                 E-Mail: jonas.x1.oppenlander@jyu.fi
               </p>
               <p>
                   Academic <a href="/cv/oppenlaender-cv.pdf">CV</a>
-                  &nbsp;or&nbsp;
+                  &nbsp;|&nbsp;
                   Professional <a href="/cv/resume.pdf">Resume</a>
               </p>
-
               <aside style={{marginTop:'2em'}}>
                 <TravelRotary />
               </aside>
-
-              {/*
-              <h4 style={nobottommargin}>Office Address:</h4>
-              */}
-
-            {/*
-              <p>
-                  <strong>Consultation hour</strong>: <i>on demand</i> - just send me an email and we&apos;ll arrange a meeting
-              </p>
-              <p>
-                  <Icon as="i" link={true} size="large" name='hand outline right' />
-                  <a href="http://www.mi.fu-berlin.de/en/inf/groups/hcc/theses/open/index.html">Open BSc and MSc theses</a>
-              </p>
-            */}
-
             </div>
-
           </div>
         </div>
 
         <div className="ui divider"></div>
-
         <a href="https://www.linkedin.com/in/jonasopp/" target="_blank" rel="noopener noreferrer">
             <i style={{display:'inline-block', width: '25px', height: '25px',
               backgroundImage: `url(${LINKEDIN})`,
               verticalAlign: 'middle', backgroundPosition: 'center center', lineHeight: 1,
               margin: '0 0.5rem 0 0rem', backgroundSize: 'cover', opacity: 0.45}} title="Jonas Oppenlaender on LinkedIn"></i>
         </a>
-
         <a href="https://github.com/joetm" target="_blank" rel="noopener noreferrer">
             <i title="Jonas Oppenlaender on GitHub" aria-hidden="true" className="grey github square big link icon"></i>
         </a>
-
         <a href="https://orcid.org/0000-0002-2342-1540">
             <i style={styles.academicon} title="Jonas Oppenlaender on ORCID" className="ai ai-orcid-square ai-2x"></i>
         </a>
-
         {/*
         <a href="https://twitter.com/Duesynapse" target="_blank" rel="noopener noreferrer">
             <Icon title="Jonas Oppenlaender on Twitter" link={true} color="grey" size="big" name='twitter square' />
         </a>
-
         <a href="https://www.linkedin.com/in/jonasopp/" target="_blank" rel="noopener noreferrer">
             <Icon title="Jonas Oppenlaender on LinkedIn" link={true} color="grey" size="big" name='linkedin square' />
         </a>
-
         <a href="https://medium.com/@j.oppenlaender" target="_blank" rel="noopener noreferrer">
             <i style={{display:'inline-block', width: '25px', height: '25px',
               backgroundImage: `url(${MEDIUM})`,
               verticalAlign: 'middle', backgroundPosition: 'center center', lineHeight: 1,
               margin: '0 0.25rem 0 0.3rem', backgroundSize: 'cover', opacity: 0.45}} title="Jonas Oppenlaender on Medium"></i>
         </a>
-
         <a className="mobilehide" href="https://dl.acm.org/author_page.cfm?id=99659312669" target="_blank" rel="noopener noreferrer">
             <i style={{display:'inline-block', width: '25px', height: '25px',
               backgroundImage: `url(${ACMDL})`,
               verticalAlign: 'middle', backgroundPosition: 'center center', lineHeight: 1,
               margin: '0px 0.4rem 0px 0.4rem', backgroundSize: 'cover', opacity: 0.45}} title="Jonas Oppenlaender on ACM DL"></i>
         </a>
-
         <a className="mobilehide" href="https://arxiv.org/search/cs?searchtype=author&query=Oppenlaender%2C+J" target="_blank" rel="noopener noreferrer">
             <i style={styles.academicon} title="Jonas Oppenlaender on ArXiv" className="ai ai-arxiv-square ai-2x"></i>
         </a>
-
-
         <a className="mobilehide" href="https://dblp.uni-trier.de/pers/hd/o/Oppenlaender:Jonas">
             <i style={styles.academicon} title="Jonas Oppenlaender on DBLP" className="ai ai-dblp-square ai-2x"></i>
         </a>
-
         <a className="mobilehide" href="https://www.wikidata.org/wiki/Q57417597" target="_blank" rel="noopener noreferrer">
             <i style={{display:'inline-block', width: '25px', height: '25px',
               backgroundImage: `url(${WIKIDATA})`,
               verticalAlign: 'middle', backgroundPosition: 'center center', lineHeight: 1,
               margin: '0px 0.5rem 0px 0.25rem', backgroundSize: 'cover', opacity: 0.45}} title="Jonas Oppenlaender on Wikidata"></i>
         </a>
-
         <a href="https://figshare.com/authors/Jonas_Oppenlaender/4813044">
             <i style={styles.academicon} title="Jonas Oppenlaender on Figshare" className="ai ai-figshare-square ai-2x"></i>
         </a>
         */}
-
         <a href="https://scholar.google.com/citations?hl=de&user=ucO_QYQAAAAJ" target="_blank" rel="noopener noreferrer">
             <i style={styles.academicon} title="Jonas Oppenlaender on Google Scholar" className="ai ai-google-scholar-square ai-2x"></i>
         </a>
-
       </div>
     </Layout>
   )
