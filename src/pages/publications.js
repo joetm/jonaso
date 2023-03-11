@@ -35,8 +35,10 @@ const styles = {
   },
 }
 
-const _REFERENCES_PER_YEAR = "https://raw.githubusercontent.com/joetm/jonaso/master/public/static/references.json"
-const _REFERENCES_PER_TYPE = "https://raw.githubusercontent.com/joetm/jonaso/master/public/static/references-type.json"
+// const _REFERENCES_PER_YEAR = "https://raw.githubusercontent.com/joetm/jonaso/master/public/static/references.json"
+// const _REFERENCES_PER_TYPE = "https://raw.githubusercontent.com/joetm/jonaso/master/public/static/references-type.json"
+const _REFERENCES_PER_YEAR = "/static/references.json"
+const _REFERENCES_PER_TYPE = "/static/references-type.json"
 
 
 export function Head() {
@@ -167,12 +169,12 @@ class Publications extends React.Component {
     let customSortOrder = []
     if (keysType.length > 0) {
       customSortOrder = [
-        "Peer-reviewed Journal Articles",
-        "Peer-reviewed Conference Papers",
-        "Peer-reviewed Workshops",
-        "Peer-reviewed Workshop Proceedings",
+        "Journal Articles",
+        "Conference Papers",
+        "Workshops",
+        "Workshop Proceedings",
         "Doctoral Consortia",
-        "Peer-reviewed Conference Posters and Position Papers",
+        "Conference Posters and Position Papers",
         "Pre-prints and Working Papers",
         "Theses and Seminal Papers",
       ]

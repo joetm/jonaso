@@ -1,6 +1,4 @@
 import React from "react"
-// import { nobottommargin } from '../common'
-
 
 const TRAVEL = 'https://raw.githubusercontent.com/joetm/jonaso/master/public/travel.json'
 
@@ -19,8 +17,8 @@ class TravelRotary extends React.Component {
     .then(response => response.json())
     .then(travel => this.setRotary(travel))
     .catch(() => {
-        console.error("Error fetching travel.json");
-    });
+        console.error("Error fetching travel.json")
+    })
   }
   setRotary(travel) {
     const Now = new Date()
@@ -62,17 +60,15 @@ class TravelRotary extends React.Component {
         }
       }
     }
-
     // show some rows above and below the current travel item
     const sliceMin = index - 3 <= 0 ? 0 : index - 3;
     const sliceMax = index + 3 >= rotary.length ? rotary.length : index + 3;
     rotary = rotary.slice(sliceMin, sliceMax)
-
     this.setState({ rotary })
   }
   render() {
     const { rotary } = this.state
-    if (!rotary.length) return null;
+    if (!rotary.length) return null
     return (
       <>
         <strong>Travel</strong>
