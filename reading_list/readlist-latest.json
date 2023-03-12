@@ -1,8 +1,935 @@
 {
-    "modified": 1678292380,
+    "modified": 1678626188,
     "unrecognized_overall": 1332,
     "unrecognized_overall_percent": 0.14,
     "documents": [
+        {
+            "title": "Benchmarking methods to select examples to relabel in active learning for data labeled by multiple annotators",
+            "year": 2023,
+            "authors": [],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678625119,
+            "keywords": "Machine Learning > Active Learning, Interactive Machine Learning, Human-In-the-Loop > Tools, Libraries > ActiveLab",
+            "level": 4,
+            "priority": 0
+        },
+        {
+            "title": "Active Learning with Multiple Data Annotators via ActiveLab",
+            "year": 2023,
+            "authors": [],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678625071,
+            "keywords": "Machine Learning > Active Learning, Interactive Machine Learning, Human-In-the-Loop > Tools, Libraries > ActiveLab",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "ActiveLab: Active Learning with Data Re-Labeling",
+            "year": 2023,
+            "authors": [
+                "Hui Wen Goh",
+                "Jonas Mueller"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678624910,
+            "keywords": "Machine Learning > Active Learning, Interactive Machine Learning, Human-In-the-Loop > Tools, Libraries > ActiveLab",
+            "level": 4,
+            "priority": 0
+        },
+        {
+            "title": "ActiveLab: Active Learning with Re-Labeling by Multiple Annotators",
+            "year": 2023,
+            "authors": [
+                "Hui Wen Goh",
+                "Jonas Mueller"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678624742,
+            "keywords": "Machine Learning > Active Learning, Interactive Machine Learning, Human-In-the-Loop > Tools, Libraries > ActiveLab",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "Introduction \u2014 \ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd Kor 0.2.0",
+            "year": 2023,
+            "authors": [],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678624280,
+            "keywords": "NLP > Information Extraction > Kor",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "Orthogonality Thesis",
+            "year": 2023,
+            "authors": [],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678623095,
+            "keywords": "AI > Issues > Human-AI Alignment > Orthogonality Thesis",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "Large language models are having their Stable Diffusion moment",
+            "year": 2023,
+            "authors": [],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678622735,
+            "keywords": "NLP > Language Models > LLaMA (Meta) > llama.cpp",
+            "level": 4,
+            "priority": 0
+        },
+        {
+            "title": "Constitutional AI: Harmlessness from AI Feedback",
+            "year": 2023,
+            "authors": [
+                "Yuntao Bai",
+                "Saurav Kadavath",
+                "Sandipan Kundu",
+                "Amanda Askell",
+                "Jackson Kernion",
+                "Andy Jones",
+                "Anna Chen",
+                "Anna Goldie",
+                "Azalia Mirhoseini",
+                "Cameron McKinnon",
+                "Carol Chen",
+                "Catherine Olsson",
+                "Christopher Olah",
+                "Danny Hernandez",
+                "Dawn Drain",
+                "Deep Ganguli",
+                "Dustin Li",
+                "Eli Tran-Johnson",
+                "Ethan Perez",
+                "Jamie Kerr",
+                "Jared Mueller",
+                "Jeffrey Ladish",
+                "Joshua Landau",
+                "Kamal Ndousse",
+                "Kamile Lukosuite",
+                "Liane Lovitt",
+                "Michael Sellitto",
+                "Nelson Elhage",
+                "Nicholas Schiefer",
+                "Noemi Mercado",
+                "Nova DasSarma",
+                "Robert Lasenby",
+                "Robin Larson",
+                "Sam Ringer",
+                "Scott Johnston",
+                "Shauna Kravec",
+                "Sheer El Showk",
+                "Stanislav Fort",
+                "Tamera Lanham",
+                "Timothy Telleen-Lawton",
+                "Tom Conerly",
+                "Tom Henighan",
+                "Tristan Hume",
+                "Samuel R. Bowman",
+                "Zac Hatfield-Dodds",
+                "Ben Mann"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678620996,
+            "keywords": "Machine Learning > Reinforcement Learning > Reinforcement Learning with Human Feedback (RLHF) > Constitutional AI",
+            "level": 4,
+            "priority": 3
+        },
+        {
+            "title": "A General Language Assistant as a Laboratory for Alignment",
+            "year": 2023,
+            "authors": [
+                "Amanda Askell",
+                "Yuntao Bai",
+                "Anna Chen",
+                "Dawn Drain",
+                "Deep Ganguli",
+                "Tom Henighan",
+                "Andy Jones",
+                "Nicholas Joseph",
+                "Ben Mann",
+                "Nova DasSarma",
+                "Nelson Elhage",
+                "Zac Hatfield-Dodds",
+                "Danny Hernandez Jackson",
+                "Kernion Kamal Ndousse",
+                "Catherine Olsson",
+                "Dario Amodei",
+                "Tom Brown",
+                "Jack Clark",
+                "Sam McCandlish",
+                "Chris Olah",
+                "Jared Kaplan"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678620397,
+            "keywords": "AI > Issues > Human-AI Alignment > Alignment with Human Values > Helpful, Honest, Harmless (HHH)",
+            "level": 5,
+            "priority": 3
+        },
+        {
+            "title": "Deep Reinforcement Learning from Human Preferences",
+            "year": 2023,
+            "authors": [
+                "Paul F Christiano"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678619969,
+            "keywords": "Machine Learning > Reinforcement Learning > Reinforcement Learning with Human Feedback (RLHF)",
+            "level": 3,
+            "priority": 2
+        },
+        {
+            "title": "Learning to summarize from human feedback",
+            "year": 2023,
+            "authors": [
+                "Nisan Stiennon",
+                "Long Ouyang",
+                "Jeff Wu",
+                "Daniel M. Ziegler",
+                "Ryan Lowe",
+                "Chelsea Voss",
+                "Alec Radford",
+                "Dario Amodei",
+                "Paul Christiano"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678619836,
+            "keywords": "Machine Learning > Reinforcement Learning > Reinforcement Learning with Human Feedback (RLHF)",
+            "level": 3,
+            "priority": 2
+        },
+        {
+            "title": "Meet Cl\ufffdude: Anthropic\u2019s Riv\ufffdl to Ch\ufffdtGPT",
+            "year": 2023,
+            "authors": [
+                "Meet Claude"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678617373,
+            "keywords": "NLP > Language Models > Claude (Anthropic)",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Circle assures market after stablecoin USDC breaks dollar peg",
+            "year": 2023,
+            "authors": [
+                "Rishabh Jaiswal"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678612163,
+            "keywords": "Blockchain, Bitcoin > Cryptocurrencies > USDC",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Florida's battle over how race is taught in schools",
+            "year": 2023,
+            "authors": [
+                "Brandon Drenon"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678611982,
+            "keywords": "Education > Issues > Woke Education",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Book Review Toxic Tourism: Rhetorics of Pollution, Travel, and Environmental Justice",
+            "year": 2023,
+            "authors": [
+                "Phaedra Pezzullo",
+                "Barbara E. Willard"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678611782,
+            "keywords": "Tourism > Issues > Toxic Tourism",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Development, reliability, and validity of the Moral Identity Questionnaire",
+            "year": 2023,
+            "authors": [
+                "Jessica E. Black",
+                "William M. Reynolds"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678550515,
+            "keywords": "Ethics > Morals > Measuring Morals > Moral Identity Questionnaire (MIQ)",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "The Transportation Scale\u2013Short Form (TS\u2013SF)",
+            "year": 2023,
+            "authors": [
+                "MARKUS APPEL",
+                "TIMO GNAMBS",
+                "MELANIE C. GREEN"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678533592,
+            "keywords": "Research Methods > Qualitative > Narrative Transportation > Measuring Immersion > Transportation Scale - Short Form (TS-SF)",
+            "level": 5,
+            "priority": 1
+        },
+        {
+            "title": "Human-Centred Artificial Intelligence: A Contextual Morality Perspective",
+            "year": 2023,
+            "authors": [
+                "Benjamin; Goncalves",
+                "Jorge; Hosio",
+                "Niels van Berkela",
+                "Benjamin Tagb",
+                "Jorge Goncalvesb",
+                "Simo Hosioc"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678532991,
+            "keywords": "AI > Human-Centered AI, HCAI > Issues > Priming, Context",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "Running LLaMA 7B on a 64GB M2 MacBook Pro with llama.cpp",
+            "year": 2023,
+            "authors": [],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678531248,
+            "keywords": "NLP > Language Models > LLaMA (Meta) > llama.cpp",
+            "level": 4,
+            "priority": 0
+        },
+        {
+            "title": "COMMISSION STAFF WORKING DOCUMENT  IMPACT ASSESSMENT REPORT  Accompanying the document Proposal for a REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL laying down rules to prevent and combat child sexual abuse",
+            "year": 2023,
+            "authors": [],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678529220,
+            "keywords": "Communities, Networks > Issues > Child Sexual Abuse > EU Regulation on Child Sexual Abuse",
+            "level": 4,
+            "priority": 0
+        },
+        {
+            "title": "A Prompt Log Analysis of Text-to-Image Generation Systems",
+            "year": 2023,
+            "authors": [
+                "Yutong Xie",
+                "Zhaoying Pan",
+                "Jinge Ma",
+                "Luo Jie",
+                "Qiaozhu Mei"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678526612,
+            "keywords": "Prompt Engineering > Prompt Writing",
+            "level": 2,
+            "priority": 3
+        },
+        {
+            "title": "Sharon Stone says Basic Instinct role cost her custody of her son",
+            "year": 2023,
+            "authors": [
+                "Sharon Stone",
+                "Brandon Drenon"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678521037,
+            "keywords": "Discrimination > Gender Discrimination",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "Language Is Not All You Need: Aligning Perception with Language Models",
+            "year": 2023,
+            "authors": [
+                "Shaohan Huang",
+                "Li Dong",
+                "Wenhui Wang",
+                "Yaru Hao",
+                "Saksham Singhal",
+                "Shuming Ma",
+                "Tengchao Lv",
+                "Lei Cui",
+                "Owais Khan Mohammed",
+                "Barun Patra",
+                "Qiang Liu",
+                "Kriti Aggarwal",
+                "Zewen Chi",
+                "Johan Bjorck",
+                "Vishrav Chaudhary",
+                "Subhojit Som",
+                "Xia Song",
+                "Furu Wei"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678520889,
+            "keywords": "AI > Issues > Human-AI Alignment > Perception > Kosmos-1",
+            "level": 5,
+            "priority": 2
+        },
+        {
+            "title": "The Metaverse in 2040",
+            "year": 2023,
+            "authors": [],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678520863,
+            "keywords": "Virtual Reality > Metaverse > Issues > Adoption",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "Meta exploring plans for Twitter rival",
+            "year": 2023,
+            "authors": [
+                "Shiona McCallum"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678520828,
+            "keywords": "Communities, Networks > Social Media > Facebook > Issues > Idea Theft > Twitter",
+            "level": 6,
+            "priority": 0
+        },
+        {
+            "title": "Can VR in\ufb02uencers save the metaverse?",
+            "year": 2023,
+            "authors": [
+                "Mimi Swaby"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678520428,
+            "keywords": "Virtual Reality > Metaverse > Issues",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Asteroid headed toward Earth may arrive on Valentine's Day 2046 - Nasa",
+            "year": 2023,
+            "authors": [
+                "Brandon Drenon"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678519971,
+            "keywords": "Astronomy > Asteroid",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "THE LOBBY NETWORK: BIG TECH\u2018S WEB OF INFLUENCE IN THE EU",
+            "year": 2023,
+            "authors": [
+                "Felix Duffy",
+                "Verena Leyendecker",
+                "Margarida Silva"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678519881,
+            "keywords": "AI > Issues > Lobbying",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "The lobbying ghost in the machine Big Tech\u2019s covert defanging of Europe\u2019s AI Act",
+            "year": 2023,
+            "authors": [],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678519759,
+            "keywords": "AI > Issues > Lobbying",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "GPT-4 is coming next week \u2014 and it will be multimodal, says Microsoft Germany",
+            "year": 2023,
+            "authors": [
+                "Andreas Braun"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678519238,
+            "keywords": "NLP > Language Models > GPT > GPT-4",
+            "level": 4,
+            "priority": 0
+        },
+        {
+            "title": "For The First Time In Decades, People Bought More Vinyl Than CDs Last Year",
+            "year": 2023,
+            "authors": [
+                "ETHAN MILLMAN",
+                "Mitch Glazier"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678474475,
+            "keywords": "Technology > CDs",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "Companies are struggling to keep corporate secrets out of ChatGPT",
+            "year": 2023,
+            "authors": [
+                "Sam Sabin",
+                "Shoshana Gordon/Axios"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678474159,
+            "keywords": "NLP > Issues > Privacy",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Scaling up GANs for Text-to-Image Synthesis",
+            "year": 2023,
+            "authors": [
+                "Minguk Kang",
+                "Jun-Yan Zhu",
+                "Richard Zhang",
+                "Jaesik Park",
+                "Eli Shechtman",
+                "Sylvain Paris",
+                "Taesung Park"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678473908,
+            "keywords": "Machine Learning > Generative Deep Learning > Text-to-Image > GigaGAN",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "Visual ChatGPT: Talking, Drawing and Editing with Visual Foundation Models",
+            "year": 2023,
+            "authors": [
+                "Chenfei Wu",
+                "Shengming Yin",
+                "Weizhen Qi",
+                "Xiaodong Wang",
+                "Zecheng Tang",
+                "Nan Duan"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678464826,
+            "keywords": "AI > Foundation Models > Visual ChatGPT",
+            "level": 3,
+            "priority": 3
+        },
+        {
+            "title": "BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models",
+            "year": 2023,
+            "authors": [
+                "Junnan Li",
+                "Dongxu Li",
+                "Silvio Savarese",
+                "Steven Hoi"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678463232,
+            "keywords": "Machine Learning > Contrastive Learning, Multimodal Models > BLIP > BLIP2",
+            "level": 4,
+            "priority": 2
+        },
+        {
+            "title": "OCR-free Document Understanding Transformer",
+            "year": 2023,
+            "authors": [
+                "Geewook Kim",
+                "Teakgyu Hong",
+                "Moonbin Yim",
+                "Jeongyeon Nam",
+                "Jinyoung Park",
+                "Jinyeong Yim",
+                "Wonseok Hwang",
+                "Sangdoo Yun",
+                "Dongyoon Han",
+                "Seunghyun Park"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678461511,
+            "keywords": "Machine Learning > Computer Vision > Tools, Libraries > Document Understanding Transformer (Donut), Synthetic Document Generator (SynthDoG)",
+            "level": 4,
+            "priority": 2
+        },
+        {
+            "title": "BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension",
+            "year": 2023,
+            "authors": [
+                "Mike Lewis",
+                "Yinhan Liu",
+                "Naman Goyal",
+                "Marjan Ghazvininejad",
+                "Abdelrahman Mohamed",
+                "Omer Levy",
+                "Ves Stoyanov",
+                "Luke Zettlemoyer"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678461214,
+            "keywords": "NLP > Language Models > BART",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "Model Sketching: Centering Concepts in Early-Stage Machine Learning Model Design",
+            "year": 2023,
+            "authors": [
+                "Michelle S. Lam",
+                "Izequiel Freitas",
+                "Zixian Ma",
+                "Dakuo Wang",
+                "Anne Li",
+                "]ames A. Landay",
+                "Michael S. Bernstein"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678442372,
+            "keywords": "Creativity > Creativity in Machine Learning > Model Sketching > ModelSketchBook",
+            "level": 4,
+            "priority": 2
+        },
+        {
+            "title": "A Legal Challenge to Algorithmic Recommendations",
+            "year": 2023,
+            "authors": [
+                "Pamela Samuelson"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678383642,
+            "keywords": "Machine Learning > Recommender Systems > Issues > Radicalization > Youtube",
+            "level": 5,
+            "priority": 1
+        },
+        {
+            "title": "Virtual Influencers in the Real World",
+            "year": 2023,
+            "authors": [
+                "Logan Kugler"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678383033,
+            "keywords": "Communities, Networks > Social Media > Influencer > Virtual Influencers",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "Adding Smarts to Vending Machines Drives Convenience, Efficiency",
+            "year": 2023,
+            "authors": [],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678382818,
+            "keywords": "Vending Machines",
+            "level": 1,
+            "priority": 0
+        },
+        {
+            "title": "What Ever Happened to Peer-to-Peer Systems?",
+            "year": 2023,
+            "authors": [
+                "Carlos Baquero"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678382578,
+            "keywords": "Peer-to-peer, P2P",
+            "level": 1,
+            "priority": 0
+        },
+        {
+            "title": "Metaverse beyond the hype: Multidisciplinary perspectives on emerging challenges, opportunities, and agenda for research, practice and policy",
+            "year": 2023,
+            "authors": [
+                "Yogesh K. Dwivedi",
+                "Abdullah M. Baabdullah",
+                "Mihalis Giannakis",
+                "Mutaz M. Al-Debei",
+                "Denis Dennehy",
+                "Kieran Conboy",
+                "Rameshwar Dubey",
+                "Stefan Koos",
+                "Vikram Kumar ab",
+                "Keng-Boon Ooi ac",
+                "ad",
+                "ae",
+                "Savvas Papagiannidis",
+                "Sang-Min Park aj",
+                "Neeraj Pandey",
+                "Ramakrishnan Raman am",
+                "Philipp A. Rauschnabel",
+                "Anuragini Shirish ao",
+                "Marianna Sigala ap",
+                "aq",
+                "Konstantina Spanaki"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678380348,
+            "keywords": "Virtual Reality > Metaverse > General, Theory",
+            "level": 3,
+            "priority": 3
+        },
+        {
+            "title": "The Hitchhi the er\u2019s uide to etaverse",
+            "year": 2023,
+            "authors": [
+                "Pengyuan Zhou",
+                "Tristan Braud",
+                "Lin Wang",
+                "Dianlei Xu",
+                "Zijun Lin",
+                "Abhishek Kumar",
+                "Carlos Bermejo",
+                "Ming Pao"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678379702,
+            "keywords": "Virtual Reality > Metaverse > General, Theory",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Literature review: Existing methods using VR to enhance creativity",
+            "year": 2023,
+            "authors": [
+                "Zhengya Gong",
+                "Georgi V. Georgiev"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678379409,
+            "keywords": "Creativity > Creativity Support Tools > VR",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "iText: Hands-free Text Entry on an Imaginary Keyboard for Augmented Reality Systems",
+            "year": 2023,
+            "authors": [
+                "Xueshi Lu",
+                "Difeng Yu",
+                "Hai-Ning Liang",
+                "Jorge Goncalves"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678379241,
+            "keywords": "Virtual Reality > Issues > Input > Text Entry",
+            "level": 4,
+            "priority": 0
+        },
+        {
+            "title": "Blending On-Body and Mid-Air Interaction in Virtual Reality",
+            "year": 2023,
+            "authors": [
+                "Difeng Yu",
+                "Qiushi Zhou",
+                "Tilman Dingler",
+                "Eduardo Velloso",
+                "Jorge Goncalves"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678379223,
+            "keywords": "Virtual Reality > Gestures",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "Tactical Patterns for Grassroots Urban Repair",
+            "year": 2023,
+            "authors": [
+                "Sarah Cooney",
+                "Barath Raghavan"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678379199,
+            "keywords": "Virtual Reality > Applications > City Planning",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Understanding AUC - ROC Curve",
+            "year": 2023,
+            "authors": [
+                "Sarang Narkhede"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678379121,
+            "keywords": "Machine Learning > Classification > ROC, AUC",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Classi\ufffdcation: ROC Curve and AUC",
+            "year": 2023,
+            "authors": [],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678378846,
+            "keywords": "Machine Learning > Classification > ROC, AUC",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Examining the Influence of Trustworthiness, Financial Rewards, and Admiration for Crowdsourcing in the Post COVID-19 Period",
+            "year": 2023,
+            "authors": [
+                "Marcello Mariani",
+                "Sheshadri Chatterjee"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678377022,
+            "keywords": "Crowdsourcing, Human Computation > Issues > COVID-19",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "HOW MANY ADS DOES A PERSON SEE IN A DAY?",
+            "year": 2023,
+            "authors": [],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678347791,
+            "keywords": "Web > Issues > Commercialization",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "PaLM-E: An Embodied Multimodal Language Model",
+            "year": 2023,
+            "authors": [
+                "Danny Driess",
+                "Fei Xia",
+                "Mehdi S. M. Sajjadi",
+                "Corey Lynch",
+                "Aakanksha Chowdhery",
+                "Brian Ichter",
+                "Ayzaan Wahid",
+                "Jonathan Tompson",
+                "Quan Vuong",
+                "Tianhe Yu",
+                "Wenlong Huang",
+                "Yevgen Chebotar",
+                "Pierre Sermanet",
+                "Daniel Duckworth",
+                "Sergey Levine",
+                "Vincent Vanhoucke",
+                "Karol Hausman",
+                "Marc Toussaint",
+                "Klaus Greff",
+                "Andy Zeng",
+                "Igor Mordatch",
+                "Pete Florence"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678345697,
+            "keywords": "NLP > Language Models > PaLM-E",
+            "level": 3,
+            "priority": 2
+        },
+        {
+            "title": "OK-VQA: A Visual Question Answering Benchmark Requiring External Knowledge",
+            "year": 2023,
+            "authors": [
+                "Kenneth Marino",
+                "Mohammad Rastegari",
+                "Ali Farhadi",
+                "Roozbeh Mottaghi"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678345610,
+            "keywords": "Benchmarks, gold standards, datasets > Search, Question-Answering > Visual Question-Answering > OK-VQA",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "TikTok launches Project Clover to allay China security fears",
+            "year": 2023,
+            "authors": [
+                "Chris Vallance"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678345131,
+            "keywords": "Communities, Networks > Social Media > TikTok > Issues > Surveillance",
+            "level": 5,
+            "priority": 0
+        },
+        {
+            "title": "The haters and conspiracy theorists back on Twitter",
+            "year": 2023,
+            "authors": [],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678344471,
+            "keywords": "Communities, Networks > Social Media > Twitter > Issues > Toxicity",
+            "level": 5,
+            "priority": 0
+        },
+        {
+            "title": "Foundation Models for Decision Making: Problems, Methods, and Opportunities",
+            "year": 2023,
+            "authors": [
+                "Sherry Yang",
+                "Ofir Nachum",
+                "Yilun Du",
+                "Jason Wei",
+                "Pieter Abbeel",
+                "Dale Schuurmans"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1678300045,
+            "keywords": "AI > Foundation Models > Applications > Decision Making",
+            "level": 4,
+            "priority": 0
+        },
         {
             "title": "SolidGoldMagikarp III: Glitch token archaeology",
             "year": 2023,
@@ -619,820 +1546,6 @@
             "keywords": "Research Methods > Conjoint Analysis",
             "level": 2,
             "priority": 2
-        },
-        {
-            "title": "Predicted preference conjoint analysis",
-            "year": 2023,
-            "authors": [
-                "Dra\u017een Prelec"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677944998,
-            "keywords": "Research Methods > Conjoint Analysis > Predicted Preference Conjoint Analysis",
-            "level": 3,
-            "priority": 2
-        },
-        {
-            "title": "Does the \u201csurprisingly popular\u201d method yield accurate crowdsourced predictions?",
-            "year": 2023,
-            "authors": [
-                "Abraham M. Rutchick",
-                "Bryan J. Ross",
-                "Dustin P. Calvillo",
-                "Catherine C. Mesick"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677944930,
-            "keywords": "Collective Intelligence > Wisdom of the Crowd > Aggregation Mechanisms > Bayesian Truth Serum, Surprisingly Popular",
-            "level": 4,
-            "priority": 1
-        },
-        {
-            "title": "Harvesting the wisdom of crowds for election predictions using the Bayesian Truth Serum",
-            "year": 2023,
-            "authors": [
-                "Henrik Olsson",
-                "W\u00e4ndi Bruine de Bruin",
-                "Mirta Galesic",
-                "Drazen Prelec"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677944545,
-            "keywords": "Collective Intelligence > Wisdom of the Crowd > Aggregation Mechanisms > Bayesian Truth Serum, Surprisingly Popular > Election Polls",
-            "level": 5,
-            "priority": 1
-        },
-        {
-            "title": "A Bayesian truth serum for subjective data",
-            "year": 2023,
-            "authors": [
-                "Drazen Prelec"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677943445,
-            "keywords": "Collective Intelligence > Wisdom of the Crowd > Aggregation Mechanisms > Bayesian Truth Serum, Surprisingly Popular",
-            "level": 4,
-            "priority": 3
-        },
-        {
-            "title": "Augmented Language Models: a Survey",
-            "year": 2023,
-            "authors": [
-                "Gr\u00e9goire Mialon",
-                "Roberto Dess\u00ec",
-                "Maria Lomeli",
-                "Christoforos Nalmpantis",
-                "Ram Pasunuru",
-                "Roberta Raileanu",
-                "Baptiste Rozi\u00e8re",
-                "Timo Schick",
-                "Edouard Grave",
-                "Yann LeCun"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677942165,
-            "keywords": "NLP > Augmented Language Models",
-            "level": 2,
-            "priority": 3
-        },
-        {
-            "title": "OPTIMIZING MODEL PARAMETERS",
-            "year": 2023,
-            "authors": [],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677941999,
-            "keywords": "Machine Learning > Pytorch",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "More than you\u2019ve asked for: A Comprehensive Analysis of Novel Prompt Injection Threats to Application-Integrated Large Language Models",
-            "year": 2023,
-            "authors": [
-                "Kai Greshake",
-                "Sahar Abdelnabi",
-                "Shailesh Mishra",
-                "Christoph Endres",
-                "Thorsten Holz"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677941564,
-            "keywords": "NLP > Issues > Adversarial Attacks > Prompt Injection",
-            "level": 4,
-            "priority": 1
-        },
-        {
-            "title": "The Sensemaking Process and Leverage Points for Analyst Technology as Identified Through Cognitive Task Analysis",
-            "year": 2023,
-            "authors": [],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677938860,
-            "keywords": "Sensemaking > General, Theory > Sensemaking Process, Sensemaking Models > Pirolli and Card",
-            "level": 4,
-            "priority": 3
-        },
-        {
-            "title": "High-resolution image reconstruction with latent diffusion models from human brain activity",
-            "year": 2023,
-            "authors": [
-                "Yu Takagi",
-                "Shinji Nishimoto"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677934780,
-            "keywords": "Machine Learning > Generative Deep Learning > Brain-to-Image > Real-Time Brain-to-Image Reconstructions > StableDiffusionReconstruction",
-            "level": 5,
-            "priority": 3
-        },
-        {
-            "title": "The most widespread use of augmented reality isn\u2019t in gaming: it\u2019s the face filters on social media. The result? A mass experiment on girls and young women",
-            "year": 2023,
-            "authors": [
-                "By Tate Ryan-Mosley"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677921053,
-            "keywords": "Communities, Networks > Social Media > TikTok > Issues > Beauty Filters",
-            "level": 5,
-            "priority": 0
-        },
-        {
-            "title": "'This Is a Problem': A New Hyper-Realistic TikTok Beauty Filter Is Freaking People Out",
-            "year": 2023,
-            "authors": [
-                "Lauren Fichten"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677920737,
-            "keywords": "Communities, Networks > Social Media > TikTok > Issues > Beauty Filters",
-            "level": 5,
-            "priority": 0
-        },
-        {
-            "title": "Racial Bias in the Beautyverse: Evaluation of augmented-reality beauty filters",
-            "year": 2023,
-            "authors": [
-                "Piera Riccio"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677920640,
-            "keywords": "Communities, Networks > Social Media > TikTok > Issues > Beauty Filters > Racial Bias",
-            "level": 6,
-            "priority": 1
-        },
-        {
-            "title": "The problems with TikTok's controversial 'beauty filters'",
-            "year": 2023,
-            "authors": [],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677920333,
-            "keywords": "Communities, Networks > Social Media > TikTok > Issues > Beauty Filters",
-            "level": 5,
-            "priority": 0
-        },
-        {
-            "title": "Prompt Stealing Attacks Against Text-to-Image Generation Models",
-            "year": 2023,
-            "authors": [
-                "Xinyue Shen",
-                "Yiting Qu",
-                "Michael Backes",
-                "Yang Zhang"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677904606,
-            "keywords": "Machine Learning > Generative Deep Learning > Text-to-Image > Issues > Prompt Stealing",
-            "level": 5,
-            "priority": 3
-        },
-        {
-            "title": "The Nordic State of AI",
-            "year": 2023,
-            "authors": [],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677902892,
-            "keywords": "AI > General, Theory > Nordic Countries",
-            "level": 3,
-            "priority": 3
-        },
-        {
-            "title": "\u201cAn Adapt-or-Die Type of Situation\u201d: Perception, Adoption, and Use of Text-To-Image-Generation AI by Game Industry Professionals",
-            "year": 2023,
-            "authors": [
-                "VEERA VIMPARI",
-                "ANNAKAISA KULTIMA",
-                "PERTTU H\u00c4M\u00c4L\u00c4INEN",
-                "CHRISTIAN GUCKELSBERGER",
-                "Veera Vimpari",
-                "Annakaisa Kultima",
-                "Perttu H\u00e4m\u00e4l\u00e4inen"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677871201,
-            "keywords": "Prompt Engineering > Applications > Game Design",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "Sword Fighting is Not What You Think...",
-            "year": 2023,
-            "authors": [],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677870539,
-            "keywords": "Middle Ages > Sword Fighting",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "Pattern Recognition in a Bucket",
-            "year": 2023,
-            "authors": [
-                "Chrisantha Fernando",
-                "Sampsa Sojakka"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677741403,
-            "keywords": "Machine Learning > Recurrent Neural Network (RNN) > Liquid State Machine",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "MarioGPT: Open-Ended Text2Level Generation through Large Language Models",
-            "year": 2023,
-            "authors": [
-                "Shyam Sudhakaran",
-                "Miguel Gonz\u00e1lez-Duque",
-                "Claire Glanois",
-                "Matthias Freiberger",
-                "Elias Najarro",
-                "Sebastian Risi"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677740535,
-            "keywords": "Machine Learning > Generative Deep Learning > Applications > Game Generation > MarioGPT",
-            "level": 5,
-            "priority": 2
-        },
-        {
-            "title": "Stanford Human Preferences Dataset (SHP)",
-            "year": 2023,
-            "authors": [],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677739291,
-            "keywords": "Benchmarks, gold standards, datasets > Preferences > Stanford Human Preferences",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "Designing Hybrid Human-AI Orchestration Tools for Individual and Collaborative activities: A Technology Probe Study",
-            "year": 2023,
-            "authors": [
-                "Vanessa Echeverria",
-                "Kexin Yang",
-                "LuEttaMae Lawrence",
-                "Nikol Rummel",
-                "Vincent Aleven"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677738109,
-            "keywords": "Machine Learning > Applications > Education > Human-AI Orchestration",
-            "level": 4,
-            "priority": 0
-        },
-        {
-            "title": "ChatGPT: A Meta-Analysis after 2.5 Months",
-            "year": 2023,
-            "authors": [
-                "Christoph Leiter",
-                "Ran Zhang",
-                "Yanran Chen",
-                "Steffen Eger"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677658447,
-            "keywords": "NLP > Language Models > GPT > ChatGPT > Perception",
-            "level": 5,
-            "priority": 1
-        },
-        {
-            "title": "What does work-life balance mean in a changed work world?",
-            "year": 2023,
-            "authors": [],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677658311,
-            "keywords": "Future of Work > Work-Life Balance",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "The tiny diamond sphere that could unlock clean power",
-            "year": 2023,
-            "authors": [
-                "Carrie King",
-                "Christoph Wild",
-                "Eckhard W\u00f6rner"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677656341,
-            "keywords": "Energy > Nuclear Fusion",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "Ukraine war: Viral conspiracy theories falsely claim the war is fake",
-            "year": 2023,
-            "authors": [
-                "Shayan Sardarizadeh"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677656168,
-            "keywords": "Search > Issues > Misinformation, Conspiracy Theories > Fake Ukraine War",
-            "level": 4,
-            "priority": 0
-        },
-        {
-            "title": "LLaMA: Open and Efficient Foundation Language Models",
-            "year": 2023,
-            "authors": [
-                "Hugo Touvron",
-                "Thibaut Lavril",
-                "Gautier Izacard",
-                "Xavier Martinet",
-                "Marie-Anne Lachaux",
-                "Timothee Lacroix",
-                "Baptiste Rozi\u00e8re",
-                "Naman Goyal",
-                "Eric Hambro",
-                "Faisal Azhar",
-                "Aurelien Rodriguez",
-                "Armand Joulin",
-                "Edouard Grave",
-                "Guillaume Lample"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677509834,
-            "keywords": "NLP > Language Models > LLaMA (Meta)",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "Getting Started with DeclareDesign",
-            "year": 2023,
-            "authors": [],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677504991,
-            "keywords": "Design of Experiments > Tools > DeclareDesign",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "The speed of science",
-            "year": 2023,
-            "authors": [
-                "Saloni Dattani"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677502954,
-            "keywords": "Future Science",
-            "level": 1,
-            "priority": 2
-        },
-        {
-            "title": "Package \u2018DeclareDesign\u2019",
-            "year": 2023,
-            "authors": [],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677502529,
-            "keywords": "Design of Experiments > Tools > DeclareDesign",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "Sharing Data to Build a Medical Information Commons: From Bermuda to the Global Alliance",
-            "year": 2023,
-            "authors": [
-                "Robert Cook-Deegan",
-                "Rachel A. Ankeny",
-                "Kathryn Maxson Jones",
-                "Victor McKusick",
-                "Frank Ruddle"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677501293,
-            "keywords": "Scientific Method, Wissenschaftliches Arbeiten > Best Practices > Bermuda Principles",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "Planning for AGI and beyond",
-            "year": 2023,
-            "authors": [],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677490754,
-            "keywords": "AI > General Intelligence",
-            "level": 2,
-            "priority": 2
-        },
-        {
-            "title": "Sedition Hunters: AQuantitative Study of the Crowdsourced Investigation into the 2021 U.S. Capitol Attack",
-            "year": 2023,
-            "authors": [
-                "Tianjiao Yu",
-                "Sukrit Venkatagiri",
-                "Ismini Lourentzou",
-                "Kurt Luther"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677487360,
-            "keywords": "Crowdsourcing, Human Computation > Applications > Investigations > Sedition Hunters",
-            "level": 4,
-            "priority": 1
-        },
-        {
-            "title": "Perceived Moral Agency of Non-Moral Entities: Implications and Future Research Directions for Social Robots",
-            "year": 2023,
-            "authors": [
-                "Joel Wester",
-                "Eike Schneiders",
-                "Niels van Berkel"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677486482,
-            "keywords": "Robots, Bots > Social Robots > Moral Agency",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "Out of One, Many: Using Language Models to Simulate Human Samples",
-            "year": 2023,
-            "authors": [
-                "Lisa P. Argyle",
-                "Ethan C. Busby",
-                "Nancy Fulda",
-                "Joshua Gubler",
-                "Christopher Rytting",
-                "David Wingate"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677485909,
-            "keywords": "Crowdsourcing, Human Computation > Applications > Language Models > Silicon Samples > Algorithmic Fidelity",
-            "level": 5,
-            "priority": 3
-        },
-        {
-            "title": "230109_Lostri_Government_OSS_0_1",
-            "year": "N/A",
-            "authors": [],
-            "filename": "tmp.pdf",
-            "recog": 0,
-            "modified": 1677482803,
-            "keywords": "Open Source, FOSS > Government Policy",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "Me\ufffdsurin\ufffd \ufffdovernment policy on open source with \ufffd new d\ufffdt\ufffdset",
-            "year": 2023,
-            "authors": [
-                "Mike Linksv\ufffdyer"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677482650,
-            "keywords": "Open Source, FOSS > Government Policy",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "Human social sensing is an untapped resource for computational social science",
-            "year": 2023,
-            "authors": [
-                "Mirta Galesic",
-                "W\u00e4ndi Bruine de Bruin",
-                "Jonas Dalege",
-                "Scott L. Feld",
-                "Frauke Kreuter",
-                "Henrik Olsson",
-                "Drazen Prelec",
-                "Daniel L. Stein",
-                "Tamara van der Does"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677418755,
-            "keywords": "Computational Social Science > Social Sensing",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "Deep Reinforcement Learning: Pong from Pixels",
-            "year": 2023,
-            "authors": [],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677418660,
-            "keywords": "Machine Learning > Reinforcement Learning",
-            "level": 2,
-            "priority": 1
-        },
-        {
-            "title": "Do Not Tell Me More; You Are Honest: A Preconceived Honesty Bias",
-            "year": 2023,
-            "authors": [
-                "Ismael Rodriguez-Lara",
-                "David Pascual-Ezama",
-                "Adri\u00e1n Mu\u00f1oz"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677411777,
-            "keywords": "Psychology > Bias > Honesty Bias",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "General identifiability of possible world models for crowd wisdom",
-            "year": 2023,
-            "authors": [
-                "Drazen Prelec",
-                "John McCoy"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677411529,
-            "keywords": "Collective Intelligence > Wisdom of the Crowd > World Model of Crowd Wisdom",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "Up-to-fivefold reverberating waves through the Earth\u2019s center and distinctly anisotropic innermost inner core",
-            "year": 2023,
-            "authors": [
-                "Thanh-Son Pha",
-                "Hrvoje Tkal\u010di\u0107"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677410975,
-            "keywords": "Earth > Earth Core",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "There's Another Core Within Earth's Core, Scientists Discover",
-            "year": 2023,
-            "authors": [
-                "Becky Ferreira",
-                "Hrvoje Tkal\u010di\u0107"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677410829,
-            "keywords": "Earth > Earth Core",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "ChatGPT Is Just an Automated Mansplaining Machine",
-            "year": 2023,
-            "authors": [
-                "MAGGIE HARRISON",
-                "ChatGPT ls Just"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677341842,
-            "keywords": "NLP > Language Models > GPT > ChatGPT > Issues > Mansplaining",
-            "level": 6,
-            "priority": 0
-        },
-        {
-            "title": "The damage done to the credibility of AI by ChatGPT engineers building in political bias is irreparable.",
-            "year": 2023,
-            "authors": [
-                "Donald Trump"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677341403,
-            "keywords": "NLP > Language Models > GPT > ChatGPT > Issues > Bias, Discrimination",
-            "level": 6,
-            "priority": 1
-        },
-        {
-            "title": "Founder Of $90 Million Cryptocurrency Hedge Fund Sentenced To More Than Seven Years In Prison",
-            "year": 2023,
-            "authors": [
-                "Audrey Strauss"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677331341,
-            "keywords": "Blockchain, Bitcoin > Issues > Pyramid Schemes > Virgil Sigma, VQR",
-            "level": 4,
-            "priority": 0
-        },
-        {
-            "title": "The US Copyright Office says you can\u2019t copyright Midjourney AI-generated images / A copyright registration granted to the Zarya of the Dawn comic book",
-            "year": 2023,
-            "authors": [
-                "Kristina Kashtanova",
-                "David Holz",
-                "Kris Kashtanova"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677328374,
-            "keywords": "Machine Learning > Generative Deep Learning > Issues > Copyright, Intellectual Property > Zarya of the Dawn Comic Book",
-            "level": 5,
-            "priority": 2
-        },
-        {
-            "title": "Zarya of the Dawn (Registration # VAu001480196)",
-            "year": 2023,
-            "authors": [
-                "Van Lindberg",
-                "Taylor English Duma"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677328088,
-            "keywords": "Machine Learning > Generative Deep Learning > Issues > Copyright, Intellectual Property > Zarya of the Dawn Comic Book",
-            "level": 5,
-            "priority": 3
-        },
-        {
-            "title": "$1 Billion Getty Images Lawsuit Ends Not with a Bang, but a Whimper",
-            "year": 2023,
-            "authors": [],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677317369,
-            "keywords": "Copyright > Public Domain > Getty Images",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "The drift lighter project \u2014 Estimation of drifting range and source of North Pacificmarine litter using disposable lighters washed up on coasts",
-            "year": 2023,
-            "authors": [
-                "FUJIEDA Shigeru"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677316174,
-            "keywords": "Environment > Oceans > Floating Marine Litter > Drift Lighter Project",
-            "level": 4,
-            "priority": 0
-        },
-        {
-            "title": "'Crazy stuff is happening at my work': Silicon Valley engineers are really freaking out right now",
-            "year": 2023,
-            "authors": [
-                "Adam Rogers"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677259486,
-            "keywords": "Silicon Valley > Issues > Burnout, Anxiety > Optimizers, Balancers > Blind (Anonymous Professional Network)",
-            "level": 5,
-            "priority": 0
-        },
-        {
-            "title": "Self-locating belief and the Sleeping Beauty problem",
-            "year": 2023,
-            "authors": [
-                "Adam Elga"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677258143,
-            "keywords": "Decision Theory > Sleeping Beauty Problem",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "One Self: The Logic of Experience",
-            "year": 2023,
-            "authors": [
-                "Alastair Hannay",
-                "Arnold Zuboff"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677258015,
-            "keywords": "Decision Theory > Sleeping Beauty Problem",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "Sleeping Beauty problem",
-            "year": 2023,
-            "authors": [],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677257528,
-            "keywords": "Decision Theory > Sleeping Beauty Problem",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "Seeding Diversity into AI Art Paper type: Technical Paper",
-            "year": 2023,
-            "authors": [
-                "Marvin Zammit",
-                "Antonios Liapis",
-                "Georgios N. Yannakakis"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677249568,
-            "keywords": "Machine Learning > Art > Issues > Novelty, Diversity",
-            "level": 4,
-            "priority": 1
-        },
-        {
-            "title": "Some Whys and Hows of Experiments in Human\u2013Computer Interaction",
-            "year": 2023,
-            "authors": [
-                "Kasper Hornb\u00e6k"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677241053,
-            "keywords": "Design, HCI, UI, UX > General, Theory > Experiments in HCI",
-            "level": 3,
-            "priority": 2
-        },
-        {
-            "title": "Large Language Models Can Be Easily Distracted by Irrelevant Context",
-            "year": 2023,
-            "authors": [
-                "Freda Shi",
-                "Xinyun Chen",
-                "Kanishka Misra",
-                "Nathan Scales",
-                "David Dohan",
-                "Ed Chi",
-                "Nathanael Sch\u00e4rli",
-                "Denny Zhou"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677240715,
-            "keywords": "NLP > Issues > Irrelevant Context > Grade-School Math with Irrelevant Context (GSM-IC)",
-            "level": 4,
-            "priority": 2
-        },
-        {
-            "title": "Does human\u2013AI collaboration lead to more creative art? Aesthetic evaluation of human-made and AI-generated haiku poetry",
-            "year": 2023,
-            "authors": [
-                "Jimpei Hitsuwari",
-                "Yoshiyuki Ueda",
-                "Woojin Yun",
-                "Michio Nomura"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1677240503,
-            "keywords": "Machine Learning > Art > Haiku",
-            "level": 3,
-            "priority": 1
         }
     ]
 }
