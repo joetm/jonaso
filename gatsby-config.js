@@ -21,7 +21,7 @@ module.exports = {
     // replace react with preact
     // "gatsby-plugin-preact", // not compatible with React 18
     // do not generate source maps
-    // "gatsby-plugin-no-sourcemaps",
+    "gatsby-plugin-no-sourcemaps",
     // "gatsby-plugin-react-helmet"
     `gatsby-plugin-react-head`,
     `gatsby-plugin-image`,
@@ -67,7 +67,6 @@ module.exports = {
       options: {
         debug: false, // debug optional, default false
         config: {
-          // Enabled default by this plugin
           collapseWhitespace: false,
           minifyCSS: true,
           minifyJS: true,
@@ -81,7 +80,7 @@ module.exports = {
       }
     },
     'gatsby-plugin-remove-generator',
-    // `gatsby-plugin-remove-fingerprints`, // <-- breaks some pages
+    `gatsby-plugin-remove-fingerprints`, // <-- breaks some pages
     // `gatsby-plugin-purgecss`,
   ],
   siteMetadata: {

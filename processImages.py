@@ -13,6 +13,8 @@ import urllib.parse
 # for getting dominany color
 # from colorthief import ColorThief
 
+IMAGECUTOFF = 100
+
 
 try:
   os.makedirs('artworks-json')
@@ -27,6 +29,8 @@ filetypes = ['png', 'jpg', 'jpeg', 'webp']
 
 images = {}
 
+imagecounter = {}
+
 for path, subdirs, files in os.walk(root):
   for name in files:
     ending = name.split(".")[-1]
@@ -40,15 +44,28 @@ for path, subdirs, files in os.walk(root):
     except:
       images[cat] = [ (img_path, mod_date) ]
 
+
 for cat in images.keys():
-  #   # sort by modification date
+  # sort by modification date
   images[cat].sort(key=lambda x: int(x[1]), reverse=True)
+
+  # only process the latest x = IMAGECUTOFF images for each category
+  if IMAGECUTOFF:
+    try:
+      if imagecounter[cat] >= IMAGECUTOFF:
+        break
+      imagecounter[cat] += 1
+    except:
+      imagecounter[cat] = 1
+      pass
+
   outfile = f'artworks-json/{cat}.json'
   with open(outfile, 'w') as f:
     json.dump(images[cat], f)
     print(f"({len(images[cat])})\t{cat}: {outfile}")
 
 
+# special processing for the latest images (because there is no folder for them)
 # get latest 50 images
 latest = []
 for cat in images.keys():
@@ -80,10 +97,10 @@ except FileExistsError:
 
 
 for path, subdirs, files in os.walk(root):
+  imagecounter = 0
   for name in files:
     jsonfile = os.path.join(path, name)
     imgs = json.load(open(jsonfile, 'r'))
-    
     convertedimgs = []
     for info in imgs:
       imgpath = info[0]
@@ -158,6 +175,20 @@ for path, subdirs, files in os.walk(root):
       k += 1
 
 
-
 shutil.rmtree('artworks-json', ignore_errors=True)
+
+
+# process all json files to only include the latest images
+# this is done here because of subfolders that may contain < IMAGECUTOFF images
+# if IMAGECUTOFF:
+#   for path, subdirs, files in os.walk(chunkspath):
+#     for name in files:
+#       if not name.endswith('.json'):
+#         continue
+#       jsonfile = os.path.join(path, name)
+#       with open(jsonfile, 'r') as f:
+#         imgs = json.load(f)
+#       imgs = imgs[0:IMAGECUTOFF]
+#       json.dump(imgs, open(jsonfile, 'w'))
+
 
