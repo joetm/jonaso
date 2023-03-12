@@ -15,10 +15,11 @@ const ArtHeader = ({generator, byline, totalCount}) => {
             <section style={{textAlign:'center', marginBottom:'2em'}}>
               <p>
               {
-                byline ?
-                  byline
-                    :
-                  totalCount === 0 ? (<span>&nbsp;</span>) : `${totalCount} images`
+                byline
+              }
+              {
+                  totalCount === 0 ? (<span>&nbsp;</span>) :
+                    totalCount >= 100 ? `Latest ${totalCount} images` : `${totalCount} images`
               }
               </p>
             </section>
