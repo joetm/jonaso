@@ -174,9 +174,9 @@ class CV extends React.Component {
 {/**********************
         CONTACT
 ***********************/}
-    <div className="ui segment">
+    <div className="ui segment" style={{marginBottom:'21px'}}>
       <div className="ui stackable two column grid">
-        <div className="row">
+        <div className="row" style={{marginBottom:0}}>
           <div className="stretched four wide computer sixteen wide mobile three wide tablet column">
               <span style={styles.headline} size="large">Contact Information</span>
           </div>
