@@ -36,11 +36,11 @@ class Interests extends React.Component {
     return (
       <Layout>
         <div className="ui container">
-          <h2>
-            Research Interests
-            {' '}
-            <GraphSwitcher active="wordcloud" />
-          </h2>
+          <div className="ui segment" style={{clear:'both', border:0, boxShadow: '0px 0px 0px #FFFFFF'}}>
+            <h2 style={{float:'left', display:'inline-block', marginRight: '1rem'}}>Research Interests</h2>
+              {' '}
+              <GraphSwitcher active="wordcloud" />
+          </div>
           <KeywordCloud />
           <div style={spacer}></div>
         </div>
