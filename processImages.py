@@ -51,13 +51,7 @@ for cat in images.keys():
 
   # only process the latest x = IMAGECUTOFF images for each category
   if IMAGECUTOFF:
-    try:
-      if imagecounter[cat] >= IMAGECUTOFF:
-        break
-      imagecounter[cat] += 1
-    except:
-      imagecounter[cat] = 1
-      pass
+    images[cat] = images[cat][0:IMAGECUTOFF]
 
   outfile = f'artworks-json/{cat}.json'
   with open(outfile, 'w') as f:
@@ -176,19 +170,5 @@ for path, subdirs, files in os.walk(root):
 
 
 shutil.rmtree('artworks-json', ignore_errors=True)
-
-
-# process all json files to only include the latest images
-# this is done here because of subfolders that may contain < IMAGECUTOFF images
-# if IMAGECUTOFF:
-#   for path, subdirs, files in os.walk(chunkspath):
-#     for name in files:
-#       if not name.endswith('.json'):
-#         continue
-#       jsonfile = os.path.join(path, name)
-#       with open(jsonfile, 'r') as f:
-#         imgs = json.load(f)
-#       imgs = imgs[0:IMAGECUTOFF]
-#       json.dump(imgs, open(jsonfile, 'w'))
 
 
