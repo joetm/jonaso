@@ -3,6 +3,8 @@ import React from "react"
 
 const TRAVEL = 'https://raw.githubusercontent.com/joetm/jonaso/master/public/travel.json'
 
+const Now = new Date()
+
 
 export default function TravelRotary() {
 
@@ -15,7 +17,6 @@ export default function TravelRotary() {
   }
 
   function processRotary(travel) {
-    const Now = new Date()
     // convert dates into JavaScript dates
     let rotary = travel.filter(item => ['confirmed','canceled'].indexOf(item.status) > -1).map(item => {
       // date ranges
@@ -66,6 +67,8 @@ export default function TravelRotary() {
       if (travel.length) {
         const rotary = processRotary(travel)
         updateRotary(rotary)
+      } else {
+        return []
       }
     })
     .catch(() => {

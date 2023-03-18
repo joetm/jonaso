@@ -7,7 +7,6 @@ import React from "react"
 import { Link } from "gatsby"
 import { Seo } from "../components/Seo"
 
-import TravelRotary from "../components/TravelRotary"
 import img from "../img/Jonas-Oppenlaender-500x500.jpg"
 import LINKEDIN from "../img/linkedin.png"
 // import ACMDL from "../img/ACM-DL-Logo-size3.webp"
@@ -15,6 +14,8 @@ import LINKEDIN from "../img/linkedin.png"
 // import WIKIDATA from "../img/wikidata.png"
 import Layout from "../components/layout"
 // import { nobottommargin } from "../common"
+
+// import TravelRotary from "../components/TravelRotary"
 
 
 const styles = {
@@ -162,9 +163,11 @@ export default function Home() {
                   &nbsp;|&nbsp;
                   Professional <a href="/cv/resume.pdf">Resume</a>
               </p>
+              {/*
               <aside style={{marginTop:'2em'}}>
                 <TravelRotary />
               </aside>
+              */}
             </div>
           </div>
         </div>
