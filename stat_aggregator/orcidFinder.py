@@ -38,11 +38,24 @@ def main():
 
   random.shuffle(authors)
 
+  FILTERPRIO = 3
+
+  authors = [a for a in authors if a['priority'] >= FILTERPRIO]
+
+  total = len(authors)
+  progress = 0
+
+  print(f"{total} authors with prio {FILTERPRIO}")
+
   for author in authors:
 
+    progress += 1
+
     # skip low prio authors
-    if author['priority'] < 3:
+    if author['priority'] < FILTERPRIO:
       continue
+
+    print(f"{progress}/{total}")
 
     uid = author['id']
 

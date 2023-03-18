@@ -125,7 +125,7 @@ export default function Home() {
               </p>
 
               <p>
-              In my academic research, I am interested in building socio-technical systems that allow humans and technology to work together to achieve tasks that would be beyond their individual capabilities. In the past, I have focused on facilitating knowledge transfer and supporting complex creative work. My scientific research interests, based on the academic literature I have read, are reflected <Link to="/interests">here</Link>. Currently, my scientific research interest is in prompt-based learning and generative artificial intelligence.
+              In my academic research, I am interested in building socio-technical systems that allow humans and technology to work together to achieve tasks that would be beyond their individual capabilities. In the past, I have focused on facilitating knowledge transfer and supporting complex creative work. My scientific research interests, based on the academic literature I have read, are reflected <Link to="/interests/">here</Link>. Currently, my scientific research interest is in prompt-based learning and generative artificial intelligence.
               </p>
 
               <p>
