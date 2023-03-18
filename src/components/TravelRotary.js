@@ -1,28 +1,21 @@
 import React from "react"
 
+
 const TRAVEL = 'https://raw.githubusercontent.com/joetm/jonaso/master/public/travel.json'
 
 
-class TravelRotary extends React.Component {
-  state = {
-    rotary: []
-  }
-  stati = {
+export default function TravelRotary() {
+
+  const [rotary, updateRotary] = React.useState([])
+
+  const stati = {
     'canceled': 'line-through',
     'running': 'bold',
     'confirmed': 'initial',
   }
-  componentDidMount() {
-    fetch(TRAVEL)
-    .then(response => response.json())
-    .then(travel => this.setRotary(travel))
-    .catch(() => {
-        console.error("Error fetching travel.json")
-    })
-  }
-  setRotary(travel) {
-    const Now = new Date()
 
+  function processRotary(travel) {
+    const Now = new Date()
     // convert dates into JavaScript dates
     let rotary = travel.filter(item => ['confirmed','canceled'].indexOf(item.status) > -1).map(item => {
       // date ranges
@@ -45,7 +38,6 @@ class TravelRotary extends React.Component {
       }
       return item
     })
-
     // find event with minimum datediff
     let index = 0
     let min = null
@@ -64,50 +56,58 @@ class TravelRotary extends React.Component {
     const sliceMin = index - 3 <= 0 ? 0 : index - 3;
     const sliceMax = index + 3 >= rotary.length ? rotary.length : index + 3;
     rotary = rotary.slice(sliceMin, sliceMax)
-    this.setState({ rotary })
+    return rotary
   }
-  render() {
-    const { rotary } = this.state
-    if (!rotary.length) return null
-    return (
-      <>
-        <strong>Travel</strong>
-        {/* / */}
 
-        <div role="list" className="ui list" style={{marginTop: "0px"}}>
-            {
-                rotary.map(item => {
-                  let dateString = ""
-                  if ('start' in item && 'end' in item) {
-                    dateString = item.start.getDate() + '.-' + item.end.getDate() + '.' + (item.end.getMonth() + 1) + '.' + item.end.getFullYear()
-                  }
-                  if ('date' in item) {
-                    dateString = item.date.getDate() + '.' + (item.date.getMonth() + 1) + '.' + item.date.getFullYear()
-                  }
-                  let icnName = item.isRunning ? 'marker' : ['confirmed', 'canceled'].indexOf(item.status) === -1 ? 'calendar' : item.isPast ? 'checkmark' : 'calendar'
-                  icnName = icnName + " icon"
-                  return (
-                    <div role="listitem"
-                      key={item.event}
-                      className="item"
-                      title={item.isRunning ? 'attending' : item.status}
-                      style={{
-                        color: item.isRunning ? '#008080' : item.isPast ? '#AAAAAA' : '#000000',
-                        fontWeight: item.isRunning ? 'bold' : 'inherit',
-                        textDecoration: this.stati[item.status],
-                        cursor: 'default',
-                      }}>
-                        <i aria-hidden="true" className={icnName}></i>{[item.event,dateString,item.location].join(", ")}
-                    </div>
-                  );
-                })
-            }
-        </div>
+  React.useEffect(() => {
+    fetch(TRAVEL)
+    .then(response => response.json())
+    .then(travel => {
+      if (travel.length) {
+        const rotary = processRotary(travel)
+        updateRotary(rotary)
+      }
+    })
+    .catch(() => {
+        console.error("Error fetching travel.json")
+    })
+  }, [])
 
-      </>
-    )
-  }
+  if (!rotary.length) return null
+
+  return (
+    <>
+      <strong>Travel</strong>
+      {/* / */}
+      <div role="list" className="ui list" style={{marginTop: "0px"}}>
+          {
+            rotary.map(item => {
+              let dateString = ""
+              if ('start' in item && 'end' in item) {
+                dateString = item.start.getDate() + '.-' + item.end.getDate() + '.' + (item.end.getMonth() + 1) + '.' + item.end.getFullYear()
+              }
+              else if ('date' in item) {
+                dateString = item.date.getDate() + '.' + (item.date.getMonth() + 1) + '.' + item.date.getFullYear()
+              }
+              let icnName = item.isRunning ? 'marker' : ['confirmed', 'canceled'].indexOf(item.status) === -1 ? 'calendar' : item.isPast ? 'checkmark' : 'calendar'
+              icnName = icnName + " icon"
+              return (
+                <div role="listitem"
+                  key={item.event}
+                  className="item"
+                  title={item.isRunning ? 'attending' : item.status}
+                  style={{
+                    color: item.isRunning ? '#008080' : item.isPast ? '#AAAAAA' : '#000000',
+                    fontWeight: item.isRunning ? 'bold' : 'inherit',
+                    textDecoration: stati[item.status],
+                    cursor: 'default',
+                  }}>
+                    <i aria-hidden="true" className={icnName}></i>{[item.event,dateString,item.location].join(", ")}
+                </div>
+              )
+            })
+          }
+      </div>
+    </>
+  )
 }
-
-
-export default TravelRotary
