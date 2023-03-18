@@ -80,7 +80,7 @@ module.exports = {
       }
     },
     'gatsby-plugin-remove-generator',
-    // `gatsby-plugin-remove-fingerprints`, // <-- breaks some pages
+    `gatsby-plugin-remove-fingerprints`, // <-- breaks some pages
     // `gatsby-plugin-purgecss`,
   ],
   siteMetadata: {
