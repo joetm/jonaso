@@ -8,12 +8,11 @@ import TagCloud from 'react-tag-cloud'
 import keywordcloud from '../keyword-cloud-priority.json'
 
 
-class Cloud extends React.Component {
-  render() {
-    const baseSize = 25
-    const words = keywordcloud.filter(x => x.value > 15)
-    return (
-      <Container style={{marginBottom: '2em'}}>
+export default function Cloud() {
+  const baseSize = 25
+  const words = keywordcloud.filter(x => x.value > 15)
+  return (
+    <Container style={{marginBottom: '2em'}}>
       <TagCloud 
         style={{
           fontFamily: 'sans-serif',
@@ -32,10 +31,6 @@ class Cloud extends React.Component {
           ))
         }
       </TagCloud>
-      </Container>
-    )
-  }
+    </Container>
+  )
 }
-
-
-export default Cloud

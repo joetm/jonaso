@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react"
 
 
@@ -5,61 +7,58 @@ const TRAVEL = 'https://raw.githubusercontent.com/joetm/jonaso/master/public/tra
 
 const Now = new Date()
 
+function processRotary(travel) {
+  // convert dates into JavaScript dates
+  let rotary = travel.filter(item => ['confirmed','canceled'].indexOf(item.status) > -1).map(item => {
+    // date ranges
+    if ('start' in item) {
+      item.start = new Date(item.start)
+    }
+    if ('end' in item) {
+      item.end = new Date(item.end)
+    }
+    // single-day events
+    if ('date' in item) {
+      item.date = new Date(item.date)
+    }
+    // identify upcoming travel item in the array
+    item.dateDiff = Now - (item.start || item.date)
+    item.isPast = item.dateDiff > 0 ? true : false
+    item.isRunning = false
+    if (item.start < Now && Now < item.end) {
+      item.isRunning = true
+    }
+    return item
+  })
+  // find event with minimum datediff
+  let index = 0
+  let min = null
+  for (let i=0; i < rotary.length; i++) {
+    if (min === null) {
+      min = Math.abs(rotary[i].dateDiff)
+      index = i
+    } else {
+      if (Math.abs(rotary[i].dateDiff) < min) {
+        min = Math.abs(rotary[i].dateDiff)
+        index = i
+      }
+    }
+  }
+  // show some rows above and below the current travel item
+  const sliceMin = index - 3 <= 0 ? 0 : index - 3;
+  const sliceMax = index + 3 >= rotary.length ? rotary.length : index + 3;
+  rotary = rotary.slice(sliceMin, sliceMax)
+  return rotary
+}
+
 
 export default function TravelRotary() {
-
   const [rotary, updateRotary] = React.useState([])
-
   const stati = {
     'canceled': 'line-through',
     'running': 'bold',
     'confirmed': 'initial',
   }
-
-  function processRotary(travel) {
-    // convert dates into JavaScript dates
-    let rotary = travel.filter(item => ['confirmed','canceled'].indexOf(item.status) > -1).map(item => {
-      // date ranges
-      if ('start' in item) {
-        item.start = new Date(item.start)
-      }
-      if ('end' in item) {
-        item.end = new Date(item.end)
-      }
-      // single-day events
-      if ('date' in item) {
-        item.date = new Date(item.date)
-      }
-      // identify upcoming travel item in the array
-      item.dateDiff = Now - (item.start || item.date)
-      item.isPast = item.dateDiff > 0 ? true : false
-      item.isRunning = false
-      if (item.start < Now && Now < item.end) {
-        item.isRunning = true
-      }
-      return item
-    })
-    // find event with minimum datediff
-    let index = 0
-    let min = null
-    for (let i=0; i < rotary.length; i++) {
-      if (min === null) {
-        min = Math.abs(rotary[i].dateDiff)
-        index = i
-      } else {
-        if (Math.abs(rotary[i].dateDiff) < min) {
-          min = Math.abs(rotary[i].dateDiff)
-          index = i
-        }
-      }
-    }
-    // show some rows above and below the current travel item
-    const sliceMin = index - 3 <= 0 ? 0 : index - 3;
-    const sliceMax = index + 3 >= rotary.length ? rotary.length : index + 3;
-    rotary = rotary.slice(sliceMin, sliceMax)
-    return rotary
-  }
-
   React.useEffect(() => {
     fetch(TRAVEL)
     .then(response => response.json())

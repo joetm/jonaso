@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react"
 import Keywords from "../../components/keywords"
 import Layout from "../../components/layout"

@@ -15,7 +15,7 @@ import '../overrides.css'
 import React from "react"
 import Nav from "./Nav.js"
 
-function Layout({ children }) {
+export default function Layout({ children }) {
   return (
     <div style={{margin: `0 auto`, maxWidth: 1024}}>
       <Nav />
@@ -23,5 +23,3 @@ function Layout({ children }) {
     </div>
   )
 }
-
-export default Layout

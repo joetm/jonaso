@@ -1,3 +1,5 @@
+"use client"
+
 import "../../components/influencer.css"
 
 import React from "react"

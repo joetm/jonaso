@@ -1,4 +1,6 @@
-import React from 'react'
+"use client"
+
+import { useState, useEffect } from 'react'
 import { navigate } from "gatsby"
 
 const styles = {
@@ -22,22 +24,20 @@ const MenuItem = ({active, handleItemClick, item, url = null}) => {
     ) //
 }
 
+function prepareUrl(url) {
+  return url.replace(/\//g, '').toLowerCase()
+}
 
-export default class Nav extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { 
-      activeItem: '',
-      researchNavOpen: false,
-    };
-  }
-  handleItemClick = (e) => {
+export default function Nav() {
+  const [activeItem, setActiveItem] = useState('')
+  const [researchNavOpen, setResearchNavOpen] = useState(false)
+
+  function handleItemClick(e) {
     e.preventDefault()
     const name = e.target.name
     let url = e.target.getAttribute('url')
-    console.log(name, url)
     const activeItem = name.toLowerCase()
-    this.setState({ activeItem })
+    setActiveItem(activeItem)
     if (url) {
       url = url.charAt(0) === '/' ? url.slice(1) : url;
       navigate(`/${url}`)
@@ -49,45 +49,38 @@ export default class Nav extends React.Component {
       }
     }
   }
-  prepareUrl(url) {
-    return url.replace(/\//g, '').toLowerCase()
-  }
-  componentDidMount() {
-    let url = this.prepareUrl(window.location.pathname)
-    let researchNavOpen = url.startsWith('research') || url.startsWith('projects')
-    this.setState({
-      activeItem: url || 'home',
-      researchNavOpen,
-    })
-  }
-  render() {
-    const { activeItem, researchNavOpen } = this.state
 
-    return (
-      <header>
-        <div id="desktopmenu">
-          <div className="ui fluid pointing stackable seven item menu" primary="true">
-            <MenuItem key="home"  active={activeItem === 'home'} item='Home' handleItemClick={this.handleItemClick} />
-            <MenuItem key="artworks" active={activeItem.startsWith('artworks')} item='Artworks' link={false} header={true} handleItemClick={this.handleItemClick} />
-            <MenuItem key="publications" active={activeItem === 'publications'} item='Publications' handleItemClick={this.handleItemClick} />
-            <MenuItem key="research" active={activeItem.startsWith('research') || activeItem === 'projects'} item='Research' link={false} header={true} handleItemClick={this.handleItemClick} />
-            <MenuItem key="cv" active={activeItem === 'cv'} item='CV' handleItemClick={this.handleItemClick} />
-          </div>
-          {
-            researchNavOpen &&
-              <div className="ui small pointing secondary stackable seven item menu">
-                <MenuItem key="researchinterests"  active={activeItem === 'research' || activeItem === 'researchinterests'}  item='Interests' url='/research/interests' handleItemClick={this.handleItemClick} />
-                <MenuItem key="researchprojects"   active={activeItem === 'researchprojects'}   item='Projects' url='/research/projects' handleItemClick={this.handleItemClick} />
-                <MenuItem key="researchreading"    active={activeItem === 'researchreading'}    item='Reading' url='/research/reading' handleItemClick={this.handleItemClick} />
-                {/*
-                <MenuItem key="researchnetwork"    active={activeItem === 'researchnetwork'}    item='Network' url='/research/network' handleItemClick={this.handleItemClick} />
-                */}
-                <MenuItem key="researchinfluences" active={activeItem === 'researchinfluences'} item='Influences' url='/research/influences' handleItemClick={this.handleItemClick} />
-              </div>
-          }
+  useEffect(() => {
+    const url = prepareUrl(window.location.pathname)
+    const navstate = url.startsWith('research') || url.startsWith('projects')
+    setActiveItem(url || 'home')
+    setResearchNavOpen(navstate)
+  }, [])
+
+  return (
+    <header>
+      <div id="desktopmenu">
+        <div className="ui fluid pointing stackable seven item menu" primary="true">
+          <MenuItem key="home"  active={activeItem === 'home'} item='Home' handleItemClick={handleItemClick} />
+          <MenuItem key="artworks" active={activeItem.startsWith('artworks')} item='Artworks' link={false} header={true} handleItemClick={handleItemClick} />
+          <MenuItem key="publications" active={activeItem === 'publications'} item='Publications' handleItemClick={handleItemClick} />
+          <MenuItem key="research" active={activeItem.startsWith('research') || activeItem === 'projects'} item='Research' link={false} header={true} handleItemClick={handleItemClick} />
+          <MenuItem key="cv" active={activeItem === 'cv'} item='CV' handleItemClick={handleItemClick} />
         </div>
-        <div style={styles.navSpacer}></div>
-      </header>
-    )
-  }
+        {
+          researchNavOpen &&
+            <div className="ui small pointing secondary stackable seven item menu">
+              <MenuItem key="researchinterests"  active={activeItem === 'research' || activeItem === 'researchinterests'}  item='Interests' url='/research/interests' handleItemClick={handleItemClick} />
+              <MenuItem key="researchprojects"   active={activeItem === 'researchprojects'}   item='Projects' url='/research/projects' handleItemClick={handleItemClick} />
+              <MenuItem key="researchreading"    active={activeItem === 'researchreading'}    item='Reading' url='/research/reading' handleItemClick={handleItemClick} />
+              {/*
+              <MenuItem key="researchnetwork"    active={activeItem === 'researchnetwork'}    item='Network' url='/research/network' handleItemClick={handleItemClick} />
+              */}
+              <MenuItem key="researchinfluences" active={activeItem === 'researchinfluences'} item='Influences' url='/research/influences' handleItemClick={handleItemClick} />
+            </div>
+        }
+      </div>
+      <div style={styles.navSpacer}></div>
+    </header>
+  )
 }

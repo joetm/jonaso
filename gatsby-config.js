@@ -11,6 +11,8 @@ module.exports = {
     // PRESERVE_WEBPACK_CACHE: true,
     // DEV_WEBPACK_CACHE: true,
     PRESERVE_FILE_DOWNLOAD_CACHE: true,
+    // https://www.gatsbyjs.com/docs/how-to/performance/partial-hydration/
+    PARTIAL_HYDRATION: true,
     // trying to lower memory requirements during build
     // LMDB_STORE: true, // store nodes in a persistent embedded database (vs in-memory). Lowers peak memory usage. Requires Node v14.10 or above.
     // PARALLEL_QUERY_RUNNING: false,

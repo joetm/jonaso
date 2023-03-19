@@ -67,14 +67,7 @@ const Wrapper = {
 
 
 
-const DetailContainer = ({authorid, details, keywordClick, activeKeyword, toggleCoauthors, coauthorToggleActive, updateActive}) => {
-
-  // const [orcid, setOrcid] = React.useState('')
-  // React.useEffect(() => {
-  //   fetch(`/reading_list/orcids/${authorid}.json`).then(
-  //       res => setOrcid(res.data)
-  //   )
-  // }, [authorid])
+export default function DetailContainer({authorid, details, keywordClick, activeKeyword, toggleCoauthors, coauthorToggleActive, updateActive}) {
 
   const { docs=[], keywords=[], orcid='', affiliations='' } = details
   // const kwlist = keywords.join(", ")
@@ -127,5 +120,3 @@ const DetailContainer = ({authorid, details, keywordClick, activeKeyword, toggle
     </div>
   )
 } //
-
-export default DetailContainer

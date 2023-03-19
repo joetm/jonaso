@@ -1,8 +1,10 @@
 ENV
-<<<<<<< HEAD
 .env
+.env.development
+.env.production
 # public/static/**/
 ./artworks/
+artworks/
 ./public/artworks/**/*.webp
 ./public/cv/**/*.pdf
 reading_list/tmp.pdf
@@ -10,25 +12,16 @@ public/~partytown/
 .env.development
 .env.production
 ./public/static/artworks
-nexus/
-stat_aggregator/fetch_PCS.py
 ./public/cv/cv-jonas-oppenlaender.pdf
 ./public/cv/resume.pdf
 ./public/cv/oppenlaender-publications.pdf
-=======
 public/static/**/
-artworks/
 reading_list/tmp.pdf
-artworks-BAK/
-public/~partytown/
-.env.development
-.env.production
 public/static/artworks
 nexus/
 stat_aggregator/fetch_PCS.py
 src/img/artworks
 public/cv/cv-jonas-oppenlaender.pdf
->>>>>>> e00ff6c72d9ddfe4ec642c5722df047aae76a9db
 yarn.lock
 reading_list/unrecognized.csv
 reading_list/gephi*

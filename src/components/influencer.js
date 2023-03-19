@@ -1,3 +1,5 @@
+"use client"
+
 import 'semantic-ui-css/components/label.min.css'
 import 'semantic-ui-css/components/checkbox.min.css'
 

@@ -1,3 +1,5 @@
+"use client"
+
 import 'semantic-ui-css/components/dropdown.min.css'
 
 import React from "react"
