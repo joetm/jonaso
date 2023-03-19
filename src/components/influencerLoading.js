@@ -22,23 +22,22 @@ function randomInt(min=15, max=40) {
 
 // ----------------
 
-const InfluencerLoading = () => {
+export default function InfluencerLoading() {
   const numPlaceholders = 200
-  const placeholders = [ ...Array(numPlaceholders).keys() ];
+  const placeholders = [ ...Array(numPlaceholders).keys() ]
   return (
-  <div className="ui container">
-    <div className="clear">
-      {
-        placeholders.map((num, index) => (
-          <div className="ui label" key={`${index}`} style={styles.label}>
-            { ".".repeat(randomInt()) }
-            <div className="detail">x | x</div>
-          </div>
-        ))
-      }
+    <div className="ui container">
+      <div className="clear">
+        {
+          placeholders.map((num, index) => (
+            <div className="ui label" key={`${index}`} style={styles.label}>
+              { ".".repeat(randomInt()) }
+              <div className="detail">x | x</div>
+            </div>
+          ))
+        }
+      </div>
+      <div className="clear"></div>
     </div>
-    <div className="clear"></div>
-  </div>
-)} //
-
-export default InfluencerLoading
+  )
+}

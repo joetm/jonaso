@@ -1,6 +1,6 @@
 import 'semantic-ui-css/components/card.min.css'
 
-import React from "react"
+// import React from "react"
 // import Layout from "../components/layout"
 import { Seo } from "../components/Seo"
 
@@ -16,8 +16,7 @@ export function Head() {
   )
 } //
 
-class UX extends React.Component {
-  render() {
+export default function UX() {
     return (
       <div className="ui container">
 	 			  <h1>UX Portfolio</h1>
@@ -42,8 +41,4 @@ class UX extends React.Component {
 				  </div>
       </div>
     )
-  }
 }
-
-
-export default UX

@@ -4,7 +4,7 @@ import { List } from 'semantic-ui-react'
 const joinIfNotNull = (arr, sep=', ') => arr.filter(val => val ? val : undefined).join(sep)
 
 
-const ProjectItem = ({item, i}) => {
+export default function ProjectItem({item, i}) {
   const { title, doi = null, url = null, month = null, year = null } = item
   const theurl = doi ? `http://doi.org/${doi}` : url || null
   const metadata = joinIfNotNull([item.note, item.conference, item.location])
@@ -28,5 +28,3 @@ const ProjectItem = ({item, i}) => {
     </List>
   )
 }
-
-export default ProjectItem

@@ -1,7 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
 
-
 // export function Head() {
 //   return (
 //     <>
@@ -12,12 +11,13 @@ import Layout from "../components/layout"
 //   )
 // }
 
-const Page404 = () => (
-    <Layout>
-        <div className="ui container">
-          404 &ndash; Not Found.
-        </div>
-    </Layout>
-)
+export default function Page404() {
+    return (
+        <Layout>
+            <div className="ui container">
+              404 &ndash; Not Found.
+            </div>
+        </Layout>
+    )
+}
 
-export default Page404

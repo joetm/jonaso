@@ -1,3 +1,5 @@
+"use client"
+
 import 'semantic-ui-css/components/grid.min.css'
 import 'semantic-ui-css/components/icon.min.css'
 import 'semantic-ui-css/components/item.min.css'

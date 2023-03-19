@@ -1,3 +1,5 @@
+"use client"
+
 /*
   DEV: this is supposed to become an up-to-date reading list synced from my PC
 */

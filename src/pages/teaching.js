@@ -26,40 +26,36 @@ export function Head() {
   )
 } //
 
-class Teaching extends React.Component {
-  render() {
-        return (
-              <div className="ui container">
+export default function Teaching() {
+  return (
+        <div className="ui container">
 
-                <h1 id="education" style={{textAlign:'center'}}>Teaching Assistant</h1>
+          <h1 id="education" style={{textAlign:'center'}}>Teaching Assistant</h1>
 
-                  <div className="ui items">
+            <div className="ui items">
 
-                    <div className="item">
-                      <div style={styles.datum}>Autumn term 2018</div>
-                      <div className="content">
-                        <div className="header">
-                            Social Computing
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="item">
-                      <div style={styles.datum}>Autumn term 2018</div>
-                      <div className="content">
-                        <div className="header">
-                            Human Computer Interaction
-                        </div>
-                      </div>
-                    </div>
-
+              <div className="item">
+                <div style={styles.datum}>Autumn term 2018</div>
+                <div className="content">
+                  <div className="header">
+                      Social Computing
                   </div>
-
-                  <div style={spacer}></div>
-
+                </div>
               </div>
-        )
-  }
-}
 
-export default Teaching
+              <div className="item">
+                <div style={styles.datum}>Autumn term 2018</div>
+                <div className="content">
+                  <div className="header">
+                      Human Computer Interaction
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div style={spacer}></div>
+
+        </div>
+  )
+}

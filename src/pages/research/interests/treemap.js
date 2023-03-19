@@ -1,3 +1,5 @@
+"use client"
+
 import 'semantic-ui-css/components/button.min.css'
 
 import React from "react"
