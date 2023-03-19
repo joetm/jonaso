@@ -1,5 +1,6 @@
 "use client"
 
+import React from "react"
 import { Title, Link, Meta } from "react-head"
 import { navigate } from 'gatsby'
 
@@ -11,7 +12,7 @@ export default function ArtHeader({generator, byline, totalCount}) {
     navigate(`/artworks/${folder}/`)
   }
   return (
-    <div className="ui container">
+    <div>
       <h1>{generator}</h1>
 
       <section style={{textAlign:'center', marginBottom:'2em'}}>
