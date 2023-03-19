@@ -1,3 +1,5 @@
+"use client"
+
 // remove google font loading
 // import 'semantic-ui-css/components/site.min.css'
 import '../css/site.modded.min.css'
