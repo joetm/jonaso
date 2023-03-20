@@ -45,15 +45,12 @@ rename-artworks:
 		./rename-stablediffusion.sh
 
 copy-portfolio:
-	cp -r ../Portfolio/data ./public/portfolio
-	cp -r ../Portfolio/dist ./public/portfolio
-	cp -r ../Portfolio/font ./public/portfolio
-	cp -r ../Portfolio/img ./public/portfolio
-	cp ../Portfolio/*.json ./public/portfolio
-	cp ../Portfolio/*.ico ./public/portfolio
-	cp ../Portfolio/*.png ./public/portfolio
-	cp ../Portfolio/*.txt ./public/portfolio
-	cp ../Portfolio/*.html ./public/portfolio
+	cp -Rf ../jonaso.de-portfolio ./public/portfolio
+	rm -rf ./public/portfolio/node_modules
+	rm -rf ./public/portfolio/package.json
+	rm -rf ./public/portfolio/package-lock.json
+	rm -rf ./public/portfolio/yarn.lock
+	rm -rf ./public/portfolio/webpack.config.js
 
 post-build:
 	# move cv
@@ -204,4 +201,4 @@ push:
 publish:
 	# push to s3
 	aws s3 sync --delete ./public/ s3://jonaso.de
-
+	aws cloudfront create-invalidation --distribution-id E1F8XE39H6VFRU --paths "/*"
