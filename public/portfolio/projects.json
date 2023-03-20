@@ -1,0 +1,1103 @@
+{
+    "about": "Portfolio of Web Development Projects of Jonas Oppenlaender",
+    "intro_text" : "",
+    "projects": {
+        "current": [
+        ],
+        "past" : [
+            {
+                "title": "NFDI4Culture – Consortium for research data on material and immaterial cultural heritage",
+                "idtype": "dev",
+                "description": "Responsible for the design, implementation, population, and management of the NFDI4Culture knowledge graph as part of the NFDI4Culture project on research data infrastructures for material and immaterial cultural heritage. The project is funded by the German Research Foundation (Deutsche Forschungsgemeinschaft / DFG) #441958017",
+                "imgs": [
+                    {
+                        "title": "NFDI4Culture",
+                        "thumb": "http://komasurfer.com/portfolio/img/nfdi4culture/nfdi-overview.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/nfdi4culture/nfdi-overview.jpg"
+                    }
+                ],
+                "links": [],
+                "technology": ["Linked Data", "SPARQL", "RDF", "RDFS", "OWL", "Excel", "CSV", "JSON", "OpenRefine"],
+                "status": "Ongoing",
+                "purpose": "",
+                "position": "Senior Researcher/PostDoc",
+                "organisation": "FIZ Karlsruhe",
+                "type": "",
+                "daterange": "2021 - today"
+            },
+            {
+                "title": "Folk Theories for a Better Understanding of Human-AI Interaction",
+                "idtype": "dev",
+                "description": "Folk theories represent the users' beliefs of how an AI-driven system works. Prior research has investigated folk theories as a lens on users' reasoning about the algorithmically-curated content of news feeds on social media platforms, primarily in interview studies and surveys. In this project, we research and develop interactive interfaces for the structured capturing and crowdsourced collection of folk theories at scale. An understanding of how users reason about algorithmically-curated content could provide valuable insights into how web-based systems can be designed for fairness, accountability, and transparency. These three constituents contribute towards increased awareness and understanding of AI decisions, and could be a step stone to support the formation of trusting social relationships with Artificial Intelligence. The project is funded by the Nokia Foundation, Finnish Foundation for Technology, Jenny and Antti Wihuri Foundation, Tauno Tönning Foundation, and the Riitta and Jorma J. Takanen Foundation.",
+                "imgs": [
+                    {
+                        "title": "Summary",
+                        "thumb": "http://komasurfer.com/portfolio/img/folk-theories/thumbs/hcomp2020-poster.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/folk-theories/hcomp2020-poster.png"
+                    }
+                ],
+                "links": [],
+                "technology": ["React", "NLP", "REST"],
+                "status": "Ongoing",
+                "purpose": "",
+                "position": "Researcher",
+                "organisation": "University of Oulu",
+                "type": "",
+                "daterange": "2020"
+            },
+            {
+                "title": "Crowdsourced Situated Feedback for Creative Artifacts",
+                "idtype": "dev",
+                "description": "Implementation of a tablet application and web application for eliciting feedback for artworks displayed on public displays.",
+                "imgs": [
+                    {
+                        "title": "Conceptual overview",
+                        "thumb": "http://komasurfer.com/portfolio/img/simplex/thumbs/DUPLEX-v5.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/simplex/DUPLEX-v5.png"
+                    },
+                    {
+                        "title": "Prototype",
+                        "thumb": "http://komasurfer.com/portfolio/img/simplex/thumbs/proto1.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/simplex/proto1.jpg"
+                    }
+                ],
+                "links": [],
+                "technology": ["Cordova", "Monaca", "React", "WebRTC"],
+                "status": "Completed",
+                "purpose": "",
+                "position": "Researcher",
+                "organisation": "University of Oulu",
+                "type": "",
+                "daterange": "2019"
+            },
+            {
+                "title": "GFBio Terminology Service Website Re-Design",
+                "idtype": "dev",
+                "description": "Implementation of the new website design for Terminology Service of the GFBio initiative.",
+                "imgs": [
+                    {
+                        "title": "Homepage",
+                        "thumb": "http://komasurfer.com/portfolio/img/gfbio/thumbs/gfbio-ts-final-home.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/gfbio/gfbio-ts-final-home.jpg"
+                    },
+                    {
+                        "title": "Ontology meta information",
+                        "thumb": "http://komasurfer.com/portfolio/img/gfbio/thumbs/gfbio-ts-metainfo.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/gfbio/gfbio-ts-metainfo.jpg"
+                    },
+                    {
+                        "title": "Homepage [early version]",
+                        "thumb": "http://komasurfer.com/portfolio/img/gfbio/thumbs/gfbio-TS.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/gfbio/gfbio-TS.jpg"
+                    }
+                ],
+                "links": [
+                    {"label": "Link", "title": "GfBio Terminology Service", "link": "http://terminologies.gfbio.org/"}
+                ],
+                "technology": ["Wordpress", "PHP", "jQuery", "Materialize CSS"],
+                "status": "Completed",
+                "purpose": "",
+                "position": "Researcher",
+                "organisation": "Freie Universit&auml;t Berlin",
+                "type": "",
+                "daterange": "November 2016 - March 2017"
+            },
+            {
+                    "title": "Website Re-Launch",
+                    "idtype": "admin",
+                    "description": "Modernization of a vBulletin-based forum and online community that I started in 2006.",
+                    "imgs": [],
+                    "links": [
+                        {"label": "Link", "title": "GitHub", "link": "https://github.com/joetm/cp2"}
+                    ],
+                    "technology": ["React", "Redux", "React Router", "Material-UI", "Json Webtokens", "DropzoneJS", "Node/Express", "Deepstream", "ES2015", "Webpack", "Babel", "yarn", "eslint", "Jest", "TravisCI"],
+                    "status": "Completed",
+                    "purpose": "",
+                    "position": "Administrator",
+                    "organisation": "",
+                    "type": "",
+                    "daterange": "July 2017"
+            },
+            {
+                "title": "Project Portfolio",
+                "idtype": "dev",
+                "description": "The portfolio you are looking at. To learn React, I transitioned it from Backbone/Mustache.",
+                "imgs": [],
+                "links": [],
+                "technology": ["React", "Material-UI"],
+                "status": "Completed",
+                "purpose": "",
+                "position": "",
+                "organisation": "",
+                "type": "",
+                "daterange": "November 2016 - February 2017"
+            },
+            {
+                "title": "DriveNow Visualisation",
+                "idtype": "dev",
+                "description": "Under the working title \"Who called the clean-up crew\", I created a visualisation of DriveNow cars in Berlin. The data was scraped from DriveNow. The visualisation shows 1) the location of the cars at a certain time, 2) the car cleanliness states, 3) the movements of single cars during the recorded timeframe, and 4) the movements of cars during which a clean-up event occurred. A clean-up is defined as an improvement of car cleanliness from &quot;POOR&quot; or &quot;REGULAR&quot; to &quot;VERY_CLEAN&quot;. Note that the prototype loads all scraped data (about 25 MB) into the browser. It will take some time to display and interact with the visualisation.",
+                "imgs": [
+                    {
+                        "title": "Final Prototype",
+                        "thumb": "http://komasurfer.com/portfolio/img/drivenow/thumbs/drivenow-screenshot-2016-12-11.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/drivenow/drivenow-screenshot-2016-12-11.jpg"
+                    }
+                ],
+                "links": [
+                    {"label": "Link", "title": "Demonstration", "link": "http://komasurfer.com/portfolio/projects/drivenow/"},
+                    {"label": "Link", "title": "Github", "link": "https://github.com/joetm/drivenow"}
+                ],
+                "technology": ["Leaflet", "D3", "Crossfilter", "React", "Material-UI"],
+                "status": "Completed",
+                "purpose": "",
+                "position": "",
+                "organisation": "",
+                "type": "",
+                "daterange": "November - December 2016"
+            },
+            {
+                "title": "Eurapco Trend-Monitoring Platform",
+                "idtype": "dev",
+                "description": "Entwicklung des Prototypen einer Trend-Monitoring Platform in einem Team von drei Entwicklern.",
+                "imgs": [
+                    {
+                        "title": "Index Page",
+                        "thumb": "http://komasurfer.com/portfolio/img/liip/mobiliar/thumbs/trend-detail.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/liip/mobiliar/trend-detail.jpg"
+                    },
+                    {
+                        "title": "Trend Detail Page",
+                        "thumb": "http://komasurfer.com/portfolio/img/liip/mobiliar/thumbs/index-zoomed-tooltip.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/liip/mobiliar/index-zoomed-tooltip.jpg"
+                    }
+                ],
+                "links": [
+                    {"label": "Link", "title": "Eurapco Trend Platform", "link": "https://www.eurapco-trends.com/"}
+                ],
+                "technology": ["Python", "Django", "WebPack", "Babel", "Ansible"],
+                "status": "Completed",
+                "purpose": "",
+                "position": "Full-Stack Developer",
+                "organisation": "Liip AG",
+                "type": "",
+                "grade": "",
+                "daterange": "May 2016"
+            },
+            {
+                "title": "CKAN FTP Harvester",
+                "idtype": "dev",
+                "description": "CKAN harvester extension to gather and process files via FTP over TLS for the Swiss Open Transport Data Platform.",
+                "imgs": [],
+                "links": [],
+                "technology": ["Python", "CKAN"],
+                "status": "Completed",
+                "purpose": "",
+                "position": "Full-Stack Developer",
+                "organisation": "Liip AG",
+                "type": "",
+                "grade": "",
+                "daterange": "June - July 2016"
+            },
+            {
+                "title": "Skills Planner",
+                "idtype": "dev",
+                "description": "<a href='http://www.skillsplanner.net/' target='_blank'>Skills Planner</a> is an ambitious project with aim to alleviate the skills shortage in the UK's construction industry. The &#163;1.3 million project is partly funded by Innovate UK. The open data platform will integrate and interpret linked data provided by project partners such as Crossrail, HS2, and Tideway. The project has potential to be replicated across other sectors and countries.<br />My task in this project is to self-responsibly develop and implement the backend infrastructure of Skills Planner. The data is stored in a CKAN instance, which influenced my choice of programming language (Python). I have developed a set of data management and conversion tools that interact with CKAN. The tools can for example be used to <ul><li>download resources of a package</li><li>convert Excel (and other tabular data) into CSV</li><li>produce Linked Data from tabular input data</li><li>assert the RDF into a triple store (4store)</li><li>and publish files to CKAN.</li></ul> The tools can also flexibly execute any shell-based commands.",
+                "imgs": [
+                    {
+                        "title": "SkillsPlanner",
+                        "thumb": "http://komasurfer.com/portfolio/img/skillsplanner/skillsplanner-logo.png",
+                        "img": "http://www.skillsplanner.net/"
+                    },
+                    {
+                        "title": "SkillsPlanner Data Platform",
+                        "thumb": "http://komasurfer.com/portfolio/img/skillsplanner/thumbs/skillsplanner-overview.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/skillsplanner/skillsplanner-overview.jpg"
+                    },
+                    {
+                        "title": "SkillsPlanner Acquisition Process",
+                        "thumb": "http://komasurfer.com/portfolio/img/skillsplanner/thumbs/acquisition-process.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/skillsplanner/acquisition-process.jpg"
+                    },
+                    {
+                        "title": "SkillsPlanner Data Conversion",
+                        "thumb": "http://komasurfer.com/portfolio/img/skillsplanner/thumbs/skillsplanner-flow.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/skillsplanner/skillsplanner-flow.jpg"
+                    },
+                    {
+                        "title": "SkillsPlanner Servers",
+                        "thumb": "http://komasurfer.com/portfolio/img/skillsplanner/thumbs/high-level-overview.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/skillsplanner/high-level-overview.jpg",
+                        "class": "hide"
+                    },
+                    {
+                        "title": "SkillsPlanner Command Line Tools",
+                        "thumb": "http://komasurfer.com/portfolio/img/skillsplanner/thumbs/cmd-tools.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/skillsplanner/cmd-tools.jpg"
+                    },
+                    {
+                        "title": "SkillsPlanner Tools Overview",
+                        "thumb": "http://komasurfer.com/portfolio/img/skillsplanner/thumbs/process_overview.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/skillsplanner/process_overview.jpg"
+                    },
+                    {
+                        "title": "Code-based Documentation for the SkillsPlanner Tools",
+                        "thumb": "http://komasurfer.com/portfolio/img/skillsplanner/thumbs/skillsplanner-documentation-tools.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/skillsplanner/skillsplanner-documentation-tools.jpg"
+                    }
+                ],
+                "links": [
+                    {"label": "Link", "title": "SkillsPlanner Website", "link": "http://www.skillsplanner.net/"}
+                ],
+                "technology": ["Python", "PHP", "CKAN", "ckanapi", "Sphinx", "unittest", "nose2", "xlrd", "Linked Data", "RDF", "RDFS", "Excel", "CSV", "JSON", "Unix shell"],
+                "status": "In progress",
+                "purpose": "",
+                "position": "Developer",
+                "organisation": "Seme4 Ltd",
+                "type": "",
+                "grade": "",
+                "daterange": "Nov 2015 - April 2016"
+            },
+            {
+                "title": "CKAN Extensions",
+                "idtype": "dev",
+                "description": "Development of SkillsPlanner-specific extensions to CKAN (closed source). The extensions include: <ul><li>A new tab on the package page to trigger the build and view the build logs,</li><li>additional form fields,</li><li>custom configuration options, and </li><li>authorization for the web page (disallowing not-logged in users to view CKAN content).</li></ul>",
+                "imgs": [
+                    {
+                        "title": "SkillsPlanner CKAN Extension: Custom build tab with build tools",
+                        "thumb": "http://komasurfer.com/portfolio/img/skillsplanner/thumbs/ckan-build-tab.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/skillsplanner/ckan-build-tab.jpg"
+                    },
+                    {
+                        "title": "SkillsPlanner CKAN Extension: Build log",
+                        "thumb": "http://komasurfer.com/portfolio/img/skillsplanner/thumbs/ckan-build-logs.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/skillsplanner/ckan-build-logs.jpg"
+                    },
+                    {
+                        "title": "SkillsPlanner CKAN Extension: Initiating the build from the web interface",
+                        "thumb": "http://komasurfer.com/portfolio/img/skillsplanner/thumbs/ckan-initiating-build.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/skillsplanner/ckan-initiating-build.jpg"
+                    },
+                    {
+                        "title": "SkillsPlanner CKAN UI Modifications: Build tab, filenames, quick upload button",
+                        "thumb": "http://komasurfer.com/portfolio/img/skillsplanner/thumbs/ckan-ui-modifications.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/skillsplanner/ckan-ui-modifications.jpg"
+                    },
+                    {
+                        "title": "SkillsPlanner CKAN UI Modifications: Build log",
+                        "thumb": "http://komasurfer.com/portfolio/img/skillsplanner/thumbs/ckan-build-log.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/skillsplanner/ckan-build-log.jpg"
+                    }
+                ],
+                "links": [],
+                "technology": ["CKAN", "ckanapi", "Python", "Twig"],
+                "status": "Continuous improvement",
+                "purpose": "Supporting the SkillsPlanner Linked Data platform",
+                "position": "Developer",
+                "organisation": "Seme4 Ltd",
+                "type": "",
+                "grade": "",
+                "daterange": "Dec 2015 - April 2016"
+            },
+            {
+                "title": "Linked Data Platform",
+                "idtype": "dev",
+                "description": "<ul><li>Improvement of the Linked Data Platform and its services</li><li>API for reconciliation of columns in OpenRefine</li></ul>",
+                "imgs": [
+                    {
+                        "title": "Linked Data Service Renderer",
+                        "thumb": "http://komasurfer.com/portfolio/img/skillsplanner/thumbs/linked-data-service-renderer.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/skillsplanner/linked-data-service-renderer.jpg"
+                    },
+                    {
+                        "title": "Canned Sparql queries",
+                        "thumb": "http://komasurfer.com/portfolio/img/skillsplanner/thumbs/canned-queries.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/skillsplanner/canned-queries.jpg"
+                    },
+                    {
+                        "title": "Canned Sparql query web result",
+                        "thumb": "http://komasurfer.com/portfolio/img/skillsplanner/thumbs/canned-query-sparql-result.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/skillsplanner/canned-query-sparql-result.jpg"
+                    },
+                    {
+                        "title": "Experimenting with new ways of showing Linked Data",
+                        "thumb": "http://komasurfer.com/portfolio/img/skillsplanner/thumbs/linked-data-view.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/skillsplanner/linked-data-view.jpg"
+                    },
+                    {
+                        "title": "Linked Data Services",
+                        "thumb": "http://komasurfer.com/portfolio/img/skillsplanner/thumbs/linked-data-services.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/skillsplanner/linked-data-services.jpg"
+                    },
+                    {
+                        "title": "Canned Query Service",
+                        "thumb": "http://komasurfer.com/portfolio/img/skillsplanner/thumbs/canned-query-service.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/skillsplanner/canned-query-service.jpg"
+                    },
+                    {
+                        "title": "DataCube Service",
+                        "thumb": "http://komasurfer.com/portfolio/img/skillsplanner/thumbs/datacube-service.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/skillsplanner/datacube-service.jpg"
+                    }
+                ],
+                "links": [],
+                "technology": ["PHP", "OpenRefine", "SPARQL", "JavaScript", "Data Cube Vocabulary"],
+                "status": "Continuous improvement",
+                "purpose": "Supporting the SkillsPlanner Linked Data platform",
+                "position": "Developer",
+                "organisation": "Seme4 Ltd",
+                "type": "",
+                "grade": "",
+                "daterange": "Jan 2016 - April 2016"
+            },
+            {
+                "title": "LinkedIn Chrome Extension",
+                "idtype": "other",
+                "description": "A Google Chrome browser extension to save LinkedIn contacts locally, without having to connect to them. The extension works great - I use it personally. There are just a few details to iron out (e.g. cross-device syncing of saved contacts) before the extension can be released in the Chrome webstore.",
+                "imgs": [
+                    {
+                        "title": "List of locally stored contacts",
+                        "thumb": "http://komasurfer.com/portfolio/img/chrome/linkedin/thumbs/linkedin-contacts-extension.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/chrome/linkedin/linkedin-contacts-extension.jpg"
+                    }
+                ],
+                "links": [
+                    {"label": "Link", "title": "Chrome Web Store", "link": "https://chrome.google.com/webstore/detail/linkedin-save-contact/idglehggkglmklokplbgmceenhfggdae"},
+                    {"label": "Link", "title": "GitHub", "link": "https://github.com/joetm/LinkedIn-SaveAnyContact"}
+                ],
+                "technology": ["JavaScript", "HTML5"],
+                "status": "Under development",
+                "purpose": "",
+                "position": "",
+                "organisation": "",
+                "type": "",
+                "grade": "",
+                "daterange": "March 2016"
+            },
+            {
+                "title": "Asyl.me",
+                "idtype": "dev",
+                "description": "Visualisierung diverser migrationsrelevanter Daten",
+                "imgs": [
+                    {
+                        "title": "asyl.me v0.1 - Migration",
+                        "thumb": "http://komasurfer.com/portfolio/img/asylme/thumbs/asyl-v0.1.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/asylme/asyl-v0.1.jpg"
+                    },
+                    {
+                        "title": "asyl.me v0.2 - Happiness Score",
+                        "thumb": "http://komasurfer.com/portfolio/img/asylme/thumbs/asyl-v0.2.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/asylme/asyl-v0.2.jpg"
+                    },
+                    {
+                        "title": "asyl.me v0.2 - Scraped Border Crossings",
+                        "thumb": "http://komasurfer.com/portfolio/img/asylme/thumbs/asyl-v0.2-border-crossings.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/asylme/asyl-v0.2-border-crossings.jpg"
+                    }
+                ],
+                "links": [
+                    {"label": "Link", "title": "GitHub", "link": "https://github.com/joetm/asyl.me"}
+                ],
+                "technology": ["Leaflet", "JavaScript", "jQuery", "jQuery Globalize", "Gulp", "Tabula", "JSON", "tabletop"],
+                "status": "Under development",
+                "purpose": "Prototyp",
+                "position": "",
+                "organisation": "",
+                "type": "",
+                "grade": "",
+                "daterange": "Dec 2015"
+            },
+            {
+                "title": "Map Collab",
+                "idtype": "dev",
+                "description": "Collaborative mapping project",
+                "imgs": [
+                    {
+                        "title": "Map Collab (under development)",
+                        "thumb": "http://komasurfer.com/portfolio/img/map-collab/th_map-collab-prototype.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/map-collab/map-collab-prototype.jpg"
+                    }
+                ],
+                "links": [
+                    {"label": "Link", "title": "GitHub", "link": "https://github.com/joetm/map-collab"}
+                ],
+                "technology": ["Leaflet", "JavaScript", "jQuery", "Backbone", "requireJS", "Gulp", "PHP", "JSON"],
+                "status": "Under development",
+                "purpose": "Prototyp",
+                "position": "",
+                "organisation": "",
+                "type": "",
+                "grade": "",
+                "daterange": "Dec 2015"
+            },
+            {
+                "title": "CrowdUI - A Remote Tool to Crowdsource and Evaluate User Interface Adaptions",
+                "idtype": "dev",
+                "description": "A prototype of a tool that can be added to any website to allow the users to re-arrange any parts of the website. The tool has an integrated user survey and mechanism to evaluate the usefulness of the adaptions. Interface adaptions are stored and loaded for evaluation by a control group of users.",
+                "imgs": [
+                    {
+                        "title": "Phase 0 - Configuration through the administrator",
+                        "thumb": "http://komasurfer.com/portfolio/img/crowdUI/thumbs/th_phase0.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/crowdUI/phase0.jpg"
+                    },
+                    {
+                        "title": "Phase 1 - User survey",
+                        "thumb": "http://komasurfer.com/portfolio/img/crowdUI/thumbs/th_phase1.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/crowdUI/phase1.jpg"
+                    },
+                    {
+                        "title": "Phase 2 - User interface adaption through the user",
+                        "thumb": "http://komasurfer.com/portfolio/img/crowdUI/thumbs/th_phase2.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/crowdUI/phase2.jpg"
+                    },
+                    {
+                        "title": "Phase 3 - Interface evaluation instructions",
+                        "thumb": "http://komasurfer.com/portfolio/img/crowdUI/thumbs/th_phase3_1.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/crowdUI/phase3_1.jpg"
+                    },
+                    {
+                        "title": "Phase 3 - Interface evaluation through the user",
+                        "thumb": "http://komasurfer.com/portfolio/img/crowdUI/thumbs/th_phase3_2.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/crowdUI/phase3_2.jpg"
+                    },
+                    {
+                        "title": "Phase 4 - Tool evaluation through the user",
+                        "thumb": "http://komasurfer.com/portfolio/img/crowdUI/thumbs/th_phase4.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/crowdUI/phase4.jpg",
+                        "class": "hide-for-print"
+                    },
+                    {
+                        "title": "RESTful API",
+                        "thumb": "http://komasurfer.com/portfolio/img/crowdUI/thumbs/th_api.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/crowdUI/api.jpg",
+                        "class": "hide-for-print show-for-large-up"
+                    }
+                ],
+                "links": [
+                    {"label": "Web", "title": "Website with demonstration videos", "link": "http://crowdui.com/"},
+                    {"label": "Source", "title": "Github", "link": "https://github.com/joetm/crowd-ui"}
+                ],
+                "technology": ["NodeJS", "Express", "Backbone", "Underscore", "jQuery", "jQuery-UI", "Semantic UI", "Mustache", "Karma", "Jasmine", "Gulp", "JSLint", "Travis-CI", "Coveralls", "ApiDoc", "Doxx"],
+                "status": "Completed",
+                "purpose": "MSc Final Project",
+                "position": "",
+                "organisation": "University of Southampton",
+                "type": "",
+                "grade": "85",
+                "daterange": "Jun - Sep 2015"
+            },
+            {
+                "title": "SameAs-Lite",
+                "idtype": "dev",
+                "description": "A Linked Data service to manage equivalences of URIs, entities and strings in general.",
+                "imgs": [
+                    {
+                        "title": "Home page",
+                        "thumb": "http://komasurfer.com/portfolio/img/SameAs-Lite/thumbs/sameaslite-home.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/SameAs-Lite/sameaslite-home.jpg"
+                    },
+                    {
+                        "title": "Store Home page",
+                        "thumb": "http://komasurfer.com/portfolio/img/SameAs-Lite/thumbs/sameaslite-store-home.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/SameAs-Lite/sameaslite-store-home.jpg"
+                    },
+                    {
+                        "title": "Pairs",
+                        "thumb": "http://komasurfer.com/portfolio/img/SameAs-Lite/thumbs/sameaslite-pairs.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/SameAs-Lite/sameaslite-pairs.jpg"
+                    },
+                    {
+                        "title": "Pairs (in turtle)",
+                        "thumb": "http://komasurfer.com/portfolio/img/SameAs-Lite/thumbs/sameaslite-pairs-ttl.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/SameAs-Lite/sameaslite-pairs-ttl.jpg"
+                    },
+                    {
+                        "title": "API",
+                        "thumb": "http://komasurfer.com/portfolio/img/SameAs-Lite/thumbs/sameaslite-api.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/SameAs-Lite/sameaslite-api.jpg"
+                    },
+                    {
+                        "title": "Store Analysis",
+                        "thumb": "http://komasurfer.com/portfolio/img/SameAs-Lite/thumbs/sameaslite-analysis.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/SameAs-Lite/sameaslite-analysis.jpg"
+                    }
+                ],
+                "links": [
+                    {"label": "Source", "title": "Github", "link": "https://github.com/seme4/sameAs-Lite"},
+                    {"label": "Wiki", "title": "Documentation", "link": "https://github.com/seme4/sameAs-Lite/wiki"}
+                ],
+                "technology": ["PHP", "AJAX", "jQuery"],
+                "status": "Paused",
+                "purpose": "Preparation for release as Open Source",
+                "position": "Developer",
+                "organisation": "Seme4 Ltd.",
+                "type": "",
+                "grade": "",
+                "daterange": "Nov 2015"
+            },
+            {
+                "title": "MakeRDF",
+                "idtype": "dev",
+                "description": "Improvement of the tool that converts tabular input data into RDF.",
+                "imgs": [],
+                "links": [],
+                "technology": ["PHP", "EasyRDF", "Composer", "Sphinx", "XML"],
+                "status": "Continuous improvement",
+                "purpose": "",
+                "position": "Developer",
+                "organisation": "Seme4 Ltd.",
+                "type": "",
+                "grade": "",
+                "daterange": "Oct 2015 - November 2016"
+            },
+            {
+                "title": "Minimalist Social Network - v2",
+                "idtype": "dev",
+                "description": "A website prototype implemented as a single page javascript application. The technical manual and user manual were part of the coursework assignment.",
+                "imgs": [
+                    {
+                        "title": "Home page",
+                        "thumb": "http://komasurfer.com/portfolio/projects/minimalism/prototype-v2/screenshots/thumbs/th_homepage.jpg",
+                        "img": "http://komasurfer.com/portfolio/projects/minimalism/prototype-v2/screenshots/homepage.jpg"
+                    },
+                    {
+                        "title": "Browsing the user profiles",
+                        "thumb": "http://komasurfer.com/portfolio/projects/minimalism/prototype-v2/screenshots/thumbs/th_browse.jpg",
+                        "img": "http://komasurfer.com/portfolio/projects/minimalism/prototype-v2/screenshots/browse.jpg"
+                    },
+                    {
+                        "title": "Profiles",
+                        "thumb": "http://komasurfer.com/portfolio/projects/minimalism/prototype-v2/screenshots/thumbs/th_profile.jpg",
+                        "img": "http://komasurfer.com/portfolio/projects/minimalism/prototype-v2/screenshots/profile.jpg"
+                    },
+                    {
+                        "title": "Drag-drop re-ordering",
+                        "thumb": "http://komasurfer.com/portfolio/projects/minimalism/prototype-v2/screenshots/thumbs/th_dragdrop-reorder.jpg",
+                        "img": "http://komasurfer.com/portfolio/projects/minimalism/prototype-v2/screenshots/dragdrop-reorder.jpg",
+                        "class": "hide-for-print"
+                    },
+                    {
+                        "title": "Editing a thing",
+                        "thumb": "http://komasurfer.com/portfolio/projects/minimalism/prototype-v2/screenshots/thumbs/th_edit-thing.jpg",
+                        "img": "http://komasurfer.com/portfolio/projects/minimalism/prototype-v2/screenshots/edit-thing.jpg"
+                    },
+                    {
+                        "title": "Signup form",
+                        "thumb": "http://komasurfer.com/portfolio/projects/minimalism/prototype-v2/screenshots/thumbs/th_signup-invalid.jpg",
+                        "img": "http://komasurfer.com/portfolio/projects/minimalism/prototype-v2/screenshots/signup-invalid.jpg",
+                        "class": "hide-for-print"
+                    }
+                ],
+                "links": [
+                    {"label": "Link", "title": "Demonstration-only", "link": "http://komasurfer.com/portfolio/projects/minimalism/prototype-v2/"},
+                    {"label": "Source", "title": "Github", "link": "https://github.com/joetm/prototype-v2"},
+                    {"label": "Manual", "title": "Technical Manual", "link": "http://komasurfer.com/portfolio/projects/minimalism/prototype-v2/manuals/technical.html"},
+                    {"label": "Manual", "title": "User Manual", "link": "http://komasurfer.com/portfolio/projects/minimalism/prototype-v2/manuals/user.html"}
+                ],
+                "technology": ["AngularJS", "PHP", "HTML5", "Sass", "Bootstrap", "Protractor", "Jasmine", "Grunt"],
+                "status": "Completed",
+                "purpose": "Coursework for module COMP6205 Web Development",
+                "position": "",
+                "organisation": "University of Southampton",
+                "type": "Individual Assignment",
+                "grade": "92.5",
+                "daterange": "Oct - Dec 2014"
+            },
+            {
+                "title": "Minimalist Social Network - v1",
+                "idtype": "dev",
+                "description": "First prototype of the Minimalist Social Network implemented with PHP and jQuery.",
+                "imgs": [
+                    {
+                        "title": "Things",
+                        "thumb": "http://komasurfer.com/portfolio/img/minimalism/v1/thumbs/th_things-zoomed-sm.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/minimalism/v1/things-zoomed-sm.jpg"
+                    },
+                    {
+                        "title": "Location history",
+                        "thumb": "http://komasurfer.com/portfolio/img/minimalism/v1/thumbs/th_locations-zoomed-sm.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/minimalism/v1/locations-zoomed-sm.jpg"
+                    },
+                    {
+                        "title": "Challenges",
+                        "thumb": "http://komasurfer.com/portfolio/img/minimalism/v1/thumbs/th_challenges-zoomed-sm.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/minimalism/v1/challenges-zoomed-sm.jpg",
+                        "class": "hide-for-print"
+                    },
+                    {
+                        "title": "User settings",
+                        "thumb": "http://komasurfer.com/portfolio/img/minimalism/v1/thumbs/th_settings-zoomed-sm.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/minimalism/v1/settings-zoomed-sm.jpg",
+                        "class": "hide-for-print show-for-large-up"
+                    }
+                ],
+                "links": [
+                    {"label": "Link", "title": "Demonstration-only", "link": "http://komasurfer.com/portfolio/projects/minimalism/prototype-v1/things"}
+                ],
+                "technology": ["PHP", "jQuery", "jQuery UI", "jQuery Lazyload", "plUpload"],
+                "status": "Completed",
+                "purpose": "",
+                "position": "",
+                "organisation": "",
+                "type": "Own development",
+                "grade": "",
+                "daterange": "March - Apr 2013"
+            },
+            {
+                "title": "BuxomCMS",
+                "idtype": "dev",
+                "description": "Content Management System for adult entertainment websites, designed and implemented in 2011. Object-oriented MVC and built in PHP with Zend-Framework best practices. The CMS contained sophisticated video transcoding, automatic gallery thumbnail processing with progress information, thumbnail cropping and many more features.<br /> Shortly before I finished this project, I learned about the availability of online transcoding services. Not wanting to waste more time and to base my solution on other services, I abandoned the project. If I had to implement such a CMS today, I would make heavy use of JavaScript, probably going for a single-page approach.",
+                "imgs": [
+                    {
+                        "title": "Dashboard",
+                        "thumb": "http://komasurfer.com/portfolio/projects/buxomCMS/screenshots/thumbs/th_dashboard.jpg",
+                        "img": "http://komasurfer.com/portfolio/projects/buxomCMS/screenshots/dashboard.jpg"
+                    },
+                    {
+                        "title": "New model",
+                        "thumb": "http://komasurfer.com/portfolio/projects/buxomCMS/screenshots/thumbs/th_new-model.jpg",
+                        "img": "http://komasurfer.com/portfolio/projects/buxomCMS/screenshots/new-model.jpg"
+                    },
+                    {
+                        "title": "Login logging",
+                        "thumb": "http://komasurfer.com/portfolio/projects/buxomCMS/screenshots/thumbs/th_logging-login.jpg",
+                        "img": "http://komasurfer.com/portfolio/projects/buxomCMS/screenshots/logging-login.jpg"
+                    },
+                    {
+                        "title": "Activity logging",
+                        "thumb": "http://komasurfer.com/portfolio/projects/buxomCMS/screenshots/thumbs/th_logging-activity.jpg",
+                        "img": "http://komasurfer.com/portfolio/projects/buxomCMS/screenshots/logging-activity.jpg",
+                        "class": "hide-for-print"
+                    },
+                    {
+                        "title": "Update management",
+                        "thumb": "http://komasurfer.com/portfolio/projects/buxomCMS/screenshots/thumbs/th_updates.jpg",
+                        "img": "http://komasurfer.com/portfolio/projects/buxomCMS/screenshots/updates.jpg"
+                    },
+                    {
+                        "title": "New update",
+                        "thumb": "http://komasurfer.com/portfolio/projects/buxomCMS/screenshots/thumbs/th_new-update.jpg",
+                        "img": "http://komasurfer.com/portfolio/projects/buxomCMS/screenshots/new-update.jpg"
+                    },
+                    {
+                        "title": "Tag management",
+                        "thumb": "http://komasurfer.com/portfolio/projects/buxomCMS/screenshots/thumbs/th_tags.jpg",
+                        "img": "http://komasurfer.com/portfolio/projects/buxomCMS/screenshots/tags.jpg",
+                        "class": "hide-for-print"
+                    },
+                    {
+                        "title": "Template editor",
+                        "thumb": "http://komasurfer.com/portfolio/projects/buxomCMS/screenshots/thumbs/th_template-editor.jpg",
+                        "img": "http://komasurfer.com/portfolio/projects/buxomCMS/screenshots/template-editor.jpg"
+                    }
+                ],
+                "links": [
+                    {"label": "Source", "title": "Github", "link": "https://github.com/joetm/BuxomCMS"}
+                ],
+                "technology": ["PHP", "Zend Framework", "jQuery"],
+                "status": "Finished (90%)",
+                "purpose": "CMS for resale",
+                "position": "",
+                "organisation": "",
+                "type": "Own development",
+                "grade": "",
+                "daterange": "Jan - June 2010"
+            },
+            {
+                "title": "Open Data Visualisation",
+                "idtype": "dev",
+                "description": "Visualisation of CSV data (US government IT projects) as part of the Open Data Innovation course module. The data was cleaned with Open Refine and Excel.",
+                "imgs": [
+                    {
+                        "title": "IT Projects by US President",
+                        "thumb": "http://komasurfer.com/portfolio/img/open-data/thumbs/th_vis2.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/open-data/vis2.jpg"
+                    },
+                    {
+                        "title": "Brushing Data Visualisation",
+                        "thumb": "http://komasurfer.com/portfolio/img/open-data/thumbs/th_vis3.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/open-data/vis3.jpg"
+                    },
+                    {
+                        "title": "Treemap",
+                        "thumb": "http://komasurfer.com/portfolio/img/open-data/thumbs/th_vis1.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/open-data/vis1.jpg"
+                    },
+                    {
+                        "title": "Outlays by US Agency",
+                        "thumb": "http://komasurfer.com/portfolio/img/open-data/thumbs/th_vis2-outlays_by_agency-2.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/open-data/vis2-outlays_by_agency-2.jpg"
+                    }
+                ],
+                "links": [
+                    {"label": "Web", "title": "Open Data Visualisation", "link": "http://komasurfer.com/portfolio/projects/open-data/"},
+                    {"label": "Readme", "title": "README.md", "link": "http://komasurfer.com/portfolio/projects/open-data/README.md"}
+                ],
+                "technology": ["OpenRefine", "D3", "C3", "ParallelCoordinates", "jQuery", "CoffeeScript", "Foundation", "HTML5", "CSV"],
+                "status": "Work-in-progress",
+                "purpose": "Coursework for module COMP6214 Open Data Innovation",
+                "position": "",
+                "organisation": "University of Southampton",
+                "type": "Individual Assignment",
+                "grade": "17.5 / 20",
+                "daterange": "Feb - March 2015"
+            },
+            {
+                "title": "Car Prices Visualization Prototype",
+                "idtype": "dev",
+                "description": "Prototype visualizing car prices along three dimensions: registration year, mileage, and price.",
+                "imgs": [
+                    {
+                        "title": "Car Price Visualization",
+                        "thumb": "http://komasurfer.com/portfolio/img/car-prices/th_car_prices.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/car-prices/car_prices.jpg"
+                    }
+                ],
+                "links": [
+                    {"label": "Link", "title": "GitHub", "link": "https://github.com/joetm/car-search"},
+                    {"label": "Web", "title": "Concept", "link": "http://joetm.github.io/car-search/"}
+                ],
+                "technology": ["highcharts", "JavaScript", "jQuery", "requireJS"],
+                "status": "Completed",
+                "purpose": "",
+                "position": "",
+                "organisation": "",
+                "type": "Own development",
+                "grade": "",
+                "daterange": "Dec 2015"
+            },
+            {
+                "title": "PowerPoint-like presentation web application",
+                "idtype": "dev",
+                "description": "A &quot;computer artefact&quot; that demonstrates some aspects of the traditional Software Engineering development model in an interactive way. The user can browse through the application like a PowerPoint presentation. The application also features several interactive riddles and quizzes. The user interface is responsive and was tested on different screen sizes.",
+                "imgs": [
+                    {
+                        "title": "Start screen",
+                        "thumb": "http://komasurfer.com/portfolio/img/waterfall/thumbs/th_intro.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/waterfall/intro.jpg"
+                    },
+                    {
+                        "title": "Sorting Riddle",
+                        "thumb": "http://komasurfer.com/portfolio/img/waterfall/thumbs/th_sort.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/waterfall/sort.jpg"
+                    },
+                    {
+                        "title": "Explanation of the Steps",
+                        "thumb": "http://komasurfer.com/portfolio/img/waterfall/thumbs/th_steps.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/waterfall/steps.jpg",
+                        "class": "hide-for-print"
+                    },
+                    {
+                        "title": "One of the multiple choice quizzes",
+                        "thumb": "http://komasurfer.com/portfolio/img/waterfall/thumbs/th_quiz.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/waterfall/quiz.jpg"
+                    },
+                    {
+                        "title": "Cost graphics",
+                        "thumb": "http://komasurfer.com/portfolio/img/waterfall/thumbs/th_cost.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/waterfall/cost.jpg"
+                    },
+                    {
+                        "title": "Interactive exploration of the improvements (D3)",
+                        "thumb": "http://komasurfer.com/portfolio/img/waterfall/thumbs/th_d3-steps.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/waterfall/d3-steps.jpg"
+                    },
+                    {
+                        "title": "IT Service development animation (HTML5)",
+                        "thumb": "http://komasurfer.com/portfolio/img/waterfall/thumbs/th_it-service.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/waterfall/it-service.jpg",
+                        "class": "hide-for-print"
+                    },
+                    {
+                        "title": "Drag & Drop Riddle",
+                        "thumb": "http://komasurfer.com/portfolio/img/waterfall/thumbs/th_riddle.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/waterfall/riddle.jpg"
+                    }
+                ],
+                "links": [
+                    {"label": "Web", "title": "Waterfall web app", "link": "http://komasurfer.com/portfolio/projects/waterfall/"},
+                    {"label": "Source", "title": "Github", "link": "https://github.com/joetm/Waterfall-Presentation"}
+                ],
+                "technology": ["D3", "jQuery", "Nunjucks Template Engine", "HTML5", "Sass", "Bootstrap", "Grunt"],
+                "status": "Completed",
+                "purpose": "Coursework for module COMP6233 Topics in Computer Science",
+                "position": "",
+                "organisation": "University of Southampton",
+                "type": "Individual Assignment",
+                "grade": "80",
+                "daterange": "Oct - Dec 2015"
+            },
+            {
+                "title": "RESTful Webservice",
+                "idtype": "dev",
+                "description": "An implementation of a Stackoverflow-like question-and-answer system. We made the decision to get things done quickly. Lots of duplicated code and poor maintainability was the price to pay for the quick win.",
+                "imgs": [
+                    {
+                        "title": "Homepage",
+                        "thumb": "http://komasurfer.com/portfolio/projects/webservice/screenshots/thumbs/th_homepage.jpg",
+                        "img": "http://komasurfer.com/portfolio/projects/webservice/screenshots/homepage.jpg"
+                    },
+                    {
+                        "title": "Single question page",
+                        "thumb": "http://komasurfer.com/portfolio/projects/webservice/screenshots/thumbs/th_question.jpg",
+                        "img": "http://komasurfer.com/portfolio/projects/webservice/screenshots/question.jpg"
+                    }
+                ],
+                "links": [
+                    {"label": "Source", "title": "Github", "link": "https://github.com/joetm/webservice"},
+                    {"label": "Manual", "title": "README.md", "link": "http://komasurfer.com/portfolio/projects/webservice/README.md"}
+                ],
+                "technology": ["NodeJS", "Express", "SQLite3", "node-orm2", "Swig Template Engine"],
+                "status": "",
+                "purpose": "Coursework for module COMP6218 Web Architecture",
+                "position": "",
+                "organisation": "University of Southampton",
+                "type": "Group work",
+                "grade": "98",
+                "daterange": "Nov - Dec 2015"
+            },
+            {
+                "title": "Webcam chat system",
+                "idtype": "dev",
+                "description": "Developed a webcam chat system for my online community website. The system made use of the Highwinds CDN video streaming capabilities. The chat was implemented with NodeJS. The VPN provider switched from Highwinds to Level3 soon afterwards and I subsequently lost access to the Highwinds API.",
+                "imgs": [
+                    {
+                        "title": "Live Webcam chat system",
+                        "thumb": "http://komasurfer.com/portfolio/projects/forum/webcam-chat/thumbs/th_live-event.jpg",
+                        "img": "http://komasurfer.com/portfolio/projects/forum/webcam-chat/live-event.jpg"
+                    }
+                ],
+                "links": [],
+                "technology": ["NodeJS", "ActionScript", "PHP", "jQuery", "HTML"],
+                "status": "",
+                "purpose": "Website Prototype for university association",
+                "position": "Completed",
+                "organisation": "",
+                "type": "Own development",
+                "grade": "",
+                "daterange": "2010"
+            },
+            {
+                "visible": false,
+                "title": "IT Portal Prototype",
+                "idtype": "dev",
+                "description": "My interpretation and implementation of a corporate IT service portal. Work in progress.",
+                "imgs": [
+                    {
+                        "title": "IT Portal prototype (work in progress)",
+                        "thumb": "http://komasurfer.com/portfolio/img/it-portal/thumbs/th_it-portal-prototype.jpg",
+                        "img": "http://komasurfer.com/portfolio/img/it-portal/it-portal-prototype.jpg"
+                    }
+                ],
+                "links": [
+                    {"label": "Web", "title": "Concept Layout", "link": "http://komasurfer.com/portfolio/projects/IT-Portal/"}
+                ],
+                "technology": ["KnockoutJS", "BackboneJS", "jQuery", "Semantic UI", "Sass", "JSUnit", "Gulp"],
+                "status": "Unfinished",
+                "purpose": "",
+                "position": "",
+                "organisation": "",
+                "type": "Own development",
+                "grade": ""
+            },
+            {
+                "title": "University Association Website Prototype",
+                "idtype": "dev",
+                "description": "This was a prototype I created for the Sailing association of my university. The final product would have required some more work in Photoshop. It was decided not to go with a dynamic website, so the prototype was not finished.",
+                "imgs": [
+                    {
+                        "title": "Sailing Team Darmstadt website prototype",
+                        "thumb": "http://komasurfer.com/portfolio/projects/STDA-concept/thumbs/th_stda-prototype.jpg",
+                        "img": "http://komasurfer.com/portfolio/projects/STDA-concept/stda-prototype.jpg"
+                    }
+                ],
+                "links": [
+                    {"label": "Web", "title": "Concept Layout", "link": "http://komasurfer.com/portfolio/projects/STDA-concept/"}
+                ],
+                "technology": ["jQuery", "jQuery Parallax", "HTML"],
+                "status": "Unfinished",
+                "purpose": "Website Prototype for university association",
+                "position": "",
+                "organisation": "<a href='http://www.st-darmstadt.de/'>Sailing Team Darmstadt e.V.</a>",
+                "type": "",
+                "grade": ""
+            },
+            {
+                "title": "IT Service Catalogue",
+                "idtype": "excel",
+                "description": "I was in charge of updating and improving the IT service catalogue of a large engineering company (<a href=\"http://www.alstom.com\" target=\"_blank\">Alstom</a>) through four release cycles. The IT service catalogue Excel file was later used as input in the transition towards an internally developed group-wide IT Service Web Portal. I was one of the few beta testers of this IT portal.",
+                "imgs": [
+                    {
+                        "title": "Alstom IT Service Catalog and IT Portal testing",
+                        "thumb": "http://komasurfer.com/portfolio/projects/alstom/service-catalog/thumbs/th_service-catalog-itportal.jpg",
+                        "img": "http://komasurfer.com/portfolio/projects/alstom/service-catalog/service-catalog-itportal.jpg"
+                    }
+                ],
+                "technology": false,
+                "status": "Completed",
+                "purpose": "IT Service Catalogue restructuring and maintenance and transitioning to IT portal",
+                "position": "IT Business Analyst",
+                "organisation": "Alstom IS&T",
+                "type": "",
+                "grade": "",
+                "daterange": "Aug 2013 - July 2015"
+            },
+            {
+                "title": "Excel and PowerPoint Automation",
+                "idtype": "excel",
+                "description": "Part of my role as a trainee at Alstom was to create monthly status reports. I reworked and extended an existing solution to automate the reports using VBA. The resulting script was able to output both an Excel file with diagrams and a ready-to-go PowerPoint presentation to be sent to the managers in the product lines.",
+                "imgsBAK": [
+                    {
+                        "title": "VBA-based PowerPoint presentation generator",
+                        "thumb": "http://komasurfer.com/portfolio/projects/alstom/idea-management/thumbs/powerinnovation_generator_1.jpg",
+                        "img": "http://komasurfer.com/portfolio/projects/alstom/idea-management/powerinnovation_generator_1.jpg"
+                    }
+                ],
+                "videos": [
+                    {
+                        "type": "youtube",
+                        "thumbnail": "",
+                        "code": "T1ZNEK9V73c"
+                    }
+                ],
+                "technology": ["VBA"],
+                "status": "Completed",
+                "purpose": "Automation of KPI reports for idea management system",
+                "position": "IT Strategy Analyst (Trainee)",
+                "organisation": "Alstom Power",
+                "type": "",
+                "grade": "",
+                "daterange": "Nov 2011 - Dec 2011"
+            },
+
+
+            {
+                "title": "Service Request Design and Testing",
+                "idtype": "other",
+                "description": "At Alstom, I designed and managed the implementation of IT services and IT service request forms. I was also responsible for the final acceptance testing of these service requests. I proactively improved the Service Request testing template.",
+                "imgs": [
+                    {
+                        "title": "Service request testing user interface testing",
+                        "thumb": "http://komasurfer.com/portfolio/projects/alstom/sr-testing/thumbs/th_service-request.jpg",
+                        "img": "http://komasurfer.com/portfolio/projects/alstom/sr-testing/service-request.jpg"
+                    },
+                    {
+                        "title": "Manual service request testing",
+                        "thumb": "http://komasurfer.com/portfolio/projects/alstom/sr-testing/thumbs/th_testing-script.jpg",
+                        "img": "http://komasurfer.com/portfolio/projects/alstom/sr-testing/testing-script.jpg"
+                    }
+                ],
+                "links": [],
+                "technology": false,
+                "status": "Completed",
+                "purpose": "Continuous improvement",
+                "position": "IT Business Analyst",
+                "organisation": "Alstom IS&T",
+                "type": "",
+                "grade": "",
+                "daterange": "Aug 2013 - July 2014"
+            },
+            {
+                "title": "Movie Ontology",
+                "idtype": "other",
+                "description": "Ontology design exercise - modelling a movie ontology for a cinema chain.",
+                "imgs": [
+                    {
+                        "title": "Protege Screenshot",
+                        "thumb": "http://komasurfer.com/portfolio/projects/ontology/COMP6215/2015-04/screenshots/protege-1-thumb.jpg",
+                        "img": "http://komasurfer.com/portfolio/projects/ontology/COMP6215/2015-04/screenshots/protege-1.jpg"
+                    },
+                    {
+                        "title": "Protege Screenshot",
+                        "thumb": "http://komasurfer.com/portfolio/projects/ontology/COMP6215/2015-04/screenshots/protege-2-thumb.jpg",
+                        "img": "http://komasurfer.com/portfolio/projects/ontology/COMP6215/2015-04/screenshots/protege-2.jpg",
+                        "class": "hide-for-print show-for-large-up"
+                    },
+                    {
+                        "title": "Protege Screenshot",
+                        "thumb": "http://komasurfer.com/portfolio/projects/ontology/COMP6215/2015-04/screenshots/protege-3-thumb.jpg",
+                        "img": "http://komasurfer.com/portfolio/projects/ontology/COMP6215/2015-04/screenshots/protege-3.jpg",
+                        "class": "hide-for-print show-for-large-up"
+                    }
+                ],
+                "links": [
+                    {"label": "OWL", "title": "Ontology", "link": "http://komasurfer.com/portfolio/projects/ontology/COMP6215/2015-04/movie-ontology.owl"},
+                    {"label": "SPAQRL", "title": "Sparql queries", "link": "http://komasurfer.com/portfolio/projects/ontology/COMP6215/2015-04/SPARQL.txt"}
+                ],
+                "technology": ["OWL", "RDFS", "RDF", "Dublin Core Terms", "SPARQL"],
+                "status": "Completed",
+                "purpose": "Coursework for module COMP6215 Semantic Web Technologies",
+                "position": "",
+                "organisation": "University of Southampton",
+                "type": "Individual Assignment",
+                "grade": "80.5",
+                "daterange": "Feb 2013 - Apr 2014"
+            },
+
+            {
+                "title": "\"Drag & Load\" Chrome Extension",
+                "idtype": "other",
+                "description": "Chrome Extension to save images with a mouse drag in any direction",
+                "imgs": [],
+                "links": [
+                    {"label": "Link", "title": "Chrome Web Store", "link": "https://chrome.google.com/webstore/detail/drag-and-load/ogabdhanjefggbdoiifeekocmdkmbhob"}
+                ],
+                "technology": ["JavaScript"],
+                "status": "Completed",
+                "purpose": "",
+                "position": "",
+                "organisation": "",
+                "type": "",
+                "grade": "",
+                "daterange": "Sep 2014"
+            },
+            {
+                "title": "\"StreetView Minify UI\" Chrome Extension",
+                "idtype": "other",
+                "description": "Chrome Extension to hide most of the UI elements in Google Street View",
+                "imgs": [],
+                "links": [
+                    {"label": "Link", "title": "Chrome Web Store", "link": "https://chrome.google.com/webstore/detail/streetview-minify-ui/ffdmhflaakgdoepoalfolblngapooonn"}
+                ],
+                "technology": ["JavaScript"],
+                "status": "Completed",
+                "purpose": "",
+                "position": "",
+                "organisation": "",
+                "type": "",
+                "grade": "",
+                "daterange": "Sep 2014"
+            },
+
+            {
+                "visible": false,
+                "title": "Intranet migration project",
+                "idtype": "other",
+                "description": "...",
+                "imgs": [],
+                "links": [],
+                "technology": false,
+                "status": "Completed",
+                "purpose": "Migration of product line intranet to Microsoft SharePoint",
+                "position": "Trainee",
+                "organisation": "Alstom Power",
+                "type": "",
+                "grade": ""
+            },
+            {
+                "visible": false,
+                "title": "Idea Management System",
+                "idtype": "other",
+                "description": "...",
+                "imgs": [],
+                "links": [],
+                "technology": false,
+                "status": "Completed",
+                "purpose": "",
+                "position": "Trainee",
+                "organisation": "Alstom Power",
+                "type": "",
+                "grade": ""
+            }
+        ]
+    }
+}
