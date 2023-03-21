@@ -12,7 +12,7 @@ module.exports = {
     // DEV_WEBPACK_CACHE: true,
     PRESERVE_FILE_DOWNLOAD_CACHE: true,
     // https://www.gatsbyjs.com/docs/how-to/performance/partial-hydration/
-    PARTIAL_HYDRATION: true,
+    // PARTIAL_HYDRATION: true,
     // trying to lower memory requirements during build
     // LMDB_STORE: true, // store nodes in a persistent embedded database (vs in-memory). Lowers peak memory usage. Requires Node v14.10 or above.
     // PARALLEL_QUERY_RUNNING: false,
@@ -23,7 +23,7 @@ module.exports = {
     // replace react with preact
     // "gatsby-plugin-preact", // not compatible with React 18
     // do not generate source maps
-    // "gatsby-plugin-no-sourcemaps",
+    "gatsby-plugin-no-sourcemaps",
     // "gatsby-plugin-react-helmet"
     `gatsby-plugin-react-head`,
     `gatsby-plugin-image`,

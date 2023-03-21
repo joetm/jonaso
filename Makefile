@@ -95,12 +95,14 @@ post-build:
 	# copy fetched PCS data
 	cp ./stat_aggregator/peer-reviews.json ./public/peer-reviews.json
 
-	# PROCESS ARTWORK IMAGES
+	make process-artworks
+
+
+process-artworks:
 	python3 processImages.py
 	if [ -d "./artworks-json" ];then \
 		rm -rf ./artworks-json; \
 	fi
-
 	make copy-portfolio
 
 
