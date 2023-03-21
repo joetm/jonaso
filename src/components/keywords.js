@@ -5,9 +5,9 @@ import 'semantic-ui-css/components/button.min.css'
 import { ResponsiveContainer, LabelList, BarChart, Bar, XAxis, YAxis, CartesianGrid } from 'recharts'
 
 
-const HEIGHT = 1750;
-const colorDefault = '#eb008c';
-const colorZoomed = '#FF86A6';
+const HEIGHT = 1750
+const colorDefault = '#eb008c'
+const colorZoomed = '#FF86A6'
 
 
 class Keywords extends React.Component {

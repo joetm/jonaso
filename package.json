@@ -11,7 +11,7 @@
     "build-profiling": "GATSBY_CPU_COUNT=1 NODE_OPTIONS=--max-old-space-size=4096 gatsby clean && make pre-build && npx process-top ./node_modules/.bin/gatsby build && make post-build && git add -A && sh -c 'git commit -m \"${0}\"' && git push",
     "push": "git add -A && git commit && git push",
     "serve": "gatsby serve",
-    "prod": "yarn build && yarn serve",
+    "prod": "make pre-build && GATSBY_CPU_COUNT=2 NODE_OPTIONS=--max-old-space-size=4096 gatsby build && make post-build && yarn serve",
     "bundle-map": "bundle-buddy public/*.map"
   },
   "dependencies": {

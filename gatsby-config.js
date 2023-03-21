@@ -64,23 +64,23 @@ module.exports = {
     //     ignore: [`**/info.txt`],
     //   },
     // },
-    {
-      resolve: 'gatsby-plugin-minify-html',
-      options: {
-        debug: false, // debug optional, default false
-        config: {
-          collapseWhitespace: false,
-          minifyCSS: true,
-          minifyJS: true,
-          removeComments: true,
-          removeScriptTypeAttributes: true,
-          removeStyleLinkTypeAttributes: true,
-          // Disabled default by html-minifier-terser
-          sortAttributes: false,
-          useShortDoctype: true,
-        }
-      }
-    },
+    // {
+    //   resolve: 'gatsby-plugin-minify-html',
+    //   options: {
+    //     debug: false, // debug optional, default false
+    //     config: {
+    //       collapseWhitespace: false,
+    //       minifyCSS: true,
+    //       minifyJS: true,
+    //       removeComments: true,
+    //       removeScriptTypeAttributes: true,
+    //       removeStyleLinkTypeAttributes: true,
+    //       // Disabled default by html-minifier-terser
+    //       sortAttributes: false,
+    //       useShortDoctype: true,
+    //     }
+    //   }
+    // },
     'gatsby-plugin-remove-generator',
     `gatsby-plugin-remove-fingerprints`, // <-- breaks some pages
     // `gatsby-plugin-purgecss`,
