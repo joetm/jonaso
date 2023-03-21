@@ -7,7 +7,7 @@ import { navigate } from "gatsby"
 const styles = {
   navSpacer: {
     marginBottom: '2em',
-  },
+  }
 }
 
 
@@ -36,12 +36,12 @@ export default function Nav() {
   function handleItemClick(e) {
     e.preventDefault()
     const name = e.target.name
-    let url = e.target.getAttribute('url')
+    let targeturl = e.target.getAttribute('url')
     const activeItem = name.toLowerCase()
     setActiveItem(activeItem)
-    if (url) {
-      url = url.charAt(0) === '/' ? url.slice(1) : url;
-      navigate(`/${url}`)
+    if (targeturl) {
+      targeturl = targeturl.charAt(0) === '/' ? targeturl.slice(1) : targeturl;
+      navigate(`/${targeturl}`)
     } else {
       if (activeItem === 'home') {
         navigate('/')
@@ -53,8 +53,8 @@ export default function Nav() {
 
   useEffect(() => {
     const url = prepareUrl(window.location.pathname)
-    const navstate = url.startsWith('research') || url.startsWith('projects')
     setActiveItem(url || 'home')
+    const navstate = url.startsWith('research') || url.startsWith('projects')
     setResearchNavOpen(navstate)
   }, [])
 
@@ -62,7 +62,7 @@ export default function Nav() {
     <header>
       <div id="desktopmenu">
         <div className="ui fluid pointing stackable seven item menu" primary="true">
-          <MenuItem key="home"  active={activeItem === 'home'} item='Home' handleItemClick={handleItemClick} />
+          <MenuItem key="home" active={activeItem === 'home'} item='Home' handleItemClick={handleItemClick} />
           <MenuItem key="artworks" active={activeItem.startsWith('artworks')} item='Artworks' link={false} header={true} handleItemClick={handleItemClick} />
           <MenuItem key="publications" active={activeItem === 'publications'} item='Publications' handleItemClick={handleItemClick} />
           <MenuItem key="research" active={activeItem.startsWith('research') || activeItem === 'projects'} item='Research' link={false} header={true} handleItemClick={handleItemClick} />

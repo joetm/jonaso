@@ -46,6 +46,9 @@ rename-artworks:
 
 copy-portfolio:
 	cp -Rf ../jonaso.de-portfolio ./public/portfolio
+	rm -rf ./public/portfolio/.git
+	rm -rf ./public/portfolio/.gitignore
+	rm -rf ./public/portfolio/.babelrc
 	rm -rf ./public/portfolio/node_modules
 	rm -rf ./public/portfolio/package.json
 	rm -rf ./public/portfolio/package-lock.json
