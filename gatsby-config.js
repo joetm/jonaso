@@ -23,7 +23,7 @@ module.exports = {
     // replace react with preact
     // "gatsby-plugin-preact", // not compatible with React 18
     // do not generate source maps
-    "gatsby-plugin-no-sourcemaps",
+    // "gatsby-plugin-no-sourcemaps",
     // "gatsby-plugin-react-helmet"
     `gatsby-plugin-react-head`,
     `gatsby-plugin-image`,
