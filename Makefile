@@ -44,16 +44,24 @@ rename-artworks:
 		./rename-midjourney.sh
 		./rename-stablediffusion.sh
 
-copy-portfolio:
-	cp -Rf ../jonaso.de-portfolio ./public/portfolio
-	rm -rf ./public/portfolio/.git
-	rm -rf ./public/portfolio/.gitignore
-	rm -rf ./public/portfolio/.babelrc
-	rm -rf ./public/portfolio/node_modules
-	rm -rf ./public/portfolio/package.json
-	rm -rf ./public/portfolio/package-lock.json
-	rm -rf ./public/portfolio/yarn.lock
-	rm -rf ./public/portfolio/webpack.config.js
+push-portfolio:
+	# push to s3
+	aws s3 sync --delete ../jonaso.de-portfolio/dist/ s3://jonaso.de/portfolio/dist
+	aws s3 sync --delete ../jonaso.de-portfolio/static/ s3://jonaso.de/portfolio/static
+	aws s3 cp ../jonaso.de-portfolio/favicon.ico s3://jonaso.de/portfolio
+	aws s3 cp ../jonaso.de-portfolio/favicon.png s3://jonaso.de/portfolio
+	aws s3 cp ../jonaso.de-portfolio/index.html s3://jonaso.de/portfolio
+
+# copy-portfolio:
+# 	cp -Rf ../jonaso.de-portfolio ./public/portfolio
+# 	rm -rf ./public/portfolio/node_modules
+# 	rm -rf ./public/portfolio/.git
+# 	rm -rf ./public/portfolio/.gitignore
+# 	rm -rf ./public/portfolio/.babelrc
+# 	rm -rf ./public/portfolio/package.json
+# 	rm -rf ./public/portfolio/package-lock.json
+# 	rm -rf ./public/portfolio/yarn.lock
+# 	rm -rf ./public/portfolio/webpack.config.js
 
 post-build:
 	# move cv
@@ -97,13 +105,13 @@ post-build:
 
 	make process-artworks
 
+	# make copy-portfolio
 
 process-artworks:
 	python3 processImages.py
 	if [ -d "./artworks-json" ];then \
 		rm -rf ./artworks-json; \
 	fi
-	make copy-portfolio
 
 
 fetch-cv:
@@ -206,4 +214,8 @@ push:
 publish:
 	# push to s3
 	aws s3 sync --delete ./public/ s3://jonaso.de
+
+	make push-portfolio
+
 	aws cloudfront create-invalidation --distribution-id E1F8XE39H6VFRU --paths "/*"
+
