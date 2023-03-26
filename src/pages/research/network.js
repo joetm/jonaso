@@ -3,9 +3,9 @@
 import 'semantic-ui-css/components/dropdown.min.css'
 
 import React from "react"
+import { spacer } from "../../common"
 import Layout from "../../components/layout"
 import { Seo } from "../../components/Seo"
-import { spacer } from "../../common"
 
 // fix window SSR error
 // import ForceGraph2D from 'react-force-graph-2d'

@@ -1,9 +1,9 @@
 "use client"
 
 import React from "react"
+import { spacer } from "../common"
 import Layout from "../components/layout"
 import { Seo } from "../components/Seo"
-import { spacer } from "../common"
 
 
 export function Head() {

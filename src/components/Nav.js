@@ -1,8 +1,7 @@
 "use client"
 
-import React from "react"
-import { useState, useEffect } from 'react'
 import { navigate } from "gatsby"
+import React, { useEffect, useState } from "react"
 
 const styles = {
   navSpacer: {

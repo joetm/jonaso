@@ -6,12 +6,12 @@ import 'semantic-ui-css/components/icon.min.css'
 import 'semantic-ui-css/components/item.min.css'
 
 import React from "react"
+import { Bar, BarChart, CartesianGrid, LabelList, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 import Button from 'semantic-ui-react/dist/es/elements/Button/Button.js'
 import Icon from 'semantic-ui-react/dist/es/elements/Icon/Icon.js'
-import { Bar, BarChart, XAxis, YAxis, Tooltip, LabelList, CartesianGrid, ResponsiveContainer } from 'recharts'
 // import useDetectPrint from 'use-detect-print'
+import { noMarginGrid, spacer } from "../common"
 import Layout from "../components/layout"
-import { spacer, noMarginGrid } from "../common"
 import { Seo } from "../components/Seo"
 
 // replacement for Responsive component from semantic-ui-react
@@ -130,7 +130,6 @@ class Publications extends React.Component {
       for (let i = 0; i <= maxRefsByYear; i+=2) {
         tickArray.push(i)
       }
-      // console.log(tickArray)
 
       const graphdata = {refsByYear, tickArray}
       this.setState({

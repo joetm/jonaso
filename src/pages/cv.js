@@ -4,11 +4,11 @@ import 'semantic-ui-css/components/grid.min.css'
 import 'semantic-ui-css/components/icon.min.css'
 import 'semantic-ui-css/components/item.min.css'
 
+import { navigate } from "gatsby"
 import React from "react"
+import { spacer } from "../common"
 import Layout from "../components/layout"
 import { Seo } from "../components/Seo"
-import { navigate } from "gatsby"
-import { spacer } from "../common"
 
 import cv from "../cv.json"
 
@@ -59,7 +59,7 @@ export function Head() {
 
 const SupervisorWrap = ({supervisor, link = false}) => {
   if (!supervisor) {
-    return null;
+    return null
   }
   if (link) {
       return (<div className="item" role="listitem">Advisor: <a href={link}>{supervisor}</a></div>)
@@ -83,8 +83,6 @@ const Center = ({content}) => (
     {content}
   </div>
 ) //
-
-
 const Row = ({left, middle, right, stretched = true}) => {
 	return (
     <div className="ui clearing">
@@ -98,80 +96,45 @@ const Row = ({left, middle, right, stretched = true}) => {
 } //
 
 
-const PdfCVButton = () => (
-  <div style={{float:'right',marginTop:'0.5em'}}>
-    <a title="Download cv as pdf" href="/cv/oppenlaender-cv.pdf" target="_blank">
-      <i aria-hidden="true" className="file pdf outline large icon"></i>
-    </a>
-  </div>
-)
 
-
-class CV extends React.Component {
-  state = {
-    reviews: {total: 0},
-    // activeTag: null,
-    // isHovered: false, 
-  }
-  // setIsHovered = (isHovered) => {
-  // 	console.info('isHovered', isHovered)
-  // 	this.setState({isHovered})
-  // }
-  redirectToPortfolio = () => window.location = _PORTFOLIO_URL
-  redirectToPublications = () => navigate("/publications") // window.location = '/publications/'
-  redirectToInterests = () => navigate("/research/interests") // window.location = '/research/interests/'
-  componentDidMount() {
-    fetch(_PEERREVIEWS_URL)
-    .then(response => response.json())
-    .then(reviews => this.setState({reviews}))
-  }
-  // handleTagClick = (e) => {
-    // const activeTag = e.target.innerHTML
-    // if (activeTag === this.state.activeTag) {
-    //   this.setState({ activeTag: null })
-    //   return
-    // }
-  //   this.setState({ activeTag })
-  // }
-  startEndYear(row) {
-    if (row.hasOwnProperty('year')) {
-      return row.year
-    }
+export default function CV() {
+  const [reviews, setReviews] = React.useState({total: 0})
+  function redirectToPortfolio() {window.location = _PORTFOLIO_URL}
+  function redirectToPublications() {navigate("/publications")} // window.location = '/publications/'
+  function redirectToInterests() {navigate("/research/interests")} // window.location = '/research/interests/'
+  function startEndYear(row) {
+    if (row.hasOwnProperty('year')) { return row.year }
     return row.end === null ? "since " + row.start : row.start + " - " + row.end
   }
-  // countKeywords = () => {
-  //   const arrays = [cv.education, cv.research_experience, cv.work_experience]
-  //   const keyword_list = arrays.map(arr => arr.map(entry => entry.keywords).reduce((acc, curr) => acc.concat(curr))).reduce((acc, curr) => acc.concat(curr))
-  //   console.log(keywords)
-  // }
-  render() {
-    // const { activeTag, isHovered } = this.state
-    const { reviews } = this.state
-    const startEndYear = this.startEndYear
-    // const teachingPositions = Object.keys(cv.teaching)
+  async function getPeerReviews() {
+    const res = await fetch(_PEERREVIEWS_URL)
+    const reviews = await res.json()
+    setReviews(reviews)
+  }
+  React.useEffect(() => {
+    getPeerReviews()
+  }, [])
 
-    // const keyword_count = this.countKeywords()
+  const peerreviews = {}
+  cv['peer-review'].forEach(entry => {
+      entry.years.forEach(year => {
+          if (peerreviews.hasOwnProperty("" + year)) {
+              peerreviews["" + year].push(entry)
+          } else {
+              peerreviews["" + year] = [entry]
+          }
+      })
+  })
 
-    const peerreviews = {}
-    cv['peer-review'].forEach(entry => {
-        entry.years.forEach(year => {
-            if (peerreviews.hasOwnProperty("" + year)) {
-                peerreviews["" + year].push(entry)
-            } else {
-                peerreviews["" + year] = [entry]
-            }
-        })
-    })
-
-    // add section header to first item
-    // const key1 = Object.keys(peerreviews).reverse()[0]
-    // peerreviews[key1].left = "Peer Reviewer"
-
-    return (
-      <Layout>
+  return (
+    <Layout>
       <div className="ui container print cv">
-        <PdfCVButton />
-        <h1 className="print-only">Jonas Oppenlaender</h1>
+      <div style={{float:'right', marginTop:'0.5em'}}>
+        <a title="Download cv as pdf" href="/cv/oppenlaender-cv.pdf" target="_blank">
+          <i aria-hidden="true" className="file pdf outline large icon"></i>
+        </a>
+      </div>
+      <h1 className="print-only">Jonas Oppenlaender</h1>
 
 {/**********************
         CONTACT
@@ -208,9 +171,8 @@ class CV extends React.Component {
 {/**********************
         INTERESTS
 ***********************/}
-
 <Row left="Research Interests" middle={(
-      <button onClick={this.redirectToInterests}>&rarr; &nbsp; See Interests</button>
+      <button onClick={redirectToInterests}>&rarr; &nbsp; See Interests</button>
 )}
   right=""
   stretched={false}
@@ -220,7 +182,6 @@ class CV extends React.Component {
 {/**********************
         EDUCATION
 ***********************/}
-
 {
   cv.education.map((row, i) => (
       <Row key={i} left={row.left} middle={(
@@ -231,22 +192,6 @@ class CV extends React.Component {
                     <div className="item" role="listitem"><a href={row.institution_link}>{row.institution}</a>, {row.location}</div>
                     <div className="item" role="listitem">{row.position}</div>
                     <SupervisorWrap supervisor={row.supervisor} link={row.supervisor_link} />
-                    {/*
-                      row.keywords.length > 0 && (
-                        <div className="item" role="listitem">
-                          <Label.Group>
-                          {
-                            row.keywords.sort().map(kw => <Label
-                                                            key={kw}
-                                                            color={activeTag === kw ? 'olive': null}
-                                                            size='mini'
-                                                            onClick={this.handleTagClick}
-                                                            as='a'>{kw}</Label>)
-                          }
-                          </Label.Group>
-                        </div>
-                      )
-                    */}
                   </div>
                 </div>
               </div>
@@ -259,7 +204,6 @@ class CV extends React.Component {
 {/**********************
   Research EXPERIENCE
 ***********************/}
-
 {
   cv.research_experience.map((row, i) => (
     <Row key={i} left={row.left}
@@ -291,22 +235,6 @@ class CV extends React.Component {
                       </React.Fragment>
                     )
                   }
-                  {/*
-                    row.keywords.length > 0 && (
-                      <div className="item" role="listitem">
-                        <Label.Group>
-                        {
-                          row.keywords.sort().map(kw => <Label
-                                                          key={kw}
-                                                          color={activeTag === kw ? 'olive': null}
-                                                          size='mini'
-                                                          onClick={this.handleTagClick}
-                                                          as='a'>{kw}</Label>)
-                        }
-                        </Label.Group>
-                      </div>
-                    )
-                  */}
                 </div>
               </div>
             </div>
@@ -319,7 +247,6 @@ class CV extends React.Component {
 {/**********************
      WORK EXPERIENCE
 ***********************/}
-
 {
   cv.work_experience.map((row, i) => (
     <Row key={i} left={row.left} middle={(
@@ -329,22 +256,6 @@ class CV extends React.Component {
                 <div className="ui list" role="list">
                   <div className="item" role="listitem"><a href={row.organization_link}>{row.organization}</a>, {row.location}</div>
                   <div className="item" role="listitem">{row.position}</div>
-                  {/*
-                    row.keywords.length > 0 && (
-                      <div className="item" role="listitem">
-                        <Label.Group>
-                        {
-                          row.keywords.sort().map(kw => <Label
-                                                          key={kw}
-                                                          color={activeTag === kw ? 'olive': null}
-                                                          size='mini'
-                                                          onClick={this.handleTagClick}
-                                                          as='a'>{kw}</Label>)
-                        }
-                        </Label.Group>
-                      </div>
-                    )
-                  */}
                 </div>
               </div>
             </div>
@@ -357,9 +268,8 @@ class CV extends React.Component {
 {/**********************
       PUBLICATIONS
 ***********************/}
-
 <Row left="Publications" middle={(
-      <button onClick={this.redirectToPublications}>&rarr; &nbsp; See Publications</button>
+      <button onClick={redirectToPublications}>&rarr; &nbsp; See Publications</button>
 )}
   right=""
   stretched={false}
@@ -370,7 +280,6 @@ class CV extends React.Component {
 {/**********************
          AWARDS
 ***********************/}
-
 {
   cv.awards.map((row, i) => (
     <Row key={i} left={row.left} middle={(
@@ -408,7 +317,6 @@ class CV extends React.Component {
 {/**********************
          GRANTS
 ***********************/}
-
 {
   cv.grants.map((row, i) => (
     <Row key={i} left={row.left} middle={(
@@ -447,7 +355,6 @@ class CV extends React.Component {
 {/**********************
     ACADEMIC SERVICE
 ***********************/}
-
 {
     cv.academicservice.map((row, i) => (
         <Row key={i} left={row.left} middle={(
@@ -468,7 +375,6 @@ class CV extends React.Component {
 {/**********************
    STUDENT VOLUNTEERING
 ***********************/}
-
 {
     cv.studentvolunteering.map((row, i) => (
         <Row key={i} left={row.left} middle={(
@@ -489,31 +395,12 @@ class CV extends React.Component {
 {/**********************
       PEER REVIEW
 ***********************/}
-
-{/*
-<Row left="Peer Reviewer" middle={(
-      <Item.Group>
-        <Item style={styles.nomargin}>
-          <List>
-            <div className="item" role="listitem">
-              {
-                Object.keys(peerreviews).map(year => peerreviews[year].map((item, i) => (
-                  <div key={item.series + i}><a href={item.url} title={item.title}>{item.series} {item.years.join(", ")}</a></div>
-                )))
-              }
-            </div>
-          </List>
-        </Item>
-      </Item.Group>
-)} right="" />
-*/}
-
         <Row key="pr-header" left="Peer Reviewer" middle={(
           <div className="ui items">
             <div className="item" style={styles.nomargin}>
               <div className="ui list" role="list">
                 <div className="item" role="listitem">
-                  {reviews.total} reviews in PCS
+                  {reviews?.total} reviews in PCS
                 </div>
               </div>
             </div>
@@ -545,7 +432,6 @@ class CV extends React.Component {
 {/**********************
         TEACHING
 ***********************/}
-
 {/*
 <Row left="Teaching Experience" middle={(
       <div className="ui items">
@@ -595,7 +481,6 @@ class CV extends React.Component {
 {/**********************
       SUPERVISIONS
 ***********************/}
-
 {
     cv.supervisions.map((row, i) => (
         <Row key={i} left={row.left} middle={(
@@ -616,20 +501,17 @@ class CV extends React.Component {
 {/**********************
     Technical Skills
 ***********************/}
-
 <Row left="Technical Skills" middle={(
-    <button onClick={this.redirectToPortfolio}>&rarr; &nbsp; Visit my Web Development Portfolio</button>
+    <button onClick={redirectToPortfolio}>&rarr; &nbsp; Visit my Web Development Portfolio</button>
 )}
   right=""
   stretched={false}
  />
 
 
-
 {/**********************
       CERTIFICATES
 ***********************/}
-
 <Row left="Certificates" middle={(
       <div className="ui items">
         {
@@ -649,7 +531,6 @@ class CV extends React.Component {
 {/**********************
         LANGUAGES
 ***********************/}
-
 <Row left="Languages" middle={(
       <div className="ui items">
         {
@@ -669,7 +550,6 @@ class CV extends React.Component {
 {/**********************
       ASSOCIATIONS
 ***********************/}
-
 <Row left="Memberships in Scientific Associations" middle={(
       <div className="ui items">
         {
@@ -685,13 +565,9 @@ class CV extends React.Component {
       </div>
 )} right="" />
 
-                  <div className="spacer" style={spacer}></div>
+        <div className="spacer" style={spacer}></div>
 
-              </div>
-        </Layout>
-        )
-  }
+      </div>
+    </Layout>
+  )
 }
-
-
-export default CV

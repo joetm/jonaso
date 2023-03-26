@@ -5,6 +5,7 @@ import React from "react"
 
 const TRAVEL = 'https://raw.githubusercontent.com/joetm/jonaso/master/public/travel.json'
 
+
 const Now = new Date()
 
 function processRotary(travel) {
@@ -59,20 +60,19 @@ export default function TravelRotary() {
     'running': 'bold',
     'confirmed': 'initial',
   }
+
+  const getTravel = async () => {
+    try {
+      const res = await fetch(TRAVEL)
+      const travel = await res.json()
+      updateRotary( processRotary(travel) )
+    } catch (err) {
+      console.error("Error fetching travel.json")
+    }
+  }
+
   React.useEffect(() => {
-    fetch(TRAVEL)
-    .then(response => response.json())
-    .then(travel => {
-      if (travel.length) {
-        const rotary = processRotary(travel)
-        updateRotary(rotary)
-      } else {
-        return []
-      }
-    })
-    .catch(() => {
-        console.error("Error fetching travel.json")
-    })
+    getTravel()
   }, [])
 
   if (!rotary.length) return null

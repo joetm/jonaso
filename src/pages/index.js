@@ -1,12 +1,12 @@
 "use client"
 
+import 'semantic-ui-css/components/comment.min.css'
 import 'semantic-ui-css/components/grid.min.css'
 import 'semantic-ui-css/components/icon.min.css'
-import 'semantic-ui-css/components/comment.min.css'
 import "../../libs/academicons/css/academicons.min.css"
 
-import React from "react"
 import { Link } from "gatsby"
+import React from "react"
 import { Seo } from "../components/Seo"
 
 import img from "../img/Jonas-Oppenlaender-500x500.jpg"
@@ -16,8 +16,7 @@ import LINKEDIN from "../img/linkedin.png"
 // import WIKIDATA from "../img/wikidata.png"
 import Layout from "../components/layout"
 // import { nobottommargin } from "../common"
-
-// import TravelRotary from "../components/TravelRotary"
+import TravelRotary from "../components/TravelRotary"
 
 
 const styles = {
@@ -165,11 +164,9 @@ export default function Home() {
                   &nbsp;|&nbsp;
                   Professional <a href="/cv/resume.pdf">Resume</a>
               </p>
-              {/*
               <aside style={{marginTop:'2em'}}>
                 <TravelRotary />
               </aside>
-              */}
             </div>
           </div>
         </div>

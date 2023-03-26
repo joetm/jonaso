@@ -19,8 +19,14 @@ const styles = {
       marginLeft: 0,
     },
 }
-
 export default styles
+
+export const priocolors = {
+  '3': 'red',
+  '2': 'orange',
+  '1': 'brown',
+  '0': 'black',
+}
 
 export function sortByKey(array, key) {
     return array.sort(function(a, b) {
