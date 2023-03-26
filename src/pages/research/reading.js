@@ -1,17 +1,15 @@
 "use client"
 
-/*
-  DEV: this is supposed to become an up-to-date reading list synced from my PC
-*/
 import 'semantic-ui-css/components/loader.min.css'
 import "semantic-ui-css/components/table.min.css"
 
 import React from "react"
-import { spacer } from "../../common"
+import 'semantic-ui-css/components/loader.min.css'
+import "semantic-ui-css/components/table.min.css"
+import { priocolors, spacer } from "../../common"
 import Layout from "../../components/layout"
 import PubGraph from "../../components/PubGraph.js"
 import { Seo } from "../../components/Seo"
-import { priocolors } from "../../common"
 
 
 const _LIST_URL = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/readlist-latest.json'
@@ -27,10 +25,8 @@ const styles = {
     fontWeight: 'normal',
     fontSize: '0.6em',
     textAlign: 'right',
-  }
+  },
 }
-
-const zeroPadding = v => (v < 10 ? '0' : '') + v
 
 
 export function Head() {
@@ -41,55 +37,39 @@ export function Head() {
   ) //
 }
 
-function getKeywords(doc) {
-  let kwfirst = ''
-  let kwlast = ''
-  if (doc.keywords) {
-    if (typeof doc.keywords === 'string') {
-      doc.keywords = doc.keywords.split('>')
-    }
-    kwfirst = doc.keywords[0].trim()
-    kwlast = doc.keywords[doc.keywords.length - 1].trim()
-  }
-  return [ kwfirst, kwlast ]
-}
 
-function makeEtAl(authors) {
-  if (authors.length > 2) {
-    return authors[0] + ' et al.'
-  }
-  return authors.join(', ')
-}
+export default function ReadingList() {
 
+  const [documents, setDocuments] = React.useState([])
+  const [isLoading, setIsLoading] = React.useState(true)
+  const [modified, setModified] = React.useState('loading')
+  const [unrecognized_overall, setUnrecognized_overall] = React.useState()
+  const [unrecognized_overall_percent, setUnrecognized_overall_percent] = React.useState()
+  const [percents, setPercents] = React.useState([])
 
-class ReadingList extends React.Component {
-  state = {
-    documents: [],
-    isLoading: true,
-    modified: 'loading',
-    unrecognized_overall: undefined,
-    unrecognized_overall_percent: undefined,
-  }
-  componentDidMount = () => {
-    // get reading list
-    fetch(_LIST_URL)
-    .then(response => {
-      if (response.status >= 400) {
-        throw new Error("Bad response from server")
+  const zeroPadding = v => (v < 10 ? '0' : '') + v
+
+  function getKeywords(doc) {
+    let kwfirst = ''
+    let kwlast = ''
+    if (doc.keywords) {
+      if (typeof doc.keywords === 'string') {
+        doc.keywords = doc.keywords.split('>')
       }
-      return response.json()
-    })
-    .then(documents => {
-      this.setState({
-        modified: this.getDate(documents.modified * 1000),
-        documents: documents.documents,
-        unrecognized_overall: documents.unrecognized_overall,
-        unrecognized_overall_percent: documents.unrecognized_overall_percent * 100,
-        isLoading: false,
-      })
-    })
+      kwfirst = doc.keywords[0].trim()
+      kwlast = doc.keywords[doc.keywords.length - 1].trim()
+    }
+    return [ kwfirst, kwlast ]
   }
-  getDate(timestamp) {
+  
+  function makeEtAl(authors) {
+    if (authors.length > 2) {
+      return authors[0] + ' et al.'
+    }
+    return authors.join(', ')
+  }
+  
+  function getDate(timestamp) {
     const d = new Date(timestamp)
     const year = d.getFullYear()
     const month = d.getMonth() + 1 // 0...11
@@ -99,80 +79,131 @@ class ReadingList extends React.Component {
     // return `${year}-${month}-${day} ${d.format("hh:mm")}`
     return `${year}-${month}-${day} ${zeroPadding(hour)}:${zeroPadding(min)}`
   }
-  render() {
-    const { isLoading, documents, modified, unrecognized_overall, unrecognized_overall_percent } = this.state
-    return (
-      <Layout>
-        <div className="ui container">
 
-            <PubGraph documents={documents} />
-
-            <h1 style={{textAlign: 'left'}}>
-              100 Recently Read Publications
-              <div style={styles.lastupdate}><span className="mobilehide">Last updated:</span> <span>{modified}</span></div>
-              <div style={styles.unrecognized}>
-                Unrecognized overall: <span>{unrecognized_overall}
-                {' '}
-                {
-                  unrecognized_overall_percent && `(${parseFloat(unrecognized_overall_percent).toPrecision(2)}%)`
-                }
-                </span>
-              </div>
-            </h1>
-
-            {
-              isLoading ?
-                <div className="ui segment">
-                  <div className="ui active transition visible inverted dimmer" style={{display: 'flex !important'}}>
-                    <div className="ui inverted text loader">Loading</div>
-                  </div>
-                </div>
-                :
-                <table className="ui compact small stackable striped table" style={{fontSize:'.9rem'}}>
-                  <thead>
-                    <tr>
-                      <th className="left aligned">Title</th>
-                      <th className="left aligned" style={{maxWidth:'350px'}}>Author(s)</th>
-                      <th className="mobilehide collapsing center aligned">Year</th>
-                      <th className="collapsing">Keywords</th>
-                      <th className="mobilehide center aligned" title="Relevance to my past or current research OR importance to the respective field">Relevance/<br />Importance</th>
-                      <th className="mobilehide">Read</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {
-                        documents.map((doc, idx) => {
-                          let [ kwfirst, kwlast ] = getKeywords(doc)
-                          return (
-                            <tr key={`doc${idx}`}>
-                              <td className="left aligned" style={{wordBreak:'break-all'}}>{doc.title}</td>
-                              <td className="single line left aligned" style={{wordBreak:'break-all',maxWidth:'250px'}}>{makeEtAl(doc.authors)}</td>
-                              <td className="left aligned mobilehide">{doc.year}</td>
-                              <td className="left aligned">
-                                {
-                                  kwfirst === kwlast ?
-                                    <span class="ui mini basic blue label">{kwfirst}</span> :
-                                    <><span class="ui mini basic blue label">{kwfirst}</span>&gt;<span class="ui mini basic label">{kwlast}</span></>
-                                }
-                              </td>
-                              <td className="center aligned mobilehide">
-                                <span class={`ui ${priocolors[doc.priority]} circular label docprio`}>{doc.priority}</span>
-                              </td>
-                              <td className="left aligned mobilehide">{this.getDate(doc.modified * 1000)}</td>
-                            </tr>
-                          )
-                        })
-                    }
-                  </tbody>
-                </table>
-            }
-
-            <div style={spacer}></div>
-
-        </div>
-      </Layout>
-    )
+  function getKWPercents(docs) {
+    const percs = {}
+    const kwfirsts = docs.map(doc => {
+      let f = getKeywords(doc)[0]
+      return f
+    })
+    kwfirsts.forEach(kw => {
+      percs[kw] = percs[kw] ? percs[kw] + 1 / kwfirsts.length : 1 / kwfirsts.length
+    })
+    let keys = Object.keys(percs)
+    keys.sort((a, b) => percs[b] - percs[a])
+    const out = []
+    keys.forEach(kw => {
+      out.push([kw, parseFloat((percs[kw] * 100).toPrecision(1))])
+    })
+    setPercents(out)
   }
-}
 
-export default ReadingList
+  async function getDocs() {
+    try {
+      const res = await fetch(_LIST_URL)
+      const docs = await res.json()
+      setDocuments(docs.documents)
+      setModified(getDate(docs.modified * 1000))
+      setUnrecognized_overall(docs.unrecognized_overall)
+      setUnrecognized_overall_percent(docs.unrecognized_overall_percent * 100)
+      setIsLoading(false)
+      getKWPercents(docs.documents)
+    } catch (err) {
+      console.error("Error fetching reading list")
+    }
+  }
+
+  React.useEffect(() => {
+    getDocs()
+  }, [getDocs])
+
+
+  return (
+    <Layout>
+      <div className="ui container">
+
+          <PubGraph documents={documents} />
+
+          <h1 style={{textAlign: 'left'}}>
+            100 Recently Read Publications
+            <div style={styles.lastupdate}><span className="mobilehide">Last updated:</span> <span>{modified}</span></div>
+            <div style={styles.unrecognized}>
+              Unrecognized overall: <span>{unrecognized_overall}
+              {' '}
+              {
+                unrecognized_overall_percent && `(${parseFloat(unrecognized_overall_percent).toPrecision(2)}%)`
+              }
+              </span>
+            </div>
+          </h1>
+
+          {
+            isLoading &&
+              <div className="ui segment">
+                <div className="ui active transition visible inverted dimmer" style={{display: 'flex !important'}}>
+                  <div className="ui inverted text loader">Loading</div>
+                </div>
+              </div>
+          }
+
+          <div className="ui segment">
+            {
+              percents.map((kw, idx) => {
+                return (
+                  <div key={`kw${idx}`} style={{display:'inline-block', marginRight: '1rem'}}>
+                    <span className="ui basic blue label">{kw[0]}</span>
+                    {' '}
+                    {kw[1]}%
+                  </div>
+                )
+              })
+            }
+          </div>
+
+          {
+            documents.length &&
+              <table className="ui compact small stackable striped table" style={{fontSize:'.9rem'}}>
+                <thead>
+                  <tr>
+                    <th className="left aligned">Title</th>
+                    <th className="left aligned" style={{maxWidth:'350px'}}>Author(s)</th>
+                    <th className="mobilehide collapsing center aligned">Year</th>
+                    <th className="collapsing">Keywords</th>
+                    <th className="mobilehide center aligned" title="Relevance to my past or current research OR importance to the respective field">Relevance/<br />Importance</th>
+                    <th className="mobilehide">Read</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {
+                      documents.map((doc, idx) => {
+                        let [ kwfirst, kwlast ] = getKeywords(doc)
+                        return (
+                          <tr key={`doc${idx}`}>
+                            <td className="left aligned" style={{wordBreak:'break-all'}}>{doc.title}</td>
+                            <td className="single line left aligned" style={{wordBreak:'break-all',maxWidth:'250px'}}>{makeEtAl(doc.authors)}</td>
+                            <td className="left aligned mobilehide">{doc.year}</td>
+                            <td className="left aligned">
+                              {
+                                kwfirst === kwlast ?
+                                  <span className="ui mini basic blue label">{kwfirst}</span> :
+                                  <><span className="ui mini basic blue label">{kwfirst}</span>&gt;<span className="ui mini basic label">{kwlast}</span></>
+                              }
+                            </td>
+                            <td className="center aligned mobilehide">
+                              <span className={`ui ${priocolors[doc.priority]} circular label docprio`}>{doc.priority}</span>
+                            </td>
+                            <td className="left aligned mobilehide">{getDate(doc.modified * 1000)}</td>
+                          </tr>
+                        )
+                      })
+                  }
+                </tbody>
+              </table>
+          }
+
+          <div style={spacer}></div>
+
+      </div>
+    </Layout>
+  )
+}
