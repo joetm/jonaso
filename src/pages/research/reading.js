@@ -4,13 +4,14 @@
   DEV: this is supposed to become an up-to-date reading list synced from my PC
 */
 import 'semantic-ui-css/components/loader.min.css'
-// import "semantic-ui-css/components/table.css"
+import "semantic-ui-css/components/table.min.css"
 
 import React from "react"
+import { spacer } from "../../common"
 import Layout from "../../components/layout"
 import PubGraph from "../../components/PubGraph.js"
-import { spacer } from "../../common"
 import { Seo } from "../../components/Seo"
+import { priocolors } from "../../common"
 
 
 const _LIST_URL = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/readlist-latest.json'
@@ -34,13 +35,32 @@ const zeroPadding = v => (v < 10 ? '0' : '') + v
 
 export function Head() {
   return (
-    <Seo
-      title="Reading // jonaso.de"
-    >
+    <Seo title="Reading // jonaso.de">
       <link id="canonical" rel="canonical" href="https://www.jonaso.de/reading/" />
     </Seo>
   ) //
 }
+
+function getKeywords(doc) {
+  let kwfirst = ''
+  let kwlast = ''
+  if (doc.keywords) {
+    if (typeof doc.keywords === 'string') {
+      doc.keywords = doc.keywords.split('>')
+    }
+    kwfirst = doc.keywords[0].trim()
+    kwlast = doc.keywords[doc.keywords.length - 1].trim()
+  }
+  return [ kwfirst, kwlast ]
+}
+
+function makeEtAl(authors) {
+  if (authors.length > 2) {
+    return authors[0] + ' et al.'
+  }
+  return authors.join(', ')
+}
+
 
 class ReadingList extends React.Component {
   state = {
@@ -101,37 +121,43 @@ class ReadingList extends React.Component {
             </h1>
 
             {
-              isLoading &&
+              isLoading ?
                 <div className="ui segment">
                   <div className="ui active transition visible inverted dimmer" style={{display: 'flex !important'}}>
                     <div className="ui inverted text loader">Loading</div>
                   </div>
                 </div>
-            }
-
-            {
-              documents &&
-                <table className="ui small stackable striped padded table">
+                :
+                <table className="ui compact small stackable striped table" style={{fontSize:'.9rem'}}>
                   <thead>
                     <tr>
-                      <th>Title</th>
-                      <th style={{maxWidth:'450px'}}>Author(s)</th>
-                      <th className="mobilehide collapsing">Year</th>
+                      <th className="left aligned">Title</th>
+                      <th className="left aligned" style={{maxWidth:'350px'}}>Author(s)</th>
+                      <th className="mobilehide collapsing center aligned">Year</th>
                       <th className="collapsing">Keywords</th>
-                      <th className="mobilehide" title="Relevance to my past or current research OR importance to the respective field">Relevance/<br />Importance</th>
+                      <th className="mobilehide center aligned" title="Relevance to my past or current research OR importance to the respective field">Relevance/<br />Importance</th>
                       <th className="mobilehide">Read</th>
                     </tr>
                   </thead>
                   <tbody>
                     {
                         documents.map((doc, idx) => {
+                          let [ kwfirst, kwlast ] = getKeywords(doc)
                           return (
-                            <tr key={`id_${idx}`}>
+                            <tr key={`doc${idx}`}>
                               <td className="left aligned" style={{wordBreak:'break-all'}}>{doc.title}</td>
-                              <td className="single line left aligned" style={{wordBreak:'break-all',maxWidth:'450px'}}>{doc.authors.join(', ')}</td>
+                              <td className="single line left aligned" style={{wordBreak:'break-all',maxWidth:'250px'}}>{makeEtAl(doc.authors)}</td>
                               <td className="left aligned mobilehide">{doc.year}</td>
-                              <td className="left aligned">{doc.keywords}</td>
-                              <td className="center aligned mobilehide">{doc.priority}</td>
+                              <td className="left aligned">
+                                {
+                                  kwfirst === kwlast ?
+                                    <span class="ui mini basic blue label">{kwfirst}</span> :
+                                    <><span class="ui mini basic blue label">{kwfirst}</span>&gt;<span class="ui mini basic label">{kwlast}</span></>
+                                }
+                              </td>
+                              <td className="center aligned mobilehide">
+                                <span class={`ui ${priocolors[doc.priority]} circular label docprio`}>{doc.priority}</span>
+                              </td>
                               <td className="left aligned mobilehide">{this.getDate(doc.modified * 1000)}</td>
                             </tr>
                           )

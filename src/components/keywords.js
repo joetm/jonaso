@@ -1,8 +1,8 @@
 "use client"
 
 import React from "react"
+import { Bar, BarChart, CartesianGrid, LabelList, ResponsiveContainer, XAxis, YAxis } from 'recharts'
 import 'semantic-ui-css/components/button.min.css'
-import { ResponsiveContainer, LabelList, BarChart, Bar, XAxis, YAxis, CartesianGrid } from 'recharts'
 
 
 const HEIGHT = 1750

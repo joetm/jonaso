@@ -1,8 +1,7 @@
 "use client"
 
-import React from "react"
-import { Title, Link, Meta } from "react-head"
 import { navigate } from 'gatsby'
+import React from "react"
 
 
 export default function ArtHeader({generator, byline, totalCount}) {

@@ -1,6 +1,6 @@
 import React from "react"
-import { Container } from 'semantic-ui-react'
 import TagCloud from 'react-tag-cloud'
+import { Container } from 'semantic-ui-react'
 // import randomColor from 'randomcolor'
 
 

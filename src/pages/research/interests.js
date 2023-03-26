@@ -1,12 +1,12 @@
 "use client"
 
 import React from "react"
+import { Button } from 'semantic-ui-react'
+import { spacer } from "../../common"
+import GraphSwitcher from "../../components/GraphSwitcher"
 import Keywords from "../../components/keywords"
 import Layout from "../../components/layout"
-import GraphSwitcher from "../../components/GraphSwitcher"
 import { Seo } from "../../components/Seo"
-import { spacer } from "../../common"
-import { Button } from 'semantic-ui-react'
 
 const _KEYWORDS = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/keywords.json'
 

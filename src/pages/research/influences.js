@@ -3,12 +3,11 @@
 import "../../components/influencer.css"
 
 import React from "react"
+import { sortByKey, spacer } from "../../common"
+import AuthorList from "../../components/influencer"
 import Loading from "../../components/influencerLoading"
 import Layout from "../../components/layout"
 import { Seo } from "../../components/Seo"
-import { sortByKey } from "../../common"
-import { spacer } from "../../common"
-import AuthorList from "../../components/influencer"
 
 export const isProd = process.env.NODE_ENV !== "development"
 
@@ -26,7 +25,7 @@ export function Head() {
 }
 
 
-class Influencers extends React.Component {
+export default class Influencers extends React.Component {
   state = {
     influencer: [],
     isLoading: true,
@@ -108,5 +107,3 @@ class Influencers extends React.Component {
     )
   }
 }
-
-export default Influencers

@@ -2,11 +2,11 @@
 
 import React from "react"
 // import { navigate } from 'gatsby'
-import Layout from "../../../components/layout"
+import { spacer } from "../../../common"
 import KeywordCloud from '../../../components/cloud'
 import GraphSwitcher from "../../../components/GraphSwitcher"
+import Layout from "../../../components/layout"
 import { Seo } from "../../../components/Seo"
-import { spacer } from "../../../common"
 
 
 const _KEYWORDS = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/keywords.json'

@@ -1,10 +1,10 @@
 "use client"
 
-import 'semantic-ui-css/components/label.min.css'
 import 'semantic-ui-css/components/checkbox.min.css'
+import 'semantic-ui-css/components/label.min.css'
 
-import React from "react"
 import md5 from "md5"
+import React from "react"
 import Sidebar from "./AuthorListSidebar"
 
 
@@ -183,7 +183,7 @@ class AuthorList extends React.Component {
           list.map((author, index) => {
             if (author.name === 'Jonas Oppenlaender') {
               // labelColor = 'grey'
-              return (<></>) //
+              return (<React.Fragment key={`${index}_${author.id}`}></React.Fragment>) //
             }
             // label color
             let labelColor = null

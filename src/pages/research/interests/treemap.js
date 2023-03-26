@@ -3,11 +3,11 @@
 import 'semantic-ui-css/components/button.min.css'
 
 import React from "react"
-import { Button } from 'semantic-ui-react'
 import { ResponsiveContainer, Treemap } from 'recharts'
+import { Button } from 'semantic-ui-react'
 import { spacer } from "../../../common"
-import Layout from "../../../components/layout"
 import GraphSwitcher from "../../../components/GraphSwitcher"
+import Layout from "../../../components/layout"
 import { Seo } from "../../../components/Seo"
 
 

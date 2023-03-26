@@ -1,12 +1,11 @@
-import 'semantic-ui-css/components/label.min.css'
 import 'semantic-ui-css/components/checkbox.min.css'
-import 'semantic-ui-css/components/sidebar.min.css'
+import 'semantic-ui-css/components/label.min.css'
 import 'semantic-ui-css/components/segment.min.css'
+import 'semantic-ui-css/components/sidebar.min.css'
 
 import React from "react"
-import { Label, Checkbox } from 'semantic-ui-react'
-import { sortByKey } from "../common"
-
+import { Checkbox, Label } from 'semantic-ui-react'
+import { sortByKey, priocolors } from "../common"
 
 const styles = {
   label: {
@@ -89,12 +88,6 @@ export default function DetailContainer({authorid, details, keywordClick, active
      return roundInt(v/doctotal * 100)
   });
 
-  const priocolors = {
-    '3': 'red',
-    '2': 'orange',
-    '1': 'brown',
-    '0': 'black',
-  }
   const ratios = []
   Object.keys(priocolors).reverse().forEach(k => {
     ratios.push(<span class={`ui ${priocolors[k]} label`}>{priocount[k]}%</span>)
@@ -106,7 +99,7 @@ export default function DetailContainer({authorid, details, keywordClick, active
       )) //
 
   return (
-    <div className="ui right visible wide sidebar" key={`a-a${authorid}`}>
+    <div className="ui right visible wide sidebar" key={`a-a${authorid}`} style={{backgroundColor: 'inherit'}}>
       <h2 className="ui header" style={{marginTop:'1rem'}}>Author details</h2>
       {
         orcid && <div style={{textAlign:'center'}}>{orcid}</div>
