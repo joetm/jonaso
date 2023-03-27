@@ -11,6 +11,10 @@ import Layout from "../components/layout"
 import { Seo } from "../components/Seo"
 
 import cv from "../cv.json"
+import pcsreviews from "../../stat_aggregator/peer-reviews.json"
+
+const _PORTFOLIO_URL = '/portfolio/'
+// const _PEERREVIEWS_URL = 'https://raw.githubusercontent.com/joetm/jonaso/master/stat_aggregator/peer-reviews.json'
 
 // headlines
 cv.education[0].left = "Education"
@@ -22,10 +26,6 @@ cv.academicservice[0].left = "Academic Service"
 cv.studentvolunteering[0].left = "Student Volunteering"
 cv.supervisions[0].left = "Student Supervisions"
 cv.teaching[0].left = "Teaching"
-
-
-const _PORTFOLIO_URL = '/portfolio/'
-const _PEERREVIEWS_URL = 'https://raw.githubusercontent.com/joetm/jonaso/master/stat_aggregator/peer-reviews.json'
 
 
 const styles = {
@@ -98,7 +98,6 @@ const Row = ({left, middle, right, stretched = true}) => {
 
 
 export default function CV() {
-  const [reviews, setReviews] = React.useState({total: 0})
   function redirectToPortfolio() {window.location = _PORTFOLIO_URL}
   function redirectToPublications() {navigate("/publications")} // window.location = '/publications/'
   function redirectToInterests() {navigate("/research/interests")} // window.location = '/research/interests/'
@@ -106,14 +105,16 @@ export default function CV() {
     if (row.hasOwnProperty('year')) { return row.year }
     return row.end === null ? "since " + row.start : row.start + " - " + row.end
   }
-  async function getPeerReviews() {
-    const res = await fetch(_PEERREVIEWS_URL)
-    const reviews = await res.json()
-    setReviews(reviews)
-  }
-  React.useEffect(() => {
-    getPeerReviews()
-  }, [])
+
+  // const [pcsreviews, setPCSReviews] = React.useState({total: 0})
+  // async function getPeerReviews() {
+  //   const res = await fetch(_PEERREVIEWS_URL)
+  //   const rev = await res.json()
+  //   setPCSReviews(rev)
+  // }
+  // React.useEffect(() => {
+  //   getPeerReviews()
+  // }, [])
 
   const peerreviews = {}
   cv['peer-review'].forEach(entry => {
@@ -400,7 +401,7 @@ export default function CV() {
             <div className="item" style={styles.nomargin}>
               <div className="ui list" role="list">
                 <div className="item" role="listitem">
-                  {reviews?.total} reviews in PCS
+                  {pcsreviews?.total} reviews in PCS
                 </div>
               </div>
             </div>
