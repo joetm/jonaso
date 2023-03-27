@@ -23,6 +23,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+
+FILTERPRIO = 3
+
+
 class Breaker(Exception):
     pass
 
@@ -38,14 +42,16 @@ def main():
 
   random.shuffle(authors)
 
-  FILTERPRIO = 3
-
   authors = [a for a in authors if a['priority'] >= FILTERPRIO]
 
   total = len(authors)
   progress = 0
 
   print(f"{total} authors with prio {FILTERPRIO}")
+
+  options = Options()
+  # options.headless = True
+  options.add_argument("-headless")
 
   for author in authors:
 
@@ -94,9 +100,6 @@ def main():
         URL = f"{BASE_URL}%22{title}%22"
         # print(f'Requesting: {URL}')
 
-        options = Options()
-        # options.headless = True
-        options.add_argument("-headless")
         driver = webdriver.Firefox(options=options) # executable_path=r'C:\Utility\BrowserDrivers\geckodriver.exe'
         driver.get(URL)
 
@@ -158,7 +161,6 @@ def main():
 
             # break out of all for loops
             raise Breaker
-
 
     except Breaker:
       # print('breaker success')
