@@ -3,7 +3,7 @@
 import 'semantic-ui-css/components/loader.min.css'
 import "semantic-ui-css/components/table.min.css"
 
-import React from "react"
+import React, { useState, useEffect } from "react"
 import 'semantic-ui-css/components/loader.min.css'
 import "semantic-ui-css/components/table.min.css"
 import { priocolors, spacer } from "../../common"
@@ -40,12 +40,12 @@ export function Head() {
 
 export default function ReadingList() {
 
-  const [documents, setDocuments] = React.useState([])
-  const [isLoading, setIsLoading] = React.useState(true)
-  const [modified, setModified] = React.useState('loading')
-  const [unrecognized_overall, setUnrecognized_overall] = React.useState()
-  const [unrecognized_overall_percent, setUnrecognized_overall_percent] = React.useState()
-  const [percents, setPercents] = React.useState([])
+  const [documents, setDocuments] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
+  const [modified, setModified] = useState('loading')
+  const [unrecognized_overall, setUnrecognized_overall] = useState()
+  const [unrecognized_overall_percent, setUnrecognized_overall_percent] = useState()
+  const [percents, setPercents] = useState([])
 
   const zeroPadding = v => (v < 10 ? '0' : '') + v
 
@@ -113,9 +113,9 @@ export default function ReadingList() {
     }
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     getDocs()
-  }, [getDocs])
+  }, [])
 
 
   return (
