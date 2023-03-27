@@ -73,7 +73,7 @@ def main():
 
     try:
 
-      print(f"Querying: {author['name']}")
+      print(f"Querying: {author['name']} ({uid})")
 
       # name = HumanName(unicode(sys.argv[1], 'utf-8'))
       n = HumanName(str(author['name']).encode('utf-8'))
@@ -161,6 +161,13 @@ def main():
 
             # break out of all for loops
             raise Breaker
+
+      # write cache to prevent re-querying
+      cached_id = f"../reading_list/orcids/{uid}.json"
+      if not os.path.exists(cached_id):
+        with open(cached_id, 'w') as f:
+          json.dump({}, f)
+
 
     except Breaker:
       # print('breaker success')

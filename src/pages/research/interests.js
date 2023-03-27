@@ -1,7 +1,8 @@
 "use client"
 
+import "semantic-ui-css/components/button.min.css"
+
 import React from "react"
-import { Button } from 'semantic-ui-react'
 import { spacer } from "../../common"
 import GraphSwitcher from "../../components/GraphSwitcher"
 import Keywords from "../../components/keywords"
@@ -55,7 +56,7 @@ class Interests extends React.Component { //
                 isZoomed &&
                   <div style={{float:'right', fontSize: 'initial', marginRight:'1em'}}>
                     <span style={{marginRight: '1em'}}>{breadcrumb}</span>
-                    <Button circular onClick={() => this.zoom(false)} icon='left arrow' />
+                    <i aria-hidden="true" onClick={() => this.zoom(false)} className="left circular arrow icon"></i>
                   </div>
               }
           </div>

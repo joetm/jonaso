@@ -4,7 +4,6 @@ import 'semantic-ui-css/components/button.min.css'
 
 import React from "react"
 import { ResponsiveContainer, Treemap } from 'recharts'
-import { Button } from 'semantic-ui-react'
 import { spacer } from "../../../common"
 import GraphSwitcher from "../../../components/GraphSwitcher"
 import Layout from "../../../components/layout"
@@ -98,7 +97,7 @@ class TreeComponent extends React.Component {
             isZoomed &&
               <div style={{float: 'right', marginRight: '1em'}}>
                 <span style={{marginRight: '1em'}}>{breadcrumb}</span>
-                <Button circular onClick={this.zoomOut} icon='left arrow' />
+                <i aria-hidden="true" onClick={this.zoomOut} className="left circular arrow icon"></i>
               </div>
           }
 

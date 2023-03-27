@@ -2,7 +2,7 @@
 
 import 'semantic-ui-css/components/dropdown.min.css'
 
-import React from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { spacer } from "../../common"
 import Layout from "../../components/layout"
 import { Seo } from "../../components/Seo"
@@ -14,8 +14,8 @@ import loadable from '@loadable/component'
 const ForceGraph2D = loadable(() => import('react-force-graph-2d'))
 
 
-// const _PUBLICATIONS = 'https://raw.githubusercontent.com/joetm/jonaso/master/public/static/publications.json'
-const _PUBLICATIONS = '/static/publications.json'
+const _PUBLICATIONS = 'https://raw.githubusercontent.com/joetm/jonaso/master/public/static/publications.json'
+// const _PUBLICATIONS = '/static/publications.json'
 
 
 export function Head() {
@@ -36,23 +36,17 @@ function buildAuthorname(a) {
 }
 
 
-class CollaborationNetwork extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      nodes: [],
-      edges: [],
-      mincollabs: 1,
-      isLoading: true,
-    }
-    this.gContainer = React.createRef()
-  }
-  componentDidMount = () => {
+export default function CollaborationNetwork() {
+  const [nodes, setNodes] = useState([])
+  const [edges, setEdges] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
+  const [mincollabs, setMincollabs] = useState(1)
+  const gContainer = useRef(null)
+
+  useEffect(() => {
     fetch(_PUBLICATIONS)
     .then(response => {
-      if (response.status >= 400) {
-        throw new Error("Bad response from server")
-      }
+      if (response.status >= 400) { throw new Error("Bad response from server") }
       return response.json()
     })
     .then(publications => {
@@ -68,9 +62,7 @@ class CollaborationNetwork extends React.Component {
             // NODES
             if (!uniquenodes[authorname]) {
               let group = 2
-              if (authorname === _self) {
-                group = 1
-              }
+              if (authorname === _self) { group = 1 }
               uniquenodes[authorname] = { id: authorname, group }
             }
             // EDGES
@@ -97,25 +89,24 @@ class CollaborationNetwork extends React.Component {
       })
       Object.keys(uniqueedges).forEach(key => {
         // only add unidirectional edges
-        // const [source, target] = key.split('-')
-        // if (!uniqueedges[target + '-' + source]) {
-          edges.push(uniqueedges[key])
-        // }
+        edges.push(uniqueedges[key])
       })
-      this.setState({ nodes, edges, isLoading: false })
+      setNodes(nodes)
+      setEdges(edges)
+      setIsLoading(false)
     })
-  }
-  changeFilter = (e) => {
-    this.setState({ mincollabs: e.target.value })
-  }
-  render() {
-    const { nodes, edges, mincollabs, isLoading } = this.state
-    const graph = {
-      nodes,
-      links: edges.filter(e => e.val >= mincollabs),
-    }
+  }, [])
 
-    return (
+  function changeFilter(e) {
+    setMincollabs(e.target.value)
+  }
+
+  const graph = {
+    nodes,
+    links: edges.filter(e => e.val >= mincollabs),
+  }
+
+  return (
       <Layout>
         <div className="ui container">
           <h2 style={{float:'left', display:'inline-block'}}>
@@ -124,7 +115,7 @@ class CollaborationNetwork extends React.Component {
           </h2>
           <div style={{float:'right'}}>
             # publications: {' '}
-            <select className="ui inline compact selection dropdown" onChange={this.changeFilter}>
+            <select className="ui inline compact selection dropdown" onChange={changeFilter}>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -132,21 +123,18 @@ class CollaborationNetwork extends React.Component {
               <option value="5">5</option>
             </select>
           </div>
-          <div
-            style={{clear:'both'}}
-            ref={(ref) => this.gContainer = ref}
-          >
+          <div style={{clear:'both'}} ref={(ref) => gContainer.current = ref}>
 
             <ForceGraph2D
               graphData={graph}
-              width={this.gContainer.offsetWidth}
+              width={gContainer?.current?.offsetWidth}
               height={600}
               backgroundColor="#FAFAFA"
               nodeAutoColorBy="group"
               linkWidth="val"
               nodeCanvasObject={(node, ctx, globalScale) => {
                 const label = node.id
-                const fontSize = 12/globalScale
+                const fontSize = 12 / globalScale
                 ctx.font = `${fontSize}px sans-serif`
                 const textWidth = ctx.measureText(label).width
                 const bckgDimensions = [textWidth, fontSize].map(n => n + fontSize * 0.2) // some padding
@@ -170,8 +158,5 @@ class CollaborationNetwork extends React.Component {
           <div style={spacer}></div>
         </div>
       </Layout>
-    )
-  }
+  )
 }
-
-export default CollaborationNetwork

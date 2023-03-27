@@ -7,8 +7,6 @@ import 'semantic-ui-css/components/item.min.css'
 
 import React from "react"
 import { Bar, BarChart, CartesianGrid, LabelList, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
-import Button from 'semantic-ui-react/dist/es/elements/Button/Button.js'
-import Icon from 'semantic-ui-react/dist/es/elements/Icon/Icon.js'
 // import useDetectPrint from 'use-detect-print'
 import { noMarginGrid, spacer } from "../common"
 import Layout from "../components/layout"
@@ -77,29 +75,6 @@ function categorizeListPerYear(pubList) {
 } //
 
 
-const PdfPubsButton = () => (
-  <div style={{float:'right',marginTop:'0.5em'}}>
-    <a title="Download publications as pdf" href="/cv/oppenlaender-publications.pdf" target="_blank">
-      <Icon size='large' name='file pdf outline' />
-    </a>
-  </div>
-) //
-
-const SwitchBtn = ({active, switchPubView}) => (
-  <div className="ui buttons">
-    <Button disabled={!active} positive={!active}
-      onClick={switchPubView}
-      title="Publications per year"
-    >YEAR</Button>
-    <div className="or"></div>
-    <Button disabled={active} positive={active}
-      onClick={switchPubView}
-      title="Publications per type"
-    >TYPE</Button>
-  </div>
-)
-
-
 class Publications extends React.Component {
   state = {
     references: {},
@@ -165,6 +140,7 @@ class Publications extends React.Component {
     // keysType.sort() // sort alphabetically
 
     const typeIsActive = showing === 'type'
+    console.log('typeIsActive', typeIsActive)
 
     // custom sort order
     let customSortOrder = []
@@ -205,11 +181,32 @@ class Publications extends React.Component {
         </ResponsiveContainer>
 
         <div id="publicationButtons" style={styles.menu}>
-          <PdfPubsButton />
-          <SwitchBtn
-            active={typeIsActive}
-            switchPubView={this.switchPubView}
-          />
+          <div style={{float:'right',marginTop:'0.5em'}}>
+            <a title="Download publications as pdf" href="/cv/oppenlaender-publications.pdf" target="_blank">
+              <i aria-hidden="true" className="file pdf outline large icon"></i>
+            </a>
+          </div>
+
+          <div className="ui buttons">
+            <button
+              title="Publications per year"
+              className="ui button"
+              disabled={!typeIsActive}
+              positive={!typeIsActive}
+              onClick={this.switchPubView}
+            >YEAR</button>
+            <div class="or"></div>
+            <button
+              title="Publications per type"
+              className="ui button"
+              disabled=""
+              tabIndex="-1"
+              onClick={this.switchPubView}
+              disabled={typeIsActive}
+              positive={typeIsActive}
+            >TYPE</button>
+          </div>
+
         </div>
 
         <div className="ui container" id="publications-type" style={{display: typeIsActive ? 'block' : 'none'}}>
@@ -231,13 +228,13 @@ class Publications extends React.Component {
                                 <div className="two wide column">
                                   <MediaContextProvider>
                                     <Media at="sm">
-                                      <Icon color="grey" size="large" name={icostr} />
+                                      <i aria-hidden="true" className={`grey ${icostr} large icon`}></i>
                                     </Media>
                                     <Media at="md">
-                                      <Icon color="grey" size="huge" name={icostr} />
+                                      <i aria-hidden="true" className={`grey ${icostr} huge icon`}></i>
                                     </Media>
                                     <Media greaterThanOrEqual="lg">
-                                      <Icon color="grey" size="big" name={icostr} />
+                                      <i aria-hidden="true" className={`grey ${icostr} big icon`}></i>
                                     </Media>
                                     </MediaContextProvider>
                                 </div>
@@ -281,13 +278,13 @@ class Publications extends React.Component {
                                 <div className="two wide column">
                                   <MediaContextProvider>
                                     <Media at="sm">
-                                      <Icon color="grey" size="large" name={icostr} />
+                                      <i aria-hidden="true" className={`grey ${icostr} large icon`}></i>
                                     </Media>
                                     <Media at="md">
-                                      <Icon color="grey" size="huge" name={icostr} />
+                                      <i aria-hidden="true" className={`grey ${icostr} huge icon`}></i>
                                     </Media>
                                     <Media greaterThanOrEqual="lg">
-                                      <Icon color="grey" size="big" name={icostr} />
+                                      <i aria-hidden="true" className={`grey ${icostr} big icon`}></i>
                                     </Media>
                                   </MediaContextProvider>
                                 </div>
