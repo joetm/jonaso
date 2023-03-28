@@ -3,9 +3,9 @@
 import 'semantic-ui-css/components/button.min.css'
 
 import React from "react"
+import { navigate } from 'gatsby'
 import { ResponsiveContainer, Treemap } from 'recharts'
 import { spacer } from "../../../common"
-import GraphSwitcher from "../../../components/GraphSwitcher"
 import Layout from "../../../components/layout"
 import { Seo } from "../../../components/Seo"
 
@@ -90,7 +90,24 @@ class TreeComponent extends React.Component {
           <h2>
             Research Interests
             {' '}
-            <GraphSwitcher active="treemap" />
+            <div class="ui mini buttons">
+              <button className="ui active button"
+                onClick={() => navigate('/research/interests')}
+                disabled=""
+                tabIndex="-1"
+              >Bar</button>
+              <div class="or"></div>
+              <button className="ui button"
+                onClick={() => navigate('/research/interests/wordcloud')}
+                disabled=""
+                tabIndex="-1"
+              >Cloud</button>
+              <div class="or"></div>
+              <button className="ui button"
+                onClick={() => navigate('/research/interests/wordcloud')}
+                disabled={true}
+              >Tree</button>
+            </div>
           </h2>
 
           {

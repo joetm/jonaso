@@ -35,6 +35,8 @@ export function sortByKey(array, key) {
     });
 }
 
+export function joinIfNotNull(arr, sep=', ') { return arr.filter(val => val ? val : undefined).join(sep) }
+
 export const nobottommargin = styles.nobottommargin
 export const notopmargin = styles.notopmargin
 export const nobold = styles.nobold

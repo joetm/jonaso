@@ -1,7 +1,5 @@
 import React from "react"
-import { List } from 'semantic-ui-react'
-
-const joinIfNotNull = (arr, sep=', ') => arr.filter(val => val ? val : undefined).join(sep)
+import { joinIfNotNull } from '../common'
 
 
 export default function ProjectItem({item, i}) {
@@ -9,22 +7,24 @@ export default function ProjectItem({item, i}) {
   const theurl = doi ? `http://doi.org/${doi}` : url || null
   const metadata = joinIfNotNull([item.note, item.conference, item.location])
   return (
-    <List key={`projectitem_${i}`}>
-      <List.Item>
-        <List.Icon name='newspaper' />
-        <List.Content style={{textDecoration: item.status === 'canceled' ? 'line-through': 'inherit'}}>{
-          theurl ?
-            <a href={theurl}>{title}</a>
-            :
-            `${title}`
-        }
-        </List.Content>
-      </List.Item>
-      { (metadata || (month && year)) &&
-        <List.Item>
-          <List.Content>{joinIfNotNull([metadata, joinIfNotNull([month, year], ' ')])}</List.Content>
-        </List.Item>
+    <div role="list" className="ui list" key={`projectitem_${i}`}>
+      <div role="listitem" className="item">
+        <i aria-hidden="true" className="newspaper icon"></i>
+        <div className="content" style={{textDecoration: item.status === 'canceled' ? 'line-through' : 'inherit'}}>
+          {
+            theurl ?
+              <a href={theurl}>{title}</a>
+              :
+              `${title}`
+          }
+        </div>
+      </div>
+      {
+        (metadata || (month && year)) &&
+          <div role="listitem" className="item">
+            <div className="content">{joinIfNotNull([metadata, joinIfNotNull([month, year], ' ')])}</div>
+          </div>
       }
-    </List>
+    </div>
   )
 }
