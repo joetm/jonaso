@@ -1,6 +1,5 @@
 import React from "react"
 import TagCloud from 'react-tag-cloud'
-import { Container } from 'semantic-ui-react'
 // import randomColor from 'randomcolor'
 
 
@@ -12,7 +11,7 @@ export default function Cloud() {
   const baseSize = 25
   const words = keywordcloud.filter(x => x.value > 15)
   return (
-    <Container style={{marginBottom: '2em'}}>
+    <div className="ui container" style={{marginBottom: '2em'}}>
       <TagCloud 
         style={{
           fontFamily: 'sans-serif',
@@ -31,6 +30,6 @@ export default function Cloud() {
           ))
         }
       </TagCloud>
-    </Container>
+    </div>
   )
 }

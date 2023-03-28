@@ -3,8 +3,8 @@
 import "semantic-ui-css/components/button.min.css"
 
 import React from "react"
+import { navigate } from 'gatsby'
 import { spacer } from "../../common"
-import GraphSwitcher from "../../components/GraphSwitcher"
 import Keywords from "../../components/keywords"
 import Layout from "../../components/layout"
 import { Seo } from "../../components/Seo"
@@ -44,14 +44,28 @@ class Interests extends React.Component { //
   }
   render() {
     const { keywords, isZoomed, breadcrumb } = this.state
+    let active = 'interests'
     const filtered_keywords = keywords.filter(kw => kw.num > 19)
     return (
       <Layout>
         <div className="ui container">
           <div className="ui segment" style={{clear:'both', border:0, boxShadow: '0px 0px 0px #FFFFFF'}}>
               <h2 style={{float:'left', display:'inline-block', marginRight: '1rem'}}>Research Interests</h2>
-                {' '}
-                <GraphSwitcher active="interests" />
+              {' '}
+
+              <div class="ui mini buttons">
+                <button className="ui active button"
+                  onClick={() => navigate('/research/interests')}
+                  disabled={true}
+                >Bar</button>
+                <div class="or"></div>
+                <button className="ui button"
+                  onClick={() => navigate('/research/interests/wordcloud')}
+                  disabled=""
+                  tabIndex="-1"
+                >Cloud</button>
+              </div>
+
               {
                 isZoomed &&
                   <div style={{float:'right', fontSize: 'initial', marginRight:'1em'}}>

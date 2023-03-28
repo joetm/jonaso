@@ -4,7 +4,7 @@ import 'semantic-ui-css/components/segment.min.css'
 import 'semantic-ui-css/components/sidebar.min.css'
 
 import React from "react"
-import { Checkbox, Label } from 'semantic-ui-react'
+import { Checkbox } from 'semantic-ui-react'
 import { sortByKey, priocolors } from "../common"
 
 const styles = {
@@ -49,7 +49,13 @@ const Wrapper = {
           onClick={() => updateActive({activeid: null, activeAuthors: []})}
           onKeyDown={() => updateActive({activeid: null, activeAuthors: []})}
         ></i>
-        <Checkbox checked={coauthorToggleActive} onChange={() => toggleCoauthors(authorid)} label='Show co-authors' toggle />
+
+        <Checkbox
+          checked={coauthorToggleActive}
+          onChange={() => toggleCoauthors(authorid)}
+          label='Show co-authors' toggle
+        />
+
       </div>
     </div>
   ), //
@@ -71,14 +77,12 @@ export default function DetailContainer({authorid, details, keywordClick, active
   const { docs=[], keywords=[], orcid='', affiliations='' } = details
   // const kwlist = keywords.join(", ")
   const kwlist = keywords.map((kw, i) => (
-    <Label
+    <a
       style={styles.label}
-      as="a"
-      size={'mini'}
-      color={activeKeyword === kw ? 'orange' : 'teal'}
+      className={`ui ${activeKeyword === kw ? 'orange' : 'teal'} mini label`}
       onClick={(e) => keywordClick(e)}
       key={`kw${i}${authorid}${kw}`}
-    >{kw}</Label>
+    >{kw}</a>
   )) //
 
   let priocount = {'3': 0, '2': 0, '1': 0, '0': 0}
