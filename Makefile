@@ -211,11 +211,13 @@ push:
 	git commit
 	git push
 
+
+invalidate:
+	aws cloudfront create-invalidation --distribution-id E1F8XE39H6VFRU --paths "/*"
+
+
 publish:
 	# push to s3
 	aws s3 sync --delete ./public/ s3://jonaso.de
-
 	make push-portfolio
-
-	aws cloudfront create-invalidation --distribution-id E1F8XE39H6VFRU --paths "/*"
 
