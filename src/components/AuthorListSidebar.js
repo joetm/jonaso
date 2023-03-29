@@ -77,12 +77,14 @@ export default function DetailContainer({authorid, details, keywordClick, active
   const { docs=[], keywords=[], orcid='', affiliations='' } = details
   // const kwlist = keywords.join(", ")
   const kwlist = keywords.map((kw, i) => (
-    <a
+    <span
+      role="presentation"
       style={styles.label}
       className={`ui ${activeKeyword === kw ? 'orange' : 'teal'} mini label`}
-      onClick={(e) => keywordClick(e)}
+      onClick={e => keywordClick(e)}
+      onKeyDown={e => keywordClick(e)}
       key={`kw${i}${authorid}${kw}`}
-    >{kw}</a>
+    >{kw}</span>
   )) //
 
   let priocount = {'3': 0, '2': 0, '1': 0, '0': 0}
