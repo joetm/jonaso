@@ -80,7 +80,6 @@ export default function TravelRotary() {
   return (
     <>
       <strong>Travel</strong>
-      {/* / */}
       <div role="list" className="ui list" style={{marginTop: "0px"}}>
           {
             rotary.map(item => {
