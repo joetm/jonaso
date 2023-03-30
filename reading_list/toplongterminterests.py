@@ -8,9 +8,8 @@ import sys, os
 from datetime import datetime
 
 
-DAYS = 24 * 60 * 60
 filter = ['Issues', 'General, Theory', 'Research Methods', 'Applications', 'Communities, Networks']
-CUTOFF = 14
+CUTOFF = 13
 
 def convertToDate(timestamp):
   return datetime.utcfromtimestamp(timestamp).strftime('%Y-%m-%d %H:%M:%S')
@@ -42,9 +41,9 @@ print("End:", convertToDate(maxdatestamp))
 print("---")
 
 # manual binning
-interval = 30 * DAYS
+_DAYS = 24 * 60 * 60
+interval = 30 * _DAYS
 bindocs = {}
-
 for tstamp in range(mindatestamp, maxdatestamp + interval, interval):
   for d in docs:
     # identify the bin
