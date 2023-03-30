@@ -92,17 +92,30 @@ invertedlegend = dict(zip(legend.values(), legend.keys()))
 
 # re-format data for recharts graph
 # e.g., [{name: 'a', value: 12}]
-timeline = []
+timeline = {}
 for interest in top_lists:
   name = interest[0]
   key = invertedlegend[name]
   for ts in interest[1]:
-    timeline.append({f"{key}": name, 't': ts}) # convertToDate(ts)})
+    try:
+      o = timeline[ts]
+      try:
+        o[key] += 1
+      except:
+        o[key] = 1
+      timeline[ts] = o
+    except:
+      timeline[ts] = {key: 1}
+outdata = []
+for ts in timeline.keys():
+  obj = timeline[ts]
+  obj['t'] = ts
+  outdata.append(obj)
 
 # print(timeline)
 output = {
   'legend': legend,
-  'data': timeline,
+  'data': outdata,
 }
 
 with open('topkeyword-timeline.json', 'w') as f:
