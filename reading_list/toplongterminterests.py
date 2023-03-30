@@ -89,7 +89,7 @@ timeline = []
 for interest in top_lists:
   name = interest[0]
   for ts in interest[1]:
-    timeline.append({'n':name, 't': ts})
+    timeline.append({'n':name, 't': convertToDate(ts)})
 
 print(timeline)
 
