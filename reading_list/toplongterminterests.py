@@ -110,13 +110,13 @@ for ts in timeline.keys():
   obj = timeline[ts]
   obj['t'] = ts
   outdata.append(obj)
-# fill missing keys with zero
+# fill missing keys with null
 keys = legend.keys()
 for i in range(len(outdata)):
   o = outdata[i]
   for k in keys:
     if not k in o:
-      outdata[i][k] = 0
+      outdata[i][k] = None
 
 # print(timeline)
 output = {
