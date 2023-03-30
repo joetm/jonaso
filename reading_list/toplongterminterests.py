@@ -9,7 +9,8 @@ from datetime import datetime
 
 
 DAYS = 24 * 60 * 60
-
+filter = ['Issues', 'General, Theory', 'Research Methods', 'Applications', 'Communities, Networks']
+CUTOFF = 14
 
 def convertToDate(timestamp):
   return datetime.utcfromtimestamp(timestamp).strftime('%Y-%m-%d %H:%M:%S')
@@ -65,7 +66,6 @@ for tstamp in range(mindatestamp, maxdatestamp + interval, interval):
 
 # thanks, ChatGPT!
 def get_top_longest_lists(d, n):
-  filter = ['Issues', 'General, Theory']
   """
   Returns the top N longest lists from the given dictionary d, along with their corresponding keys.
   """
@@ -77,7 +77,7 @@ def get_top_longest_lists(d, n):
   return [(k, v) for k, v in top_n if k not in filter]
 
 
-top_lists = get_top_longest_lists(bindocs, 11)
+top_lists = get_top_longest_lists(bindocs, CUTOFF)
 
 legend = {}
 s = 97
@@ -111,8 +111,7 @@ for ts in timeline.keys():
   obj = timeline[ts]
   obj['t'] = ts
   outdata.append(obj)
-
-# fill missing keys
+# fill missing keys with zero
 keys = legend.keys()
 for i in range(len(outdata)):
   o = outdata[i]
