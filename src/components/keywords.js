@@ -5,7 +5,7 @@ import { Bar, BarChart, CartesianGrid, LabelList, ResponsiveContainer, XAxis, YA
 import 'semantic-ui-css/components/button.min.css'
 
 
-const HEIGHT = 1750
+const HEIGHT = 1450
 const colorDefault = '#eb008c'
 const colorZoomed = '#FF86A6'
 
@@ -70,7 +70,6 @@ class Keywords extends React.Component {
     return (
         <div className="ui container">
           <div style={{clear:'both'}}></div>
-
           <ResponsiveContainer width="100%" height={HEIGHT}>
                 <BarChart
                   layout="vertical"

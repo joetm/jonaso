@@ -1,12 +1,27 @@
 [
   {
+    "id": "PX",
+    "title": "Prompting for X",
+    "lang": "en",
+    "description": {"__html": "<p>TBA</p>"},
+    "funding": null,
+    "date": "2023-",
+    "organisation": "University of Jyväskylä",
+    "organisation_href": null,
+    "url": null,
+    "img": {
+      "src": "/img/projects/prompting-future.jpg",
+      "alt": "",
+      "title": ""
+    }
+  },
+  {
     "id": "PE",
-    "title": "Prompt Engineering",
+    "title": "Prompt Engineering and Text-to-image Generation",
     "lang": "en",
     "description": {"__html": "<p>Text-to-image generation with deep generative models has made giant leaps towards becoming a mainstream phenomenon since OpenAI's introduction of the multimodal CLIP model in 2021. This explosion of interest was facilitated by the availability of executable notebooks on Google's Colaboratory in which non-expert users can execute machine learning models for free and without deep knowledge of programming. Users on Google Colab interact with generative models via input prompts. Prompts are short texts that describe the expected end result, such as \"a beautiful painting of a landscape\". The online community that quickly emerged around this novel way of synthesizing artworks found that the quality of the generated artworks can be increased by using so-called prompt modifiers in the input prompt, such as \"trending on artstation\" or \"rendered by Unreal Engine\". 'Prompt engineering' or 'prompting' refers to the practice and skill of finding effective input prompts for a text-to-image model.</p><p>This project investigates 1) the skill and practice of prompt engineering, 2) the emerging AI art community, and 3) the specific input prompts and modifiers used in this community.</p>"},
-    "funding-OLD": "The project received funding in form of the Toloka Research grant.",
-    "funding": null,
-    "date": "2021-",
+    "funding": "The project received funding in form of a research grant by the University of Jyväskylä.",
+    "date": "2021-2023",
     "organisation": "University of Jyväskylä",
     "organisation_href": "https://www.jonaso.de/art/",
     "url": "https://www.jonaso.de/art/",

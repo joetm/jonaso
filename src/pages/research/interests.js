@@ -2,37 +2,40 @@
 
 import "semantic-ui-css/components/button.min.css"
 
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { navigate } from 'gatsby'
 import { spacer } from "../../common"
 import Keywords from "../../components/keywords"
 import Layout from "../../components/layout"
 import { Seo } from "../../components/Seo"
+import LTInterests from "../../components/longterm-interests"
+
 
 const _KEYWORDS = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/keywords.json'
+const CUTOFF = 19
 
 
 export function Head() {
+  const escape = '/'
   return (
-    <Seo title="Research Interests // jonaso.de">
+    <Seo title={`Research Interests ${escape}${escape} jonaso.de`}>
       <link id="canonical" rel="canonical" href="https://www.jonaso.de/interests/" />
     </Seo>
-  )
+  ) //
 }
 
-class Interests extends React.Component { //
-  state = {
-    keywords: [],
-    isZoomed: false,
-    breadcrumb: null,
+
+export default function Interests() {
+  const [ keywords, setKeywords ] = useState([])
+  const [ isZoomed, setIsZoomed ] = useState(false)
+  const [ breadcrumb, setBreadcrumb ] = useState(null)
+
+  function zoom(val, bc = null) {
+    setIsZoomed(val)
+    setBreadcrumb(bc)
   }
-  zoom = (val, bc = null) => {
-    this.setState({
-      isZoomed: val,
-      breadcrumb: bc,
-    })
-  }
-  componentDidMount = () => {
+
+  useEffect(() => {
     fetch(_KEYWORDS)
     .then(response => {
       if (response.status >= 400) {
@@ -40,46 +43,42 @@ class Interests extends React.Component { //
       }
       return response.json()
     })
-    .then(keywords => this.setState({ keywords }))
-  }
-  render() {
-    const { keywords, isZoomed, breadcrumb } = this.state
-    let active = 'interests'
-    const filtered_keywords = keywords.filter(kw => kw.num > 19)
-    return (
-      <Layout>
-        <div className="ui container">
-          <div className="ui segment" style={{clear:'both', border:0, boxShadow: '0px 0px 0px #FFFFFF'}}>
-              <h2 style={{float:'left', display:'inline-block', marginRight: '1rem'}}>Research Interests</h2>
-              {' '}
+    .then(keywords => setKeywords(keywords))
+  }, [])
 
-              <div class="ui mini buttons">
-                <button className="ui active button"
-                  onClick={() => navigate('/research/interests')}
-                  disabled={true}
-                >Bar</button>
-                <div class="or"></div>
-                <button className="ui button"
-                  onClick={() => navigate('/research/interests/wordcloud')}
-                  disabled=""
-                  tabIndex="-1"
-                >Cloud</button>
-              </div>
+  const filtered_keywords = keywords.filter(kw => kw.num > CUTOFF)
 
-              {
-                isZoomed &&
-                  <div style={{float:'right', fontSize: 'initial', marginRight:'1em'}}>
-                    <span style={{marginRight: '1em'}}>{breadcrumb}</span>
-                    <i aria-hidden="true" onClick={() => this.zoom(false)} className="left circular arrow icon"></i>
-                  </div>
-              }
-          </div>
-          <Keywords keywords={filtered_keywords} isZoomed={isZoomed} zoom={this.zoom} />
-          <div style={spacer}></div>
+  return (
+    <Layout>
+      <div className="ui container">
+        <div className="ui segment" style={{clear:'both', border:0, boxShadow: '0px 0px 0px #FFFFFF'}}>
+            <h2 style={{float:'left', display:'inline-block', marginRight: '1rem'}}>Research Interests</h2>
+            {' '}
+            <div className="ui mini buttons">
+              <button className="ui active button"
+                onClick={() => navigate('/research/interests')}
+                disabled={true}
+              >Bar</button>
+              <div className="or"></div>
+              <button className="ui button"
+                onClick={() => navigate('/research/interests/wordcloud')}
+                disabled=""
+                tabIndex="-1"
+              >Cloud</button>
+            </div>
+            {
+              isZoomed &&
+                <div style={{float:'right', fontSize: 'initial', marginRight:'1em'}}>
+                  <span style={{marginRight: '1em'}}>{breadcrumb}</span>
+                  <i aria-hidden="true" onClick={() => zoom(false)} className="left circular arrow icon"></i>
+                </div>
+            }
         </div>
-      </Layout>
-    )
-  }
-}
+        <LTInterests />
+        <Keywords keywords={filtered_keywords} isZoomed={isZoomed} zoom={zoom} />
+        <div style={spacer}></div>
+      </div>
+    </Layout>
+  )
 
-export default Interests
+}
