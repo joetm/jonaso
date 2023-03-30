@@ -111,6 +111,7 @@ for ts in timeline.keys():
   obj = timeline[ts]
   obj['t'] = ts
   outdata.append(obj)
+
 # fill missing keys
 keys = legend.keys()
 for i in range(len(outdata)):
@@ -123,6 +124,8 @@ for i in range(len(outdata)):
 output = {
   'legend': legend,
   'data': outdata,
+  'start': mindatestamp,
+  'end': maxdatestamp,
 }
 
 with open('topkeyword-timeline.json', 'w') as f:
