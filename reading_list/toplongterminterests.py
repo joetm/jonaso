@@ -97,7 +97,7 @@ for interest in top_lists:
   name = interest[0]
   key = invertedlegend[name]
   for ts in interest[1]:
-    timeline.append({f"{key}": name, 't': convertToDate(ts)})
+    timeline.append({f"{key}": name, 't': ts}) # convertToDate(ts)})
 
 # print(timeline)
 output = {
