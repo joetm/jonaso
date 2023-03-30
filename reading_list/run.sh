@@ -39,4 +39,3 @@ ELAPSED_TIME=$(($SECONDS - $START_TIME))
 
 echo "Finished in $(($ELAPSED_TIME/60)) min $(($ELAPSED_TIME%60)) sec"
 
-

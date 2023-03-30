@@ -3,7 +3,19 @@
 ./analyze.php
 
 # produce a flat file of influencers but with duplicates (influencer prio 1, influencer prio 2, influencer prio 3)
+print('create_allauthors')
 ./create_allauthors.py
+
+print('toplongterminterests')
+python3 toplongterminterests.py
+
+print('keywordcloud')
+python3 keywordcloud.py
+
+# print('keywordgraph')
+# python3 keywordgraph.py
+
+
 
 git add -A
 git commit -m "update influencers"
