@@ -10,6 +10,8 @@ from datetime import datetime
 
 filter = ['Issues', 'General, Theory', 'Research Methods', 'Applications', 'Communities, Networks']
 CUTOFF = 13
+INTERVAL = 90
+
 
 def convertToDate(timestamp):
   return datetime.utcfromtimestamp(timestamp).strftime('%Y-%m-%d %H:%M:%S')
@@ -42,14 +44,14 @@ print("---")
 
 # manual binning
 _DAYS = 24 * 60 * 60
-interval = 30 * _DAYS
+intv = INTERVAL * _DAYS
 bindocs = {}
-for tstamp in range(mindatestamp, maxdatestamp + interval, interval):
+for tstamp in range(mindatestamp, maxdatestamp + intv, intv):
   for d in docs:
     # identify the bin
     if d['modified'] <= tstamp:
       continue
-    if d['modified'] > tstamp + interval:
+    if d['modified'] > tstamp + intv:
       continue
     # filling the bin
     for kw in d['keywords']:
