@@ -76,24 +76,35 @@ def get_top_longest_lists(d, n):
   # Return the keys and values of the top N items as a list of tuples
   return [(k, v) for k, v in top_n if k not in filter]
 
-# Example usage:
+
 top_lists = get_top_longest_lists(bindocs, 11)
 
+legend = {}
+s = 97
+i = 0
 for interest in top_lists:
   print(interest[0], ":", len(interest[1]))
+  legend[chr(s + i)] = interest[0]
+  i += 1
 print("---")
 
-# format data for recharts graph
+invertedlegend = dict(zip(legend.values(), legend.keys()))
+
+# re-format data for recharts graph
 # e.g., [{name: 'a', value: 12}]
 timeline = []
 for interest in top_lists:
   name = interest[0]
+  key = invertedlegend[name]
   for ts in interest[1]:
-    timeline.append({'n':name, 't': convertToDate(ts)})
+    timeline.append({f"{key}": name, 't': convertToDate(ts)})
 
-print(timeline)
-
+# print(timeline)
+output = {
+  'legend': legend,
+  'data': timeline,
+}
 
 with open('topkeyword-timeline.json', 'w') as f:
-  json.dump(timeline, f)
+  json.dump(output, f)
 
