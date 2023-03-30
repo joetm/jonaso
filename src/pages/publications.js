@@ -163,9 +163,7 @@ class Publications extends React.Component {
 
         <ResponsiveContainer width="100%" height={150}>
           <BarChart data={graphdata.refsByYear}>
-            <XAxis
-              dataKey="year"
-            />
+            <XAxis dataKey="year" />
             <YAxis
               type="number"
               domain={[0, 'dataMax']}
