@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# ./analyze.php
+./analyze.php
 
 # produce a flat file of influencers but with duplicates (influencer prio 1, influencer prio 2, influencer prio 3)
 # print('create_allauthors')
@@ -13,8 +13,7 @@ python3 toplongterminterests.py
 python3 keywordcloud.py
 
 # print('keywordgraph')
-# python3 keywordgraph.py
-
+python3 keywordgraph.py
 
 
 git add -A
