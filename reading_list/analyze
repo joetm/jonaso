@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
-./analyze.php
+# ./analyze.php
 
 # produce a flat file of influencers but with duplicates (influencer prio 1, influencer prio 2, influencer prio 3)
-print('create_allauthors')
+# print('create_allauthors')
 ./create_allauthors.py
 
-print('toplongterminterests')
+# print('toplongterminterests')
 python3 toplongterminterests.py
 
-print('keywordcloud')
+# print('keywordcloud')
 python3 keywordcloud.py
 
 # print('keywordgraph')
