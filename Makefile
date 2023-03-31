@@ -19,6 +19,9 @@ default:
 	##   make publish  		push to s3
 	##
 
+build:
+	yarn build
+
 pre-build:
 	# academic-cv folder exists?
 	# [ -d "academic-cv" ] && rm -rf academic-cv
@@ -43,14 +46,6 @@ rename-artworks:
 		./rename-dalle.sh
 		./rename-midjourney.sh
 		./rename-stablediffusion.sh
-
-push-portfolio:
-	# push to s3
-	aws s3 sync --delete ../jonaso.de-portfolio/dist/ s3://jonaso.de/portfolio/dist
-	aws s3 sync --delete ../jonaso.de-portfolio/static/ s3://jonaso.de/portfolio/static
-	aws s3 cp ../jonaso.de-portfolio/favicon.ico s3://jonaso.de/portfolio
-	aws s3 cp ../jonaso.de-portfolio/favicon.png s3://jonaso.de/portfolio
-	aws s3 cp ../jonaso.de-portfolio/index.html s3://jonaso.de/portfolio
 
 # copy-portfolio:
 # 	cp -Rf ../jonaso.de-portfolio ./public/portfolio
@@ -219,5 +214,4 @@ invalidate:
 publish:
 	# push to s3
 	aws s3 sync --delete ./public/ s3://jonaso.de
-	make push-portfolio
 
