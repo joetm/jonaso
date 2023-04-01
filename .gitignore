@@ -9,7 +9,7 @@ ENV
 artworks/*
 # public/artworks/*
 public/artworks/**/*.webp
-!public/artworks/json/
+!public/artworks/json/**/*.json
 # public/static/**/
 public/cv/**/*.pdf
 public/~partytown/
