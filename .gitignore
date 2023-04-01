@@ -2,27 +2,20 @@ ENV
 .env
 .env.development
 .env.production
-# public/static/**/
 ./artworks/
 artworks/
-./public/artworks/**/*.webp
-./public/cv/**/*.pdf
 reading_list/tmp.pdf
-public/~partytown/
 .env.development
 .env.production
-./public/static/artworks
-./public/cv/cv-jonas-oppenlaender.pdf
-./public/cv/resume.pdf
-./public/cv/oppenlaender-publications.pdf
-public/static/**/
-reading_list/tmp.pdf
-public/static/artworks
+# public/static/**/
+./public/artworks/**/*.webp
+./public/cv/**/*.pdf
+public/~partytown/
 nexus/
 stat_aggregator/fetch_PCS.py
 src/img/artworks
-public/cv/cv-jonas-oppenlaender.pdf
 yarn.lock
+reading_list/tmp.pdf
 reading_list/unrecognized.csv
 reading_list/gephi*
 reading_list/cache.db
@@ -99,5 +92,4 @@ typings/
 .env
 
 .cache/
-# public
 yarn-error.log
