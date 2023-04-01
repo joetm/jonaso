@@ -6,8 +6,8 @@ ENV
 .env.development
 .env.production
 
-artworks/*
-!artworks/json/
+public/artworks/*
+!public/artworks/json/
 
 # public/static/**/
 public/artworks/**/*.webp
