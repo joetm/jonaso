@@ -6,6 +6,7 @@ ENV
 .env.development
 .env.production
 
+artworks/*
 public/artworks/*
 !public/artworks/json/
 
