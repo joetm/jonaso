@@ -3,7 +3,6 @@
 import '../../true-masonry.css' // based on https://codepen.io/iamsaief/pen/jObaoKo
 
 import React, { useState, useEffect } from "react"
-import { spacer } from "../../common"
 import ArtHeader from '../../components/ArtHeader'
 import Layout from "../../components/layout"
 import Loader from "../../components/loading"
@@ -64,7 +63,7 @@ export default function ArtPage() {
           }
         </div>
       </div>
-      <div className="spacer" style={spacer}></div>
+      <div className="spacer"></div>
     </>
   )
 }
@@ -80,7 +79,7 @@ export default function ArtPage() {
 //             byline='Latest digital images generated from text prompts (never edited). Click links below for more.'
 //           />
 //     			<MasonryGallery images={images} />
-// 	        <div className="spacer" style={spacer}></div>
+// 	        <div className="spacer"></div>
 //     	</React.Fragment>
 //     )
 // }

@@ -3,7 +3,6 @@
 import 'semantic-ui-css/components/dropdown.min.css'
 
 import React, { useEffect, useRef, useState } from "react"
-import { spacer } from "../../common"
 import Layout from "../../components/layout"
 import { Seo } from "../../components/Seo"
 
@@ -155,7 +154,7 @@ export default function CollaborationNetwork() {
 
           </div>
 
-          <div style={spacer}></div>
+          <div className="spacer"></div>
         </div>
       </Layout>
   )

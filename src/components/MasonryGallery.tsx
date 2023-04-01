@@ -4,15 +4,14 @@ import breakpointColumnsObj from './breakpoints.js'
 import useIntersectionObserver from '../hooks/use-intersect'
 
 
-
-function MasonryGallery({ images, next, fetchMore, isFetching }) {
+export default function MasonryGallery({ images, next, fetchMore, isFetching }) {
 
 	let trackerOffset = 0
 
 	// no images? show loader
 	if (!images.length) {
 		return (
-			<div className="ui segment">
+			<div className="ui">
 				<div className="ui active transition visible inverted dimmer" style={{ display: 'flex !important' }}>
 					<div className="ui inverted text loader">Loading</div>
 				</div>
@@ -121,5 +120,3 @@ function MasonryGallery({ images, next, fetchMore, isFetching }) {
 		</section>
 	)
 }
-
-export default MasonryGallery

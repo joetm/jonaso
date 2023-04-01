@@ -6,7 +6,7 @@ import "semantic-ui-css/components/table.min.css"
 import React, { useState, useEffect } from "react"
 import 'semantic-ui-css/components/loader.min.css'
 import "semantic-ui-css/components/table.min.css"
-import { priocolors, spacer } from "../../common"
+import { priocolors } from "../../common"
 import Layout from "../../components/layout"
 import PubGraph from "../../components/Graphs/PubGraph.js"
 import { Seo } from "../../components/Seo"
@@ -201,7 +201,7 @@ export default function ReadingList() {
               </table>
           }
 
-          <div style={spacer}></div>
+          <div className="spacer"></div>
 
       </div>
     </Layout>

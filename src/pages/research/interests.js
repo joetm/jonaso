@@ -4,7 +4,6 @@ import "semantic-ui-css/components/button.min.css"
 
 import React, { useState, useEffect } from "react"
 import { navigate } from 'gatsby'
-import { spacer } from "../../common"
 import Keywords from "../../components/keywords"
 import Layout from "../../components/layout"
 import { Seo } from "../../components/Seo"
@@ -76,7 +75,7 @@ export default function Interests() {
         </div>
         <LTInterests />
         <Keywords keywords={filtered_keywords} isZoomed={isZoomed} zoom={zoom} />
-        <div style={spacer}></div>
+        <div className="spacer"></div>
       </div>
     </Layout>
   )
