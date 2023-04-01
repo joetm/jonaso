@@ -7,11 +7,10 @@ ENV
 .env.production
 
 artworks/*
-public/artworks/*
-!public/artworks/json/
-
-# public/static/**/
+# public/artworks/*
 public/artworks/**/*.webp
+!public/artworks/json/
+# public/static/**/
 public/cv/**/*.pdf
 public/~partytown/
 
