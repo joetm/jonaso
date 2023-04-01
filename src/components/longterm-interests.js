@@ -4,45 +4,40 @@ import React, { useState, useEffect } from "react"
 import { Line, LineChart, CartesianGrid, Tooltip, Legend, ResponsiveContainer, XAxis, YAxis } from 'recharts'
 
 
-const DATASOURCE = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/topkeyword-timeline.json'
+const _DATASOURCE = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/topkeyword-timeline.json'
 const HEIGHT = 350
 // const colorDefault = '#eb008c'
 // const colorZoomed = '#FF86A6'
 const colors = {
   'a': '#eb008c', // ML
-  'b': '#050505', // CS
+  'b': '#F0E442', // Crowdsourcing
   'c': '#56B4E9', // Creativity
   'd': '#D55E00', // HCI
   'e': '#CC79A7', // AI
   'f': '#009E73', // NLP
   'g': '#CC6677', // Social Media
-  'h': '#F0E442', // Future of Work
+  'h': '#AAAAAA', // Future of Work
   // 
 }
 
 export default function LTInterests() {
   const [ graphdata, setGraphData ] = useState({legend: {}, data: []})
 
-  const getData = async () => {
-    try {
-      const res = await fetch(DATASOURCE)
-      const data = await res.json()
-      console.log('graphdata', data)
-      setGraphData( data )
-    } catch (err) {
-      console.error("Error fetching topkeyword-timeline.json")
-    }
-  }
-
   useEffect(() => {
-    getData()
+    const dataFetch = async () => {
+      const data = await (
+        await fetch(_DATASOURCE)
+      ).json()
+      // skip the last quarter to prevent the graph to drop off due to running month
+      data.data = data.data.slice(0, -3)
+      setGraphData(data)
+    }
+    dataFetch()
   }, [])
 
   function formatXAxis(t) {
     const d = new Date(t * 1000)
-    const year = d.getFullYear()
-    const month = d.getMonth()
-    return `${year}-${month}`
+    return `${d.getFullYear()}-${d.getMonth()}`
   }
 
   return (
