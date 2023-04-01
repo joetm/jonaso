@@ -1,5 +1,3 @@
-"use client"
-
 // import 'semantic-ui-css/components/card.min.css'
 // import '../masonry.css'
 

@@ -5,7 +5,7 @@ import 'semantic-ui-css/components/grid.min.css'
 import 'semantic-ui-css/components/icon.min.css'
 import 'semantic-ui-css/components/item.min.css'
 
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { Bar, BarChart, CartesianGrid, LabelList, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 // import useDetectPrint from 'use-detect-print'
 import { noMarginGrid, spacer } from "../common"
@@ -75,20 +75,18 @@ function categorizeListPerYear(pubList) {
 } //
 
 
-class Publications extends React.Component {
-  state = {
-    references: {},
-    referencesDetail: {},
-    showing: 'type',
-    graphdata: {},
-  }
-  componentDidMount = () => {
-    // fetch references per publication year
-    fetch(_REFERENCES_PER_YEAR)
-    .then(response => response.json())
-    .then(refs => {
-      const categorizedRefs = categorizeListPerYear(refs)
+export default function Publications() {
+  const [references, setReferences] = useState({})
+  const [referencesDetail, setReferencesDetail] = useState({})
+  const [showing, setShowing] = useState('type')
+  const [graphdata, setGraphdata] = useState({})
 
+  useEffect(() => {
+    const refFetch = async () => {
+      const refs = await (
+        await fetch(_REFERENCES_PER_YEAR)
+      ).json()
+      const categorizedRefs = categorizeListPerYear(refs)
       // const refMapping = JSON.parse(JSON.stringify(references))
       const refsByYear = []
       let maxRefsByYear = 0
@@ -99,66 +97,61 @@ class Publications extends React.Component {
           maxRefsByYear = c
         }
       }
-
       maxRefsByYear = maxRefsByYear + 2
       const tickArray = []
       for (let i = 0; i <= maxRefsByYear; i+=2) {
         tickArray.push(i)
       }
-
       const graphdata = {refsByYear, tickArray}
-      this.setState({
-      	references: categorizedRefs,
-      	graphdata
-      })
-    })
-    // fetch references per publication type
-    fetch(_REFERENCES_PER_TYPE)
-    .then(response => response.json())
-    .then(referencesDetail => {
-      const keys = Object.keys(referencesDetail)
-      for (const key of keys) {
-        referencesDetail[key].map(obj => {
+      setReferences(categorizedRefs)
+      setGraphdata(graphdata)
+    }
+    const typFetch = async () => {
+      const refDetail = await (
+        await fetch(_REFERENCES_PER_TYPE)
+      ).json()
+      // replace link to bib
+      for (const key of Object.keys(refDetail)) {
+        refDetail[key] = refDetail[key].map(obj => {
           obj.title = obj.title.replace('publications_bib.html', '/static/publications_bib.html')
           return obj
         })
       }
-      this.setState({ referencesDetail })
-    })
-  }
-  switchPubView = () => {
-    if (this.state.showing === 'type') {
-      this.setState({'showing': 'year'})
+      setReferencesDetail(refDetail)
+    }
+    refFetch()
+    typFetch()
+  }, [])
+
+  function togglePubView() {
+    if (showing === 'type') {
+      setShowing('year')
     } else {
-      this.setState({'showing': 'type'})
+      setShowing('type')
     }
   }
-  render() {
-    const { references, referencesDetail, showing, graphdata } = this.state
-    const keysYear = Object.keys(references).reverse()
-    const keysType = Object.keys(referencesDetail).reverse()
-    // keysType.sort() // sort alphabetically
 
-    const typeIsActive = showing === 'type'
-    console.log('typeIsActive', typeIsActive)
+  const keysYear = Object.keys(references).reverse()
+  const keysType = Object.keys(referencesDetail).reverse()
+  const typeIsActive = showing === 'type'
 
-    // custom sort order
-    let customSortOrder = []
-    if (keysType.length > 0) {
-      customSortOrder = [
-        "Journal Articles",
-        "Conference Papers",
-        "Workshops",
-        "Workshop Proceedings",
-        "Doctoral Consortia",
-        "Conference Posters and Position Papers",
-        "Pre-prints and Working Papers",
-        "Theses and Seminal Papers",
-      ]
-    }
+  // custom sort order
+  let customSortOrder = []
+  if (keysType.length > 0) {
+    customSortOrder = [
+      "Journal Articles",
+      "Conference Papers",
+      "Workshops",
+      "Workshop Proceedings",
+      "Doctoral Consortia",
+      "Conference Posters and Position Papers",
+      "Pre-prints and Working Papers",
+      "Theses and Seminal Papers",
+    ]
+  }
 
-    return (
-      <Layout>
+  return (
+    <Layout>
       <div className="ui container">
 
         <ResponsiveContainer width="100%" height={150}>
@@ -191,15 +184,14 @@ class Publications extends React.Component {
               className="ui button"
               disabled={!typeIsActive}
               positive={!typeIsActive}
-              onClick={this.switchPubView}
+              onClick={togglePubView}
             >YEAR</button>
-            <div class="or"></div>
+            <div className="or"></div>
             <button
               title="Publications per type"
               className="ui button"
-              disabled=""
               tabIndex="-1"
-              onClick={this.switchPubView}
+              onClick={togglePubView}
               disabled={typeIsActive}
               positive={typeIsActive}
             >TYPE</button>
@@ -253,11 +245,9 @@ class Publications extends React.Component {
               }
 
             <div style={spacer}></div>
-
         </div>
 
         <div className="ui container" id="publications-year" style={{display: typeIsActive ? 'none' : 'block'}}>
-
               {
                 keysYear.map(year => {
                   return (
@@ -301,15 +291,9 @@ class Publications extends React.Component {
                   )
                 })
               }
-
             <div style={spacer}></div>
-
         </div>
-
       </div>
-      </Layout>
-    )
-  }
+    </Layout>
+  )
 }
-
-export default Publications

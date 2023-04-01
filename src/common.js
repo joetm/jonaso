@@ -37,6 +37,29 @@ export function sortByKey(array, key) {
 
 export function joinIfNotNull(arr, sep=', ') { return arr.filter(val => val ? val : undefined).join(sep) }
 
+export function setAspectRatio(image, index) {
+    let ratio = ''
+    if (image[1] > image[2]) {
+      ratio = 'wide'
+      if (index % 5 === 0) {
+        ratio = 'big'
+      }
+      if (index % 4 === 0) {
+        ratio = ''
+      }
+    }
+    if (image[1] < image[2]) {
+      ratio = 'tall'
+      if (index % 9 === 0) {
+        ratio = ''
+      }
+    }
+    if ((image[1] === image[2]) && (index % 4 === 0)) {
+      ratio = 'big'
+    }
+    return ratio
+}
+
 export const nobottommargin = styles.nobottommargin
 export const notopmargin = styles.notopmargin
 export const nobold = styles.nobold

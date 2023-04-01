@@ -9,7 +9,7 @@ from datetime import datetime
 
 
 filter = ['Issues', 'General, Theory', 'Research Methods', 'Applications', 'Communities, Networks']
-CUTOFF = 13
+CUTOFF = 11
 DAYS = 90
 
 

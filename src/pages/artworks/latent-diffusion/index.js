@@ -1,5 +1,3 @@
-"use client"
-
 import '../../../react-masonry.css'
 
 import React from "react"
