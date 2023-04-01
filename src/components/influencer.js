@@ -3,9 +3,12 @@
 import 'semantic-ui-css/components/checkbox.min.css'
 import 'semantic-ui-css/components/label.min.css'
 
+import React, { useState, useEffect } from "react"
 import md5 from "md5"
-import React from "react"
 import Sidebar from "./AuthorListSidebar"
+
+
+const _PUB_URL = `/static/publications.json`
 
 
 const styles = {
@@ -20,132 +23,90 @@ const styles = {
 }
 
 
-class AuthorList extends React.Component {
-  state = {
-    details: {}, // cache of details
-    activeKeyword: null,
-    coauthorToggleActive: false,
-    coauthors: [],
-  }
-  componentDidMount() {
-    const url = `/static/publications.json`
-    const coauthors = []
-    fetch(url).then(response => {
-      if (response.status === 404) {
-        return []
-      } else {
-        if (response.status >= 400) {
-          throw new Error("Bad response from server")
-        }
-      }
-      return response.json()
-    })
-    .then(ownPublications => {
-      ownPublications.filter(pub => typeof pub['author'] != "undefined").forEach(pub => {
+export default function AuthorList({ activeid, updateActive, list, activeAuthors }) {
+  const [details, setDetails] = useState({})
+  const [activeKeyword, setActiveKeyword] = useState(null)
+  const [coauthorToggleActive, setCoauthorToggleActive] = useState(false)
+  const [coauthors, setCoauthors] = useState([])
+
+  useEffect(() => {
+    fetch(_PUB_URL).then(res => res.json()).then(pubs => {
+      const authors = []
+      pubs.filter(pub => typeof pub['author'] != "undefined").forEach(pub => {
           pub.author.forEach(author => {
             if (author['dropping-particle']) {
               author = `${author.given} ${author['dropping-particle']} ${author.family}`.toLowerCase()
             } else {
               author = `${author.given} ${author.family}`.toLowerCase()
             }
-            if (!coauthors.includes(author)) {
-              coauthors.push(author)
+            if (!authors.includes(author)) {
+              authors.push(author)
             }
           })
       })
-      this.setState({ coauthors })
+      setCoauthors(authors)
     })
-  }
-  keywordClick = (e) => {
-    const { updateActive } = this.props
-    const { activeKeyword } = this.state
+  }, [])
+
+
+  function keywordClick(e) {
     const keyword = e.target.innerText
     // toggle the checkbox off
-    this.setState({coauthorToggleActive: false})
+    setCoauthorToggleActive(false)
     // click on already active author?
     if (keyword === activeKeyword) {
       // deselect this author
-      this.setState({ activeKeyword: null })
+      setActiveKeyword(null)
       updateActive({ activeAuthors: [] })
       return
     }
     // load the authors of this keyword
     const kwid = md5(keyword)
-    const url = `https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/keywordauthors/${kwid}.json`
-    fetch(url)
-    .then(response => {
-      if (response.status === 404) {
-        // no authors found. Just highlight the clicked keyword.
-        return []
-      } else {
-        if (response.status >= 400) {
-          throw new Error("Bad response from server")
-        }
-      }
-      return response.json()
-    })
+    fetch(`https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/keywordauthors/${kwid}.json`)
+    .then(res => res.json())
     .then(activeAuthors => {
-      // console.info("Ajax response", activeAuthors)
-  	  this.setState({ activeKeyword: keyword })
+  	  setActiveKeyword(keyword)
   	  updateActive({ activeAuthors })
     })
   }
-  toggleCoauthors = (authorid) => {
-    const { coauthorToggleActive } = this.state
-    const { updateActive } = this.props
+
+  function toggleCoauthors(authorid) {
     if (coauthorToggleActive) {
       updateActive({ activeAuthors: [] })
       // deselect highlighted keyword
       // deselect all highlighted coauthors
-      this.setState({ activeKeyword: null, coauthorToggleActive: false })
+      setActiveKeyword(null)
+      setCoauthorToggleActive(false)
       return
     }
-    this.setState({coauthorToggleActive: true})
+    setCoauthorToggleActive(true)
     const url = `https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/coauthors/${authorid}.json`
-    fetch(url)
-    .then(response => {
-      if (response.status === 404) {
-        // no co-authors found.
-        return []
-      } else {
-        if (response.status >= 400) {
-          throw new Error("Bad response from server")
-        }
-      }
-      return response.json()
-    })
+    fetch(url).then(res => res.json())
     .then(activeAuthors => {
-      // console.info("Ajax response", activeAuthors)
-      // this.setState({ activeKeyword: keyword })
       updateActive({ activeAuthors })
       // deselect highlighted keyword
-      this.setState({ activeKeyword: null })
+      setActiveKeyword(null)
     })
   }
-  getAuthorDetails = (author) => {
-  	const { activeid, updateActive } = this.props
+  
+  function getAuthorDetails(author) {
     // up to three requests to fetch author details
     const id = author.id
     // if (!id) { return }
     if (id === activeid) {
       // remove, when the same author is clicked a second time
-      const details = this.state.details
-      delete details[id];
-      this.setState({
-        details,
-        coauthorToggleActive: false,
-      })
+      const dcopy = Object.assign({}, details)
+      delete dcopy[id]
+      setDetails(dcopy)
+      setCoauthorToggleActive(false)
       updateActive({activeid: null, activeAuthors: []})
       return
     }
     // reset the highlighted labels
-    this.setState({
-      activeKeyword: null,
-      coauthorToggleActive: false,
-    })
+    setActiveKeyword(null)
+    setCoauthorToggleActive(false)
     updateActive({activeAuthors: []})
     // cache check
-    const details = this.state.details
     if (details[id]) {
       // console.log('cache hit for', id)
       updateActive({activeid: id})
@@ -153,31 +114,25 @@ class AuthorList extends React.Component {
     }
     // load from remote
     const url = `https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/influencers/${id}.json`
-    fetch(url)
-    .then(response => {
-      if (response.status >= 400) {
-        throw new Error("Bad response from server")
-      }
-      return response.json()
-    })
+    fetch(url).then(res => res.json())
     .then(res => {
-      const details = this.state.details
+      const dcopy = Object.assign({}, details)
       // example: {"docs":[{"title":"Arboretum and Arbility: Improving Web Accessibility Through a Shared Browsing Architecture","priority":3}]}
-      details[id] = res
-      this.setState({ details })
+      dcopy[id] = res
+      setDetails(dcopy)
       updateActive({activeid: id})
     })
   }
-  render () {
-    const { list, activeid, activeAuthors, updateActive } = this.props
-    const { details, activeKeyword, coauthorToggleActive, coauthors } = this.state
-    // need to get min and max for color scaling:
-    // const maxNum = Math.max.apply(Math, list.map(o => o.num))
-    // const maxPrio = Math.max.apply(Math, list.map(o => o.priority))
-    if (!list) {
-      return null
-    }
-    return (
+
+  // need to get min and max for color scaling:
+  // const maxNum = Math.max.apply(Math, list.map(o => o.num))
+  // const maxPrio = Math.max.apply(Math, list.map(o => o.priority))
+
+  if (!list) {
+    return null
+  }
+
+  return (
       <>
         {
           list.map((author, index) => {
@@ -204,7 +159,7 @@ class AuthorList extends React.Component {
                 style={{...styles.label, opacity: author.name === 'Jonas Oppenlaender' ? 0.6 : 1}}
                 color={labelColor}
                 title={(author.num > 1 ? author.num + ' publications' : author.num + ' publication') + ', priority ' + author.priority}
-                onClick={() => this.getAuthorDetails(author)}
+                onClick={() => getAuthorDetails(author)}
               >
                 {
                   coauthors.includes(author.name.toLowerCase()) ? (<span style={styles.coauthor}>{author.name}</span>) : author.name
@@ -216,8 +171,8 @@ class AuthorList extends React.Component {
                   	authorid={author.id}
                   	activeKeyword={activeKeyword}
                   	details={details[author.id]}
-                  	keywordClick={this.keywordClick}
-                    toggleCoauthors={this.toggleCoauthors}
+                  	keywordClick={keywordClick}
+                    toggleCoauthors={toggleCoauthors}
                     coauthorToggleActive={coauthorToggleActive}
                     updateActive={updateActive}
                   />
@@ -227,8 +182,5 @@ class AuthorList extends React.Component {
           })
         }
       </>
-    )
-  }
+  )
 }
-
-export default AuthorList

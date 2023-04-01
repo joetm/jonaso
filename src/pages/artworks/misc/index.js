@@ -17,7 +17,6 @@ export default function ArtPage() {
         <ArtHeader generator='Misc. Text-To-Image Systems' totalCount={images.length} />
       </Layout>
       <MasonryGallery images={images} />
-      <div className="spacer"></div>
     </>
   )
 }

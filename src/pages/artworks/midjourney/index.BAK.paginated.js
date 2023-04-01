@@ -54,7 +54,6 @@ class ArtPage extends React.Component {
       <>
           <ArtHeader generator='Midjourney' totalCount={total} />
           <MasonryGallery images={images} next={next} fetchMore={this.fetchMore} isFetching={isFetching} />
-          <div className="spacer"></div>
       </>
     )
   }

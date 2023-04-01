@@ -5,6 +5,9 @@ import Layout from "../components/layout"
 import { Seo } from "../components/Seo"
 
 
+const _PUB_URL = '/static/references-detail.json'
+
+
 export function Head() {
   return (
     <Seo title="Jufo // jonaso.de">
@@ -17,19 +20,15 @@ export function Head() {
 export default function JufoPage() {
   const [jufo, updateJufo] = useState(false)
   useEffect(() => {
-    fetch('/static/references-detail.json')
-    .then(response => {
-      if (response.status >= 400) {
-        throw new Error("Bad response from server: Could not get jufo points")
-      }
-      return response.json()
-    })
-    .then(publications => {
-      let jufo = publications.map(x => x.jufo ? x.jufo : 0).reduce(( previousValue, currentValue ) => parseInt(previousValue, 10) + parseInt(currentValue, 10), 0)
+    const fetchData = async () => {
+      const publications = await (
+        await fetch(_PUB_URL)
+      ).json()
+      const jufo = publications.map(x => x.jufo ? x.jufo : 0).reduce(( previousValue, currentValue ) => parseInt(previousValue, 10) + parseInt(currentValue, 10), 0)
       updateJufo(jufo)
-    })
+    }
+    fetchData()
   }, [])
-
   return (
     <Layout>
       <div className="ui container">
@@ -37,9 +36,7 @@ export default function JufoPage() {
         <section style={{textAlign:'center'}}>
           <p style={{fontSize:'22pt'}}>{jufo ? <span>&asymp; {jufo}</span> : '...loading...'}</p>
         </section>
-        <div className="spacer"></div>
       </div>
     </Layout>
   )
-
 }

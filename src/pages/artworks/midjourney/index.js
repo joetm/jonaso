@@ -31,7 +31,6 @@ export default function ArtPage() {
           :
           <MasonryGallery images={images} />
       }
-      <div className="spacer"></div>
     </>
   )
 }

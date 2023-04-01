@@ -291,7 +291,6 @@ export default function Publications() {
                   )
                 })
               }
-            <div className="spacer"></div>
         </div>
       </div>
     </Layout>

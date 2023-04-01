@@ -14,7 +14,6 @@ export default function ArtPage() {
         <ArtHeader generator='VQGAN-CLIP' totalCount={images.length} />
       </Layout>
       <MasonryGallery images={images} />
-      <div className="spacer"></div>
     </>
   )
 }

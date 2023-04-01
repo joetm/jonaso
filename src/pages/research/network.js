@@ -153,8 +153,6 @@ export default function CollaborationNetwork() {
             />
 
           </div>
-
-          <div className="spacer"></div>
         </div>
       </Layout>
   )
