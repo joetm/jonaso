@@ -159,7 +159,6 @@ class Interests extends React.Component {
       <Layout>
         <div className="ui container">
           <TreeComponent keywords={filtered_keywords} />
-          <div className="spacer"></div>
         </div>
       </Layout>
     )

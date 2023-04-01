@@ -30,7 +30,6 @@ export default function ArtPage() {
         <ArtHeader generator='Stable Diffusion' totalCount={images.length} />
       </Layout>
       <MasonryGallery images={images} />
-      <div className="spacer"></div>
     </>
   )
 }

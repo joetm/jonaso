@@ -63,7 +63,6 @@ export default function ArtPage() {
           }
         </div>
       </div>
-      <div className="spacer"></div>
     </>
   )
 }

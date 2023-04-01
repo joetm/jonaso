@@ -53,7 +53,6 @@ class Interests extends React.Component {
             </div>
           </div>
           <KeywordCloud />
-          <div className="spacer"></div>
         </div>
       </Layout>
     ) //

@@ -75,7 +75,6 @@ export default function Interests() {
         </div>
         <LTInterests />
         <Keywords keywords={filtered_keywords} isZoomed={isZoomed} zoom={zoom} />
-        <div className="spacer"></div>
       </div>
     </Layout>
   )

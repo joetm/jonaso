@@ -17,13 +17,11 @@ const styles = {
 
 export function Head() {
   return (
-    <Seo
-      title="Teaching // jonaso.de"
-    >
+    <Seo title="Teaching // jonaso.de">
       <link id="canonical" rel="canonical" href="https://www.jonaso.de/teaching/" />
     </Seo>
   )
-} //
+}
 
 export default function Teaching() {
   return (
@@ -52,9 +50,6 @@ export default function Teaching() {
               </div>
 
             </div>
-
-            <div className="spacer"></div>
-
         </div>
   )
 }

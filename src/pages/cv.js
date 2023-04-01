@@ -4,16 +4,17 @@ import 'semantic-ui-css/components/grid.min.css'
 import 'semantic-ui-css/components/icon.min.css'
 import 'semantic-ui-css/components/item.min.css'
 
-import { navigate } from "gatsby"
 import React from "react"
+import { navigate } from "gatsby"
 import Layout from "../components/layout"
 import { Seo } from "../components/Seo"
-
 import cv from "../cv.json"
 import pcsreviews from "../../stat_aggregator/peer-reviews.json"
 
+
 const _PORTFOLIO_URL = '/portfolio/'
 // const _PEERREVIEWS_URL = 'https://raw.githubusercontent.com/joetm/jonaso/master/stat_aggregator/peer-reviews.json'
+
 
 // headlines
 cv.education[0].left = "Education"
@@ -564,8 +565,6 @@ export default function CV() {
         }
       </div>
 )} right="" />
-
-        <div className="spacer"></div>
 
       </div>
     </Layout>

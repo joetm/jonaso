@@ -201,8 +201,6 @@ export default function ReadingList() {
               </table>
           }
 
-          <div className="spacer"></div>
-
       </div>
     </Layout>
   )

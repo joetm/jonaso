@@ -130,8 +130,6 @@ export default function Projects() {
               })
             }
 
-          <div className="spacer"></div>
-
       </div>
     </Layout>
   )

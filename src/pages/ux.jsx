@@ -15,7 +15,7 @@ export function Head() {
       <link id="canonical" rel="canonical" href="https://www.jonaso.de/ux/" />
     </Seo>
   )
-} //
+}
 
 export default function UX() {
     return (

@@ -99,9 +99,6 @@ export default class Influencers extends React.Component {
               updateActive={this.updateActive}
             />
           </div>
-          <div className="clear"></div>
-
-          <div className="spacer"></div>
         </div>
       </Layout>
     )

@@ -12,6 +12,7 @@ const styles = {
     marginBottom: '0.5em',
     marginRight: '1em',
     float:'left',
+    cursor: 'pointer',
   },
 }
 
@@ -37,7 +38,7 @@ const Wrapper = {
       <div>{items}</div>
       <div style={{clear:'both'}}></div>
     </div>
-  ), //
+  ),
   CoauthorWrapper: ({authorid, toggleCoauthors, coauthorToggleActive, updateActive}) => (
     <div className="ui segment wrapperBox">
       <div>
@@ -58,7 +59,7 @@ const Wrapper = {
 
       </div>
     </div>
-  ), //
+  ),
   PubWrapper: ({title, items, ratio321}) => (
       <div className="ui segment wrapperBox">
         <h4>{title}</h4>
@@ -85,7 +86,7 @@ export default function DetailContainer({authorid, details, keywordClick, active
       onKeyDown={e => keywordClick(e)}
       key={`kw${i}${authorid}${kw}`}
     >{kw}</span>
-  )) //
+  ))
 
   let priocount = {'3': 0, '2': 0, '1': 0, '0': 0}
   const doctotal = docs.length
@@ -118,4 +119,4 @@ export default function DetailContainer({authorid, details, keywordClick, active
       <Wrapper.PubWrapper title="Publications" items={publist} ratio321={ratio321} />
     </div>
   )
-} //
+}

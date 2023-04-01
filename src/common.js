@@ -60,6 +60,10 @@ export function setAspectRatio(image, index) {
     return ratio
 }
 
+export function roundInt(num) {
+  return Math.round((num + Number.EPSILON) * 10) / 10
+}
+
 export const nobottommargin = styles.nobottommargin
 export const notopmargin = styles.notopmargin
 export const nobold = styles.nobold
