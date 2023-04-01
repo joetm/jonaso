@@ -139,7 +139,7 @@ export default function ReadingList() {
 
           {
             isLoading &&
-              <div className="ui segment">
+              <div className="ui">
                 <div className="ui active transition visible inverted dimmer" style={{display: 'flex !important'}}>
                   <div className="ui inverted text loader">Loading</div>
                 </div>
