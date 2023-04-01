@@ -8,7 +8,7 @@ import 'semantic-ui-css/components/item.min.css'
 import React, { useState, useEffect } from "react"
 import { Bar, BarChart, CartesianGrid, LabelList, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 // import useDetectPrint from 'use-detect-print'
-import { noMarginGrid, spacer } from "../common"
+import { noMarginGrid } from "../common"
 import Layout from "../components/layout"
 import { Seo } from "../components/Seo"
 
@@ -244,7 +244,7 @@ export default function Publications() {
                 })
               }
 
-            <div style={spacer}></div>
+            <div className="spacer"></div>
         </div>
 
         <div className="ui container" id="publications-year" style={{display: typeIsActive ? 'none' : 'block'}}>
@@ -291,7 +291,7 @@ export default function Publications() {
                   )
                 })
               }
-            <div style={spacer}></div>
+            <div className="spacer"></div>
         </div>
       </div>
     </Layout>

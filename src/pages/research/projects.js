@@ -130,7 +130,7 @@ export default function Projects() {
               })
             }
 
-          <div style={spacer}></div>
+          <div className="spacer"></div>
 
       </div>
     </Layout>

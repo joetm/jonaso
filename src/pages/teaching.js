@@ -1,7 +1,6 @@
 import 'semantic-ui-css/components/item.min.css'
 
 import React from "react"
-import { spacer } from "../common"
 import { Seo } from "../components/Seo"
 
 
@@ -54,7 +53,7 @@ export default function Teaching() {
 
             </div>
 
-            <div style={spacer}></div>
+            <div className="spacer"></div>
 
         </div>
   )

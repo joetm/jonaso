@@ -2,7 +2,6 @@
 
 import React from "react"
 import { navigate } from 'gatsby'
-import { spacer } from "../../../common"
 import KeywordCloud from '../../../components/cloud'
 import Layout from "../../../components/layout"
 import { Seo } from "../../../components/Seo"
@@ -54,7 +53,7 @@ class Interests extends React.Component {
             </div>
           </div>
           <KeywordCloud />
-          <div style={spacer}></div>
+          <div className="spacer"></div>
         </div>
       </Layout>
     ) //

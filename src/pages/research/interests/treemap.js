@@ -5,7 +5,6 @@ import 'semantic-ui-css/components/button.min.css'
 import React from "react"
 import { navigate } from 'gatsby'
 import { ResponsiveContainer, Treemap } from 'recharts'
-import { spacer } from "../../../common"
 import Layout from "../../../components/layout"
 import { Seo } from "../../../components/Seo"
 
@@ -160,7 +159,7 @@ class Interests extends React.Component {
       <Layout>
         <div className="ui container">
           <TreeComponent keywords={filtered_keywords} />
-          <div style={spacer}></div>
+          <div className="spacer"></div>
         </div>
       </Layout>
     )

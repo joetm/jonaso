@@ -3,7 +3,7 @@
 import "../../components/influencer.css"
 
 import React from "react"
-import { sortByKey, spacer } from "../../common"
+import { sortByKey } from "../../common"
 import AuthorList from "../../components/influencer"
 import Loading from "../../components/influencerLoading"
 import Layout from "../../components/layout"
@@ -101,7 +101,7 @@ export default class Influencers extends React.Component {
           </div>
           <div className="clear"></div>
 
-          <div style={spacer}></div>
+          <div className="spacer"></div>
         </div>
       </Layout>
     )

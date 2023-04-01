@@ -6,7 +6,6 @@ import 'semantic-ui-css/components/item.min.css'
 
 import { navigate } from "gatsby"
 import React from "react"
-import { spacer } from "../common"
 import Layout from "../components/layout"
 import { Seo } from "../components/Seo"
 
@@ -566,7 +565,7 @@ export default function CV() {
       </div>
 )} right="" />
 
-        <div className="spacer" style={spacer}></div>
+        <div className="spacer"></div>
 
       </div>
     </Layout>

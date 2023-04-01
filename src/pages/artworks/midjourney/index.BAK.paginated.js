@@ -5,7 +5,6 @@ import '../../../react-masonry.css'
 import React from "react"
 import ArtHeader from '../../../components/ArtHeader'
 import MasonryGallery from '../../../components/MasonryGallery'
-import { spacer } from "../../../common"
 
 
 class ArtPage extends React.Component {
@@ -55,7 +54,7 @@ class ArtPage extends React.Component {
       <>
           <ArtHeader generator='Midjourney' totalCount={total} />
           <MasonryGallery images={images} next={next} fetchMore={this.fetchMore} isFetching={isFetching} />
-          <div className="spacer" style={spacer}></div>
+          <div className="spacer"></div>
       </>
     )
   }

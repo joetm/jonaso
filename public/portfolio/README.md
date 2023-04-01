@@ -1,4 +1,4 @@
-# jonaso.de
+# jonaso.de portfolio
 
 > Redesign with Vue.js (based on `webpack-simple` template)
 

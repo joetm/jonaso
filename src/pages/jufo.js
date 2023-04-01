@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useState, useEffect } from "react"
-import { spacer } from "../common"
 import Layout from "../components/layout"
 import { Seo } from "../components/Seo"
 
@@ -38,7 +37,7 @@ export default function JufoPage() {
         <section style={{textAlign:'center'}}>
           <p style={{fontSize:'22pt'}}>{jufo ? <span>&asymp; {jufo}</span> : '...loading...'}</p>
         </section>
-        <div className="spacer" style={spacer}></div>
+        <div className="spacer"></div>
       </div>
     </Layout>
   )
