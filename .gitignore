@@ -2,19 +2,24 @@ ENV
 .env
 .env.development
 .env.production
+
 ./artworks/
-artworks/
-reading_list/tmp.pdf
+
 .env.development
 .env.production
+
 # public/static/**/
-# ./public/artworks/**/*.webp
-# ./public/cv/**/*.pdf
-# public/~partytown/
+public/artworks/**/*.webp
+public/cv/**/*.pdf
+public/~partytown/
+
 nexus/
+
 stat_aggregator/fetch_PCS.py
+
 yarn.lock
 ./yarn.lock
+
 reading_list/tmp.pdf
 reading_list/unrecognized.csv
 reading_list/gephi*
@@ -25,7 +30,9 @@ reading_list/readlist-full.json
 reading_list/toreadlist-full.json
 reading_list/training-data-TODO.csv
 reading_list/keyword-*.json
+
 venv
+
 *.BAK
 *.BAK.sh
 dist/*.tar.gz
