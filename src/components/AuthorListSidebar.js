@@ -5,7 +5,8 @@ import 'semantic-ui-css/components/sidebar.min.css'
 
 import React from "react"
 import { Checkbox } from 'semantic-ui-react'
-import { sortByKey, priocolors } from "../common"
+import { sortByKey, priocolors, roundInt } from "../common"
+
 
 const styles = {
   label: {
@@ -16,10 +17,6 @@ const styles = {
   },
 }
 
-
-function roundInt(num) {
-  return Math.round((num + Number.EPSILON) * 10) / 10
-}
 
 // https://stackoverflow.com/a/14810714/426266
 Object.map = function(o, f, ctx) {
