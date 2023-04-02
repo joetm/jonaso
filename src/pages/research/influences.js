@@ -2,7 +2,7 @@
 
 import "../../components/influencer.css"
 
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { sortByKey } from "../../common"
 import AuthorList from "../../components/influencer"
 import Loading from "../../components/influencerLoading"
@@ -25,25 +25,22 @@ export function Head() {
 }
 
 
-export default class Influencers extends React.Component {
-  state = {
-    influencer: [],
-    isLoading: true,
-    activeid: null,
-    activeAuthors: [],
+export default function Influencers() {
+  const [influencer, setInfluencer] = useState([])
+  const [activeid, setActiveid] = useState(null)
+  const [activeAuthors, setActiveAuthors] = useState([])
+
+  function updateActive(obj) {
+    if (obj.activeid) {
+      setActiveid(obj.activeid)
+    }
+    if (obj.activeAuthors) {
+      setActiveAuthors(obj.activeAuthors)
+    }
   }
-  updateActive = (obj) => {
-    this.setState({ ...obj })
-  }
-  componentDidMount = () => {
-    // get influencer
-    fetch(_FLATINFLUENCER)
-    .then(response => {
-      if (response.status >= 400) {
-        throw new Error("Bad response from server")
-      }
-      return response.json()
-    })
+
+  useEffect(() => {
+    fetch(_FLATINFLUENCER).then(res => res.json())
     .then(data => {
       const authors = data // .filter(author => author.num > 1)
       const tmp = {}
@@ -76,31 +73,32 @@ export default class Influencers extends React.Component {
       }
       influencer = influencer.filter(author => author.num > 1)
       influencer = sortByKey(influencer, 'priority') // priority score consisting of: 1 * num(1) + 2 * num(2) + 3 * num(3)
-      this.setState({ influencer, isLoading: false })
+      
+      setInfluencer(influencer)
     })
-  }
-  render() {
-    const { influencer, isLoading, activeid, activeAuthors } = this.state
-    return (
-      <Layout>
-        <div className="ui container">
-          <h2 style={{float:'left', display:'inline-block'}}>
-            Research Influences
-            { isLoading && <span style={{marginLeft:'1em', fontWeight:100, fontSize:'1em'}}>...loading...</span>}
-          </h2>
+  })
 
-          { isProd && isLoading && <Loading /> }
+  const isLoading = influencer.length ? false : true
 
-          <div className="clear">
-            <AuthorList
-              list={influencer}
-              activeid={activeid}
-              activeAuthors={activeAuthors}
-              updateActive={this.updateActive}
-            />
-          </div>
+  return (
+    <Layout>
+      <div className="ui container">
+        <h2 style={{float:'left', display:'inline-block'}}>
+          Research Influences
+          { isLoading && <span style={{marginLeft:'1em', fontWeight:100, fontSize:'1em'}}>...loading...</span>}
+        </h2>
+
+        { isProd && isLoading && <Loading /> }
+
+        <div className="clear">
+          <AuthorList
+            list={influencer}
+            activeid={activeid}
+            activeAuthors={activeAuthors}
+            updateActive={updateActive}
+          />
         </div>
-      </Layout>
-    )
-  }
+      </div>
+    </Layout>
+  )
 }

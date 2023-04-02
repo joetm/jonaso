@@ -1,107 +1,86 @@
 "use client"
 
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { Bar, BarChart, CartesianGrid, LabelList, ResponsiveContainer, XAxis, YAxis } from 'recharts'
 import 'semantic-ui-css/components/button.min.css'
 
+
+const _KEYWORDS = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/keywords.json'
+const CUTOFF = 19
 
 const HEIGHT = 1450
 const colorDefault = '#eb008c'
 const colorZoomed = '#FF86A6'
 
 
-class Keywords extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      activeTooltipIndex: false,
-      activeLabel: null,
-      level2: [],
-      color: colorDefault,
-    }
+export default function Keywords() {
+  // const [activeTooltipIndex, setActiveTooltipIndex] = useState(false)
+  const [activeLabel, setActiveLabel] = useState(null)
+  const [level2, setLevel2] = useState([])
+  const [keywords, setKeywords] = useState([])
+
+  useEffect(() => {
+    fetch(_KEYWORDS).then(res => res.json())
+    .then(kws => {
+      const filtered_keywords = kws.filter(kw => kw.num > CUTOFF)
+      setKeywords(filtered_keywords)
+    })
+  }, [])
+
+
+  function zoomOut() {
+    setLevel2([])
+    setActiveLabel(null)
   }
-  handleBackButtonClick = () => {
-    this.setState({isZoomed: false})
-  }
-  handleClick = bar => {
-    const { isZoomed, zoom } = this.props
+
+  function handleClick(bar) {
     if (!isZoomed) {
         // query level2
         const URL = `https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/level2/${bar.id}.json`
-        fetch(URL)
-        .then(response => {
-          if (response.status >= 400) {
-            return []
-          }
-          return response.json()
-        })
+        fetch(URL).then(res => res.json())
         .then(level2 => {
-          this.setState({
-            level2,
-            color: colorZoomed
-          })
-          zoom(true, bar.name)
+          setLevel2(level2)
+          setActiveLabel(bar.name)
         })
     } else {
-        this.setState({
-          level2: [],
-          breadcrumb: null,
-          color: colorDefault
-        })
-        zoom(false)
+        zoomOut()
     }
   }
-  zoomOut = () => {
-    const { zoom } = this.props
-    this.setState({
-      level2: [],
-      color: colorDefault
-    })
-    zoom(false)
-  }
-  // changeChartType = (chart) => this.setState({chart})
-  render() {
-    const { keywords = [], isZoomed } = this.props
-    const { level2, color } = this.state // chart
-    const displaydata = isZoomed && level2.length ? level2 : keywords;
 
-    // filtered_keywords = keywords.map(kw => kw.num > 1 ? kw : null);
+  const isZoomed = level2.length ? true : false
+  const displaydata = isZoomed && level2.length ? level2 : keywords
+  const color = isZoomed ? colorZoomed : colorDefault
 
-    return (
-        <div className="ui container">
-          <div style={{clear:'both'}}></div>
-          <ResponsiveContainer width="100%" height={HEIGHT}>
-                <BarChart
-                  layout="vertical"
-                  data={displaydata}
-                  onClick={isZoomed ? this.zoomOut : null}>
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis type="number" dataKey="num" />
-                    <YAxis type="category" dataKey="name" width={275} style={{fontSize: '1rem'}} />
-                    {/*
-                    <Tooltip
-                      separator=" "
-                      formatter={(value, name, props) => (<span>publications: {value}</span>)}
-                    />
-                    */}
-                    <Bar
-                      dataKey="num"
-                      fill={color}
-                      className={!isZoomed ? "clickable" : ""}
-                      onClick={this.handleClick}
-                    >
-                      <LabelList
-                        dataKey="num"
-                        position="insideRight"
-                        style={{ fontSize: '80%', fill: '#ffffff' }}
-                      />
-                    </Bar>
-                </BarChart>
-          </ResponsiveContainer>
-
-        </div>
-    )
-  }
+  return (
+    <div className="ui container">
+      <div className="clear">
+          <div style={{visibility: isZoomed ? 'visible' : 'hidden', float:'right', fontSize: 'initial', marginRight:'1em'}}>
+              <span style={{marginRight: '1em'}}>{activeLabel}</span>
+              <i aria-hidden="true" onClick={zoomOut} className="left circular arrow icon"></i>
+          </div>
+      </div>
+      <ResponsiveContainer width="100%" height={HEIGHT}>
+            <BarChart
+              layout="vertical"
+              data={displaydata}
+              onClick={isZoomed ? zoomOut : null}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis type="number" dataKey="num" />
+                <YAxis type="category" dataKey="name" width={275} style={{fontSize: '1rem'}} />
+                <Bar
+                  dataKey="num"
+                  fill={color}
+                  className={!isZoomed ? "clickable" : ""}
+                  onClick={handleClick}
+                >
+                  <LabelList
+                    dataKey="num"
+                    position="insideRight"
+                    style={{ fontSize: '80%', fill: '#ffffff' }}
+                  />
+                </Bar>
+            </BarChart>
+      </ResponsiveContainer>
+    </div>
+  )
 }
-
-export default Keywords

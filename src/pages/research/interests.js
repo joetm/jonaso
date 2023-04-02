@@ -2,16 +2,13 @@
 
 import "semantic-ui-css/components/button.min.css"
 
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { navigate } from 'gatsby'
 import Keywords from "../../components/keywords"
 import Layout from "../../components/layout"
 import { Seo } from "../../components/Seo"
 import LTInterests from "../../components/longterm-interests"
 
-
-const _KEYWORDS = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/keywords.json'
-const CUTOFF = 19
 
 
 export function Head() {
@@ -25,28 +22,6 @@ export function Head() {
 
 
 export default function Interests() {
-  const [ keywords, setKeywords ] = useState([])
-  const [ isZoomed, setIsZoomed ] = useState(false)
-  const [ breadcrumb, setBreadcrumb ] = useState(null)
-
-  function zoom(val, bc = null) {
-    setIsZoomed(val)
-    setBreadcrumb(bc)
-  }
-
-  useEffect(() => {
-    fetch(_KEYWORDS)
-    .then(response => {
-      if (response.status >= 400) {
-        throw new Error("Bad response from server")
-      }
-      return response.json()
-    })
-    .then(keywords => setKeywords(keywords))
-  }, [])
-
-  const filtered_keywords = keywords.filter(kw => kw.num > CUTOFF)
-
   return (
     <Layout>
       <div className="ui container">
@@ -65,16 +40,9 @@ export default function Interests() {
                 tabIndex="-1"
               >Cloud</button>
             </div>
-            {
-              isZoomed &&
-                <div style={{float:'right', fontSize: 'initial', marginRight:'1em'}}>
-                  <span style={{marginRight: '1em'}}>{breadcrumb}</span>
-                  <i aria-hidden="true" onClick={() => zoom(false)} className="left circular arrow icon"></i>
-                </div>
-            }
         </div>
         <LTInterests />
-        <Keywords keywords={filtered_keywords} isZoomed={isZoomed} zoom={zoom} />
+        <Keywords />
       </div>
     </Layout>
   )
