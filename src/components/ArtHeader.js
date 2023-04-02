@@ -1,4 +1,6 @@
 "use client"
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 
 import { navigate } from 'gatsby'
 import React from "react"
@@ -30,6 +32,7 @@ export default function ArtHeader({generator, byline, totalCount}) {
             folder="midjourney"
             className={"item" + (generator === 'Midjourney' ? ' active' : '')}
             onClick={handleMenuClick}
+            onKeyDown={handleMenuClick}
           >
             Midjourney
           </a>
@@ -37,6 +40,7 @@ export default function ArtHeader({generator, byline, totalCount}) {
             folder="stablediffusion"
             className={"item" + (generator === 'Stable Diffusion' ? ' active' : '')}
             onClick={handleMenuClick}
+            onKeyDown={handleMenuClick}
           >
             Stable Diffusion
           </a>
@@ -44,6 +48,7 @@ export default function ArtHeader({generator, byline, totalCount}) {
             folder="dalle"
             className={"item" + (generator === 'DALL-E' ? ' active' : '')}
             onClick={handleMenuClick}
+            onKeyDown={handleMenuClick}
           >
             DALL-E 2
           </a>
@@ -51,6 +56,7 @@ export default function ArtHeader({generator, byline, totalCount}) {
             folder="latent-diffusion"
             className={"item" + (generator === 'Latent Diffusion' ? ' active' : '')}
             onClick={handleMenuClick}
+            onKeyDown={handleMenuClick}
           >
             Latent Diffusion
           </a>
@@ -58,6 +64,7 @@ export default function ArtHeader({generator, byline, totalCount}) {
             folder="vqganclip"
             className={"item" + (generator === 'VQGAN-CLIP' ? ' active' : '')}
             onClick={handleMenuClick}
+            onKeyDown={handleMenuClick}
           >
             VQGAN-CLIP
           </a>
@@ -65,6 +72,7 @@ export default function ArtHeader({generator, byline, totalCount}) {
             folder="misc"
             className={"item" + (generator === 'Misc. Text-To-Image Systems' ? ' active' : '')}
             onClick={handleMenuClick}
+            onKeyDown={handleMenuClick}
           >
             Misc.
           </a>

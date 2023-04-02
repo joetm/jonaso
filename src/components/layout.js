@@ -1,5 +1,3 @@
-"use client"
-
 // remove google font loading
 // import 'semantic-ui-css/components/site.min.css'
 import '../css/site.modded.min.css'
@@ -17,9 +15,9 @@ import '../print.css'
 import React from "react"
 import Nav from "./Nav.js"
 
-export default function Layout({ children }) {
+export default function Layout({ children, style={} }) {
   return (
-    <div style={{margin: `0 auto`, maxWidth: 1024, paddingBottom: '5em'}}>
+    <div style={{margin: `0 auto`, maxWidth: 1024, paddingBottom: '5em', ...style}}>
       <Nav />
       {children}
     </div>

@@ -25,25 +25,11 @@ export default function ArtPage() {
       setImages(data)
     }
     dataFetch()
-    // fetch(_URL)
-    // .then(res => {
-    //   if (res.status >= 400) {
-    //     console.log(_URL)
-    //     throw new Error("Bad response from server: Could not get images")
-    //   }
-    //   return res.json()
-    // })
-    // .then(images => {
-    //   setImages(images)
-    // })
-    // .catch(err => {
-    //   console.error(err)
-    // })
   }, [])
 
   return (
     <>
-      <Layout>
+      <Layout style={{paddingBottom: 0}}>
         <ArtHeader
           generator="AI-generated Images"
           byline="Latest digital images generated from text prompts (never edited). Click links below for more."
@@ -52,14 +38,14 @@ export default function ArtPage() {
       {
         !images.length && <Loader />
       }
-      <div id="true-masonry">
+      <div id="true-masonry" style={{paddingBottom:'5em'}}>
         <div className="grid-wrapper">
           {
             images.map((image, index) => (
-                <div key={image[0]} className={setAspectRatio(image, index)}>
-                    <img src={image[0]} decoding="async" loading="lazy" alt="" />
-                </div>
-              ))
+              <div key={image[0]} className={setAspectRatio(image, index)}>
+                <img src={image[0]} decoding="async" loading="lazy" alt="" />
+              </div>
+            ))
           }
         </div>
       </div>
