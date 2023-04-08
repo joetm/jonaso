@@ -163,7 +163,7 @@ export default function ReadingList() {
           {
             documents.length &&
               <table className="ui compact small stackable striped table" style={{fontSize:'.9rem'}}>
-                <thead>
+                <thead className="mobile hidden">
                   <tr>
                     <th className="left aligned">Title</th>
                     <th className="left aligned" style={{maxWidth:'350px'}}>Author(s)</th>

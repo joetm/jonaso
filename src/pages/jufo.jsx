@@ -1,8 +1,9 @@
 "use client"
 
-import React, { useState, useEffect } from "react"
+import React from "react"
 import Layout from "../components/layout"
 import { Seo } from "../components/Seo"
+import { useQuery } from '@tanstack/react-query'
 
 
 const _PUB_URL = '/static/references-detail.json'
@@ -18,23 +19,25 @@ export function Head() {
 
 
 export default function JufoPage() {
-  const [jufo, updateJufo] = useState(false)
-  useEffect(() => {
-    const fetchData = async () => {
-      const publications = await (
-        await fetch(_PUB_URL)
-      ).json()
-      const jufo = publications.map(x => x.jufo ? x.jufo : 0).reduce(( previousValue, currentValue ) => parseInt(previousValue, 10) + parseInt(currentValue, 10), 0)
-      updateJufo(jufo)
-    }
-    fetchData()
-  }, [])
+  const { isLoading, error, data } = useQuery({
+    queryKey: ['references-detail.json'],
+    queryFn: () => fetch(_PUB_URL)
+              .then((res) => res.json())
+              .then((pubs) => pubs.map(x => x.jufo ? x.jufo : 0).reduce(( previousValue, currentValue ) => parseInt(previousValue, 10) + parseInt(currentValue, 10), 0))
+  })
   return (
     <Layout>
       <div className="ui container">
         <h1>Jufo Points</h1>
         <section style={{textAlign:'center'}}>
-          <p style={{fontSize:'22pt'}}>{jufo ? <span>&asymp; {jufo}</span> : '...loading...'}</p>
+          <p style={{fontSize:'22pt'}}>
+            {
+              error && 'An error has occurred: ' + error.message
+            }
+            {
+              isLoading ? '...loading...' : <span>&asymp; {data}</span>
+            }
+          </p>
         </section>
       </div>
     </Layout>
