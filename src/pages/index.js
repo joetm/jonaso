@@ -1,5 +1,3 @@
-"use client"
-
 import 'semantic-ui-css/components/comment.min.css'
 import 'semantic-ui-css/components/grid.min.css'
 import 'semantic-ui-css/components/icon.min.css'
@@ -18,7 +16,7 @@ export const Head = () => (
   <Seo title="Jonas Oppenlaender, Doctor of Science (Technology)">
     <link id="canonical" rel="canonical" href="https://www.jonaso.de" />
   </Seo>
-)
+) //
 
 
 export default function Home() {
@@ -94,21 +92,21 @@ export default function Home() {
         </div>
 
         <div className="ui divider"></div>
-        <a href="https://www.linkedin.com/in/jonasopp/" target="_blank" rel="noopener noreferrer">
-            <i style={{display:'inline-block', width: '25px', height: '25px',
-              backgroundImage: `url(${LINKEDIN})`,
-              verticalAlign: 'middle', backgroundPosition: 'center center', lineHeight: 1,
-              margin: '0 0.5rem 0 0rem', backgroundSize: 'cover', opacity: 0.45}} title="Jonas Oppenlaender on LinkedIn"></i>
-        </a>
-        <a href="https://github.com/joetm" target="_blank" rel="noopener noreferrer">
-            <i title="Jonas Oppenlaender on GitHub" aria-hidden="true" className="grey github square big link icon"></i>
-        </a>
-        <a href="https://orcid.org/0000-0002-2342-1540">
-            <i title="Jonas Oppenlaender on ORCID" className="academicon ai ai-orcid-square ai-2x"></i>
-        </a>
-        <a href="https://scholar.google.com/citations?hl=de&user=ucO_QYQAAAAJ" target="_blank" rel="noopener noreferrer">
-            <i title="Jonas Oppenlaender on Google Scholar" className="academicon ai ai-google-scholar-square ai-2x"></i>
-        </a>
+          <a href="https://www.linkedin.com/in/jonasopp/" target="_blank" rel="noopener noreferrer">
+              <i style={{display:'inline-block', width: '25px', height: '25px',
+                backgroundImage: `url(${LINKEDIN})`,
+                verticalAlign: 'middle', backgroundPosition: 'center center', lineHeight: 1,
+                margin: '0 0.5rem 0 0rem', backgroundSize: 'cover', opacity: 0.45}} title="Jonas Oppenlaender on LinkedIn"></i>
+          </a>
+          <a href="https://github.com/joetm" target="_blank" rel="noopener noreferrer">
+              <i title="Jonas Oppenlaender on GitHub" aria-hidden="true" className="grey github square big link icon"></i>
+          </a>
+          <a href="https://orcid.org/0000-0002-2342-1540" target="_blank" rel="noopener noreferrer">
+              <i title="Jonas Oppenlaender on ORCID" className="academicon ai ai-orcid-square ai-2x"></i>
+          </a>
+          <a href="https://scholar.google.com/citations?hl=de&user=ucO_QYQAAAAJ" target="_blank" rel="noopener noreferrer">
+              <i title="Jonas Oppenlaender on Google Scholar" className="academicon ai ai-google-scholar-square ai-2x"></i>
+          </a>
       </div>
     </Layout>
   )
