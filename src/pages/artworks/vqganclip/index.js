@@ -10,7 +10,7 @@ import MasonryGallery from '../../../components/MasonryGallery'
 export default function ArtPage() {
   return (
     <>
-      <Layout>
+      <Layout style={{paddingBottom: 0}}>
         <ArtHeader generator='VQGAN-CLIP' totalCount={images.length} />
       </Layout>
       <MasonryGallery images={images} />
