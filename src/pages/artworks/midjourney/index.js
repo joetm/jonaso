@@ -22,7 +22,7 @@ export default function ArtPage() {
   })
   return (
     <>
-      <Layout>
+      <Layout style={{paddingBottom: 0}}>
         <ArtHeader generator='Midjourney' totalCount={images.length} />
       </Layout>
       {

@@ -13,7 +13,7 @@ import MasonryGallery from '../../../components/MasonryGallery'
 export default function ArtPage() {
   return (
     <>
-      <Layout>
+      <Layout style={{paddingBottom: 0}}>
         <ArtHeader generator='Misc. Text-To-Image Systems' totalCount={images.length} />
       </Layout>
       <MasonryGallery images={images} />
