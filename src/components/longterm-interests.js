@@ -1,27 +1,49 @@
 "use client"
 
 import React, { useState, useEffect } from "react"
-import { Line, LineChart, CartesianGrid, Tooltip, Legend, ResponsiveContainer, XAxis, YAxis } from 'recharts'
+import { Line, LineChart, CartesianGrid, Legend, ResponsiveContainer, XAxis, YAxis } from 'recharts'
 
 
 const _DATASOURCE = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/topkeyword-timeline.json'
 const HEIGHT = 350
 // const colorDefault = '#eb008c'
 // const colorZoomed = '#FF86A6'
-const colors = {
-  'a': '#eb008c', // ML
-  'b': '#F0E442', // Crowdsourcing
-  'c': '#56B4E9', // Creativity
-  'd': '#D55E00', // HCI
-  'e': '#CC79A7', // AI
-  'f': '#009E73', // NLP
-  'g': '#CC6677', // Social Media
-  'h': '#AAAAAA', // Future of Work
-  // 
+const lines = {
+  colors: {
+    'a': '#101010', // ML
+    'b': '#EB008C', // Crowdsourcing
+    'c': '#F0E442', // Creativity
+    'd': '#009E73', // HCI
+    'e': '#56B4E9', // AI
+    'f': '#101010', // NLP
+    // 'g': '#CC6677', // Social Media
+    // 'h': '#eb008c', // Future of Work
+    // CC79A7
+    // D55E00
+  },
+  dashing: {
+    'a': null, // ML
+    'b': '', // Crowdsourcing
+    'c': '', // Creativity
+    'd': '', // HCI
+    'e': '', // AI
+    'f': '4 1 2', // NLP
+    // 'g': '1', // Social Media
+    // 'h': '1', // Future of Work
+  },
 }
 
 export default function LTInterests() {
   const [ graphdata, setGraphData ] = useState({legend: {}, data: []})
+  const defaultStrokes = {
+    'a': 2, // ML
+    'b': 2, // Crowdsourcing
+    'c': 2, // Creativity
+    'd': 2, // HCI
+    'e': 2, // AI
+    'f': 2, // NLP
+  }
+  const [ strokes, setStrokes ] = useState(defaultStrokes)
 
   useEffect(() => {
     const dataFetch = async () => {
@@ -38,6 +60,21 @@ export default function LTInterests() {
   function formatXAxis(t) {
     const d = new Date(t * 1000)
     return `${d.getFullYear()}-${d.getMonth()}`
+  }
+
+  function handleLegendMouseOver(e) {
+    const newstrokes = { ...strokes, [e.value]: 5 }
+    setStrokes(newstrokes)
+  }
+  function handleLegendMouseOut() {
+    setStrokes(defaultStrokes)
+  }
+  function highlightLine(e) {
+    const newstrokes = { ...strokes, [e.id]: 5 }
+    setStrokes(newstrokes)
+  }
+  function unselectLine() {
+    setStrokes(defaultStrokes)
   }
 
   return (
@@ -67,16 +104,24 @@ export default function LTInterests() {
             */}
             <Legend
               formatter={(value, entry, index) => (<span>{graphdata.legend[value]}</span>)}
+              onMouseOver={handleLegendMouseOver}
+              onMouseOut={handleLegendMouseOut}
             />
             {
               Object.entries(graphdata.legend).map(e =>
                   <Line
                     key={`${e[0]}`}
+                    id={e[0]}
                     type="monotone"
                     dataKey={e[0]}
-                    stroke={colors[e[0]]}
-                    strokeWidth={2}
-                    fill={colors[e[0]]}
+                    stroke={lines.colors[e[0]]}
+                    strokeWidth={strokes[e[0]]}
+                    strokeDasharray={lines.dashing[e[0]]}
+                    fill={lines.colors[e[0]]}
+                    connectNulls={false}
+                    isAnimationActive={true}
+                    onMouseOver={highlightLine}
+                    onMouseOut={unselectLine}
                     dot={false}
                   />
               )
