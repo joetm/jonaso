@@ -64,7 +64,8 @@ for doc in docs:
 
 applications = {}
 for doc in appdocs:
-  id = to_camel_case(doc['keywords'][0] + ' > ' + doc['applications'][0])
+  # id = to_camel_case(doc['keywords'][0] + ' > ' + doc['applications'][0])
+  id = doc['keywords'][0] + ' > ' + doc['applications'][0]
   del doc['applications']
   applications.setdefault(id, []).append(doc)
 
