@@ -44,10 +44,10 @@ def to_camel_case(s):
     return ' '.join(word.capitalize() for word in words)
 
 def split_list_at_element(lst, element):
-  lst = [ x.lower() for x in lst ]
+  lowerlst = [ x.lower() for x in lst ]
   element = element.lower()
-  if element in lst:
-      index = lst.index(element)
+  if element in lowerlst:
+      index = lowerlst.index(element)
       # return lst[:index], lst[index + 1:]
       return lst[index + 1:]
   else:

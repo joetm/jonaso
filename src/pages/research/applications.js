@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState, useEffect } from "react"
+// import { BarChart, Bar, CartesianGrid, ResponsiveContainer, XAxis, YAxis } from "recharts"
 import Layout from "../../components/layout"
 // import { Seo } from "../../components/Seo"
 
@@ -20,7 +21,7 @@ const _URL = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list
 
 export default function ApplicationInterests() {
   const [ applications, setApplications ] = useState({})
-  const [ aggregates, setAggregates ] = useState({})
+  const [ aggregates, setAggregates ] = useState([])
 
   useEffect(() => {
     const dataFetch = async () => {
@@ -30,14 +31,14 @@ export default function ApplicationInterests() {
       const agg = {}
       Object.keys(data).forEach(k => {
         const t = k.split('>')[0]
-        if (agg[t]) {
-          agg[t] += 1
-        } else {
-          agg[t] = 1      
-        }
+        agg[t] = agg[t] ? agg[t] + 1 : 1
       })
-      console.log('aggregates', agg)
-      setAggregates(agg)
+      const agglist = []
+      Object.keys(agg).forEach(k => {
+        agglist.push({name: k, value: agg[k]})
+      })
+      console.log('agglist', agglist)
+      setAggregates(agglist)
     }
     dataFetch()
   }, [])
@@ -55,15 +56,26 @@ export default function ApplicationInterests() {
             <h2>Application Area Interests</h2>
         </div>
 
+        {/*
+        <ResponsiveContainer width="100%" height={750}>
+          <BarChart width={730} height={750} layout="vertical" data={aggregates}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <YAxis type="category" dataKey="name" />
+            <XAxis type="number" domain={['dataMin', 'dataMax']} />
+            <Bar dataKey="value" fill="#82ca9d" />
+          </BarChart>
+        </ResponsiveContainer>
+        */}
+
         {
           aggKeys &&
             <div className="ui segment" style={{marginBottom: '2rem'}}>
               {
-                aggKeys.map(key => (
-                  <div key={`agg${key}`} style={{display:'inline-block', marginRight: '1rem'}}>
-                    <span className="ui basic blue label">{key}</span>
+                aggregates.map(obj => (
+                  <div key={`agg${obj.name}`} style={{display:'inline-block', marginRight: '1rem'}}>
+                    <span className="ui basic blue label">{obj.name}</span>
                     {' '}
-                    {aggregates[key]}
+                    {obj.value}
                   </div>
                 ))
               }
@@ -72,7 +84,7 @@ export default function ApplicationInterests() {
 
         {
           appKeys &&
-            appKeys.map(key => <div>{key}</div>)
+            appKeys.map(key => <div key={key}>{key}</div>)
         }
 
       </div>
