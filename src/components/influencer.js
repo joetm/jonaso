@@ -23,8 +23,10 @@ const styles = {
 }
 
 
-export default function AuthorList({ activeid, updateActive, list, activeAuthors }) {
+export default function AuthorList({ list }) {
   const [details, setDetails] = useState({})
+  const [activeid, setActiveid] = useState(null)
+  const [activeAuthors, setActiveAuthors] = useState([])
   const [activeKeyword, setActiveKeyword] = useState(null)
   const [coauthorToggleActive, setCoauthorToggleActive] = useState(false)
   const [coauthors, setCoauthors] = useState([])
@@ -48,6 +50,20 @@ export default function AuthorList({ activeid, updateActive, list, activeAuthors
     })
   }, [])
 
+  function updateActive(obj) {
+    console.log(obj)
+    if (obj.activeid) {
+      setActiveid(obj.activeid)
+    }
+    if (obj.activeAuthors) {
+      setActiveAuthors(obj.activeAuthors)
+    }
+  }
+
+  function closeSidebar() {
+      setActiveid(null)
+      setActiveAuthors([])
+  }
 
   function keywordClick(e) {
     const keyword = e.target.innerText
@@ -154,29 +170,30 @@ export default function AuthorList({ activeid, updateActive, list, activeAuthors
            // return the list of authors
             return (
               <div key={`${index}_${author.id}`} id={author.id}>
-              <a
-                className={"ui label " + labelColor}
-                style={{...styles.label, opacity: author.name === 'Jonas Oppenlaender' ? 0.6 : 1}}
-                color={labelColor}
-                title={(author.num > 1 ? author.num + ' publications' : author.num + ' publication') + ', priority ' + author.priority}
-                onClick={() => getAuthorDetails(author)}
-              >
-                {
-                  coauthors.includes(author.name.toLowerCase()) ? (<span style={styles.coauthor}>{author.name}</span>) : author.name
-                }
-                <div className="detail">{author.num} | {author.priority}</div>
-              </a>
-                {details[author.id] && activeid === author.id &&
-                  <Sidebar
-                  	authorid={author.id}
-                  	activeKeyword={activeKeyword}
-                  	details={details[author.id]}
-                  	keywordClick={keywordClick}
-                    toggleCoauthors={toggleCoauthors}
-                    coauthorToggleActive={coauthorToggleActive}
-                    updateActive={updateActive}
-                  />
-                }
+                <a
+                  className={"ui label " + labelColor}
+                  style={{...styles.label, opacity: author.name === 'Jonas Oppenlaender' ? 0.6 : 1}}
+                  color={labelColor}
+                  title={(author.num > 1 ? author.num + ' publications' : author.num + ' publication') + ', priority ' + author.priority}
+                  onClick={() => getAuthorDetails(author)}
+                >
+                  {
+                    coauthors.includes(author.name.toLowerCase()) ? (<span style={styles.coauthor}>{author.name}</span>) : author.name
+                  }
+                  <div className="detail">{author.num} | {author.priority}</div>
+                </a>
+                  {details[author.id] && activeid === author.id &&
+                    <Sidebar
+                    	authorid={author.id}
+                    	activeKeyword={activeKeyword}
+                    	details={details[author.id]}
+                    	keywordClick={keywordClick}
+                      closeSidebar={closeSidebar}
+                      toggleCoauthors={toggleCoauthors}
+                      coauthorToggleActive={coauthorToggleActive}
+                      updateActive={updateActive}
+                    />
+                  }
               </div>
             )
           })
