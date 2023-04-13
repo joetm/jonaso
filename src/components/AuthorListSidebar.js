@@ -36,16 +36,16 @@ const Wrapper = {
       <div style={{clear:'both'}}></div>
     </div>
   ),
-  CoauthorWrapper: ({authorid, toggleCoauthors, coauthorToggleActive, updateActive}) => (
+  CoauthorWrapper: ({authorid, toggleCoauthors, coauthorToggleActive, closeSidebar}) => (
     <div className="ui segment wrapperBox">
       <div>
-        <i class="close icon"
+        <i className="close icon"
           role="button" aria-label="close"
           tabIndex={0}
           title="Close sidebar"
           style={{float:'right', cursor:'pointer'}}
-          onClick={() => updateActive({activeid: null, activeAuthors: []})}
-          onKeyDown={() => updateActive({activeid: null, activeAuthors: []})}
+          onClick={closeSidebar}
+          onKeyDown={closeSidebar}
         ></i>
 
         <Checkbox
@@ -70,48 +70,50 @@ const Wrapper = {
 
 
 
-export default function DetailContainer({authorid, details, keywordClick, activeKeyword, toggleCoauthors, coauthorToggleActive, updateActive}) {
+export default function DetailContainer({authorid, details, keywordClick, activeKeyword, toggleCoauthors, coauthorToggleActive, closeSidebar}) {
 
   const { docs=[], keywords=[], orcid='', affiliations='' } = details
   // const kwlist = keywords.join(", ")
   const kwlist = keywords.map((kw, i) => (
     <span
+      key={`kw${i}${authorid}${kw}`}
       role="presentation"
       style={styles.label}
       className={`ui ${activeKeyword === kw ? 'orange' : 'teal'} mini label`}
       onClick={e => keywordClick(e)}
       onKeyDown={e => keywordClick(e)}
-      key={`kw${i}${authorid}${kw}`}
     >{kw}</span>
   ))
 
-  let priocount = {'3': 0, '2': 0, '1': 0, '0': 0}
+  let priocount = {'3': 0, '2': 0, '1': 0, '0': 0}; //
   const doctotal = docs.length
   docs.forEach(doc => { priocount[""+doc.priority] += 1 })
   priocount = Object.map(priocount, function(v, k, o) {
      return roundInt(v/doctotal * 100)
-  });
+  }); //
 
   const ratios = []
   Object.keys(priocolors).reverse().forEach(k => {
-    ratios.push(<span class={`ui ${priocolors[k]} label`}>{priocount[k]}%</span>)
+    ratios.push(<span key={priocolors[k]} className={`ui ${priocolors[k]} label`}>{priocount[k]}%</span>)
   }) //
   const ratio321 = (<span>{ratios}</span>) //
 
   const publist = sortByKey(docs, 'priority').map((doc, i) => (
-          <li className="abbrev" key={`p${i}${authorid}${doc.priority}${doc.title}`}><span class={`ui ${priocolors[doc.priority]} circular label docprio`}>{doc.priority}</span> {doc.title}</li>
-      )) //
+          <li className="abbrev" key={`p${i}${authorid}${doc.priority}${doc.title}`}><span className={`ui ${priocolors[doc.priority]} circular label docprio`}>{doc.priority}</span> {doc.title}</li>
+      ))
 
   return (
     <div className="ui right visible wide sidebar" key={`a-a${authorid}`} style={{backgroundColor: 'inherit'}}>
       <h2 className="ui header" style={{marginTop:'1rem'}}>Author details</h2>
       {
-        orcid && <div style={{textAlign:'center'}}>{orcid}</div>
+        orcid &&
+          <div style={{textAlign:'center'}}>{orcid}</div>
       }
       {
-        affiliations && <div style={{textAlign:'center'}}>{affiliations.split(',').map(a => (<div>{a}</div>))}</div>
+        affiliations &&
+          <div style={{textAlign:'center'}}>{affiliations.split(',').map(a => (<div key={a}>{a}</div>))}</div>
       }
-      <Wrapper.CoauthorWrapper authorid={authorid} updateActive={updateActive} toggleCoauthors={toggleCoauthors} coauthorToggleActive={coauthorToggleActive} />
+      <Wrapper.CoauthorWrapper authorid={authorid} closeSidebar={closeSidebar} toggleCoauthors={toggleCoauthors} coauthorToggleActive={coauthorToggleActive} />
       <Wrapper.KeywordWrapper title="Keywords" items={kwlist} />
       <Wrapper.PubWrapper title="Publications" items={publist} ratio321={ratio321} />
     </div>

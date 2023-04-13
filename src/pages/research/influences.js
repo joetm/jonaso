@@ -27,17 +27,6 @@ export function Head() {
 
 export default function Influencers() {
   const [influencer, setInfluencer] = useState([])
-  const [activeid, setActiveid] = useState(null)
-  const [activeAuthors, setActiveAuthors] = useState([])
-
-  function updateActive(obj) {
-    if (obj.activeid) {
-      setActiveid(obj.activeid)
-    }
-    if (obj.activeAuthors) {
-      setActiveAuthors(obj.activeAuthors)
-    }
-  }
 
   useEffect(() => {
     fetch(_FLATINFLUENCER).then(res => res.json())
@@ -91,12 +80,7 @@ export default function Influencers() {
         { isProd && isLoading && <Loading /> }
 
         <div className="clear">
-          <AuthorList
-            list={influencer}
-            activeid={activeid}
-            activeAuthors={activeAuthors}
-            updateActive={updateActive}
-          />
+          <AuthorList list={influencer} />
         </div>
       </div>
     </Layout>
