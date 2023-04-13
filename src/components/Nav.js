@@ -70,13 +70,14 @@ export default function Nav() {
         {
           researchNavOpen &&
             <div className="ui small pointing secondary stackable seven item menu">
-              <MenuItem key="researchinterests"  active={activeItem === 'research' || activeItem === 'researchinterests'}  item='Interests' url='/research/interests' handleItemClick={handleItemClick} />
-              <MenuItem key="researchprojects"   active={activeItem === 'researchprojects'}   item='Projects' url='/research/projects' handleItemClick={handleItemClick} />
-              <MenuItem key="researchreading"    active={activeItem === 'researchreading'}    item='Reading' url='/research/reading' handleItemClick={handleItemClick} />
+              <MenuItem key="researchinterests"    active={activeItem === 'research' || activeItem === 'researchinterests'}  item='Interests' url='/research/interests' handleItemClick={handleItemClick} />
+              <MenuItem key="researchapplications" active={activeItem === 'researchapplications'} item='Application Domains' url='/research/applications' handleItemClick={handleItemClick} />
+              <MenuItem key="researchprojects"     active={activeItem === 'researchprojects'}     item='Projects' url='/research/projects' handleItemClick={handleItemClick} />
+              <MenuItem key="researchreading"      active={activeItem === 'researchreading'}      item='Reading' url='/research/reading' handleItemClick={handleItemClick} />
               {/*
-              <MenuItem key="researchnetwork"    active={activeItem === 'researchnetwork'}    item='Network' url='/research/network' handleItemClick={handleItemClick} />
+              <MenuItem key="researchnetwork"      active={activeItem === 'researchnetwork'}      item='Network' url='/research/network' handleItemClick={handleItemClick} />
               */}
-              <MenuItem key="researchinfluences" active={activeItem === 'researchinfluences'} item='Influences' url='/research/influences' handleItemClick={handleItemClick} />
+              <MenuItem key="researchinfluences"   active={activeItem === 'researchinfluences'}   item='Influences' url='/research/influences' handleItemClick={handleItemClick} />
             </div>
         }
       </div>
