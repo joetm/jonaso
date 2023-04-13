@@ -22,6 +22,7 @@ const _URL = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list
 export default function ApplicationInterests() {
   const [ applications, setApplications ] = useState({})
   const [ aggregates, setAggregates ] = useState([])
+  const [ expandedKey, setExpandedKey ] = useState(null)
 
   useEffect(() => {
     const dataFetch = async () => {
@@ -46,9 +47,21 @@ export default function ApplicationInterests() {
   const appKeys = Object.keys(applications)
   appKeys.sort()
 
-  const aggKeys = Object.keys(aggregates)
-  aggKeys.sort()
+  function toggleCategory(newKey) {
+    if (expandedKey === newKey) { setExpandedKey(null) }
+    else { setExpandedKey(newKey) }
+  }
+  function toggleSubCategory(newKey) {
+    if (expandedKey === newKey) { setExpandedKey(null) }
+    else { setExpandedKey(newKey) }
+  }
 
+  console.log('===')
+  console.log('appKeys', appKeys)
+  console.log('applications', applications)
+  console.log('aggregates', aggregates)
+  console.log('===')
+  
   return (
     <Layout>
       <div className="ui container">
@@ -68,24 +81,57 @@ export default function ApplicationInterests() {
         */}
 
         {
-          aggKeys &&
-            <div className="ui segment" style={{marginBottom: '2rem'}}>
+          aggregates &&
+            <div>
               {
                 aggregates.map(obj => (
-                  <div key={`agg${obj.name}`} style={{display:'inline-block', marginRight: '1rem'}}>
-                    <span className="ui basic blue label">{obj.name}</span>
-                    {' '}
-                    {obj.value}
+                  <div key={`agg${obj.name}`} style={{marginBottom: '1rem'}}>
+                    <div
+                      className="ui basic blue label"
+                      style={{marginBottom: '1rem', cursor: 'pointer'}}
+                      onClick={() => toggleCategory(obj.name)}
+                    >
+                      <strong>{obj.name}</strong>
+                      <div class="detail">{obj.value}</div>
+                    </div>
+                    {
+                      appKeys &&
+                        appKeys.map(key => key.startsWith(obj.name) ?
+                              <div
+                                key={key}
+                                onClick={() => toggleSubCategory(key)}
+                                style={{cursor: 'pointer'}}
+                              >
+                                {key.replace(obj.name, '')}
+                                <div>
+                                  <ul style={{display: expandedKey === obj.name || expandedKey === key ? 'block' : 'none', margin: 0}}>
+                                    {
+                                      applications[key].map(d => (
+                                        <li>{d.title} ({d.year})</li>
+                                      ))
+                                    }
+                                  </ul>
+                                </div>
+                              </div>
+                            :
+                              null
+                        )
+                    }
                   </div>
                 ))
               }
             </div>
         }
 
-        {
+        {/*
+          aggregates &&
+            aggregates.map(obj => <div key={obj.name}>{obj.name} - {obj.value}</div>)
+        */}
+
+        {/*
           appKeys &&
             appKeys.map(key => <div key={key}>{key}</div>)
-        }
+        */}
 
       </div>
     </Layout>
