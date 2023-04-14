@@ -51,13 +51,8 @@ export default function AuthorList({ list }) {
   }, [])
 
   function updateActive(obj) {
-    console.log(obj)
-    if (obj.activeid) {
-      setActiveid(obj.activeid)
-    }
-    if (obj.activeAuthors) {
-      setActiveAuthors(obj.activeAuthors)
-    }
+    setActiveid(obj.activeid || null)
+    setActiveAuthors(obj.activeAuthors || [])
   }
 
   function closeSidebar() {
@@ -73,22 +68,23 @@ export default function AuthorList({ list }) {
     if (keyword === activeKeyword) {
       // deselect this author
       setActiveKeyword(null)
-      updateActive({ activeAuthors: [] })
+      setActiveAuthors([])
       return
     }
     // load the authors of this keyword
     const kwid = md5(keyword)
     fetch(`https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/keywordauthors/${kwid}.json`)
     .then(res => res.json())
-    .then(activeAuthors => {
+    .then(aAuthors => {
+      console.log('aAuthors', aAuthors)
   	  setActiveKeyword(keyword)
-  	  updateActive({ activeAuthors })
+  	  setActiveAuthors(aAuthors)
     })
   }
 
   function toggleCoauthors(authorid) {
     if (coauthorToggleActive) {
-      updateActive({ activeAuthors: [] })
+      setActiveAuthors([])
       // deselect highlighted keyword
       // deselect all highlighted coauthors
       setActiveKeyword(null)
@@ -98,8 +94,8 @@ export default function AuthorList({ list }) {
     setCoauthorToggleActive(true)
     const url = `https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/coauthors/${authorid}.json`
     fetch(url).then(res => res.json())
-    .then(activeAuthors => {
-      updateActive({ activeAuthors })
+    .then(aAuthors => {
+      setActiveAuthors(aAuthors)
       // deselect highlighted keyword
       setActiveKeyword(null)
     })
@@ -121,11 +117,10 @@ export default function AuthorList({ list }) {
     // reset the highlighted labels
     setActiveKeyword(null)
     setCoauthorToggleActive(false)
-    updateActive({activeAuthors: []})
+    setActiveAuthors([])
     // cache check
     if (details[id]) {
-      // console.log('cache hit for', id)
-      updateActive({activeid: id})
+      setActiveid(id)
       return
     }
     // load from remote
@@ -158,7 +153,6 @@ export default function AuthorList({ list }) {
             }
             // label color
             let labelColor = null
-            // TODO
             if (activeAuthors.includes(author.id)) {
           		labelColor = 'yellow'
             }
@@ -169,7 +163,10 @@ export default function AuthorList({ list }) {
         	 // labelColor = scaleLabelColor(author.priority / maxPrio)
            // return the list of authors
             return (
-              <div key={`${index}_${author.id}`} id={author.id}>
+              <div
+                key={`${index}_${author.id}`}
+                id={author.id}
+              >
                 <a
                   className={"ui label " + labelColor}
                   style={{...styles.label, opacity: author.name === 'Jonas Oppenlaender' ? 0.6 : 1}}
