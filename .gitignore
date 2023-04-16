@@ -6,6 +6,8 @@ ENV
 .env.development
 .env.production
 
+geckodriver.log
+
 artworks/*
 # public/artworks/*
 public/artworks/**/*.webp
