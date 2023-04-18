@@ -6,6 +6,8 @@ ENV
 .env.development
 .env.production
 
+src/countries.json
+
 geckodriver.log
 
 artworks/*
