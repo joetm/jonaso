@@ -24,9 +24,6 @@ const MenuItem = ({active, handleItemClick, item, url = null}) => {
     ) //
 }
 
-function prepareUrl(url) {
-  return url.replace(/\//g, '').toLowerCase()
-}
 
 export default function Nav() {
   const [activeItem, setActiveItem] = useState('')
@@ -51,7 +48,7 @@ export default function Nav() {
   }
 
   useEffect(() => {
-    const url = prepareUrl(window.location.pathname)
+    const url = window.location.pathname.replace(/\//g, '').toLowerCase()
     setActiveItem(url || 'home')
     const navstate = url.startsWith('research') || url.startsWith('projects')
     setResearchNavOpen(navstate)
@@ -70,9 +67,9 @@ export default function Nav() {
         {
           researchNavOpen &&
             <div className="ui small pointing secondary stackable seven item menu">
+              <MenuItem key="researchprojects"     active={activeItem === 'researchprojects'}     item='Projects' url='/research/projects' handleItemClick={handleItemClick} />
               <MenuItem key="researchinterests"    active={activeItem === 'research' || activeItem === 'researchinterests'}  item='Interests' url='/research/interests' handleItemClick={handleItemClick} />
               <MenuItem key="researchapplications" active={activeItem === 'researchapplications'} item='Application Domains' url='/research/applications' handleItemClick={handleItemClick} />
-              <MenuItem key="researchprojects"     active={activeItem === 'researchprojects'}     item='Projects' url='/research/projects' handleItemClick={handleItemClick} />
               <MenuItem key="researchreading"      active={activeItem === 'researchreading'}      item='Reading' url='/research/reading' handleItemClick={handleItemClick} />
               {/*
               <MenuItem key="researchnetwork"      active={activeItem === 'researchnetwork'}      item='Network' url='/research/network' handleItemClick={handleItemClick} />
