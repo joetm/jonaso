@@ -183,7 +183,6 @@ export default function Publications() {
               title="Publications per year"
               className="ui button"
               disabled={!typeIsActive}
-              positive={!typeIsActive}
               onClick={togglePubView}
             >YEAR</button>
             <div className="or"></div>
@@ -193,7 +192,6 @@ export default function Publications() {
               tabIndex="-1"
               onClick={togglePubView}
               disabled={typeIsActive}
-              positive={typeIsActive}
             >TYPE</button>
           </div>
 
