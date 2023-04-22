@@ -3,20 +3,20 @@
 import React, { useState, useEffect } from "react"
 // import { BarChart, Bar, CartesianGrid, ResponsiveContainer, XAxis, YAxis } from "recharts"
 import Layout from "../../components/layout"
-// import { Seo } from "../../components/Seo"
+import { Seo } from "../../components/Seo"
 
 
 const _URL = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/interest-applicationareas.json'
 
 
-// export function Head() {
-//   const escape = '/'
-//   return (
-//     <Seo title={`Research Interests ${escape}${escape} jonaso.de`}>
-//       <link id="canonical" rel="canonical" href="https://www.jonaso.de/interests/" />
-//     </Seo>
-//   ) //
-// }
+export function Head() {
+  const escape = '/'
+  return (
+    <Seo title={`Application Domain Interests ${escape}${escape} jonaso.de`}>
+      <link id="canonical" rel="canonical" href="https://www.jonaso.de/research/applications/" />
+    </Seo>
+  ) //
+}
 
 
 export default function ApplicationInterests() {
@@ -38,14 +38,10 @@ export default function ApplicationInterests() {
       Object.keys(agg).forEach(k => {
         agglist.push({name: k, value: agg[k]})
       })
-      console.log('agglist', agglist)
       setAggregates(agglist)
     }
     dataFetch()
   }, [])
-
-  const appKeys = Object.keys(applications)
-  appKeys.sort()
 
   function toggleCategory(newKey) {
     if (expandedKey === newKey) { setExpandedKey(null) }
@@ -56,17 +52,14 @@ export default function ApplicationInterests() {
     else { setExpandedKey(newKey) }
   }
 
-  console.log('===')
-  console.log('appKeys', appKeys)
-  console.log('applications', applications)
-  console.log('aggregates', aggregates)
-  console.log('===')
-  
+  const appKeys = Object.keys(applications)
+  appKeys.sort()
+
   return (
     <Layout>
       <div className="ui container">
         <div className="ui segment" style={{clear:'both', border:0, boxShadow: '0px 0px 0px #FFFFFF'}}>
-            <h2>Application Area Interests</h2>
+            <h2>Application Domain Interests</h2>
         </div>
 
         {/*
@@ -85,14 +78,17 @@ export default function ApplicationInterests() {
             <div>
               {
                 aggregates.map(obj => (
-                  <div key={`agg${obj.name}`} style={{marginBottom: '1rem'}}>
+                  <div
+                    key={`agg${obj.name}`}
+                    style={{marginBottom: '1rem'}}
+                  >
                     <div
                       className="ui basic blue label"
                       style={{marginBottom: '1rem', cursor: 'pointer'}}
                       onClick={() => toggleCategory(obj.name)}
                     >
                       <strong>{obj.name}</strong>
-                      <div class="detail">{obj.value}</div>
+                      <div className="detail">{obj.value}</div>
                     </div>
                     {
                       appKeys &&
@@ -107,7 +103,7 @@ export default function ApplicationInterests() {
                                   <ul style={{display: expandedKey === obj.name || expandedKey === key ? 'block' : 'none', margin: 0}}>
                                     {
                                       applications[key].map(d => (
-                                        <li>{d.title} ({d.year})</li>
+                                        <li key={d.title}>{d.title} ({d.year})</li>
                                       ))
                                     }
                                   </ul>
@@ -122,16 +118,6 @@ export default function ApplicationInterests() {
               }
             </div>
         }
-
-        {/*
-          aggregates &&
-            aggregates.map(obj => <div key={obj.name}>{obj.name} - {obj.value}</div>)
-        */}
-
-        {/*
-          appKeys &&
-            appKeys.map(key => <div key={key}>{key}</div>)
-        */}
 
       </div>
     </Layout>

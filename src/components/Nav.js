@@ -3,6 +3,7 @@
 import { navigate } from "gatsby"
 import React, { useEffect, useState } from "react"
 
+
 const styles = {
   navSpacer: {
     marginBottom: '2em',
@@ -14,10 +15,12 @@ const MenuItem = ({active, handleItemClick, item, url = null}) => {
     return (
       <a
         key={item}
-        className={"item" + (active ? ' active' : '')}
+        href={url}
         name={item}
-        url={url}
+        tabIndex={-42}
+        role='presentation'
         onClick={handleItemClick}
+        className={"item" + (active ? ' active' : '')}
       >
         {item}
       </a>
@@ -31,9 +34,8 @@ export default function Nav() {
 
   function handleItemClick(e) {
     e.preventDefault()
-    const name = e.target.name
-    let targeturl = e.target.getAttribute('url')
-    const activeItem = name.toLowerCase()
+    let targeturl = e.target.getAttribute('href')
+    const activeItem = e.target.name.toLowerCase()
     setActiveItem(activeItem)
     if (targeturl) {
       targeturl = targeturl.charAt(0) === '/' ? targeturl.slice(1) : targeturl;
@@ -67,14 +69,43 @@ export default function Nav() {
         {
           researchNavOpen &&
             <div className="ui small pointing secondary stackable seven item menu">
-              <MenuItem key="researchprojects"     active={activeItem === 'researchprojects'}     item='Projects' url='/research/projects' handleItemClick={handleItemClick} />
-              <MenuItem key="researchinterests"    active={activeItem === 'research' || activeItem === 'researchinterests'}  item='Interests' url='/research/interests' handleItemClick={handleItemClick} />
-              <MenuItem key="researchapplications" active={activeItem === 'researchapplications'} item='Application Domains' url='/research/applications' handleItemClick={handleItemClick} />
-              <MenuItem key="researchreading"      active={activeItem === 'researchreading'}      item='Reading' url='/research/reading' handleItemClick={handleItemClick} />
+              <MenuItem
+                key="researchprojects"
+                active={activeItem === 'researchprojects'}
+                item='Projects'
+                url='/research/projects'
+                handleItemClick={handleItemClick}
+              />
+              <MenuItem
+                key="researchinterests"
+                active={activeItem === 'research' || activeItem === 'researchinterests'}
+                item='Interests'
+                url='/research/interests'
+                handleItemClick={handleItemClick}
+              />
+              <MenuItem
+                key="researchapplications"
+                active={activeItem === 'researchapplications'}
+                item='Application Domains'
+                url='/research/applications'
+                handleItemClick={handleItemClick}
+              />
+              <MenuItem
+                key="researchreading"
+                active={activeItem === 'researchreading'}
+                item='Reading'
+                url='/research/reading'
+                handleItemClick={handleItemClick}
+              />
               {/*
               <MenuItem key="researchnetwork"      active={activeItem === 'researchnetwork'}      item='Network' url='/research/network' handleItemClick={handleItemClick} />
               */}
-              <MenuItem key="researchinfluences"   active={activeItem === 'researchinfluences'}   item='Influences' url='/research/influences' handleItemClick={handleItemClick} />
+              <MenuItem key="researchinfluences"
+                active={activeItem === 'researchinfluences'}
+                item='Influences'
+                url='/research/influences'
+                handleItemClick={handleItemClick}
+              />
             </div>
         }
       </div>
