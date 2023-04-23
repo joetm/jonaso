@@ -113,6 +113,7 @@ for ts in timeline.keys():
   obj = timeline[ts]
   obj['t'] = ts
   outdata.append(obj)
+outdata.sort(key=lambda x: x['t'], reverse=False)
 # fill missing keys with null
 keys = legend.keys()
 for i in range(len(outdata)):
