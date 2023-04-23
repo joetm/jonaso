@@ -16,8 +16,8 @@ const lines = {
     'd': '#009E73', // HCI
     'e': '#56B4E9', // AI
     'f': '#101010', // NLP
-    // 'g': '#CC6677', // Social Media
-    // 'h': '#eb008c', // Future of Work
+    'g': '#CC6677', // 
+    'h': '#eb008c', // 
     // CC79A7
     // D55E00
   },
@@ -28,8 +28,8 @@ const lines = {
     'd': '', // HCI
     'e': '', // AI
     'f': '4 1 2', // NLP
-    // 'g': '1', // Social Media
-    // 'h': '1', // Future of Work
+    'g': '1', // 
+    'h': '1', // 
   },
 }
 
@@ -42,6 +42,7 @@ export default function LTInterests() {
     'd': 2, // HCI
     'e': 2, // AI
     'f': 2, // NLP
+    'g': 2, // 
   }
   const [ strokes, setStrokes ] = useState(defaultStrokes)
 
@@ -52,6 +53,8 @@ export default function LTInterests() {
       ).json()
       // skip the last quarter to prevent the graph to drop off due to running month
       // data.data = data.data.slice(0, -3)
+      // start date filtering
+      data.data = data.data.filter(o => o.t > 1483221600) // 2017-01-01
       setGraphData(data)
     }
     dataFetch()
@@ -90,7 +93,7 @@ export default function LTInterests() {
               dataKey="t"
               domain={['dataMin','dataMax']}
               tickFormatter={formatXAxis}
-              tickCount={12}
+              tickCount={24}
             />
             <YAxis
               domain={[0, 'dataMax']}
@@ -112,7 +115,7 @@ export default function LTInterests() {
                   <Line
                     key={`${e[0]}`}
                     id={e[0]}
-                    type="monotone"
+                    type="linear"
                     dataKey={e[0]}
                     stroke={lines.colors[e[0]]}
                     strokeWidth={strokes[e[0]]}
