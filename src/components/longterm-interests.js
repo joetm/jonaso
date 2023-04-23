@@ -51,7 +51,7 @@ export default function LTInterests() {
         await fetch(_DATASOURCE)
       ).json()
       // skip the last quarter to prevent the graph to drop off due to running month
-      data.data = data.data.slice(0, -3)
+      // data.data = data.data.slice(0, -3)
       setGraphData(data)
     }
     dataFetch()
