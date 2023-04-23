@@ -127,6 +127,7 @@ output = {
   'data': outdata,
   'start': mindatestamp,
   'end': maxdatestamp,
+  'days': DAYS,
 }
 
 with open('topkeyword-timeline.json', 'w') as f:
