@@ -10,7 +10,7 @@ from datetime import datetime
 
 filter = ['Issues', 'General, Theory', 'Research Methods', 'Applications', 'Communities, Networks']
 CUTOFF = 11
-DAYS = 90
+DAYS = 30
 
 
 def convertToDate(timestamp):
@@ -47,6 +47,8 @@ interval = DAYS * (24 * 60 * 60)
 bindocs = {}
 for tstamp in range(mindatestamp, maxdatestamp + interval, interval):
   for d in docs:
+    if not d['priority'] > 0:
+      continue
     # identify the bin
     if d['modified'] <= tstamp:
       continue
