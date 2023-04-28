@@ -12,7 +12,7 @@ import cv from "../cv.json"
 import pcsreviews from "../../stat_aggregator/peer-reviews.json"
 
 
-const _PORTFOLIO_URL = '/portfolio/'
+const _PORTFOLIO_URL = 'https://komasurfer.com/portfolio/'
 // const _PEERREVIEWS_URL = 'https://raw.githubusercontent.com/joetm/jonaso/master/stat_aggregator/peer-reviews.json'
 
 
