@@ -83,6 +83,7 @@ export default function Nav() {
                 url='/research/interests'
                 handleItemClick={handleItemClick}
               />
+              {/*
               <MenuItem
                 key="researchapplications"
                 active={activeItem === 'researchapplications'}
@@ -90,6 +91,7 @@ export default function Nav() {
                 url='/research/applications'
                 handleItemClick={handleItemClick}
               />
+              */}
               <MenuItem
                 key="researchreading"
                 active={activeItem === 'researchreading'}
