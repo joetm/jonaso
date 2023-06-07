@@ -1,8 +1,141 @@
 {
-    "modified": 1685889572,
+    "modified": 1686149010,
     "unrecognized_overall": 1074,
     "unrecognized_overall_percent": 0.1,
     "documents": [
+        {
+            "title": "AngleKindling: Supporting Journalistic Angle Ideation with Large Language Models",
+            "year": 2023,
+            "authors": [
+                "Savvas Petridis",
+                "Nicholas Diakopoulos",
+                "Kevin Crowston",
+                "Mark Hansen",
+                "Keren Henderson",
+                "Stan Jastrzebski",
+                "Jefrey V. Nickerson",
+                "Lydia B. Chilton"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1686142861,
+            "keywords": "NLP > Applications > Journalism > Angles for Reporting > AngleKindling",
+            "level": 5,
+            "priority": 3
+        },
+        {
+            "title": "FOCUS: DEVOPS",
+            "year": 2023,
+            "authors": [
+                "Ali Basiri",
+                "Niosha Behnam",
+                "Ruud de Rooij",
+                "Lorin Hochstein",
+                "Luke Kosewski",
+                "Justin Reynolds"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1686142569,
+            "keywords": "Software Development > Chaos Engineering",
+            "level": 2,
+            "priority": 1
+        },
+        {
+            "title": "DevOps",
+            "year": 2023,
+            "authors": [
+                "Christof Ebert",
+                "Gorka Gallardo",
+                "Josune Hernantes",
+                "Nicolas Serrano",
+                "\u2014Christof Ebert"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1686142102,
+            "keywords": "Software Development > Agile > DevOps",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "How to Write a Good Technical Article",
+            "year": 2002,
+            "authors": [
+                "Steve McConnell"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1686141921,
+            "keywords": "Writing",
+            "level": 1,
+            "priority": 0
+        },
+        {
+            "title": "Tips for Software Authors",
+            "year": 2007,
+            "authors": [],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1686141737,
+            "keywords": "Writing",
+            "level": 1,
+            "priority": 0
+        },
+        {
+            "title": "Sharing Your Story",
+            "year": 2013,
+            "authors": [
+                "Forrest Shull",
+                "Hakan Erdogmus"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1686141556,
+            "keywords": "Writing > Experience Reports",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+            "year": 2023,
+            "authors": [
+                "Brian Lester",
+                "Rami Al-Rfou",
+                "Noah Constant"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1686030305,
+            "keywords": "Prompt Engineering > Prompt Learning > Soft Prompts > Prompt Tuning",
+            "level": 4,
+            "priority": 2
+        },
+        {
+            "title": "Sleep and Growing Older",
+            "year": 2023,
+            "authors": [],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1685975834,
+            "keywords": "Sleep, Dreaming > Sleep in Older Adults",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "OpenAI's plans according to Sam Altman",
+            "year": 2023,
+            "authors": [
+                "Sam Altman",
+                "Raza Habib"
+            ],
+            "filename": "tmp.pdf",
+            "recog": 1,
+            "modified": 1685948324,
+            "keywords": "Machine Learning > Issues > OpenAI > Strategy, Future Plans",
+            "level": 4,
+            "priority": 1
+        },
         {
             "title": "Training Socially Aligned Language Models in Simulated Human Society",
             "year": 2023,
@@ -1367,159 +1500,6 @@
             "keywords": "Medical, Health, Drugs > Drugs > Wastewater-based Epidemiology (WBE), Wastewater Monitoring > Sampling",
             "level": 4,
             "priority": 0
-        },
-        {
-            "title": "Wastewater research: population-level drug use",
-            "year": 2023,
-            "authors": [],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1684683333,
-            "keywords": "Countries > Finland > Issues > Drug Use",
-            "level": 4,
-            "priority": 0
-        },
-        {
-            "title": "Results of THL\u2019s wastewater study: Amphetamine use in Finland continues to grow \u2013 use of cocaine has now levelled out",
-            "year": 2023,
-            "authors": [],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1684682757,
-            "keywords": "Countries > Finland > Issues > Drug Use",
-            "level": 4,
-            "priority": 0
-        },
-        {
-            "title": "A responsible path to generative AI in healthcare",
-            "year": 2023,
-            "authors": [
-                "Amy Waldron"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1684676478,
-            "keywords": "NLP > Language Models > PaLM (Google) > Med-PaLM 2",
-            "level": 4,
-            "priority": 0
-        },
-        {
-            "title": "Do the Rewards Justify the Means? Measuring Trade-Offs Between Rewards and Ethical Behavior in the MACHIAVELLI Benchmark",
-            "year": 2023,
-            "authors": [
-                "Alexander Pan",
-                "Chan Jun Shern",
-                "Andy Zou",
-                "Nathaniel Li",
-                "Steven Basart",
-                "Thomas Woodside",
-                "Jonathan Ng",
-                "Hanlin Zhang",
-                "Scott Emmons",
-                "Dan Hendrycks"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1684674599,
-            "keywords": "AI > Issues > Harm > Harmful Agent Behavior > Machiavelli",
-            "level": 5,
-            "priority": 1
-        },
-        {
-            "title": "GPT-4 Outperforms Elite Crowdworkers, Saving Researchers",
-            "year": 2023,
-            "authors": [],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1684673361,
-            "keywords": "NLP > Applications > Crowdsourcing > Labelling",
-            "level": 4,
-            "priority": 1
-        },
-        {
-            "title": "Drag Your GAN: Interactive Point-based Manipulation on the Generative Image Manifold",
-            "year": 2023,
-            "authors": [
-                "XINGANG PAN",
-                "Max",
-                "AYUSH TEWARI",
-                "MIT",
-                "THOMAS LEIMK\u00dcHLER",
-                "LINGJIE LIU"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1684673032,
-            "keywords": "Machine Learning > Generative Deep Learning > Image Editing > DragGAN",
-            "level": 4,
-            "priority": 2
-        },
-        {
-            "title": "Eric Gill: 'Mad about sex'",
-            "year": 2023,
-            "authors": [
-                "Eric Gill",
-                "Fiona MacCarthy"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1684641761,
-            "keywords": "Art > Artists > Eric Gill",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "In-context Learning and Induction Heads",
-            "year": 2023,
-            "authors": [
-                "Catherine Olsson",
-                "Tom Henighan",
-                "Ben Mann",
-                "Amanda Askell",
-                "Yuntao Bai",
-                "Anna Chen",
-                "Tom Conerly",
-                "Dawn Drain",
-                "Deep Ganguli",
-                "Zac Hatfield-Dodds",
-                "Danny Hernandez",
-                "Scott Johnston",
-                "Andy Jones",
-                "Jackson Kernion",
-                "Liane Lovitt",
-                "Kamal Ndousse",
-                "Dario Amodei",
-                "Tom Brown",
-                "Jack Clark",
-                "Jared Kaplan",
-                "Sam McCandlish",
-                "Chris Olah"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1684603532,
-            "keywords": "NLP > In-Context Learning > Induction Heads",
-            "level": 3,
-            "priority": 2
-        },
-        {
-            "title": "Evaluating ChatGPT\u2019s Information Extraction Capabilities: An Assessment of Performance, Explainability, Calibration, and Faithfulness",
-            "year": 2023,
-            "authors": [
-                "Bo Li",
-                "Gexiang Fang",
-                "Yang Yang",
-                "Quansen Wang",
-                "Wei Ye",
-                "Wen Zhao",
-                "Shikun Zhang"
-            ],
-            "filename": "tmp.pdf",
-            "recog": 1,
-            "modified": 1684596538,
-            "keywords": "Knowledge > Information Extraction > ChatGPT",
-            "level": 3,
-            "priority": 3
         }
     ]
 }
