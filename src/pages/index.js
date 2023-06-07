@@ -11,6 +11,8 @@ import LINKEDIN from "../img/linkedin.png"
 import Layout from "../components/layout"
 import TravelRotary from "../components/TravelRotary"
 
+import Venn from "../../static/img/Research_areas_Venn.jpg"
+
 
 export const Head = () => (
   <Seo title="Jonas Oppenlaender, Doctor of Science (Technology)">
@@ -28,6 +30,7 @@ export default function Home() {
           <div className="eleven wide computer eleven wide large screen sixteen wide mobile ten wide tablet eleven wide widescreen column">
 
             <div className="row">
+
               <p>
               Hi, I am <strong>Jonas Oppenlaender</strong>
                 {' '}
@@ -36,6 +39,10 @@ export default function Home() {
                 </a>)
                 {' '}
               and I am a postdoctoral researcher at the <a href="https://www.jyu.fi/en" target="_blank" rel="noreferrer">University of Jyv&auml;skyl&auml;</a> in Central Finland. I have a diverse background with a range of academic and professional experiences.
+              </p>
+
+              <p style={{textAlign:'center'}}>
+                <img src={Venn} style={{width:'80%'}} alt="" />
               </p>
 
               <p>
