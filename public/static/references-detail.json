@@ -16,19 +16,14 @@
     },
     {
         "ENTRYTYPE": "misc",
-        "ID": "crowdpilots",
-        "author": "Jonas Oppenlaender and Tahir Abbas and Ujwal Gadiraju",
-        "howpublished": "Pre-prints and Working Papers",
-        "jufo": "0",
-        "title": "The State of Pilot Study Reporting in Crowdsourcing: A Reflection on Best Practices and Guidelines",
-        "year": "2023"
-    },
-    {
-        "ENTRYTYPE": "misc",
-        "ID": "perceptions",
+        "ID": "oppenlaender2023perceptions",
+        "archiveprefix": "arXiv",
         "author": "Jonas Oppenlaender and Johanna Silvennoinen and Ville Paananen and Aku Visuri",
+        "doi": "10.48550/arXiv.2306.08363",
+        "eprint": "2306.08363",
         "howpublished": "Pre-prints and Working Papers",
         "jufo": "0",
+        "primaryclass": "cs.HC",
         "title": "Perceptions and Realities of Text-to-Image Generation",
         "year": "2023"
     },
@@ -105,14 +100,17 @@
     {
         "ENTRYTYPE": "misc",
         "ID": "10.48550/arxiv.2204.13988",
+        "archiveprefix": "arXiv",
         "author": "Jonas Oppenlaender",
         "doi": "10.48550/ARXIV.2204.13988",
+        "eprint": "2204.13988",
         "howpublished": "Pre-prints and Working Papers",
         "jufo": "0",
         "note": "arXiv",
         "numpages": "15",
         "pdf": "https://www.jonaso.de/papers/2204.13988.pdf",
         "preprint": "https://arxiv.org/abs/2204.13988",
+        "primaryclass": "cs.HC",
         "publisher": "arXiv",
         "title": "A Taxonomy of Prompt Modifiers for Text-To-Image Generation",
         "year": "2022"
