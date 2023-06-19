@@ -58,7 +58,7 @@ export default function Home() {
               </p>
 
               <p>
-                In my spare time, I enjoy dabbling with <Link to="/artworks/">AI-generated art</Link> and am a <Link to="/kettlebells/">kettlebell</Link> salesman.
+                In my spare time, I enjoy dabbling with <Link to="/artworks/">AI-generated art</Link> and am a <Link to="/kettlebells/">kettlebell salesman</Link>.
                   I have lived, studied, and/or worked in several countries including
                   Germany, Switzerland, France, the United Kingdom, Sweden, Macedonia, the United States, and Finland.
               </p>
