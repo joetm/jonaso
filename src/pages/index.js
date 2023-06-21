@@ -3,8 +3,8 @@ import 'semantic-ui-css/components/grid.min.css'
 import 'semantic-ui-css/components/icon.min.css'
 import "../../libs/academicons/css/academicons.min.css"
 
+import React, { useRef, useState, useEffect } from "react"
 import { Link } from "gatsby"
-import React from "react"
 import { Seo } from "../components/Seo"
 import img from "../img/Jonas-Oppenlaender-500x500.jpg"
 import LINKEDIN from "../img/linkedin.png"
@@ -22,6 +22,29 @@ export const Head = () => (
 
 
 export default function Home() {
+  const audioRef = useRef()
+
+  const [ isPlaying, setIsPlaying ] = useState(false)
+
+  useEffect(() => {
+    audioRef.current = new Audio('/audio/speech_20230621150721178.mp3')
+    audioRef.current.addEventListener('play', () => {
+        setIsPlaying(true)
+    })
+    audioRef.current.addEventListener('ended', () => {
+        setIsPlaying(false)
+    })
+    // cleanup event listeners
+    return () => {
+        audioRef.current.removeEventListener('play', () => {})
+        audioRef.current.removeEventListener('ended', () => {})
+    }
+  }, [])
+
+  const playAudio = () => {
+    audioRef.current.play()
+  }
+
   return (
     <Layout>
       <div className="ui container">
@@ -34,10 +57,23 @@ export default function Home() {
               <p>
               Hi, I am <strong>Jonas Oppenlaender</strong>
                 {' '}
-                (<a title="How to pronounce Oppenländer" href="https://www.howtopronounce.com/oppenlander" target="_blank" rel="noopener noreferrer">
-                  <i className="fitted assistive listening systems icon"></i>
-                </a>)
+                
+                (
+                  {
+                    isPlaying ?
+                      <i style={{color: '#666666'}} className="volume up icon"></i>
+                    :
+                      <i style={{cursor:'pointer'}} className="fitted assistive listening systems icon" onClick={playAudio} title="How to pronounce Jonas Oppenländer"></i>
+                  }
+                }
+                )
+                
                 {' '}
+                {/*
+                  (<a title="How to pronounce Oppenländer" href="https://www.howtopronounce.com/oppenlander" target="_blank" rel="noopener noreferrer">
+                    <i className="fitted assistive listening systems icon"></i>
+                  </a>)
+                */}
               and I am a postdoctoral researcher at the <a href="https://www.jyu.fi/en" target="_blank" rel="noreferrer">University of Jyv&auml;skyl&auml;</a> in Central Finland. I have a diverse background with a range of academic and professional experiences.
               </p>
 
