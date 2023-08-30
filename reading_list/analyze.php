@@ -187,6 +187,12 @@ while ($result && $doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 				$authors[$author][$jsondoc->priority] = 1;
 			}
 
+			// NEW
+			if (isset($jsondoc->year)) {
+				$authors[$author]['year'] = $jsondoc->year;
+
+			}
+
 			// store the title in the respective author details
 			//first publication for this author
 			if (!isset($influencers[$author])) {
@@ -283,6 +289,8 @@ foreach ($authors as $name => $arr) {
 				'name' => $name,
 				'num' => $arr[$i],
 				'id' => md5($name),
+				// NEW
+				'year' => isset($arr['year']) ? $arr['year'] : null,
 			]);
 		}
 	}
