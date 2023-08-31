@@ -35,7 +35,8 @@ for prio in influencers.keys():
 			for year in years:
 				author['recency'] += author['priority'] * (decay_factor ** (current_year - year))	        
 
-			author['recency'] = round(author['recency'], 2)
+			# author['recency'] = round(author['recency'], 2)
+			author['recency'] = float("{:.2f}".format(author['recency']))
 
 			allauthors.append(author)
 
