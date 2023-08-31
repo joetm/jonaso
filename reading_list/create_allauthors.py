@@ -15,7 +15,7 @@ with open('influencer.json') as f:
 
 # decay factor (between 0 and 1)
 # The Decay Factor is a constant between 0 and 1. A decay factor close to 1 means the weight drops off very slowly for older papers, whereas a decay factor close to 0 means it drops off very quickly.
-decay_factor = 0.5
+decay_factor = 0.75
 
 recency_dict = defaultdict(float)
 
@@ -35,8 +35,8 @@ for prio in influencers.keys():
 			for year in years:
 				author['recency'] += author['priority'] * (decay_factor ** (current_year - year))	        
 
-			# author['recency'] = round(author['recency'], 2)
-			author['recency'] = float("{:.2f}".format(author['recency']))
+			author['recency'] = round(author['recency'], 2)
+			# author['recency'] = float("{:.2f}".format(author['recency']))
 
 			allauthors.append(author)
 
