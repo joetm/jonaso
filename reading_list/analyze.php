@@ -124,8 +124,6 @@ while ($result && $doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 	$authorkeywords = explode(" > ", $jsondoc->keywords);
 	$authorkeywords = array_filter($authorkeywords, function ($kw) {return strlen(trim($kw)) > 0;});
 
-	// $year = isset($jsondoc->year) ? $jsondoc->year : false;
-
 	// find the inspirational authors
 	// --------------------------------
 
@@ -190,9 +188,13 @@ while ($result && $doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 			}
 
 			// NEW
-			// if ($year) {
-			// 	$authors[$author]['year'] = $year;
-			// }
+			if (isset($jsondoc->modified) && $jsondoc->modified) {
+				if (isset($authors[$author]['modified'][$jsondoc->priority])) {
+					$authors[$author]['modified'][] = $jsondoc->modified;
+				} else {
+					$authors[$author]['modified'] = [ $jsondoc->modified ];
+				}
+			}
 
 			// store the title in the respective author details
 			//first publication for this author
@@ -285,18 +287,16 @@ $priorities = [
 foreach ($authors as $name => $arr) {
 	for ($i = 1; $i < 4; $i++) {
 		if (isset($arr[$i])) {
-			// $priorities[$i][$name] = $arr[$i];
 			$stack = [
 				'name' => $name,
 				'num' => $arr[$i],
 				'id' => md5($name),
+				'modified' => [],
 			];
-
 			// NEW
-			// if (isset($arr['year'])) {
-			// 	$stack['year'] = $arr['year'];
-			// }
-
+			if (isset($arr['modified'])) {
+				$stack['modified'] = $arr['modified'];
+			}
 			array_push($priorities[$i], $stack);
 		}
 	}
