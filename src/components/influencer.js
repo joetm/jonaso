@@ -171,13 +171,13 @@ export default function AuthorList({ list }) {
                   className={"ui label " + labelColor}
                   style={{...styles.label, opacity: author.name === 'Jonas Oppenlaender' ? 0.6 : 1}}
                   color={labelColor}
-                  title={(author.num > 1 ? author.num + ' publications' : author.num + ' publication') + ', priority ' + author.priority}
+                  title={(author.num > 1 ? author.num + ' publications' : author.num + ' publication') + ', recency factor ' + Number(author.recency.toFixed(2))}
                   onClick={() => getAuthorDetails(author)}
                 >
                   {
                     coauthors.includes(author.name.toLowerCase()) ? (<span style={styles.coauthor}>{author.name}</span>) : author.name
                   }
-                  <div className="detail">{author.num} | {author.priority}</div>
+                  <div className="detail">{author.num} | {Number(author.recency.toFixed(2))}</div>
                 </a>
                   {details[author.id] && activeid === author.id &&
                     <Sidebar

@@ -27,7 +27,6 @@ export function Head() {
 
 export default function Influencers() {
   const [influencer, setInfluencer] = useState([])
-
   useEffect(() => {
     fetch(_FLATINFLUENCER).then(res => res.json())
     .then(data => {
@@ -37,6 +36,7 @@ export default function Influencers() {
         if (tmp[author.name]) {
           // author already exists: update only the respective fields
           tmp[author.name]['num'] += author.num
+          tmp[author.name]['recency'] += author.recency
           tmp[author.name]['priority'] += author.priority * author.num
           tmp[author.name]['priorities'][""+author.priority] = { 'num': author.num }
         } else {
@@ -45,6 +45,7 @@ export default function Influencers() {
             'id': author.id,
             'name': author.name,
             'num': author.num,
+            'recency': author.recency,
             'priority': author.priority * author.num,
             'priorities': {
               '1': { 'num': 0, },
@@ -61,7 +62,7 @@ export default function Influencers() {
         influencer.push(tmp[key])
       }
       influencer = influencer.filter(author => author.num > 1)
-      influencer = sortByKey(influencer, 'priority') // priority score consisting of: 1 * num(1) + 2 * num(2) + 3 * num(3)
+      influencer = sortByKey(influencer, 'recency') // priority score consisting of: 1 * num(1) + 2 * num(2) + 3 * num(3)
       
       setInfluencer(influencer)
     })

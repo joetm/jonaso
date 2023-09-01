@@ -174,7 +174,7 @@ def extractMetadata(tmppath, origfilename, origpath):
             'title': title,
             'year': rawdata['year'],
             'authors': authors,
-            'filename': filename,
+            'filename': origfilename.strip('!-'),
             'recog': int(recog),
             'modified': int(os.path.getmtime(origpath)),
             # 'created': int(os.path.getctime(tmppath)),
