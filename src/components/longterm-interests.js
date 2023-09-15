@@ -10,39 +10,39 @@ const HEIGHT = 350
 // const colorZoomed = '#FF86A6'
 const lines = {
   colors: {
-    'a': '#101010', // ML
-    'b': '#EB008C', // Crowdsourcing
-    'c': '#F0E442', // Creativity
-    'd': '#009E73', // HCI
-    'e': '#56B4E9', // AI
-    'f': '#101010', // NLP
-    'g': '#CC6677', // 
-    'h': '#eb008c', // 
+    'a': '#101010', // black
+    'b': '#009E73', // green
+    'c': '#56B4E9', // light blue
+    'd': '#F0E442', // yellow
+    'e': '#EB008C', // pink
+    'f': '#1010FF', // dark blue
+    'g': '#D55E00', // orange
+    'h': '#eb008c', 
     // CC79A7
     // D55E00
   },
   dashing: {
-    'a': null, // ML
-    'b': '', // Crowdsourcing
-    'c': '', // Creativity
-    'd': '', // HCI
-    'e': '', // AI
-    'f': '4 1 2', // NLP
-    'g': '1', // 
-    'h': '1', // 
+    'a': null,
+    'b': '',
+    'c': '',
+    'd': '',
+    'e': '',
+    'f': '', // 4 1 2
+    'g': '1',
+    'h': '1', 
   },
 }
 
 export default function LTInterests() {
   const [ graphdata, setGraphData ] = useState({legend: {}, data: []})
   const defaultStrokes = {
-    'a': 2, // ML
-    'b': 2, // Crowdsourcing
-    'c': 2, // Creativity
-    'd': 2, // HCI
-    'e': 2, // AI
-    'f': 2, // NLP
-    'g': 2, // 
+    'a': 3,
+    'b': 3,
+    'c': 3,
+    'd': 2,
+    'e': 2,
+    'f': 2,
+    'g': 2,
   }
   const [ strokes, setStrokes ] = useState(defaultStrokes)
 

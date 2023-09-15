@@ -57,7 +57,6 @@ export default function Home() {
               <p>
               Hi, I am <strong>Jonas Oppenlaender</strong>
                 {' '}
-                
                 (
                   {
                     isPlaying ?
@@ -65,16 +64,14 @@ export default function Home() {
                     :
                       <i style={{cursor:'pointer'}} className="fitted assistive listening systems icon" onClick={playAudio} title="How to pronounce Jonas Oppenländer"></i>
                   }
-                }
-                )
-                
+                ).
                 {' '}
                 {/*
                   (<a title="How to pronounce Oppenländer" href="https://www.howtopronounce.com/oppenlander" target="_blank" rel="noopener noreferrer">
                     <i className="fitted assistive listening systems icon"></i>
                   </a>)
                 */}
-              and I am a postdoctoral researcher at the <a href="https://www.jyu.fi/en" target="_blank" rel="noreferrer">University of Jyv&auml;skyl&auml;</a> in Central Finland. I have a diverse background with a range of academic and professional experiences.
+              I am a postdoctoral researcher at the <a href="https://www.jyu.fi/en" target="_blank" rel="noreferrer">University of Jyv&auml;skyl&auml;</a> in Central Finland. I have a diverse background with a range of academic and professional experiences.
               </p>
 
               <p style={{textAlign:'center'}}>

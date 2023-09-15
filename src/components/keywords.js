@@ -8,7 +8,7 @@ import 'semantic-ui-css/components/button.min.css'
 const _KEYWORDS = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/keywords.json'
 const CUTOFF = 19
 
-const HEIGHT = 1450
+const HEIGHT = 1550
 const colorDefault = '#eb008c'
 const colorZoomed = '#FF86A6'
 
@@ -56,7 +56,7 @@ export default function Keywords() {
       <div className="clear">
           <div style={{visibility: isZoomed ? 'visible' : 'hidden', float:'right', fontSize: 'initial', marginRight:'1em'}}>
               <span style={{marginRight: '1em'}}>{activeLabel}</span>
-              <i aria-hidden="true" onClick={zoomOut} className="left circular arrow icon"></i>
+              <i aria-hidden="true" onClick={zoomOut} className="left circular arrow icon clickable"></i>
           </div>
       </div>
       <ResponsiveContainer width="100%" height={HEIGHT}>

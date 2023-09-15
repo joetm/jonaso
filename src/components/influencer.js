@@ -22,6 +22,18 @@ const styles = {
   },
 }
 
+// const formula = () => (
+//   <div style={{ display: 'inline-flex', alignItems: 'baseline' }}>
+//     <span style={{ marginRight: '10px' }}>recency factor = &sum; (</span>
+//     <span style={{ display: 'inline-flex', flexDirection: 'column', alignItems: 'center' }}>
+//       <span style={{ paddingBottom: '5px' }}>
+//         priority × (decay_factor<sup style={{ fontSize: '0.8em' }}>(current_year - year)</sup>)
+//       </span>
+//     </span>
+//     <span style={{ marginLeft: '10px' }}>)</span>
+//   </div>
+// ) //
+
 
 export default function AuthorList({ list }) {
   const [details, setDetails] = useState({})

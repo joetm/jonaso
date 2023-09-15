@@ -27,6 +27,7 @@ export default function Interests() {
       <div className="ui container">
         <div className="ui segment" style={{clear:'both', border:0, boxShadow: '0px 0px 0px #FFFFFF'}}>
             <h2 style={{float:'left', display:'inline-block', marginRight: '1rem'}}>Research Interests</h2>
+            {/*
             {' '}
             <div className="ui mini buttons">
               <button className="ui active button"
@@ -40,6 +41,7 @@ export default function Interests() {
                 tabIndex="-1"
               >Cloud</button>
             </div>
+            */}
         </div>
         <LTInterests />
         <Keywords />
