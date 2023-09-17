@@ -46,8 +46,20 @@ export default function ReadingList() {
   const [unrecognized_overall, setUnrecognized_overall] = useState()
   const [unrecognized_overall_percent, setUnrecognized_overall_percent] = useState()
   const [percents, setPercents] = useState([])
+  const [copiedIndex, setCopiedIndex] = useState(null)
 
   const zeroPadding = v => (v < 10 ? '0' : '') + v
+
+  const copyToClipboard = async (e, filename) => {
+    e.stopPropagation()
+    try {
+      await navigator.clipboard.writeText(filename)
+      setCopiedIndex(filename)
+      setTimeout(() => setCopiedIndex(null), 2500) // Reset after 1 second
+    } catch (err) {
+      console.error('Error copying text to clipboard', err)
+    }
+  }
 
   function getKeywords(doc) {
     let kwfirst = ''
@@ -69,14 +81,13 @@ export default function ReadingList() {
     return authors.join(', ')
   }
   
-  function getDate(timestamp) {
-    const d = new Date(timestamp)
+  function getDate(ts) {
+    const d = new Date(ts)
     const year = d.getFullYear()
     const month = d.getMonth() + 1 // 0...11
     const day = d.getDate()
     const hour = d.getHours()
     const min = d.getMinutes()
-    // return `${year}-${month}-${day} ${d.format("hh:mm")}`
     return `${year}-${month}-${day} ${zeroPadding(hour)}:${zeroPadding(min)}`
   }
 
@@ -171,6 +182,7 @@ export default function ReadingList() {
                     <th className="collapsing">Keywords</th>
                     <th className="mobilehide center aligned" title="Relevance to my past or current research OR importance to the respective field">Relevance/<br />Importance</th>
                     <th className="mobilehide">Read</th>
+                    <th className="mobilehide"></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -179,7 +191,7 @@ export default function ReadingList() {
                         let [ kwfirst, kwlast ] = getKeywords(doc)
                         return (
                           <tr key={`doc${idx}`}>
-                            <td className="left aligned" style={{wordBreak:'break-all'}}>{doc.title}</td>
+                            <td className="left aligned" style={{wordBreak:'break-all'}} title={doc.filename}>{doc.title}</td>
                             <td className="single line left aligned" style={{wordBreak:'break-all',maxWidth:'250px'}}>{makeEtAl(doc.authors)}</td>
                             <td className="left aligned mobilehide">{doc.year}</td>
                             <td className="left aligned">
@@ -193,6 +205,17 @@ export default function ReadingList() {
                               <span className={`ui ${priocolors[doc.priority]} circular label docprio`}>{doc.priority}</span>
                             </td>
                             <td className="left aligned mobilehide">{getDate(doc.modified * 1000)}</td>
+                            <td className="left aligned mobilehide">
+                              <div
+                                title="copy filename"
+                                style={{margin:'5px 5px 0 0',cursor:'pointer'}}
+                                onClick={(e) => copyToClipboard(e, doc.filename)}
+                              >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill={copiedIndex === doc.filename ? '#2E8B57' : 'currentColor'} className="bi bi-copy" viewBox="0 0 16 16">
+                                  <path fillRule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2Zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H6ZM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1H2Z"/>
+                                </svg>
+                              </div>
+                            </td>
                           </tr>
                         )
                       })

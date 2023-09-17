@@ -70,7 +70,7 @@ const Wrapper = {
 
 
 
-export default function DetailContainer({authorid, details, keywordClick, activeKeyword, toggleCoauthors, coauthorToggleActive, closeSidebar}) {
+export default function DetailContainer({authorid, details, keywordClick, activeKeyword, toggleCoauthors, coauthorToggleActive, closeSidebar, forwardRef}) {
 
   const { docs=[], keywords=[], orcid='', affiliations='' } = details
   // const kwlist = keywords.join(", ")
@@ -103,7 +103,7 @@ export default function DetailContainer({authorid, details, keywordClick, active
       ))
 
   return (
-    <div className="ui right visible wide sidebar" key={`a-a${authorid}`} style={{backgroundColor: 'inherit'}}>
+    <div ref={forwardRef} className="ui right visible wide sidebar" key={`a-a${authorid}`} style={{backgroundColor: 'inherit'}}>
       <h2 className="ui header" style={{marginTop:'1rem'}}>Author details</h2>
       {
         orcid &&

@@ -3,7 +3,7 @@
 import 'semantic-ui-css/components/checkbox.min.css'
 import 'semantic-ui-css/components/label.min.css'
 
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import md5 from "md5"
 import Sidebar from "./AuthorListSidebar"
 
@@ -43,6 +43,8 @@ export default function AuthorList({ list }) {
   const [coauthorToggleActive, setCoauthorToggleActive] = useState(false)
   const [coauthors, setCoauthors] = useState([])
 
+  const sidebarRef = useRef(null)
+
   useEffect(() => {
     fetch(_PUB_URL).then(res => res.json()).then(pubs => {
       const authors = []
@@ -60,6 +62,16 @@ export default function AuthorList({ list }) {
       })
       setCoauthors(authors)
     })
+  }, [])
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        closeSidebar()
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => { document.removeEventListener('mousedown', handleClickOutside) }
   }, [])
 
   function updateActive(obj) {
@@ -156,57 +168,58 @@ export default function AuthorList({ list }) {
   }
 
   return (
-      <>
-        {
-          list.map((author, index) => {
-            if (author.name === 'Jonas Oppenlaender') {
-              // labelColor = 'grey'
-              return (<React.Fragment key={`${index}_${author.id}`}></React.Fragment>) //
-            }
-            // label color
-            let labelColor = null
-            if (activeAuthors.includes(author.id)) {
-          		labelColor = 'yellow'
-            }
-            if (activeid === author.id) {
-          		labelColor = 'red'
-            }
-           // color scaling based on priority of this author
-        	 // labelColor = scaleLabelColor(author.priority / maxPrio)
-           // return the list of authors
-            return (
-              <div
-                key={`${index}_${author.id}`}
-                id={author.id}
+    <>
+      {
+        list.map((author, index) => {
+          if (author.name === 'Jonas Oppenlaender') {
+            // labelColor = 'grey'
+            return (<React.Fragment key={`${index}_${author.id}`}></React.Fragment>) //
+          }
+          // label color
+          let labelColor = null
+          if (activeAuthors.includes(author.id)) {
+        		labelColor = 'yellow'
+          }
+          if (activeid === author.id) {
+        		labelColor = 'red'
+          }
+         // color scaling based on priority of this author
+      	 // labelColor = scaleLabelColor(author.priority / maxPrio)
+         // return the list of authors
+          return (
+            <div
+              key={`${index}_${author.id}`}
+              id={author.id}
+            >
+              <a
+                className={"ui label " + labelColor}
+                style={{...styles.label, opacity: author.name === 'Jonas Oppenlaender' ? 0.6 : 1}}
+                color={labelColor}
+                title={(author.num > 1 ? author.num + ' publications' : author.num + ' publication') + ', recency factor ' + Number(author.recency.toFixed(2))}
+                onClick={() => getAuthorDetails(author)}
               >
-                <a
-                  className={"ui label " + labelColor}
-                  style={{...styles.label, opacity: author.name === 'Jonas Oppenlaender' ? 0.6 : 1}}
-                  color={labelColor}
-                  title={(author.num > 1 ? author.num + ' publications' : author.num + ' publication') + ', recency factor ' + Number(author.recency.toFixed(2))}
-                  onClick={() => getAuthorDetails(author)}
-                >
-                  {
-                    coauthors.includes(author.name.toLowerCase()) ? (<span style={styles.coauthor}>{author.name}</span>) : author.name
-                  }
-                  <div className="detail">{author.num} | {Number(author.recency.toFixed(2))}</div>
-                </a>
-                  {details[author.id] && activeid === author.id &&
-                    <Sidebar
-                    	authorid={author.id}
-                    	activeKeyword={activeKeyword}
-                    	details={details[author.id]}
-                    	keywordClick={keywordClick}
-                      closeSidebar={closeSidebar}
-                      toggleCoauthors={toggleCoauthors}
-                      coauthorToggleActive={coauthorToggleActive}
-                      updateActive={updateActive}
-                    />
-                  }
-              </div>
-            )
-          })
-        }
-      </>
+                {
+                  coauthors.includes(author.name.toLowerCase()) ? (<span style={styles.coauthor}>{author.name}</span>) : author.name
+                }
+                <div className="detail">{author.num} | {Number(author.recency.toFixed(2))}</div>
+              </a>
+                {details[author.id] && activeid === author.id &&
+                  <Sidebar
+                  	authorid={author.id}
+                    forwardRef={sidebarRef}
+                  	activeKeyword={activeKeyword}
+                  	details={details[author.id]}
+                  	keywordClick={keywordClick}
+                    closeSidebar={closeSidebar}
+                    toggleCoauthors={toggleCoauthors}
+                    coauthorToggleActive={coauthorToggleActive}
+                    updateActive={updateActive}
+                  />
+                }
+            </div>
+          )
+        })
+      }
+    </>
   )
 }
