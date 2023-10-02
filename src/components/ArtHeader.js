@@ -20,8 +20,10 @@ export default function ArtHeader({generator, byline, totalCount}) {
         <p>
           { byline }
           {
-              totalCount === 0 ? (<span>&nbsp;</span>) :
-                totalCount >= 100 ? `Latest ${totalCount} images` : `${totalCount} images`
+              totalCount && (
+                totalCount === 0 ? (<span>&nbsp;</span>) :
+                  totalCount >= 100 ? `Latest ${totalCount} images` : `${totalCount} images`
+              )
           }
         </p>
       </section>
