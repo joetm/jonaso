@@ -264,7 +264,6 @@ while ($result && $doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 		if ($l1 && $l2 && $l3) {
 		    $keywords_level3[$l1][$l2][$l3] = ($keywords_level3[$l1][$l2][$l3] ?? 0) + 1;
 		}
-
 	}
 
 	$done++;
@@ -278,7 +277,6 @@ $priorities = [
 	2 => [],
 	3 => [],
 ];
-
 foreach ($authors as $name => $arr) {
 	for ($i = 1; $i < 4; $i++) {
 		if (isset($arr[$i])) {
@@ -295,7 +293,6 @@ foreach ($authors as $name => $arr) {
 		}
 	}
 }
-
 usort($priorities[1], 'sortFunc');
 usort($priorities[2], 'sortFunc');
 usort($priorities[3], 'sortFunc');
@@ -338,26 +335,30 @@ foreach ($keywords_level2 as $key => $sublevel) {
 }
 
 // keywords (level 3)
-foreach ($keywords_level3 as $key => $sublevel) {
+$store = array();
+foreach ($keywords_level3 as $l1 => $sublevel) {
 	if (isset($sublevel[""])) {
 		unset($sublevel[""]);
 	}
-	foreach ($sublevel as $key2 => $sublevel2) {
+	foreach ($sublevel as $l2 => $sublevel2) {
 		if (isset($sublevel2[""])) {
 			unset($sublevel2[""]);
 		}
 		// reorganize
-		$tmp = [];
-		foreach ($sublevel2 as $k => $v) {
-			$tmp[] = ["name" => $k, "num" => $v]; // no id needed at this last level
+		if (!isset($store[$l2])) {
+			$store[$l2] = [];
 		}
-		// sort descending by num
-		usort($tmp, 'sortFunc');
-		// save keywords to file
-		$fp = fopen("level3/" . md5($key2) . ".json", 'w');
-		fwrite($fp, json_encode($tmp));
-		fclose($fp);
+		foreach ($sublevel2 as $l3 => $num) {
+			$store[$l2][] = ["name" => $l3, "num" => $num]; // no id needed at this last level
+		}
 	}
+}
+foreach ($store as $l2 => $data) {
+	// sort descending by num
+	usort($data, 'sortFunc');
+	$fp = fopen("level3/" . md5($l2) . ".json", 'w');
+	fwrite($fp, json_encode($data));
+	fclose($fp);
 }
 
 
