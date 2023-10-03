@@ -6,13 +6,12 @@
  * 
  * <code>
  * for($x=1;$x<=100;$x++){
- * 
  *     show_status($x, 100);
- * 
  *     usleep(100000);
- *                           
  * }
  * </code>
+ *
+ * https://stackoverflow.com/a/9853018/426266
  *
  * @param   int     $done   how many items are completed
  * @param   int     $total  how many items are to be done total
@@ -20,8 +19,6 @@
  * @return  void
  *
  */
-
-// https://stackoverflow.com/a/9853018/426266
 function show_status($done, $total, $size=30) {
     static $start_time;
     // if we go over our bound, just ignore it
@@ -291,7 +288,6 @@ foreach ($authors as $name => $arr) {
 				'id' => md5($name),
 				'modified' => [],
 			];
-			// NEW
 			if (isset($arr['modified'])) {
 				$stack['modified'] = $arr['modified'];
 			}
@@ -331,7 +327,7 @@ foreach ($keywords_level2 as $key => $sublevel) {
 	// reorganize
 	$tmp = [];
 	foreach ($sublevel as $k => $v) {
-		$tmp[] = ["name" => $k, "num" => $v, 'id' => md5($key)];
+		$tmp[] = ["name" => $k, "num" => $v, 'id' => md5($k)];
 	}
 	// sort descending by num
 	usort($tmp, 'sortFunc');
@@ -347,6 +343,9 @@ foreach ($keywords_level3 as $key => $sublevel) {
 		unset($sublevel[""]);
 	}
 	foreach ($sublevel as $key2 => $sublevel2) {
+		if (isset($sublevel2[""])) {
+			unset($sublevel2[""]);
+		}
 		// reorganize
 		$tmp = [];
 		foreach ($sublevel2 as $k => $v) {
