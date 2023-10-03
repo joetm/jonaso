@@ -95,6 +95,7 @@ $authors = array();
 $coauthors = array();
 $keywords = array();
 $keywords_level2 = array();
+$keywords_level3 = array(); // TODO
 $influencers = array();
 $keywordauthors = array();
 
@@ -187,7 +188,6 @@ while ($result && $doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 				$authors[$author][$jsondoc->priority] = 1;
 			}
 
-			// NEW
 			if (isset($jsondoc->modified) && $jsondoc->modified) {
 				if (isset($authors[$author]['modified'][$jsondoc->priority])) {
 					$authors[$author]['modified'][] = $jsondoc->modified;
@@ -259,6 +259,7 @@ while ($result && $doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 
 		$l1 = array_shift($keyword_array);
 		$l2 = array_shift($keyword_array);
+		$l3 = array_shift($keyword_array);
 		if (isset($jsondoc->level) && $jsondoc->level === 1) {
 			if (!isset($keywords_level2[$l1])) {
 				$keywords_level2[$l1] = [];
