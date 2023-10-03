@@ -7,7 +7,6 @@ import 'semantic-ui-css/components/button.min.css'
 
 const _KEYWORDS = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/keywords.json'
 const CUTOFF = 19
-
 const HEIGHT = 1550
 const colorDefault = '#eb008c'
 const colorZoomed = '#FF86A6'
@@ -15,72 +14,91 @@ const colorZoomed = '#FF86A6'
 
 export default function Keywords() {
   // const [activeTooltipIndex, setActiveTooltipIndex] = useState(false)
-  const [activeLabel, setActiveLabel] = useState(null)
-  const [level2, setLevel2] = useState([])
-  const [keywords, setKeywords] = useState([])
+  const [activeLevel, setActiveLevel] = useState(1)
+  const [data, setData] = useState({
+    1: {data: [], label: null},
+    2: {data: [], label: null},
+    3: {data: [], label: null},
+  })
 
   useEffect(() => {
+    // fetch level 1 on mount
     fetch(_KEYWORDS).then(res => res.json())
     .then(kws => {
       const filtered_keywords = kws.filter(kw => kw.num > CUTOFF)
-      setKeywords(filtered_keywords)
+      const newdata = { ...data }
+      newdata[1]['data'] = filtered_keywords
+      newdata[1]['label'] = null
+      setData(newdata)
     })
   }, [])
 
-
   function zoomOut() {
-    setLevel2([])
-    setActiveLabel(null)
+    console.log('zoomout')
+    const newlevel = (activeLevel - 1) > 1 ? activeLevel - 1 : 1
+    setActiveLevel(newlevel)
   }
 
-  function handleClick(bar) {
-    if (!isZoomed) {
-        // query level2
-        const URL = `https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/level2/${bar.id}.json`
-        fetch(URL).then(res => res.json())
-        .then(level2 => {
-          setLevel2(level2)
-          setActiveLabel(bar.name)
-        })
-    } else {
-        zoomOut()
-    }
+  function zoomIn(bar) {
+    console.log('Loading:', bar.name)
+    const URL = `https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/level${activeLevel+1}/${bar.id}.json`
+    console.log(URL)
+    fetch(URL).then(res => res.json())
+      .then(lvldata => {
+        const newlevel = activeLevel + 1
+        const newdata = { ...data }
+        newdata[newlevel]['data'] = lvldata
+        newdata[newlevel]['label'] = bar.name
+        console.log('level:', newlevel)
+        console.log('new data:', newdata[newlevel]['data'])
+        setData(newdata)
+        setActiveLevel(newlevel)
+      })
+      .catch(error => {
+        console.error('There was a problem with the fetch operation:', error.message);
+      })
   }
 
-  const isZoomed = level2.length ? true : false
-  const displaydata = isZoomed && level2.length ? level2 : keywords
+  const isZoomed = activeLevel > 1
+  const displaydata = data[activeLevel]
   const color = isZoomed ? colorZoomed : colorDefault
+
+  if (!displaydata) {
+    return null
+  }
 
   return (
     <div className="ui container">
       <div className="clear">
-          <div style={{visibility: isZoomed ? 'visible' : 'hidden', float:'right', fontSize: 'initial', marginRight:'1em'}}>
-              <span style={{marginRight: '1em'}}>{activeLabel}</span>
-              <i aria-hidden="true" onClick={zoomOut} className="left circular arrow icon clickable"></i>
+          <div onClick={zoomOut} style={{cursor: 'pointer', visibility: isZoomed ? 'visible' : 'hidden', float: 'left', fontSize: 'initial', marginRight:'1em'}}>
+              <i aria-hidden="true" className="left circular arrow icon clickable"></i>
+              <span>{displaydata['label']}</span>
           </div>
       </div>
-      <ResponsiveContainer width="100%" height={HEIGHT}>
-            <BarChart
-              layout="vertical"
-              data={displaydata}
-              onClick={isZoomed ? zoomOut : null}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis type="number" dataKey="num" />
-                <YAxis type="category" dataKey="name" width={275} style={{fontSize: '1rem'}} />
-                <Bar
-                  dataKey="num"
-                  fill={color}
-                  className={!isZoomed ? "clickable" : ""}
-                  onClick={handleClick}
+      <div className="clear">
+        <ResponsiveContainer width="100%" height={HEIGHT}>
+              <BarChart
+                layout="vertical"
+                data={displaydata['data']}
                 >
-                  <LabelList
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis type="number" dataKey="num" />
+                  <YAxis type="category" dataKey="name" width={275} style={{fontSize: '1rem'}} />
+                  <Bar
                     dataKey="num"
-                    position="insideRight"
-                    style={{ fontSize: '80%', fill: '#ffffff' }}
-                  />
-                </Bar>
-            </BarChart>
-      </ResponsiveContainer>
+                    fill={color}
+                    className={activeLevel < 3 ? "clickable" : ""}
+                    onClick={ (e) => {if (activeLevel < 3) { zoomIn(e) }} }
+                  >
+                    <LabelList
+                      dataKey="num"
+                      position="insideRight"
+                      style={{ fontSize: '80%', fill: '#ffffff' }}
+                    />
+                  </Bar>
+              </BarChart>
+        </ResponsiveContainer>
+      </div>
     </div>
   )
 }
