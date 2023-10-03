@@ -342,7 +342,7 @@ foreach ($keywords_level2 as $key => $sublevel) {
 	// reorganize
 	$tmp = [];
 	foreach ($sublevel as $k => $v) {
-		$tmp[] = ["name" => $k, "num" => $v]; // no id needed at this level (for now)
+		$tmp[] = ["name" => $k, "num" => $v, 'id' => md5($key)];
 	}
 	// sort descending by num
 	usort($tmp, 'sortFunc');
@@ -360,7 +360,7 @@ foreach ($keywords_level3 as $key => $sublevel) {
 	// reorganize
 	$tmp = [];
 	foreach ($sublevel as $k => $v) {
-		$tmp[] = ["name" => $k, "num" => $v]; // no id needed at this level (for now)
+		$tmp[] = ["name" => $k, "num" => $v]; // no id needed at this last level
 	}
 	// sort descending by num
 	usort($tmp, 'sortFunc');
