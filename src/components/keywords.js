@@ -6,8 +6,9 @@ import 'semantic-ui-css/components/button.min.css'
 
 
 const _KEYWORDS = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/keywords.json'
+const HEIGHT = 1850
 const CUTOFF = 19
-const HEIGHT = 1550
+const CUTOFF_SUBLEVEL = 0
 const colorDefault = '#eb008c'
 const colorZoomed = '#FF86A6'
 
@@ -47,7 +48,7 @@ export default function Keywords() {
       .then(lvldata => {
         const newlevel = activeLevel + 1
         const newdata = { ...data }
-        newdata[newlevel]['data'] = lvldata
+        newdata[newlevel]['data'] = lvldata.filter(kw => kw.num > CUTOFF_SUBLEVEL)
         newdata[newlevel]['label'] = bar.name
         console.log('level:', newlevel)
         console.log('new data:', newdata[newlevel]['data'])
@@ -67,6 +68,8 @@ export default function Keywords() {
     return null
   }
 
+  const displayheight = displaydata['data'].length * 30
+
   return (
     <div className="ui container">
       <div className="clear">
@@ -76,7 +79,7 @@ export default function Keywords() {
           </div>
       </div>
       <div className="clear">
-        <ResponsiveContainer width="100%" height={HEIGHT}>
+        <ResponsiveContainer width="100%" height={displayheight}>
               <BarChart
                 layout="vertical"
                 data={displaydata['data']}

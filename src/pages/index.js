@@ -120,9 +120,9 @@ export default function Home() {
                 E-Mail: jonas.x1.oppenlander@jyu.fi
               </p>
               <p>
-                  Academic <a href="/cv/oppenlaender-cv.pdf">CV</a>
+                  <a href="/cv/resume.pdf">Resume</a>
                   &nbsp;|&nbsp;
-                  Professional <a href="/cv/resume.pdf">Resume</a>
+                  Academic <a href="/cv/oppenlaender-cv.pdf">CV</a>
               </p>
               <aside style={{marginTop:'2em'}}>
                 <TravelRotary />
