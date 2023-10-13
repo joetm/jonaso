@@ -6,7 +6,7 @@ import 'semantic-ui-css/components/button.min.css'
 
 
 const _KEYWORDS = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/keywords.json'
-const HEIGHT = 1850
+const BARHEIGHT = 35
 const CUTOFF = 19
 const CUTOFF_SUBLEVEL = 0
 const colorDefault = '#eb008c'
@@ -68,7 +68,7 @@ export default function Keywords() {
     return null
   }
 
-  const displayheight = displaydata['data'].length * 30
+  const displayheight = displaydata['data'].length * BARHEIGHT
 
   return (
     <div className="ui container">
