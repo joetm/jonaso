@@ -75,6 +75,10 @@ export default function Keywords() {
       <div className="clear">
           <div onClick={zoomOut} style={{cursor: 'pointer', visibility: isZoomed ? 'visible' : 'hidden', float: 'left', fontSize: 'initial', marginRight:'1em'}}>
               <i aria-hidden="true" className="left circular arrow icon clickable"></i>
+              {
+                activeLevel > 2 &&
+                  <span>{data[activeLevel-1]['label']} &gt; </span>
+              }
               <span>{displaydata['label']}</span>
           </div>
       </div>
