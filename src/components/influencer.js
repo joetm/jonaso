@@ -100,7 +100,6 @@ export default function AuthorList({ list }) {
     fetch(`https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/keywordauthors/${kwid}.json`)
     .then(res => res.json())
     .then(aAuthors => {
-      console.log('aAuthors', aAuthors)
   	  setActiveKeyword(keyword)
   	  setActiveAuthors(aAuthors)
     })
