@@ -10,7 +10,7 @@ import MasonryGallery from '../../../components/MasonryGallery'
 
 // import images from "../../../../public/artworks/json/webp-dalle-2.json"
 const cachebuster = Math.round(Date.now() / 10000)
-const _URL = process.env.NODE_ENV === "development" ? `/artworks/json/webp-dalle-2.json?${cachebuster}` : `https://raw.githubusercontent.com/joetm/jonaso/master/public/artworks/json/webp-dalle-2.json?${cachebuster}`
+const _URL = process.env.NODE_ENV === "development" ? `/artworks/json/webp-dall-e.json?${cachebuster}` : `https://raw.githubusercontent.com/joetm/jonaso/master/public/artworks/json/webp-dall-e.json?${cachebuster}`
 
 
 export default function ArtPage() {
