@@ -52,7 +52,7 @@ export default function ArtHeader({generator, byline, totalCount}) {
             onClick={handleMenuClick}
             onKeyDown={handleMenuClick}
           >
-            DALL-E 2
+            DALL-E
           </a>
           <a
             folder="latent-diffusion"
