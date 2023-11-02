@@ -144,20 +144,20 @@ export default function CV() {
       <div className="ui stackable two column grid">
         <div className="row" style={{marginBottom:0}}>
           <div className="stretched four wide computer sixteen wide mobile three wide tablet column">
-              <span style={styles.headline} size="large">Contact Information</span>
+            <span style={styles.headline} size="large">Contact</span>
           </div>
           <div className="stretched twelve wide computer sixteen wide mobile thirteen wide tablet column">
             <div className="ui items">
               <div className="item" style={styles.nomargin}>
                   <div className="description" style={styles.nomarginTop}>
                     <div className="ui list" role="list">
-                      <div className="item" role="listitem"><a href="https://www.jyu.fi/">University of Jyv&auml;skyl&auml;</a></div>
-                      <div className="item" role="listitem">Seminaarinkatu 15</div>
-                      <div className="item" role="listitem">40014 Jyväskylän yliopisto</div>
-                      <div className="item" role="listitem">Finland</div>
+                      <div className="item" role="listitem"><a href="https://www.jyu.fi/">Elisa Corporation</a></div>
+                      <div className="item" role="listitem">Helsinki, Finland</div>
                     </div>
                     <div className="ui list" role="list">
-                      <div className="item" role="listitem">E-Mail: {/*'{'}firstname.lastname{'}'*/} jonas.x1.oppenlander@jyu.fi</div>
+                      {/*
+                        <div className="item" role="listitem">E-Mail: jonas.x1.oppenlander@jyu.fi</div>
+                      */}
                       <div className="item" role="listitem"><a href="https://www.jonaso.de/">www.jonaso.de</a></div>
                     </div>
                   </div>

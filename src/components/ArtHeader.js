@@ -39,20 +39,20 @@ export default function ArtHeader({generator, byline, totalCount}) {
             Midjourney
           </a>
           <a
-            folder="stablediffusion"
-            className={"item" + (generator === 'Stable Diffusion' ? ' active' : '')}
-            onClick={handleMenuClick}
-            onKeyDown={handleMenuClick}
-          >
-            Stable Diffusion
-          </a>
-          <a
             folder="dalle"
             className={"item" + (generator === 'DALL-E' ? ' active' : '')}
             onClick={handleMenuClick}
             onKeyDown={handleMenuClick}
           >
             DALL-E
+          </a>
+          <a
+            folder="stablediffusion"
+            className={"item" + (generator === 'Stable Diffusion' ? ' active' : '')}
+            onClick={handleMenuClick}
+            onKeyDown={handleMenuClick}
+          >
+            Stable Diffusion
           </a>
           <a
             folder="latent-diffusion"
