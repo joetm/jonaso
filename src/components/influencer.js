@@ -3,13 +3,13 @@
 import 'semantic-ui-css/components/checkbox.min.css'
 import 'semantic-ui-css/components/label.min.css'
 
+import '../../reading_list/fields.css'
+
 import React, { useState, useEffect, useRef } from "react"
 import md5 from "md5"
 import Sidebar from "./AuthorListSidebar"
 
-
 const _PUB_URL = `/static/publications.json`
-
 
 const styles = {
   label: {
@@ -41,7 +41,7 @@ export default function AuthorList({ list }) {
   const [activeAuthors, setActiveAuthors] = useState([])
   const [activeKeyword, setActiveKeyword] = useState(null)
   const [coauthorToggleActive, setCoauthorToggleActive] = useState(false)
-  const [coauthors, setCoauthors] = useState([])
+  const [mycoauthors, setCoauthors] = useState([])
 
   const sidebarRef = useRef(null)
 
@@ -171,7 +171,6 @@ export default function AuthorList({ list }) {
       {
         list.map((author, index) => {
           if (author.name === 'Jonas Oppenlaender') {
-            // labelColor = 'grey'
             return (<React.Fragment key={`${index}_${author.id}`}></React.Fragment>) //
           }
           // label color
@@ -182,6 +181,9 @@ export default function AuthorList({ list }) {
           if (activeid === author.id) {
         		labelColor = 'red'
           }
+          if (!['yellow', 'red'].includes(labelColor)) {
+            labelColor = 'ra ' + author.area.replace(" ", "_")
+          }
          // color scaling based on priority of this author
       	 // labelColor = scaleLabelColor(author.priority / maxPrio)
          // return the list of authors
@@ -191,14 +193,14 @@ export default function AuthorList({ list }) {
               id={author.id}
             >
               <a
-                className={"ui label " + labelColor}
+                className={`ui label ` + labelColor}
                 style={{...styles.label, opacity: author.name === 'Jonas Oppenlaender' ? 0.6 : 1}}
                 color={labelColor}
-                title={(author.num > 1 ? author.num + ' publications' : author.num + ' publication') + ', recency factor ' + Number(author.recency.toFixed(2))}
+                title={(author.num > 1 ? `Research area: ${author.area}` + `, ${author.num} publications` : author.num + ' publication') + ', recency factor ' + Number(author.recency.toFixed(2))}
                 onClick={() => getAuthorDetails(author)}
               >
                 {
-                  coauthors.includes(author.name.toLowerCase()) ? (<span style={styles.coauthor}>{author.name}</span>) : author.name
+                  mycoauthors.includes(author.name.toLowerCase()) ? (<span style={styles.coauthor}>{author.name}</span>) : author.name
                 }
                 <div className="detail">{author.num} | {Number(author.recency.toFixed(2))}</div>
               </a>

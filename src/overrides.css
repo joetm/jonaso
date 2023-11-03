@@ -148,3 +148,11 @@ color: rgba(0,0,0,.87);
     backface-visibility: hidden;
     color: #767676;
 }
+
+.influences-legend {
+    clear: both;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid gray;
+    cursor: default;
+}

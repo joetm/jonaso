@@ -14,7 +14,7 @@ export const isProd = process.env.NODE_ENV !== "development"
 
 // const _INFLUENCER = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/influencer.json'
 const _FLATINFLUENCER = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/allauthors.json'
-
+const _AUTHOR_FIELDS_URL = `https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/fields.json`
 
 export function Head() {
   return (
@@ -26,47 +26,71 @@ export function Head() {
 
 
 export default function Influencers() {
+
   const [influencer, setInfluencer] = useState([])
+  const [researchAreas, setResearchAreas] = useState([])
+
   useEffect(() => {
-    fetch(_FLATINFLUENCER).then(res => res.json())
-    .then(data => {
-      const authors = data // .filter(author => author.num > 1)
-      const tmp = {}
-      authors.forEach(author => {
-        if (tmp[author.name]) {
-          // author already exists: update only the respective fields
-          tmp[author.name]['num'] += author.num
-          tmp[author.name]['recency'] += author.recency
-          tmp[author.name]['priority'] += author.priority * author.num
-          tmp[author.name]['priorities'][""+author.priority] = { 'num': author.num }
-        } else {
-          // first init
-          tmp[author.name] = {
-            'id': author.id,
-            'name': author.name,
-            'num': author.num,
-            'recency': author.recency,
-            'priority': author.priority * author.num,
-            'priorities': {
-              '1': { 'num': 0, },
-              '2': { 'num': 0, },
-              '3': { 'num': 0, },
-            },
+
+    const fetchData = async () => {
+      try {
+        const resInfluencer = await fetch(_FLATINFLUENCER)
+        const authorsData = await resInfluencer.json()
+        const authors = authorsData
+
+        const fields = await (await fetch(_AUTHOR_FIELDS_URL)).json()
+
+        const tmp = {};
+        authors.forEach(author => {
+          if (tmp[author.name]) {
+            // author already exists: update only the respective fields
+            tmp[author.name]['num'] += author.num
+            tmp[author.name]['recency'] += author.recency
+            tmp[author.name]['priority'] += author.priority * author.num
+            tmp[author.name]['priorities'][""+author.priority] = { 'num': author.num }
+          } else {
+            // first init
+            tmp[author.name] = {
+              'id': author.id,
+              'name': author.name,
+              'num': author.num,
+              'recency': author.recency,
+              'priority': author.priority * author.num,
+              'priorities': {
+                '1': { 'num': 0, },
+                '2': { 'num': 0, },
+                '3': { 'num': 0, },
+              },
+            }
+            tmp[author.name]['priorities'][""+author.priority] = { 'num': author.num }
           }
-          tmp[author.name]['priorities'][""+author.priority] = { 'num': author.num }
-        }
-      })
-      // convert object back to array for easier handling in the render
-      let influencer = []
-      for (const key in tmp) {
-        influencer.push(tmp[key])
+          if (fields[author.id]) {
+            tmp[author.name]['area'] = fields[author.id]
+          }
+        })
+        
+        let influencer = Object.values(tmp).filter(author => author.num > 1)
+        influencer = sortByKey(influencer, 'recency')
+        
+        setInfluencer(influencer)
+
+        const areaCount = influencer.reduce((acc, { area }) => {
+          acc[area] = (acc[area] || 0) + 1
+          return acc
+        }, {})
+        const areaCountArray = Object.keys(areaCount).map(area => ({ area, count: areaCount[area] }))
+        areaCountArray.sort((a, b) => b.count - a.count) // Sort from most to least frequent
+        const top20Areas = areaCountArray.slice(0, 20) // Cap it to 20 items
+        setResearchAreas(top20Areas)
+
+      } catch (error) {
+        // Handle errors here
+        console.error('Fetch error:', error)
       }
-      influencer = influencer.filter(author => author.num > 1)
-      influencer = sortByKey(influencer, 'recency') // priority score consisting of: 1 * num(1) + 2 * num(2) + 3 * num(3)
-      
-      setInfluencer(influencer)
-    })
-  })
+    }
+    fetchData()
+
+  }, [])
 
   const isLoading = influencer.length ? false : true
 
@@ -77,6 +101,15 @@ export default function Influencers() {
           Research Influences
           { isLoading && <span style={{marginLeft:'1em', fontWeight:100, fontSize:'1em'}}>...loading...</span>}
         </h2>
+
+        <div className="influences-legend">
+          {
+            researchAreas.map(obj => (
+              <span style={{marginRight:'1em'}} className={'ui label ra ' + obj.area.replace(" ", "_")}>{obj.area} ({obj.count})</span>
+            ))
+          }
+        </div>
+
 
         { isProd && isLoading && <Loading /> }
 

@@ -213,7 +213,7 @@ tpl = """
 """
 css_string = ''
 i = 0
-colors = ['#FFB6C1', '#FFDAB9', '#FFFFE0', '#B0E0E6', '#AFEEEE', '#E0FFFF', '#F0E68C', '#E6E6FA', '#FFF0F5', '#FFE4E1', '#F5DEB3', '#F0FFF0', '#FAFAD2', '#D3FFCE', '#F4C2C2', '#89CFF0', '#FAF0E6', '#FDFD96', '#ECCAFF', '#C1F0F6',]
+colors = ['#FFDAB9', '#FFB6C1', '#B0E0E6', '#AFEEEE', '#FFFFE0', '#E0FFFF', '#F0E68C', '#E6E6FA', '#FFF0F5', '#FFE4E1', '#F5DEB3', '#F0FFF0', '#FAFAD2', '#D3FFCE', '#F4C2C2', '#89CFF0', '#FAF0E6', '#FDFD96', '#ECCAFF', '#C1F0F6',]
 for area in capped_freq:
   css_string += tpl % (area.replace(" ", "_"), colors[i])
   i += 1
