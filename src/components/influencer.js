@@ -176,12 +176,12 @@ export default function AuthorList({ list }) {
           // label color
           let labelColor = null
           if (activeAuthors.includes(author.id)) {
-        		labelColor = 'yellow'
+        		labelColor = 'black'
           }
           if (activeid === author.id) {
         		labelColor = 'red'
           }
-          if (!['yellow', 'red'].includes(labelColor)) {
+          if (!['black', 'red'].includes(labelColor)) {
             labelColor = 'ra ' + author.area.replace(" ", "_")
           }
          // color scaling based on priority of this author
@@ -210,6 +210,7 @@ export default function AuthorList({ list }) {
                     forwardRef={sidebarRef}
                   	activeKeyword={activeKeyword}
                   	details={details[author.id]}
+                    area={author.area}
                   	keywordClick={keywordClick}
                     closeSidebar={closeSidebar}
                     toggleCoauthors={toggleCoauthors}

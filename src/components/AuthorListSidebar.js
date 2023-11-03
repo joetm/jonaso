@@ -70,7 +70,7 @@ const Wrapper = {
 
 
 
-export default function DetailContainer({authorid, details, keywordClick, activeKeyword, toggleCoauthors, coauthorToggleActive, closeSidebar, forwardRef}) {
+export default function DetailContainer({authorid, details, area, keywordClick, activeKeyword, toggleCoauthors, coauthorToggleActive, closeSidebar, forwardRef}) {
 
   const { docs=[], keywords=[], orcid='', affiliations='' } = details
   // const kwlist = keywords.join(", ")
@@ -105,6 +105,13 @@ export default function DetailContainer({authorid, details, keywordClick, active
   return (
     <div ref={forwardRef} className="ui right visible wide sidebar" key={`a-a${authorid}`} style={{backgroundColor: 'inherit'}}>
       <h2 className="ui header" style={{marginTop:'1rem'}}>Author details</h2>
+      <div className="ui segment wrapperBox">
+        <div title="(via ChatGPT)" style={{textAlign:'center',cursor:'help'}}>
+          Research area:
+          {' '}
+          <strong>{area.toUpperCase()}</strong>
+        </div>
+      </div>
       {
         orcid &&
           <div style={{textAlign:'center'}}>{orcid}</div>

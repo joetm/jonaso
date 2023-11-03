@@ -29,6 +29,19 @@ export default function Influencers() {
 
   const [influencer, setInfluencer] = useState([])
   const [researchAreas, setResearchAreas] = useState([])
+  const [selectedLegend, setSelectedLegend] = useState(null)
+
+  const handleLegendClick = (legend) => {
+    // double click resets filter
+    if (selectedLegend === legend) {
+      resetFilter()
+    } else {
+      setSelectedLegend(legend)
+    }
+  }
+  const resetFilter = () => {
+    setSelectedLegend(null)
+  }
 
   useEffect(() => {
 
@@ -94,6 +107,9 @@ export default function Influencers() {
 
   const isLoading = influencer.length ? false : true
 
+  // Derive the filtered list based on the selected legend
+  const filteredList = selectedLegend ? influencer.filter(item => item.area === selectedLegend) : influencer
+
   return (
     <Layout>
       <div className="ui container">
@@ -102,19 +118,32 @@ export default function Influencers() {
           { isLoading && <span style={{marginLeft:'1em', fontWeight:100, fontSize:'1em'}}>...loading...</span>}
         </h2>
 
+        {
+          selectedLegend &&
+            <button className="mini ui grey basic button" style={{float:'right'}} onClick={resetFilter}>
+              <i class="window close icon"></i>
+              Reset Filter
+            </button>
+        }
+
         <div className="influences-legend">
           {
             researchAreas.map(obj => (
-              <span style={{marginRight:'1em'}} className={'ui label ra ' + obj.area.replace(" ", "_")}>{obj.area} ({obj.count})</span>
+              <span
+                style={{marginRight:'1em'}}
+                className={'ui label ra ' + obj.area.replace(" ", "_")}
+                onClick={() => handleLegendClick(obj.area)}
+              >
+                {obj.area} ({obj.count})
+              </span>
             ))
           }
         </div>
 
-
         { isProd && isLoading && <Loading /> }
 
         <div className="clear">
-          <AuthorList list={influencer} />
+          <AuthorList list={filteredList} />
         </div>
       </div>
     </Layout>

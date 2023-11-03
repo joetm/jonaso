@@ -156,6 +156,9 @@ error_fixes = [
   # merge ml and ai
   ("ai", "ml/ai"),
   ("ml", "ml/ai"),
+  # merge linked data and semantic web
+  # ("linked data", "linked data/semantic web"),
+  # ("semantic web", "linked data/semantic web"),
 ]
 for path, subdirs, files in os.walk(output_folder, followlinks=False):
   pbar = tqdm(total=len(files))
