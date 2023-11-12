@@ -3,7 +3,7 @@
 import 'semantic-ui-css/components/checkbox.min.css'
 import 'semantic-ui-css/components/label.min.css'
 
-import '../../reading_list/fields.css'
+import '../css/fields.css'
 
 import React, { useState, useEffect, useRef } from "react"
 import md5 from "md5"
@@ -127,7 +127,6 @@ export default function AuthorList({ list }) {
   function getAuthorDetails(author) {
     // up to three requests to fetch author details
     const id = author.id
-    // if (!id) { return }
     if (id === activeid) {
       // remove, when the same author is clicked a second time
       const dcopy = Object.assign({}, details)
@@ -182,7 +181,7 @@ export default function AuthorList({ list }) {
         		labelColor = 'red'
           }
           if (!['black', 'red'].includes(labelColor)) {
-            labelColor = 'ra ' + author.area.replace(" ", "_")
+            labelColor = 'ra ' + author.area.replace(" ", "_").replace("/", ".")
           }
          // color scaling based on priority of this author
       	 // labelColor = scaleLabelColor(author.priority / maxPrio)
@@ -207,6 +206,7 @@ export default function AuthorList({ list }) {
                 {details[author.id] && activeid === author.id &&
                   <Sidebar
                   	authorid={author.id}
+                    authorname={author.name}
                     forwardRef={sidebarRef}
                   	activeKeyword={activeKeyword}
                   	details={details[author.id]}

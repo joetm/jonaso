@@ -130,7 +130,8 @@ export default function Influencers() {
           {
             researchAreas.map(obj => (
               <span
-                style={{marginRight:'1em'}}
+                style={{marginRight:'1em', marginBottom:'.5em'}}
+                key={obj.area}
                 className={'ui label ra ' + obj.area.replace(" ", "_")}
                 onClick={() => handleLegendClick(obj.area)}
               >

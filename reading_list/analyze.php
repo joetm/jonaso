@@ -77,6 +77,8 @@ function normalize_name($author) {
 	if ($parseauthor) {
 		$author = $parseauthor;
 	}
+	// ž -> z, etc.
+	$author = iconv('UTF-8', 'ASCII//TRANSLIT', $author);
 	// FIRST LAST -> First Last
 	$author = trim(ucwords(strtolower($author)), "\n");
 	// cache

@@ -23,7 +23,7 @@ echo Running locally on localhost.
 export IPADDRESS="localhost"
 # fi
 
-if ./parsefiles.py ; then
+if gnome-session-inhibit --inhibit suspend ./parsefiles.py ; then
     # echo "Command succeeded"
 	~/bin/docker-stop-all > /dev/null
 	./update.sh
