@@ -15,7 +15,7 @@ python3 keywordcloud.py
 
 python3 keywordgraph.py
 
-gnome-session-inhibit --inhibit suspend ./find_research_area.py
+./find_research_area.py
 
 git add -A
 git commit -m "update influencers and interests"
