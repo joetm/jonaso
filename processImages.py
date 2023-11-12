@@ -64,6 +64,7 @@ for cat in images.keys():
 latest = []
 for cat in images.keys():
   for img in images[cat]:
+    if cat == 'redteaming': continue
     latest.append(img)
 latest.sort(key=lambda x: int(x[1]), reverse=True)
 latest = latest[0:49]
