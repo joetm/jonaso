@@ -8,7 +8,7 @@ import 'semantic-ui-css/components/loader.min.css'
 import "semantic-ui-css/components/table.min.css"
 import { priocolors } from "../../common"
 import Layout from "../../components/layout"
-import PubGraph from "../../components/Graphs/PubGraph.js"
+import PubGraph from "../../components/Graphs/PubGraph"
 import { Seo } from "../../components/Seo"
 
 

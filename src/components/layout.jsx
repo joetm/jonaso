@@ -13,7 +13,7 @@ import '../overrides.css'
 import '../print.css'
 
 import React from "react"
-import Nav from "./Nav.js"
+import Nav from "./Nav"
 
 export default function Layout({ children, style={} }) {
   return (
