@@ -3,7 +3,7 @@
 import "semantic-ui-css/components/button.min.css"
 
 import React from "react"
-import { navigate } from 'gatsby'
+// import { navigate } from 'gatsby'
 import Keywords from "../../components/keywords"
 import Layout from "../../components/layout"
 import { Seo } from "../../components/Seo"

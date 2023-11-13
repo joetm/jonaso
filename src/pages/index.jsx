@@ -1,7 +1,11 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+
 import 'semantic-ui-css/components/comment.min.css'
 import 'semantic-ui-css/components/grid.min.css'
 import 'semantic-ui-css/components/icon.min.css'
 import "../../libs/academicons/css/academicons.min.css"
+import "../css/accordion.css"
 
 import React, { useRef, useState, useEffect } from "react"
 import { Link } from "gatsby"
@@ -21,9 +25,26 @@ export const Head = () => (
 ) //
 
 
+function AccordionItem({ title, content, num, accordionActiveNum, expandAccordion }) {
+  return (
+    <>
+      <div className="title" onClick={() => expandAccordion(num)}>
+        <i className={`caret ${accordionActiveNum === num ? 'down' : 'right'} icon`}></i>
+        {title}
+      </div>
+      <div className="content" style={{display: accordionActiveNum === num ? 'block' : 'none'}}>
+        <p className="transition">
+          {content}
+        </p>
+      </div>
+    </>
+  )
+}
+
 export default function Home() {
   const audioRef = useRef()
   const [ isPlaying, setIsPlaying ] = useState(false)
+  const [ accordionActiveNum, setAccordionActiveNum ] = useState(null)
 
   useEffect(() => {
     audioRef.current = new Audio('/audio/speech_20230621150721178.mp3')
@@ -42,6 +63,14 @@ export default function Home() {
 
   const playAudio = () => {
     audioRef.current.play()
+  }
+
+  const expandAccordion = (num) => {
+    if (accordionActiveNum === num) {
+      setAccordionActiveNum(null)
+    } else {
+      setAccordionActiveNum(num)
+    }
   }
 
   return (
@@ -89,11 +118,23 @@ export default function Home() {
               </p>
 
               <p>
+                In my PhD and PostDoc years, I have authored some highly innovative publications on topics that nobody had investigated before:
+                <div className="ui accordion">
+                  <AccordionItem key="1" title="The creativity of text-to-image generation" content="This publication contributed a description of the online creative ecosystem of text-to-image generation and argued that in order to determine the creativity of text-to-image generation, we need to look beyond the generated image and the prompt." num="1" expandAccordion={expandAccordion} accordionActiveNum={accordionActiveNum} />
+                  {/*
+                  <AccordionItem key="2" title="A taxonomy of prompt modifiers for text-to-image generation" content="TODO" num="2" expandAccordion={expandAccordion} accordionActiveNum={accordionActiveNum} />
+                  */}
+                  <AccordionItem key="3" title="Creativity on paid crowdsourcing platforms" content="Crowd workers are routinely invited to participate in creative tasks, yet it was unknown how crow workers feel about such tasks. This survey study developed worker archetypes with varying levels of openess towards creative tasks." num="3" expandAccordion={expandAccordion} accordionActiveNum={accordionActiveNum} />
+                  <AccordionItem key="4" title="Crowd Pilot Studies" content="Pilot studies are very common method of determining important design parameters of a crowdsourcing campaign. However, crowd pilot studies are critically underreported in the literature. This literature review sheds light on this issue and provides concrete recommendations for reporting crowd pilot studies." num="4" expandAccordion={expandAccordion} accordionActiveNum={accordionActiveNum} />
+                </div>
+              </p>
+
+              <p>
               {/*
               In my research, I am interested in building socio-technical systems that allow humans and technology to work together to achieve tasks that would be beyond their individual capabilities. In the past, I have focused on facilitating knowledge transfer and supporting complex creative work.
               Currently, my scientific research interest is in prompt-based learning and generative artificial intelligence.
               */}
-              My scientific research interests, based on the academic literature I have read, are reflected <Link to="/research/interests/">on this page</Link>.
+              My current scientific research interests, based on the academic literature I read, are reflected <Link to="/research/interests/">on this page</Link>.
               A list of researchers who have inspired my work over the years can be found <Link to="/research/influences/">on this page</Link>.
               </p>
 
