@@ -102,7 +102,7 @@ export default function DetailContainer({authorid, authorname="Author details", 
       ))
 
   return (
-    <div ref={forwardRef} className="ui right visible wide sidebar" key={`a-a${authorid}`} style={{backgroundColor: 'inherit'}}>
+    <div ref={forwardRef} className="ui right visible wide sidebar" key={`a-a${authorid}`} style={{backgroundColor: 'white'}}>
       <h2 className="ui header" style={{marginTop:'1rem'}}>{authorname}</h2>
       <div className="ui segment wrapperBox">
         <div title="(via ChatGPT)" style={{textAlign:'center',cursor:'help'}}>

@@ -17,7 +17,7 @@ import Nav from "./Nav"
 
 export default function Layout({ children, style={} }) {
   return (
-    <div style={{margin: `0 auto`, maxWidth: 1024, paddingBottom: '5em', ...style}}>
+    <div style={{margin: `0 auto`, clear: 'both', maxWidth: 1024, paddingBottom: '5em', ...style}}>
       <Nav />
       {children}
     </div>

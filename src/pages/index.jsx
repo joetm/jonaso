@@ -25,17 +25,21 @@ export const Head = () => (
 ) //
 
 
-function AccordionItem({ title, content, num, accordionActiveNum, expandAccordion }) {
+function AccordionItem({ title, content, link, num, accordionActiveNum, expandAccordion }) {
   return (
     <>
       <div className="title" onClick={() => expandAccordion(num)}>
         <i className={`caret ${accordionActiveNum === num ? 'down' : 'right'} icon`}></i>
         {title}
+        {' '}
+        {
+          link.startsWith('http') ? <span>(<a href={link} rel="_blank">{link.replace("http://dx.doi.org/", "")}</a>)</span> : <span>({link})</span>
+        }
       </div>
-      <div className="content" style={{display: accordionActiveNum === num ? 'block' : 'none'}}>
-        <p className="transition">
+      <div className="content" style={{clear: 'both', display: accordionActiveNum === num ? 'block' : 'none'}}>
+        <div className="transition content">
           {content}
-        </p>
+        </div>
       </div>
     </>
   )
@@ -117,17 +121,17 @@ export default function Home() {
               Before my doctoral position, I worked as a researcher at the <a href="https://www.mi.fu-berlin.de/en/inf/groups/hcc/" rel="nofollow">Human-Centered Computing</a> group at the Freie Universität Berlin and the <a href="https://gepris.dfg.de/gepris/projekt/194453117/ergebnisse?context=projekt&task=showDetail&id=194453117">Cluster of Excellence &quot;Bild Wissen Gestaltung&quot;</a> in Berlin. I also have industry experience as a Business Analyst and Strategy Analyst at <a href="https://www.alstom.com/">Alstom</a> (now <a href="https://www.ge.com/">GE</a>) and have worked in agile teams as a web developer at <a href="https://www.seme4.com/">Seme4</a> and <a href="https://www.liip.ch/">Liip</a>.
               </p>
 
-              <p>
+              <div style={{margin: '1em 0 1em 0'}}>
                 In my PhD and PostDoc years, I authored some highly innovative publications on topics that nobody had researched before:
                 <div className="ui accordion">
-                  <AccordionItem key="1" title="The creativity of text-to-image generation" content="This publication contributed a description of the online creative ecosystem of text-to-image generation and argued that in order to determine the creativity of text-to-image generation, we need to look beyond the generated image and the prompt." num="1" expandAccordion={expandAccordion} accordionActiveNum={accordionActiveNum} />
+                  <AccordionItem title="The creativity of text-to-image generation" content="This publication contributed a description of the online creative ecosystem of text-to-image generation and argued that in order to determine the creativity of text-to-image generation, we need to look beyond the generated image and the prompt." num="1" expandAccordion={expandAccordion} accordionActiveNum={accordionActiveNum} link="http://dx.doi.org/10.1145/3569219.3569352" />
                   {/*
-                  <AccordionItem key="2" title="A taxonomy of prompt modifiers for text-to-image generation" content="TODO" num="2" expandAccordion={expandAccordion} accordionActiveNum={accordionActiveNum} />
+                  <AccordionItem title="A taxonomy of prompt modifiers for text-to-image generation" content="TODO" num="2" expandAccordion={expandAccordion} accordionActiveNum={accordionActiveNum} />
                   */}
-                  <AccordionItem key="3" title="Creativity on paid crowdsourcing platforms" content="Crowd workers are routinely invited to participate in creative tasks, yet it was unknown how crowd workers feel about such tasks. This survey study developed worker archetypes with varying levels of openess towards creative crowdsourcing tasks." num="3" expandAccordion={expandAccordion} accordionActiveNum={accordionActiveNum} />
-                  <AccordionItem key="4" title="Crowd Pilot Studies" content="Pilot studies are very common method of determining important design parameters of a crowdsourcing campaign. However, crowd pilot studies are critically underreported in the literature. This literature review shed light on this issue and provided recommendations for reporting crowd pilot studies." num="4" expandAccordion={expandAccordion} accordionActiveNum={accordionActiveNum} />
+                  <AccordionItem title="Creativity on paid crowdsourcing platforms" content="Crowd workers are routinely invited to participate in creative tasks, yet it was unknown how crowd workers feel about such tasks. This survey study developed worker archetypes with varying levels of openess towards creative crowdsourcing tasks." num="3" expandAccordion={expandAccordion} accordionActiveNum={accordionActiveNum} link="http://dx.doi.org/10.1145/3313831.3376677" />
+                  <AccordionItem title="Crowd Pilot Studies" content="Pilot studies are very common method of determining important design parameters of a crowdsourcing campaign. However, crowd pilot studies are critically underreported in the literature. This literature review shed light on this issue and provided recommendations for reporting crowd pilot studies." num="4" expandAccordion={expandAccordion} accordionActiveNum={accordionActiveNum} link="forthcoming" />
                 </div>
-              </p>
+              </div>
 
               <p>
               {/*
@@ -139,7 +143,7 @@ export default function Home() {
               </p>
 
               <p>
-                In my spare time, I enjoy dabbling with <Link to="/artworks/">AI-generated art</Link> and am a <Link to="/kettlebells/">kettlebell salesman</Link>.
+                In my spare time, I enjoy dabbling with <Link to="/artworks/">AI-generated art</Link> and am a <a href="/kettlebells/">kettlebell salesman</a>.
                   I have lived, studied, and/or worked in several countries including
                   Germany, Switzerland, France, the United Kingdom, Sweden,
                   Macedonia, the United States, and Finland.
@@ -174,7 +178,7 @@ export default function Home() {
                 </p>
               */}
               <p style={{marginTop:'2rem'}}>
-                  <a href="/cv/resume.pdf">Resume</a>
+                  Professional <a href="/cv/resume.pdf">Resume</a>
                   &nbsp;|&nbsp;
                   Academic <a href="/cv/oppenlaender-cv.pdf">CV</a>
               </p>

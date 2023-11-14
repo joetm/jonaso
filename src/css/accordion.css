@@ -1,3 +1,9 @@
 .ui.accordion .title {
 	cursor: pointer;
+	clear: both;
+}
+
+.ui.accordion .content {
+	margin-left: .725em;
+	clear: both;
 }

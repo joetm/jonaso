@@ -145,6 +145,7 @@ export default function Influencers() {
 
         <div className="clear">
           <AuthorList list={filteredList} />
+          <div style={{clear: 'both'}}></div>
         </div>
       </div>
     </Layout>
