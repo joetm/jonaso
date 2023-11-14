@@ -124,7 +124,7 @@ export default function Home() {
               <div style={{margin: '1em 0 1em 0'}}>
                 In my PhD and PostDoc years, I authored some highly innovative publications on topics that nobody had researched before:
                 <div className="ui accordion">
-                  <AccordionItem title="The creativity of text-to-image generation" content="This publication contributed a description of the online creative ecosystem of text-to-image generation and argued that in order to determine the creativity of text-to-image generation, we need to look beyond the generated image and the prompt." num="1" expandAccordion={expandAccordion} accordionActiveNum={accordionActiveNum} link="http://dx.doi.org/10.1145/3569219.3569352" />
+                  <AccordionItem title="Creativity of text-to-image generation" content="This publication contributed a description of the online creative ecosystem of text-to-image generation and argued that in order to determine the creativity of text-to-image generation, we need to look beyond the generated image and the prompt." num="1" expandAccordion={expandAccordion} accordionActiveNum={accordionActiveNum} link="http://dx.doi.org/10.1145/3569219.3569352" />
                   {/*
                   <AccordionItem title="A taxonomy of prompt modifiers for text-to-image generation" content="TODO" num="2" expandAccordion={expandAccordion} accordionActiveNum={accordionActiveNum} />
                   */}
