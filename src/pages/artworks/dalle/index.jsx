@@ -27,7 +27,7 @@ export default function ArtPage() {
   return (
     <>
       <Layout style={{paddingBottom: 0}}>
-        <ArtHeader generator='DALL-E Art' totalCount={images.length} />
+        <ArtHeader generator='DALL-E' totalCount={images.length} />
       </Layout>
       <MasonryGallery images={images} />
     </>
