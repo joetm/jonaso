@@ -144,11 +144,11 @@ for path, subdirs, files in os.walk(input_folder, followlinks=False):
 # manually fix some detected errors
 error_fixes = [
   ("natural language processing (nlp)", "nlp"),
-  ("machine learning (ml)", "ml"),
-  ("artificial intelligence (ai)", "ai"),
+  ("machine learning (ml)", "ml/ai"),
+  ("artificial intelligence (ai)", "ml/ai"),
   ("ubiquitous computing", "ubicomp"),
-  ("machine learning", "ml"),
-  ("multimodal retrieval", "ml"),
+  ("machine learning", "ml/ai"),
+  ("multimodal retrieval", "ml/ai"),
   ("law or legal", "legal"),
   ("no research area.", "none"),
   ("research area: hci", "hci"),
@@ -156,6 +156,7 @@ error_fixes = [
   # merge ml and ai
   ("ai", "ml/ai"),
   ("ml", "ml/ai"),
+  ("multimodal models", "ml/ai"),
   # merge linked data and semantic web
   # ("linked data", "linked data/semantic web"),
   # ("semantic web", "linked data/semantic web"),
