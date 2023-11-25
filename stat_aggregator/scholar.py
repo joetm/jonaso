@@ -56,11 +56,13 @@ years = [ int(y.text) for y in years ]
 c_per_year = year_info.findAll("span", {'class': 'gsc_g_al'})
 c_per_year = [ int(c.text) for c in c_per_year ]
 
-cits = dict(zip(years, c_per_year))
+# cits = dict(zip(years, c_per_year))
 
 citations = {
     'citations': int(c_num),
-    'years': cits,
+    # 'years': cits,
+    'years': years,
+    'num': c_per_year,
 }
 
 print(citations)
