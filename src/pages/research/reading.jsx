@@ -15,7 +15,6 @@ import Layout from "../../components/layout"
 import PubGraph from "../../components/Graphs/PubGraph"
 import { Seo } from "../../components/Seo"
 
-
 const _LIST_URL = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/readlist-latest.json'
 
 const styles = {
