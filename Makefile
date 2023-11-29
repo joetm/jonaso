@@ -35,6 +35,12 @@ pre-build:
 
 	make build-cv
 
+	cd stat_aggregator; \
+		./scholar-stats.py
+
+	cd stat_aggregator; \
+		./scholar-citations.py
+
 
 fetch-pcs:
 	# PCS fetching
