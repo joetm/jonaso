@@ -52,8 +52,10 @@ publications = []
 
 for p in pubs:
     title = p.select_one("tr.gsc_a_tr td.gsc_a_t a.gsc_a_at").get_text()
-    citations = p.select_one("tr.gsc_a_tr td.gsc_a_c").get_text()
+    citations = p.select_one("tr.gsc_a_tr td.gsc_a_c").get_text().replace('*', '')
     year = p.select_one("tr.gsc_a_tr td.gsc_a_y").get_text()
+
+    citations = citations if citations.strip() else "0"
 
     if title:
         publications.append({

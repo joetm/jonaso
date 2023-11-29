@@ -39,6 +39,7 @@ const _REFERENCES_PER_YEAR = "https://raw.githubusercontent.com/joetm/jonaso/mas
 const _REFERENCES_PER_TYPE = "https://raw.githubusercontent.com/joetm/jonaso/master/public/static/references-type.json"
 // const _REFERENCES_PER_YEAR = "/static/references.json"
 // const _REFERENCES_PER_TYPE = "/static/references-type.json"
+const _CITATION_URL = "https://raw.githubusercontent.com/joetm/jonaso/master/stat_aggregator/publications-citations.json"
 
 
 export function Head() {
@@ -80,8 +81,10 @@ export default function Publications() {
   const [referencesDetail, setReferencesDetail] = useState({})
   const [showing, setShowing] = useState('type')
   const [graphdata, setGraphdata] = useState({})
+  const [citations, setCitations] = useState([])
 
   useEffect(() => {
+    // ***
     const refFetch = async () => {
       const refs = await (
         await fetch(_REFERENCES_PER_YEAR)
@@ -106,6 +109,7 @@ export default function Publications() {
       setReferences(categorizedRefs)
       setGraphdata(graphdata)
     }
+    // ***
     const typFetch = async () => {
       const refDetail = await (
         await fetch(_REFERENCES_PER_TYPE)
@@ -119,21 +123,20 @@ export default function Publications() {
       }
       setReferencesDetail(refDetail)
     }
+    // ***
+    const citFetch = async () => {
+      const cits = await ( await fetch(_CITATION_URL) ).json()
+      console.log('citations', cits)
+      setCitations(cits)
+    }
+    // ***
     refFetch()
     typFetch()
+    citFetch()
   }, [])
-
-  function togglePubView() {
-    if (showing === 'type') {
-      setShowing('year')
-    } else {
-      setShowing('type')
-    }
-  }
 
   const keysYear = Object.keys(references).reverse()
   const keysType = Object.keys(referencesDetail).reverse()
-  const typeIsActive = showing === 'type'
 
   // custom sort order
   let customSortOrder = []
@@ -177,119 +180,157 @@ export default function Publications() {
               <i aria-hidden="true" className="file pdf outline large icon"></i>
             </a>
           </div>
-
           <div className="ui buttons">
             <button
-              title="Publications per year"
+              title="Sort by year"
               className="ui button"
-              disabled={!typeIsActive}
-              onClick={togglePubView}
+              onClick={() => setShowing('year')}
+              disabled={showing === 'year'}
             >YEAR</button>
             <div className="or"></div>
             <button
-              title="Publications per type"
+              title="Sort by type"
               className="ui button"
               tabIndex="-1"
-              onClick={togglePubView}
-              disabled={typeIsActive}
+              onClick={() => setShowing('type')}
+              disabled={showing === 'type'}
             >TYPE</button>
+            {
+              citations.length &&
+              <>
+                <div className="or"></div>
+                <button
+                  title="Sort by citations"
+                  className="ui button"
+                  tabIndex="-1"
+                  onClick={() => setShowing('cits')}
+                  disabled={showing === 'cits'}
+                >CITATION</button>
+              </>
+            }
           </div>
-
         </div>
 
-        <div className="ui container" id="publications-type" style={{display: typeIsActive ? 'block' : 'none'}}>
 
-              {
-                customSortOrder.map(typ => {
-                  return (
-                    <div className="ui grid" key={typ} style={noMarginGrid}>
-                        <div className="row">
-                          <h1>{typ}</h1>
-                        </div>
-                        {
-                          referencesDetail[typ] && referencesDetail[typ].map((ref, index) => {
-                            let title = ref.title.replace('Jonas Oppenlaender', '<strong>Jonas Oppenlaender</strong>')
-                            title = title.replace('Jonas Oppenländer', '<strong>Jonas Oppenländer</strong>')
-                            const icostr = title.indexOf('.pdf') === -1 ? 'file outline' : 'file alternate outline'
-                            return (
-                              <div className="row" key={index}>
-                                <div className="two wide column">
-                                  <MediaContextProvider>
-                                    <Media at="sm">
-                                      <i aria-hidden="true" className={`grey ${icostr} large icon`}></i>
-                                    </Media>
-                                    <Media at="md">
-                                      <i aria-hidden="true" className={`grey ${icostr} huge icon`}></i>
-                                    </Media>
-                                    <Media greaterThanOrEqual="lg">
-                                      <i aria-hidden="true" className={`grey ${icostr} big icon`}></i>
-                                    </Media>
-                                    </MediaContextProvider>
-                                </div>
-                                <div className="fourteen wide column">
-                                  <div className="item">
-                                    <div className="content">
-                                      <div className="header" dangerouslySetInnerHTML={{__html: title}}></div>
+        {
+          showing === 'type' &&
+            <div className="ui container" id="publications-type">
+                  {
+                    customSortOrder.map(typ => {
+                      return (
+                        <div className="ui grid" key={typ} style={noMarginGrid}>
+                            <div className="row">
+                              <h1>{typ}</h1>
+                            </div>
+                            {
+                              referencesDetail[typ] && referencesDetail[typ].map((ref, index) => {
+                                let title = ref.title.replace('Jonas Oppenlaender', '<strong>Jonas Oppenlaender</strong>')
+                                title = title.replace('Jonas Oppenländer', '<strong>Jonas Oppenländer</strong>')
+                                const icostr = title.indexOf('.pdf') === -1 ? 'file outline' : 'file alternate outline'
+                                return (
+                                  <div className="row" key={index}>
+                                    <div className="two wide column">
+                                      <MediaContextProvider>
+                                        <Media at="sm">
+                                          <i aria-hidden="true" className={`grey ${icostr} large icon`}></i>
+                                        </Media>
+                                        <Media at="md">
+                                          <i aria-hidden="true" className={`grey ${icostr} huge icon`}></i>
+                                        </Media>
+                                        <Media greaterThanOrEqual="lg">
+                                          <i aria-hidden="true" className={`grey ${icostr} big icon`}></i>
+                                        </Media>
+                                        </MediaContextProvider>
+                                    </div>
+                                    <div className="fourteen wide column">
+                                      <div className="item">
+                                        <div className="content">
+                                          <div className="header" dangerouslySetInnerHTML={{__html: title}}></div>
+                                        </div>
+                                      </div>
                                     </div>
                                   </div>
-                                </div>
-                              </div>
-                            )
-                          })
-                        }
-                    </div>
-                  )
-                })
-              }
-
-            <div className="spacer"></div>
-        </div>
-
-        <div className="ui container" id="publications-year" style={{display: typeIsActive ? 'none' : 'block'}}>
-              {
-                keysYear.map(year => {
-                  return (
-                    <div className="ui grid" key={year} style={noMarginGrid}>
-                        <div className="row">
-                          <h1>{year}</h1>
+                                )
+                              })
+                            }
                         </div>
-                        {
-                          references[year].map((item, index) => {
-                            item.__html = item.__html.replace('Jonas Oppenlaender', '<strong>Jonas Oppenlaender</strong>')
-                            item.__html = item.__html.replace('Jonas Oppenländer', '<strong>Jonas Oppenländer</strong>')
-                            item.__html = item.__html.replace('--', '–')
-                            const icostr = item.__html.indexOf('.pdf') === -1 ? 'file outline' : 'file alternate outline'
-                            return (
-                              <div className="row" key={index}>
-                                <div className="two wide column">
-                                  <MediaContextProvider>
-                                    <Media at="sm">
-                                      <i aria-hidden="true" className={`grey ${icostr} large icon`}></i>
-                                    </Media>
-                                    <Media at="md">
-                                      <i aria-hidden="true" className={`grey ${icostr} huge icon`}></i>
-                                    </Media>
-                                    <Media greaterThanOrEqual="lg">
-                                      <i aria-hidden="true" className={`grey ${icostr} big icon`}></i>
-                                    </Media>
-                                  </MediaContextProvider>
-                                </div>
-                                <div className="fourteen wide column">
-                                  <div className="item">
-                                    <div className="content">
-                                      <div className="header" dangerouslySetInnerHTML={item}></div>
+                      )
+                    })
+                  }
+                <div className="spacer"></div>
+            </div>
+        }
+
+        {
+          showing === 'year' &&
+            <div className="ui container" id="publications-year">
+                  {
+                    keysYear.map(year => {
+                      return (
+                        <div className="ui grid" key={year} style={noMarginGrid}>
+                            <div className="row">
+                              <h1>{year}</h1>
+                            </div>
+                            {
+                              references[year].map((item, index) => {
+                                item.__html = item.__html.replace('Jonas Oppenlaender', '<strong>Jonas Oppenlaender</strong>')
+                                item.__html = item.__html.replace('Jonas Oppenländer', '<strong>Jonas Oppenländer</strong>')
+                                item.__html = item.__html.replace('--', '–')
+                                const icostr = item.__html.indexOf('.pdf') === -1 ? 'file outline' : 'file alternate outline'
+                                return (
+                                  <div className="row" key={index}>
+                                    <div className="two wide column">
+                                      <MediaContextProvider>
+                                        <Media at="sm">
+                                          <i aria-hidden="true" className={`grey ${icostr} large icon`}></i>
+                                        </Media>
+                                        <Media at="md">
+                                          <i aria-hidden="true" className={`grey ${icostr} huge icon`}></i>
+                                        </Media>
+                                        <Media greaterThanOrEqual="lg">
+                                          <i aria-hidden="true" className={`grey ${icostr} big icon`}></i>
+                                        </Media>
+                                      </MediaContextProvider>
+                                    </div>
+                                    <div className="fourteen wide column">
+                                      <div className="item">
+                                        <div className="content">
+                                          <div className="header" dangerouslySetInnerHTML={item}></div>
+                                        </div>
+                                      </div>
                                     </div>
                                   </div>
-                                </div>
+                                )
+                              })
+                            }
+                        </div>
+                      )
+                    })
+                  }
+            </div>
+        }
+
+        {
+          showing === 'cits' &&
+            <div className="ui container" id="publications-cits">
+                  {
+                    citations.map(c => (
+                        <div className="ui grid" key={c.title} style={noMarginGrid}>
+                            <div className="row">
+                              <div className="fourteen wide column">
+                                {c.title}
                               </div>
-                            )
-                          })
-                        }
-                    </div>
-                  )
-                })
-              }
-        </div>
+                              <div className="two wide column">
+                                {c.citations.replace('*', '')}
+                              </div>
+                            </div>
+                        </div>
+                    ))
+                  }
+              <div className="spacer"></div>
+            </div>
+        }
+
       </div>
     </Layout>
   )
