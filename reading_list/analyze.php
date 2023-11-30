@@ -347,18 +347,19 @@ foreach ($keywords_level3 as $l1 => $sublevel) {
 			unset($sublevel2[""]);
 		}
 		// reorganize
-		if (!isset($store[$l2])) {
-			$store[$l2] = [];
+		$l2key = $l1+"-"+$l2;
+		if (!isset($store[$l2key])) {
+			$store[$l2key] = [];
 		}
 		foreach ($sublevel2 as $l3 => $num) {
-			$store[$l2][] = ["name" => $l3, "num" => $num]; // no id needed at this last level
+			$store[$l2key][] = ["name" => $l3, "num" => $num]; // no id needed at this last level
 		}
 	}
 }
-foreach ($store as $l2 => $data) {
+foreach ($store as $l2key => $data) {
 	// sort descending by num
 	usort($data, 'sortFunc');
-	$fp = fopen("level3/" . md5($l2) . ".json", 'w');
+	$fp = fopen("level3/" . md5($l2key) . ".json", 'w');
 	fwrite($fp, json_encode($data));
 	fclose($fp);
 }
