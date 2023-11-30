@@ -209,8 +209,9 @@ export default function Publications() {
               </>
             }
           </div>
+          <div style={{clear:'both'}}></div>
         </div>
-
+        
 
         {
           showing === 'type' &&

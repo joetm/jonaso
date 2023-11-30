@@ -19,7 +19,7 @@
  * @return  void
  *
  */
-function show_status($done, $total, $size=30) {
+function show_status($done, $total, $size=20) {
     static $start_time;
     // if we go over our bound, just ignore it
     if($done > $total) return;
@@ -115,7 +115,7 @@ while ($result && $doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 	// skip empty
 	if ($doc === "{}") {
 		$done++;
-		show_status($done, $total, $size=20);
+		show_status($done, $total);
 		continue;
 	}
 
@@ -260,18 +260,48 @@ while ($result && $doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 
 		// L2
 		if ($l1 && $l2) {
-		    $keywords_level2[$l1][$l2] = ($keywords_level2[$l1][$l2] ?? 0) + 1;
+		    $keywords_level2[$l1][$l1.'-'.$l2] = ($keywords_level2[$l1][$l1.'-'.$l2] ?? 0) + 1;
 		}
 		// L3
 		if ($l1 && $l2 && $l3) {
-		    $keywords_level3[$l1][$l2][$l3] = ($keywords_level3[$l1][$l2][$l3] ?? 0) + 1;
+		    $keywords_level3[$l1][$l1.'-'.$l2][$l3] = ($keywords_level3[$l1][$l1.'-'.$l2][$l3] ?? 0) + 1;
 		}
 	}
 
 	$done++;
-	show_status($done, $total, $size=20);
+	show_status($done, $total);
+
+	// dev
+	// if ($i == 25) {break;}
 
 }
+
+// write out the author details
+// chdir('./influencers/');
+foreach ($influencers as $author => $array_of_titles) {
+	$fp = fopen('./influencers/' . md5($author) . '.json', 'w');
+	fwrite($fp, json_encode($array_of_titles));
+	fclose($fp);
+}
+unset($influencers);
+
+// for each keyword, store the author
+foreach ($keywordauthors as $keyword => $arr) {
+	$fp = fopen('./keywordauthors/' . md5($keyword) . '.json', 'w');
+	fwrite($fp, json_encode($arr));
+	fclose($fp);
+}
+unset($keywordauthors);
+
+// for each author, store the coauthors
+foreach ($coauthors as $authorid => $coauthors_arr) {
+	$fp = fopen('./coauthors/' . $authorid . '.json', 'w');
+	fwrite($fp, json_encode($coauthors_arr));
+	fclose($fp);
+}
+unset($keywordauthors);
+
+
 
 $priorities = [
 	// 0 => [],
@@ -326,12 +356,12 @@ foreach ($keywords_level2 as $key => $sublevel) {
 	// reorganize
 	$tmp = [];
 	foreach ($sublevel as $k => $v) {
-		$tmp[] = ["name" => $k, "num" => $v, 'id' => md5($k)];
+		$tmp[] = ["name" => explode("-", $k)[1], "num" => $v, 'id' => md5($k)];
 	}
 	// sort descending by num
 	usort($tmp, 'sortFunc');
 	// save keywords to file
-	$fp = fopen("level2/" . md5($key) . ".json", 'w');
+	$fp = fopen("./level2/" . md5($key) . ".json", 'w');
 	fwrite($fp, json_encode($tmp));
 	fclose($fp);
 }
@@ -347,43 +377,22 @@ foreach ($keywords_level3 as $l1 => $sublevel) {
 			unset($sublevel2[""]);
 		}
 		// reorganize
-		$l2key = $l1+"-"+$l2;
-		if (!isset($store[$l2key])) {
-			$store[$l2key] = [];
+		// $l2key = $l1 . "-" . $l2;
+		// var_dump($l2key);
+		if (!isset($store[$l2])) {
+			$store[$l2] = [];
 		}
 		foreach ($sublevel2 as $l3 => $num) {
-			$store[$l2key][] = ["name" => $l3, "num" => $num]; // no id needed at this last level
+			$store[$l2][] = ["name" => $l3, "num" => $num]; // no id needed at this last level
 		}
 	}
 }
-foreach ($store as $l2key => $data) {
+foreach ($store as $key => $data) {
 	// sort descending by num
 	usort($data, 'sortFunc');
-	$fp = fopen("level3/" . md5($l2key) . ".json", 'w');
+	$fp = fopen("./level3/" . md5($key) . ".json", 'w');
 	fwrite($fp, json_encode($data));
 	fclose($fp);
 }
 
-
-// write out the author details
-// chdir('./influencers/');
-foreach ($influencers as $author => $array_of_titles) {
-	$fp = fopen('./influencers/' . md5($author) . '.json', 'w');
-	fwrite($fp, json_encode($array_of_titles));
-	fclose($fp);
-}
-
-// for each keyword, store the author
-foreach ($keywordauthors as $keyword => $arr) {
-	$fp = fopen('./keywordauthors/' . md5($keyword) . '.json', 'w');
-	fwrite($fp, json_encode($arr));
-	fclose($fp);
-}
-
-// for each author, store the coauthors
-foreach ($coauthors as $authorid => $coauthors_arr) {
-	$fp = fopen('./coauthors/' . $authorid . '.json', 'w');
-	fwrite($fp, json_encode($coauthors_arr));
-	fclose($fp);
-}
 

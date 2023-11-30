@@ -2,8 +2,9 @@
 
 import React, { useState, useEffect } from "react"
 import { Bar, BarChart, CartesianGrid, LabelList, ResponsiveContainer, XAxis, YAxis } from 'recharts'
-import 'semantic-ui-css/components/button.min.css'
+// import md5 from "md5"
 
+import 'semantic-ui-css/components/button.min.css'
 
 const _KEYWORDS = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/keywords.json'
 const BARHEIGHT = 35
@@ -35,14 +36,19 @@ export default function Keywords() {
   }, [])
 
   function zoomOut() {
-    console.log('zoomout')
+    // console.log('zoomout')
     const newlevel = (activeLevel - 1) > 1 ? activeLevel - 1 : 1
     setActiveLevel(newlevel)
   }
 
   function zoomIn(bar) {
     console.log('Loading:', bar.name)
-    const URL = `https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/level${activeLevel+1}/${bar.id}.json`
+    let qid = bar.id
+    // if (activeLevel === 2) {
+    //   console.log(data[1].label + "-" + bar.name)
+    //   qid = md5(data[1].label + "-" + bar.name)
+    // }
+    const URL = `https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/level${activeLevel+1}/${qid}.json`
     console.log(URL)
     fetch(URL).then(res => res.json())
       .then(lvldata => {
@@ -50,8 +56,8 @@ export default function Keywords() {
         const newdata = { ...data }
         newdata[newlevel]['data'] = lvldata.filter(kw => kw.num > CUTOFF_SUBLEVEL)
         newdata[newlevel]['label'] = bar.name
-        console.log('level:', newlevel)
-        console.log('new data:', newdata[newlevel]['data'])
+        // console.log('level:', newlevel)
+        // console.log('new data:', newdata[newlevel]['data'])
         setData(newdata)
         setActiveLevel(newlevel)
       })
