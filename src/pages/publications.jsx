@@ -83,6 +83,9 @@ export default function Publications() {
   const [graphdata, setGraphdata] = useState({})
   const [citations, setCitations] = useState([])
 
+  const [isRefLoaded, setIsRefLoaded] = useState(false)
+  const [isCitsLoaded, setIsCitsLoaded] = useState(false)
+
   useEffect(() => {
     // ***
     const refFetch = async () => {
@@ -108,6 +111,7 @@ export default function Publications() {
       const graphdata = {refsByYear, tickArray}
       setReferences(categorizedRefs)
       setGraphdata(graphdata)
+      setIsRefLoaded(true)
     }
     // ***
     const typFetch = async () => {
@@ -126,14 +130,36 @@ export default function Publications() {
     // ***
     const citFetch = async () => {
       const cits = await ( await fetch(_CITATION_URL) ).json()
-      console.log('citations', cits)
+      // console.log('citations', cits)
       setCitations(cits)
+      setIsCitsLoaded(true)
     }
     // ***
     refFetch()
     typFetch()
     citFetch()
   }, [])
+
+  // add formatted ref html to the citations array
+  // useEffect(() => {
+  //   if (isRefLoaded && isCitsLoaded) {
+  //     const newCitations = []
+  //     for (const index in citations) {
+  //       const year = citations[index].year
+  //       const title = citations[index].title.replace("\n", "").toLowerCase()
+  //       const subgroup = references[year]
+  //       for (const i in subgroup) {
+  //         const pub = subgroup[i].__html.replace("\n", "").toLowerCase()
+  //         if (pub.indexOf( title ) > -1) {
+  //           newCitations.push( { year, citations: citations[index].citations, title: citations[index].title, __html: subgroup[i].__html } )
+  //           break
+  //         }
+  //       }
+  //     }
+  //     setCitations(newCitations)
+  //   }
+  // }, [setIsRefLoaded, isCitsLoaded])
+
 
   const keysYear = Object.keys(references).reverse()
   const keysType = Object.keys(referencesDetail).reverse()
@@ -315,18 +341,37 @@ export default function Publications() {
           showing === 'cits' &&
             <div className="ui container" id="publications-cits">
                   {
-                    citations.map(c => (
-                        <div className="ui grid" key={c.title} style={noMarginGrid}>
-                            <div className="row">
-                              <div className="fourteen wide column">
-                                {c.title}
+                    citations.map(c => {
+                      const icostr = c.__html ? c.__html.indexOf('.pdf') === -1 ? 'file outline' : 'file alternate outline' : 'file outline'
+                        return (
+                          <div className="ui grid" key={c.title} style={noMarginGrid}>
+                              <div className="row">
+                                <div className="one wide column">
+                                  <MediaContextProvider>
+                                    <Media at="sm">
+                                      <i aria-hidden="true" className={`grey ${icostr} large icon`}></i>
+                                    </Media>
+                                    <Media at="md">
+                                      <i aria-hidden="true" className={`grey ${icostr} huge icon`}></i>
+                                    </Media>
+                                    <Media greaterThanOrEqual="lg">
+                                      <i aria-hidden="true" className={`grey ${icostr} big icon`}></i>
+                                    </Media>
+                                    </MediaContextProvider>
+                                </div>
+                                {
+                                  c.__html ?
+                                    <div className="thirteen wide column" dangerouslySetInnerHTML={c}></div>
+                                  :
+                                    <div className="thirteen wide column">{c.title}</div>
+                                }
+                                <div className="two wide column">
+                                  {c.citations.replace('*', '')}
+                                </div>
                               </div>
-                              <div className="two wide column">
-                                {c.citations.replace('*', '')}
-                              </div>
-                            </div>
-                        </div>
-                    ))
+                          </div>
+                      )
+                    })
                   }
               <div className="spacer"></div>
             </div>

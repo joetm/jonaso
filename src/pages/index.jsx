@@ -102,7 +102,7 @@ export default function Home() {
                 ).
                 {' '}
 
-                  I am a Senior Research Scientist at Elisa Corporation in Helsinki, Finland.
+                  I am a Senior Research Scientist at Elisa Corporation in Helsinki, Finland.{' '}
 {/*
                   My primary research objective is to adapt LLMs to automate tasks in the telecommunications domain.
 */}
