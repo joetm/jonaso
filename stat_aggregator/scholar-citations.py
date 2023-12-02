@@ -9,6 +9,8 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 URL = 'https://scholar.google.com/citations?user=ucO_QYQAAAAJ&hl=en'
@@ -27,17 +29,20 @@ def open_browser(url):
     options.headless = True  # Enable headless mode
     driver = webdriver.Firefox(options=options)
     driver.get(url)
-    more_link = True
-    table = None
     # click the more link until the bitter end
     while True:
         more_link = driver.find_element(By.ID, "gsc_bpf_more")
         if more_link.get_attribute('disabled') is not None:
             break
+        current_row_count = len(driver.find_elements(By.XPATH, "//table[@id='gsc_a_t']/tbody/tr"))
         more_link.click()
+        # Wait until the number of rows in the table increases
+        WebDriverWait(driver, 10).until(
+            lambda d: len(d.find_elements(By.XPATH, "//table[@id='gsc_a_t']/tbody/tr")) > current_row_count
+        )
     # now return table
-    table = driver.find_element(By.ID, "gsc_a_b")
-    return table.get_attribute('outerHTML')
+    tbody = driver.find_element(By.ID, "gsc_a_b")
+    return tbody.get_attribute('outerHTML')
 
 
 pub_table_html = open_browser(URL)
