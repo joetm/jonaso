@@ -179,6 +179,21 @@ export default function Publications() {
     ]
   }
 
+
+// const aggregated = citations.map(e => ({year: e.year, num: e.citations}))
+// .reduce((acc, { num, year }) => {
+//   year = parseInt(year, 10)
+//   acc[year] = acc[year] || 0
+//   acc[year] += parseInt(num, 10)
+//   return acc
+// }, {})
+// const citations_per_year = Object.keys(aggregated).map(year => ({
+//   year: year,
+//   citations: aggregated[year]
+// }))
+// console.log('aggregated', aggregated)
+
+
   return (
     <Layout>
       <div className="ui container">
