@@ -26,15 +26,14 @@ export const Head = () => (
 
 
 function AccordionItem({ title, content, link, num, accordionActiveNum, expandAccordion }) {
+  const linkname = link.split(/\//).slice(-1)[0]
   return (
     <>
       <div className="title" onClick={() => expandAccordion(num)}>
         <i className={`caret ${accordionActiveNum === num ? 'down' : 'right'} icon`}></i>
         {title}
         {' '}
-        {
-          link.startsWith('http') ? <span>(<a href={link} rel="_blank">{link.replace("http://dx.doi.org/", "")}</a>)</span> : <span>({link})</span>
-        }
+        <span>(<a href={link} rel="_blank">{linkname}</a>)</span>
       </div>
       <div className="content" style={{clear: 'both', display: accordionActiveNum === num ? 'block' : 'none'}}>
         <div className="transition content">
