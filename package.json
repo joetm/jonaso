@@ -34,6 +34,7 @@
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.30",
     "gatsby-source-filesystem": "^5.7.0",
     "hoist-non-react-statics": "^3.3.2",
+    "immer": "^10.0.3",
     "latex.js": "^0.12.4",
     "md5": "^2.2.1",
     "moment": "^2.29.3",
@@ -55,7 +56,8 @@
     "semantic-ui-css": "^2.5.0",
     "semantic-ui-react": "^2.1.4",
     "sharp": "^0.31.3",
-    "use-detect-print": "^0.0.2"
+    "use-detect-print": "^0.0.2",
+    "zustand": "^4.5.0"
   },
   "devDependencies": {
     "bundle-buddy": "^0.2.2"
