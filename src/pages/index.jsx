@@ -131,7 +131,7 @@ export default function Home() {
                   <AccordionItem title="A taxonomy of prompt modifiers for text-to-image generation" content="TODO" num="2" expandAccordion={expandAccordion} accordionActiveNum={accordionActiveNum} />
                   */}
                   <AccordionItem title="Creativity on paid crowdsourcing platforms" content="Crowd workers are routinely invited to participate in creative tasks, yet it was unknown how crowd workers feel about such tasks. This survey study developed worker archetypes with varying levels of openess towards creative crowdsourcing tasks." num="3" expandAccordion={expandAccordion} accordionActiveNum={accordionActiveNum} link="https://dx.doi.org/10.1145/3313831.3376677" />
-                  <AccordionItem title="Crowd Pilot Studies" content="Pilot studies are very common method of determining important design parameters of a crowdsourcing campaign. However, crowd pilot studies are critically underreported in the literature. This literature review shed light on this issue and provided recommendations for reporting crowd pilot studies." num="4" expandAccordion={expandAccordion} accordionActiveNum={accordionActiveNum} link="https://arxiv.org/abs/2312.08090" />
+                  <AccordionItem title="Crowd Pilot Studies" content="Pilot studies are very common method of determining important design parameters of a crowdsourcing campaign. However, crowd pilot studies are critically underreported in the literature. This literature review shed light on this issue and provided recommendations for reporting crowd pilot studies." num="4" expandAccordion={expandAccordion} accordionActiveNum={accordionActiveNum} link="https://dx.doi.org/10.1145/3641023" />
                 </div>
               </div>
 

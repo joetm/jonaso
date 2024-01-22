@@ -642,41 +642,43 @@
   "supervisions": [
     {
       "type": "Bachelor thesis",
-      "supervisee": "Katri Säily",
+      "supervisee": "1 student",
+      "BAK": "Katri Säily",
       "year": 2021
     },
     {
       "type": "Master thesis",
-      "supervisee": "Antonio Kongjonaj",
+      "supervisee": "1 student",
+      "BAK": "Antonio Kongjonaj",
       "role": "Technical supervisor",
       "url": "https://www.linkedin.com/in/antokon/",
       "year": 2018
     },
     {
       "type": "Summer internship project",
-      "supervisee": "Antonio Kongjonaj",
+      "supervisee": "1 student",
+      "BAK": "Antonio Kongjonaj",
       "role": "Technical supervisor",
       "url": "https://www.linkedin.com/in/antokon/",
       "year": 2018
     },
     {
       "type": "Bachelor thesis",
-      "supervisee": "Bastian van de Wetering",
-      "year": 2018
-    },
-    {
-      "type": "Bachelor thesis",
-      "supervisee": "Andre Slava Paderow",
+      "supervisee": "2 students",
+      "BAK": "Bastian van de Wetering",
+      "BAK2": "Andre Slava Paderow",
       "year": 2018
     },
     {
       "type": "Master thesis",
-      "supervisee": "Ömer Bayram",
+      "supervisee": "1 student",
+      "BAK": "Ömer Bayram",
       "year": "2017 - 2018"
     },
     {
       "type": "Master thesis",
-      "supervisee": "Immanuel Pelzer",
+      "supervisee": "1 student",
+      "BAK": "Immanuel Pelzer",
       "url": "https://www.linkedin.com/in/immanuel-pelzer-408505133/",
       "year": "2016 - 2017"
     },
@@ -687,21 +689,25 @@
     },
     {
       "type": "Research assistant",
-      "supervisee": "Tim Korjakov",
+      "supervisee": "2 students",
+      "BAK": "Tim Korjakov",
+      "BAK2": "Nicolo Knapp",
       "year": "2017 - 2018"
     },
     {
       "type": "Research assistant",
-      "supervisee": "Nicolo Knapp",
-      "year": "2017 - 2018"
-    },
-    {
-      "type": "Research assistant",
-      "supervisee": "Immanuel Pelzer",
+      "supervisee": "1 student",
+      "BAK": "Immanuel Pelzer",
       "year": "2017 - 2017"
     }
   ],
   "peer-review": [
+    {
+      "series": "SNSF",
+      "title": "Swiss National Science Foundation",
+      "url": "https://www.snf.ch/en",
+      "years": [2024]
+    },
     {
       "series": "HAI",
       "title": "Human-Agent Interaction",
