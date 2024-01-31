@@ -100,11 +100,10 @@ export default function Home() {
                   }
                 ).
                 {' '}
-
                   I am a Senior Research Scientist at Elisa Corporation in Helsinki, Finland.{' '}
-{/*
+                  {/*
                   My primary research objective is to adapt LLMs to automate tasks in the telecommunications domain.
-*/}
+                  */}
                   My aim is to enhance the industrial usability of AI, specifically leveraging the capabilities of Large Language Models (LLMs), tailored for the telecommunications sector.
                   To this end, I research, identify, propose, and evaluate effective recipes and technical solutions for adapting LLMs to specialized tasks within telecommunications and engineering.
               </p>
@@ -140,8 +139,8 @@ export default function Home() {
               In my research, I am interested in building socio-technical systems that allow humans and technology to work together to achieve tasks that would be beyond their individual capabilities. In the past, I have focused on facilitating knowledge transfer and supporting complex creative work.
               Currently, my scientific research interest is in prompt-based learning and generative artificial intelligence.
               */}
-              My current scientific research interests, based on the academic literature I read, are reflected <Link to="/research/interests/">on this page</Link>.
-              A list of researchers who have inspired my work over the years can be found <Link to="/research/influences/">on this page</Link>.
+              My current research interests, based on the academic literature I read, are reflected <Link to="/research/interests/">on this page</Link>.
+              A list of researchers who have inspired my work over the years can be found <Link to="/research/influences/">here</Link>.
               </p>
 
               <p>
@@ -159,6 +158,13 @@ export default function Home() {
               sixteen wide mobile
               column">
             <div className="row">
+
+              {/*
+              <p>
+                Generative AI  is the  next  leap  in  human-machine  collaboration  that  transforms  industries,  labor  markets,  and society  on  a  scale  similar  to  the  internet, and personal computing.
+                I have been interested in GenAI since 2021 when I learned about an image generation system called VQGAN-CLIP. It was crystal clear back then, that "prompt engineering" would become an important study area for human-computer interaction (HCI).
+              </p>
+              */}
 
               <p style={{textAlign:'center'}}>
                 <img src={Venn} style={{width:'90%'}} alt="" />
@@ -180,6 +186,11 @@ export default function Home() {
                 </p>
               */}
               <p style={{marginTop:'2rem'}}>
+                  <i class="arrow right icon"></i>
+                  <a href="https:www.komasurfer.com/portfolio/">Project Portfolio</a>
+              </p>
+              <p>
+                  <i class="arrow right icon"></i>
                   Professional <a href="/cv/resume.pdf">Resume</a>
                   &nbsp;|&nbsp;
                   Academic <a href="/cv/oppenlaender-cv.pdf">CV</a>
