@@ -1,8 +1,1389 @@
 {
-    "modified": 1706609420,
-    "unrecognized_overall": 1080,
+    "modified": 1707115544,
+    "unrecognized_overall": 1082,
     "unrecognized_overall_percent": 0.09,
     "documents": [
+        {
+            "title": "Corrective Retrieval Augmented Generation",
+            "year": 2024,
+            "authors": [
+                "Shi-Qi Yan",
+                "Jia-Chen Gu",
+                "Yun Zhu",
+                "Zhen-Hua Ling"
+            ],
+            "filename": "2401.15884.pdf",
+            "recog": 1,
+            "modified": 1707114948,
+            "keywords": "NLP > Augmented Language Models > Retrieval-Augmented Generation (RAG) > Corrective Retrieval Augmented Generation (CRAG)",
+            "level": 4,
+            "priority": 3
+        },
+        {
+            "title": "Google debuts Imagen 2 with text and logo generation | TechCrunch",
+            "year": 2024,
+            "authors": [
+                "Kyle Wiggers"
+            ],
+            "filename": "Google debuts Imagen 2 with text and logo generation TechCrunch.pdf",
+            "recog": 1,
+            "modified": 1707114611,
+            "keywords": "Machine Learning > Generative Deep Learning > Text-to-Image > Text-to-Image Models > Imagen (Google) > Imagen 2",
+            "level": 6,
+            "priority": 0
+        },
+        {
+            "title": "Text Embeddings Reveal (Almost) As Much As Text",
+            "year": 2024,
+            "authors": [
+                "John X. Morris",
+                "Volodymyr Kuleshov",
+                "Vitaly Shmatikov",
+                "Alexander M. Rush"
+            ],
+            "filename": "2310.06816.pdf",
+            "recog": 1,
+            "modified": 1707066084,
+            "keywords": "NLP > Embeddings > Embedding Inversion > Vec2Text",
+            "level": 4,
+            "priority": 3
+        },
+        {
+            "title": "gpt-4-turbo over the API produces (statistically significant) shorter completions when it \"thinks\" its December",
+            "year": 2024,
+            "authors": [
+                "Rob Lynch"
+            ],
+            "filename": "Rob Lynch on X ChatGPTapp OpenAI tszzl emollick voooooogel Wild result. gpt-4-turbo over the API produces (statistically significant) shorter completions when it thinks its December.pdf",
+            "recog": 1,
+            "modified": 1707065367,
+            "keywords": "NLP > Issues > Prompt Bias",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "Guide to GenAI for CRM: Improving human connections between buyers and brands",
+            "year": 2024,
+            "authors": [
+                "October"
+            ],
+            "filename": "offering-20230913-guide-to-gen-ai-for-crm.pdf",
+            "recog": 1,
+            "modified": 1707065177,
+            "keywords": "Machine Learning > Generative Deep Learning > Applications > Customer Relationship Management, CRM",
+            "level": 4,
+            "priority": 0
+        },
+        {
+            "title": "Meta\u2019s new AI image generator was trained on 1.1 billion Instagram and Facebook photos",
+            "year": 2024,
+            "authors": [],
+            "filename": "Meta\u2019s new AI image generator was trained on 1.1 billion Instagram and Facebook photos Ars Technica.pdf",
+            "recog": 1,
+            "modified": 1707064994,
+            "keywords": "Machine Learning > Generative Deep Learning > Issues > Copyright, Intellectual Property > Emu (Meta)",
+            "level": 5,
+            "priority": 0
+        },
+        {
+            "title": "WEAK-TO-STRONG GENERALIZATION: ELICITING STRONG CAPABILITIES WITH WEAK SUPERVISION",
+            "year": 2024,
+            "authors": [
+                "Collin Burns",
+                "Pavel Izmailov",
+                "Jan Hendrik Kirchner",
+                "Bowen Baker",
+                "Leo Gao",
+                "Leopold Aschenbrenner",
+                "Yining Chen",
+                "Adrien Ecoffet",
+                "Manas Joglekar",
+                "Jan Leike",
+                "Ilya Sutskever",
+                "Jeff Wu"
+            ],
+            "filename": "weak-to-strong-generalization.pdf",
+            "recog": 1,
+            "modified": 1707061786,
+            "keywords": "AI > Impact, Future > Superalignment > Weak-to-strong Generalization",
+            "level": 4,
+            "priority": 3
+        },
+        {
+            "title": "T H E O R Y O F D E E P L E A R N I N G",
+            "year": 2024,
+            "authors": [],
+            "filename": "bookdraft.pdf",
+            "recog": 1,
+            "modified": 1707060031,
+            "keywords": "Machine Learning > Deep Learning > General, Theory",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Revealing reliable information from taxi traces: from raw data to information discovery",
+            "year": 2024,
+            "authors": [
+                "Anja Keskinarkaus"
+            ],
+            "filename": "nbnfi-fe2022121672011.pdf",
+            "recog": 1,
+            "modified": 1707058234,
+            "keywords": "IoT, Internet of Things > Sensors > Taxi Traces",
+            "level": 3,
+            "priority": 2
+        },
+        {
+            "title": "Collaboration patterns in the German political science co-authorship network",
+            "year": 2024,
+            "authors": [
+                "Philip Leifeld",
+                "Sandra Wankm\u00fcller",
+                "Valentin T. Z. Berger",
+                "Karin Ingold",
+                "Christiane Steiner"
+            ],
+            "filename": "document2.pdf",
+            "recog": 1,
+            "modified": 1707057618,
+            "keywords": "Collaboration > Collaboration Patterns > Invisible Colleges",
+            "level": 3,
+            "priority": 3
+        },
+        {
+            "title": "Variation in research collaboration patterns across academic ranks",
+            "year": 2024,
+            "authors": [
+                "Giovanni Abramo",
+                "Ciriaco Andrea D\u2019Angelo",
+                "Gianluca Murgia"
+            ],
+            "filename": "1810.13352.pdf",
+            "recog": 1,
+            "modified": 1707056319,
+            "keywords": "Collaboration > Collaboration Patterns",
+            "level": 2,
+            "priority": 2
+        },
+        {
+            "title": "Ten issues of NetGPT",
+            "year": 2023,
+            "authors": [
+                "Wen Tong",
+                "Chenghui Peng",
+                "Tingting Yang",
+                "Fei Wang",
+                "Juan Deng",
+                "Rongpeng Li",
+                "Lu Yang",
+                "Honggang Zhang",
+                "Dong Wang",
+                "Ming AI",
+                "Li Yang",
+                "Guangyi Liu",
+                "Yang Yang",
+                "Yao Xiao",
+                "Liexiang Yue",
+                "Wanfei Sun",
+                "Zexu Li",
+                "Wenwen Sun"
+            ],
+            "filename": "2311.13106.pdf",
+            "recog": 1,
+            "modified": 1707056153,
+            "keywords": "NLP > Applications > Telecom",
+            "level": 3,
+            "priority": 3
+        },
+        {
+            "title": "Pushing Large Language Models to the 6G Edge: Vision, Challenges, and Opportunities",
+            "year": 2024,
+            "authors": [
+                "Zheng Lin",
+                "Guanqiao Qu",
+                "Qiyuan Chen",
+                "Xianhao Chen",
+                "Zhe Chen",
+                "Kaibin Huang"
+            ],
+            "filename": "2309.16739.pdf",
+            "recog": 1,
+            "modified": 1707055715,
+            "keywords": "NLP > Applications > Edge Computing > 6G Mobile Edge Computing (MEC)",
+            "level": 4,
+            "priority": 2
+        },
+        {
+            "title": "Text Splitters",
+            "year": 2024,
+            "authors": [
+                "Greg Kamradt"
+            ],
+            "filename": "Text Splitters \ud83e\udd9c\ufe0f\ud83d\udd17 Langchain.pdf",
+            "recog": 1,
+            "modified": 1707055683,
+            "keywords": "Prompt Engineering > Systems, Tools > Langchain > Retrieval-Augmented Generation (RAG) > Text Splitters",
+            "level": 5,
+            "priority": 3
+        },
+        {
+            "title": "Generative Disco: Text-to-Video Generation for Music Visualization",
+            "year": 2024,
+            "authors": [
+                "VIVIAN LIU",
+                "Vivian Liu",
+                "Tao Long"
+            ],
+            "filename": "2304.08551.pdf",
+            "recog": 1,
+            "modified": 1707054947,
+            "keywords": "Machine Learning > Generative Deep Learning > Text-To-Video > Generative Disco",
+            "level": 4,
+            "priority": 2
+        },
+        {
+            "title": "karpathy/llama2.c: Inference Llama 2 in one \ufb01le of pure C",
+            "year": 2024,
+            "authors": [],
+            "filename": "karpathy_llama2.c Inference Llama 2 in one file of pure C.pdf",
+            "recog": 1,
+            "modified": 1707054573,
+            "keywords": "LLM Operating System > llama2.c",
+            "level": 2,
+            "priority": 3
+        },
+        {
+            "title": "Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study in Medicine",
+            "year": 2024,
+            "authors": [
+                "Harsha Nori",
+                "Yin Tat Lee",
+                "Sheng Zhang",
+                "Dean Carignan",
+                "Richard Edgar",
+                "Nicolo Fusi",
+                "Nicholas King",
+                "Jonathan Larson",
+                "Yuanzhi Li",
+                "Weishung Liu",
+                "Renqian Luo",
+                "Scott Mayer McKinney",
+                "Robert Osazuwa Ness",
+                "Hoifung Poon",
+                "Tao Qin",
+                "Naoto Usuyama",
+                "Chris White",
+                "Eric Horvitz"
+            ],
+            "filename": "2311.16452.pdf",
+            "recog": 1,
+            "modified": 1707053525,
+            "keywords": "Prompt Engineering > Applications > Medicine > MedPrompt",
+            "level": 4,
+            "priority": 3
+        },
+        {
+            "title": "Fast and slow at the same time",
+            "year": 2024,
+            "authors": [],
+            "filename": "Fast and slow at the same time.pdf",
+            "recog": 1,
+            "modified": 1707052248,
+            "keywords": "Open Science, e-Science, e-Research, Research Data > Open Access > Fast Strategies, Slow Strategies",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "Assistants API",
+            "year": 2024,
+            "authors": [],
+            "filename": "Assistants overview - OpenAI API.pdf",
+            "recog": 1,
+            "modified": 1707050059,
+            "keywords": "NLP > Augmented Language Models > Assistants API (OpenAI)",
+            "level": 3,
+            "priority": 3
+        },
+        {
+            "title": "Call the Pydantic Program and Generate Structured Output",
+            "year": 2024,
+            "authors": [],
+            "filename": "Resturant-Recommendation-Multi-Modal-RAG-using-Gemini_Resturant_Recommendation_Multi_Modal_RAG.ipynb at main \u00b7 Sakil786_Resturant-Recommendation-Multi-Modal-RAG-using-Gemini.pdf",
+            "recog": 1,
+            "modified": 1707049766,
+            "keywords": "NLP > Augmented Language Models > Retrieval-Augmented Generation (RAG) > Multi-modal RAG",
+            "level": 4,
+            "priority": 3
+        },
+        {
+            "title": "lilacai/lilac: Curate better data for LLMs",
+            "year": 2024,
+            "authors": [],
+            "filename": "lilacai_lilac Curate better data for LLMs.pdf",
+            "recog": 1,
+            "modified": 1707049266,
+            "keywords": "NLP > Training > Training Data > Training Data Curation > Lilac",
+            "level": 5,
+            "priority": 2
+        },
+        {
+            "title": "Thin and Deep Gaussian Processes",
+            "year": 2024,
+            "authors": [
+                "Daniel Augusto de Souza",
+                "Alexander Nikitin",
+                "Mauricio A. \u00c1lvarez"
+            ],
+            "filename": "2310.11527.pdf",
+            "recog": 1,
+            "modified": 1707047725,
+            "keywords": "Machine Learning > Deep Learning > General, Theory > Gaussian Processes",
+            "level": 4,
+            "priority": 0
+        },
+        {
+            "title": "Artifact Review and Badging - Current",
+            "year": 2024,
+            "authors": [],
+            "filename": "Artifact Review and Badging - Current.pdf",
+            "recog": 1,
+            "modified": 1707047468,
+            "keywords": "Open Science, e-Science, e-Research, Research Data > ACM > Artifact Badges",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "Tetris: US teenager claims to be first to beat video game",
+            "year": 2024,
+            "authors": [
+                "Sofia Ferreira Santos"
+            ],
+            "filename": "Tetris US teenager claims to be first to beat video game - BBC News.pdf",
+            "recog": 1,
+            "modified": 1707044825,
+            "keywords": "Games, Game Design > Tetris",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "maudoin/ollama-voice: plug whisper audio transcription to a local ollama server and ouput tts audio responses",
+            "year": 2024,
+            "authors": [],
+            "filename": "maudoin_ollama-voice plug whisper audio transcription to a local ollama server and ouput tts audio responses.pdf",
+            "recog": 1,
+            "modified": 1707042759,
+            "keywords": "NLP > Tools, NLP APIs > Ollama > Ollama-voice",
+            "level": 4,
+            "priority": 2
+        },
+        {
+            "title": "At the Intersection of LLMs and Kernels - Research Roundup",
+            "year": 2024,
+            "authors": [],
+            "filename": "At the Intersection of LLMs and Kernels - Research Roundup.pdf",
+            "recog": 1,
+            "modified": 1707040638,
+            "keywords": "NLP > General, Theory > LLMs as Operating System > LLM Kernel",
+            "level": 4,
+            "priority": 2
+        },
+        {
+            "title": "DocGraphLM: Documental Graph Language Model for Information Extraction",
+            "year": 2024,
+            "authors": [
+                "Dongsheng Wang",
+                "Zhiqiang Ma",
+                "Armineh Nourbakhsh",
+                "Kang Gu",
+                "Sameena Shah"
+            ],
+            "filename": "2401.02823.pdf",
+            "recog": 1,
+            "modified": 1707038319,
+            "keywords": "NLP > Information Extraction > DocGraphLM, Documental Graph Language Model",
+            "level": 3,
+            "priority": 3
+        },
+        {
+            "title": "The model \"ChipNeMo\" is deployed internally",
+            "year": 2024,
+            "authors": [
+                "Jim Fan \ufffdDrJimFan",
+                "Jim Fan"
+            ],
+            "filename": "Jim Fan on X NVIDIA basically compressed 30 years of its corporate memory into 13B parameters..pdf",
+            "recog": 1,
+            "modified": 1707037398,
+            "keywords": "NLP > Language Models > ChipNeMo",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Function calling",
+            "year": 2024,
+            "authors": [],
+            "filename": "Function calling - OpenAI API.pdf",
+            "recog": 1,
+            "modified": 1707036627,
+            "keywords": "NLP > Augmented Language Models > Functions",
+            "level": 3,
+            "priority": 3
+        },
+        {
+            "title": "ArXiv Digest and Personalized Recommendations using Large Language Models",
+            "year": 2024,
+            "authors": [],
+            "filename": "AutoLLM_ArxivDigest ArXiv Digest and Personalized Recommendations using Large Language Models.pdf",
+            "recog": 1,
+            "modified": 1707035512,
+            "keywords": "Future Science > Recommendations > Paper Recommendations > ArXiv Digest",
+            "level": 4,
+            "priority": 2
+        },
+        {
+            "title": "UAE\u2019s top AI group vows to phase out Chinese hardware to appease US",
+            "year": 2024,
+            "authors": [
+                "Peng Xiao"
+            ],
+            "filename": "UAE\u2019s top AI group vows to phase out Chinese hardware to appease US.pdf",
+            "recog": 1,
+            "modified": 1707035048,
+            "keywords": "AI > AI War > US versus China > Chip War",
+            "level": 4,
+            "priority": 0
+        },
+        {
+            "title": "A New Approach to Computation Reimagines Arti\ufb01cial Intelligence",
+            "year": 2024,
+            "authors": [
+                "Myriam Wares",
+                "Pentti Kanerva",
+                "Chris Kymn"
+            ],
+            "filename": "A New Approach to Computation Reimagines Artificial Intelligence Quanta Magazine.pdf",
+            "recog": 1,
+            "modified": 1707034735,
+            "keywords": "Machine Learning > Issues",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "THE\u00a0IMPROVEMENT\u00a0OF\u00a0METHOD\u00a0FOR\u00a0 THE\u00a0MULTI-CRITERIA\u00a0EVALUATION\u00a0 OF\u00a0THE\u00a0EFFECTIVENESS\u00a0OF\u00a0THE\u00a0 CONTROL\u00a0OF\u00a0THE\u00a0STRUCTURE\u00a0AND\u00a0 PARAMETERS\u00a0OF\u00a0INTERFERENCE\u00a0 PROTECTION\u00a0OF\u00a0SPECIAL-PURPOSE\u00a0 RADIO\u00a0COMMUNICATION\u00a0SYSTEMS",
+            "year": 2024,
+            "authors": [],
+            "filename": "SSRN-id3899248.pdf",
+            "recog": 1,
+            "modified": 1707034471,
+            "keywords": "Machine Learning > Applications > Military > Military Radio Communication",
+            "level": 4,
+            "priority": 0
+        },
+        {
+            "title": "HoneyAgents: AI-Powered Honeypot Defence System",
+            "year": 2024,
+            "authors": [],
+            "filename": "mrwadams_honeyagents HoneyAgents.pdf",
+            "recog": 1,
+            "modified": 1707033852,
+            "keywords": "Prompt Engineering > Agents, Autonomous Task Management > Applications > Cyber Defense > HoneyAgents",
+            "level": 5,
+            "priority": 2
+        },
+        {
+            "title": "What is behind the TikTok thirst for Stanley water cups?",
+            "year": 2024,
+            "authors": [
+                "Jonelle Awomoyi"
+            ],
+            "filename": "What is behind the TikTok thirst for Stanley water cups - BBC News.pdf",
+            "recog": 1,
+            "modified": 1706975992,
+            "keywords": "Communities, Networks > Social Media > TikTok > Virality > Stanley Water Cup",
+            "level": 5,
+            "priority": 0
+        },
+        {
+            "title": "SC500: Microsoft Now Has the Third Fastest Computer in the World",
+            "year": 2024,
+            "authors": [
+                "Agam Shah"
+            ],
+            "filename": "SC500 Microsoft Now Has the Third Fastest Computer in the World - The New Stack.pdf",
+            "recog": 1,
+            "modified": 1706975398,
+            "keywords": "Super Computers > Azure Eagle",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "The-Little-Book-of-Common-Sense-Investing-PDF",
+            "year": 2024,
+            "authors": [
+                "Kathy Lien",
+                "Douglas A. Kass",
+                "Hilary Kramer"
+            ],
+            "filename": "The-Little-Book-of-Common-Sense-Investing-PDF.pdf",
+            "recog": 0,
+            "modified": 1706973433,
+            "keywords": "Investment",
+            "level": 1,
+            "priority": 1
+        },
+        {
+            "title": "Biosemiotics: a new understanding of life",
+            "year": 2024,
+            "authors": [
+                "Marcello Barbieri"
+            ],
+            "filename": "barbieri2008.pdf",
+            "recog": 1,
+            "modified": 1706972528,
+            "keywords": "Semiotics > Biosemiotics",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "Al Has Already Created As Many Images As Photographers Have Taken in 150 Years. Statistics for 2023",
+            "year": 2024,
+            "authors": [],
+            "filename": "AI Image Statistics How Much Content Was Created by AI.pdf",
+            "recog": 1,
+            "modified": 1706968944,
+            "keywords": "Machine Learning > Generative Deep Learning > Issues",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "The causal role of the Reddit collective action on the GameStop short squeeze",
+            "year": 2024,
+            "authors": [
+                "Antonio Desiderioa",
+                "Luca Maria Aiellod",
+                "Giulio Ciminia",
+                "Laura Alessandrettic"
+            ],
+            "filename": "2401.14999.pdf",
+            "recog": 1,
+            "modified": 1706968709,
+            "keywords": "Investment > Short Squeeze",
+            "level": 2,
+            "priority": 3
+        },
+        {
+            "title": "Machine Learning with Applications",
+            "year": 2024,
+            "authors": [
+                "Emilio Ferrara"
+            ],
+            "filename": "1-s2.0-S266682702400001X-main.pdf",
+            "recog": 1,
+            "modified": 1706968027,
+            "keywords": "AI > Issues > Fairness > Butterfly Effect",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "Binance chief Changpeng Zhao pleads guilty to money laundering charges",
+            "year": 2024,
+            "authors": [
+                "Changpeng Zhao",
+                "Changpeng \"CZ\" Zao",
+                "By James Clayton"
+            ],
+            "filename": "Binance chief Changpeng Zhao pleads guilty to money laundering charges - BBC News.pdf",
+            "recog": 1,
+            "modified": 1706963922,
+            "keywords": "Blockchain, Bitcoin > Binance > Money Laundering",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Binance accused of 'web of deception' in US",
+            "year": 2024,
+            "authors": [
+                "Changpeng Zhao"
+            ],
+            "filename": "Binance accused of 'web of deception' in US - BBC News.pdf",
+            "recog": 1,
+            "modified": 1706963827,
+            "keywords": "Blockchain, Bitcoin > Binance > Money Laundering",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "backend-GPT",
+            "year": 2024,
+            "authors": [],
+            "filename": "RootbeerComputer_backend-GPT.pdf",
+            "recog": 1,
+            "modified": 1706961821,
+            "keywords": "NLP > Applications > Backends > Backend-GPT",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "RETVec: Resilient and Efficient Text Vectorizer",
+            "year": 2024,
+            "authors": [
+                "Elie Bursztein",
+                "Marina Zhang",
+                "Alexey Kurakin"
+            ],
+            "filename": "2302.09207.pdf",
+            "recog": 1,
+            "modified": 1706961593,
+            "keywords": "NLP > Text Similarity > RETVec",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "Meta AI Models Cracked Open With Exposed API Tokens",
+            "year": 2024,
+            "authors": [
+                "Jai Vijayan"
+            ],
+            "filename": "Meta AI Models Cracked Open With Exposed API Tokens.pdf",
+            "recog": 1,
+            "modified": 1706961418,
+            "keywords": "NLP > Issues > Adversarial Attacks > Exposed API Tokens",
+            "level": 4,
+            "priority": 0
+        },
+        {
+            "title": "GenAI Against Humanity: Nefarious Applications of Generative Artificial Intelligence and Large Language Models",
+            "year": 2024,
+            "authors": [
+                "EMILIO FERRARA"
+            ],
+            "filename": "2310.00737v3.pdf",
+            "recog": 1,
+            "modified": 1706959582,
+            "keywords": "Machine Learning > Generative Deep Learning > Issues > Nefarious Applications",
+            "level": 4,
+            "priority": 2
+        },
+        {
+            "title": "Why are some LLMs trained on both CommonCrawl and Wikipedia/StackExchange?",
+            "year": 2024,
+            "authors": [
+                "Franck Dernoncourt",
+                "Stella Biderman"
+            ],
+            "filename": "large language models - Why are some LLMs trained on both CommonCrawl and Wikipedia_StackExchange - Artificial Intelligence Stack Exchange.pdf",
+            "recog": 1,
+            "modified": 1706958786,
+            "keywords": "NLP > Training > Training Data",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Meta requires political advertisers to mark when deepfakes used",
+            "year": 2024,
+            "authors": [],
+            "filename": "Meta requires political advertisers to mark when deepfakes used - BBC News.pdf",
+            "recog": 1,
+            "modified": 1706958626,
+            "keywords": "Machine Learning > Issues > Deepfakes",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Measuring Large-Scale Social Networks with High Resolution",
+            "year": 2024,
+            "authors": [
+                "Arkadiusz Stopczynski",
+                "Vedran Sekara",
+                "Piotr Sapiezynski",
+                "Andrea Cuttone",
+                "Mette My Madsen",
+                "Jakob Eg Larsen",
+                "Sune Lehmann"
+            ],
+            "filename": "document.pdf",
+            "recog": 1,
+            "modified": 1706955003,
+            "keywords": "Communities, Networks > Measurement > Copenhagen Networks Study",
+            "level": 3,
+            "priority": 3
+        },
+        {
+            "title": "Geometrically Enriched Latent Spaces",
+            "year": 2024,
+            "authors": [
+                "Georgios Arvanitidis",
+                "S\u00f8ren Hauberg",
+                "Bernhard Sch\u00f6lkopf"
+            ],
+            "filename": "2008.00565.pdf",
+            "recog": 1,
+            "modified": 1706953516,
+            "keywords": "Machine Learning > General, Theory > Latent Space",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "LATENT SPACE ODDITY: ON THE CURVATURE OF DEEP GENERATIVE MODELS",
+            "year": 2024,
+            "authors": [
+                "Georgios Arvanitidis",
+                "Lars Kai Hansen",
+                "S\u00f8ren Hauberg"
+            ],
+            "filename": "1710.11379.pdf",
+            "recog": 1,
+            "modified": 1706953465,
+            "keywords": "Machine Learning > General, Theory > Latent Space > Curvature",
+            "level": 4,
+            "priority": 0
+        },
+        {
+            "title": "Process Mining Manifesto",
+            "year": 2024,
+            "authors": [
+                "Wil van der Aalst",
+                "Arya Adriansyah",
+                "Ana Karla Alves de Medeiros",
+                "Franco Arcieri",
+                "Thomas Baier",
+                "Tobias Blickle",
+                "Jagadeesh Chandra Bose",
+                "Peter van den Brand",
+                "Ronald Brandtjen",
+                "Joos Buijs",
+                "Andrea Burattin",
+                "Josep Carmona",
+                "Malu Castellanos",
+                "Jan Claes",
+                "Jonathan Cook",
+                "Nicola Costantini",
+                "Francisco Curbera",
+                "Ernesto Damiani",
+                "Massimiliano de Leoni",
+                "Pavlos Delias",
+                "Boudewijn F. van Dongen",
+                "Marlon Dumas",
+                "Schahram Dustdar",
+                "Dirk Fahland",
+                "Diogo R. Ferreira",
+                "Walid Gaaloul",
+                "Frank van Geffen",
+                "Sukriti Goel",
+                "Christian G\u00fcnther",
+                "Antonella Guzzo",
+                "Paul Harmon",
+                "Arthur ter Hofstede",
+                "John Hoogland",
+                "Jon Espen Ingvaldsen",
+                "Koki Kato",
+                "Rudolf Kuhn",
+                "Akhil Kumar",
+                "Marcello La Rosa",
+                "Fabrizio Maggi",
+                "Donato Malerba",
+                "Ronny S. Mans",
+                "Alberto Manuel",
+                "Martin McCreesh",
+                "Paola Mello",
+                "Jan Mendling",
+                "Marco Montali",
+                "Hamid R. Motahari-Nezhad",
+                "Michael zur Muehlen",
+                "Jorge Munoz-Gama",
+                "Luigi Pontieri",
+                "Joel Ribeiro",
+                "Anne Rozinat",
+                "Hugo Seguel P\u00e9rez",
+                "Ricardo Seguel P\u00e9rez",
+                "Marcos Sep\u00falveda",
+                "Jim Sinur",
+                "Pnina Soffer",
+                "Minseok Song",
+                "Alessandro Sperduti",
+                "Giovanni Stilo",
+                "Casper Stoel",
+                "Keith Swenson",
+                "Maurizio Talamo",
+                "Wei Tan",
+                "Chris Turner",
+                "Jan Vanthienen",
+                "George Varvaressos",
+                "Eric Verbeek",
+                "Marc Verdonk",
+                "Roberto Vigo",
+                "Jianmin Wang",
+                "Barbara Weber",
+                "Matthias Weidlich",
+                "Ton Weijters",
+                "Lijie Wen",
+                "Michael Westergaard",
+                "Moe Wynn"
+            ],
+            "filename": "978-3-642-28108-2_19.pdf",
+            "recog": 1,
+            "modified": 1706952230,
+            "keywords": "Business Processes > Process Mining > Process Mining Manifesto",
+            "level": 3,
+            "priority": 3
+        },
+        {
+            "title": "Ilic? wiigctlooreiicn Forinen niiiglichcr Erfahning",
+            "year": 2024,
+            "authors": [
+                "wiigctlooreiicn Forinen",
+                "niiiglichcr Erfahning"
+            ],
+            "filename": "lorenz1943.pdf",
+            "recog": 1,
+            "modified": 1706946682,
+            "keywords": "Evolution > Baby Schema, Kindchenschema",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "Tech Elite\u2019s Al Ideologies Have Racist Foundations, Sag Al Ethicists",
+            "year": 2024,
+            "authors": [],
+            "filename": "Tech Elite's AI Ideologies Have Racist Foundations, Say AI Ethicists.pdf",
+            "recog": 1,
+            "modified": 1706946451,
+            "keywords": "AI > Issues > Racism",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "AI poisoning tool Nightshade received 250,000 downloads in 5 days: \u2018beyond anything we imagined\u2019",
+            "year": 2024,
+            "authors": [
+                "Carl Franzen",
+                "Shawn Shan",
+                "Wenxin Ding"
+            ],
+            "filename": "AI poisoning tool Nightshade received 250,000 downloads in 5 days VentureBeat.pdf",
+            "recog": 1,
+            "modified": 1706943019,
+            "keywords": "Machine Learning > Generative Deep Learning > Issues > Data Poisoning > Prompt-specific Poisoning Attacks > Nightshade",
+            "level": 6,
+            "priority": 1
+        },
+        {
+            "title": "A GUIDE FOR UNITED NATIONS PERSONNEL IN NEW YORK",
+            "year": 2024,
+            "authors": [],
+            "filename": "Emergency-Preparedness-A-Guide-for-United-Nations-Personnel-in-New-York.pdf",
+            "recog": 1,
+            "modified": 1706942821,
+            "keywords": "Preparedness, Prepper Movement",
+            "level": 1,
+            "priority": 0
+        },
+        {
+            "title": "Design Principles for Generative AI Applications",
+            "year": 2024,
+            "authors": [
+                "JUSTIN D. WEISZ",
+                "GABRIELA HOEFER",
+                "Justin D. Weisz",
+                "Jessica He",
+                "Michael Muller",
+                "Gabriela Hoefer",
+                "Rachel Miles"
+            ],
+            "filename": "2401.14484.pdf",
+            "recog": 1,
+            "modified": 1706941860,
+            "keywords": "Machine Learning > Generative Deep Learning > General, Theory > Generative AI System Design Principles",
+            "level": 4,
+            "priority": 3
+        },
+        {
+            "title": "Who will govern the metaverse? Examining governance initiatives for extended reality (XR) technologies",
+            "year": 2024,
+            "authors": [
+                "Ben Egliston",
+                "Marcus Carter",
+                "Kate Euphemia Clark"
+            ],
+            "filename": "egliston-et-al-2024-who-will-govern-the-metaverse-examining-governance-initiatives-for-extended-reality-(xr).pdf",
+            "recog": 1,
+            "modified": 1706940961,
+            "keywords": "Virtual Reality > Metaverse > Governance",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "No Longer Trending on Artstation: Prompt Analysis of Generative AI Art",
+            "year": 2024,
+            "authors": [
+                "Jon McCormack",
+                "Maria Teresa Llano",
+                "Stephen James Krol",
+                "Nina Rajcic"
+            ],
+            "filename": "2401.14425.pdf",
+            "recog": 1,
+            "modified": 1706895980,
+            "keywords": "Prompt Engineering > Text-to-Image Generation",
+            "level": 2,
+            "priority": 3
+        },
+        {
+            "title": "Cambodia: Fast fashion helps fuel blazing kilns where workers faint from heat",
+            "year": 2024,
+            "authors": [
+                "Laura Bicker"
+            ],
+            "filename": "Cambodia Fast fashion helps fuel blazing kilns where workers faint from heat - BBC News.pdf",
+            "recog": 1,
+            "modified": 1706895557,
+            "keywords": "Environment > Fast Fashion",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "Andrej Karpathy on X ChatGPT Advanced Data Analysis",
+            "year": 2024,
+            "authors": [
+                "Andrej Karpathy",
+                "Boris Dayma"
+            ],
+            "filename": "Andrej Karpathy on X ChatGPT Advanced Data Analysis.pdf",
+            "recog": 0,
+            "modified": 1706893645,
+            "keywords": "NLP > Fine-Tuning",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "What Can be Done in 59 Seconds: An Opportunity (and a Crisis)",
+            "year": 2024,
+            "authors": [],
+            "filename": "What Can be Done in 59 Seconds An Opportunity (and a Crisis).pdf",
+            "recog": 1,
+            "modified": 1706893057,
+            "keywords": "Future of Work > Productivity Increase",
+            "level": 2,
+            "priority": 1
+        },
+        {
+            "title": "Improving language models by retrieving from trillions of tokens",
+            "year": 2024,
+            "authors": [
+                "Sebastian Borgeaud",
+                "Arthur Mensch",
+                "Jordan Hoffmann",
+                "Trevor Cai",
+                "Eliza Rutherford",
+                "Katie Millican",
+                "George van den Driessche",
+                "Jean-Baptiste Lespiau",
+                "Bogdan Damoc",
+                "Aidan Clark",
+                "Diego de Las Casas",
+                "Aurelia Guy",
+                "Jacob Menick",
+                "Roman Ring",
+                "Tom Hennigan",
+                "Saffron Huang",
+                "Loren Maggiore",
+                "Chris Jones",
+                "Albin Cassirer",
+                "Andy Brock",
+                "Michela Paganini",
+                "Geoffrey Irving",
+                "Oriol Vinyals",
+                "Simon Osindero",
+                "Karen Simonyan",
+                "Jack W. Rae",
+                "Erich Elsen",
+                "Laurent Sifre"
+            ],
+            "filename": "2112.04426.pdf",
+            "recog": 1,
+            "modified": 1706892541,
+            "keywords": "NLP > Augmented Language Models > RETRO",
+            "level": 3,
+            "priority": 2
+        },
+        {
+            "title": "REALM: Retrieval-Augmented Language Model Pre-Training",
+            "year": 2024,
+            "authors": [
+                "Kelvin Guu",
+                "Kenton Lee",
+                "Panupong Pasupat",
+                "Ming-Wei Chang"
+            ],
+            "filename": "2002.08909.pdf",
+            "recog": 1,
+            "modified": 1706892256,
+            "keywords": "NLP > Augmented Language Models > REALM",
+            "level": 3,
+            "priority": 2
+        },
+        {
+            "title": "Dolma : an Open Corpus of Three Trillion Tokens for Language Model Pretraining Research",
+            "year": 2024,
+            "authors": [
+                "Luca Soldaini",
+                "Rodney Kinney",
+                "Akshita Bhagia",
+                "Dustin Schwenk",
+                "David Atkinson",
+                "Russell Authur",
+                "Ben Bogin",
+                "Khyathi Chandu",
+                "Jennifer Dumas",
+                "Yanai Elazar",
+                "Valentin Hofmann",
+                "Ananya Harsh Jha",
+                "Sachin Kumar",
+                "Li Lucy",
+                "Xinxi Lyu",
+                "Nathan Lambert",
+                "Ian Magnusson",
+                "Jacob Morrison",
+                "Niklas Muennighoff",
+                "Aakanksha Naik",
+                "Crystal Nam",
+                "Matthew E. Peters",
+                "Abhilasha Ravichander",
+                "Kyle Richardson",
+                "Zejiang Shen",
+                "Emma Strubell",
+                "Nishant Subramani",
+                "Oyvind Tafjord",
+                "Pete Walsh",
+                "Luke Zettlemoyer",
+                "Noah A. Smith",
+                "Hannaneh Hajishirzi",
+                "Iz Beltagy",
+                "Dirk Groeneveld",
+                "Jesse Dodge",
+                "Kyle Lo"
+            ],
+            "filename": "2402.00159.pdf",
+            "recog": 1,
+            "modified": 1706890894,
+            "keywords": "Benchmarks, gold standards, datasets > NLP > Dolma",
+            "level": 3,
+            "priority": 2
+        },
+        {
+            "title": "Metaverse Perspectives from Japan: A Participatory Speculative Design Case Study",
+            "year": 2024,
+            "authors": [
+                "MICHEL HOHENDANNER",
+                "Munich",
+                "CHIARA ULLSTEIN",
+                "DOHJIN MIYAMOTO",
+                "GUDRUN SOCHER",
+                "HIROTAKA OSAWA"
+            ],
+            "filename": "2401.17428v1.pdf",
+            "recog": 1,
+            "modified": 1706890010,
+            "keywords": "Virtual Reality > Metaverse",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "Speech to text containers with Docker",
+            "year": 2024,
+            "authors": [],
+            "filename": "Speech to text containers - Speech service - Azure AI services Microsoft Learn.pdf",
+            "recog": 1,
+            "modified": 1706814348,
+            "keywords": "WebDev > Azure > Azure Speech Service > Speech Container",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "Install and run Speech containers with Docker",
+            "year": 2024,
+            "authors": [],
+            "filename": "Install and run Speech containers with Docker - Speech service - Azure AI services Microsoft Learn.pdf",
+            "recog": 1,
+            "modified": 1706814125,
+            "keywords": "WebDev > Azure > Azure Speech Service > Speech Container",
+            "level": 4,
+            "priority": 0
+        },
+        {
+            "title": "Shadowplay: An Embodied AI Art Installation",
+            "year": 2023,
+            "authors": [
+                "Jesse Josua Benjamin",
+                "Joseph Lindley"
+            ],
+            "filename": "tei24-96.pdf",
+            "recog": 1,
+            "modified": 1706795414,
+            "keywords": "Machine Learning > Generative Deep Learning > Applications > Art Installations > Shadowplay",
+            "level": 5,
+            "priority": 2
+        },
+        {
+            "title": "Developing LLM Powered XApplications: A Low/No Code Chat Application using Prompt Flow (6/n)",
+            "year": 2024,
+            "authors": [
+                "Madhusudhan Konda"
+            ],
+            "filename": "Developing LLM Powered XApplications A Low_No Code Chat Application using Prompt Flow (6_n) LinkedIn.pdf",
+            "recog": 1,
+            "modified": 1706793638,
+            "keywords": "NLP > Tools, NLP APIs > Prompt Flow",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "Mistral CEO confirms \u2018leak\u2019 of new open source AI model nearing GPT-4 performance",
+            "year": 2024,
+            "authors": [
+                "Carl Franzen"
+            ],
+            "filename": "Mistral CEO confirms 'leak' of new open source AI model nearing GPT-4 performance VentureBeat.pdf",
+            "recog": 1,
+            "modified": 1706792405,
+            "keywords": "NLP > Language Models > miqu-1-70b",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Towards the Emergence of the Medical Metaverse: A Pilot Study on Shared Virtual Reality for Orthognathic\u2013Surgical Planning",
+            "year": 2024,
+            "authors": [
+                "Jari Kangas",
+                "John M\u00e4kel\u00e4",
+                "Helena Mehtonen",
+                "Pertti Huuskonen",
+                "Roope Raisamo"
+            ],
+            "filename": "applsci-14-01038-v2.pdf",
+            "recog": 1,
+            "modified": 1706730363,
+            "keywords": "Virtual Reality > Applications > Healthcare > Medical Metaverse",
+            "level": 4,
+            "priority": 0
+        },
+        {
+            "title": "MEDUSA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads",
+            "year": 2024,
+            "authors": [
+                "Tianle Cai",
+                "Yuhong Li",
+                "Zhengyang Geng",
+                "Hongwu Peng",
+                "Jason D. Lee",
+                "Deming Chen",
+                "Tri Dao"
+            ],
+            "filename": "2401.10774.pdf",
+            "recog": 1,
+            "modified": 1706729096,
+            "keywords": "NLP > Transformers > Speculative Decoding > Medusa",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "Break the Sequential Dependency of LLM Inference Using Lookahead Decoding",
+            "year": 2024,
+            "authors": [
+                "Yichao Fu",
+                "Peter Bailis",
+                "Ion Stoica",
+                "Hao Zhang"
+            ],
+            "filename": "Break the Sequential Dependency of LLM Inference Using Lookahead Decoding LMSYS Org.pdf",
+            "recog": 1,
+            "modified": 1706728942,
+            "keywords": "NLP > Transformers > Speculative Decoding > Lookahead",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty",
+            "year": 2024,
+            "authors": [
+                "Yuhui Li",
+                "Fangyun Wei",
+                "Chao Zhang",
+                "Hongyang Zhang"
+            ],
+            "filename": "2401.15077.pdf",
+            "recog": 1,
+            "modified": 1706728628,
+            "keywords": "NLP > Transformers > Speculative Decoding > EAGLE",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "The Future of Generative AI",
+            "year": 2024,
+            "authors": [],
+            "filename": "647f5c96b15cb4f1d22931e9_CD_AI_REPORT.pdf",
+            "recog": 1,
+            "modified": 1706724990,
+            "keywords": "Machine Learning > Generative Deep Learning > General, Theory",
+            "level": 3,
+            "priority": 2
+        },
+        {
+            "title": "CourtDocs Ontology: Towards a Data Model for Representation of Historical Court Proceedings",
+            "year": 2023,
+            "authors": [
+                "Mahsa Vafaie",
+                "Oleksandra Bruns",
+                "Nastasja Pilz",
+                "J\u00f6rg Waitelonis",
+                "Harald Sack"
+            ],
+            "filename": "kcap23-21.pdf",
+            "recog": 1,
+            "modified": 1706724639,
+            "keywords": "Ontologies > Rights, Legal > CourtDocs",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Rephrasing the Web: A Recipe for Compute and Data-Efficient Language Modeling",
+            "year": 2024,
+            "authors": [
+                "Pratyush Maini",
+                "Skyler Seto",
+                "David Grangier",
+                "Yizhe Zhang",
+                "Navdeep Jaitly"
+            ],
+            "filename": "2401.16380.pdf",
+            "recog": 1,
+            "modified": 1706724432,
+            "keywords": "NLP > Training > Data Augmentation > Web Rephrase Augmented Pre-training (WRAP)",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "AN OPEN LETTER TO THE ARTIST AND SONGWRITER COMMUNITY - WHY WE MUST CALL TIME OUT ON TIKTOK",
+            "year": 2024,
+            "authors": [],
+            "filename": "An Open Letter to the Artist and Songwriter Community - Why We Must Call Time Out on TikTok - UMG.pdf",
+            "recog": 1,
+            "modified": 1706724088,
+            "keywords": "Music > Music Royalties",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "Universal Music to pull songs from TikTok",
+            "year": 2024,
+            "authors": [
+                "Peter Hoskins"
+            ],
+            "filename": "Universal Music to pull songs from TikTok - BBC News.pdf",
+            "recog": 1,
+            "modified": 1706724029,
+            "keywords": "Music > Music Royalties",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "Language Models are Super Mario: Absorbing Abilities from Homologous Models as a Free Lunch",
+            "year": 2024,
+            "authors": [
+                "Le Yu",
+                "Bowen Yu",
+                "Haiyang Yu",
+                "Fei Huang",
+                "Yongbin Li"
+            ],
+            "filename": "2311.03099.pdf",
+            "recog": 1,
+            "modified": 1706721996,
+            "keywords": "NLP > Fine-Tuning > Merging, Blending > DARE",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "Death to CSV",
+            "year": 2024,
+            "authors": [],
+            "filename": "Death to CSV \u2620\ufe0f \u2013 digital.ebp.ch.pdf",
+            "recog": 1,
+            "modified": 1706719082,
+            "keywords": "Data > Data Formats > CSV",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Defining AI native: A key enabler for advanced intelligent telecom networks",
+            "year": 2024,
+            "authors": [],
+            "filename": "ai-native.pdf",
+            "recog": 1,
+            "modified": 1706718477,
+            "keywords": "Machine Learning > Applications > Telecom Networks > AI Native > AI Native Maturity Model",
+            "level": 5,
+            "priority": 3
+        },
+        {
+            "title": "Merge Large Language Models Combine Mistral, WizardMath and CodeLlama in one model!",
+            "year": 2024,
+            "authors": [
+                "Sergei Savvov"
+            ],
+            "filename": "Merge Large Language Models. Combine Mistral, WizardMath and\u2026 by Sergei Savvov Jan, 2024 Medium.pdf",
+            "recog": 1,
+            "modified": 1706718310,
+            "keywords": "NLP > Fine-Tuning > Merging, Blending",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "A Survey of Large Language Models",
+            "year": 2024,
+            "authors": [
+                "Wayne Xin Zhao",
+                "Kun Zhou",
+                "Junyi Li",
+                "Tianyi Tang",
+                "Xiaolei Wang",
+                "Yupeng Hou",
+                "Yingqian Min",
+                "Beichen Zhang",
+                "Junjie Zhang",
+                "Zican Dong",
+                "Yifan Du",
+                "Chen Yang",
+                "Yushuo Chen",
+                "Zhipeng Chen",
+                "Jinhao Jiang",
+                "Ruiyang Ren",
+                "Yifan Li",
+                "Xinyu Tang",
+                "Zikang Liu",
+                "Peiyu Liu",
+                "Jian-Yun Nie",
+                "Ji-Rong Wen"
+            ],
+            "filename": "2303.18223.pdf",
+            "recog": 1,
+            "modified": 1706716523,
+            "keywords": "NLP > Language Models",
+            "level": 2,
+            "priority": 3
+        },
+        {
+            "title": "Tutorial: Chat with PDF",
+            "year": 2024,
+            "authors": [],
+            "filename": "promptflow_examples_tutorials_e2e-development_chat-with-pdf.md at main \u00b7 microsoft_promptflow.pdf",
+            "recog": 1,
+            "modified": 1706715777,
+            "keywords": "NLP > Tools, NLP APIs > Prompt Flow > Retrieval-augmented Generation (RAG)",
+            "level": 4,
+            "priority": 3
+        },
         {
             "title": "IN-CONTEXT LANGUAGE LEARNING: ARCHITECTURES AND ALGORITHMS",
             "year": 2024,
@@ -195,1264 +1576,6 @@
             "keywords": "Machine Learning > Generative Deep Learning > Text-To-Video > Lumiere",
             "level": 4,
             "priority": 3
-        },
-        {
-            "title": "Kenneth Eugene Smith: UN condemns Alabama nitrogen gas execution",
-            "year": 2024,
-            "authors": [
-                "Kenneth Eugene Smith",
-                "John Hamm"
-            ],
-            "filename": "Kenneth Eugene Smith UN condemns Alabama nitrogen gas execution - BBC News.pdf",
-            "recog": 1,
-            "modified": 1706341790,
-            "keywords": "Capital Punishment, Death Penalty > Nitrogen Hypoxia",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "Taylor Swi\uf603 deepfakes spark calls in Congress for new legislation",
-            "year": 2024,
-            "authors": [
-                "By Imran Rahman-Jones"
-            ],
-            "filename": "Taylor Swift deepfakes spark calls in Congress for new legislation - BBC News.pdf",
-            "recog": 1,
-            "modified": 1706341639,
-            "keywords": "Machine Learning > Issues > Deepfakes",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "CiteSpace: Visualizing and Analyzing the Structure and Dynamics of Scientific Fields",
-            "year": 2024,
-            "authors": [
-                "Chaomei Chen"
-            ],
-            "filename": "part3.pdf",
-            "recog": 1,
-            "modified": 1706298215,
-            "keywords": "Visualizations > CiteSpace",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "LangGraph",
-            "year": 2024,
-            "authors": [],
-            "filename": "\ud83e\udd9c\ud83d\udd78\ufe0fLangGraph \ud83e\udd9c\ufe0f\ud83d\udd17 Langchain.pdf",
-            "recog": 1,
-            "modified": 1706293009,
-            "keywords": "Prompt Engineering > Systems, Tools > Langchain > LangGraph",
-            "level": 4,
-            "priority": 3
-        },
-        {
-            "title": "Inside The Shocking Revenge Story Of Marvin Heemeyer And His \u2018Killdozer\u2019",
-            "year": 2024,
-            "authors": [
-                "Jaclyn Anglis",
-                "Marvin Heemeyer"
-            ],
-            "filename": "Marvin Heemeyer And His 'Killdozer' Rampage Through A Colorado Town.pdf",
-            "recog": 1,
-            "modified": 1706292161,
-            "keywords": "Crime > Killdozer",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "Museum Experience Design: A Modern Storytelling Methodology",
-            "year": 2024,
-            "authors": [
-                "Federica Dal Falco",
-                "Stavros Vassos"
-            ],
-            "filename": "Museum Experience Design A Modern Storytelling Methodology.pdf",
-            "recog": 1,
-            "modified": 1706209974,
-            "keywords": "Museum > Museum Experience Design > Storytelling",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "Mostly Harmless Econometrics: An Empiricist\u0092s Companion",
-            "year": 2024,
-            "authors": [
-                "Joshua D. Angrist",
-                "J\u00f6rn-Ste\u00a4en Pischke"
-            ],
-            "filename": "[Angrist, Pischke] Mostly Harmless Econometrics An Empiricists Companion.pdf",
-            "recog": 1,
-            "modified": 1706202545,
-            "keywords": "Research Methods > Difference-in-Differences, DiD",
-            "level": 2,
-            "priority": 2
-        },
-        {
-            "title": "How to get small museums involved in digital innovation A design-inclusive research approach",
-            "year": 2024,
-            "authors": [
-                "Livia Calni"
-            ],
-            "filename": "VermeerenCalviProofs.pdf",
-            "recog": 1,
-            "modified": 1706202185,
-            "keywords": "Museum > Digital Innovation",
-            "level": 2,
-            "priority": 1
-        },
-        {
-            "title": "Involving the Crowd in Future Museum Experience Design",
-            "year": 2024,
-            "authors": [],
-            "filename": "2851581.2856482.pdf",
-            "recog": 1,
-            "modified": 1706199620,
-            "keywords": "Museum > Museum Experience Design",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "What are the risks of a nitrogen gas execution?",
-            "year": 2024,
-            "authors": [],
-            "filename": "What are the risks of a nitrogen gas execution Alabama The Guardian.pdf",
-            "recog": 1,
-            "modified": 1706163683,
-            "keywords": "Capital Punishment, Death Penalty > Nitrogen Hypoxia",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "Nitrogen hypoxia: Why Alabama's execution of Kenneth Smith stirs ethical controversy",
-            "year": 2024,
-            "authors": [
-                "Kenneth Eugene Smith",
-                "Brian Dorsey"
-            ],
-            "filename": "What is nitrogen hypoxia Execution method stirs ethical controversy..pdf",
-            "recog": 1,
-            "modified": 1706163121,
-            "keywords": "Capital Punishment, Death Penalty > Nitrogen Hypoxia",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "Doomsday Clock stays at 90 seconds to midnight",
-            "year": 2024,
-            "authors": [
-                "Jane Corbin",
-                "Robert Oppenheimer",
-                "Rachel Bronson"
-            ],
-            "filename": "Doomsday Clock stays at 90 seconds to midnight - BBC News.pdf",
-            "recog": 1,
-            "modified": 1706120883,
-            "keywords": "War > Doomsday Clock",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "InstaFlow: One Step is Enough for High-Quality Diffusion-Based Text-to-Image Generation",
-            "year": 2024,
-            "authors": [
-                "Xingchao Liu",
-                "Xiwen Zhang",
-                "Jianzhu Ma",
-                "Jian Peng",
-                "Qiang Liu"
-            ],
-            "filename": "2309.06380.pdf",
-            "recog": 1,
-            "modified": 1706120019,
-            "keywords": "Machine Learning > Generative Deep Learning > Text-to-Image > Text-to-Image Models > InstaFlow",
-            "level": 5,
-            "priority": 3
-        },
-        {
-            "title": "Dana-Farberications at Harvard University",
-            "year": 2024,
-            "authors": [
-                "Ken Anderson",
-                "Bill Hahn",
-                "Sholto David",
-                "Laurie H. Glimcher",
-                "Neal N. Iwakoshi",
-                "Ann-Hwee Lee",
-                "Prasanth Vallabhajosyula",
-                "Kevin L. Otipoby",
-                "Klaus Rajewsky"
-            ],
-            "filename": "Dana-Farberications at Harvard University \u2013 For Better Science.pdf",
-            "recog": 1,
-            "modified": 1706115804,
-            "keywords": "Issues > Misconduct > Dana Farberications",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "Top Harvard cancer researchers accused of scienti\ufb01c fraud; 37 studies affected",
-            "year": 2024,
-            "authors": [],
-            "filename": "Top Harvard cancer researchers accused of scientific fraud; 37 studies affected Ars Technica.pdf",
-            "recog": 1,
-            "modified": 1706115466,
-            "keywords": "Issues > Misconduct > Dana Farberications",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "MAGMA \u2013 Multimodal Augmentation of Generative Models through Adapter-based Finetuning",
-            "year": 2024,
-            "authors": [
-                "Constantin Eichenberg",
-                "Sidney Black",
-                "Samuel Weinbach",
-                "Letitia Parcalabescu",
-                "Anette Frank"
-            ],
-            "filename": "2112.05253.pdf",
-            "recog": 1,
-            "modified": 1706109101,
-            "keywords": "Machine Learning > Image Captioning > MAGMA",
-            "level": 3,
-            "priority": 2
-        },
-        {
-            "title": "Learning to Compress Prompts with Gist Tokens",
-            "year": 2024,
-            "authors": [
-                "Jesse Mu",
-                "Xiang Lisa Li",
-                "Noah Goodman"
-            ],
-            "filename": "2304.08467.pdf",
-            "recog": 1,
-            "modified": 1706108069,
-            "keywords": "Prompt Engineering > Prompt Compression > Gisting, Gist Tokens",
-            "level": 3,
-            "priority": 2
-        },
-        {
-            "title": "LongLLMLingua: ACCELERATING AND ENHANCING LLMS IN LONG CONTEXT SCENARIOS VIA PROMPT COMPRESSION",
-            "year": 2024,
-            "authors": [
-                "Huiqiang Jiang",
-                "Qianhui Wu",
-                "Xufang Luo",
-                "Dongsheng Li",
-                "Chin-Yew Lin",
-                "Yuqing Yang",
-                "Lili Qiu"
-            ],
-            "filename": "2310.06839.pdf",
-            "recog": 1,
-            "modified": 1706107981,
-            "keywords": "Prompt Engineering > Prompt Compression > LLMLingua > LongLLMLingua",
-            "level": 4,
-            "priority": 2
-        },
-        {
-            "title": "LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models",
-            "year": 2024,
-            "authors": [
-                "Huiqiang Jiang",
-                "Qianhui Wu",
-                "Chin-Yew Lin",
-                "Yuqing Yang",
-                "Lili Qiu"
-            ],
-            "filename": "2310.05736.pdf",
-            "recog": 1,
-            "modified": 1706107220,
-            "keywords": "Prompt Engineering > Prompt Compression > LLMLingua",
-            "level": 3,
-            "priority": 2
-        },
-        {
-            "title": "Toward human-centered AI management: Methodological challenges and future directions",
-            "year": 2024,
-            "authors": [
-                "Mengchen Dong",
-                "Jean-Fran\u00e7ois Bonnefon",
-                "Iyad Rahwan"
-            ],
-            "filename": "1-s2.0-S0166497224000038-main.pdf",
-            "recog": 1,
-            "modified": 1706020929,
-            "keywords": "AI > Applications > Management",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "Divide et Impera: Multi-Transformer Architectures for Complex NLP-Tasks",
-            "year": 2024,
-            "authors": [
-                "Solveig Helland",
-                "Elena Gavagnin",
-                "Alexandre de Spindler"
-            ],
-            "filename": "2310.16897.pdf",
-            "recog": 1,
-            "modified": 1706020029,
-            "keywords": "NLP > Transformers > Divide and Conquer",
-            "level": 3,
-            "priority": 2
-        },
-        {
-            "title": "Reflections on Explainable AI for the Arts (XAIxArts)",
-            "year": 2023,
-            "authors": [
-                "Nick Bryan-Kinns"
-            ],
-            "filename": "3636457.pdf",
-            "recog": 1,
-            "modified": 1706018952,
-            "keywords": "AI > Explainable AI, XAI > Applications > Explainable AI for the Arts (XAIxArts)",
-            "level": 4,
-            "priority": 0
-        },
-        {
-            "title": "Diego Garcia: UN says UK military island not suitable for stranded migrants",
-            "year": 2024,
-            "authors": [
-                "Diego Garcia",
-                "Alice Cuddy"
-            ],
-            "filename": "Diego Garcia UN says UK military island not suitable for stranded migrants - BBC News.pdf",
-            "recog": 1,
-            "modified": 1706018590,
-            "keywords": "Migration, Asylum, Immigration",
-            "level": 1,
-            "priority": 0
-        },
-        {
-            "title": "Distributed Road Surface Condition Monitoring Using Mobile Phones",
-            "year": 2024,
-            "authors": [
-                "Mikko Perttunen",
-                "Oleksiy Mazhelis",
-                "Fengyu Cong",
-                "Mikko Kauppila",
-                "Teemu Lepp\u00e4nen",
-                "Jouni Kantola",
-                "Jussi Collin",
-                "Susanna Pirttikangas",
-                "Janne Haverinen",
-                "Tapani Ristaniemi",
-                "Jukka Riekki"
-            ],
-            "filename": "978-3-642-23641-9_8.pdf",
-            "recog": 1,
-            "modified": 1706010381,
-            "keywords": "Mobile Phones > Applications > Road Condition Monitoring",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "Loose Coupling: An Invisible Thread in the History of Technology",
-            "year": 2024,
-            "authors": [
-                "AARNE M\u00c4MMEL\u00c4",
-                "JUKKA RIEKKI",
-                "MARKKU KIVIRANTA"
-            ],
-            "filename": "Loose_Coupling_An_Invisible_Thread_in_the_History_of_Technology.pdf",
-            "recog": 1,
-            "modified": 1706007047,
-            "keywords": "Technology > Loose Coupling",
-            "level": 2,
-            "priority": 2
-        },
-        {
-            "title": "Unleashing GPUs for Network Function Virtualization: an open architecture based on Vulkan and Kubernetes",
-            "year": 2024,
-            "authors": [
-                "Juuso Haavisto",
-                "Thibault Cholez",
-                "Jukka Riekki"
-            ],
-            "filename": "nbnfi-fe2022062850135.pdf",
-            "recog": 1,
-            "modified": 1706004004,
-            "keywords": "Virtualization > Network Virtualization",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "TRAIN SHORT, TEST LONG: ATTENTION WITH LINEAR BIASES ENABLES INPUT LENGTH EXTRAPOLATION",
-            "year": 2024,
-            "authors": [
-                "Ofir Press",
-                "Noah A. Smith",
-                "Mike Lewis",
-                "Paul G. Allen"
-            ],
-            "filename": "2108.12409v2.pdf",
-            "recog": 1,
-            "modified": 1706001344,
-            "keywords": "NLP > Training > ALiBi",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "bigscience/tr1-13B-tensorboard",
-            "year": 2024,
-            "authors": [
-                "bigscience /tr1-13B-tensorboard"
-            ],
-            "filename": "bigscience_tr1-13B-tensorboard \u00b7 Training metrics.pdf",
-            "recog": 1,
-            "modified": 1706001098,
-            "keywords": "NLP > Training > Megatron-DeepSpeed > Training Instabilities",
-            "level": 4,
-            "priority": 0
-        },
-        {
-            "title": "bigscience/train/tr1-13B-base/chronicles",
-            "year": 2024,
-            "authors": [],
-            "filename": "bigscience_train_tr1-13B-base_chronicles.md at master \u00b7 bigscience-workshop_bigscience.pdf",
-            "recog": 1,
-            "modified": 1706000936,
-            "keywords": "NLP > Training > Megatron-DeepSpeed > Training Instabilities",
-            "level": 4,
-            "priority": 0
-        },
-        {
-            "title": "bigscience: Lessons learned",
-            "year": 2024,
-            "authors": [],
-            "filename": "bigscience_train_lessons-learned.md at master \u00b7 bigscience-workshop_bigscience.pdf",
-            "recog": 1,
-            "modified": 1706000878,
-            "keywords": "NLP > Training > Megatron-DeepSpeed > Training Instabilities",
-            "level": 4,
-            "priority": 1
-        },
-        {
-            "title": "Transformers without Tears: Improving the Normalization of Self-Attention",
-            "year": 2024,
-            "authors": [
-                "Toan Q. Nguyen",
-                "Julian Salazar"
-            ],
-            "filename": "1910.05895.pdf",
-            "recog": 1,
-            "modified": 1706000681,
-            "keywords": "NLP > Transformers > Normalization",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "SiloGen l\ufffdunches \ufffd consortium to build the world\u2019s l\ufffdr\ufffdest open LLM",
-            "year": 2024,
-            "authors": [],
-            "filename": "SiloGen launches a consortium to build the world\u2019s largest open LLM.pdf",
-            "recog": 1,
-            "modified": 1705998593,
-            "keywords": "NLP > Language Models > Poro (TurkuNLP)",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "Friends Don't Let Friends Make Bad Graphs",
-            "year": 2024,
-            "authors": [],
-            "filename": "cxli233_FriendsDontLetFriends Friends don't let friends make certain types of data visualization - What are they and why are they bad..pdf",
-            "recog": 1,
-            "modified": 1705994337,
-            "keywords": "Visualisation > Best Practices, Guidelines",
-            "level": 2,
-            "priority": 3
-        },
-        {
-            "title": "The possibility of making $138,000 from shredded banknote pieces using computer vision",
-            "year": 2024,
-            "authors": [],
-            "filename": "2401.06133.pdf",
-            "recog": 1,
-            "modified": 1705993297,
-            "keywords": "Machine Learning > Computer Vision > Applications",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "SELF-CONSISTENCY IMPROVES CHAIN OF THOUGHT REASONING IN LANGUAGE MODELS",
-            "year": 2024,
-            "authors": [
-                "Xuezhi Wang",
-                "Jason Wei",
-                "Dale Schuurmans",
-                "Quoc Le",
-                "Ed H. Chi",
-                "Sharan Narang",
-                "Aakanksha Chowdhery",
-                "Denny Zhou"
-            ],
-            "filename": "2203.11171.pdf",
-            "recog": 1,
-            "modified": 1705952245,
-            "keywords": "Prompt Engineering > Prompt Techniques > Chain of Thought, CoT > Self-Consistency, CoT-SC",
-            "level": 4,
-            "priority": 2
-        },
-        {
-            "title": "Wait/walk dilemma",
-            "year": 2024,
-            "authors": [],
-            "filename": "Wait_walk dilemma - Wikipedia.pdf",
-            "recog": 1,
-            "modified": 1705833113,
-            "keywords": "Astronomy > Interstellar Travel > Wait Calculation > Wait Walk Dilemma",
-            "level": 4,
-            "priority": 0
-        },
-        {
-            "title": "Walk versus Wait: The Lazy Mathematician Wins",
-            "year": 2008,
-            "authors": [
-                "Justin Gejune Chen",
-                "Scott Duke Kominers",
-                "Robert Wyatt Sinnott"
-            ],
-            "filename": "0801.0297.pdf",
-            "recog": 1,
-            "modified": 1705833037,
-            "keywords": "Astronomy > Interstellar Travel > Wait Calculation > Wait Walk Dilemma > Bus Wait Formula",
-            "level": 5,
-            "priority": 0
-        },
-        {
-            "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
-            "year": 2024,
-            "authors": [
-                "Rafael Rafailov",
-                "Archit Sharma",
-                "Eric Mitchell",
-                "Stefano Ermon",
-                "Christopher D. Manning",
-                "Chelsea Finn"
-            ],
-            "filename": "2305.18290.pdf",
-            "recog": 1,
-            "modified": 1705831755,
-            "keywords": "Machine Learning > Reinforcement Learning > Reinforcement Learning with Human Feedback (RLHF) > Direct Preference Optimization (DPO)",
-            "level": 4,
-            "priority": 2
-        },
-        {
-            "title": "Code Generation with AlphaCodium: From Prompt Engineering to Flow Engineering",
-            "year": 2024,
-            "authors": [
-                "Tal Ridnik",
-                "Dedy Kredo",
-                "Itamar Friedman CodiumAI"
-            ],
-            "filename": "2401.08500.pdf",
-            "recog": 1,
-            "modified": 1705831278,
-            "keywords": "Prompt Engineering > Flow Engineering",
-            "level": 2,
-            "priority": 2
-        },
-        {
-            "title": "Mark Zuckerberg\u2019s new goal is creating artificial general intelligence",
-            "year": 2024,
-            "authors": [],
-            "filename": "Meta\u2019s new goal is to build artificial general intelligence - The Verge.pdf",
-            "recog": 1,
-            "modified": 1705826293,
-            "keywords": "AI > General Intelligence, AGI",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "DPD error caused chatbot to swear at customer",
-            "year": 2024,
-            "authors": [
-                "Tom Gerken"
-            ],
-            "filename": "DPD error caused chatbot to swear at customer - BBC News.pdf",
-            "recog": 1,
-            "modified": 1705825100,
-            "keywords": "NLP > Issues > Swearing, Insults",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "LARP: LANGUAGE-AGENT ROLE PLAY FOR OPEN-WORLD GAMES",
-            "year": 2024,
-            "authors": [
-                "Ming Yan",
-                "Ruihao Li",
-                "Hao Zhang",
-                "Hao Wang",
-                "Zhilan Yang",
-                "Ji Yan"
-            ],
-            "filename": "2312.17653.pdf",
-            "recog": 1,
-            "modified": 1705824869,
-            "keywords": "NLP > Agents, Autonomous Task Management > Language Agent Role Play (LARP)",
-            "level": 3,
-            "priority": 3
-        },
-        {
-            "title": "ParlAI: A Dialog Research Software Platform",
-            "year": 2024,
-            "authors": [
-                "Alexander H. Miller",
-                "Will Feng",
-                "Adam Fisch",
-                "Jiasen Lu",
-                "Dhruv Batra",
-                "Antoine Bordes"
-            ],
-            "filename": "1705.06476.pdf",
-            "recog": 1,
-            "modified": 1705824151,
-            "keywords": "NLP > Training > ParlAI",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "OpenAI to regulators: Training AI models without copyrighted material is\u00a0\"impossible\"",
-            "year": 2024,
-            "authors": [],
-            "filename": "OpenAI to regulators Training AI models without copyrighted material is impossible TechSpot.pdf",
-            "recog": 1,
-            "modified": 1705823581,
-            "keywords": "Machine Learning > Generative Deep Learning > Issues > Copyright, Intellectual Property",
-            "level": 4,
-            "priority": 0
-        },
-        {
-            "title": "A Human-Powered Public Display that Nudges Social Biking via Motion Gesturing",
-            "year": 2024,
-            "authors": [
-                "Binh Vinh",
-                "Duc Nguyen",
-                "Andrew Vande Moere"
-            ],
-            "filename": "2401.07685.pdf",
-            "recog": 1,
-            "modified": 1705758763,
-            "keywords": "Public Displays > Human-powered Displays",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "Self-Alignment with Instruction Backtranslation",
-            "year": 2024,
-            "authors": [
-                "Xian Li",
-                "Ping Yu",
-                "Chunting Zhou",
-                "Timo Schick",
-                "Luke Zettlemoyer",
-                "Omer Levy",
-                "Jason Weston",
-                "Mike Lewis"
-            ],
-            "filename": "2308.06259.pdf",
-            "recog": 1,
-            "modified": 1705735067,
-            "keywords": "NLP > Fine-Tuning > Self-Training > Instruction Backtranslation",
-            "level": 4,
-            "priority": 2
-        },
-        {
-            "title": "Sports Illustrated in further turmoil a\uf603er AI scandal",
-            "year": 2024,
-            "authors": [],
-            "filename": "Sports Illustrated in further turmoil after AI scandal - BBC News.pdf",
-            "recog": 1,
-            "modified": 1705726288,
-            "keywords": "NLP > Applications > Writing",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "The difficulty of computing stable and accurate neural networks: On the barriers of deep learning and Smale\u2019s 18th problem",
-            "year": 2024,
-            "authors": [
-                "Matthew J. Colbrook",
-                "Anders C. Hansen"
-            ],
-            "filename": "colbrook-et-al-2022-the-difficulty-of-computing-stable-and-accurate-neural-networks-on-the-barriers-of-deep-learning.pdf",
-            "recog": 1,
-            "modified": 1705646880,
-            "keywords": "Machine Learning > General, Theory > Neural Networks > Issues > Instability",
-            "level": 5,
-            "priority": 0
-        },
-        {
-            "title": "GPU kernel implementations susceptible to memory leak",
-            "year": 2024,
-            "authors": [],
-            "filename": "VU#446598 - GPU kernel implementations susceptible to memory leak.pdf",
-            "recog": 1,
-            "modified": 1705646716,
-            "keywords": "Machine Learning > Issues > Leaked GPU Memory > LeftoverLocals",
-            "level": 4,
-            "priority": 0
-        },
-        {
-            "title": "LeftoverLocals: Listening to LLM responses through leaked GPU local memory",
-            "year": 2024,
-            "authors": [
-                "Heidy Khlaaf"
-            ],
-            "filename": "LeftoverLocals Listening to LLM responses through leaked GPU local memory Trail of Bits Blog.pdf",
-            "recog": 1,
-            "modified": 1705646660,
-            "keywords": "Machine Learning > Issues > Leaked GPU Memory > LeftoverLocals",
-            "level": 4,
-            "priority": 0
-        },
-        {
-            "title": "Artinter: AI-powered Boundary Objects for Commissioning Visual Arts",
-            "year": 2024,
-            "authors": [
-                "John Joon Young Chung",
-                "Eytan Adar"
-            ],
-            "filename": "DIS2023-Artinter.pdf",
-            "recog": 1,
-            "modified": 1705646452,
-            "keywords": "Machine Learning > Art > Art Commission > Boundary Objects > Artinter",
-            "level": 5,
-            "priority": 2
-        },
-        {
-            "title": "Design Ideation with AI - Sketching, Thinking and Talking with Generative Machine Learning Models",
-            "year": 2024,
-            "authors": [
-                "Jakob Tholander",
-                "Martin Jonsson"
-            ],
-            "filename": "3563657.3596014.pdf",
-            "recog": 1,
-            "modified": 1705645779,
-            "keywords": "AI > Human-AI-Interaction, Human-Machine-Interaction > Co-Creativity > Design Ideation",
-            "level": 4,
-            "priority": 0
-        },
-        {
-            "title": "Williams syndrome",
-            "year": 2024,
-            "authors": [],
-            "filename": "Williams syndrome MedlinePlus Genetics.pdf",
-            "recog": 1,
-            "modified": 1705645420,
-            "keywords": "Medical, Health, Drugs > Williams Syndrome",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "Courtney Dauwalter: Step inside the 'pain cave', where rules are remade",
-            "year": 2024,
-            "authors": [
-                "Courtney Dauwalter",
-                "Olivier Guiberteau"
-            ],
-            "filename": "Courtney Dauwalter Step inside the 'pain cave', where rules are remade - BBC Sport.pdf",
-            "recog": 1,
-            "modified": 1705645226,
-            "keywords": "Running > Ultrarunning > Courtney Dauwalter",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "Accident Analysis and Prevention",
-            "year": 2024,
-            "authors": [
-                "William R. Knecht"
-            ],
-            "filename": "knecht2013.pdf",
-            "recog": 1,
-            "modified": 1705645065,
-            "keywords": "Aviation > Killing Zone",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "The Lazy Tyranny of the Wait Calculation",
-            "year": 2024,
-            "authors": [],
-            "filename": "The Lazy Tyranny of the Wait Calculation - by Ethan Mollick.pdf",
-            "recog": 1,
-            "modified": 1705592127,
-            "keywords": "Astronomy > Interstellar Travel > Wait Calculation",
-            "level": 3,
-            "priority": 2
-        },
-        {
-            "title": "INTERSTELLAR TRAVEL: THE WAIT CALCULATION AND THE INCENTIVE TRAP OF PROGRESS",
-            "year": 2024,
-            "authors": [
-                "ANDREW KENNEDY"
-            ],
-            "filename": "2006-kennedy.pdf",
-            "recog": 1,
-            "modified": 1705590850,
-            "keywords": "Astronomy > Interstellar Travel > Wait Calculation",
-            "level": 3,
-            "priority": 2
-        },
-        {
-            "title": "The Great Filter - Are We Almost Past It?",
-            "year": 2024,
-            "authors": [],
-            "filename": "The Great Filter.pdf",
-            "recog": 1,
-            "modified": 1705590737,
-            "keywords": "Astronomy > Alien Life > The Great Filter",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "SLEEPER AGENTS: TRAINING DECEPTIVE LLMS",
-            "year": 2024,
-            "authors": [
-                "Evan Hubinger",
-                "Carson Denison",
-                "Jesse Mu",
-                "Mike Lambert",
-                "Meg Tong",
-                "Monte MacDiarmid",
-                "Tamera Lanham",
-                "Daniel M. Ziegler",
-                "Tim Maxwell",
-                "Newton Cheng",
-                "Adam Jermyn",
-                "Amanda Askell",
-                "Ansh Radhakrishnan",
-                "Cem Anil",
-                "David Duvenaud",
-                "Deep Ganguli",
-                "Fazl Barez",
-                "Jack Clark",
-                "Kamal Ndousse",
-                "Kshitij Sachan",
-                "Michael Sellitto",
-                "Mrinank Sharma",
-                "Nova DasSarma",
-                "Roger Grosse",
-                "Shauna Kravec",
-                "Yuntao Bai",
-                "Zachary Witten",
-                "Marina Favaro",
-                "Jan Brauner",
-                "Holden Karnofsky",
-                "Paul Christiano",
-                "Samuel R. Bowman",
-                "Logan Graham",
-                "Jared Kaplan",
-                "S\u00f6ren Mindermann",
-                "Ryan Greenblatt",
-                "Buck Shlegeris",
-                "Nicholas Schiefer",
-                "Ethan Perez"
-            ],
-            "filename": "2401.05566.pdf",
-            "recog": 1,
-            "modified": 1705589275,
-            "keywords": "NLP > Agents, Autonomous Task Management > Issues > Sleeper Agents",
-            "level": 4,
-            "priority": 1
-        },
-        {
-            "title": "Microso\ue22f CEO: Rabbit R1 AI Gadget Was \u2018Most Impressive\u2019 Demo Since Steve Jobs\u2019 iPhone Unveiling",
-            "year": 2024,
-            "authors": [
-                "Steve Jobs",
-                "iPhone Unveiling",
-                "Satya Nadella",
-                "Jose Antonio Lanz"
-            ],
-            "filename": "Microsoft CEO Rabbit R1 AI Gadget Was \u2018Most Impressive\u2019 Demo Since Steve Jobs\u2019 iPhone Unveiling - Decrypt.pdf",
-            "recog": 1,
-            "modified": 1705560289,
-            "keywords": "NLP > Hardware > Rabbit Companion R1",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "Data Filtering Networks",
-            "year": 2024,
-            "authors": [
-                "Alex Fang",
-                "Albin Madappally Jose",
-                "Amit Jain",
-                "Ludwig Schmidt",
-                "Alexander Toshev",
-                "Vaishaal Shankar"
-            ],
-            "filename": "2309.17425.pdf",
-            "recog": 1,
-            "modified": 1705508626,
-            "keywords": "Benchmarks, gold standards, datasets > Images > Data Filtering Networks, DFN",
-            "level": 3,
-            "priority": 2
-        },
-        {
-            "title": "Scalable Pre-training of Large Autoregressive Image Models",
-            "year": 2024,
-            "authors": [
-                "Alaaeldin El-Nouby",
-                "Michal Klein",
-                "Shuangfei Zhai",
-                "Miguel Angel Bautista",
-                "Alexander Toshev",
-                "Vaishaal Shankar",
-                "Joshua M Susskind",
-                "Armand Joulin"
-            ],
-            "filename": "2401.08541.pdf",
-            "recog": 1,
-            "modified": 1705508485,
-            "keywords": "Machine Learning > Computer Vision > Autoregressive Image Models (AIM)",
-            "level": 3,
-            "priority": 3
-        },
-        {
-            "title": "The $24-per-month Humane Subscription",
-            "year": 2024,
-            "authors": [],
-            "filename": "Humane\u2019s AI Pin costs $699 and $24 a month with OpenAI and T-Mobile integration - The Verge.pdf",
-            "recog": 1,
-            "modified": 1705473909,
-            "keywords": "NLP > Hardware > Humane AI Pin",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "The Rabbit R1 is an AI-powered gadget that can use your apps for you / Powered by a \u2018Large Action Model,\u2019 the $199 R1 isn\u2019t just a chatbot \u2014 it\u2019s a device for doing almost anything. Potentially",
-            "year": 2024,
-            "authors": [
-                "Jesse Lyu"
-            ],
-            "filename": "The Rabbit R1 is an AI-powered gadget that can use your apps for you - The Verge.pdf",
-            "recog": 1,
-            "modified": 1705473569,
-            "keywords": "NLP > Hardware > Rabbit Companion R1",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "Prompts Should not be Seen as Secrets: Systematically Measuring Prompt Extraction Attack Success",
-            "year": 2024,
-            "authors": [
-                "Yiming Zhang",
-                "Daphne Ippolito"
-            ],
-            "filename": "2307.06865.pdf",
-            "recog": 1,
-            "modified": 1705472231,
-            "keywords": "NLP > Issues > Adversarial Attacks > Prompt Extraction Attacks",
-            "level": 4,
-            "priority": 3
-        },
-        {
-            "title": "How We Will Use Artificial Intelligence at CNET",
-            "year": 2024,
-            "authors": [],
-            "filename": "AI Policy- CNET - CNET.pdf",
-            "recog": 1,
-            "modified": 1705471754,
-            "keywords": "NLP > Journalism > Responsible AI Machine Partner (RAMP)",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "CNET is overhauling its AI policy and updating past stories",
-            "year": 2024,
-            "authors": [],
-            "filename": "CNET is overhauling its AI policy and updating past stories - The Verge.pdf",
-            "recog": 1,
-            "modified": 1705471304,
-            "keywords": "NLP > Journalism",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "Inside CNET\u2019s AI-powered SEO money machine",
-            "year": 2024,
-            "authors": [],
-            "filename": "Inside CNET\u2019s AI-powered SEO money machine - The Verge.pdf",
-            "recog": 1,
-            "modified": 1705471127,
-            "keywords": "NLP > Journalism",
-            "level": 2,
-            "priority": 1
-        },
-        {
-            "title": "Gen-AI: Artificial Intelligence and the Future of Work",
-            "year": 2024,
-            "authors": [
-                "Mauro Cazzaniga",
-                "Florence Jaumotte",
-                "Longji Li",
-                "Giovanni Melina",
-                "Augustus J. Panton",
-                "Carlo Pizzinelli",
-                "Emma Rockall",
-                "Marina M. Tavares"
-            ],
-            "filename": "SDNEA2024001.pdf",
-            "recog": 1,
-            "modified": 1705431867,
-            "keywords": "Future of Work > Automation, Technological Unemployment, Digitization > Inequality",
-            "level": 3,
-            "priority": 3
-        },
-        {
-            "title": "/WebSight",
-            "year": 2024,
-            "authors": [],
-            "filename": "HuggingFaceM4_WebSight \u00b7 Datasets at Hugging Face.pdf",
-            "recog": 1,
-            "modified": 1705421991,
-            "keywords": "Benchmarks, gold standards, datasets > Web > WebSight",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "SVP_2023_2363",
-            "year": 2024,
-            "authors": [],
-            "filename": "SVP_2023_2363.pdf",
-            "recog": 0,
-            "modified": 1705421714,
-            "keywords": "Research Methods > Ethnographic Research > Virtual Ethnography",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "Simulating the Human in HCD with ChatGPT: Redesigning Interaction Design with AI",
-            "year": 2024,
-            "authors": [
-                "Albrecht Schmidt",
-                "Passant Elagroudy",
-                "Fiona Draxler",
-                "Frauke Kreuter",
-                "Robin Welsch"
-            ],
-            "filename": "Simulating the Human in HCD with ChatGPT Redesigning Interaction Design with AI ACM Interactions.pdf",
-            "recog": 1,
-            "modified": 1705334845,
-            "keywords": "Design, HCI, UI, UX > Human-centered Design > Simulating the Human in HCD",
-            "level": 3,
-            "priority": 2
-        },
-        {
-            "title": "AI Will Transform the Global Economy. Let\u2019s Make Sure It Benefits Humanity",
-            "year": 2024,
-            "authors": [
-                "Kristalina Georgieva"
-            ],
-            "filename": "AI Will Transform the Global Economy. Let\u2019s Make Sure It Benefits Humanity..pdf",
-            "recog": 1,
-            "modified": 1705334457,
-            "keywords": "Future of Work > Automation, Technological Unemployment, Digitization > Inequality",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "BBC's Glenn Campbell: My brain cancer diagnosis was a total shock",
-            "year": 2024,
-            "authors": [
-                "Glenn Campbell"
-            ],
-            "filename": "BBC's Glenn Campbell My brain cancer diagnosis was a total shock - BBC News.pdf",
-            "recog": 1,
-            "modified": 1705333915,
-            "keywords": "Medical, Health, Drugs > Cancer > Brain Tumor",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "Jupyter AI",
-            "year": 2024,
-            "authors": [],
-            "filename": "Jupyter AI \u2014 Jupyter AI documentation.pdf",
-            "recog": 1,
-            "modified": 1705333548,
-            "keywords": "Data > Data Science > Tools, Platforms > Jupyter Notebooks > Jupyter AI",
-            "level": 5,
-            "priority": 1
-        },
-        {
-            "title": "A 24-hour population distribution dataset based on mobile phone data from Helsinki Metropolitan Area, Finland",
-            "year": 2024,
-            "authors": [
-                "Claudia Bergroth",
-                "Olle J\u00e4rv",
-                "Henrikki tenkanen",
-                "Matti Manninen"
-            ],
-            "filename": "s41597_021_01113_4.pdf",
-            "recog": 1,
-            "modified": 1705333414,
-            "keywords": "Mobile Phones",
-            "level": 1,
-            "priority": 1
-        },
-        {
-            "title": "'I had \u00a33,000 stolen via WhatsApp job scam message'",
-            "year": 2024,
-            "authors": [
-                "Dan Whitworth"
-            ],
-            "filename": "'I had \u00a33,000 stolen via WhatsApp job scam message' - BBC News.pdf",
-            "recog": 1,
-            "modified": 1705302176,
-            "keywords": "Crime > Scam > Recruitment Scam",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "Inside Mark Zuckerberg\u2019s Top-Secret Hawaii Compound",
-            "year": 2024,
-            "authors": [
-                "Guthrie Scrimgeour"
-            ],
-            "filename": "Inside Mark Zuckerberg\u2019s Top-Secret Hawaii Compound WIRED.pdf",
-            "recog": 1,
-            "modified": 1705254655,
-            "keywords": "Income Inequality > Billionaires > Billionaire Bunkers",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "joaomdmoura/crewAI: Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks.",
-            "year": 2024,
-            "authors": [],
-            "filename": "joaomdmoura_crewAI Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks..pdf",
-            "recog": 1,
-            "modified": 1705254064,
-            "keywords": "NLP > Agents, Autonomous Task Management > Agents > CrewAI",
-            "level": 4,
-            "priority": 2
-        },
-        {
-            "title": "Blending Is All You Need: Cheaper, Better Alternative to Trillion-Parameters LLM",
-            "year": 2024,
-            "authors": [
-                "Xiaoding Lu",
-                "Adian Liusie",
-                "Vyas Raina",
-                "Yuwen Zhang",
-                "William Beauchamp"
-            ],
-            "filename": "2401.02994.pdf",
-            "recog": 1,
-            "modified": 1705220655,
-            "keywords": "NLP > Fine-Tuning > Blending",
-            "level": 3,
-            "priority": 2
-        },
-        {
-            "title": "AI chat bot tailor-made for the telecom industry",
-            "year": 2024,
-            "authors": [],
-            "filename": "Conversational AI for the telecom industry Nokia.pdf",
-            "recog": 1,
-            "modified": 1705172478,
-            "keywords": "NLP > Applications > Telecom > Nokia Digital Assistant",
-            "level": 4,
-            "priority": 2
-        },
-        {
-            "title": "Destructive Creation, Creative Destruction, and the Paradox of Innovation Science",
-            "year": 2024,
-            "authors": [
-                "Likun Cao",
-                "Ziwen Chen",
-                "James Evans"
-            ],
-            "filename": "soc4.13043.pdf",
-            "recog": 1,
-            "modified": 1705172051,
-            "keywords": "Design, HCI, UI, UX > Methods, Techniques > Destruction > Destructive Creation",
-            "level": 4,
-            "priority": 0
-        },
-        {
-            "title": "Which Humans?",
-            "year": 2024,
-            "authors": [
-                "Mohammad Atari",
-                "Mona J. Xue",
-                "Peter S. Park",
-                "Dami\u00e1n E. Blasi",
-                "Joseph Henrich",
-                "Thomas Talhelm",
-                "Ali Akbari",
-                "Frank Kassanits",
-                "John Templeton"
-            ],
-            "filename": "which_humans_09222023.pdf",
-            "recog": 1,
-            "modified": 1705164680,
-            "keywords": "NLP > Issues > Bias, Discrimination > WEIRD Bias",
-            "level": 4,
-            "priority": 2
-        },
-        {
-            "title": "Understanding How Dimension Reduction Tools Work: An Empirical Approach to Deciphering t-SNE, UMAP, TriMap, and PaCMAP for Data Visualization",
-            "year": 2024,
-            "authors": [
-                "Yingfan Wang",
-                "Haiyang Huang",
-                "Cynthia Rudin"
-            ],
-            "filename": "2012.04456.pdf",
-            "recog": 1,
-            "modified": 1705163781,
-            "keywords": "Machine Learning > Dimension Reduction > PaCMAP",
-            "level": 3,
-            "priority": 3
-        },
-        {
-            "title": "Granger causality",
-            "year": 2024,
-            "authors": [],
-            "filename": "Granger causality - Wikipedia.pdf",
-            "recog": 1,
-            "modified": 1705163535,
-            "keywords": "Scientific Method, Wissenschaftliches Arbeiten > Correlation, Causation > Granger Causality",
-            "level": 3,
-            "priority": 2
-        },
-        {
-            "title": "Inferring neural activity before plasticity as a foundation for learning beyond backpropagation",
-            "year": 2024,
-            "authors": [
-                "Yuhang Song",
-                "Beren Millidge",
-                "Tommaso Salvatori"
-            ],
-            "filename": "s41593-023-01514-1.pdf",
-            "recog": 1,
-            "modified": 1705163250,
-            "keywords": "Machine Learning > General, Theory > Credit Assignment > Prospective Configuration",
-            "level": 4,
-            "priority": 2
-        },
-        {
-            "title": "Simplex Prediction using multivariate embedding",
-            "year": 2024,
-            "authors": [],
-            "filename": "Basic EDM Examples - EDM (pyEDM, rEDM).pdf",
-            "recog": 1,
-            "modified": 1705159290,
-            "keywords": "Research Methods > Empirical Dynamic Modeling (EDM) > pyEDM",
-            "level": 3,
-            "priority": 1
         }
     ]
 }
