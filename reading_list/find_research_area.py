@@ -2,7 +2,9 @@
 
 import os
 import time
-import openai
+# import openai
+from openai import OpenAI
+from openai import RateLimitError
 import json
 from fnmatch import fnmatch
 from tqdm import tqdm
@@ -21,7 +23,11 @@ from dotenv import dotenv_values
 config = dotenv_values(".env")
 
 # openai.organization = "YOUR_ORG_ID"
-openai.api_key = config["OPENAI_KEY"]
+# openai.api_key = config["OPENAI_KEY"]
+client = OpenAI(
+    api_key=config["OPENAI_KEY"],
+)
+
 
 temperature = 0 # default 1
 top_p = 1  # default 1
@@ -52,15 +58,17 @@ def call_api(prompt, model="gpt-3.5-turbo", timeout_duration=API_TIMEOUT):
   try:
     # print("Calling API...")
     signal.alarm(timeout_duration)
-    response = openai.ChatCompletion.create(
+
+    response = chat_completion = client.chat.completions.create(
+      messages=msgs,
       model=model,
       temperature=temperature,
       top_p=top_p,
       n=n,
       max_tokens=max_tokens,
       presence_penalty=presence_penalty,
-      messages=msgs
     )
+
     # print("OK.")
     signal.alarm(0)
     return response
@@ -69,7 +77,7 @@ def call_api(prompt, model="gpt-3.5-turbo", timeout_duration=API_TIMEOUT):
       # Cancel the alarm before retrying
       signal.alarm(0)
       return call_api(prompt, model=model)
-  except openai.error.RateLimitError as e:
+  except RateLimitError as e:
     retry_after = int(e.headers.get("retry-after", 10))
     print(f"Rate limit exceeded, waiting for {retry_after} seconds...")
     time.sleep(retry_after)
@@ -126,7 +134,8 @@ for path, subdirs, files in os.walk(input_folder, followlinks=False):
     # import sys; sys.exit()
 
     res = call_api(prompt)
-    field = res['choices'][0]['message']['content']
+
+    field = res.choices[0].message.content
     field = field.strip("\"").lower()
     field = field.replace("research area:", "")
     field = field.strip(',')

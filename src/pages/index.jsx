@@ -186,11 +186,11 @@ export default function Home() {
                 </p>
               */}
               <p style={{marginTop:'2rem'}}>
-                  <i class="arrow right icon"></i>
+                  <i className="arrow right icon"></i>
                   <a href="https:www.komasurfer.com/portfolio/">Project Portfolio</a>
               </p>
               <p>
-                  <i class="arrow right icon"></i>
+                  <i className="arrow right icon"></i>
                   Professional <a href="/cv/resume.pdf">Resume</a>
                   &nbsp;|&nbsp;
                   Academic <a href="/cv/oppenlaender-cv.pdf">CV</a>

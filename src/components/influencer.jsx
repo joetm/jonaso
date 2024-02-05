@@ -181,7 +181,7 @@ export default function AuthorList({ list }) {
         		labelColor = 'red'
           }
           if (!['black', 'red'].includes(labelColor)) {
-            labelColor = 'ra ' + author.area.replace(" ", "_").replace("/", ".")
+            labelColor = author.area ? 'ra ' + author.area.replace(" ", "_").replace("/", ".") : 'black'
           }
          // color scaling based on priority of this author
       	 // labelColor = scaleLabelColor(author.priority / maxPrio)
