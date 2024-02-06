@@ -106,7 +106,7 @@ export default function Home() {
               */}
 
               <p>
-              In my previous positions,
+              In my previous position,
               {' '}
                 I was a Senior Research Scientist at Elisa Corporation in Helsinki, Finland,
                   {/*
