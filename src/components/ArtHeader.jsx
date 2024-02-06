@@ -54,6 +54,7 @@ export default function ArtHeader({generator, byline, totalCount}) {
           >
             Stable Diffusion
           </a>
+          {/*
           <a
             folder="redteaming"
             className={"item" + (generator === 'Redteaming' ? ' active' : '')}
@@ -62,6 +63,7 @@ export default function ArtHeader({generator, byline, totalCount}) {
           >
             Redteaming
           </a>
+          */}
           <a
             folder="latent-diffusion"
             className={"item" + (generator === 'Latent Diffusion' ? ' active' : '')}

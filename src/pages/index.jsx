@@ -99,13 +99,6 @@ export default function Home() {
                       <i style={{cursor:'pointer'}} className="fitted assistive listening systems icon" onClick={playAudio} title="How to pronounce Jonas Oppenländer"></i>
                   }
                 ).
-                {' '}
-                  I am a Senior Research Scientist at Elisa Corporation in Helsinki, Finland.{' '}
-                  {/*
-                  My primary research objective is to adapt LLMs to automate tasks in the telecommunications domain.
-                  */}
-                  My aim is to enhance the industrial usability of AI, specifically leveraging the capabilities of Large Language Models (LLMs), tailored for the telecommunications sector.
-                  To this end, I research, identify, propose, and evaluate effective recipes and technical solutions for adapting LLMs to specialized tasks within telecommunications and engineering.
               </p>
 
               {/*
@@ -113,7 +106,20 @@ export default function Home() {
               */}
 
               <p>
-              In my previous position, I was a postdoctoral researcher at the <a href="https://www.jyu.fi/en" target="_blank" rel="noreferrer">University of Jyv&auml;skyl&auml;</a> in Central Finland where I researched prompt engineering and text-to-image generation. Prompt engineering has been my primary research interest since 2021.
+              In my previous positions,
+              {' '}
+                I was a Senior Research Scientist at Elisa Corporation in Helsinki, Finland,
+                  {/*
+                  My primary research objective is to adapt LLMs to automate tasks in the telecommunications domain.
+                  */}
+                where my aim was to
+                  {/*
+                  enhance the industrial usability of AI, specifically
+                  leveraging the capabilities of Large Language Models (LLMs), tailored for the telecommunications sector.
+                  */}
+                  {/* To this end, I */}
+                  research, identify, propose, and evaluate effective recipes and technical solutions for adapting LLMs to specialized tasks within telecommunications and engineering.
+              Prior to that, I was a postdoctoral researcher at the <a href="https://www.jyu.fi/en" target="_blank" rel="noreferrer">University of Jyv&auml;skyl&auml;</a> in Central Finland where I researched prompt engineering and text-to-image generation. Prompt engineering has been my primary research interest since 2021.
               </p>
 
               <p>
