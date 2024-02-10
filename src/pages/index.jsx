@@ -106,13 +106,11 @@ export default function Home() {
               */}
 
               <p>
-              In my previous position,
-              {' '}
-                I was a Senior Research Scientist at Elisa Corporation in Helsinki, Finland,
+              In my previous position, I was a Senior Research Scientist at Elisa Corporation in Helsinki, Finland,
                   {/*
                   My primary research objective is to adapt LLMs to automate tasks in the telecommunications domain.
                   */}
-                where my aim was to
+                where my aim was to{' '}
                   {/*
                   enhance the industrial usability of AI, specifically
                   leveraging the capabilities of Large Language Models (LLMs), tailored for the telecommunications sector.
