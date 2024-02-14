@@ -2,6 +2,13 @@ ENV
 .env
 .env.development
 .env.production
+reading_list/oracle/.env
+reading_list/oracle/info.txt
+reading_list/oracle/faiss_index/*
+reading_list/oracle/text/*
+reading_list/oracle/text_extra/*
+
+__pycache__
 
 .env.development
 .env.production
