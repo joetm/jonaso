@@ -67,7 +67,7 @@ for root in BASEPATHS:
       # issues = [ i.split('/')[-1] for i in subdirs ]
       # print('Issues:', dirpath)
       if len(issues):
-        issuelist = "- " + "\n- ".join(issues)
+        issuelist = "- " + "\n- ".join([ i for i in issues if i != '__pycache__' ])
         doc_v1 = f"What are the issues with {parent}?\n"
         doc_v1 += f"{issuelist}"
         print(doc_v1)
@@ -98,7 +98,7 @@ for root in BASEPATHS:
 
       if len(systems):
         doc = f"What are systems, libraries, tools in {parent}?\n"
-        systemlist = "- " + "\n- ".join(systems)
+        systemlist = "- " + "\n- ".join([ s for s in systems if s != '__pycache__' ])
         doc += f"{systemlist}"
         print(doc)
         print()
@@ -128,9 +128,9 @@ for root in BASEPATHS:
     for item in to_remove:
       if item in topics:
         topics.remove(item)
-    if len(topics):
+    if len(topics) > 1:
       doc = f"What are topics in {parent}?\n"
-      topiclist = "- " + "\n- ".join(topics)
+      topiclist = "- " + "\n- ".join([ t for t in topics if t != '__pycache__' ])
       doc += f"{topiclist}"
       print(doc)
       print()

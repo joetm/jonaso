@@ -1,0 +1,91 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
+
+# import os
+
+from dotenv import load_dotenv
+load_dotenv()
+# os.environ["OPENAI_API_KEY"]
+
+# Uncomment the following line if you need to initialize FAISS with no AVX2 optimization
+# os.environ['FAISS_NO_AVX2'] = '1'
+
+# from langchain.text_splitter import CharacterTextSplitter
+from langchain_community.vectorstores import FAISS
+# from langchain_core.prompts.prompt import PromptTemplate
+# from langchain_core.runnables import RunnableParallel
+# from langchain_core.output_parsers.string import StrOutputParser
+# from langchain.chains import LLMChain
+from langchain_openai import OpenAI
+from langchain_openai import OpenAIEmbeddings
+# from langchain_openai import ChatOpenAI
+
+from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
+
+
+model = OpenAI(model_name="gpt-3.5-turbo-instruct", temperature=0.0, max_tokens=500)
+
+
+embeddings = OpenAIEmbeddings()
+db = FAISS.load_local("faiss_index", embeddings)
+# retriever = db.as_retriever(search_kwargs={"k": 10})
+
+def build_prompt(question, context):
+    prompt = f"""Answer the question based only on the following context: 
+
+    {context}
+
+    Question: {question}
+    """
+    # print(prompt)
+    return prompt
+
+
+
+app = FastAPI()
+
+allowed_origins = [
+    "http://localhost:8000",
+    "https://www.jonaso.de",
+    "https://jonaso.de",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=allowed_origins,
+    allow_credentials=True,
+    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_headers=["X-Requested-With", "Content-Type"],
+)
+
+@app.get("/", response_model=None)
+async def read_root():
+    return "Welcome home to the Terrordome, land of the forbidden"
+
+class API_Input(BaseModel):
+    query: str
+class API_Output(BaseModel):
+    role: str
+    msg: str
+
+@app.post("/query")
+async def ask(obj: API_Input) -> API_Output:
+    # question = "What are the difficulties of moderating twitch communities?"
+    question = obj.query
+    if not question:
+        return {"role": "oracle", "answer": ""}
+
+    docs = db.similarity_search_with_score(question)
+    # docs = retriever.get_relevant_documents(query)
+    context = "\n\n".join( [ d[0].page_content for d in docs ] )
+    prompt = build_prompt(question, context)
+    answer = model.invoke(prompt)
+    answer = answer.strip()
+    if answer.startswith('Answer:'):
+        answer = answer.replace('Answer:', '', 1)
+    answer = answer.strip()
+
+    return {"role": "oracle", "msg": answer}

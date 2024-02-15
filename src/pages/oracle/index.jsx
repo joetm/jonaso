@@ -5,11 +5,19 @@ import 'semantic-ui-css/components/feed.min.css'
 import 'semantic-ui-css/components/message.min.css'
 import 'semantic-ui-css/components/loader.min.css'
 
-import React, { useState, useRef } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import Layout from "../../components/layout"
 import { Seo } from "../../components/Seo"
 
-// export const isProd = process.env.NODE_ENV !== "development"
+export const isProd = process.env.NODE_ENV !== "development"
+
+if (isProd) {
+  // TODO
+  const URL = 'http://0.0.0.0:8080/query'
+} else {
+  const URL = 'http://0.0.0.0:8080/query'
+}
+
 
 export function Head() {
   return (
@@ -22,49 +30,83 @@ export function Head() {
 
 export default function Chat() {
   const [chathistory, setChathistory] = useState([
-    { 'type': 'user', 'msg': 'test msg'},
-    { 'type': 'oracle', 'msg': 'ok'},
+    { 'role': 'user', 'msg': 'test msg'},
+    { 'role': 'oracle', 'msg': 'ok'},
   ])
   const [isLoading, setIsLoading] = useState(false)
+  const chatRef = useRef()
 
-  const send_it = (msg) => {
-    alert('send')
-    setIsLoading(true)
+  useEffect(() => {
+    if (chatRef.current) {
+      const scroll = () => {
+        chatRef.current.scrollTop = chatRef.current.scrollHeight
+      }
+      // Execute scroll after the next repaint to ensure DOM has updated
+      requestAnimationFrame(scroll)
+    }
+  }, [chathistory])
 
+  // body: JSON.stringify({ query: "What are the difficulties of moderating twitch communities?" }),
+
+  // Use functional update to ensure we're working with the most current state
+  const handleServerResponse = (data) => {
+    setChathistory(chathistory => [...chathistory, data])
   }
 
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
       const new_msg = event.target.value.trim()
-      if (!new_msg) { return }
-      event.target.value = ''
-      const new_history = [ ...chathistory, {'type': 'user', 'msg': new_msg} ]
-      setChathistory(new_history)
-      send_it(new_msg)
+      if (!new_msg) {return}
+
+      event.target.value = '' // clear input
+      setIsLoading(true)
+
+      handleServerResponse({'role': 'user', 'msg': new_msg})
+
+      // alert('send')
+      // setIsLoading(true)
+      fetch(URL, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({query: new_msg}),
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success:', data)
+        setIsLoading(false)
+        handleServerResponse(data)
+      })
+      .catch((error) => {
+        console.error('Error:', error)
+        setIsLoading(false)
+      })
+
     }
   }
 
   return (
     <Layout style={{marginBottom:0, paddingBottom:0}}>
       <div className="ui container" style={{
-        backgroundColor: '#DDDDDD',
-        margin: 0,
-        position: 'relative',
-        borderRadius: '10px',
-        padding: '25px',
-        overflow: 'scroll',
-        height: '75vh',
-      }}>
-        {chathistory.map(msgObj => (
+          backgroundColor: '#DDDDDD',
+          margin: 0,
+          position: 'relative',
+          borderRadius: '10px',
+          padding: '25px',
+          overflow: 'scroll',
+          height: '75vh',
+        }}
+        ref={chatRef}
+      >
+        {chathistory.map((msgObj, index) => (
           <div style={{clear: 'both'}}>
             {
-              msgObj['type'] == 'user' ?
-                <div className="ui message" style={{float: 'right', maxWidth: '80%'}}>
+              msgObj['role'] == 'user' ?
+                <div key={`user${index}`} className="ui message" style={{float: 'right', maxWidth: '80%'}}>
                   <div className="header" style={{textAlign: 'right'}}>you:</div>
                   <p>{msgObj.msg}</p>
                 </div>
               :
-                <div className="ui message" style={{float: 'left', maxWidth: '80%'}}>
+                <div key={`oracle${index}`} className="ui message" style={{float: 'left', maxWidth: '80%'}}>
                   <div className="header" style={{textAlign: 'left'}}>Oracle:</div>
                   <p>{msgObj.msg}</p>
                 </div>
