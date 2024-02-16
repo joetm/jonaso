@@ -4,10 +4,14 @@ import 'semantic-ui-css/components/input.min.css'
 import 'semantic-ui-css/components/feed.min.css'
 import 'semantic-ui-css/components/message.min.css'
 import 'semantic-ui-css/components/loader.min.css'
+import 'semantic-ui-css/components/list.min.css'
 
 import React, { useState, useEffect, useRef } from "react"
 import Layout from "../../components/layout"
 import { Seo } from "../../components/Seo"
+import { Link } from "gatsby"
+
+import stats from "../../../oracle/stats.json"
 
 export const isProd = process.env.NODE_ENV !== "development"
 
@@ -18,6 +22,33 @@ if (isProd) {
   const URL = 'http://0.0.0.0:8080/query'
 }
 
+const styles = {
+  exampleContainer: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    gap: '10px',
+    justifyContent: 'center', // Center-align items on the main axis (horizontally)
+    alignItems: 'stretch', // Center-align items on the cross axis (vertically, if needed)
+    left: '50%', // Move the left edge to the center of the parent
+    transform: 'translateX(-50%)', // Shift it back to the left by half its own width
+    width: '80%',
+    textAlign: 'center',
+    padding: 0,
+    position: 'absolute',
+    bottom: '25px',
+    example: {
+      flex: '1 1 calc((100% / 3) - 20px)',
+      // maxWidth: '32%',
+      border: '1px solid gray',
+      cursor: 'pointer',
+      borderRadius: '10px',
+      backgroundColor: '#FFFBF0',
+      padding: '5px',
+      textAlign: 'center',
+      // margin: '0 10px', // Optional: Add some space between subcontainers
+    }
+  },
+}
 
 export function Head() {
   return (
@@ -30,10 +61,11 @@ export function Head() {
 
 export default function Chat() {
   const [chathistory, setChathistory] = useState([
-    { 'role': 'user', 'msg': 'test msg'},
-    { 'role': 'oracle', 'msg': 'ok'},
+    // { 'role': 'user', 'msg': 'test msg'},
+    // { 'role': 'oracle', 'msg': 'ok'},
   ])
   const [isLoading, setIsLoading] = useState(false)
+  const [firstUse, setFirstUse] = useState(true)
   const chatRef = useRef()
 
   useEffect(() => {
@@ -53,39 +85,84 @@ export default function Chat() {
     setChathistory(chathistory => [...chathistory, data])
   }
 
+  const sendIt = (new_msg) => {
+    setIsLoading(true)
+    handleServerResponse({'role': 'user', 'msg': new_msg})
+    fetch('http://0.0.0.0:8080/query', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({query: new_msg}),
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Success:', data)
+      setIsLoading(false)
+      handleServerResponse(data)
+    })
+    .catch((error) => {
+      console.error('Error:', error)
+      setIsLoading(false)
+    })
+  }
+
+  function handleListItemClick(txt) {
+    txt = "What are topics in " + txt
+    sendIt(txt)
+  }
+
+const TextWithLinks = ({ text }) => {
+  // Find the first comma
+  const firstCommaIndex = text.indexOf(',');
+  if (firstCommaIndex === -1) {
+    // If there's no comma, just return the text as is
+    return <>{text}</>
+  }
+  // Extract the text before the first comma (excluding the immediate word that we'll linkify)
+  const introText = text.substring(0, text.lastIndexOf(' ', firstCommaIndex));
+  // Extract the word immediately before the first comma and the rest of the list items
+  const listStartsAt = text.lastIndexOf(' ', firstCommaIndex) + 1;
+  const listText = text.substring(listStartsAt);
+  // Split the remaining text into items based on commas and 'and'
+  const items = listText.split(/,| and /).filter(Boolean);
+  // Function to render a link for each item
+  const renderItemAsLink = (item, index) => (
+    <React.Fragment key={index}>
+      {/* Add a comma before items except the first */}
+      {index > 0 && ', '}
+      <a href="#" onClick={() => handleListItemClick(item.trim())}>
+        {item.trim()}
+      </a>
+    </React.Fragment>
+  )
+  return (
+    <>
+      {introText} {items.map(renderItemAsLink)}
+    </>
+  )
+}
+
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
       const new_msg = event.target.value.trim()
       if (!new_msg) {return}
 
       event.target.value = '' // clear input
-      setIsLoading(true)
 
-      handleServerResponse({'role': 'user', 'msg': new_msg})
-
-      // alert('send')
-      // setIsLoading(true)
-      fetch(URL, {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({query: new_msg}),
-      })
-      .then(response => response.json())
-      .then(data => {
-        console.log('Success:', data)
-        setIsLoading(false)
-        handleServerResponse(data)
-      })
-      .catch((error) => {
-        console.error('Error:', error)
-        setIsLoading(false)
-      })
-
+      sendIt(new_msg)
     }
+  }
+
+  const handleExampleClick = (e) => {
+    setFirstUse(false)
+    sendIt(e.target.innerHTML)
   }
 
   return (
     <Layout style={{marginBottom:0, paddingBottom:0}}>
+      <div className="ui message">
+        You are chatting with {stats?.total} documents that I have <Link to="/research/reading/">read</Link> and found <Link to="/research/influences/">interesting</Link>.
+        <div style={{float: 'right'}}><a href="/oracle">restart</a></div>
+      </div>
       <div className="ui container" style={{
           backgroundColor: '#DDDDDD',
           margin: 0,
@@ -93,31 +170,65 @@ export default function Chat() {
           borderRadius: '10px',
           padding: '25px',
           overflow: 'scroll',
-          height: '75vh',
+          height: '60vh',
         }}
         ref={chatRef}
       >
-        {chathistory.map((msgObj, index) => (
-          <div style={{clear: 'both'}}>
-            {
-              msgObj['role'] == 'user' ?
-                <div key={`user${index}`} className="ui message" style={{float: 'right', maxWidth: '80%'}}>
-                  <div className="header" style={{textAlign: 'right'}}>you:</div>
-                  <p>{msgObj.msg}</p>
-                </div>
-              :
-                <div key={`oracle${index}`} className="ui message" style={{float: 'left', maxWidth: '80%'}}>
-                  <div className="header" style={{textAlign: 'left'}}>Oracle:</div>
-                  <p>{msgObj.msg}</p>
-                </div>
-            }
-          </div>
-        ))}
+
+        {chathistory.map((msgObj, index) => {
+          const isUserMsg = msgObj['role'] == 'user'
+          return (
+            <div key={index} style={{marginBottom: '25px', clear: 'both'}}>
+              {/*
+                <div className="header" style={{textAlign: isUserMsg ? 'right' : 'left'}}>{isUserMsg ? 'you' : 'Oracle'}</div>
+              */}
+              <div className="ui message" style={{float: isUserMsg ? 'right' : 'left', maxWidth: '80%'}}>
+                <p><TextWithLinks text={msgObj.msg} isUser={isUserMsg} /></p>
+              </div>
+            </div>
+          )}
+        )}
 
         {
           isLoading &&
             <div style={{position: 'relative', bottom: '0px'}} className="ui active inverted dimmer">
               <div className="ui medium text loader"></div>
+            </div>
+        }
+
+        {
+          firstUse &&
+            <div className="examplecontainer" style={styles.exampleContainer}>
+              <div onClick={handleExampleClick} className="item" style={styles.exampleContainer.example}>
+                <div className="content">
+                  What are the difficulties of moderating twitch communities?
+                </div>
+              </div>
+              <div onClick={handleExampleClick} className="item" style={styles.exampleContainer.example}>
+                <div className="content">
+                  What are the challenges of generative deep learning?
+                </div>
+              </div>
+              <div onClick={handleExampleClick} className="item" style={styles.exampleContainer.example}>
+                <div className="content">
+                  List some prompt techniques.
+                </div>
+              </div>
+              <div onClick={handleExampleClick} className="item" style={styles.exampleContainer.example}>
+                <div className="content">
+                  What are systems, libraries, tools for data validation?
+                </div>
+              </div>
+              <div onClick={handleExampleClick} className="item" style={styles.exampleContainer.example}>
+                <div className="content">
+                  What are the issues with mobile phones?
+                </div>
+              </div>
+              <div onClick={handleExampleClick} className="item" style={styles.exampleContainer.example}>
+                <div className="content">
+                  What are topics in Collective Intelligence?
+                </div>
+              </div>
             </div>
         }
 
