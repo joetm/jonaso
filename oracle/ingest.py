@@ -5,6 +5,7 @@
 import os, sys
 import time
 import json
+import compress_json
 
 # from langchain.text_splitter import CharacterTextSplitter
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -28,6 +29,7 @@ load_dotenv()
 
 
 BATCH_SIZE = 500
+USE_COMPRESSION = True
 
 IS_PROD = True
 if IS_PROD:
@@ -72,11 +74,13 @@ def batch_ingest(directory, text_splitter, embeddings, db, batch_size=500):
         for document in tqdm(documents):
             doc_meta = document.metadata
             source = doc_meta['source']
-            cache_id = source.replace('/', '_').replace('.txt', '.json')
+            cache_id = source.replace('/', '_').replace('.txt', '.lzma')
             cache_path = os.path.join(CACHE_FOLDER, cache_id)
             if os.path.exists(cache_path):
-                with open(cache_path, 'r') as f:
-                    text_embeddings = json.load(f)
+                if USE_COMPRESSION:
+                    text_embeddings = compress_json.load(cache_path)
+                else:
+                    with open(cache_path, 'r') as f: text_embeddings = json.load(f)
             else:
                 chunks = text_splitter.split_documents([document]) # Split each document into chunks
                 chunk_txts = [ str(chunk.page_content) for chunk in chunks ]
@@ -84,8 +88,10 @@ def batch_ingest(directory, text_splitter, embeddings, db, batch_size=500):
                 chunk_embeds = embeddings.embed_documents(chunk_txts)
                 text_embeddings = list(zip(chunk_txts, chunk_embeds))
                 # save cache
-                with open(cache_path, 'w') as f:
-                    json.dump(text_embeddings, f)
+                if USE_COMPRESSION:
+                    compress_json.dump(text_embeddings, cache_path)
+                else:
+                    with open(cache_path, 'w') as f: json.dump(text_embeddings, f)
             if not len(text_embeddings): continue
             # store embeddings in vectorstore
             db.add_embeddings(text_embeddings) # TODO: , metadatas=chunk_metas
