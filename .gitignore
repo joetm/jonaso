@@ -4,7 +4,7 @@ ENV
 .env.production
 oracle/.env
 oracle/info.txt
-oracle/faiss_index/*
+oracle/faiss_index/
 oracle/text/*
 oracle/text_extra/*
 oracle/testing/*
