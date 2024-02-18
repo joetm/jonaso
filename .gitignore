@@ -5,6 +5,7 @@ ENV
 oracle/.env
 oracle/info.txt
 oracle/faiss_index/
+orcale/cache_embeddings/
 oracle/text/*
 oracle/text_extra/*
 oracle/testing/*
