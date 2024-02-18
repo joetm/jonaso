@@ -59,12 +59,16 @@ def batch_ingest(directory, text_splitter, embeddings, db, batch_size=500):
 
     batches = split_list(items, batch_size)
 
+    batch_num = 0
     for batch in batches:
+        batch_num += 1
 
+        print(f'loading batch {batch_num}/{len(batches)}...')
         loader = ListLoader(batch, show_progress=True)
         documents = loader.load()
 
         # custom ingest for caching embedding API calls
+        print('ingesting batch...')
         for document in tqdm(documents):
             doc_meta = document.metadata
             source = doc_meta['source']
