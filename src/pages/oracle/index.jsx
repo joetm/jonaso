@@ -63,6 +63,11 @@ const styles = {
       // margin: '0 10px', // Optional: Add some space between subcontainers
     }
   },
+  errormsg: {
+    position: 'absolute',
+    bottom: '25px',
+    minWidth: '50%',
+  },
 }
 
 export function Head() {
@@ -84,8 +89,10 @@ export default function Chat() {
   const [isLoading, setIsLoading] = useState(false)
   const [firstUse, setFirstUse] = useState(true)
   const [useHyperlinks, setUseHyperlinks] = useState(false)
+  const [networkError, setNetworkError] = useState(false)
   const chatRef = useRef()
-  const inputRef = useRef()
+  const inputRef = useRef(null)
+  const iconRef = useRef(null)
 
   useEffect(() => {
     if (chatRef.current) {
@@ -105,6 +112,18 @@ export default function Chat() {
     }
   }, [isLoading])
 
+  const updateIconClass = () => {
+    if (inputRef.current.value) {
+      iconRef.current.className = 'arrow alternate circle up icon'
+    } else {
+      iconRef.current.className = 'arrow alternate circle up outline icon'
+    }
+  }
+  useEffect(() => {
+    inputRef.current.addEventListener('input', updateIconClass)
+    return () => inputRef.current.removeEventListener('input', updateIconClass)
+  }, [])
+
   // body: JSON.stringify({ query: "What are the difficulties of moderating twitch communities?" }),
 
   // Use functional update to ensure we're working with the most current state
@@ -117,6 +136,7 @@ export default function Chat() {
 
   const sendIt = (new_msg) => {
     setIsLoading(true)
+    setNetworkError(null)
     handleServerResponse({'role': 'user', 'msg': new_msg})
     fetch('http://0.0.0.0:8080/query', {
       method: 'POST',
@@ -129,8 +149,10 @@ export default function Chat() {
       setIsLoading(false)
       handleServerResponse(data)
     })
-    .catch((error) => {
+    .catch(error => {
       console.error('Error:', error)
+      console.log(error)
+      setNetworkError(error)
       setIsLoading(false)
     })
   }
@@ -175,15 +197,16 @@ export default function Chat() {
     if (event.key === 'Enter') {
       const new_msg = event.target.value.trim()
       if (!new_msg) {return}
-
+      setNetworkError(null)
       event.target.value = '' // clear input
-
       sendIt(new_msg)
     }
   }
 
   const handleExampleClick = (msg) => {
     setFirstUse(false)
+    setNetworkError(null)
+    inputRef.current.value = '' // clear input
     sendIt(msg)
   }
 
@@ -263,12 +286,18 @@ export default function Chat() {
             </div>
         }
 
+        {
+          networkError &&
+            <div className="ui negative message" style={styles.errormsg}>
+              <i onClick={() => setNetworkError(null)} className="close icon"></i>
+              <div className="header">Sorry, there was an error</div>
+              <p>{networkError.message}</p>
+            </div>
+        }
+
       </div>
         
-      <div className="ui massive icon input" style={{
-        width: '100%',
-        marginTop: '20px',
-      }}>
+      <div className="ui massive icon input" style={{width: '100%', marginTop: '20px'}}>
         <input
           ref={inputRef}
           autoFocus
@@ -277,7 +306,12 @@ export default function Chat() {
           onKeyDown={handleKeyDown}
           placeholder="Enter your question..."
         />
-        <i className="search icon"></i>
+        <i
+          ref={iconRef}
+          style={{cursor: 'pointer'}}
+          onClick={() => handleKeyDown({key: 'Enter', target: inputRef.current})}
+          className="arrow alternate circle up outline icon"
+        ></i>
       </div>
 
     </Layout>

@@ -44,7 +44,7 @@ export default function ArtPage() {
   return (
     <>
       <Layout style={{paddingBottom: 0}}>
-        <ArtHeader generator='Redteaming' totalCount={images.length} />
+        <ArtHeader generator='Redteam' totalCount={images.length} />
       </Layout>
       {
         consented ?

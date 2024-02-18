@@ -13,10 +13,11 @@ dir="./cache_embeddings"
 # Navigate to the directory
 cd "$dir"
 
-# Compress each JSON file to LZMA format
+# Compress each JSON file to compressed format
 for file in *.json; do
   if [ -f "$file" ]; then
-    lzma -k "$file" && rm "$file"
+    # lzma -k "$file" && rm "$file"
+    gzip -k "$file" && rm "$file"
   fi
 done
 
