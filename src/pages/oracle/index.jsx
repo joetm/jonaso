@@ -20,10 +20,9 @@ export const isProd = process.env.NODE_ENV !== "development"
 const HISTORY_LENGTH = 3
 
 if (isProd) {
-  // TODO
-  const URL = 'http://0.0.0.0:8080/query'
+  const _URL = 'https://jonaso-query-ixrkbfpuaq-ez.a.run.app/query'
 } else {
-  const URL = 'http://0.0.0.0:8080/query'
+  const _URL = 'http://0.0.0.0:8080/query'
 }
 
 const preFabExamples = [
@@ -72,8 +71,8 @@ const styles = {
 
 export function Head() {
   return (
-    <Seo title="Chat // jonaso.de">
-      <link id="canonical" rel="canonical" href="https://www.jonaso.de/chat/" />
+    <Seo title="Oracle // jonaso.de">
+      <link id="canonical" rel="canonical" href="https://www.jonaso.de/oracle/" />
     </Seo>
   )
 }
@@ -138,7 +137,7 @@ export default function Chat() {
     setIsLoading(true)
     setNetworkError(null)
     handleServerResponse({'role': 'user', 'msg': new_msg})
-    fetch('http://0.0.0.0:8080/query', {
+    fetch(_URL, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({query: new_msg, history: chatHistory}),
