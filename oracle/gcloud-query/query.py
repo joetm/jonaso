@@ -95,7 +95,7 @@ async def ask(obj: API_Input) -> API_Output:
     # question = "What are the difficulties of moderating twitch communities?"
     question = obj.query
     if not question:
-        return {"role": "oracle", "answer": ""}
+        return {"role": "oracle", "msg": ""}
 
     docs = db.similarity_search_with_score(question)
     # docs = retriever.get_relevant_documents(query)

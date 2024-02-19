@@ -63,6 +63,7 @@ export default function Nav() {
           <MenuItem key="home" active={activeItem === 'home'} item='Home' handleItemClick={handleItemClick} />
           <MenuItem key="artworks" active={activeItem.startsWith('artworks')} item='Artworks' link={false} header={true} handleItemClick={handleItemClick} />
           <MenuItem key="publications" active={activeItem === 'publications'} item='Publications' handleItemClick={handleItemClick} />
+          <MenuItem key="oracle" active={activeItem === 'oracle'} item='Oracle' handleItemClick={handleItemClick} />
           <MenuItem key="research" active={activeItem.startsWith('research') || activeItem === 'projects'} item='Research' link={false} header={true} handleItemClick={handleItemClick} />
           <MenuItem key="cv" active={activeItem === 'cv'} item='CV' handleItemClick={handleItemClick} />
         </div>

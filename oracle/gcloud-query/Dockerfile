@@ -16,4 +16,3 @@ EXPOSE 8080
 
 # Run app.py using uvicorn when the container launches
 CMD ["uvicorn", "query:app", "--host", "0.0.0.0", "--port", "8080"]
-# uvicorn query:app --host 0.0.0.0 --port $PORT
