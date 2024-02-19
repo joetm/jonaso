@@ -29,6 +29,7 @@ load_dotenv()
 
 
 BATCH_SIZE = 500
+USE_CACHE = False
 USE_COMPRESSION = True
 
 IS_PROD = True
@@ -74,24 +75,31 @@ def batch_ingest(directory, text_splitter, embeddings, db, batch_size=500):
         for document in tqdm(documents):
             doc_meta = document.metadata
             source = doc_meta['source']
-            cache_id = source.replace('/', '_').replace('.txt', '.json.gz')
-            cache_path = os.path.join(CACHE_FOLDER, cache_id)
-            if os.path.exists(cache_path):
-                if USE_COMPRESSION:
-                    text_embeddings = compress_json.load(cache_path)
+            if USE_CACHE:
+                cache_id = source.replace('/', '_').replace('.txt', '.json.gz')
+                cache_path = os.path.join(CACHE_FOLDER, cache_id)
+                if os.path.exists(cache_path):
+                    if USE_COMPRESSION:
+                        text_embeddings = compress_json.load(cache_path)
+                    else:
+                        with open(cache_path, 'r') as f: text_embeddings = json.load(f)
                 else:
-                    with open(cache_path, 'r') as f: text_embeddings = json.load(f)
+                    chunks = text_splitter.split_documents([document]) # Split each document into chunks
+                    chunk_txts = [ str(chunk.page_content) for chunk in chunks ]
+                    # chunk_metas = [ chunk.metadata for chunk in chunks ]
+                    chunk_embeds = embeddings.embed_documents(chunk_txts)
+                    text_embeddings = list(zip(chunk_txts, chunk_embeds))
+                    # save cache
+                    if USE_COMPRESSION:
+                        compress_json.dump(text_embeddings, cache_path)
+                    else:
+                        with open(cache_path, 'w') as f: json.dump(text_embeddings, f)
             else:
                 chunks = text_splitter.split_documents([document]) # Split each document into chunks
                 chunk_txts = [ str(chunk.page_content) for chunk in chunks ]
                 # chunk_metas = [ chunk.metadata for chunk in chunks ]
                 chunk_embeds = embeddings.embed_documents(chunk_txts)
                 text_embeddings = list(zip(chunk_txts, chunk_embeds))
-                # save cache
-                if USE_COMPRESSION:
-                    compress_json.dump(text_embeddings, cache_path)
-                else:
-                    with open(cache_path, 'w') as f: json.dump(text_embeddings, f)
             if not len(text_embeddings): continue
             # store embeddings in vectorstore
             db.add_embeddings(text_embeddings) # TODO: , metadatas=chunk_metas
@@ -114,7 +122,7 @@ embeddings = OpenAIEmbeddings(deployment="text-embedding-3-small", disallowed_sp
 # extra docs
 # ----------
 print("Processing extra docs")
-loader = DirectoryLoader(folder1, glob="**/*.txt", show_progress=True)
+loader = DirectoryLoader(folder1, glob="**/*.txt", show_progress=True, loader_cls=TextLoader, use_multithreading=True)
 extra_docs = loader.load()
 num_extra_docs = len(extra_docs)
 print(f"{num_extra_docs} extra documents")
