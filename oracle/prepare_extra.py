@@ -48,6 +48,7 @@ BASEPATHS = [
 
 os.makedirs('./text_extra/issues', exist_ok=True)
 os.makedirs('./text_extra/topics', exist_ok=True)
+os.makedirs('./text_extra/applications', exist_ok=True)
 os.makedirs('./text_extra/systems', exist_ok=True)
 
 
@@ -79,6 +80,25 @@ for root in BASEPATHS:
             f.write(doc_v1)
           with open(f'./text_extra/issues/{sanitized_filename}_v2.txt', 'w') as f:
             f.write(doc_v2)
+
+    # --------------------
+    # === APPLICATIONS ===
+    # --------------------
+    if 'Applications' in subdirs:
+      # get the issues
+      app_path = os.path.join(dirpath, 'Applications')
+      applications = next(os.walk(app_path, followlinks=False))[1] # Gets the immediate subdirectories
+      # issues = [ i.split('/')[-1] for i in subdirs ]
+      # print('Issues:', dirpath)
+      if len(applications):
+        applist = "- " + "\n- ".join([ i for i in applications if i != '__pycache__' ])
+        doc = f"What are applications of {parent}?\n"
+        doc += f"{applist}"
+        print(doc)
+        print()
+        if sanitized_filename:
+          with open(f'./text_extra/applications/{sanitized_filename}.txt', 'w') as f:
+            f.write(doc)
 
     # ---------------
     # === SYSTEMS ===
@@ -144,7 +164,8 @@ for parent in alltopics.keys():
   topics = alltopics[parent]['topics']
   sanitized_filename = sanitize_filename(parent.replace(" ", "_"))
   # parents = alltopics[parent]['parents']
-  doc = f"What are topics in {parent}?\n"
+  # doc = f"What are topics in {parent}?\n"
+  doc = f"{parent}:\n"
   topiclist = "- " + "\n- ".join([ t for t in topics if t != '__pycache__' ])
   doc += f"{topiclist}"
   print(doc)

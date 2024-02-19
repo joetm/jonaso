@@ -28,7 +28,7 @@ load_dotenv()
 # os.environ["OPENAI_API_KEY"]
 
 
-IS_PROD = False
+IS_PROD = True
 if IS_PROD:
     folder1 = './text_extra/'
     folder2 = './text/'
@@ -46,7 +46,7 @@ embeddings = OpenAIEmbeddings(deployment="text-embedding-3-small", disallowed_sp
 # extra docs
 # ----------
 print("Processing extra docs")
-loader = DirectoryLoader(folder1, glob="**/*.txt", show_progress=True)
+loader = DirectoryLoader(folder1, glob="**/*.txt", show_progress=True, loader_cls=TextLoader, use_multithreading=True)
 extra_docs = loader.load()
 num_extra_docs = len(extra_docs)
 print(f"{num_extra_docs} extra documents")
@@ -58,7 +58,7 @@ print(f"{num_extra_chunks} extra chunks")
 # ----
 # docs
 # ----
-loader = DirectoryLoader(folder2, glob="**/*.txt", show_progress=True)
+loader = DirectoryLoader(folder2, glob="**/*.txt", show_progress=True, loader_cls=TextLoader, use_multithreading=True)
 docs = loader.load()
 num_docs = len(docs)
 print(f"{num_docs} PDF documents")
@@ -71,9 +71,6 @@ num_chunks = len(chunks)
 # ingest chunks
 db = FAISS.from_documents(chunks, embeddings)
 db.save_local("faiss_index")
-
-del chunks
-del loader
 
 # ----
 # docs
