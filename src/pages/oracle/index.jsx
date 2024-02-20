@@ -17,13 +17,11 @@ import stats from "../../../oracle/stats.json"
 
 export const isProd = process.env.NODE_ENV !== "development"
 
+let _URL = 'https://jonaso-query-ixrkbfpuaq-ez.a.run.app/query'
+// if (!isProd) { _URL = 'http://0.0.0.0:8080/query' }
+
 const HISTORY_LENGTH = 3
 
-if (isProd) {
-  const _URL = 'https://jonaso-query-ixrkbfpuaq-ez.a.run.app/query'
-} else {
-  const _URL = 'http://0.0.0.0:8080/query'
-}
 
 const preFabExamples = [
   "What are the difficulties of moderating twitch communities?",
@@ -86,6 +84,8 @@ export default function Chat() {
   ])
   const [chatHistory, updateChatHistory] = useState([])
   const [isLoading, setIsLoading] = useState(false)
+  const [isColdStart, setIsColdStart] = useState(false)
+  const [showingColdStartMsg, setShowColdStartMsg] = useState(false)
   const [firstUse, setFirstUse] = useState(true)
   const [useHyperlinks, setUseHyperlinks] = useState(false)
   const [networkError, setNetworkError] = useState(false)
@@ -112,7 +112,9 @@ export default function Chat() {
   }, [isLoading])
 
   const updateIconClass = () => {
-    if (inputRef.current.value) {
+    if (isLoading) {
+      iconRef.current.className = 'stop circle outline'
+    } else if (inputRef.current.value) {
       iconRef.current.className = 'arrow alternate circle up icon'
     } else {
       iconRef.current.className = 'arrow alternate circle up outline icon'
@@ -134,8 +136,18 @@ export default function Chat() {
   }
 
   const sendIt = (new_msg) => {
+
+    const startTime = Date.now()
+    let timeoutReached = false
+    const timeoutId = setTimeout(() => {
+      timeoutReached = true
+      setIsColdStart(true)
+      setShowColdStartMsg(true)
+    }, 30000) // 30 seconds
+
     setIsLoading(true)
     setNetworkError(null)
+    updateIconClass()
     handleServerResponse({'role': 'user', 'msg': new_msg})
     fetch(_URL, {
       method: 'POST',
@@ -147,12 +159,23 @@ export default function Chat() {
       console.log('Success:', data)
       setIsLoading(false)
       handleServerResponse(data)
+      // stop cold start timer
+      const endTime = Date.now()
+      const elapsedTime = endTime - startTime
+      // cold start
+      clearTimeout(timeoutId)
+      setIsColdStart(false)
+      setShowColdStartMsg(false)
     })
     .catch(error => {
       console.error('Error:', error)
       console.log(error)
       setNetworkError(error)
       setIsLoading(false)
+      // cold start
+      clearTimeout(timeoutId)
+      setIsColdStart(false)
+      setShowColdStartMsg(false)
     })
   }
 
@@ -213,6 +236,20 @@ export default function Chat() {
 
   return (
     <Layout style={{marginBottom:0, paddingBottom:0}}>
+
+      { showingColdStartMsg &&
+        <div className="ui icon compact info message">
+          <i onClick={() => setShowColdStartMsg(false)} className="close icon"></i>
+          <i className="inbox icon"></i>
+          <div className="content">
+            <div className="header">
+              Cold start detected.
+            </div>
+            <p>Please allow ~2 minutes for the server to boot.</p>
+          </div>
+        </div>
+      }
+
       <div className="ui message">
         You are chatting with {stats?.total} documents that I have <Link to="/research/reading/">read</Link> and found <Link to="/research/influences/">interesting</Link>.
         <div style={{
@@ -295,7 +332,7 @@ export default function Chat() {
         }
 
       </div>
-        
+
       <div className="ui massive icon input" style={{width: '100%', marginTop: '20px'}}>
         <input
           ref={inputRef}

@@ -147,7 +147,7 @@ for root in BASEPATHS:
     # === TOPICS ===
     # --------------
     topics = subdirs.copy()
-    to_remove = ['Issues', 'Misc', 'General', 'General, Theory']
+    to_remove = ['Issues', 'Misc', 'General', 'General, Theory', '__pycache__']
     for item in to_remove:
       if item in topics:
         topics.remove(item)
@@ -164,13 +164,17 @@ for parent in alltopics.keys():
   topics = alltopics[parent]['topics']
   sanitized_filename = sanitize_filename(parent.replace(" ", "_"))
   # parents = alltopics[parent]['parents']
-  # doc = f"What are topics in {parent}?\n"
-  doc = f"{parent}:\n"
-  topiclist = "- " + "\n- ".join([ t for t in topics if t != '__pycache__' ])
-  doc += f"{topiclist}"
-  print(doc)
+  doc_v1 = f"What are topics in {parent}?\n"
+  doc_v2 = f"Topics related to {parent}:\n"
+  # doc = f"{parent}:\n"
+  topiclist = "- " + "\n- ".join([ t for t in topics ])
+  doc_v1 += f"{topiclist}"
+  doc_v2 += f"{topiclist}"
+  print(doc_v2)
   print()
   if sanitized_filename:
-    with open(f'./text_extra/topics/{sanitized_filename}.txt', 'w') as f:
-      f.write(doc)
+    with open(f'./text_extra/topics/{sanitized_filename}_v1.txt', 'w') as f:
+      f.write(doc_v1)
+    with open(f'./text_extra/topics/{sanitized_filename}_v2.txt', 'w') as f:
+      f.write(doc_v2)
 
