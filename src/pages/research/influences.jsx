@@ -9,7 +9,7 @@ import Loading from "../../components/influencerLoading"
 import Layout from "../../components/layout"
 import { Seo } from "../../components/Seo"
 
-export const isProd = process.env.NODE_ENV !== "development"
+// export const isProd = process.env.NODE_ENV !== "development"
 
 
 // const _INFLUENCER = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/influencer.json'
@@ -39,9 +39,7 @@ export default function Influencers() {
       setSelectedLegend(legend)
     }
   }
-  const resetFilter = () => {
-    setSelectedLegend(null)
-  }
+  const resetFilter = () => { setSelectedLegend(null) }
 
   useEffect(() => {
 
@@ -141,7 +139,7 @@ export default function Influencers() {
           }
         </div>
 
-        { isProd && isLoading && <Loading /> }
+        { isLoading && <Loading /> }
 
         <div className="clear">
           <AuthorList list={filteredList} />

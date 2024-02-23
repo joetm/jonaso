@@ -12,16 +12,18 @@ import React, { useState, useEffect, useRef } from "react"
 import Layout from "../../components/layout"
 import { Seo } from "../../components/Seo"
 import { Link } from "gatsby"
+import Toast from '../../components/Toast'
 
 import stats from "../../../oracle/stats.json"
 
-export const isProd = process.env.NODE_ENV !== "development"
+// export const isProd = process.env.NODE_ENV !== "development"
 
 let _URL = 'https://jonaso-query-ixrkbfpuaq-ez.a.run.app/query'
 // if (!isProd) { _URL = 'http://0.0.0.0:8080/query' }
 
 const HISTORY_LENGTH = 3
-
+const toastDuration = 300000
+const requestTimeOut = 220000
 
 const preFabExamples = [
   "What are the difficulties of moderating twitch communities?",
@@ -82,9 +84,10 @@ export default function Chat() {
     // { 'role': 'user', 'msg': 'test msg'},
     // { 'role': 'oracle', 'msg': 'ok'},
   ])
+  const [fetchParams, setFetchParams] = useState(null) // trigger for the fetch call
   const [chatHistory, updateChatHistory] = useState([])
   const [isLoading, setIsLoading] = useState(false)
-  const [isColdStart, setIsColdStart] = useState(false)
+  // const [isColdStart, setIsColdStart] = useState(false)
   const [showingColdStartMsg, setShowColdStartMsg] = useState(false)
   const [firstUse, setFirstUse] = useState(true)
   const [useHyperlinks, setUseHyperlinks] = useState(false)
@@ -109,6 +112,8 @@ export default function Chat() {
     if (!isLoading) {
       inputRef.current.focus()
     }
+    // update input icon
+    updateIconClass()
   }, [isLoading])
 
   const updateIconClass = () => {
@@ -120,63 +125,81 @@ export default function Chat() {
       iconRef.current.className = 'arrow alternate circle up outline icon'
     }
   }
+
   useEffect(() => {
-    inputRef.current.addEventListener('input', updateIconClass)
-    return () => inputRef.current.removeEventListener('input', updateIconClass)
+    const currentElement = inputRef.current
+    if (currentElement) {
+      currentElement.addEventListener('input', updateIconClass)
+      return () => {
+        if (currentElement) {
+          currentElement.removeEventListener('input', updateIconClass)
+        }
+      }
+    }
   }, [])
 
-  // body: JSON.stringify({ query: "What are the difficulties of moderating twitch communities?" }),
+  useEffect(() => {
+    if (fetchParams) {
+      const { query, history } = fetchParams
+
+      const startTime = Date.now()
+      // let timeoutReached = false
+      // show a toast message after 30 seconds
+      const timeoutId = setTimeout(() => {
+        // timeoutReached = true
+        // setIsColdStart(true)
+        displayToastMsg()
+      }, requestTimeOut)
+
+      fetch(_URL, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({query, history}),
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success:', data)
+        setIsLoading(false)
+        handleMsg(data)
+
+        // stop cold start timer
+        const endTime = Date.now()
+        const elapsedTime = endTime - startTime
+        clearColdStart(timeoutId)
+      })
+      .catch(error => {
+        console.error('Error:', error)
+        console.log(error)
+        setNetworkError(error)
+        setIsLoading(false)
+
+      })
+      clearColdStart(timeoutId)
+      // Reset fetchParams to prevent useEffect from running again
+      setFetchParams(null)
+    }
+  }, [fetchParams]) // Dependency array ensures effect runs only when fetchParams changes
+
+  const clearColdStart = (timeoutId) => {
+    clearTimeout(timeoutId) // cold start
+    // setIsColdStart(false)
+    setShowColdStartMsg(false)
+  }
 
   // Use functional update to ensure we're working with the most current state
-  const handleServerResponse = (data) => {
+  const handleMsg = (data) => {
     updateChat(chat => [...chat, data])
-    if (data.role == "user") {
+    if (data.role === "user") {
       updateChatHistory(chatHistory => [...chatHistory, data].slice(-1 * HISTORY_LENGTH))
     }
   }
 
   const sendIt = (new_msg) => {
-
-    const startTime = Date.now()
-    let timeoutReached = false
-    const timeoutId = setTimeout(() => {
-      timeoutReached = true
-      setIsColdStart(true)
-      setShowColdStartMsg(true)
-    }, 30000) // 30 seconds
-
+    // launch the fetch request
     setIsLoading(true)
     setNetworkError(null)
-    updateIconClass()
-    handleServerResponse({'role': 'user', 'msg': new_msg})
-    fetch(_URL, {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({query: new_msg, history: chatHistory}),
-    })
-    .then(response => response.json())
-    .then(data => {
-      console.log('Success:', data)
-      setIsLoading(false)
-      handleServerResponse(data)
-      // stop cold start timer
-      const endTime = Date.now()
-      const elapsedTime = endTime - startTime
-      // cold start
-      clearTimeout(timeoutId)
-      setIsColdStart(false)
-      setShowColdStartMsg(false)
-    })
-    .catch(error => {
-      console.error('Error:', error)
-      console.log(error)
-      setNetworkError(error)
-      setIsLoading(false)
-      // cold start
-      clearTimeout(timeoutId)
-      setIsColdStart(false)
-      setShowColdStartMsg(false)
-    })
+    handleMsg({'role': 'user', 'msg': new_msg})
+    setFetchParams({query: new_msg, history: chatHistory}) // Set fetchParams state to trigger useEffect
   }
 
   const handleListItemClick = (txt) => {
@@ -216,7 +239,7 @@ export default function Chat() {
   }
 
   const handleKeyDown = (event) => {
-    if (event.key === 'Enter') {
+    if (!isLoading && event.key === 'Enter') {
       const new_msg = event.target.value.trim()
       if (!new_msg) {return}
       setNetworkError(null)
@@ -234,20 +257,23 @@ export default function Chat() {
 
   const handleHyperlinkOption = (e) => setUseHyperlinks(e.target.checked)
 
+  const displayToastMsg = () => {
+    setShowColdStartMsg(true)
+    setTimeout(() => setShowColdStartMsg(false), toastDuration) // Adjust the timeout to match the duration of the toast
+  }
+  const handleToastComplete = () => { setShowColdStartMsg(false) }
+
   return (
     <Layout style={{marginBottom:0, paddingBottom:0}}>
 
-      { showingColdStartMsg &&
-        <div className="ui icon compact info message">
-          <i onClick={() => setShowColdStartMsg(false)} className="close icon"></i>
-          <i className="inbox icon"></i>
-          <div className="content">
-            <div className="header">
-              Cold start detected.
-            </div>
-            <p>Please allow ~2 minutes for the server to boot.</p>
-          </div>
-        </div>
+      {
+        showingColdStartMsg &&
+          <Toast
+            headline="Cold start detected!"
+            message="Please allow ~2 minutes for the server to boot."
+            duration={toastDuration}
+            onComplete={handleToastComplete}
+          />
       }
 
       <div className="ui message">
@@ -287,7 +313,10 @@ export default function Chat() {
               {/*
                 <div className="header" style={{textAlign: isUserMsg ? 'right' : 'left'}}>{isUserMsg ? 'you' : 'Oracle'}</div>
               */}
-              <div className="ui message" style={{float: isUserMsg ? 'right' : 'left', maxWidth: '80%', backgroundColor: isUserMsg ? '#888888' : 'white', color: isUserMsg ? 'white' : 'black' }}>
+              <div
+                className="ui message"
+                style={{float: isUserMsg ? 'right' : 'left', maxWidth: '80%', backgroundColor: isUserMsg ? '#888888' : 'white', color: isUserMsg ? 'white' : 'black' }}
+                >
                 {
                   useHyperlinks ?
                     <TextWithLinks text={msgObj.msg} isUser={isUserMsg} />
@@ -334,10 +363,12 @@ export default function Chat() {
       </div>
 
       <div className="ui massive icon input" style={{width: '100%', marginTop: '20px'}}>
+        {/*
+          disabled={isLoading}
+        */}
         <input
           ref={inputRef}
           autoFocus
-          disabled={isLoading}
           type="text"
           onKeyDown={handleKeyDown}
           placeholder="Enter your question..."

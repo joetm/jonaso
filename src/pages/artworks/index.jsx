@@ -32,7 +32,7 @@ export default function ArtPage() {
       <Layout style={{paddingBottom: 0}}>
         <ArtHeader
           generator="AI-generated Images"
-          byline="Latest images generated from text prompts (never edited). Click links below for more."
+          byline="Images generated from text prompts (never edited) since 2021. Click links below for more."
         />
       </Layout>
       {

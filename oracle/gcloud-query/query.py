@@ -25,6 +25,7 @@ from langchain_openai import OpenAIEmbeddings
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+from typing import List, Optional
 
 
 # device = 'cuda' if torch.cuda.is_available() else 'cpu'
@@ -39,14 +40,14 @@ embeddings = OpenAIEmbeddings()
 db = FAISS.load_local("faiss_index", embeddings)
 # retriever = db.as_retriever(search_kwargs={"k": 10})
 
-def build_prompt(question, context):
-    prompt = f"""Answer the question based only on the following context: 
 
-    {context}
-
-    Question: {question}
-    """
-    # print(prompt)
+def build_prompt(question: str, context: str, history=Optional[List[str]] = None) -> str:
+    if history and len(history): history_str = "\n".join( [ "User: " + x for x in history ] )
+    else: history_str = "-"
+    prompt = (f"Answer the question based only on the following context:\n\n"
+              f"{context}\n\n"
+              f"Chat history:\n{history_str}\n\n"
+              f"Question: {question}")
     return prompt
 
 
@@ -86,6 +87,7 @@ async def read_root():
 
 class API_Input(BaseModel):
     query: str
+    history: List[str]
 class API_Output(BaseModel):
     role: str
     msg: str
@@ -94,13 +96,14 @@ class API_Output(BaseModel):
 async def ask(obj: API_Input) -> API_Output:
     # question = "What are the difficulties of moderating twitch communities?"
     question = obj.query
+    history = obj?.history
     if not question:
         return {"role": "oracle", "msg": ""}
 
     docs = db.similarity_search_with_score(question)
     # docs = retriever.get_relevant_documents(query)
     context = "\n\n".join( [ d[0].page_content for d in docs ] )
-    prompt = build_prompt(question, context)
+    prompt = build_prompt(question, context, history)
     answer = model.invoke(prompt)
     answer = answer.strip()
     if answer.startswith('Answer:'):
