@@ -56,12 +56,12 @@ export default function ArtHeader({generator, byline, totalCount}) {
           </a>
           {/*
           <a
-            folder="redteam"
-            className={"item" + (generator === 'Redteam' ? ' active' : '')}
+            folder="redteaming"
+            className={"item" + (generator === 'Redteaming' ? ' active' : '')}
             onClick={handleMenuClick}
             onKeyDown={handleMenuClick}
           >
-            Redteam
+            Redteaming
           </a>
           */}
           <a

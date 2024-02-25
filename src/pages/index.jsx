@@ -13,7 +13,7 @@ import { Seo } from "../components/Seo"
 // import img from "../img/Jonas-Oppenlaender-500x500.jpg"
 import LINKEDIN from "../img/linkedin.png"
 import Layout from "../components/layout"
-import TravelRotary from "../components/TravelRotary"
+// import TravelRotary from "../components/TravelRotary"
 
 import Venn from "../../static/img/Research_areas_Venn.jpg"
 
@@ -199,9 +199,11 @@ export default function Home() {
                   &nbsp;|&nbsp;
                   Academic <a href="/cv/oppenlaender-cv.pdf">CV</a>
               </p>
+              {/*
               <aside style={{marginTop:'2em'}}>
                 <TravelRotary />
               </aside>
+              */}
             </div>
           </div>
         </div>

@@ -22,7 +22,7 @@ from langchain_openai import OpenAI
 from langchain_openai import OpenAIEmbeddings
 # from langchain_openai import ChatOpenAI
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException # , Query
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Optional
@@ -41,7 +41,7 @@ db = FAISS.load_local("faiss_index", embeddings)
 # retriever = db.as_retriever(search_kwargs={"k": 10})
 
 
-def build_prompt(question: str, context: str, history=Optional[List[str]] = None) -> str:
+def build_prompt(question: str, context: str, history:Optional[List[str]] = None) -> str:
     if history and len(history): history_str = "\n".join( [ "User: " + x for x in history ] )
     else: history_str = "-"
     prompt = (f"Answer the question based only on the following context:\n\n"
@@ -96,7 +96,7 @@ class API_Output(BaseModel):
 async def ask(obj: API_Input) -> API_Output:
     # question = "What are the difficulties of moderating twitch communities?"
     question = obj.query
-    history = obj?.history
+    history = obj.history
     if not question:
         return {"role": "oracle", "msg": ""}
 

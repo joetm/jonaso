@@ -91,9 +91,7 @@ for root in BASEPATHS:
         continue
 
       full_text = textract.process(fullpath)
-
       full_text = full_text.decode('utf-8')
-
       full_text = full_text.replace("\\n", "\n")
 
       # remove references section
@@ -101,6 +99,7 @@ for root in BASEPATHS:
       if last_index != -1: text = full_text[:last_index]
       else: text = full_text
 
+      # cache
       with open(cachepath, 'w') as f:
         f.write(text)
 
