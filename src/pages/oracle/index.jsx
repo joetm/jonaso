@@ -22,8 +22,8 @@ let _URL = 'https://jonaso-query-ixrkbfpuaq-ez.a.run.app/query'
 // if (!isProd) { _URL = 'http://0.0.0.0:8080/query' }
 
 const HISTORY_LENGTH = 3
-const toastDuration = 300000
-const requestTimeOut = 220000
+const toastDuration = 30 * 1000
+const requestTimeOut = 12 * 1000
 
 const preFabExamples = [
   "What are the difficulties of moderating twitch communities?",
@@ -87,7 +87,6 @@ export default function Chat() {
   const [fetchParams, setFetchParams] = useState(null) // trigger for the fetch call
   const [chatHistory, updateChatHistory] = useState([])
   const [isLoading, setIsLoading] = useState(false)
-  // const [isColdStart, setIsColdStart] = useState(false)
   const [showingColdStartMsg, setShowColdStartMsg] = useState(false)
   const [firstUse, setFirstUse] = useState(true)
   const [useHyperlinks, setUseHyperlinks] = useState(false)
@@ -143,11 +142,8 @@ export default function Chat() {
       const { query, history } = fetchParams
 
       const startTime = Date.now()
-      // let timeoutReached = false
-      // show a toast message after 30 seconds
+      // show a toast message after X seconds
       const timeoutId = setTimeout(() => {
-        // timeoutReached = true
-        // setIsColdStart(true)
         displayToastMsg()
       }, requestTimeOut)
 
@@ -158,7 +154,7 @@ export default function Chat() {
       })
       .then(response => response.json())
       .then(data => {
-        console.log('Success:', data)
+        // console.log('Success:', data)
         setIsLoading(false)
         handleMsg(data)
 
@@ -182,7 +178,6 @@ export default function Chat() {
 
   const clearColdStart = (timeoutId) => {
     clearTimeout(timeoutId) // cold start
-    // setIsColdStart(false)
     setShowColdStartMsg(false)
   }
 
@@ -310,9 +305,6 @@ export default function Chat() {
           const isUserMsg = msgObj['role'] == 'user'
           return (
             <div key={index} style={{marginBottom: '5px'}}>
-              {/*
-                <div className="header" style={{textAlign: isUserMsg ? 'right' : 'left'}}>{isUserMsg ? 'you' : 'Oracle'}</div>
-              */}
               <div
                 className="ui message"
                 style={{float: isUserMsg ? 'right' : 'left', maxWidth: '80%', backgroundColor: isUserMsg ? '#888888' : 'white', color: isUserMsg ? 'white' : 'black' }}
