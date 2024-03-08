@@ -2,7 +2,7 @@
 
 import '../../../react-masonry.css'
 
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import ArtHeader from '../../../components/ArtHeader'
 import Layout from "../../../components/layout"
 import MasonryGallery from '../../../components/MasonryGallery'
@@ -15,11 +15,14 @@ const _URL = process.env.NODE_ENV === "development" ? `/artworks/json/webp-midjo
 
 
 export default function ArtPage() {
-  const [images, setImages] = useState([])
+  const [ images, setImages ] = useState([])
   const { isLoading, data } = useQuery({
     queryKey: ['webp-midjourney'],
-    queryFn: () => fetch(_URL).then((res) => res.json()).then((data) => setImages(data)),
+    queryFn: () => fetch(_URL).then((res) => res.json()),
   })
+  useEffect(() => {
+    if (data) { setImages(data) }
+  }, [data]) // Dependency array ensures this runs only when `data` changes
   return (
     <>
       <Layout style={{paddingBottom: 0}}>

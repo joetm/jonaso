@@ -50,7 +50,7 @@ for cat in images.keys():
   images[cat].sort(key=lambda x: int(x[1]), reverse=True)
 
   # only process the latest x = IMAGECUTOFF images for each category
-  if IMAGECUTOFF and cat != 'redteaming':
+  if IMAGECUTOFF and cat != 'redteam':
     images[cat] = images[cat][0:IMAGECUTOFF]
 
   outfile = f'artworks-json/{cat}.json'
@@ -64,7 +64,7 @@ for cat in images.keys():
 latest = []
 for cat in images.keys():
   for img in images[cat]:
-    if cat == 'redteaming': continue
+    if cat == 'redteam': continue
     latest.append(img)
 latest.sort(key=lambda x: int(x[1]), reverse=True)
 latest = latest[0:49]

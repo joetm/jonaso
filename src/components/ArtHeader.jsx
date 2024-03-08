@@ -3,7 +3,25 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 
 import { navigate } from 'gatsby'
-import React from "react"
+import React, { createContext } from "react"
+import { useContext } from 'react'
+const LinkContext = createContext(null)
+
+
+function Link({name, folder, shortname=null}) {
+  const ctx = useContext(LinkContext)
+  console.log('checkval', name, shortname, ctx.generator)
+  return (
+      <a 
+        folder={folder}
+        className={"item" + (ctx.generator === name ? ' active' : '')}
+        onClick={ctx.handleMenuClick}
+        onKeyDown={ctx.handleMenuClick}
+      >
+        {shortname ? shortname : name}
+      </a>
+  )
+}
 
 
 export default function ArtHeader({generator, byline, totalCount}) {
@@ -30,64 +48,20 @@ export default function ArtHeader({generator, byline, totalCount}) {
 
       <section style={{textAlign:'center', marginBottom:'2em'}}>
         <div className="ui fluid pointing secondary six item menu">
-          <a 
-            folder="midjourney"
-            className={"item" + (generator === 'Midjourney' ? ' active' : '')}
-            onClick={handleMenuClick}
-            onKeyDown={handleMenuClick}
+          <LinkContext.Provider
+            value={{
+              handleMenuClick,
+              generator,
+            }}
           >
-            Midjourney
-          </a>
-          <a
-            folder="dalle"
-            className={"item" + (generator === 'DALL-E' ? ' active' : '')}
-            onClick={handleMenuClick}
-            onKeyDown={handleMenuClick}
-          >
-            DALL-E
-          </a>
-          <a
-            folder="stablediffusion"
-            className={"item" + (generator === 'Stable Diffusion' ? ' active' : '')}
-            onClick={handleMenuClick}
-            onKeyDown={handleMenuClick}
-          >
-            Stable Diffusion
-          </a>
-          {/*
-          <a
-            folder="redteaming"
-            className={"item" + (generator === 'Redteaming' ? ' active' : '')}
-            onClick={handleMenuClick}
-            onKeyDown={handleMenuClick}
-          >
-            Redteaming
-          </a>
-          */}
-          <a
-            folder="latent-diffusion"
-            className={"item" + (generator === 'Latent Diffusion' ? ' active' : '')}
-            onClick={handleMenuClick}
-            onKeyDown={handleMenuClick}
-          >
-            Latent Diffusion
-          </a>
-          <a
-            folder="vqganclip"
-            className={"item" + (generator === 'VQGAN-CLIP' ? ' active' : '')}
-            onClick={handleMenuClick}
-            onKeyDown={handleMenuClick}
-          >
-            VQGAN-CLIP
-          </a>
-          <a
-            folder="misc"
-            className={"item" + (generator === 'Misc. Text-To-Image Systems' ? ' active' : '')}
-            onClick={handleMenuClick}
-            onKeyDown={handleMenuClick}
-          >
-            Misc.
-          </a>
+            <Link name="Midjourney" folder="midjourney" />
+            <Link name="DALL-E" folder="dalle" />
+            <Link name="Stable Diffusion" folder="stablediffusion" />
+            <Link name="Redteam" folder="redteam" />
+            <Link name="Latent Diffusion" folder="latent-diffusion" />
+            <Link name="VQGAN-CLIP" folder="vqganclip" />
+            <Link name="Misc. Text-To-Image Systems" folder="misc" shortname="Misc." />
+          </LinkContext.Provider>
         </div>
       </section>
     </div>
