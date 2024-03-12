@@ -14,27 +14,12 @@ import { Seo } from "../../components/Seo"
 import { Link } from "gatsby"
 import Toast from '../../components/Toast'
 
-import stats from "../../../oracle/stats.json"
-
 // export const isProd = process.env.NODE_ENV !== "development"
+import stats from "../../../oracle/stats.json"
+import config from "./config.json"
 
 let _URL = 'https://jonaso-query-ixrkbfpuaq-ez.a.run.app/query'
 // if (!isProd) { _URL = 'http://0.0.0.0:8080/query' }
-
-const HISTORY_LENGTH = 3
-const toastDuration = 30 * 1000
-const requestTimeOut = 12 * 1000
-
-const preFabExamples = [
-  "What are the difficulties of moderating twitch communities?",
-  "What are the challenges of generative deep learning?",
-  "List some prompt engineering techniques.",
-  "What are systems, libraries, tools for data validation?",
-  "What are the issues with mobile phones?",
-  "What are topics in Collective Intelligence?",
-  "What is Methodolatry?",
-  "Who was living in airports?",
-]
 
 const styles = {
   exampleContainer: {
@@ -145,7 +130,7 @@ export default function Chat() {
       // show a toast message after X seconds
       const timeoutId = setTimeout(() => {
         displayToastMsg()
-      }, requestTimeOut)
+      }, config.requestTimeOut)
 
       fetch(_URL, {
         method: 'POST',
@@ -185,7 +170,7 @@ export default function Chat() {
   const handleMsg = (data) => {
     updateChat(chat => [...chat, data])
     if (data.role === "user") {
-      updateChatHistory(chatHistory => [...chatHistory, data].slice(-1 * HISTORY_LENGTH))
+      updateChatHistory(chatHistory => [...chatHistory, data].slice(-1 * config.HISTORY_LENGTH))
     }
   }
 
@@ -254,7 +239,7 @@ export default function Chat() {
 
   const displayToastMsg = () => {
     setShowColdStartMsg(true)
-    setTimeout(() => setShowColdStartMsg(false), toastDuration) // Adjust the timeout to match the duration of the toast
+    setTimeout(() => setShowColdStartMsg(false), config.toastDuration) // Adjust the timeout to match the duration of the toast
   }
   const handleToastComplete = () => { setShowColdStartMsg(false) }
 
@@ -266,7 +251,7 @@ export default function Chat() {
           <Toast
             headline="Cold start detected!"
             message="Please allow ~2 minutes for the server to boot."
-            duration={toastDuration}
+            duration={config.toastDuration}
             onComplete={handleToastComplete}
           />
       }
@@ -332,7 +317,7 @@ export default function Chat() {
           firstUse &&
             <div className="examplecontainer" style={styles.exampleContainer}>
               {
-                preFabExamples.map(ex => (
+                config.preFabExamples.map(ex => (
                   <div key={ex} onClick={() => handleExampleClick(ex)} className="item" style={styles.exampleContainer.example}>
                     <div className="content">
                       {ex}
