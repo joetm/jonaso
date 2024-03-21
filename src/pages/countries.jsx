@@ -12,7 +12,7 @@ export default function Countries() {
   return (
     <Layout>
       <div className="ui container" style={{textAlign:'center'}}>
-        <h2>Countries I have visited</h2>
+        <h2>Countries I have visited ({countries.length})</h2>
         <WorldMap
           color="red"
           value-suffix="people"
