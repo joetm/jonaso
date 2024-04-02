@@ -116,7 +116,7 @@ export default function Home() {
                   leveraging the capabilities of Large Language Models (LLMs), tailored for the telecommunications sector.
                   */}
                   {/* To this end, I */}
-                  research, identify, propose, and evaluate effective recipes and technical solutions for adapting LLMs to specialized tasks within telecommunications and engineering.
+                  research, identify, propose, and evaluate effective recipes and technical solutions for adapting LLMs and LLM-based agents to specialized tasks within telecommunications and engineering.
               Prior to that, I was a postdoctoral researcher at the <a href="https://www.jyu.fi/en" target="_blank" rel="noreferrer">University of Jyv&auml;skyl&auml;</a> in Central Finland where I researched prompt engineering and text-to-image generation. Prompt engineering has been my primary research interest since 2021.
               </p>
 
