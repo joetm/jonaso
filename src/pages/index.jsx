@@ -25,15 +25,17 @@ export const Head = () => (
 ) //
 
 
-function AccordionItem({ title, content, link, num, accordionActiveNum, expandAccordion }) {
-  const linkname = link.split(/\//).slice(-1)[0]
+function AccordionItem({ title, content, link=null, num, accordionActiveNum, expandAccordion }) {
+  const linkname = link ? link.split(/\//).slice(-1)[0] : null
   return (
     <>
       <div className="title" onClick={() => expandAccordion(num)}>
         <i className={`caret ${accordionActiveNum === num ? 'down' : 'right'} icon`}></i>
         {title}
         {' '}
-        <span>(<a href={link} rel="_blank">{linkname}</a>)</span>
+        {
+          link && <span>(<a href={link} rel="_blank">{linkname}</a>)</span>
+        }
       </div>
       <div className="content" style={{clear: 'both', display: accordionActiveNum === num ? 'block' : 'none'}}>
         <div className="transition content">
@@ -135,6 +137,7 @@ export default function Home() {
                   */}
                   <AccordionItem title="Creativity on paid crowdsourcing platforms" content="Crowd workers are routinely invited to participate in creative tasks, yet it was unknown how crowd workers feel about such tasks. This survey study developed worker archetypes with varying levels of openess towards creative crowdsourcing tasks." num="3" expandAccordion={expandAccordion} accordionActiveNum={accordionActiveNum} link="https://dx.doi.org/10.1145/3313831.3376677" />
                   <AccordionItem title="Crowd Pilot Studies" content="Pilot studies are very common method of determining important design parameters of a crowdsourcing campaign. However, crowd pilot studies are critically underreported in the literature. This literature review shed light on this issue and provided recommendations for reporting crowd pilot studies." num="4" expandAccordion={expandAccordion} accordionActiveNum={accordionActiveNum} link="https://dx.doi.org/10.1145/3641023" />
+                  <AccordionItem title="HCI Citation Practices" content="This metascience study investigated the rising number of references included in CHI articles, finding that if the current trend is not broken, articles in CHI 2030 will include on average over 130 references. The study also investigated a number of different co-occurring factors, such as an increase in the number of literature reviews in HCI and an increase in citations to arXiv and code repositories." num="5" expandAccordion={expandAccordion} accordionActiveNum={accordionActiveNum} />
                 </div>
               </div>
 
