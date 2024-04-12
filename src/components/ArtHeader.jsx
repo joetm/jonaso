@@ -10,7 +10,7 @@ const LinkContext = createContext(null)
 
 function Link({name, folder, shortname=null}) {
   const ctx = useContext(LinkContext)
-  console.log('checkval', name, shortname, ctx.generator)
+  // console.log('checkval', name, shortname, ctx.generator)
   return (
       <a 
         folder={folder}
@@ -57,7 +57,9 @@ export default function ArtHeader({generator, byline, totalCount}) {
             <Link name="Midjourney" folder="midjourney" />
             <Link name="DALL-E" folder="dalle" />
             <Link name="Stable Diffusion" folder="stablediffusion" />
+            {/*
             <Link name="Redteam" folder="redteam" />
+            */}
             <Link name="Latent Diffusion" folder="latent-diffusion" />
             <Link name="VQGAN-CLIP" folder="vqganclip" />
             <Link name="Misc. Text-To-Image Systems" folder="misc" shortname="Misc." />
