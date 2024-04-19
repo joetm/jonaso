@@ -98,6 +98,7 @@ $keywords_level3 = array();
 $influencers = array();
 $keywordauthors = array();
 
+const SEPARATOR = '|';
 
 // for progress bar
 $result = $db->query('SELECT count(json) AS `cnt` FROM `documents`');
@@ -260,11 +261,11 @@ while ($result && $doc = $result->fetchArray(SQLITE3_ASSOC)['json']) {
 
 		// L2
 		if ($l1 && $l2) {
-		    $keywords_level2[$l1][$l1.'-'.$l2] = ($keywords_level2[$l1][$l1.'-'.$l2] ?? 0) + 1;
+		    $keywords_level2[$l1][$l1.SEPARATOR.$l2] = ($keywords_level2[$l1][$l1.SEPARATOR.$l2] ?? 0) + 1;
 		}
 		// L3
 		if ($l1 && $l2 && $l3) {
-		    $keywords_level3[$l1][$l1.'-'.$l2][$l3] = ($keywords_level3[$l1][$l1.'-'.$l2][$l3] ?? 0) + 1;
+		    $keywords_level3[$l1][$l1.SEPARATOR.$l2][$l3] = ($keywords_level3[$l1][$l1.SEPARATOR.$l2][$l3] ?? 0) + 1;
 		}
 	}
 
@@ -356,7 +357,7 @@ foreach ($keywords_level2 as $key => $sublevel) {
 	// reorganize
 	$tmp = [];
 	foreach ($sublevel as $k => $v) {
-		$tmp[] = ["name" => explode("-", $k)[1], "num" => $v, 'id' => md5($k)];
+		$tmp[] = ["name" => explode(SEPARATOR, $k)[1], "num" => $v, 'id' => md5($k)];
 	}
 	// sort descending by num
 	usort($tmp, 'sortFunc');
@@ -377,7 +378,7 @@ foreach ($keywords_level3 as $l1 => $sublevel) {
 			unset($sublevel2[""]);
 		}
 		// reorganize
-		// $l2key = $l1 . "-" . $l2;
+		// $l2key = $l1 . SEPARATOR . $l2;
 		// var_dump($l2key);
 		if (!isset($store[$l2])) {
 			$store[$l2] = [];
