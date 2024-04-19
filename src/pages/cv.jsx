@@ -151,8 +151,7 @@ export default function CV() {
               <div className="item" style={styles.nomargin}>
                   <div className="description" style={styles.nomarginTop}>
                     <div className="ui list" role="list">
-                      <div className="item" role="listitem"><a href="https://www.jyu.fi/">Elisa Corporation</a></div>
-                      <div className="item" role="listitem">Helsinki, Finland</div>
+                      <div className="item" role="listitem">Kuopio, Finland</div>
                     </div>
                     <div className="ui list" role="list">
                       {/*
