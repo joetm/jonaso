@@ -10,7 +10,6 @@ import "../css/accordion.css"
 import React, { useRef, useState, useEffect } from "react"
 import { Link } from "gatsby"
 import { Seo } from "../components/Seo"
-// import img from "../img/Jonas-Oppenlaender-500x500.jpg"
 import LINKEDIN from "../img/linkedin.png"
 import Layout from "../components/layout"
 // import TravelRotary from "../components/TravelRotary"
@@ -103,10 +102,6 @@ export default function Home() {
                 ).
               </p>
 
-              {/*
-              I have a diverse background with a range of academic and professional experiences.
-              */}
-
               <p>
               In my previous position, I was a Senior Research Scientist at Elisa Corporation in Helsinki, Finland,
                   {/*
@@ -120,6 +115,10 @@ export default function Home() {
                   {/* To this end, I */}
                   research, identify, propose, and evaluate effective recipes and technical solutions for adapting LLMs and LLM-based agents to specialized tasks within telecommunications and engineering.
               Prior to that, I was a postdoctoral researcher at the <a href="https://www.jyu.fi/en" target="_blank" rel="noreferrer">University of Jyv&auml;skyl&auml;</a> in Central Finland where I researched prompt engineering and text-to-image generation. Prompt engineering has been my primary research interest since 2021.
+              </p>
+
+              <p style={{marginTop:'2rem', textAlign:'center'}}>
+                <img src={Venn} style={{width:'75%'}} alt="" />
               </p>
 
               <p>
@@ -175,12 +174,18 @@ export default function Home() {
               </p>
               */}
 
-              <p style={{textAlign:'center'}}>
-                <img src={Venn} style={{width:'90%'}} alt="" />
-              </p>
+              <img
+                src={'/img/image24-tn.jpg'}
+                alt=""
+                className="ui fluid rounded image"
+                style={{
+                  borderRadius: '20px',
+                  WebkitFilter: 'grayscale(70%) contrast(90%) brightness(106%) saturate(2) sepia(20%) drop-shadow(6px 6px 8px gray)',
+                  filter: 'grayscale(70%) contrast(90%) brightness(106%) saturate(2) sepia(20%) drop-shadow(6px 6px 8px gray)',
+                }}
+              />
 
               {/*
-                <img src={img} alt="" className="ui fluid rounded image" />
                 <p style={{marginTop:'1em'}}>
                   Tutkijatohtori (Postdoctoral Researcher)
                 </p>
@@ -200,15 +205,17 @@ export default function Home() {
               </p>
               <p>
                   <i className="arrow right icon"></i>
-                  Professional <a href="/cv/resume.pdf">Resume</a>
-                  &nbsp;|&nbsp;
                   Academic <a href="/cv/oppenlaender-cv.pdf">CV</a>
+                  &nbsp;|&nbsp;
+                  <a href="/cv/resume.pdf">Resume</a>
               </p>
+
               {/*
               <aside style={{marginTop:'2em'}}>
                 <TravelRotary />
               </aside>
               */}
+
             </div>
           </div>
         </div>

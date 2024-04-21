@@ -27,6 +27,10 @@ def open_browser(url):
     print('Fetching publication citations from Google Scholar...')
     options = Options()
     options.headless = True  # Enable headless mode
+    options.add_argument("--headless")  # Ensures headless is added as an argument
+    options.add_argument("--disable-gpu")  # This can help on some platforms
+    options.add_argument("--no-sandbox")  # This parameter is often necessary on Linux environments
+    options.add_argument("--disable-dev-shm-usage")  # Overcomes limited resource problems
     driver = webdriver.Firefox(options=options)
     driver.get(url)
     # click the more link until the bitter end
