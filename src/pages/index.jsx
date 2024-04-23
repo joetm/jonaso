@@ -13,6 +13,7 @@ import { Seo } from "../components/Seo"
 import LINKEDIN from "../img/linkedin.png"
 import Layout from "../components/layout"
 // import TravelRotary from "../components/TravelRotary"
+import img from "../img/Jonas-Oppenlaender-500x500.jpg"
 
 import Venn from "../../static/img/Research_areas_Venn.jpg"
 
@@ -175,13 +176,11 @@ export default function Home() {
               */}
 
               <img
-                src={'/img/image24-tn.jpg'}
+                src={img}
                 alt=""
                 className="ui fluid rounded image"
                 style={{
-                  borderRadius: '20px',
-                  WebkitFilter: 'grayscale(70%) contrast(90%) brightness(106%) saturate(2) sepia(20%) drop-shadow(6px 6px 8px gray)',
-                  filter: 'grayscale(70%) contrast(90%) brightness(106%) saturate(2) sepia(20%) drop-shadow(6px 6px 8px gray)',
+                  borderRadius: '10px',
                 }}
               />
 
