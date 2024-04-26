@@ -81,7 +81,8 @@ export default function Influencers() {
         })
         
         let influencer = Object.values(tmp).filter(author => author.num > 1)
-        influencer = sortByKey(influencer, 'recency')
+        // influencer = sortByKey(influencer, 'recency')
+        influencer = sortByKey(influencer, 'num')
         
         setInfluencer(influencer)
 
