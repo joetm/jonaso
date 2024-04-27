@@ -26,10 +26,10 @@ export function Head() {
 
 
 export default function Influencers() {
-
   const [influencer, setInfluencer] = useState([])
   const [researchAreas, setResearchAreas] = useState([])
   const [selectedLegend, setSelectedLegend] = useState(null)
+  const [sortCriteria, setSortCriteria] = useState('overall')
 
   const handleLegendClick = (legend) => {
     // double click resets filter
@@ -42,7 +42,6 @@ export default function Influencers() {
   const resetFilter = () => { setSelectedLegend(null) }
 
   useEffect(() => {
-
     const fetchData = async () => {
       try {
         const resInfluencer = await fetch(_FLATINFLUENCER)
@@ -82,8 +81,7 @@ export default function Influencers() {
         
         let influencer = Object.values(tmp).filter(author => author.num > 1)
         // influencer = sortByKey(influencer, 'recency')
-        influencer = sortByKey(influencer, 'num')
-        
+        // influencer = sortByKey(influencer, 'num')
         setInfluencer(influencer)
 
         const areaCount = influencer.reduce((acc, { area }) => {
@@ -104,10 +102,25 @@ export default function Influencers() {
 
   }, [])
 
+
+  // influencer sorting
+  useEffect(() => {
+    if (influencer && influencer.length) {
+      let sortedInfluencers;
+      if (sortCriteria === 'recency') {
+        sortedInfluencers = sortByKey(influencer, 'recency')
+      } else {
+        sortedInfluencers = sortByKey(influencer, 'num')
+      }
+      setInfluencer(sortedInfluencers)
+    }
+  }, [influencer, sortCriteria])
+
+
   const isLoading = influencer.length ? false : true
 
   // Derive the filtered list based on the selected legend
-  const filteredList = selectedLegend ? influencer.filter(item => item.area === selectedLegend) : influencer
+  const filteredList = (influencer && selectedLegend) ? influencer.filter(item => item.area === selectedLegend) : influencer
 
   return (
     <Layout>
@@ -129,8 +142,13 @@ export default function Influencers() {
           {
             researchAreas.map(obj => (
               <span
-                style={{marginRight:'1em', marginBottom:'.5em'}}
                 key={obj.area}
+                style={{
+                  fontWeight: selectedLegend === obj.area ? 'bold' : 'inherit',
+                  border: `1px solid ${selectedLegend === obj.area ? 'black' : 'white'}`,
+                  marginRight:'1em',
+                  marginBottom:'.5em'
+                }}
                 className={'ui label ra ' + obj.area.replace(" ", "_")}
                 onClick={() => handleLegendClick(obj.area)}
               >
@@ -138,6 +156,26 @@ export default function Influencers() {
               </span>
             ))
           }
+
+          {/*
+          <div class="ui segment" style={{
+            marginBottom:'.5em'
+          }}>
+            Sort by:
+            <div class="ui buttons" style={{marginLeft: '1rem'}}>
+              <button
+                class={`mini ui basic button ${sortCriteria === 'overall' ? 'secondary' : ''}`}
+                onClick={() => setSortCriteria('overall')}
+              >overall</button>
+              <div class="or" data-text="or"></div>
+              <button
+                class={`mini ui basic button ${sortCriteria === 'recency' ? 'secondary' : ''}`}
+                onClick={() => setSortCriteria('recency')}
+              >recency</button>
+            </div>
+          </div>
+          */}
+
         </div>
 
         { isLoading && <Loading /> }

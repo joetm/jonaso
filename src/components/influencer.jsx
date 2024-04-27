@@ -187,10 +187,7 @@ export default function AuthorList({ list }) {
       	 // labelColor = scaleLabelColor(author.priority / maxPrio)
          // return the list of authors
           return (
-            <div
-              key={`${index}_${author.id}`}
-              id={author.id}
-            >
+            <div key={`${index}_${author.id}`} id={author.id}>
               <a
                 className={`ui label ` + labelColor}
                 style={{...styles.label, opacity: author.name === 'Jonas Oppenlaender' ? 0.6 : 1}}
