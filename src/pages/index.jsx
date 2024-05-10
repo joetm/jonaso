@@ -205,8 +205,10 @@ export default function Home() {
               <p>
                   <i className="arrow right icon"></i>
                   Academic <a href="/cv/oppenlaender-cv.pdf">CV</a>
+                  {/*
                   &nbsp;|&nbsp;
                   <a href="/cv/resume.pdf">Resume</a>
+                  */}
               </p>
 
               {/*
