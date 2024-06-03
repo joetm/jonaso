@@ -156,7 +156,7 @@ export default function Home() {
               </p>
 
               <p>
-                In my spare time, I enjoy dabbling with <Link to="/artworks/">AI-generated art</Link> and am a <a href="/kettlebells/">kettlebell salesman</a>.
+                In my spare time, I enjoy dabbling with <Link to="/artworks/">AI-generated art</Link> and I am a <a href="/kettlebells/">kettlebell salesman</a>.
                   I have lived, studied, and/or worked in several countries including
                   Germany, Switzerland, France, the United Kingdom, Sweden,
                   Macedonia, the United States, and Finland.
@@ -208,10 +208,8 @@ export default function Home() {
               <p>
                   <i className="arrow right icon"></i>
                   Academic <a href="/cv/oppenlaender-cv.pdf">CV</a>
-                  {/*
                   &nbsp;|&nbsp;
                   <a href="/cv/resume.pdf">Resume</a>
-                  */}
               </p>
 
               {/*
