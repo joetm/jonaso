@@ -7,6 +7,7 @@ import 'semantic-ui-css/components/item.min.css'
 
 import React, { useState, useEffect } from "react"
 import { Bar, BarChart, CartesianGrid, LabelList, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
+import { ScatterChart, Scatter, Line } from 'recharts'
 // import useDetectPrint from 'use-detect-print'
 import { noMarginGrid } from "../common"
 import Layout from "../components/layout"
@@ -66,11 +67,7 @@ function categorizeListPerYear(pubList) {
     })
     const categorizedList = {}
     annotatedList.forEach(obj => {
-      if (categorizedList[obj.year]) {
-          categorizedList[obj.year].push(obj)
-      } else {
-          categorizedList[obj.year] = [obj]
-      }
+      if (categorizedList[obj.year]) { categorizedList[obj.year].push(obj) } else { categorizedList[obj.year] = [obj] }
     })
     return categorizedList
 } //
@@ -193,6 +190,16 @@ export default function Publications() {
 // }))
 // console.log('aggregated', aggregated)
 
+const citation_graph_data = []
+// scatter plot data
+citations.forEach( (obj, index) => citation_graph_data.push(
+  { 'x': index + 1, 'y': parseInt(obj.citations, 10) }
+))
+// diagonal line data
+const maxX = Math.max(...citation_graph_data.map(d => d.x))
+const maxY = Math.max(...citation_graph_data.map(d => d.y))
+const maxVal = Math.max(maxX, maxY)
+const diagonalLineData = [{ x: 0, y: 0 }, { x: maxVal, y: maxVal }]
 
   return (
     <Layout>
@@ -246,7 +253,7 @@ export default function Publications() {
                   tabIndex="-1"
                   onClick={() => setShowing('cits')}
                   disabled={showing === 'cits'}
-                >CITATION</button>
+                >CITATIONS</button>
               </>
             }
           </div>
@@ -355,39 +362,48 @@ export default function Publications() {
         {
           showing === 'cits' &&
             <div className="ui container" id="publications-cits">
-                  {
-                    citations.map(c => {
-                      const icostr = c.__html ? c.__html.indexOf('.pdf') === -1 ? 'file outline' : 'file alternate outline' : 'file outline'
-                        return (
-                          <div className="ui grid" key={c.title} style={noMarginGrid}>
-                              <div className="row">
-                                <div className="one wide column">
-                                  <MediaContextProvider>
-                                    <Media at="sm">
-                                      <i aria-hidden="true" className={`grey ${icostr} large icon`}></i>
-                                    </Media>
-                                    <Media at="md">
-                                      <i aria-hidden="true" className={`grey ${icostr} huge icon`}></i>
-                                    </Media>
-                                    <Media greaterThanOrEqual="lg">
-                                      <i aria-hidden="true" className={`grey ${icostr} big icon`}></i>
-                                    </Media>
-                                    </MediaContextProvider>
-                                </div>
-                                {
-                                  c.__html ?
-                                    <div className="thirteen wide column" dangerouslySetInnerHTML={c}></div>
-                                  :
-                                    <div className="thirteen wide column">{c.title}</div>
-                                }
-                                <div className="two wide column">
-                                  {c.citations.replace('*', '')}
-                                </div>
-                              </div>
+              <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '1rem', marginBottom: '2rem'}}>
+                <ScatterChart width={500} height={500}>
+                  <CartesianGrid />
+                  <XAxis type="number" dataKey="x" />
+                  <YAxis type="number" dataKey="y" />
+                  <Scatter data={citation_graph_data} fill="gray" />
+                  <Scatter name="Diagonal Line" data={diagonalLineData} line={{ stroke: '#666666' }} shape={() => null} />
+                </ScatterChart>
+              </div>
+              {
+                citations.map(c => {
+                  const icostr = c.__html ? c.__html.indexOf('.pdf') === -1 ? 'file outline' : 'file alternate outline' : 'file outline'
+                    return (
+                      <div className="ui grid" key={`${c.title}-${c.citations}`} style={noMarginGrid}>
+                          <div className="row">
+                            <div className="one wide column">
+                              <MediaContextProvider>
+                                <Media at="sm">
+                                  <i aria-hidden="true" className={`grey ${icostr} large icon`}></i>
+                                </Media>
+                                <Media at="md">
+                                  <i aria-hidden="true" className={`grey ${icostr} huge icon`}></i>
+                                </Media>
+                                <Media greaterThanOrEqual="lg">
+                                  <i aria-hidden="true" className={`grey ${icostr} big icon`}></i>
+                                </Media>
+                                </MediaContextProvider>
+                            </div>
+                            {
+                              c.__html ?
+                                <div className="thirteen wide column" dangerouslySetInnerHTML={c}></div>
+                              :
+                                <div className="thirteen wide column">{c.title}</div>
+                            }
+                            <div className="two wide column">
+                              {c.citations.replace('*', '')}
+                            </div>
                           </div>
-                      )
-                    })
-                  }
+                      </div>
+                  )
+                })
+              }
               <div className="spacer"></div>
             </div>
         }
