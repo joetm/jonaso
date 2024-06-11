@@ -2,6 +2,21 @@
 
 const puppeteer = require('puppeteer');
 
+const fs = require('fs');
+const util = require('util');
+const copyFilePromise = util.promisify(fs.copyFile);
+// Async function to copy a file and return
+async function copyAndReturn(source, destination) {
+  try {
+    await copyFilePromise(source, destination);
+    console.log('File was copied successfully');
+    return 'File copied successfully';  // Return a success message
+  } catch (err) {
+    console.error('Error occurred:', err);
+    throw err;  // Rethrow or handle error as needed
+  }
+}
+
 
 (async () => {
 
@@ -49,7 +64,26 @@ const puppeteer = require('puppeteer');
       }, selector);
 
       if (!rect) {
-          throw Error(`Could not find element that matches selector: ${selector}.`);
+          // throw Error(`Could not find element that matches selector: ${selector}.`);
+          // if jonaso.de/publications is broken at the time of build, use a fallback graph
+          try {
+            await new Promise((resolve, reject) => {
+                fs.copyFile('graph-BAK.png', 'graph.png', (err) => {
+                    if (err) {
+                        console.error('Error occurred:', err)
+                        reject(err)
+                    } else {
+                        console.log('Used fallback for citation scraped citation graph. Something may be wrong with jonaso.de/publications/')
+                        resolve()
+                    }
+                });
+            });
+          } catch (error) {
+              // Handle or log the error as needed
+              // console.error('Failed to copy file:', error)
+              throw Error(`Failed to copy file: ${error}`);
+          }
+          return null
       }
 
       return await page.screenshot({
