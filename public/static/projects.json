@@ -1,11 +1,39 @@
 [
   {
     "id": "PX",
-    "title": "Prompting for X",
+    "title": "Meta-Research / Science of Science (SciSci)",
     "lang": "en",
-    "description": {"__html": "<p>TBA</p>"},
+    "description": {"__html": ""},
     "funding": null,
-    "date": "2023-",
+    "date": "2024-",
+    "organisation": "Independent",
+    "organisation_href": null,
+    "url": null,
+    "img": {
+      "src": "/img/projects/metaresearch-4.jpg",
+      "alt": "",
+      "title": ""
+    },
+    "presentations": [
+      {
+        "title": "Past, Present, and Future of Citation Practices in HCI",
+        "year": 2024,
+        "month": "May",
+        "day": 26,
+        "conference": "arXiv",
+        "location": null,
+        "doi": "10.48550/arXiv.2405.16526",
+        "status": null
+      }
+    ]
+  },
+  {
+    "id": "PX",
+    "title": "Prompting for Information Extraction",
+    "lang": "en",
+    "description": {"__html": ""},
+    "funding": null,
+    "date": "2023-2024",
     "organisation": "University of Jyväskylä",
     "organisation_href": null,
     "url": null,
@@ -13,7 +41,19 @@
       "src": "/img/projects/prompting-future.jpg",
       "alt": "",
       "title": ""
-    }
+    },
+    "presentations": [
+      {
+        "title": "Mapping the Challenges of HCI: An Application and Evaluation of ChatGPT and GPT-4 for Mining Insights at Scale",
+        "year": 2023,
+        "month": "June",
+        "day": 8,
+        "conference": "arXiv",
+        "location": null,
+        "doi": "10.48550/arXiv.2306.05036",
+        "status": null
+      }
+    ]
   },
   {
     "id": "PE",

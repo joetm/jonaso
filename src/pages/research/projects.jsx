@@ -48,11 +48,11 @@ export default function Projects() {
             </p>
 
             {
-              projects.map(project => {
+              projects.map((project,index) => {
                 const { title, subtitle, description, date, organisation, organisation_href, funding, img,
                   medium = [], presentations = [], workshops = [] } = project
                 return (
-                  <div className="ui grid" key={`grid_${title}`} style={{marginBottom:'20px'}}>
+                  <div id={`project-${index}`} className="ui grid" key={`grid_${title}`} style={{marginBottom:'20px'}}>
 
                     <div className="row" key={`row_${title}`}>
 
@@ -93,7 +93,7 @@ export default function Projects() {
 
                           {
                             presentations.length > 0 &&
-                              <h3 style={{textAlign:'left'}}>Presentations</h3>
+                              <h3 style={{textAlign:'left'}}>Presentations / Articles</h3>
                           }
                           {
                             presentations.map((pres, i) => <ProjectItem key={`${title}_${i}`} item={pres} i={i} /> )
