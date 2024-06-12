@@ -44,7 +44,7 @@ export default function Projects() {
             <h1 id="projects">Research Projects</h1>
 
             <p style={{...spacer, textAlign:'center'}}>
-              &rarr; To view my web development projects, visit my <a href="https://www.jonaso.de/portfolio/">portfolio</a>.
+              &rarr; To view my web development projects, visit my <a href="https://www.komasurfer.com/portfolio/">portfolio</a> at <a href="https://www.komasurfer.com/portfolio/">komasurfer.com</a>.
             </p>
 
             {
