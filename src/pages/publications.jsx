@@ -363,7 +363,7 @@ const diagonalLineData = [{ x: 0, y: 0 }, { x: maxVal, y: maxVal }]
           showing === 'cits' &&
             <div className="ui container" id="publications-cits">
               <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '1rem', marginBottom: '2rem'}}>
-                <ScatterChart width={500} height={500}>
+                <ScatterChart width={400} height={400}>
                   <CartesianGrid />
                   <XAxis type="number" dataKey="x" />
                   <YAxis type="number" dataKey="y" />
