@@ -163,6 +163,13 @@ export default function Home() {
                   Macedonia, the United States, and Finland.
               </p>
 
+              <p style={{marginTop:'1rem'}}>
+                  <i className="arrow right icon"></i>
+                  Academic <a href="/cv/oppenlaender-cv.pdf">CV</a>
+                  &nbsp;|&nbsp;
+                  <a href="/cv/resume.pdf">Resume</a>
+              </p>
+
             </div>
           </div>
 
@@ -208,12 +215,6 @@ export default function Home() {
                   <a href="https://komasurfer.com/portfolio/">Project Portfolio</a>
               </p>
               */}
-              <p style={{marginTop:'2rem'}}>
-                  <i className="arrow right icon"></i>
-                  Academic <a href="/cv/oppenlaender-cv.pdf">CV</a>
-                  &nbsp;|&nbsp;
-                  <a href="/cv/resume.pdf">Resume</a>
-              </p>
 
               <p style={{marginTop:'2rem', textAlign:'center'}}>
                 <img src={Venn} style={{width:'100%'}} alt="" />
