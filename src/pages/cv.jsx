@@ -100,7 +100,7 @@ const Row = ({left, middle, right, stretched = true}) => {
 export default function CV() {
   function redirectToPortfolio() {window.location = _PORTFOLIO_URL}
   function redirectToPublications() {navigate("/publications")} // window.location = '/publications/'
-  function redirectToInterests() {navigate("/research/interests")} // window.location = '/research/interests/'
+  // function redirectToInterests() {navigate("/research/interests")} // window.location = '/research/interests/'
   function startEndYear(row) {
     if (row.hasOwnProperty('year')) { return row.year }
     return row.end === null ? "since " + row.start : row.start + " - " + row.end
@@ -140,7 +140,7 @@ export default function CV() {
 {/**********************
         CONTACT
 ***********************/}
-    <div className="ui segment" style={{marginBottom:'21px'}}>
+    <div className="ui clearing" style={{marginTop: '21px', marginBottom:'21px'}}>
       <div className="ui stackable two column grid">
         <div className="row" style={{marginBottom:0}}>
           <div className="stretched four wide computer sixteen wide mobile three wide tablet column">
@@ -171,12 +171,14 @@ export default function CV() {
 {/**********************
         INTERESTS
 ***********************/}
+{/*
 <Row left="Research Interests" middle={(
       <button onClick={redirectToInterests}>&rarr; &nbsp; See Interests</button>
 )}
   right=""
   stretched={false}
 />
+*/}
 
 
 {/**********************

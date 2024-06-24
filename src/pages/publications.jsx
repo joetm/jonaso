@@ -7,7 +7,7 @@ import 'semantic-ui-css/components/item.min.css'
 
 import React, { useState, useEffect } from "react"
 import { Bar, BarChart, CartesianGrid, LabelList, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
-import { ScatterChart, Scatter, Line } from 'recharts'
+import { ScatterChart, Scatter } from 'recharts'
 // import useDetectPrint from 'use-detect-print'
 import { noMarginGrid } from "../common"
 import Layout from "../components/layout"
@@ -80,8 +80,8 @@ export default function Publications() {
   const [graphdata, setGraphdata] = useState({})
   const [citations, setCitations] = useState([])
 
-  const [isRefLoaded, setIsRefLoaded] = useState(false)
-  const [isCitsLoaded, setIsCitsLoaded] = useState(false)
+  // const [isRefLoaded, setIsRefLoaded] = useState(false)
+  // const [isCitsLoaded, setIsCitsLoaded] = useState(false)
 
   useEffect(() => {
     // ***
@@ -108,7 +108,7 @@ export default function Publications() {
       const graphdata = {refsByYear, tickArray}
       setReferences(categorizedRefs)
       setGraphdata(graphdata)
-      setIsRefLoaded(true)
+      // setIsRefLoaded(true)
     }
     // ***
     const typFetch = async () => {
@@ -129,7 +129,7 @@ export default function Publications() {
       const cits = await ( await fetch(_CITATION_URL) ).json()
       // console.log('citations', cits)
       setCitations(cits)
-      setIsCitsLoaded(true)
+      // setIsCitsLoaded(true)
     }
     // ***
     refFetch()

@@ -128,10 +128,6 @@ export default function Home() {
               Prior to that, I was a postdoctoral researcher at the <a href="https://www.jyu.fi/en" target="_blank" rel="noreferrer">University of Jyv&auml;skyl&auml;</a> in Central Finland where I researched prompt engineering and text-to-image generation. Prompt engineering has been my primary research interest since 2021.
               </p>
 
-              <p style={{marginTop:'2rem', textAlign:'center'}}>
-                <img src={Venn} style={{width:'75%'}} alt="" />
-              </p>
-
               <p>
               I completed my PhD in the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a> at the <a href="https://www.oulu.fi/">University of Oulu</a>, where I received a distinction for my thesis on creative crowdsourcing, creativity support tools, and crowd feedback systems.
               I also hold a M.Sc. degree in Computer Science with distinction from the <a href="https://www.southampton.ac.uk/">University of Southampton</a> and studied Industrial Engineering at the <a href='https://www.tu-darmstadt.de/'>Technical University of Darmstadt</a> in Germany and <a href="https://liu.se/en">Link&ouml;ping University</a> in Sweden, earning a degree of Diplom-Wirtschaftsingenieur.
@@ -206,15 +202,21 @@ export default function Home() {
                   E-Mail: jonas.x1.oppenlander@jyu.fi
                 </p>
               */}
+              {/*
               <p style={{marginTop:'2rem'}}>
                   <i className="arrow right icon"></i>
                   <a href="https://komasurfer.com/portfolio/">Project Portfolio</a>
               </p>
-              <p>
+              */}
+              <p style={{marginTop:'2rem'}}>
                   <i className="arrow right icon"></i>
                   Academic <a href="/cv/oppenlaender-cv.pdf">CV</a>
                   &nbsp;|&nbsp;
                   <a href="/cv/resume.pdf">Resume</a>
+              </p>
+
+              <p style={{marginTop:'2rem', textAlign:'center'}}>
+                <img src={Venn} style={{width:'100%'}} alt="" />
               </p>
 
               {/*
