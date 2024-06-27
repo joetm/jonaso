@@ -10,7 +10,7 @@ import "../css/accordion.css"
 import React, { useRef, useState, useEffect } from "react"
 import { Link } from "gatsby"
 import { Seo } from "../components/Seo"
-import LINKEDIN from "../img/linkedin.png"
+// import LINKEDIN from "../img/linkedin.png"
 import Layout from "../components/layout"
 import Venn from "../../static/img/Research_areas_Venn.jpg"
 // import TravelRotary from "../components/TravelRotary"
@@ -58,7 +58,7 @@ export default function Home() {
   const [ imgUrl, setImgUrl ] = useState('/img/gen-24/index-pixel.png')
 
   useEffect(() => {
-    setImgUrl(`/img/gen-24/ComfyUI_0000${Math.floor(Math.random() * 6) + 1}_.jpg`)
+    setImgUrl(`/img/gen-24/ComfyUI_0000${Math.floor(Math.random() * 5) + 1}_.jpg`)
   }, [])
 
   useEffect(() => {
@@ -231,12 +231,14 @@ export default function Home() {
         </div>
 
         <div className="ui divider"></div>
+          {/*
           <a href="https://www.linkedin.com/in/jonasopp/" target="_blank" rel="noopener noreferrer">
               <i style={{display:'inline-block', width: '25px', height: '25px',
                 backgroundImage: `url(${LINKEDIN})`,
                 verticalAlign: 'middle', backgroundPosition: 'center center', lineHeight: 1,
                 margin: '0 0.5rem 0 0rem', backgroundSize: 'cover', opacity: 0.45}} title="Jonas Oppenlaender on LinkedIn"></i>
           </a>
+          */}
           <a href="https://github.com/joetm" target="_blank" rel="noopener noreferrer">
               <i title="Jonas Oppenlaender on GitHub" aria-hidden="true" className="grey github square big link icon"></i>
           </a>
