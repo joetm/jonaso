@@ -97,9 +97,6 @@ export default function Nav() {
       <div id="desktopmenu">
         <div className="ui fluid pointing stackable seven item menu" primary="true">
           <MenuItem key="home" active={activeItem === 'home'} item='Home' handleItemClick={handleItemClick} />
-          {/*
-          <MenuItem key="artworks" active={activeItem.startsWith('artworks')} item='Artworks' link={false} header={true} handleItemClick={handleItemClick} />
-          */}
           <MenuItem key="publications" active={activeItem === 'publications'} item='Publications' handleItemClick={handleItemClick} />
           {/*
           <MenuItem key="oracle" active={activeItem === 'oracle'} item='Oracle' handleItemClick={handleItemClick} />
@@ -116,7 +113,7 @@ export default function Nav() {
           <MenuItem
             key="researchinterests"
             active={activeItem === 'research' || activeItem === 'researchinterests'}
-            item='Interests'
+            item='Research Interests'
             url='/research/interests'
             handleItemClick={handleItemClick}
           />
@@ -125,6 +122,14 @@ export default function Nav() {
             active={activeItem === 'researchprojects'}
             item='Research Projects'
             url='/research/projects'
+            handleItemClick={handleItemClick}
+          />
+          <MenuItem
+            key="art"
+            active={activeItem.startsWith('art')}
+            item='Art'
+            link={false}
+            header={true}
             handleItemClick={handleItemClick}
           />
           <MenuItem

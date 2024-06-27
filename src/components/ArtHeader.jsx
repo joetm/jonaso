@@ -28,7 +28,7 @@ export default function ArtHeader({generator, byline, totalCount}) {
   const handleMenuClick = (e) => {
     e.preventDefault()
     const folder = e.target.getAttribute('folder')
-    navigate(`/artworks/${folder}/`)
+    navigate(`/art/${folder}/`)
   }
   return (
     <div>
