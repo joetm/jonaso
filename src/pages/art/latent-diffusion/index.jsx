@@ -6,7 +6,7 @@ import { useQuery } from '@tanstack/react-query'
 import ArtHeader from '../../../components/ArtHeader'
 import Layout from "../../../components/layout"
 import MasonryGallery from '../../../components/MasonryGallery'
-import Loader from "../../../components/loading"
+// import Loader from "../../../components/loading"
 
 
 const cachebuster = Math.round(Date.now() / 10000)
@@ -23,9 +23,9 @@ export default function ArtPage() {
     if (data) { setImages(data) }
   }, [data])
 
-  if (isLoading) {
-    return <Loader />
-  }
+  // if (isLoading) {
+  //   return <Loader />
+  // }
 
   return (
     <>

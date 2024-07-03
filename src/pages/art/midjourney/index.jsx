@@ -7,7 +7,7 @@ import ArtHeader from '../../../components/ArtHeader'
 import Layout from "../../../components/layout"
 import MasonryGallery from '../../../components/MasonryGallery'
 import { useQuery } from '@tanstack/react-query'
-import Loader from "../../../components/loading"
+// import Loader from "../../../components/loading"
 
 // import images from "../../../../public/artworks/json/webp-midjourney.json"
 const cachebuster = Math.round(Date.now() / 10000)
@@ -29,12 +29,12 @@ export default function ArtPage() {
       <Layout style={{paddingBottom: 0}}>
         <ArtHeader generator='Midjourney' totalCount={images.length} />
       </Layout>
-      {
+      <MasonryGallery images={images} />
+      {/*
         isLoading ?
           <Loader />
           :
-          <MasonryGallery images={images} />
-      }
+      */}
     </>
   )
 }

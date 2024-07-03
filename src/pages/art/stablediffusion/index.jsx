@@ -6,7 +6,7 @@ import React, { useState, useEffect } from "react"
 import ArtHeader from '../../../components/ArtHeader'
 import Layout from "../../../components/layout"
 import MasonryGallery from '../../../components/MasonryGallery'
-import Loader from "../../../components/loading"
+// import Loader from "../../../components/loading"
 
 
 // import images from "../../../../public/artworks/json/webp-stablediffusion.json"
@@ -30,12 +30,12 @@ export default function ArtPage() {
       <Layout style={{paddingBottom: 0}}>
         <ArtHeader generator='Stable Diffusion' totalCount={images.length} />
       </Layout>
-      {
+      <MasonryGallery images={images} />
+      {/*
         !images.length ?
           <Loader />
           :
-          <MasonryGallery images={images} />
-      }
+      */}
     </>
   )
 }

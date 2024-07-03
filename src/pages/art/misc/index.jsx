@@ -9,7 +9,7 @@ import { useQuery } from '@tanstack/react-query'
 import ArtHeader from '../../../components/ArtHeader'
 import Layout from "../../../components/layout"
 import MasonryGallery from '../../../components/MasonryGallery'
-import Loader from "../../../components/loading"
+// import Loader from "../../../components/loading"
 
 const cachebuster = Math.round(Date.now() / 10000)
 const _URL = process.env.NODE_ENV === "development" ? `/artworks/json/webp-misc.json?${cachebuster}` : `https://raw.githubusercontent.com/joetm/jonaso/master/public/artworks/json/webp-misc.json?${cachebuster}`
@@ -29,12 +29,12 @@ export default function ArtPage() {
       <Layout style={{paddingBottom: 0}}>
         <ArtHeader generator='Misc. Text-To-Image Systems' totalCount={images.length} />
       </Layout>
-      {
+      <MasonryGallery images={images} />
+      {/*
         isLoading ?
           <Loader />
           :
-          <MasonryGallery images={images} />
-      }
+      */}
     </>
   )
 }
