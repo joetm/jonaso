@@ -12,6 +12,7 @@ import { ScatterChart, Scatter } from 'recharts'
 import { noMarginGrid } from "../common"
 import Layout from "../components/layout"
 import { Seo } from "../components/Seo"
+import CitationMetrics from "../components/CitationMetrics"
 
 // replacement for Responsive component from semantic-ui-react
 // see: https://react.semantic-ui.com/migration-guide/
@@ -195,11 +196,6 @@ const citation_graph_data = []
 citations.forEach( (obj, index) => citation_graph_data.push(
   { 'x': index + 1, 'y': parseInt(obj.citations, 10) }
 ))
-// diagonal line data
-const maxX = Math.max(...citation_graph_data.map(d => d.x))
-const maxY = Math.max(...citation_graph_data.map(d => d.y))
-const maxVal = Math.max(maxX, maxY)
-const diagonalLineData = [{ x: 0, y: 0 }, { x: maxVal, y: maxVal }]
 
   return (
     <Layout>
@@ -362,15 +358,9 @@ const diagonalLineData = [{ x: 0, y: 0 }, { x: maxVal, y: maxVal }]
         {
           showing === 'cits' &&
             <div className="ui container" id="publications-cits">
-              <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '1rem', marginBottom: '2rem'}}>
-                <ScatterChart width={400} height={400}>
-                  <CartesianGrid />
-                  <XAxis type="number" dataKey="x" />
-                  <YAxis type="number" dataKey="y" />
-                  <Scatter data={citation_graph_data} fill="gray" />
-                  <Scatter name="Diagonal Line" data={diagonalLineData} line={{ stroke: '#666666' }} shape={() => null} />
-                </ScatterChart>
-              </div>
+
+              <CitationMetrics citation_graph_data={citation_graph_data} />
+
               {
                 citations.map(c => {
                   const icostr = c.__html ? c.__html.indexOf('.pdf') === -1 ? 'file outline' : 'file alternate outline' : 'file outline'
