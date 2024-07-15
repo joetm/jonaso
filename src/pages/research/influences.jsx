@@ -133,7 +133,7 @@ export default function Influencers() {
         {
           selectedLegend &&
             <button className="mini ui grey basic button" style={{float:'right'}} onClick={resetFilter}>
-              <i class="window close icon"></i>
+              <i className="window close icon"></i>
               Reset Filter
             </button>
         }
@@ -158,18 +158,18 @@ export default function Influencers() {
           }
 
           {/*
-          <div class="ui segment" style={{
+          <div className="ui segment" style={{
             marginBottom:'.5em'
           }}>
             Sort by:
-            <div class="ui buttons" style={{marginLeft: '1rem'}}>
+            <div className="ui buttons" style={{marginLeft: '1rem'}}>
               <button
-                class={`mini ui basic button ${sortCriteria === 'overall' ? 'secondary' : ''}`}
+                className={`mini ui basic button ${sortCriteria === 'overall' ? 'secondary' : ''}`}
                 onClick={() => setSortCriteria('overall')}
               >overall</button>
-              <div class="or" data-text="or"></div>
+              <div className="or" data-text="or"></div>
               <button
-                class={`mini ui basic button ${sortCriteria === 'recency' ? 'secondary' : ''}`}
+                className={`mini ui basic button ${sortCriteria === 'recency' ? 'secondary' : ''}`}
                 onClick={() => setSortCriteria('recency')}
               >recency</button>
             </div>

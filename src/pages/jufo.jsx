@@ -1,12 +1,14 @@
 "use client"
 
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import Layout from "../components/layout"
 import { Seo } from "../components/Seo"
 import { useQuery } from '@tanstack/react-query'
+import CitationMetrics from "../components/CitationMetrics"
 
 
 const _PUB_URL = '/static/references-detail.json'
+const _CITATION_URL = "https://raw.githubusercontent.com/joetm/jonaso/master/stat_aggregator/publications-citations.json"
 
 
 export function Head() {
@@ -17,10 +19,25 @@ export function Head() {
   ) //
 }
 
+function parseTitle(title) {
+  // title = title.replace('\\\'{c}', 'ć')
+  title = title.replace('\\"a', 'ä')
+  title = title.replace('\\"u', 'ü')
+  title = title.replace('\\\"u', 'ü')
+  title = title.replace('\\"o', 'ö')
+  title = title.replace('\{', '')
+  title = title.replace('\}', '')
+  title = title.replace('{', '')
+  title = title.replace('}', '')
+  title = title.replace('{', '')
+  title = title.replace('}', '')
+  return title
+}
 
 
 export default function JufoPage() {
   const [ pubs, storePubs ] = useState([])
+  const [ citations, setCitations ] = useState([])
   const { isLoading, error, data } = useQuery({
     queryKey: ['references-detail.json'],
     queryFn: () => fetch(_PUB_URL)
@@ -31,20 +48,18 @@ export default function JufoPage() {
               })
   })
 
-  function parseTitle(title) {
-    // title = title.replace('\\\'{c}', 'ć')
-    title = title.replace('\\"a', 'ä')
-    title = title.replace('\\"u', 'ü')
-    title = title.replace('\\\"u', 'ü')
-    title = title.replace('\\"o', 'ö')
-    title = title.replace('\{', '')
-    title = title.replace('\}', '')
-    title = title.replace('{', '')
-    title = title.replace('}', '')
-    title = title.replace('{', '')
-    title = title.replace('}', '')
-    return title
-  }
+  useEffect(() => {
+    const citFetch = async () => {
+      const cits = await ( await fetch(_CITATION_URL) ).json()
+      const citation_graph_data = []
+      // scatter plot data
+      cits.forEach( (obj, index) => citation_graph_data.push(
+        { 'x': index + 1, 'y': parseInt(obj.citations, 10) }
+      ))
+      setCitations(citation_graph_data)
+    }
+    citFetch()
+  }, [])
 
   return (
     <Layout>
@@ -57,6 +72,9 @@ export default function JufoPage() {
               isLoading ? '...loading...' : <span>&asymp; {data}</span>
             }
           </p>
+        </section>
+        <section style={{textAlign:'center'}}>
+          <CitationMetrics citation_graph_data={citations} />
         </section>
         {
           pubs.length &&

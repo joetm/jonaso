@@ -89,19 +89,19 @@ class TreeComponent extends React.Component {
           <h2>
             Research Interests
             {' '}
-            <div class="ui mini buttons">
+            <div className="ui mini buttons">
               <button className="ui active button"
                 onClick={() => navigate('/research/interests')}
                 disabled=""
                 tabIndex="-1"
               >Bar</button>
-              <div class="or"></div>
+              <div className="or"></div>
               <button className="ui button"
                 onClick={() => navigate('/research/interests/wordcloud')}
                 disabled=""
                 tabIndex="-1"
               >Cloud</button>
-              <div class="or"></div>
+              <div className="or"></div>
               <button className="ui button"
                 onClick={() => navigate('/research/interests/wordcloud')}
                 disabled={true}

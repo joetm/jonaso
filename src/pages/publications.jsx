@@ -7,12 +7,10 @@ import 'semantic-ui-css/components/item.min.css'
 
 import React, { useState, useEffect } from "react"
 import { Bar, BarChart, CartesianGrid, LabelList, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
-import { ScatterChart, Scatter } from 'recharts'
 // import useDetectPrint from 'use-detect-print'
 import { noMarginGrid } from "../common"
 import Layout from "../components/layout"
 import { Seo } from "../components/Seo"
-import CitationMetrics from "../components/CitationMetrics"
 
 // replacement for Responsive component from semantic-ui-react
 // see: https://react.semantic-ui.com/migration-guide/
@@ -191,12 +189,6 @@ export default function Publications() {
 // }))
 // console.log('aggregated', aggregated)
 
-const citation_graph_data = []
-// scatter plot data
-citations.forEach( (obj, index) => citation_graph_data.push(
-  { 'x': index + 1, 'y': parseInt(obj.citations, 10) }
-))
-
   return (
     <Layout>
       <div className="ui container">
@@ -358,8 +350,6 @@ citations.forEach( (obj, index) => citation_graph_data.push(
         {
           showing === 'cits' &&
             <div className="ui container" id="publications-cits">
-
-              <CitationMetrics citation_graph_data={citation_graph_data} />
 
               {
                 citations.map(c => {
