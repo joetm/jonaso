@@ -113,24 +113,18 @@ export default function Home() {
                 ).
               </p>
 
+              {/*
               <p>
               In my previous position, I was a Senior Research Scientist at Elisa Corporation in Helsinki, Finland,
-                  {/*
-                  My primary research objective is to adapt LLMs to automate tasks in the telecommunications domain.
-                  */}
-                where my aim was to{' '}
-                  {/*
-                  enhance the industrial usability of AI, specifically
-                  leveraging the capabilities of Large Language Models (LLMs), tailored for the telecommunications sector.
-                  */}
-                  {/* To this end, I */}
-                  research, identify, propose, and evaluate effective recipes and technical solutions for adapting LLMs and LLM-based agents to specialized tasks within telecommunications and engineering.
+                where my aim was to research, identify, propose, and evaluate effective recipes and technical solutions for adapting LLMs and LLM-based agents to specialized tasks within telecommunications and engineering.
               Prior to that, I was a postdoctoral researcher at the <a href="https://www.jyu.fi/en" target="_blank" rel="noreferrer">University of Jyv&auml;skyl&auml;</a> in Central Finland where I researched prompt engineering and text-to-image generation. Prompt engineering has been my primary research interest since 2021.
               </p>
+              */}
 
               <p>
               I completed my PhD in the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a> at the <a href="https://www.oulu.fi/">University of Oulu</a>, where I received a distinction for my thesis on creative crowdsourcing, creativity support tools, and crowd feedback systems.
-              I also hold a M.Sc. degree in Computer Science with distinction from the <a href="https://www.southampton.ac.uk/">University of Southampton</a> and studied Industrial Engineering at the <a href='https://www.tu-darmstadt.de/'>Technical University of Darmstadt</a> in Germany and <a href="https://liu.se/en">Link&ouml;ping University</a> in Sweden, earning a degree of Diplom-Wirtschaftsingenieur.
+              I also hold a M.Sc. degree in Computer Science with distinction from the <a href="https://www.southampton.ac.uk/">University of Southampton</a> and a diploma degree (Diplom-Wirtschaftsingenieur) in Industrial Engineering from the <a href='https://www.tu-darmstadt.de/'>Technical University of Darmstadt</a> in Germany.
+              I also studied New Product Development for one year at <a href="https://liu.se/en">Link&ouml;ping University</a> in Sweden.
               Before my doctoral position, I worked as a researcher at the <a href="https://www.mi.fu-berlin.de/en/inf/groups/hcc/" rel="nofollow">Human-Centered Computing</a> group at the Freie Universität Berlin and the <a href="https://gepris.dfg.de/gepris/projekt/194453117/ergebnisse?context=projekt&task=showDetail&id=194453117">Cluster of Excellence &quot;Bild Wissen Gestaltung&quot;</a> in Berlin. I also have industry experience as a Business Analyst and Strategy Analyst at <a href="https://www.alstom.com/">Alstom</a> (now <a href="https://www.ge.com/">GE</a>) and have worked in agile teams as a web developer at <a href="https://www.seme4.com/">Seme4</a> and <a href="https://www.liip.ch/">Liip</a>.
               </p>
 
