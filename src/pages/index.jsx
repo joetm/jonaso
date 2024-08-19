@@ -123,13 +123,22 @@ export default function Home() {
 
               <p>
               I completed my PhD in the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a> at the <a href="https://www.oulu.fi/">University of Oulu</a>, where I received a distinction for my thesis on creative crowdsourcing, creativity support tools, and crowd feedback systems.
+              During my PhD I was awarded two times the Nokia Scholarship (2019, 2020).
               I also hold a M.Sc. degree in Computer Science with distinction from the <a href="https://www.southampton.ac.uk/">University of Southampton</a> and a diploma degree (Diplom-Wirtschaftsingenieur) in Industrial Engineering from the <a href='https://www.tu-darmstadt.de/'>Technical University of Darmstadt</a> in Germany.
               I also studied New Product Development for one year at <a href="https://liu.se/en">Link&ouml;ping University</a> in Sweden.
+              {/*
               Before my doctoral position, I worked as a researcher at the <a href="https://www.mi.fu-berlin.de/en/inf/groups/hcc/" rel="nofollow">Human-Centered Computing</a> group at the Freie Universität Berlin and the <a href="https://gepris.dfg.de/gepris/projekt/194453117/ergebnisse?context=projekt&task=showDetail&id=194453117">Cluster of Excellence &quot;Bild Wissen Gestaltung&quot;</a> in Berlin. I also have industry experience as a Business Analyst and Strategy Analyst at <a href="https://www.alstom.com/">Alstom</a> (now <a href="https://www.ge.com/">GE</a>) and have worked in agile teams as a web developer at <a href="https://www.seme4.com/">Seme4</a> and <a href="https://www.liip.ch/">Liip</a>.
+              */}
+              </p>
+
+              <p>
+              In my research, I am interested in building socio-technical systems that allow humans and technology to work together to achieve tasks that would be beyond their individual capabilities. In the past, I have focused on facilitating knowledge transfer and supporting complex creative work.
+              My current research interests, based on the academic literature I read, are reflected <Link to="/research/interests/">on this page</Link>.
+              A list of researchers who have inspired my work over the years can be found <Link to="/research/influences/">here</Link>.
               </p>
 
               <div style={{margin: '1em 0 1em 0'}}>
-                In my PhD and PostDoc years, I authored some highly innovative publications on topics that nobody had researched before:
+                In my PhD and PostDoc years, I authored some innovative publications:
                 <div className="ui accordion">
                   <AccordionItem title="Creativity of text-to-image generation" content="This publication contributed a description of the online creative ecosystem of text-to-image generation and argued that in order to determine the creativity of text-to-image generation, we need to look beyond the generated image and the prompt." num="1" expandAccordion={expandAccordion} accordionActiveNum={accordionActiveNum} link="https://dx.doi.org/10.1145/3569219.3569352" />
                   {/*
@@ -140,15 +149,6 @@ export default function Home() {
                   <AccordionItem title="HCI Citation Practices" content="This metascience study investigated the rising number of references included in CHI articles, finding that if the current trend is not broken, articles in CHI 2030 will include on average over 130 references. The study also investigated a number of different co-occurring factors, such as an increase in the number of literature reviews in HCI and an increase in citations to arXiv and code repositories." num="5" expandAccordion={expandAccordion} accordionActiveNum={accordionActiveNum} link="https://chi-citation-practices.github.io/" link_is_doi={false} /> {/* https://arxiv.org/abs/2405.16526 */}
                 </div>
               </div>
-
-              <p>
-              {/*
-              In my research, I am interested in building socio-technical systems that allow humans and technology to work together to achieve tasks that would be beyond their individual capabilities. In the past, I have focused on facilitating knowledge transfer and supporting complex creative work.
-              Currently, my scientific research interest is in prompt-based learning and generative artificial intelligence.
-              */}
-              My current research interests, based on the academic literature I read, are reflected <Link to="/research/interests/">on this page</Link>.
-              A list of researchers who have inspired my work over the years can be found <Link to="/research/influences/">here</Link>.
-              </p>
 
               <p>
                 In my spare time, I enjoy dabbling with <Link to="/artworks/">AI-generated art</Link> and I am a <a href="/kettlebells/">kettlebell salesman</a>.
