@@ -122,6 +122,10 @@ export default function Home() {
               */}
 
               <p>
+              I love building cool stuff that is useful and/or meaningful to people.
+              </p>
+
+              <p>
               I completed my PhD in the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a> at the <a href="https://www.oulu.fi/">University of Oulu</a>, where I received a distinction for my thesis on creative crowdsourcing, creativity support tools, and crowd feedback systems.
               During my PhD I was awarded two times the Nokia Scholarship (2019, 2020).
               I also hold a M.Sc. degree in Computer Science with distinction from the <a href="https://www.southampton.ac.uk/">University of Southampton</a> and a diploma degree (Diplom-Wirtschaftsingenieur) in Industrial Engineering from the <a href='https://www.tu-darmstadt.de/'>Technical University of Darmstadt</a> in Germany.
