@@ -1,0 +1,490 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{00}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{{\tt DOI:}\penalty0{#1}\ }
+  \fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       #1{#1}          \fi
+
+\bibitem{10.1145/3491101.3503725}
+{Andy Alorwu}, {Saiph Savage}, {Niels van Berkel}, {Dmitry Ustalov}, {Alexey
+  Drutsa}, {Jonas Oppenlaender}, {Oliver Bates}, {Danula Hettiachchi}, {Ujwal
+  Gadiraju}, {Jorge Goncalves}, {and} {Simo Hosio}. 2022.
+\newblock \showarticletitle{{REGROW}: Reimagining Global Crowdsourcing for
+  Better Human-AI Collaboration}. In {\em CHI Conference on Human Factors in
+  Computing Systems Extended Abstracts} {\em (CHI EA '22)}. Association for
+  Computing Machinery, New York, NY, USA, Article 88, 7 pages.
+\newblock
+
+
+\bibitem{PUCAndy}
+{Andy Alorwu}, {Niels van Berkel}, {Jorge Goncalves}, {Jonas Oppenlaender},
+  {Miguel~Bordallo L{\'o}pez}, {Mahalakshmy Seetharaman}, {and} {Simo Hosio}.
+  2020.
+\newblock \showarticletitle{Crowdsourcing Sensitive Data using Public Displays.
+  Opportunities, Challenges, and Considerations}.
+\newblock {\em Personal and Ubiquitous Computing\/} (2020), 16.
+\newblock
+
+
+\bibitem{Hosio:2019:FAP:3321335.3324943}
+{Simo Hosio}, {Andy Alorwu}, {Niels van Berkel}, {Miguel~Bordallo L{\'o}pez},
+  {Mahalakshmy Seetharaman}, {Jonas Oppenlaender}, {and} {Jorge Goncalves}.
+  2019.
+\newblock \showarticletitle{Fueling {AI} with Public Displays? {A} Feasibility
+  Study of Collecting Biometrically Tagged Consensual Data on a University
+  Campus}. In {\em Proceedings of the 8th {ACM} International Symposium on
+  Pervasive Displays} {\em (PerDis '19)}. ACM, New York, NY, USA, Article 14, 7
+  pages.
+\newblock
+
+
+\bibitem{8436408}
+{Simo Hosio}, {Jaro Karppinen}, {Niels van Berkel}, {Jonas Oppenlaender}, {and}
+  {Jorge Goncalves}. 2018.
+\newblock \showarticletitle{Mobile Decision Support and Data Provisioning for
+  Low Back Pain}.
+\newblock {\em Computer\/} {51}, 8 (Aug 2018), 34–43.
+\newblock
+
+
+\bibitem{8960923}
+{Simo Hosio}, {Niels van Berkel}, {Jonas Oppenlaender}, {and} {Jorge
+  Goncalves}. 2020.
+\newblock \showarticletitle{Crowdsourcing Personalized Weight Loss Diets}.
+\newblock {\em Computer\/} {53}, 01 (Jan 2020), 63–71.
+\newblock
+
+
+\bibitem{KAARIVUO2024102112}
+{Aura Kaarivuo}, {Jonas Oppenländer}, {Tommi Kärkkäinen}, {and} {Tommi
+  Mikkonen}. 2024.
+\newblock \showarticletitle{Exploring emergent soundscape profiles from
+  crowdsourced audio data}.
+\newblock {\em Computers, Environment and Urban Systems\/}  {110} (2024),
+  102112.
+\newblock
+
+
+\bibitem{Kostakos:2019:VEP:3365610.3368422}
+{Panos Kostakos}, {Paula Alavesa}, {Jonas Oppenlaender}, {and} {Simo Hosio}.
+  2019.
+\newblock \showarticletitle{VR Ethnography: {A} Pilot Study on the Use of
+  Virtual Reality 'Go-along' Interviews in Google Street View}. In {\em
+  Proceedings of the 18th International Conference on Mobile and Ubiquitous
+  Multimedia} {\em (MUM '19)}. ACM, New York, NY, USA, Article 53, 5 pages.
+\newblock
+
+
+\bibitem{soton2015}
+{Jonas Oppenlaender}. 2015.
+\newblock {CrowdUI} -- {A} tool to remotely source and evaluate user interface
+  adaptations.  (2015).
+\newblock
+
+
+\bibitem{CI2019}
+{Jonas Oppenlaender}. 2019a.
+\newblock \showarticletitle{Crowd-powered Self-Accelerating Knowledge Systems}.
+  In {\em Collective Intelligence} {\em (CI '19)}. 4.
+\newblock
+\newblock
+\shownote{Retracted.}
+
+
+\bibitem{Oppenlaender:2019:SCW:3325480.3326556}
+{Jonas Oppenlaender}. 2019b.
+\newblock \showarticletitle{Supporting Creative Workers with Crowdsourced
+  Feedback}. In {\em Proceedings of the 2019 {ACM} Conference on Creativity \&
+  Cognition} {\em (C\&C '19)}. ACM, New York, NY, USA, 646–652.
+\newblock
+
+
+\bibitem{10.1145/3393672.3398646}
+{Jonas Oppenlaender}. 2020a.
+\newblock \showarticletitle{Crowd-Powered Creativity Support Systems}. In {\em
+  Companion Proceedings of the 12th ACM SIGCHI Symposium on Engineering
+  Interactive Computing Systems} {\em (EICS ’20 Companion)}. ACM, New York,
+  NY, USA, Article 15, 4 pages.
+\newblock
+
+
+\bibitem{HCOMP2020Poster}
+{Jonas Oppenlaender}. 2020b.
+\newblock \showarticletitle{Socially Augmented Crowdsourced Collection of Folk
+  Theories}. In {\em Proceedings of the Conference on Human Computation and
+  Crowdsourcing} {\em (HCOMP '20)}. AAAI, New York, NY, USA, 3.
+\newblock
+
+
+\bibitem{MUC20}
+{Jonas Oppenlaender}. 2020c.
+\newblock \showarticletitle{Unterstützung Kreativer Arbeit mit Crowdsourcing}.
+  In {\em Mensch und Computer '20, Doktorandenseminar}. 5.
+\newblock
+
+
+\bibitem{oulu2021}
+{Jonas Oppenlaender}. 2021a.
+\newblock {\em Crowdsourcing Creative Work}.
+\newblock Ph.D. Dissertation. University of Oulu, Oulu, Finland.
+\newblock
+
+
+\bibitem{hcompposter2}
+{Jonas Oppenlaender}. 2021b.
+\newblock \showarticletitle{Morphological Matrices as a Tool for Crowdsourced
+  Ideation}. In {\em Proceedings of the Conference on Human Computation and
+  Crowdsourcing} {\em (HCOMP '21)}. AAAI, New York, NY, USA, 3.
+\newblock
+
+
+\bibitem{10.1145/3569219.3569352}
+{Jonas Oppenlaender}. 2022a.
+\newblock \showarticletitle{The Creativity of Text-to-Image Generation}. In
+  {\em 25th International Academic Mindtrek Conference} {\em (Academic Mindtrek
+  2022)}. Association for Computing Machinery, New York, NY, USA, 192–202.
+\newblock
+
+
+\bibitem{10.1145/3569219.3569300}
+{Jonas Oppenlaender}. 2022b.
+\newblock \showarticletitle{The Perception of Smart Contracts for Governance of
+  the Metaverse}. In {\em 25th International Academic Mindtrek Conference} {\em
+  (Academic Mindtrek 2022)}. Association for Computing Machinery, New York, NY,
+  USA, 1–8.
+\newblock
+
+
+\bibitem{10.48550/arxiv.2204.13988}
+{Jonas Oppenlaender}. 2023.
+\newblock \showarticletitle{A Taxonomy of Prompt Modifiers for Text-To-Image
+  Generation}.
+\newblock {\em Behaviour \& Information Technology\/} (2023), 1--14.
+\newblock
+
+
+\bibitem{palgrave}
+{Jonas Oppenlaender}. 2024a.
+\newblock The Cultivated Practices of Text-to-Image Generation.
+\newblock   (2024).
+\newblock
+
+
+\bibitem{citations-HCI}
+{Jonas Oppenlaender}. 2024b.
+\newblock Past, Present, and Future of Citation Practices in HCI.
+\newblock   (2024).
+\newblock
+
+
+\bibitem{10.1145/3641023}
+{Jonas Oppenlaender}, {Tahir Abbas}, {and} {Ujwal Gadiraju}. 2024.
+\newblock \showarticletitle{The State of Pilot Study Reporting in
+  Crowdsourcing: {A} Reflection on Best Practices and Guidelines}.
+\newblock {\em Proc. ACM Hum.-Comput. Interact.\/} {8}, CSCW1, Article 184 (Apr
+  2024), 45 pages.
+\newblock
+
+
+\bibitem{Oppenlaender:2018:CAM:3267305.3267550}
+{Jonas Oppenlaender}, {Kennedy~Opoku Asare}, {and} {Simo Hosio}. 2018.
+\newblock \showarticletitle{{CampusTracker}: {A}ssessing Mobile Workers'
+  Momentary Willingness to Work on Paid Crowdsourcing Tasks}. In {\em
+  Proceedings of the 2018 ACM International Joint Conference and 2018
+  International Symposium on Pervasive and Ubiquitous Computing and Wearable
+  Computers} {\em (UbiComp '18)}. ACM, New York, NY, USA, 648–653.
+\newblock
+
+
+\bibitem{ICSRWorkshop2020}
+{Jonas Oppenlaender} {and} {Jesse~Josua Benjamin}. 2020.
+\newblock \showarticletitle{Towards Metaphors for Cascading AI}. In {\em
+  Proceedings of the Workshop on Metaphors for Human-Robot Interaction} {\em
+  (ICSR '20)}. 3.
+\newblock
+
+
+\bibitem{hcomp2017}
+{Jonas Oppenlaender}, {Jesse~Josua Benjamin}, {and} {Claudia M{\"u}ller-Birn}.
+  2017.
+\newblock \showarticletitle{Socio-technical Revelation of Knowledge Transfer
+  Potentials}. In {\em Proceedings of the 5th {AAAI} Conference on Human
+  Computation and Crowdsourcing} {\em (HCOMP '17)}. AAAI, 3.
+\newblock
+
+
+\bibitem{Oppenlaender:2019:DRA:3365610.3365621}
+{Jonas Oppenlaender} {and} {Simo Hosio}. 2019a.
+\newblock \showarticletitle{Design Recommendations for Augmenting Creative
+  Tasks with Computational Priming}. In {\em Proceedings of the 18th
+  International Conference on Mobile and Ubiquitous Multimedia} {\em (MUM
+  '19)}. ACM, New York, NY, USA, Article 35, 13 pages.
+\newblock
+
+
+\bibitem{Oppenlaender:2019:EIS:3290607.3313043}
+{Jonas Oppenlaender} {and} {Simo Hosio}. 2019b.
+\newblock \showarticletitle{Experizone: {I}ntegrating Situated Scientific
+  Experimentation with Teaching of the Scientific Method}. In {\em Extended
+  Abstracts of the 2019 CHI Conference on Human Factors in Computing Systems}
+  {\em (CHI EA '19)}. ACM, New York, NY, USA, Article LBW1519, 6 pages.
+\newblock
+
+
+\bibitem{dc2s2chi2019submission}
+{Jonas Oppenlaender} {and} {Simo Hosio}. 2019c.
+\newblock \showarticletitle{Supporting Creative Work with Crowd Feedback
+  Systems}. In {\em Proceedings of the {$DC^2S^2$} Workshop on Designing
+  Crowd-powered Creativity Support Systems}. 5.
+\newblock
+
+
+\bibitem{Oppenlaender:2019:TEF:3325480.3326583}
+{Jonas Oppenlaender} {and} {Simo Hosio}. 2019d.
+\newblock \showarticletitle{Towards Eliciting Feedback for Artworks on Public
+  Displays}. In {\em Proceedings of the 2019 {ACM} Conference on Creativity \&
+  Cognition} {\em (C\&C '19)}. ACM, New York, NY, USA, 562–569.
+\newblock
+
+
+\bibitem{hcompposter1}
+{Jonas Oppenlaender} {and} {Simo Hosio}. 2021.
+\newblock \showarticletitle{Towards a Requester-centered Study on the Use of
+  `Bots' for Completing Tasks}. In {\em Proceedings of the Conference on Human
+  Computation and Crowdsourcing} {\em (HCOMP '21)}. AAAI, New York, NY, USA, 3.
+\newblock
+
+
+\bibitem{oppenlaender2023mapping}
+{Jonas Oppenlaender} {and} {Joonas Hämäläinen}. 2023.
+\newblock Mapping the Challenges of {HCI}: An Application and Evaluation of
+  {ChatGPT} and {GPT}-4 for Mining Insights at Scale.
+\newblock   (2023).
+\newblock
+
+
+\bibitem{artworks-reimagined}
+{Jonas Oppenlaender}, {Hannah Johnston}, {Johanna Silvennoinen}, {and} {Helena
+  Barranha}. 2024.
+\newblock Artworks Reimagined: Exploring Human-AI Co-Creation through Body
+  Prompting.
+\newblock   (2024).
+\newblock
+
+
+\bibitem{10.1007/978-3-030-29387-1_18}
+{Jonas Oppenlaender}, {Elina Kuosmanen}, {Jorge Goncalves}, {and} {Simo Hosio}.
+  2019.
+\newblock \showarticletitle{Search Support for Exploratory Writing}. In {\em
+  Human-Computer Interaction -- INTERACT 2019} {\em (LNCS 11748)}, {David
+  Lamas}, {Fernando Loizides}, {Lennart Nacke}, {Helen Petrie}, {Marco
+  Winckler}, {and} {Panayiotis Zaphiris} (Eds.). Springer International
+  Publishing, Cham, 314–336.
+\newblock
+
+
+\bibitem{10.1145/3411764.3445380}
+{Jonas Oppenlaender}, {Elina Kuosmanen}, {Andr\'{e}s Lucero}, {and} {Simo
+  Hosio}. 2021.
+\newblock \showarticletitle{Hardhats and Bungaloos: Comparing Crowdsourced
+  Design Feedback with Peer Design Feedback in the Classroom}. In {\em
+  Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems}
+  {\em (CHI '21)}. Association for Computing Machinery, New York, NY, USA,
+  Article 570, 14 pages.
+\newblock
+
+
+\bibitem{oppenlaender2023prompting}
+{Jonas Oppenlaender}, {Rhema Linder}, {and} {Johanna Silvennoinen}. 2023.
+\newblock Prompting AI Art: An Investigation into the Creative Skill of Prompt
+  Engineering.
+\newblock   (2023).
+\newblock
+
+
+\bibitem{Oppenlaender:2019:DSD:3290607.3299027}
+{Jonas Oppenlaender}, {Maximilian Mackeprang}, {Abderrahmane Khiat}, {Maja
+  Vukovi\'{c}}, {Jorge Goncalves}, {and} {Simo Hosio}. 2019.
+\newblock \showarticletitle{{DC2S2}: {D}esigning Crowd-powered Creativity
+  Support Systems}. In {\em Extended Abstracts of the 2019 CHI Conference on
+  Human Factors in Computing Systems} {\em (CHI EA '19)}. ACM, New York, NY,
+  USA, Article W06, 8 pages.
+\newblock
+
+
+\bibitem{10.1145/3313831.3376677}
+{Jonas Oppenlaender}, {Kristy Milland}, {Aku Visuri}, {Panos Ipeirotis}, {and}
+  {Simo Hosio}. 2020.
+\newblock \showarticletitle{Creativity on Paid Crowdsourcing Platforms}. In
+  {\em Proceedings of the 2020 CHI Conference on Human Factors in Computing
+  Systems} {\em (CHI ’20)}. ACM, New York, NY, USA, Article 548, 14 pages.
+\newblock
+
+
+\bibitem{Oppenlaender:2019:CIC:3325480.3326553}
+{Jonas Oppenlaender}, {Naghmi Shireen}, {Maximilian Mackeprang}, {Halil Erhan},
+  {Jorge Goncalves}, {and} {Simo Hosio}. 2019.
+\newblock \showarticletitle{Crowd-powered Interfaces for Creative Design
+  Thinking}. In {\em Proceedings of the 2019 {ACM} Conference on Creativity and
+  Cognition} {\em (C\&C '19)}. ACM, New York, NY, USA, 722–729.
+\newblock
+
+
+\bibitem{oppenlaender2023perceptions}
+{Jonas Oppenlaender}, {Johanna Silvennoinen}, {Ville Paananen}, {and} {Aku
+  Visuri}. 2023.
+\newblock \showarticletitle{Perceptions and Realities of Text-to-Image
+  Generation}. In {\em 26th International Academic Mindtrek Conference} {\em
+  (Academic Mindtrek 2023)}.
+\newblock
+
+
+\bibitem{10.1145/3394978}
+{Jonas Oppenlaender}, {Thanassis Tiropanis}, {and} {Simo Hosio}. 2020a.
+\newblock \showarticletitle{{CrowdUI}: Supporting Web Design with the Crowd}.
+\newblock {\em Proceedings of the ACM on Human-Computer Interaction\/} {4},
+  EICS, Article 76 (6 2020), 28 pages.
+\newblock
+
+
+\bibitem{CHI2020workshop}
+{Jonas Oppenlaender}, {Aku Visuri}, {Kristy Milland}, {Panos Ipeirotis}, {and}
+  {Simo Hosio}. 2020b.
+\newblock \showarticletitle{What do crowd workers think about creative work?}.
+  In {\em Workshop on Worker-Centered Design: Expanding HCI Methods for
+  Supporting Labor}. 4.
+\newblock
+
+
+\bibitem{oppenlaender2023texttoimage}
+{Jonas Oppenlaender}, {Aku Visuri}, {Ville Paananen}, {Rhema Linder}, {and}
+  {Johanna Silvennoinen}. 2023.
+\newblock \showarticletitle{Text-to-Image Generation: Perceptions and
+  Realities}. In {\em Workshop on Generative AI in HCI} {\em (CHI '23)}. 5.
+\newblock
+
+
+\bibitem{ontology2008}
+{Jonas Oppenl{\"a}nder}. 2008.
+\newblock Entwicklung einer Beschreibungssprache f{\"u}r
+  Produktentwicklungsinhalte.  (2008).
+\newblock
+
+
+\bibitem{kano2009}
+{Jonas Oppenl{\"a}nder}. 2009a.
+\newblock {A}nwendung des Kano-Modells zur Analyse und Charakterisierung
+  gesellschaftlicher Anforderungen an Produkte.  (2009).
+\newblock
+
+
+\bibitem{businessmodel2009}
+{Jonas Oppenl{\"a}nder}. 2009b.
+\newblock Gesch{\"a}ftskonzept f{\"u}r ein auf peer-to-peer basierendes
+  Soziales Netzwerk.  (2009).
+\newblock
+
+
+\bibitem{mkwi2018}
+{Jonas Oppenl{\"a}nder}, {Jesse~Josua Benjamin}, {and} {Claudia
+  M{\"u}ller-Birn}. 2018.
+\newblock \showarticletitle{Towards Sociotechnical Management of
+  Intra-Organisational Knowledge Transfer}. In {\em Multikonferenz
+  Wirtschaftsinformatik. Band 1} {\em (MKWI '18)}, {Paul Drews}, {Burkhardt
+  Funk}, {Peter Niemeyer}, {and} {Lin Xie} (Eds.). 307–313.
+\newblock
+
+
+\bibitem{esciencetage2017}
+{Jonas Oppenl{\"a}nder}, {Falko Gl{\"o}ckler}, {Jana Hoffmann}, {and} {Claudia
+  M{\"u}ller-Birn}. 2017.
+\newblock \showarticletitle{{B}ewertung von Reifegradmodellen f{\"u}r ein
+  integriertes Forschungsdatenmanagement f{\"u}r multidisziplin{\"a}re
+  Forschungsorganisationen}. In {\em E-Science-Tage 2017: Forschungsdaten
+  managen}, {Jonas Kratzke} {and} {Vincent Heuveline} (Eds.). heiBOOKS,
+  53–64.
+\newblock
+
+
+\bibitem{10.1145/3411763.3441315}
+{Ville Paananen}, {Piia Markkanen}, {Jonas Oppenlaender}, {Lik~Hang Lee},
+  {Haider Akmal}, {Ava~Fatah gen. Schieck}, {John Dunham}, {Konstantinos
+  Papangelis}, {Nicolas Lalone}, {Niels van Berkel}, {Jorge Goncalves}, {and}
+  {Simo Hosio}. 2021.
+\newblock \showarticletitle{{2VT}: {V}isions, Technologies, and Visions of
+  Technologies for Understanding Human Scale Spaces}. In {\em Extended
+  Abstracts of the 2021 CHI Conference on Human Factors in Computing Systems}
+  {\em (CHI EA '21)}. Association for Computing Machinery, New York, NY, USA,
+  Article 104, 5 pages.
+\newblock
+
+
+\bibitem{10.1145/3488541}
+{Ville Paananen}, {Jonas Oppenlaender}, {Jorge Goncalves}, {Danula
+  Hettiachchi}, {and} {Simo Hosio}. 2021.
+\newblock \showarticletitle{Investigating Human Scale Spatial Experience}.
+\newblock {\em Proceedings of the ACM on Human-Computer Interaction\/} {5},
+  ISS, Article 496 (Nov 2021), 18 pages.
+\newblock
+
+
+\bibitem{doi:10.1177/14780771231222783}
+{Ville Paananen}, {Jonas Oppenlaender}, {and} {Aku Visuri}. 2023.
+\newblock \showarticletitle{Using Text-to-Image Generation for Architectural
+  Design Ideation}.
+\newblock {\em International Journal of Architectural Computing\/} {0}, 0
+  (2023), 17.
+\newblock
+
+
+\bibitem{DBLP:conf/semweb/TanTBODS21}
+{Mary~Ann Tan}, {Tabea Tietz}, {Oleksandra Bruns}, {Jonas Oppenlaender},
+  {Danilo Dess{\`{\i}}}, {and} {Harald Sack}. 2021a.
+\newblock \showarticletitle{{DDB-EDM} to {FaBiO}: The Case of the {German}
+  Digital Library}. In {\em Proceedings of the {ISWC} 2021 Posters, Demos and
+  Industry Tracks: From Novel Ideas to Industrial Practice co-located with 20th
+  International Semantic Web Conference {(ISWC} 2021), Virtual Conference,
+  October 24-28, 2021} {\em ({CEUR} Workshop Proceedings)}, {Oshani
+  Seneviratne}, {Catia Pesquita}, {Juan Sequeda}, {and} {Lorena Etcheverry}
+  (Eds.), Vol. 2980. CEUR-WS.org, 4.
+\newblock
+
+
+\bibitem{TanTietzBruns2021_1000139475}
+{Mary~Ann Tan}, {Tabea Tietz}, {Oleksandra Bruns}, {Jonas Oppenlaender},
+  {Danilo Dess{\i }{\'}}, {and} {Harald Sack}. 2021b.
+\newblock \showarticletitle{{DDB-KG}: The German Bibliographic Heritage in a
+  Knowledge Graph}. In {\em The 6th International Workshop on Computational
+  History (HistoInformatics2021 - JCDL2021). Ed.: Y. Sumikawa} {\em ({CEUR}
+  Workshop Proceedings)}, Vol. 2981. {RWTH Aachen}, 8.
+\newblock
+
+
+\end{thebibliography}
