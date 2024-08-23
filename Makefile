@@ -22,12 +22,21 @@ default:
 build:
 	yarn build
 
+docentship:
+	# missing fields! 	bib2xml ./src/bibliography/publications.bib > ./stat_aggregator/docentship.xml
+	cd stat_aggregator; \
+		./docentship-bibtojson.py
+
+	mv "./stat_aggregator/docentship.json" ./public/static/
+
 pre-build:
 	# academic-cv folder exists?
 	# [ -d "academic-cv" ] && rm -rf academic-cv
 	make fetch-cv
 	make fetch-pcs
 	make replace-cv
+
+	make docentship
 
 	# make bib-json
 	pandoc-citeproc --bib2json ./src/bibliography/publications.bib > ./src/bibliography/publications.json
