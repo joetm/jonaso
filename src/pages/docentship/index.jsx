@@ -1,8 +1,10 @@
 "use client"
 
-import 'semantic-ui-css/components/grid.min.css'
-import 'semantic-ui-css/components/icon.min.css'
-import 'semantic-ui-css/components/item.min.css'
+// import 'semantic-ui-css/components/grid.min.css'
+// import 'semantic-ui-css/components/icon.min.css'
+// import 'semantic-ui-css/components/item.min.css'
+import 'semantic-ui-css/components/statistic.min.css'
+import 'semantic-ui-css/components/progress.min.css'
 
 import React, { useState, useEffect } from "react"
 import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from 'recharts'
@@ -39,7 +41,7 @@ export function Head() {
 
 export default function Docentship() {
   const [references, setReferences] = useState([])
-  const [progress, setProgress] = useState(0)
+  // const [progress, setProgress] = useState(0)
 
   useEffect(() => {
     // ***
@@ -56,21 +58,20 @@ export default function Docentship() {
       const docentRefs = refs.filter(o => 'docentship' in o)
       // console.log(filteredRefs)
       setReferences(docentRefs)
-
-      const actualRefs = docentRefs.filter(o => o.howpublished.toLowerCase() !== 'pre-prints and working papers')
-      console.log(actualRefs)
-
-      setProgress(actualRefs.length)
-
     }
     refFetch()
   }, [])
+
+  const published = references.filter(r => r?.howpublished !== 'Pre-prints and Working Papers')
+  const firstAuthored = references.filter(r => r?.author.trim().startsWith('Jonas'))
+  const validRefs = references.filter(r => published.includes(r) && firstAuthored.includes(r))
+  const progressPercent = validRefs.length / 10 * 100
 
   return (
     <Layout>
       <div className="ui container">
 
-          <h1 style={{marginBottom: '30px'}}>Docentship Progress {progress}/10</h1>
+          <h1 style={{marginBottom: '30px'}}>Docentship Progress {validRefs.length}/10</h1>
 
           {
             !references.length && <Loader />
@@ -95,7 +96,45 @@ export default function Docentship() {
             </ResponsiveContainer>
             */}
 
-            <div className="ui container" id="publications-type">
+            <div className="ui container" id="docentship">
+
+                  <div className="centered margin">
+                    <div class="ui progress" data-percent={progressPercent}>
+                      <div class="bar" style={{width: `${progressPercent}%`}}>
+                        <div class="progress">{progressPercent}%</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="ui centered grid margin" style={{margin: '2rem auto 2rem auto'}}>
+                    <div class="ui statistics middle">
+                      <div class="statistic">
+                        <div class="value">
+                          {references.length}
+                        </div>
+                        <div class="label">
+                          Candidate<br />Papers
+                        </div>
+                      </div>
+                      <div class="statistic">
+                        <div class="value">
+                          {published.length}
+                        </div>
+                        <div class="label">
+                          Published
+                        </div>
+                      </div>
+                      <div class="statistic">
+                        <div class="value">
+                          {firstAuthored.length}
+                        </div>
+                        <div class="label">
+                          First-authored
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
                   {
                     references.map((ref, index) => {
                       const color = ref?.howpublished === 'Pre-prints and Working Papers' ? 'red' : 'black'
@@ -111,6 +150,9 @@ export default function Docentship() {
                               <div className="fifteen wide column">
                                 <div className="item">
                                   <div className="content">
+                                    <div>
+                                      {ref?.author}
+                                    </div>
                                     <div style={{color}} className="header">
                                       {ref?.howpublished}
                                     </div>

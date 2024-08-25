@@ -165,6 +165,7 @@ export default function Publications() {
   if (keysType.length > 0) {
     customSortOrder = [
       "Journal Articles",
+      "Book Chapters",
       "Conference Papers",
       "Workshops",
       "Workshop Proceedings",
