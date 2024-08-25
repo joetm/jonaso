@@ -138,12 +138,14 @@ export default function Nav() {
             item='WebDev Portfolio'
             link='https://komasurfer.com/portfolio/'
           />
+          {/*
           <CVMenuItem
             key="cv"
             active={activeItem === 'cv'}
             item='CV'
             link="/cv/oppenlaender-cv.pdf"
           />
+          */}
         </div>
         {/*
           researchNavOpen &&
