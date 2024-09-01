@@ -58,7 +58,8 @@ export default function Home() {
   const [ imgUrl, setImgUrl ] = useState('/img/gen-24/index-pixel.png')
 
   useEffect(() => {
-    setImgUrl(`/img/gen-24/ComfyUI_0000${Math.floor(Math.random() * 3) + 1}_.jpg`)
+    const n_images = 3
+    setImgUrl(`/img/gen-24/ComfyUI_0000${Math.floor(Math.random() * n_images) + 1}_.jpg`)
   }, [])
 
   useEffect(() => {
