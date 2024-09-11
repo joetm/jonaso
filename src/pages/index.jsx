@@ -15,7 +15,7 @@ import Layout from "../components/layout"
 import Venn from "../../static/img/Research_areas_Venn.jpg"
 // import TravelRotary from "../components/TravelRotary"
 // import img from "../img/Jonas-Oppenlaender-500x500.jpg"
-// import img from "../img/gen-24/ComfyUI_00011_.jpg"
+import img from "../img/gen-24/ComfyUI_00002_.jpg"
 
 
 export const Head = () => (
@@ -55,12 +55,12 @@ export default function Home() {
   const audioRef = useRef()
   const [ isPlaying, setIsPlaying ] = useState(false)
   const [ accordionActiveNum, setAccordionActiveNum ] = useState(null)
-  const [ imgUrl, setImgUrl ] = useState('/img/gen-24/index-pixel.png')
 
-  useEffect(() => {
-    const n_images = 3
-    setImgUrl(`/img/gen-24/ComfyUI_0000${Math.floor(Math.random() * n_images) + 1}_.jpg`)
-  }, [])
+  // const [ imgUrl, setImgUrl ] = useState('/img/gen-24/index-pixel.png')
+  // useEffect(() => {
+  //   const n_images = 3
+  //   setImgUrl(`/img/gen-24/ComfyUI_0000${Math.floor(Math.random() * n_images) + 1}_.jpg`)
+  // }, [])
 
   useEffect(() => {
     audioRef.current = new Audio('/audio/speech_20230621150721178.mp3')
@@ -188,7 +188,7 @@ export default function Home() {
               */}
 
               <img
-                src={imgUrl}
+                src={img}
                 alt=""
                 className="ui fluid rounded image"
                 style={{
