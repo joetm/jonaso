@@ -61,7 +61,7 @@ function categorizeListPerYear(pubList) {
     }
     const annotatedList = pubList.map(text => {
         const yRegex = /20\d\d/
-        const found = text.match(yRegex)
+        const found = text.match(yRegex) || ['forthcoming']
         return {__html: text.replace('publications_bib.html', '/static/publications_bib.html'), year: found[0] || 'forthcoming'}
     })
     const categorizedList = {}

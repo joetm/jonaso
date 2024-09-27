@@ -5,7 +5,7 @@ import 'semantic-ui-css/components/comment.min.css'
 import 'semantic-ui-css/components/grid.min.css'
 import 'semantic-ui-css/components/icon.min.css'
 import "../../libs/academicons/css/academicons.min.css"
-import "../css/accordion.css"
+// import "../css/accordion.css"
 
 import React, { useRef, useState, useEffect } from "react"
 import { Link } from "gatsby"
@@ -25,36 +25,36 @@ export const Head = () => (
 ) //
 
 
-function AccordionItem({ title, content, link=null, link_is_doi=true, num, accordionActiveNum, expandAccordion }) {
-  let linkname;
-  if (link_is_doi) {
-    linkname = link ? link.split(/\//).slice(-1)[0] : null
-  } else {
-    linkname = link
-  }
-  return (
-    <>
-      <div className="title" onClick={() => expandAccordion(num)}>
-        <i className={`caret ${accordionActiveNum === num ? 'down' : 'right'} icon`}></i>
-        {title}
-        {' '}
-        {
-          link && <span>(<a href={link} rel="_blank">{linkname}</a>)</span>
-        }
-      </div>
-      <div className="content" style={{clear: 'both', display: accordionActiveNum === num ? 'block' : 'none'}}>
-        <div className="transition content">
-          {content}
-        </div>
-      </div>
-    </>
-  )
-}
+// function AccordionItem({ title, content, link=null, link_is_doi=true, num, accordionActiveNum, expandAccordion }) {
+//   let linkname;
+//   if (link_is_doi) {
+//     linkname = link ? link.split(/\//).slice(-1)[0] : null
+//   } else {
+//     linkname = link
+//   }
+//   return (
+//     <>
+//       <div className="title" onClick={() => expandAccordion(num)}>
+//         <i className={`caret ${accordionActiveNum === num ? 'down' : 'right'} icon`}></i>
+//         {title}
+//         {' '}
+//         {
+//           link && <span>(<a href={link} rel="_blank">{linkname}</a>)</span>
+//         }
+//       </div>
+//       <div className="content" style={{clear: 'both', display: accordionActiveNum === num ? 'block' : 'none'}}>
+//         <div className="transition content">
+//           {content}
+//         </div>
+//       </div>
+//     </>
+//   )
+// }
 
 export default function Home() {
   const audioRef = useRef()
   const [ isPlaying, setIsPlaying ] = useState(false)
-  const [ accordionActiveNum, setAccordionActiveNum ] = useState(null)
+  // const [ accordionActiveNum, setAccordionActiveNum ] = useState(null)
 
   // const [ imgUrl, setImgUrl ] = useState('/img/gen-24/index-pixel.png')
   // useEffect(() => {
@@ -81,13 +81,13 @@ export default function Home() {
     audioRef.current.play()
   }
 
-  const expandAccordion = (num) => {
-    if (accordionActiveNum === num) {
-      setAccordionActiveNum(null)
-    } else {
-      setAccordionActiveNum(num)
-    }
-  }
+  // const expandAccordion = (num) => {
+  //   if (accordionActiveNum === num) {
+  //     setAccordionActiveNum(null)
+  //   } else {
+  //     setAccordionActiveNum(num)
+  //   }
+  // }
 
   return (
     <Layout>
@@ -142,18 +142,17 @@ export default function Home() {
               A list of researchers who have inspired my work over the years can be found <Link to="/research/influences/">here</Link>.
               </p>
 
+              {/*
               <div style={{margin: '1em 0 1em 0'}}>
                 In my PhD and PostDoc years, I authored some innovative publications:
                 <div className="ui accordion">
                   <AccordionItem title="Creativity of text-to-image generation" content="This publication contributed a description of the online creative ecosystem of text-to-image generation and argued that in order to determine the creativity of text-to-image generation, we need to look beyond the generated image and the prompt." num="1" expandAccordion={expandAccordion} accordionActiveNum={accordionActiveNum} link="https://dx.doi.org/10.1145/3569219.3569352" />
-                  {/*
-                  <AccordionItem title="A taxonomy of prompt modifiers for text-to-image generation" content="TODO" num="2" expandAccordion={expandAccordion} accordionActiveNum={accordionActiveNum} />
-                  */}
                   <AccordionItem title="Creativity on paid crowdsourcing platforms" content="Crowd workers are routinely invited to participate in creative tasks, yet it was unknown how crowd workers feel about such tasks. This survey study developed worker archetypes with varying levels of openess towards creative crowdsourcing tasks." num="3" expandAccordion={expandAccordion} accordionActiveNum={accordionActiveNum} link="https://dx.doi.org/10.1145/3313831.3376677" />
                   <AccordionItem title="Crowd Pilot Studies" content="Pilot studies are very common method of determining important design parameters of a crowdsourcing campaign. However, crowd pilot studies are critically underreported in the literature. This literature review shed light on this issue and provided recommendations for reporting crowd pilot studies." num="4" expandAccordion={expandAccordion} accordionActiveNum={accordionActiveNum} link="https://dx.doi.org/10.1145/3641023" />
-                  <AccordionItem title="HCI Citation Practices" content="This metascience study investigated the rising number of references included in CHI articles, finding that if the current trend is not broken, articles in CHI 2030 will include on average over 130 references. The study also investigated a number of different co-occurring factors, such as an increase in the number of literature reviews in HCI and an increase in citations to arXiv and code repositories." num="5" expandAccordion={expandAccordion} accordionActiveNum={accordionActiveNum} link="https://chi-citation-practices.github.io/" link_is_doi={false} /> {/* https://arxiv.org/abs/2405.16526 */}
+                  <AccordionItem title="HCI Citation Practices" content="This metascience study investigated the rising number of references included in CHI articles, finding that if the current trend is not broken, articles in CHI 2030 will include on average over 130 references. The study also investigated a number of different co-occurring factors, such as an increase in the number of literature reviews in HCI and an increase in citations to arXiv and code repositories." num="5" expandAccordion={expandAccordion} accordionActiveNum={accordionActiveNum} link="https://chi-citation-practices.github.io/" link={"https://doi.org/10.48550/arXiv.2405.16526"} />
                 </div>
               </div>
+              */}
 
               <p>
                 In my spare time, I enjoy dabbling with <Link to="/artworks/">AI-generated art</Link> and I am a <a href="/kettlebells/">kettlebell salesman</a>.

@@ -7,7 +7,6 @@ import 'semantic-ui-css/components/statistic.min.css'
 import 'semantic-ui-css/components/progress.min.css'
 
 import React, { useState, useEffect } from "react"
-import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from 'recharts'
 // import useDetectPrint from 'use-detect-print'
 import { noMarginGrid } from "../../common"
 import Layout from "../../components/layout"
@@ -17,15 +16,6 @@ import Loader from "../../components/loading.jsx"
 // replacement for Responsive component from semantic-ui-react
 // see: https://react.semantic-ui.com/migration-guide/
 // https://github.com/artsy/fresnel
-import { createMedia } from "@artsy/fresnel"
-const { MediaContextProvider, Media } = createMedia({
-  // breakpoints values can be either strings or integers
-  breakpoints: {
-    sm: 0,
-    md: 768,
-    lg: 990,
-  },
-})
 
 const _REFERENCES_URL = "https://raw.githubusercontent.com/joetm/jonaso/master/public/static/docentship.json"
 
