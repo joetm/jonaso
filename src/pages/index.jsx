@@ -123,6 +123,10 @@ export default function Home() {
               */}
 
               <p>
+              Postdoctoral Researcher at <a href="https://www.oulu.fi/" target="_blank">University of Oulu</a>, Finland.
+              </p>
+
+              <p>
               I love building cool stuff that is useful and/or meaningful to people.
               </p>
 
@@ -139,7 +143,9 @@ export default function Home() {
               <p>
               In my research, I am interested in building socio-technical systems that allow humans and technology to work together to achieve tasks that would be beyond their individual capabilities. In the past, I have focused on facilitating knowledge transfer and supporting complex creative work.
               My current research interests, based on the academic literature I read, are reflected <Link to="/research/interests/">on this page</Link>.
+              {/*
               A list of researchers who have inspired my work over the years can be found <Link to="/research/influences/">here</Link>.
+              */}
               </p>
 
               {/*
@@ -155,7 +161,7 @@ export default function Home() {
               */}
 
               <p>
-                In my spare time, I enjoy dabbling with <Link to="/artworks/">AI-generated art</Link> and I am a <a href="/kettlebells/">kettlebell salesman</a>.
+                In my spare time, I enjoy dabbling with <Link to="/art/">AI-generated art</Link> and I am a <a href="/kettlebells/">kettlebell salesman</a>.
                   I have lived, studied, and/or worked in several countries including
                   Germany, Switzerland, France, the United Kingdom, Sweden,
                   Macedonia, the United States, and Finland.
