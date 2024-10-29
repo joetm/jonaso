@@ -12,14 +12,16 @@ import { Link } from "gatsby"
 import { Seo } from "../components/Seo"
 // import LINKEDIN from "../img/linkedin.png"
 import Layout from "../components/layout"
-import Venn from "../../static/img/Research_areas_Venn.jpg"
-// import TravelRotary from "../components/TravelRotary"
 // import img from "../img/Jonas-Oppenlaender-500x500.jpg"
 import img from "../img/gen-24/ComfyUI_00002_.jpg"
+import Venn from "../../static/img/Research_areas_Venn.jpg"
+// import TravelRotary from "../components/TravelRotary"
 
 
 export const Head = () => (
   <Seo title="Jonas Oppenlaender, Doctor of Science (Technology)">
+    <link rel="preload" href={img} as="image" type="image/jpg" />
+    <link rel="preload" href={Venn} as="image" type="image/jpg" />
     <link id="canonical" rel="canonical" href="https://www.jonaso.de" />
   </Seo>
 ) //
@@ -39,7 +41,7 @@ export const Head = () => (
 //         {title}
 //         {' '}
 //         {
-//           link && <span>(<a href={link} rel="_blank">{linkname}</a>)</span>
+//           link && <span>(<a href={link} rel="_blank" rel="noreferrer">{linkname}</a>)</span>
 //         }
 //       </div>
 //       <div className="content" style={{clear: 'both', display: accordionActiveNum === num ? 'block' : 'none'}}>
@@ -123,7 +125,7 @@ export default function Home() {
               */}
 
               <p>
-              Postdoctoral Researcher at <a href="https://www.oulu.fi/" target="_blank">University of Oulu</a>, Finland.
+              Postdoctoral Researcher at <a href="https://www.oulu.fi/" target="_blank" rel="noreferrer">University of Oulu</a>, Finland.
               </p>
 
               <p>
@@ -194,7 +196,7 @@ export default function Home() {
 
               <img
                 src={img}
-                alt=""
+                alt=""                
                 className="ui fluid rounded image"
                 style={{
                   borderRadius: '10px',
@@ -239,20 +241,22 @@ export default function Home() {
         <div className="ui divider"></div>
           {/*
           <a href="https://www.linkedin.com/in/jonasopp/" target="_blank" rel="noopener noreferrer">
-              <i style={{display:'inline-block', width: '25px', height: '25px',
+              <i style={{display:'inline-block', width: '36px', height: '30px',
                 backgroundImage: `url(${LINKEDIN})`,
                 verticalAlign: 'middle', backgroundPosition: 'center center', lineHeight: 1,
                 margin: '0 0.5rem 0 0rem', backgroundSize: 'cover', opacity: 0.45}} title="Jonas Oppenlaender on LinkedIn"></i>
           </a>
           */}
           <a href="https://github.com/joetm" target="_blank" rel="noopener noreferrer">
-              <i title="Jonas Oppenlaender on GitHub" aria-hidden="true" className="grey github square big link icon"></i>
+              <i style={{width:'36px',height:'30px'}} title="Jonas Oppenlaender on GitHub" aria-hidden="true" className="grey github square big link icon"></i>
           </a>
+          {/*
           <a href="https://orcid.org/0000-0002-2342-1540" target="_blank" rel="noopener noreferrer">
-              <i title="Jonas Oppenlaender on ORCID" className="academicon ai ai-orcid-square ai-2x"></i>
+              <i style={{width:'36px',height:'30px'}} title="Jonas Oppenlaender on ORCID" className="academicon ai ai-orcid-square ai-2x"></i>
           </a>
+          */}
           <a href="https://scholar.google.com/citations?hl=de&user=ucO_QYQAAAAJ" target="_blank" rel="noopener noreferrer">
-              <i title="Jonas Oppenlaender on Google Scholar" className="academicon ai ai-google-scholar-square ai-2x"></i>
+              <i style={{width:'36px',height:'30px'}} title="Jonas Oppenlaender on Google Scholar" className="academicon ai ai-google-scholar-square ai-2x"></i>
           </a>
       </div>
     </Layout>
