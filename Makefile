@@ -75,10 +75,10 @@ rename-artworks:
 
 post-build:
 	# move cv
-# 	mv academic-cv/cv.pdf "public/cv/oppenlaender-cv.pdf"
+	mv academic-cv/cv.pdf "public/cv/oppenlaender-cv.pdf"
+	mv academic-cv/resume.pdf "public/cv/resume.pdf"
 	mv academic-cv/publications.pdf "public/cv/oppenlaender-publications.pdf"
 	# TODO # mv academic-cv/out.pdf "public/cv/cv-jonas-oppenlaender-`date '+%Y.%m.%d'`.pdf"
-# 	mv academic-cv/resume.pdf "public/cv/resume.pdf"
 	rm -rf academic-cv
 
 	# make refs
