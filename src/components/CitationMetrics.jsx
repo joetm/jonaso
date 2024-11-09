@@ -73,6 +73,11 @@ function calculateWIndex(citations) {
     return wIndex;
 }
 
+function calculateSelfCitationTest(citations, hIndex) {
+    let sumCitations = citations.reduce((sum, citation) => sum + citation, 0);
+    return hIndex * hIndex / sumCitations;
+}
+
 
 export default function CitationMetrics({ citation_graph_data }) {
   const citations = citation_graph_data.map(data => data.y)
@@ -85,6 +90,7 @@ export default function CitationMetrics({ citation_graph_data }) {
   const oIndex = calculateOIndex(citations, hindex).toFixed(2)
   const RAindex = calculateRAIndex(citations, hindex).toFixed(2)
   const WIndex = calculateWIndex(citations)
+  const selfCitationTest = calculateSelfCitationTest(citations, hindex)
   return (
       <div style={{display:'flex', marginBottom: '1rem'}}>
         <div style={{'flex':1,'width':'50%'}}>
@@ -115,6 +121,9 @@ export default function CitationMetrics({ citation_graph_data }) {
             </div>
             <div class="item">
               W-index: {WIndex}
+            </div>
+            <div class="item">
+              Self-Citation Test: {selfCitationTest}
             </div>
           </div>
         </div>
