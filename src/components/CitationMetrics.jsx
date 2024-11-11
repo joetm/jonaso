@@ -73,9 +73,9 @@ function calculateWIndex(citations) {
     return wIndex;
 }
 
-function calculateSelfCitationTest(citations, hIndex) {
+function calculateSelfCitationTest(citations, h) {
     let sumCitations = citations.reduce((sum, citation) => sum + citation, 0);
-    return hIndex * hIndex / sumCitations;
+    return h * h / sumCitations;
 }
 
 
@@ -123,7 +123,8 @@ export default function CitationMetrics({ citation_graph_data }) {
               W-index: {WIndex}
             </div>
             <div class="item">
-              Self-Citation Test: {selfCitationTest}
+              Self-Citation Test: {selfCitationTest}<br />
+              Fi-Score: {selfCitationTest * 100}
             </div>
           </div>
         </div>
