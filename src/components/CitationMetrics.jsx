@@ -89,8 +89,8 @@ export default function CitationMetrics({ citation_graph_data }) {
   const eIndex = calculateEIndex(citations, hindex).toFixed(2)
   const oIndex = calculateOIndex(citations, hindex).toFixed(2)
   const RAindex = calculateRAIndex(citations, hindex).toFixed(2)
-  const WIndex = calculateWIndex(citations)
-  const selfCitationTest = calculateSelfCitationTest(citations, hindex)
+  const WIndex = calculateWIndex(citations).toFixed(2)
+  const selfCitationTest = calculateSelfCitationTest(citations, hindex).toFixed(2)
   return (
       <div style={{display:'flex', marginBottom: '1rem'}}>
         <div style={{'flex':1,'width':'50%'}}>
