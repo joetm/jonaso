@@ -172,7 +172,7 @@ export default function Publications() {
       "Doctoral Consortia",
       "Conference Posters and Position Papers",
       "Pre-prints and Working Papers",
-      "Theses and Seminal Papers",
+      "Theses and Seminal Works",
     ]
   }
 
