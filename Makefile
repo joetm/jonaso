@@ -27,7 +27,7 @@ docentship:
 	cd stat_aggregator; \
 		./docentship-bibtojson.py
 
-	mv "./stat_aggregator/docentship.json" ./public/static/
+	mv ./stat_aggregator/docentship.json ./public/static/
 
 pre-build:
 	# academic-cv folder exists?
