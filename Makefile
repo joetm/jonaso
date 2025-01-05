@@ -36,8 +36,6 @@ pre-build:
 	make fetch-pcs
 	make replace-cv
 
-	make docentship
-
 	# make bib-json
 	pandoc-citeproc --bib2json ./src/bibliography/publications.bib > ./src/bibliography/publications.json
 	python3 fix-publications-json.py
@@ -103,6 +101,8 @@ post-build:
 	rm publications.html
 	# move bib.html file to public folder
 	mv ./publications_bib.html ./public/static/
+
+	make docentship
 
 	# move other files
 	cp ./src/travel.json ./public/
