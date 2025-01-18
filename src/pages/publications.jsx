@@ -75,7 +75,7 @@ function categorizeListPerYear(pubList) {
 export default function Publications() {
   const [references, setReferences] = useState({})
   const [referencesDetail, setReferencesDetail] = useState({})
-  const [showing, setShowing] = useState('type')
+  const [showing, setShowing] = useState('year')
   const [graphdata, setGraphdata] = useState({})
   const [citations, setCitations] = useState([])
 
