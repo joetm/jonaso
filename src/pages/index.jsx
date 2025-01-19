@@ -178,6 +178,27 @@ export default function Home() {
               </p>
               */}
 
+              <div>
+                <h3 style={{textAlign:'left'}}>
+                  News
+                </h3>
+                <ul>
+                  <li style={{paddingBottom:'.5rem'}}>
+                    My paper <i>&quot;Past, Present, and Future of Citation Practices in HCI&quot;</i> was accepted at ACM CHI 2025.
+                    [ <a href="https://arxiv.org/abs/2405.16526" target="_blank">ArXiv pre-print</a> ]
+                  </li>
+                  <li style={{paddingBottom:'.5rem'}}>
+                    Our paper <i>&quot;Keeping Score: A Quantitative Analysis of How the CHI Community Appreciates Its Milestones&quot;</i> was accepted at ACM CHI 2025.
+                    [ <a href="https://arxiv.org/abs/2501.02456" target="_blank">ArXiv pre-print</a> ]
+                  </li>
+                  <li>
+                    Our workshop <i>&quot;Meta-HCI: First Workshop on Meta-Research in HCI&quot;</i> will be held at ACM CHI 2025 in Yokohama, Japan.
+                    {' '}
+                    <a href="https://meta-hci.github.io/" target="_blank">Join us!</a>
+                  </li>
+                </ul>
+              </div>
+
             </div>
           </div>
 

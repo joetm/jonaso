@@ -13,7 +13,7 @@ export default function ProjectItem({item, i}) {
         <div className="content" style={{textDecoration: item.status === 'canceled' ? 'line-through' : 'inherit'}}>
           {
             theurl ?
-              <a href={theurl}>{title}</a>
+              <a href={theurl} target="_blank">{title}</a>
               :
               `${title}`
           }
