@@ -192,7 +192,7 @@ export default function Home() {
                     [ <a href="https://arxiv.org/abs/2501.02456" target="_blank">ArXiv pre-print</a> ]
                   </li>
                   <li>
-                    Our workshop <i>&quot;Meta-HCI: First Workshop on Meta-Research in HCI&quot;</i> will be held at ACM CHI 2025 in Yokohama, Japan.
+                    Our workshop <i>&quot;Meta-HCI: First Workshop on Meta-Research in HCI&quot;</i> will be held at ACM CHI 2025 on April 26 in Yokohama, Japan.
                     {' '}
                     <a href="https://meta-hci.github.io/" target="_blank">Join us!</a>
                   </li>
