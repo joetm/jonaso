@@ -185,11 +185,11 @@ export default function Home() {
                 <ul>
                   <li style={{paddingBottom:'.5rem'}}>
                     My paper <i>&quot;Past, Present, and Future of Citation Practices in HCI&quot;</i> was accepted at ACM CHI 2025.
-                    [ <a href="https://arxiv.org/abs/2405.16526" target="_blank">ArXiv pre-print</a> ]
+                    [ <a href="https://arxiv.org/abs/2405.16526" target="_blank">ArXiv pre-print</a> | <a href="https://docs.google.com/presentation/d/1PNQzZWk6ogU75FnfeYFQP-Uyu7hhziGbbY1fN5Jzh-4/edit?usp=sharing" target="_blank">Presentation</a> ]
                   </li>
                   <li style={{paddingBottom:'.5rem'}}>
                     Our paper <i>&quot;Keeping Score: A Quantitative Analysis of How the CHI Community Appreciates Its Milestones&quot;</i> was accepted at ACM CHI 2025.
-                    [ <a href="https://arxiv.org/abs/2501.02456" target="_blank">ArXiv pre-print</a> ]
+                    [ <a href="https://arxiv.org/abs/2501.02456" target="_blank">ArXiv pre-print</a> | <a href="https://docs.google.com/presentation/d/1-BjlqLd3Nsd8uleTeR9b0yfg_6IPrlGHtVrPOmoZYcU/edit?usp=sharing" target="_blank">Presentation</a> ]
                   </li>
                   <li>
                     Our workshop <i>&quot;Meta-HCI: First Workshop on Meta-Research in HCI&quot;</i> will be held at ACM CHI 2025 on April 26 in Yokohama, Japan.
