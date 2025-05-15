@@ -1,6 +1,42 @@
 [
     {
         "ENTRYTYPE": "misc",
+        "ID": "default-images",
+        "archiveprefix": "arXiv",
+        "author": "Hannu Simonen and Atte Kiviniemi and Jonas Oppenlaender",
+        "eprint": "2505.09166",
+        "howpublished": "Pre-prints and Working Papers",
+        "title": "An Initial Exploration of Default Images in Text-to-Image Generation",
+        "url": "https://arxiv.org/abs/2505.09166",
+        "docentship": "1",
+        "year": "2025"
+    },
+    {
+        "ENTRYTYPE": "inproceedings",
+        "ID": "artworks-reimagined",
+        "archiveprefix": "arXiv",
+        "author": "Jonas Oppenlaender and Hannah Johnston and Johanna Maria Silvennoinen and Helena Barranha",
+        "docentship": "1",
+        "doi": "10.48550/arXiv.2408.05476",
+        "eprint": "2408.05476",
+        "howpublished": "Conference Papers",
+        "journal": "Proceedings of the ACM on Human-Computer Interaction",
+        "month": "Jun",
+        "number": "EICS",
+        "publisher": "Association for Computing Machinery",
+        "articleno": "12",
+        "address": "New York, NY, USA",
+        "location": "Trier, Germany",
+        "jufo": "2",
+        "docentship": "0",
+        "doi": "10.1145/3734189",
+        "pdf": "https://arxiv.org/pdf/2408.05476.pdf",
+        "title": "Artworks Reimagined: Exploring Human-AI Co-Creation through Body Prompting",
+        "url": "https://arxiv.org/abs/2408.05476",
+        "year": "2025"
+    },
+    {
+        "ENTRYTYPE": "misc",
         "ID": "quo-vadis-hcomp",
         "archiveprefix": "arXiv",
         "author": "Jonas Oppenlaender and Ujwal Gadiraju and Simo Hosio",
@@ -8,6 +44,7 @@
         "howpublished": "Pre-prints and Working Papers",
         "title": "Quo Vadis, HCOMP? A Review of 12 Years of Research at the Frontier of Human Computation and Crowdsourcing",
         "url": "https://arxiv.org/abs/2504.01352",
+        "docentship": "0",
         "year": "2025"
     },
     {
@@ -112,21 +149,6 @@
         "publisher": "Palgrave Macmillan",
         "title": "The Cultivated Practices of Text-to-Image Generation",
         "url": "https://link.springer.com/chapter/10.1007/978-3-031-66528-8_14",
-        "year": "2024"
-    },
-    {
-        "ENTRYTYPE": "misc",
-        "ID": "artworks-reimagined",
-        "archiveprefix": "arXiv",
-        "author": "Jonas Oppenlaender and Hannah Johnston and Johanna Silvennoinen and Helena Barranha",
-        "docentship": "1",
-        "doi": "10.48550/arXiv.2408.05476",
-        "eprint": "2408.05476",
-        "howpublished": "Pre-prints and Working Papers",
-        "jufo": "0",
-        "pdf": "https://arxiv.org/pdf/2408.05476.pdf",
-        "title": "Artworks Reimagined: Exploring Human-AI Co-Creation through Body Prompting",
-        "url": "https://arxiv.org/abs/2408.05476",
         "year": "2024"
     },
     {
