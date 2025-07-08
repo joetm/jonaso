@@ -1,6 +1,57 @@
 [
   {
-    "URL": "https://arxiv.org/abs/2504.01352",
+    "URL": "https://arxiv.org/abs/2505.09166",
+    "author": [
+      {
+        "family": "Simonen",
+        "given": "Hannu"
+      },
+      {
+        "family": "Kiviniemi",
+        "given": "Atte"
+      },
+      {
+        "family": "Oppenlaender",
+        "given": "Jonas"
+      }
+    ],
+    "id": "simonen2025initialexplorationdefaultimages",
+    "issued": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "title": "An exploration of default images in text-to-image generation",
+    "type": "no-type"
+  },
+  {
+    "URL": "https://arxiv.org/abs/2506.00058",
+    "author": [
+      {
+        "family": "Vu",
+        "given": "An"
+      },
+      {
+        "family": "Oppenlaender",
+        "given": "Jonas"
+      }
+    ],
+    "id": "vu2025promptengineeranalyzingskill",
+    "issued": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "title": "Prompt engineer: Analyzing skill requirements in the ai job market",
+    "title-short": "Prompt engineer",
+    "type": "no-type"
+  },
+  {
+    "DOI": "10.1145/3715928.3737467",
     "author": [
       {
         "family": "Oppenlaender",
@@ -15,6 +66,7 @@
         "given": "Simo"
       }
     ],
+    "howpublished": "Conference Papers",
     "id": "quo-vadis-hcomp",
     "issued": {
       "date-parts": [
@@ -23,13 +75,14 @@
         ]
       ]
     },
-    "publisher": "Pre-prints and Working Papers",
+    "publisher": "Association for Computing Machinery",
+    "publisher-place": "New York, NY, USA",
     "title": "Quo vadis, hcomp? A review of 12 years of research at the frontier of human computation and crowdsourcing",
     "type": "no-type"
   },
   {
     "DOI": "10.1145/3706598.3713556",
-    "URL": "https://arxiv.org/abs/2405.16526",
+    "URL": "https://dl.acm.org/doi/10.1145/3706598.3713556",
     "author": [
       {
         "family": "Oppenlaender",
@@ -54,7 +107,7 @@
   },
   {
     "DOI": "10.1145/3706598.3713464",
-    "URL": "http://arxiv.org/abs/2501.02456",
+    "URL": "https://dl.acm.org/doi/10.1145/3706598.3713464",
     "author": [
       {
         "family": "Oppenlaender",
@@ -84,6 +137,7 @@
   },
   {
     "DOI": "10.1145/3706599.3706723",
+    "URL": "https://dl.acm.org/doi/10.1145/3706599.3706723",
     "author": [
       {
         "family": "Oppenlaender",
@@ -155,7 +209,7 @@
   },
   {
     "DOI": "10.1145/3725722",
-    "URL": "https://interactions.acm.org/blog/view/multilaboratory-experiments-are-the-next-big-thing-in-hci",
+    "URL": "https://dl.acm.org/doi/10.1145/3725722",
     "author": [
       {
         "family": "Oppenlaender",
@@ -203,8 +257,8 @@
     "type": "chapter"
   },
   {
-    "DOI": "10.48550/arXiv.2408.05476",
-    "URL": "https://arxiv.org/abs/2408.05476",
+    "DOI": "10.1145/3734189",
+    "URL": "https://dl.acm.org/doi/10.1145/3734189",
     "author": [
       {
         "family": "Oppenlaender",
@@ -223,18 +277,20 @@
         "given": "Helena"
       }
     ],
+    "collection-title": "EICS \u201925",
+    "container-title": "Proc. ACM Hum.-Comput. Interact. (PACM-HCI)",
     "id": "artworks-reimagined",
     "issued": {
       "date-parts": [
         [
-          2024
+          2025
         ]
       ]
     },
     "publisher": "Pre-prints and Working Papers",
     "title": "Artworks reimagined: Exploring human-ai co-creation through body prompting",
     "title-short": "Artworks reimagined",
-    "type": "no-type"
+    "type": "article-journal"
   },
   {
     "DOI": "10.2139/ssrn.5014965",
