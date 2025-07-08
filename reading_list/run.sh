@@ -25,12 +25,12 @@ export IPADDRESS="localhost"
 
 if gnome-session-inhibit --inhibit suspend ./parsefiles.py ; then
     # echo "Command succeeded"
-	~/bin/docker-stop-all > /dev/null
+	../bin/docker-stop-all > /dev/null
 	./update.sh
 	./analyze
 else
     # echo "Command failed"
-	~/bin/docker-stop-all > /dev/null
+	../bin/docker-stop-all > /dev/null
 fi
 
 # ./parsetoread.py
