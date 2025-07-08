@@ -1,6 +1,6 @@
 import moment from 'moment'
 import React, { useState, useEffect } from "react"
-import { Bar, BarChart, CartesianGrid, ResponsiveContainer, XAxis, YAxis } from 'recharts'
+import { Tooltip, Bar, BarChart, CartesianGrid, ResponsiveContainer, XAxis, YAxis } from 'recharts'
 
 
 // const getMin = (documents) => documents.reduce((min, d) => d.day < min ? d.day : min, documents[0].day)
@@ -62,6 +62,7 @@ function PubGraph({documents}) {
           <YAxis type="number" />
           <CartesianGrid stroke="#eee" strokeDasharray="5 5"/>
           <Bar type="step" dataKey="num" fill="#4183c4" />
+          <Tooltip content={null} /> {/* Disables tooltips */}
         </BarChart>
         </ResponsiveContainer>
       </div>

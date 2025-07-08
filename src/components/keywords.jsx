@@ -7,7 +7,7 @@ import { Bar, BarChart, CartesianGrid, LabelList, ResponsiveContainer, XAxis, YA
 import 'semantic-ui-css/components/button.min.css'
 
 const _KEYWORDS = 'https://raw.githubusercontent.com/joetm/jonaso/master/reading_list/keywords.json'
-const BARHEIGHT = 35
+const BARHEIGHT = 38
 const CUTOFF = 19
 const CUTOFF_SUBLEVEL = 0
 const colorDefault = '#eb008c'
@@ -96,7 +96,7 @@ export default function Keywords() {
                 >
                   <CartesianGrid strokeDasharray="3 3" />
                   <XAxis type="number" dataKey="num" />
-                  <YAxis type="category" dataKey="name" width={275} style={{fontSize: '1rem'}} />
+                  <YAxis type="category" dataKey="name" width={275} style={{fontSize: '.9rem'}} />
                   <Bar
                     dataKey="num"
                     fill={color}

@@ -178,6 +178,7 @@ export default function Home() {
               </p>
               */}
 
+              {/*
               <div>
                 <h3 style={{textAlign:'left'}}>
                   News
@@ -198,6 +199,7 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
+              */}
 
             </div>
           </div>
