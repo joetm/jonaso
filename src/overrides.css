@@ -5,16 +5,16 @@ body {
     font-size: 1.1rem;
 }
 
-@media only screen and (min-width: 1490px) {
+/* zoom */
+/*@media only screen and (min-width: 1490px) {
     body {
-        /* zoom */
         transform: scale(1.4);
         transform-origin: 0 0;
         width: 71.43%;
         height: 71.43%;
     }
 }
-
+*/
 /*
 .ui.menu {
     font-size: 1.1rem;
