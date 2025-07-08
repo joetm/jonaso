@@ -163,7 +163,7 @@
   },
   {
     "id": "PE",
-    "title": "Prompt Engineering and Text-to-image Generation",
+    "title": "Prompt Engineering for Text-to-image Generation",
     "lang": "en",
     "description": {"__html": "<p>Text-to-image generation with deep generative models has made giant leaps towards becoming a mainstream phenomenon since OpenAI's introduction of the multimodal CLIP model in 2021. This explosion of interest was facilitated by the availability of executable notebooks on Google's Colaboratory in which non-expert users can execute machine learning models for free and without deep knowledge of programming. Users on Google Colab interact with generative models via input prompts. Prompts are short texts that describe the expected end result, such as \"a beautiful painting of a landscape\". The online community that quickly emerged around this novel way of synthesizing artworks found that the quality of the generated artworks can be increased by using so-called prompt modifiers in the input prompt, such as \"trending on artstation\" or \"rendered by Unreal Engine\". 'Prompt engineering' or 'prompting' refers to the practice and skill of finding effective input prompts for a text-to-image model.</p><p>This project investigates 1) the skill and practice of prompt engineering, 2) the emerging AI art community, and 3) the specific input prompts and modifiers used in this community.</p>"},
     "funding": "The project received funding in form of a research grant by the University of Jyväskylä.",
@@ -178,6 +178,26 @@
     },
     "presentations": [
       {
+        "title": "[Presentation] Artworks Reimagined: Exploring Human-AI Co-Creation through Body Prompting",
+        "year": 2025,
+        "month": "June",
+        "day": 27,
+        "conference": "ACM SIGCHI Symposium on Engineering Interactive Computing Systems (EICS)",
+        "location": "Trier, Germany",
+        "url": "https://docs.google.com/presentation/d/1C99mao3DPL87ueqEQ8AF3TGfdlrlB649NRz7K-lFXqI/edit?usp=sharing",
+        "status": null
+      },
+      {
+        "title": "Artworks Reimagined: Exploring Human-AI Co-Creation through Body Prompting",
+        "year": 2025,
+        "month": "June",
+        "day": 27,
+        "conference": "ACM SIGCHI Symposium on Engineering Interactive Computing Systems (EICS)",
+        "location": null,
+        "doi": "10.1145/3734189",
+        "status": null
+      },
+      {
         "title": "Prompting AI Art",
         "year": 2024,
         "month": "November",
@@ -186,6 +206,16 @@
         "location": "Jyväskylä, Finland",
         "doi": null,
         "url": "https://doi.org/10.1080/10447318.2024.2431761",
+        "status": null
+      },
+      {
+        "title": "An Exploration of Default Images in Text-to-Image Generation",
+        "year": 2025,
+        "month": null,
+        "day": null,
+        "conference": null,
+        "location": null,
+        "doi": "10.48550/arXiv.2505.09166",
         "status": null
       },
       {
@@ -210,6 +240,16 @@
         "status": null
       },
       {
+        "title": "A Taxonomy of Prompt Modifiers for Text-To-Image Generation",
+        "year": 2023,
+        "month": null,
+        "day": null,
+        "conference": "Behaviour & Information Technology",
+        "location": null,
+        "doi": "10.1080/0144929X.2023.2286532",
+        "status": null
+      },
+      {
         "title": "Perceptions and Realities of Text-to-Image Generation",
         "year": 2023,
         "month": "October",
@@ -220,7 +260,7 @@
         "status": null
       },
       {
-        "title": "Artworks Reimagined",
+        "title": "[Website] Artworks Reimagined",
         "year": 2023,
         "month": "September",
         "day": 29,
@@ -228,16 +268,6 @@
         "location": "Jyväskylä, Finland",
         "doi": null,
         "url": "https://www.artworksreimagined.com",
-        "status": null
-      },
-      {
-        "title": "A Taxonomy of Prompt Modifiers for Text-To-Image Generation",
-        "year": 2023,
-        "month": "November",
-        "day": 16,
-        "conference": "Behavior & Information Technology",
-        "location": null,
-        "doi": "10.1080/0144929X.2023.2286532",
         "status": null
       },
       {
@@ -251,7 +281,7 @@
         "status": null
       },
       {
-        "title": "Generative Art",
+        "title": "[Presentation] Generative Art",
         "year": 2021,
         "month": "November",
         "day": 4,
