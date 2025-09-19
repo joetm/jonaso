@@ -9,6 +9,7 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -22,16 +23,21 @@ headers = {
 }
 
 
-
 def open_browser(url):
     print('Fetching publication citations from Google Scholar...')
-    options = Options()
-    options.headless = True  # Enable headless mode
+    profile_dir = os.path.expanduser("~/snap/firefox/common/selenium-profile")
+    os.makedirs(profile_dir, exist_ok=True)
+    opts = Options()
+    opts.add_argument("-profile")    # critical for Snap
+    opts.add_argument(profile_dir)   # critical for Snap
+    opts.binary_location="/snap/bin/firefox"                        # Snap path
+    svc=Service("/usr/local/bin/geckodriver")                       # your geckodriver path
+    opts.headless = True  # Enable headless mode
     options.add_argument("--headless")  # Ensures headless is added as an argument
-    options.add_argument("--disable-gpu")  # This can help on some platforms
-    options.add_argument("--no-sandbox")  # This parameter is often necessary on Linux environments
-    options.add_argument("--disable-dev-shm-usage")  # Overcomes limited resource problems
-    driver = webdriver.Firefox(options=options)
+    opts.add_argument("--disable-gpu")  # This can help on some platforms
+    opts.add_argument("--no-sandbox")  # This parameter is often necessary on Linux environments
+    opts.add_argument("--disable-dev-shm-usage")  # Overcomes limited resource problems
+    driver = webdriver.Firefox(service=svc, options=opts)
     driver.get(url)
     # click the more link until the bitter end
     while True:
