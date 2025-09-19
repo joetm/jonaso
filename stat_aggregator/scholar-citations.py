@@ -33,7 +33,7 @@ def open_browser(url):
     opts.binary_location="/snap/bin/firefox"                        # Snap path
     svc=Service("/usr/local/bin/geckodriver")                       # your geckodriver path
     opts.headless = True  # Enable headless mode
-    options.add_argument("--headless")  # Ensures headless is added as an argument
+    opts.add_argument("--headless")  # Ensures headless is added as an argument
     opts.add_argument("--disable-gpu")  # This can help on some platforms
     opts.add_argument("--no-sandbox")  # This parameter is often necessary on Linux environments
     opts.add_argument("--disable-dev-shm-usage")  # Overcomes limited resource problems
