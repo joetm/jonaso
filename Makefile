@@ -43,10 +43,10 @@ pre-build:
 	make build-cv
 
 	cd stat_aggregator; \
-		./scholar-stats.py
+		PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome ./scholar-stats.py
 
 	cd stat_aggregator; \
-		./scholar-citations.py
+		PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome ./scholar-citations.py
 
 
 fetch-pcs:
@@ -132,7 +132,7 @@ fetch-cv:
 	git clone --depth=1 git@github.com:joetm/academic-cv.git
 
 	# get an up-to-date graph of the publications from the homepage to use in the latex CV
-	./acquire-graph.js
+	PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome ./acquire-graph.js
 
 	# TODO: the above currently fails (after Ubuntu upgrade)
 	if [ -f 'graph.png' ];then \
