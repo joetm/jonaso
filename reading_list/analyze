@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 
-gnome-session-inhibit --inhibit suspend ./analyze.php
+# gnome-session-inhibit --inhibit suspend ./analyze.php
+./analyze.php
 
 # produce a flat file of influencers but with duplicates (influencer prio 1, influencer prio 2, influencer prio 3)
 # print('create_allauthors')
-gnome-session-inhibit --inhibit suspend ./create_allauthors.py
+# gnome-session-inhibit --inhibit suspend ./create_allauthors.py
+./create_allauthors.py
 
 # print('toplongterminterests')
 python3 toplongterminterests.py

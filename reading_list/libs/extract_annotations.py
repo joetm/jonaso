@@ -15,7 +15,7 @@ import json
 import sys
 import copy
 
-from PyPDF2 import PdfFileReader
+from PyPDF2 import PdfReader
 
 
 def extract_annotations(filename):
@@ -25,24 +25,28 @@ def extract_annotations(filename):
     path = os.path.realpath('%s' % filename)
 
 
-    doc = PdfFileReader(open(path, "rb"))
+    doc = PdfReader(open(path, "rb"))
 
     # docInfo = doc.getDocumentInfo()
 
     annotations = []
 
-    nPages = doc.getNumPages()
+    # nPages = doc.getNumPages()
+    nPages = len(doc.pages)
 
     # {'/C': [1, 1, 0], '/F': 4, '/M': "D:20211027095158+03'00'", '/P': IndirectObject(16, 0), '/T': 'jonas', '/AP': {'/N': IndirectObject(275, 0)}, '/NM': 'ee5655bf-c3a4-4c4e-8b51c658f659019c', '/Rect': [171.94587, 462.18182, 245.49779, 470.55646], '/Subj': 'Highlight', '/Subtype': '/Highlight', '/Contents': ' contributing factor', '/QuadPoints': [173.60804, 470.55645, 243.83562, 470.55645, 173.60804, 462.18183, 243.83562, 462.18183], '/CreationDate': "D:20211027095158+03'00'"}
 
     # process annotations
     for i in range(nPages) :
-        page0 = doc.getPage(i)
+        # page0 = doc.getPage(i)
+        page0 = doc.pages[i]
         try :
             for annot in page0['/Annots']:
-                subtype = annot.getObject()['/Subtype']
+                # subtype = annot.getObject()['/Subtype']
+                subtype = annot.get_object()['/Subtype']
                 if subtype == "/Highlight":
-                    highlight = annot.getObject()['/Contents']
+                    # highlight = annot.getObject()['/Contents']
+                    highlight = annot.get_object()['/Contents']
                     # some annotations are bytes, some are just strings
                     if isinstance(highlight, bytes):
                         highlight = highlight.decode("utf-8")
