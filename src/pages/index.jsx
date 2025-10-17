@@ -13,7 +13,7 @@ import { Seo } from "../components/Seo"
 // import LINKEDIN from "../img/linkedin.png"
 import Layout from "../components/layout"
 // import img from "../img/Jonas-Oppenlaender-500x500.jpg"
-import img from "../img/gen-24/ComfyUI_00002_.jpg"
+import img from "../img/2025/jonas-oppenlaender.jpg"
 import Venn from "../../static/img/Research_areas_Venn.jpg"
 // import TravelRotary from "../components/TravelRotary"
 
