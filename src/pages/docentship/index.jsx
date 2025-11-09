@@ -54,7 +54,8 @@ export default function Docentship() {
 
   const published = references.filter(r => r?.howpublished !== 'Pre-prints and Working Papers')
   const firstAuthored = references.filter(r => r?.author.trim().startsWith('Jonas'))
-  const validRefs = references.filter(r => published.includes(r) && firstAuthored.includes(r))
+  // const validRefs = references.filter(r => published.includes(r) && firstAuthored.includes(r))
+  const validRefs = references.filter(r => published.includes(r))
   const progressPercent = validRefs.length / 10 * 100
 
   return (
