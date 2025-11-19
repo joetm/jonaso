@@ -2,6 +2,9 @@ ENV
 .env
 .env.development
 .env.production
+
+stat_aggregator/scholar_cookie.txt
+
 oracle/.env
 oracle/info.txt
 oracle/faiss_index/
