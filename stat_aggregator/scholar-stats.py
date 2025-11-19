@@ -9,13 +9,30 @@ from bs4 import BeautifulSoup
 URL = 'https://scholar.google.com/citations?user=ucO_QYQAAAAJ&hl=en'
 
 
-s = requests.Session()
+with open('scholar_cookie.txt', encoding='utf-8') as f: cookie = f.read()
+
 
 headers = {
-  'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36',
-  # 'Referer': 'https://new.precisionconference.com/user/login',
-  # 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+  'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:145.0) Gecko/20100101 Firefox/145.0',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Language': 'en-US,en;q=0.5',
+    'Accept-Encoding': 'gzip, deflate, br, zstd',
+    'DNT': '1',
+    'Sec-GPC': '1',
+    'Connection': 'keep-alive',
+    'Cookie': cookie,
+    'Upgrade-Insecure-Requests': '1',
+    'Sec-Fetch-Dest': 'document',
+    'Sec-Fetch-Mode': 'navigate',
+    'Sec-Fetch-Site': 'none',
+    'Sec-Fetch-User': '?1',
+    'Priority': 'u=0, i',
+    'Pragma': 'no-cache',
+    'Cache-Control': 'no-cache',
 }
+
+
+s = requests.Session()
 
 # print('Fetching Google Scholar page...')
 payload = {}
@@ -44,11 +61,11 @@ except:
     print('Citation box not found')
 
 
-table = soup.find("table", {'id': 'gsc_rsb_st'})
+table = citation_box.find("table", {'id': 'gsc_rsb_st'})
 
 c_num = table.find("td", {'class': 'gsc_rsb_std'}).text
 
-year_info = soup.find("div", {'class': 'gsc_md_hist_b'})
+year_info = citation_box.find("div", {'class': 'gsc_md_hist_b'})
 
 years = year_info.findAll("span", {'class': 'gsc_g_t'})
 years = [ int(y.text) for y in years ]
