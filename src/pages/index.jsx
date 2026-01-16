@@ -184,6 +184,9 @@ export default function Home() {
                 </h3>
                 <ul>
                   <li style={{paddingBottom:'.5rem'}}>
+                    My late-breaking-work <i>&quot;StatCounter: A Longitudinal Study of a Portable Scholarly Metric Display&quot;</i> has been accepted at ACM PerDis 2026.
+                  </li>
+                  <li style={{paddingBottom:'.5rem'}}>
                     Our paper <a href="https://default-images.github.io/" target="_blank"><i>&quot;An Exploration of Default Images in Text-to-Image Generation&quot;</i></a> has been accepted at ACM CHI 2026.
                   </li>
                   <li style={{paddingBottom:'.5rem'}}>
