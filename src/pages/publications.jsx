@@ -78,6 +78,7 @@ export default function Publications() {
   const [showing, setShowing] = useState('year')
   const [graphdata, setGraphdata] = useState({})
   const [citations, setCitations] = useState([])
+  const [selectedYear, setSelectedYear] = useState(false)
 
   // const [isRefLoaded, setIsRefLoaded] = useState(false)
   // const [isCitsLoaded, setIsCitsLoaded] = useState(false)
@@ -203,9 +204,19 @@ export default function Publications() {
               ticks={graphdata.tickArray}
               allowDecimals={false}
             />
-            <Tooltip />
+            <Tooltip
+              active={Boolean(selectedYear)}
+            />
             <CartesianGrid stroke="#eee" strokeDasharray="5 5"/>
-            <Bar dataKey="num" fill="#8CE6A9">
+            <Bar dataKey="num" fill="#8CE6A9"
+              onClick={(e) => {
+                setShowing('year')
+                let y = parseInt(e['year'], 10);
+                y = selectedYear !== y ? y : false;
+                setSelectedYear(y)}
+              }
+              style={{cursor:'pointer'}}
+            >
               <LabelList dataKey="num" position="top" />
             </Bar>
           </BarChart>
@@ -303,7 +314,7 @@ export default function Publications() {
           showing === 'year' &&
             <div className="ui container" id="publications-year">
                   {
-                    keysYear.map(year => {
+                    keysYear.filter(year => selectedYear ? selectedYear == year : year).map(year => {
                       return (
                         <div className="ui grid" key={year} style={noMarginGrid}>
                             <div className="row">
