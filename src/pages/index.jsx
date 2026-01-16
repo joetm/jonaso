@@ -184,7 +184,10 @@ export default function Home() {
                 </h3>
                 <ul>
                   <li style={{paddingBottom:'.5rem'}}>
-                    Our <a href="https://meta-hci.github.io/" target="_blank">Meta-HCI Meet-up</a> on Practising Reflection in HCI Research was accepted at CHI '26.
+                    Our paper <a href="https://doi.org/10.48550/arXiv.2505.09166" target="_blank"><i>&quot;An Exploration of Default Images in Text-to-Image Generation&quot;</i></a> has been accepted at ACM CHI 2026.
+                  </li>
+                  <li style={{paddingBottom:'.5rem'}}>
+                    Our <a href="https://meta-hci.github.io/" target="_blank">Meta-HCI Meet-up</a> on Practising Reflection in HCI Research was accepted at ACM CHI '26.
                   </li>
                   <li style={{paddingBottom:'.5rem'}}>
                     Our paper <a href="https://dl.acm.org/doi/10.1145/3715928.3737467" target="_blank"><i>&quot;Quo Vadis, HCOMP?&quot;</i></a> received a honorable mention at ACM Collective Intelligence 2025.
