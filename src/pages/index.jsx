@@ -193,6 +193,9 @@ export default function Home() {
                     Our <a href="https://meta-hci.github.io/" target="_blank">Meta-HCI Meet-up</a> on Practising Reflection in HCI Research was accepted at ACM CHI '26.
                   </li>
                   <li style={{paddingBottom:'.5rem'}}>
+                    Our paper <i>&quot;Conversational Inoculation to Enhance Resistance to Misinformation&quot;</i> has been accepted at ACM CHI 2026.
+                  </li>
+                  <li style={{paddingBottom:'.5rem'}}>
                     Our paper <a href="https://dl.acm.org/doi/10.1145/3715928.3737467" target="_blank"><i>&quot;Quo Vadis, HCOMP?&quot;</i></a> received a honorable mention at ACM Collective Intelligence 2025.
                   </li>
                   <li style={{paddingBottom:'.5rem'}}>
