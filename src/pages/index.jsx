@@ -13,18 +13,17 @@ import { Seo } from "../components/Seo"
 // import LINKEDIN from "../img/linkedin.png"
 import Layout from "../components/layout"
 // import img from "../img/Jonas-Oppenlaender-500x500.jpg"
-import img from "../img/2025/jonas-oppenlaender.jpg"
+// import img from "../img/2025/jonas-oppenlaender.jpg"
 import Venn from "../../static/img/Research_areas_Venn.jpg"
 // import TravelRotary from "../components/TravelRotary"
 
 
 export const Head = () => (
   <Seo title="Jonas Oppenlaender, Doctor of Science (Technology)">
-    <link rel="preload" href={img} as="image" type="image/jpg" />
     <link rel="preload" href={Venn} as="image" type="image/jpg" />
     <link id="canonical" rel="canonical" href="https://www.jonaso.de" />
   </Seo>
-) //
+) //    <link rel="preload" href={img} as="image" type="image/jpg" />
 
 
 // function AccordionItem({ title, content, link=null, link_is_doi=true, num, accordionActiveNum, expandAccordion }) {
@@ -230,6 +229,7 @@ export default function Home() {
               </p>
               */}
 
+              {/*
               <img
                 src={img}
                 alt=""                
@@ -238,6 +238,7 @@ export default function Home() {
                   borderRadius: '10px',
                 }}
               />
+              */}
 
               {/*
                 <p style={{marginTop:'1em'}}>
