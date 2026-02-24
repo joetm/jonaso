@@ -33,24 +33,18 @@ headers = {
 
 
 s = requests.Session()
+# s.headers.update(headers)
+
+# First, hit the homepage to get a fresh cookie
+# s.get('https://scholar.google.com/', headers=headers)
 
 # print('Fetching Google Scholar page...')
 payload = {}
 r1 = s.get(URL, data=payload, headers=headers)
 # print("Status:", r1.status_code)
 
-# # DEV
-# # Cache the page
-# with open('./scholar.html', 'w') as f:
-#     f.write(r1.text)
 
 page = r1.text
-
-# DEV
-# load cached page
-# page = ''
-# with open('./scholar.html', 'r') as f:
-#     page = f.read()
 
 
 soup = BeautifulSoup(page, 'html.parser')
@@ -59,7 +53,6 @@ try:
     citation_box = soup.find('div', {'id': 'gsc_rsb_cit'})
 except:
     print('Citation box not found')
-
 
 table = citation_box.find("table", {'id': 'gsc_rsb_st'})
 
