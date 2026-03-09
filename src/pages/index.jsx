@@ -183,7 +183,7 @@ export default function Home() {
                 </h3>
                 <ul>
                   <li style={{paddingBottom:'.5rem'}}>
-                    Our paper <a href="https://default-images.github.io/" target="_blank"><i>&quot;An Exploration of Default Images in Text-to-Image Generation&quot;</i></a> has been accepted at ACM CHI 2026.
+                    Our paper <a href="https://default-images.github.io/" target="_blank"><i>&quot;An Exploration of Default Images in Text-to-Image Generation&quot;</i></a> has been accepted at ACM CHI 2026 (honorable mention).
                   </li>
                   <li style={{paddingBottom:'.5rem'}}>
                     My late-breaking-work <i>&quot;StatCounter: A Longitudinal Study of a Portable Scholarly Metric Display&quot;</i> has been accepted at ACM PerDis 2026.
@@ -192,7 +192,8 @@ export default function Home() {
                     Our <a href="https://meta-hci.github.io/" target="_blank">Meta-HCI Meet-up</a> on Practising Reflection in HCI Research was accepted at ACM CHI '26.
                   </li>
                   <li style={{paddingBottom:'.5rem'}}>
-                    Our paper <i>&quot;Conversational Inoculation to Enhance Resistance to Misinformation&quot;</i> has been accepted at ACM CHI 2026.
+                    Our paper <i>&quot;Conversational Inoculation to Enhance Resistance to Misinformation&quot;</i> has been accepted at ACM CHI 2026
+                    (honorable mention).
                   </li>
                   <li style={{paddingBottom:'.5rem'}}>
                     Our paper <a href="https://dl.acm.org/doi/10.1145/3715928.3737467" target="_blank"><i>&quot;Quo Vadis, HCOMP?&quot;</i></a> received a honorable mention at ACM Collective Intelligence 2025.
