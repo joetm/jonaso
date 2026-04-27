@@ -183,16 +183,16 @@ export default function Home() {
                 </h3>
                 <ul>
                   <li style={{paddingBottom:'.5rem'}}>
-                    [Best Paper Honorable Mention] Our paper <a href="https://default-images.github.io/" target="_blank"><i>&quot;An Exploration of Default Images in Text-to-Image Generation&quot;</i></a> has been accepted at ACM CHI 2026.
+                    [Best Paper Honorable Mention] Our paper <a href="https://default-images.github.io/" target="_blank"><i>&quot;An Exploration of Default Images in Text-to-Image Generation&quot;</i></a> has been presented at ACM CHI 2026.
                   </li>
                   <li style={{paddingBottom:'.5rem'}}>
-                    [Best Paper Honorable Mention] Our paper <a href="https://arxiv.org/abs/2601.22394" target="_blank"><i>&quot;Conversational Inoculation to Enhance Resistance to Misinformation&quot;</i></a> has been accepted at ACM CHI 2026.
+                    [Best Paper Honorable Mention] Our paper <a href="https://arxiv.org/abs/2601.22394" target="_blank"><i>&quot;Conversational Inoculation to Enhance Resistance to Misinformation&quot;</i></a> has been presented at ACM CHI 2026.
                   </li>
                   <li style={{paddingBottom:'.5rem'}}>
                     Our <a href="https://meta-hci.github.io/" target="_blank">Meta-HCI Meet-up</a> on Practising Reflection in HCI Research was accepted at ACM CHI '26.
                   </li>
                   <li style={{paddingBottom:'.5rem'}}>
-                    My late-breaking-work <i>&quot;StatCounter: A Longitudinal Study of a Portable Scholarly Metric Display&quot;</i> has been accepted at ACM PerDis 2026.
+                    My late-breaking-work <i>&quot;StatCounter: A Longitudinal Study of a Portable Scholarly Metric Display&quot;</i> was published at ACM PerDis 2026.
                   </li>
                   <li style={{paddingBottom:'.5rem'}}>
                     [Best Paper Honorable Mention] Our paper <a href="https://dl.acm.org/doi/10.1145/3715928.3737467" target="_blank"><i>&quot;Quo Vadis, HCOMP?&quot;</i></a> was published at ACM Collective Intelligence 2025.
