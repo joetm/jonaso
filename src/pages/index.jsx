@@ -127,9 +127,11 @@ export default function Home() {
               Postdoctoral Researcher at <a href="https://www.oulu.fi/" target="_blank" rel="noreferrer">University of Oulu</a>, Finland.
               </p>
 
+              {/*
               <p>
               I love building cool stuff that is useful and/or meaningful to people.
               </p>
+              */}
 
               <p>
               I completed my PhD in the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a> at the <a href="https://www.oulu.fi/">University of Oulu</a>, where I received a distinction for my thesis on creative crowdsourcing, creativity support tools, and crowd feedback systems.
