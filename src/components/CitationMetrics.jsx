@@ -78,6 +78,11 @@ function calculateSelfCitationTest(citations, h) {
     return h * h / sumCitations;
 }
 
+function calculateEuclidScore(citations) {
+    let sumSquaredCitations = citations.reduce((sum, citation) => sum + Math.pow(citation, 2), 0);
+    let euclidScore = Math.sqrt(sumSquaredCitations);
+    return euclidScore;
+}
 
 export default function CitationMetrics({ citation_graph_data }) {
   const citations = citation_graph_data.map(data => data.y)
@@ -91,6 +96,7 @@ export default function CitationMetrics({ citation_graph_data }) {
   const RAindex = calculateRAIndex(citations, hindex).toFixed(2)
   const WIndex = calculateWIndex(citations).toFixed(2)
   const selfCitationTest = calculateSelfCitationTest(citations, hindex).toFixed(2)
+  const euclidScore = calculateEuclidScore(citations).toFixed(2)
   return (
       <div style={{display:'flex', marginBottom: '1rem'}}>
         <div style={{'flex':1,'width':'50%'}}>
@@ -123,8 +129,13 @@ export default function CitationMetrics({ citation_graph_data }) {
               W-index: {WIndex}
             </div>
             <div class="item">
-              Self-Citation Test: {selfCitationTest}<br />
+              Self-Citation Test: {selfCitationTest}
+            </div>
+            <div class="item">
               Fi-Score: {selfCitationTest * 100}
+            </div>
+            <div class="item">
+              Euclid Score: {euclidScore}
             </div>
           </div>
         </div>
