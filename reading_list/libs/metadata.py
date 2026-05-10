@@ -5,9 +5,11 @@
 
 import requests
 import os
+import re
 # import subprocess
-from subprocess import check_output
+from subprocess import check_output, run, PIPE
 import json
+from datetime import datetime
 # import csv
 
 
@@ -55,6 +57,19 @@ def log():
         unrecogWriter = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         unrecogWriter.writerow(missed.items()) # ([rawdata[k] for k in rawdata.keys()])
 
+
+
+def _get_moddate(path):
+    try:
+        result = run(['pdfinfo', '-isodates', path], stdout=PIPE, stderr=PIPE)
+        for line in result.stdout.decode('utf-8', errors='replace').splitlines():
+            if line.startswith('ModDate:'):
+                val = line.split('ModDate:')[1].strip()
+                val = re.sub(r'([+-]\d{2})$', r'\1:00', val)
+                return int(datetime.fromisoformat(val).timestamp())
+    except Exception:
+        pass
+    return int(os.path.getmtime(path))
 
 
 def extractMetadata(tmppath, origfilename, origpath):
@@ -176,7 +191,7 @@ def extractMetadata(tmppath, origfilename, origpath):
             'authors': authors,
             'filename': origfilename.strip('!-'),
             'recog': int(recog),
-            'modified': int(os.path.getmtime(origpath)),
+            'modified': _get_moddate(origpath),
             # 'created': int(os.path.getctime(tmppath)),
             # 'abstractText': rawdata['abstractText'],
             # 'sections': rawdata['sections'],
