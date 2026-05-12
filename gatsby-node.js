@@ -1,8 +1,16 @@
+const path = require('path');
 const rimraf = require('rimraf');
 const PUBLIC_FOLDER = `${__dirname}/public`;
 exports.onPreBuild = () => {
   // empty /public folder
   rimraf.sync(PUBLIC_FOLDER + '/*');
+};
+
+exports.onCreateDevServer = ({ app }) => {
+  const ontologyHtml = path.join(__dirname, 'static/research/ontology/index.html');
+  app.get(['/research/ontology', '/research/ontology/'], (_req, res) => {
+    res.sendFile(ontologyHtml);
+  });
 };
 
 
