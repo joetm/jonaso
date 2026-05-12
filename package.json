@@ -20,6 +20,9 @@
     "@loadable/component": "^5.15.2",
     "@tanstack/react-query": "^4.28.0",
     "babel-eslint": "^10.0.0",
+    "d3-hierarchy": "^3.1.2",
+    "d3-selection": "^3.0.0",
+    "d3-transition": "^3.0.1",
     "gatsby": "^5.4.1",
     "gatsby-cli": "^5.4.0",
     "gatsby-plugin-image": "^3.7.0",
@@ -60,7 +63,18 @@
     "zustand": "^4.5.0"
   },
   "devDependencies": {
-    "bundle-buddy": "^0.2.2"
+    "@tailwindcss/postcss": "^4.3.0",
+    "@types/d3-hierarchy": "^3.1.7",
+    "@types/d3-selection": "^3.0.11",
+    "@types/d3-transition": "^3.0.9",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.5.0",
+    "bundle-buddy": "^0.2.2",
+    "gatsby-plugin-postcss": "^6.16.0",
+    "postcss": "^8.5.14",
+    "tailwindcss": "^4.3.0",
+    "typescript": "^6.0.3"
   },
   "BAK": {
     "react-head": "^3.4.2",

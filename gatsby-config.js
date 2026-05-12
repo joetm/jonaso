@@ -27,6 +27,7 @@ module.exports = {
     // "gatsby-plugin-react-helmet"
     `gatsby-plugin-react-head`,
     `gatsby-plugin-image`,
+    // "gatsby-plugin-postcss",
     // performance monitoring
     // "gatsby-plugin-perf-budgets",
     // {
