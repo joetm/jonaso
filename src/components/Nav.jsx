@@ -113,14 +113,14 @@ export default function Nav() {
           <MenuItem
             key="researchinterests"
             active={activeItem === 'research' || activeItem === 'researchinterests'}
-            item='Research Interests'
+            item='Interests'
             url='/research/interests'
             handleItemClick={handleItemClick}
           />
           <MenuItem
             key="researchprojects"
             active={activeItem === 'researchprojects'}
-            item='Research Projects'
+            item='Projects'
             url='/research/projects'
             handleItemClick={handleItemClick}
           />
