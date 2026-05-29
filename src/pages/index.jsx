@@ -103,7 +103,8 @@ export default function Home() {
             <div className="row">
 
               <p>
-              Hi, I am <strong>Jonas Oppenlaender</strong>
+              {/*Hi, I am*/}
+               <strong>Jonas Oppenlaender</strong>, D.Sc. (Tech.), M.Sc., Dipl.-Wirtsch.-Ing.,
                 {' '}
                 (
                   {
@@ -124,7 +125,7 @@ export default function Home() {
               */}
 
               <p>
-              Postdoctoral Researcher at <a href="https://www.oulu.fi/" target="_blank" rel="noreferrer">University of Oulu</a>, Finland.
+              is a Postdoctoral Researcher at <a href="https://www.oulu.fi/" target="_blank" rel="noreferrer">University of Oulu</a>, Finland.
               </p>
 
               {/*
