@@ -103,8 +103,9 @@ export default function Home() {
             <div className="row">
 
               <p>
-              {/*Hi, I am*/}
-               <strong>Jonas Oppenlaender</strong>, D.Sc. (Tech.), M.Sc., Dipl.-Wirtsch.-Ing.,
+              Hi, I am {' '}
+               <strong>Jonas Oppenlaender</strong>
+               {/* D.Sc. (Tech.), M.Sc., Dipl.-Wirtsch.-Ing., */}
                 {' '}
                 (
                   {
@@ -113,7 +114,30 @@ export default function Home() {
                     :
                       <i style={{cursor:'pointer'}} className="fitted assistive listening systems icon" onClick={playAudio} title="How to pronounce Jonas Oppenländer"></i>
                   }
-                ).
+                ),
+              a Postdoctoral Researcher at the <a href="https://www.oulu.fi/en/university/faculties-and-units/faculty-information-technology-and-electrical-engineering/center-for-ubiquitous-computing">Centre for Applied Computing</a>, University of Oulu.
+
+              I hold a Doctor Science (Technology) in Computer Science (with distinction) from the <a href="https://www.oulu.fi/" target="_blank" rel="noreferrer">University of Oulu</a>,
+              a Master of Science in Computer Science (with distinction) at the <a href="https://www.southampton.ac.uk/" target="_blank" rel="noreferrer">University of Southampton</a>,
+              and a Diplom-Wirtschaftsingenieur degree from <a href='https://www.tu-darmstadt.de/' target="_blank" rel="noreferrer">TU Darmstadt</a>.
+              Prior to coming to the University of Oulu, I held academic positions at
+              Karlsruhe Institute of Technology,
+              University of Jyv&auml;skyl&auml;,
+              and
+              Freie Universit&auml;t Berlin,
+              and worked in industry positions at Elisa, Alstom, Seme4, and Liip.
+              </p>
+
+              <p>
+              My work focuses on the creativity and creative applications of Artificial Intelligence (AI) in science and work, with a specific emphasis on prompt/context engineering and text-to-image generation, as well as meta-research in Human-Computer Interaction (HCI).
+              In the past, I have focused on crowdsourcing complex creative work, ontology engineering, and facilitating knowledge transfer.
+              </p>
+
+              <p>
+              My current research interests, based on the academic literature I read, are reflected <Link to="/research/interests/">on this page</Link> and in my <a href="/research/ontology/">personal research ontology</a>.
+              {/* In my research, I am interested in building socio-technical systems that allow humans and technology to work together to achieve tasks that would be beyond their individual capabilities.
+              A list of researchers who have inspired my work over the years can be found <Link to="/research/influences/">here</Link>.
+              */}
               </p>
 
               {/*
@@ -124,9 +148,9 @@ export default function Home() {
               </p>
               */}
 
-              <p>
+              {/* <p>
               is a Postdoctoral Researcher at <a href="https://www.oulu.fi/" target="_blank" rel="noreferrer">University of Oulu</a>, Finland.
-              </p>
+              </p> */}
 
               {/*
               <p>
@@ -134,23 +158,13 @@ export default function Home() {
               </p>
               */}
 
-              <p>
-              I completed my PhD in the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a> at the <a href="https://www.oulu.fi/">University of Oulu</a>, where I received a distinction for my thesis on creative crowdsourcing, creativity support tools, and crowd feedback systems.
-              During my PhD I was awarded two times the Nokia Scholarship (2019, 2020).
-              I also hold a M.Sc. degree in Computer Science with distinction from the <a href="https://www.southampton.ac.uk/">University of Southampton</a> and a diploma degree (Diplom-Wirtschaftsingenieur; equivalent to an M.Sc.) in Industrial Engineering and Management from the <a href='https://www.tu-darmstadt.de/'>Technical University of Darmstadt</a> in Germany.
-              I also studied New Product Development for one year at <a href="https://liu.se/en">Link&ouml;ping University</a> in Sweden.
-              {/*
+              {/* <p>
+              He completed his PhD in the <a href="http://ubicomp.oulu.fi/">Center for Ubiquitous Computing</a> at the University of Oulu, where he received a distinction for his thesis on creative crowdsourcing, creativity support tools, and crowd feedback systems.
+              During his PhD, he was awarded two times the Nokia Scholarship (2019, 2020).
+              {/* He also hold a M.Sc. degree in Computer Science with distinction from the <a href="https://www.southampton.ac.uk/">University of Southampton</a> and a diploma degree (Diplom-Wirtschaftsingenieur; equivalent to an M.Sc.) in Industrial Engineering and Management from the <a href='https://www.tu-darmstadt.de/'>Technical University of Darmstadt</a> in Germany.
+              He also studied New Product Development for one year at <a href="https://liu.se/en">Link&ouml;ping University</a> in Sweden.
               Before my doctoral position, I worked as a researcher at the <a href="https://www.mi.fu-berlin.de/en/inf/groups/hcc/" rel="nofollow">Human-Centered Computing</a> group at the Freie Universität Berlin and the <a href="https://gepris.dfg.de/gepris/projekt/194453117/ergebnisse?context=projekt&task=showDetail&id=194453117">Cluster of Excellence &quot;Bild Wissen Gestaltung&quot;</a> in Berlin. I also have industry experience as a Business Analyst and Strategy Analyst at <a href="https://www.alstom.com/">Alstom</a> (now <a href="https://www.ge.com/">GE</a>) and have worked in agile teams as a web developer at <a href="https://www.seme4.com/">Seme4</a> and <a href="https://www.liip.ch/">Liip</a>.
-              */}
-              </p>
-
-              <p>
-              In my research, I am interested in building socio-technical systems that allow humans and technology to work together to achieve tasks that would be beyond their individual capabilities. In the past, I have focused on facilitating knowledge transfer and supporting complex creative work.
-              My current research interests, based on the academic literature I read, are reflected <Link to="/research/interests/">on this page</Link>.
-              {/*
-              A list of researchers who have inspired my work over the years can be found <Link to="/research/influences/">here</Link>.
-              */}
-              </p>
+              </p> */}
 
               {/*
               <div style={{margin: '1em 0 1em 0'}}>
@@ -167,7 +181,7 @@ export default function Home() {
               <p>
                 In my spare time, I enjoy dabbling with <Link to="/art/">AI-generated art</Link> and I am a <a href="/kettlebells/">kettlebell salesman</a>.
                   I have lived, studied, and/or worked in several countries including
-                  Germany, Switzerland, France, the United Kingdom, Sweden,
+                  Switzerland, France, Germany, the United Kingdom, Sweden,
                   Macedonia, the United States, and Finland.
               </p>
 
