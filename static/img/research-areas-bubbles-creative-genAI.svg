@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-85 -105 1270 1235" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <radialGradient id="gc" cx="42%" cy="38%" r="72%">
+      <stop offset="0%" stop-color="#1D4ED8" stop-opacity="0.04"/>
+      <stop offset="70%" stop-color="#1D4ED8" stop-opacity="0.13"/>
+      <stop offset="100%" stop-color="#1D4ED8" stop-opacity="0.38"/>
+    </radialGradient>
+    <radialGradient id="g0" cx="42%" cy="38%" r="72%">
+      <stop offset="0%" stop-color="#BE185D" stop-opacity="0.03"/>
+      <stop offset="70%" stop-color="#BE185D" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#BE185D" stop-opacity="0.32"/>
+    </radialGradient>
+    <radialGradient id="g1" cx="42%" cy="38%" r="72%">
+      <stop offset="0%" stop-color="#EA580C" stop-opacity="0.03"/>
+      <stop offset="70%" stop-color="#EA580C" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#EA580C" stop-opacity="0.32"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="42%" cy="38%" r="72%">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.03"/>
+      <stop offset="70%" stop-color="#7C3AED" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0.32"/>
+    </radialGradient>
+    <radialGradient id="g3" cx="42%" cy="38%" r="72%">
+      <stop offset="0%" stop-color="#0D9488" stop-opacity="0.03"/>
+      <stop offset="70%" stop-color="#0D9488" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#0D9488" stop-opacity="0.32"/>
+    </radialGradient>
+    <radialGradient id="g4" cx="42%" cy="38%" r="72%">
+      <stop offset="0%" stop-color="#15803D" stop-opacity="0.03"/>
+      <stop offset="70%" stop-color="#15803D" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#15803D" stop-opacity="0.32"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="-85" y="-105" width="1270" height="1235" fill="#ffffff"/>
+
+  <!-- satellite bubbles -->
+  <circle cx="550" cy="150" r="225" fill="url(#g0)" stroke="#BE185D" stroke-width="8" stroke-opacity="0.85"/>
+  <circle cx="930.4" cy="426.4" r="225" fill="url(#g1)" stroke="#EA580C" stroke-width="8" stroke-opacity="0.85"/>
+  <circle cx="785.1" cy="873.6" r="225" fill="url(#g2)" stroke="#7C3AED" stroke-width="8" stroke-opacity="0.85"/>
+  <circle cx="314.9" cy="873.6" r="225" fill="url(#g3)" stroke="#0D9488" stroke-width="8" stroke-opacity="0.85"/>
+  <circle cx="169.6" cy="426.4" r="225" fill="url(#g4)" stroke="#15803D" stroke-width="8" stroke-opacity="0.85"/>
+
+  <!-- central bubble -->
+  <circle cx="550" cy="550" r="250" fill="url(#gc)" stroke="#1D4ED8" stroke-width="11" stroke-opacity="0.9"/>
+
+  <!-- central label -->
+  <g fill="#1D4ED8" text-anchor="middle" font-weight="bold">
+    <text x="550" y="538" font-size="56">Creative</text>
+    <text x="550" y="602" font-size="56">generative AI</text>
+  </g>
+
+  <!-- satellite labels -->
+  <g fill="#BE185D" text-anchor="middle" font-weight="bold">
+    <text x="550" y="112" font-size="34" font-weight="normal">AI in</text>
+    <text x="550" y="164" font-size="52">Research</text>
+  </g>
+  <g fill="#EA580C" text-anchor="middle" font-weight="bold">
+    <text x="954" y="438" font-size="58">Creativity</text>
+  </g>
+  <g fill="#7C3AED" text-anchor="middle" font-weight="bold">
+    <text x="800" y="862" font-size="46">LLMs,</text>
+    <text x="800" y="910" font-size="38">Text-to-Image</text>
+    <text x="800" y="954" font-size="38">Generation</text>
+  </g>
+  <g fill="#0D9488" text-anchor="middle" font-weight="bold">
+    <text x="300" y="864" font-size="34">Prompt Engineering</text>
+    <text x="300" y="904" font-size="28" font-weight="normal">&amp;</text>
+    <text x="300" y="948" font-size="34">Context Engineering</text>
+  </g>
+  <g fill="#15803D" text-anchor="middle" font-weight="bold">
+    <text x="146" y="397" font-size="46">Agentic AI</text>
+    <text x="146" y="435" font-size="26" font-weight="normal">and</text>
+    <text x="146" y="475" font-size="32">Agentic Engineering</text>
+  </g>
+</svg>
