@@ -27,43 +27,28 @@ USER_AGENT = (
 # with open('scholar_cookie.txt', encoding='utf-8') as f: cookie = f.read()
 
 
-def scrape_with_chrome_cookies(scholar_profile):
-    """Scrape Scholar by borrowing cookies from the system Chrome browser."""
-    scholar_url = f'https://scholar.google.com/citations?user={scholar_profile}&hl=en'
-    print(f"Scraping {scholar_url} (Chrome cookies)...")
+class ScholarBlocked(RuntimeError):
+    """Google served an anti-bot / rate-limit page instead of the profile."""
 
-    cj = browser_cookie3.chrome(domain_name=".google.com")
-    # headers = {
-    # 'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:145.0) Gecko/20100101 Firefox/145.0',
-    #     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-    #     'Accept-Language': 'en-US,en;q=0.5',
-    #     'Accept-Encoding': 'gzip, deflate, br, zstd',
-    #     'DNT': '1',
-    #     'Sec-GPC': '1',
-    #     'Connection': 'keep-alive',
-    #     'Cookie': cookie,
-    #     'Upgrade-Insecure-Requests': '1',
-    #     'Sec-Fetch-Dest': 'document',
-    #     'Sec-Fetch-Mode': 'navigate',
-    #     'Sec-Fetch-Site': 'none',
-    #     'Sec-Fetch-User': '?1',
-    #     'Priority': 'u=0, i',
-    #     'Pragma': 'no-cache',
-    #     'Cache-Control': 'no-cache',
-    # }
-    headers = {
-        "User-Agent": USER_AGENT,
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-        "Accept-Language": "en-US,en;q=0.5",
-    }
 
-    response = requests.get(scholar_url, headers=headers, cookies=cj, timeout=15)
-    soup = BeautifulSoup(response.text, "html.parser")
+def parse_citations(html):
+    """Parse a Scholar profile page into the citations dict.
 
-    try:
-        citation_box = soup.find('div', {'id': 'gsc_rsb_cit'})
-    except:
-        print('Citation box not found')
+    Raises ScholarBlocked if the page is Google's "unusual traffic" wall
+    rather than a profile page.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+
+    citation_box = soup.find('div', {'id': 'gsc_rsb_cit'})
+    if citation_box is None:
+        if 'unusual traffic' in html or '/sorry/index' in html:
+            raise ScholarBlocked(
+                "Google blocked this request ('unusual traffic' page). "
+                "The block is per-IP and expires once automated requests stop; "
+                "retry later or from a different network.")
+        raise ScholarBlocked(
+            "Citation box (div#gsc_rsb_cit) not found - page layout changed "
+            "or the profile is unavailable.")
 
     table = citation_box.find("table", {'id': 'gsc_rsb_st'})
 
@@ -89,6 +74,31 @@ def scrape_with_chrome_cookies(scholar_profile):
     return citations
 
 
+def scrape_with_chrome_cookies(scholar_profile):
+    """Scrape Scholar by borrowing cookies from the system Chrome browser."""
+    scholar_url = f'https://scholar.google.com/citations?user={scholar_profile}&hl=en'
+    print(f"Scraping {scholar_url} (Chrome cookies)...")
+
+    cj = browser_cookie3.chrome(domain_name=".google.com")
+    headers = {
+        "User-Agent": USER_AGENT,
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.5",
+    }
+
+    response = requests.get(scholar_url, headers=headers, cookies=cj, timeout=15)
+
+    if response.status_code == 429 or '/sorry/' in response.url:
+        raise ScholarBlocked(
+            f"Google rate-limited this IP (HTTP {response.status_code}, "
+            f"redirected to {response.url.split('?')[0]}). The block expires "
+            "shortly after automated requests stop; retry later or from a "
+            "different network.")
+    response.raise_for_status()
+
+    return parse_citations(response.text)
+
+
 def build_parser():
     p = argparse.ArgumentParser()
     p.add_argument("-s", "--scholarid", dest="scholar_profile")
@@ -104,12 +114,18 @@ def run(scholar_profile, force_local=False):
 
 def main(argv=None):
     args = build_parser().parse_args(argv)
-    res = run(args.scholar_profile, force_local=args.local)
+    try:
+        res = run(args.scholar_profile, force_local=args.local)
+    except ScholarBlocked as e:
+        print(f"ERROR: {e}", file=sys.stderr)
+        print("Keeping the existing citations.json unchanged.", file=sys.stderr)
+        return 1
     print(res)
 
     # Writing JSON data
     with open('./citations.json', 'w') as f: json.dump(res, f, sort_keys=True) # indent=4, 
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
