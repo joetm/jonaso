@@ -46,7 +46,7 @@ export default function Countries() {
           styleFunction={visitedNogoStyle}
           tooltipTextFunction={tooltipText}
         />
-        <h2>Countries to visit next</h2>
+        <h2>Countries to visit</h2>
         <WorldMap
           color="blue"
           size="responsive"
