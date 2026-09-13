@@ -11,17 +11,17 @@ import countriesNoGo from "../countries-nogo.json"
 const visitedIsos = new Set(countries.map(c => c.iso))
 const nogoIsos = new Set(countriesNoGo.map(c => c.iso))
 
-// countries in both lists render red (no-go wins over visited)
+// countries in both lists render green (visited wins over no-go)
 const visitedNogoData = [
-  ...countries.filter(c => !nogoIsos.has(c.iso)),
-  ...countriesNoGo,
+  ...countries,
+  ...countriesNoGo.filter(c => !visitedIsos.has(c.iso)),
 ].map(c => ({country: c.iso, value: ''}))
 
 const visitedNogoStyle = ({countryCode}) => {
   const iso = countryCode.toLowerCase()
   const listed = nogoIsos.has(iso) || visitedIsos.has(iso)
   return {
-    fill: nogoIsos.has(iso) ? 'red' : visitedIsos.has(iso) ? 'green' : '#dddddd',
+    fill: visitedIsos.has(iso) ? 'green' : nogoIsos.has(iso) ? 'red' : '#dddddd',
     fillOpacity: listed ? 0.8 : 0,
     stroke: 'black',
     strokeWidth: 1,
@@ -32,7 +32,7 @@ const visitedNogoStyle = ({countryCode}) => {
 
 const tooltipText = ({countryName, countryCode}) => {
   const iso = countryCode.toLowerCase()
-  return nogoIsos.has(iso) ? `${countryName} (no-go)` : `${countryName} (visited)`
+  return visitedIsos.has(iso) ? `${countryName} (visited)` : `${countryName} (no-go)`
 }
 
 export default function Countries() {
