@@ -43,7 +43,7 @@ export default function LTInterests({ graphdata }) {
     'f': 2,
     'g': 2,
   }
-  const [ strokes, setStrokes ] = useState(defaultStrokes)
+  const [ highlighted, setHighlighted ] = useState(null)
 
   function formatXAxis(t) {
     const d = new Date(t * 1000)
@@ -51,18 +51,16 @@ export default function LTInterests({ graphdata }) {
   }
 
   function handleLegendMouseOver(e) {
-    const newstrokes = { ...strokes, [e.value]: 5 }
-    setStrokes(newstrokes)
+    setHighlighted(e.value)
   }
   function handleLegendMouseOut() {
-    setStrokes(defaultStrokes)
+    setHighlighted(null)
   }
   function highlightLine(e) {
-    const newstrokes = { ...strokes, [e.id]: 5 }
-    setStrokes(newstrokes)
+    setHighlighted(e.id)
   }
   function unselectLine() {
-    setStrokes(defaultStrokes)
+    setHighlighted(null)
   }
 
   return (
@@ -84,7 +82,7 @@ export default function LTInterests({ graphdata }) {
               domain={[0, 'dataMax']}
             />
             <Legend
-              formatter={(value, entry, index) => (<span>{graphdata.legend[value]}</span>)}
+              formatter={(value, entry, index) => (<span style={{fontWeight: highlighted === value ? 'bold' : 'normal'}}>{graphdata.legend[value]}</span>)}
               onMouseOver={handleLegendMouseOver}
               onMouseOut={handleLegendMouseOut}
             />
@@ -96,7 +94,7 @@ export default function LTInterests({ graphdata }) {
                     type="linear"
                     dataKey={e[0]}
                     stroke={lines.colors[e[0]]}
-                    strokeWidth={strokes[e[0]]}
+                    strokeWidth={highlighted === e[0] ? 5 : defaultStrokes[e[0]]}
                     strokeDasharray={lines.dashing[e[0]]}
                     fill={lines.colors[e[0]]}
                     connectNulls={false}

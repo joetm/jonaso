@@ -3,6 +3,7 @@ import { Bar, BarChart, CartesianGrid, LabelList, ResponsiveContainer, XAxis, YA
 // import md5 from "md5"
 
 import 'semantic-ui-css/components/button.min.css'
+import 'semantic-ui-css/components/icon.min.css'
 
 // Keyword drill-down island. Level 1 comes prefiltered at build time via
 // the `initial` prop (was fetched on mount); deeper levels are still
