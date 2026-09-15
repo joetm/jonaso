@@ -1,3 +1,6 @@
+.data-snapshot/
+.astro/
+
 ENV
 .env
 .env.development
@@ -31,9 +34,10 @@ src/countries.json
 geckodriver.log
 
 artworks/*
-# public/artworks/*
-public/artworks/**/*.webp
-!public/artworks/json/**/*.json
+# processed artworks: keep the json manifests, ignore the generated webp
+static/artworks/**/*.webp
+# ./public copies are build output now (astro re-copies ./static on every build)
+public/artworks/*
 # public/static/**/
 public/cv/**/*.pdf
 public/~partytown/

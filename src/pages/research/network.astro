@@ -1,0 +1,11 @@
+---
+import 'semantic-ui-css/components/dropdown.min.css'
+
+import Layout from '../../layouts/Layout.astro'
+import CollabNetwork from '../../components/islands/CollabNetwork.jsx'
+import { nodes, edges } from '../../views/research/network-data'
+---
+
+<Layout title="Collaboration Network // jonaso.de" canonical="https://www.jonaso.de/network/">
+  <CollabNetwork client:only="react" nodes={nodes} edges={edges} />
+</Layout>

@@ -1,0 +1,11 @@
+---
+import '../../components/influencer.css'
+
+import Layout from '../../layouts/Layout.astro'
+import Influences from '../../components/islands/Influences.jsx'
+import { influencer, researchAreas } from '../../views/research/influences-data'
+---
+
+<Layout title="Research Influences // jonaso.de" canonical="https://www.jonaso.de/influencers/">
+  <Influences client:load influencer={influencer} researchAreas={researchAreas} />
+</Layout>

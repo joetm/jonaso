@@ -1,0 +1,20 @@
+---
+// Head/body skeleton. Pages that had no Layout wrapper in Gatsby (teaching,
+// index-chatgptquote) use this directly; Layout.astro builds on it.
+const { title = 'jonaso.de', description = '', canonical = null } = Astro.props
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>👤</text></svg>" />
+    {canonical && <link id="canonical" rel="canonical" href={canonical} />}
+    <slot name="head" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

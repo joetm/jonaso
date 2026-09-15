@@ -81,13 +81,47 @@ def rgb_to_hex(r, g, b):
 
 root = 'artworks-json'
 filetypes = ['json']
-outroot = 'public'
-chunkspath = 'public/artworks/json'
+# output goes to the astro publicDir (./static), NOT the build output (./public):
+# ./public is emptied on every astro build, and `make publish` syncs the artworks
+# straight from ./static so their timestamps stay stable for `aws s3 sync`
+outroot = 'static'
+chunkspath = 'static/artworks/json'
 
 try:
   os.makedirs(chunkspath)
 except FileExistsError:
   pass
+
+
+def dump_if_changed(obj, jsonpath):
+  # keep the mtime stable when the content did not change
+  serialized = json.dumps(obj)
+  try:
+    with open(jsonpath, 'r') as f:
+      if f.read() == serialized:
+        return
+  except OSError:
+    pass
+  with open(jsonpath, 'w') as f:
+    f.write(serialized)
+
+
+# entries from the previous run, keyed by url, so unchanged images
+# do not have to be opened and measured again
+manifest_cache = {}
+if os.path.isdir(chunkspath):
+  for fname in os.listdir(chunkspath):
+    if not fname.endswith('.json'):
+      continue
+    try:
+      olddata = json.load(open(os.path.join(chunkspath, fname), 'r'))
+    except (OSError, json.JSONDecodeError):
+      continue
+    if isinstance(olddata, dict):
+      olddata = olddata.get('items', [])
+    for entry in olddata:
+      if isinstance(entry, list) and len(entry) == 4:
+        manifest_cache[entry[0]] = tuple(entry)
 
 
 
@@ -111,6 +145,14 @@ for path, subdirs, files in os.walk(root):
       webpoutpath[-1] = "webp"
       webpoutpath = ".".join(webpoutpath)
 
+      # remove 'static/' from output path and encode e.g. spaces and hashtags
+      url = "https://www.jonaso.de/" + "/".join(urllib.parse.quote(webpoutpath).split('/')[1:])
+
+      # cache check - skip images that were already resized and measured
+      if os.path.isfile(webpoutpath) and url in manifest_cache:
+        convertedimgs.append(manifest_cache[url])
+        continue
+
       im = Image.open(imgpath)
 
       # resize with aspect ratio
@@ -128,7 +170,7 @@ for path, subdirs, files in os.walk(root):
       except:
         average_color = "#" + rgb_to_hex(222, 222, 222)
 
-      # cache check - skip if file already exists
+      # skip the resize if the file already exists
       if not os.path.isfile(webpoutpath):
         im400 = im.resize((width,height))
         try:
@@ -136,20 +178,14 @@ for path, subdirs, files in os.walk(root):
         except FileExistsError:
           pass
         im400.save(webpoutpath, "webp")
+        print(webpoutpath)
 
-      # encode e.g. spaces and hashtags in filename
-      webpoutpath = urllib.parse.quote(webpoutpath)
-      print(webpoutpath)
-
-      # remove 'public/' from output path
-      webpoutpath = webpoutpath.split('/')[1:]
-      # encode e.g. hashtags and spaces
-      webpoutpath = "https://www.jonaso.de/" + "/".join(webpoutpath)
-
-      convertedimgs.append((webpoutpath, width, height, average_color))
+      converted = (url, width, height, average_color)
+      manifest_cache[url] = converted
+      convertedimgs.append(converted)
 
     # write json with webp
-    json.dump(convertedimgs, open(os.path.join(outroot, 'artworks', 'json',  f'webp-{cat}.json'), 'w'))
+    dump_if_changed(convertedimgs, os.path.join(outroot, 'artworks', 'json',  f'webp-{cat}.json'))
 
     chunksize = 100
     chunks = [convertedimgs[x:x+100] for x in range(0, len(convertedimgs), 100)]
@@ -166,7 +202,7 @@ for path, subdirs, files in os.walk(root):
         outbatch['next'] = False
       else:
         outbatch['next'] = k+1
-      json.dump(outbatch, open(os.path.join(chunkspath, f'webp-{cat}-{k}.json'), 'w'))
+      dump_if_changed(outbatch, os.path.join(chunkspath, f'webp-{cat}-{k}.json'))
       k += 1
 
 

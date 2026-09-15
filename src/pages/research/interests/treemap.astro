@@ -1,0 +1,14 @@
+---
+import Layout from '../../../layouts/Layout.astro'
+import TreeComponent from '../../../components/islands/InterestsTreemap.jsx'
+import keywordsRaw from '../../../../reading_list/keywords.json'
+
+// was fetched + filtered client-side
+const keywords = keywordsRaw.filter((kw) => kw.num > 19)
+---
+
+<Layout title="Research Interests // jonaso.de" canonical="https://www.jonaso.de/interests/treemap/">
+  <div class="ui container">
+    <TreeComponent client:load keywords={keywords} />
+  </div>
+</Layout>

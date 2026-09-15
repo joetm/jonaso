@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Home from '../views/index.jsx'
+---
+
+<Layout title="Jonas Oppenlaender, Doctor of Science (Technology)" canonical="https://www.jonaso.de">
+  <Fragment slot="head">
+    <link rel="preload" href="/img/research-areas-bubbles-creative-genAI.jpg" as="image" type="image/jpg" />
+  </Fragment>
+  <Home />
+</Layout>
+
+<script>
+  // pronunciation audio for the icon in views/index.jsx (vanilla, no island)
+  const icon = document.getElementById('pronounce')
+  if (icon) {
+    const audio = new Audio('/audio/speech_20230621150721178.mp3')
+    audio.addEventListener('play', () => {
+      icon.className = 'volume up icon'
+      icon.style.color = '#666666'
+      icon.style.cursor = ''
+    })
+    audio.addEventListener('ended', () => {
+      icon.className = 'fitted assistive listening systems icon'
+      icon.style.color = ''
+      icon.style.cursor = 'pointer'
+    })
+    icon.addEventListener('click', () => audio.play())
+  }
+</script>

@@ -1,0 +1,21 @@
+---
+import 'semantic-ui-css/components/button.min.css'
+
+import Layout from '../../../layouts/Layout.astro'
+import KeywordCloud from '../../../components/cloud.jsx'
+---
+
+<Layout title="Research Interests (Cloud) // jonaso.de" canonical="https://www.jonaso.de/interests/wordcloud/">
+  <div class="ui container">
+    <div class="ui segment" style="clear: both; border: 0; box-shadow: 0px 0px 0px #ffffff;">
+      <h2 style="float: left; display: inline-block; margin-right: 1rem;">Research Interests</h2>
+      <div class="ui mini buttons">
+        <a href="/research/interests"><button class="ui button" tabindex="-1">Bar</button></a>
+        <div class="or"></div>
+        <button class="ui active button" disabled>Cloud</button>
+      </div>
+    </div>
+    {/* react-tag-cloud measures the DOM, so client-only */}
+    <KeywordCloud client:only="react" />
+  </div>
+</Layout>

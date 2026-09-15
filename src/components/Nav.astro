@@ -1,0 +1,33 @@
+---
+// Static port of Nav.jsx: plain links, active item computed at build time
+// from the page path (same normalization as the old useEffect did).
+const { currentPath = '' } = Astro.props
+const active = currentPath.replace(/\//g, '').toLowerCase() || 'home'
+
+const items = [
+  { label: 'Home', href: '/', isActive: active === 'home' },
+  { label: 'Publications', href: '/publications', isActive: active === 'publications' },
+  { label: 'Interests', href: '/research/interests', isActive: active === 'research' || active === 'researchinterests' },
+  { label: 'Projects', href: '/research/projects', isActive: active === 'researchprojects' },
+  { label: 'Art', href: '/art', isActive: active.startsWith('art') },
+  { label: 'WebDev Portfolio', href: 'https://komasurfer.com/portfolio/', external: true, isActive: false },
+]
+---
+
+<header>
+  <div id="desktopmenu">
+    <div class="ui fluid pointing stackable seven item menu">
+      {items.map((it) => (
+        <a
+          href={it.href}
+          target={it.external ? '_blank' : '_self'}
+          rel="noreferrer"
+          tabindex={-42}
+          role="presentation"
+          class={'item' + (it.isActive ? ' active' : '')}
+        >{it.label}</a>
+      ))}
+    </div>
+  </div>
+  <div style="margin-bottom: 2em"></div>
+</header>

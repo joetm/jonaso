@@ -3,18 +3,18 @@
   "description": "jonaso.de",
   "license": "MIT",
   "scripts": {
-    "dev": "export NODE_OPTIONS=--no-experimental-fetch yarn pubjson && yarn develop",
-    "develop": "gatsby develop --open",
-    "clean": "gatsby clean",
+    "dev": "yarn develop",
+    "develop": "astro dev --open",
+    "clean": "rimraf .astro .data-snapshot",
     "invalidate": "aws cloudfront create-invalidation --distribution-id E1F8XE39H6VFRU --paths \"/*\"",
-    "build": "make pre-build && GATSBY_CPU_COUNT=2 NODE_OPTIONS=--max-old-space-size=4096 gatsby build && make post-build && make publish && yarn push",
-    "build-profiling": "GATSBY_CPU_COUNT=1 NODE_OPTIONS=--max-old-space-size=4096 gatsby clean && make pre-build && npx process-top ./node_modules/.bin/gatsby build && make post-build && git add -A && sh -c 'git commit -m \"${0}\"' && git push",
+    "build": "make pre-build && astro build && make post-build && make publish && yarn push",
     "push": "git add -A && git commit && git push",
-    "serve": "gatsby serve",
-    "prod": "make pre-build && make process-artworks && GATSBY_CPU_COUNT=2 NODE_OPTIONS=--max-old-space-size=4096 gatsby build && make post-build && yarn serve",
-    "bundle-map": "bundle-buddy public/*.map"
+    "serve": "astro preview",
+    "prod": "make pre-build && astro build && make post-build && yarn serve"
   },
   "dependencies": {
+    "@astrojs/react": "^4.3.0",
+    "astro": "^5.13.0",
     "@artsy/fresnel": "^6.1.0",
     "@babel/core": "^7.20.12",
     "@loadable/component": "^5.15.2",

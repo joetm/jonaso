@@ -1,0 +1,26 @@
+---
+import '../../true-masonry.css' // based on https://codepen.io/iamsaief/pen/jObaoKo
+
+import Layout from '../../layouts/Layout.astro'
+import ArtHeader from '../../components/ArtHeader.jsx'
+import { setAspectRatio } from '../../common.js'
+import images from '../../../.data-snapshot/artworks-json/webp-latest.json'
+---
+
+<Layout title="jonaso.de" style="padding-bottom: 0">
+  <ArtHeader
+    generator="AI-generated Images"
+    byline="Images generated from text prompts (never edited) since 2021. Click links below for more."
+  />
+  <Fragment slot="wide">
+    <div id="true-masonry" style="padding-bottom: 5em">
+      <div class="grid-wrapper">
+        {images.map((image, index) => (
+          <div class={setAspectRatio(image, index)}>
+            <img src={image[0]} decoding="async" loading="lazy" alt="" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </Fragment>
+</Layout>

@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro'
+import PubBarChart from '../components/islands/PubBarChart.jsx'
+import Publications from '../views/publications.jsx'
+import { graphdata } from '../views/publications-data'
+---
+
+<Layout title="Publications // jonaso.de" canonical="https://www.jonaso.de/publications/">
+  <div class="ui container">
+    <PubBarChart client:visible graphdata={graphdata} />
+  </div>
+  <Publications />
+</Layout>
+
+<style is:global>
+  /* responsive icon sizing, was @artsy/fresnel: sm=large, md=huge, lg=big */
+  .pub-icon { font-size: 1.5em; }
+  @media (min-width: 768px) { .pub-icon { font-size: 4em; } }
+  @media (min-width: 990px) { .pub-icon { font-size: 2em; } }
+</style>
+
+<script>
+  // toggle the three prerendered list views (was React state + fetches)
+  const SECTIONS = ['year', 'type', 'cits']
+
+  function show(which: string) {
+    for (const k of SECTIONS) {
+      const el = document.getElementById('publications-' + k)
+      if (el) el.style.display = k === which ? '' : 'none'
+      const btn = document.getElementById('btn-' + k) as HTMLButtonElement | null
+      if (btn) btn.disabled = k === which
+    }
+  }
+
+  for (const k of SECTIONS) {
+    document.getElementById('btn-' + k)?.addEventListener('click', () => {
+      show(k)
+      if (k === 'year') (window as any).__pubsFilterYear?.(false)
+    })
+  }
+
+  // called by the chart island when a bar is clicked
+  ;(window as any).__pubsFilterYear = (y: number | false) => {
+    show('year')
+    document.querySelectorAll<HTMLElement>('#publications-year [data-year]').forEach((el) => {
+      el.style.display = !y || el.dataset.year === String(y) ? '' : 'none'
+    })
+  }
+</script>

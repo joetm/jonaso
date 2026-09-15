@@ -1,0 +1,9 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Countries from '../views/countries.jsx'
+---
+
+<Layout title="jonaso.de">
+  {/* client:only — react-svg-worldmap's CJS build breaks under SSR */}
+  <Countries client:only="react" />
+</Layout>

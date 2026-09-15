@@ -1,0 +1,40 @@
+---
+import '../../masonry-static.css'
+
+import Layout from '../../layouts/Layout.astro'
+import ArtHeader from '../../components/ArtHeader.jsx'
+import StaticMasonry from '../../components/StaticMasonry.jsx'
+import images from '../../../.data-snapshot/artworks-json/webp-redteam.json'
+---
+
+<Layout title="jonaso.de" style="padding-bottom: 0">
+  <ArtHeader generator="Redteam" totalCount={images.length} />
+  <Fragment slot="wide">
+    <div id="redteam-consent" style="margin: 0 auto; clear: both; max-width: 1024px; padding-bottom: 5em">
+      <div class="disclaimer container" style="text-align: center">
+        <h4>Disclaimer: Viewer Discretion Advised</h4>
+        <p>
+          This page displays the results of my exploration of the boundaries of moderation policies in text-to-image generation systems. The images and content presented here are a part of a scientific inquiry and are not reflective of my personal views or beliefs.
+        <br />
+          Please be aware that some of the content on this page may be considered offensive, inappropriate, or disturbing. The intention of displaying these images is solely for the purpose of academic research and to contribute to discussions around the capabilities and ethical considerations in AI-generated content.
+          If you are likely to be offended or are uncomfortable with such material, please exercise discretion in viewing this page. The content is presented here for educational and research purposes only.
+        </p>
+        <button class="ui button" id="redteam-consent-button">I Consent</button>
+      </div>
+    </div>
+    <div id="redteam-gallery" style="display: none">
+      <StaticMasonry images={images} />
+    </div>
+  </Fragment>
+</Layout>
+
+<script>
+  // consent gate (was React state); images inside the hidden container
+  // are not fetched until it is shown
+  document.getElementById('redteam-consent-button')?.addEventListener('click', () => {
+    const consent = document.getElementById('redteam-consent')
+    const gallery = document.getElementById('redteam-gallery')
+    if (consent) consent.style.display = 'none'
+    if (gallery) gallery.style.display = ''
+  })
+</script>

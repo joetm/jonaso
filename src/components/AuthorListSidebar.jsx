@@ -4,7 +4,6 @@ import 'semantic-ui-css/components/segment.min.css'
 import 'semantic-ui-css/components/sidebar.min.css'
 
 import React from "react"
-import { Checkbox } from 'semantic-ui-react'
 import { sortByKey, priocolors, roundInt } from "../common"
 
 
@@ -48,11 +47,16 @@ const Wrapper = {
           onKeyDown={closeSidebar}
         ></i>
 
-        <Checkbox
-          checked={coauthorToggleActive}
-          onChange={() => toggleCoauthors(authorid)}
-          label='Show co-authors' toggle
-        />
+        {/* native checkbox styled by semantic-ui CSS (was semantic-ui-react) */}
+        <div className="ui toggle checkbox">
+          <input
+            type="checkbox"
+            id={`coauthors-${authorid}`}
+            checked={coauthorToggleActive}
+            onChange={() => toggleCoauthors(authorid)}
+          />
+          <label htmlFor={`coauthors-${authorid}`}>Show co-authors</label>
+        </div>
 
       </div>
     </div>

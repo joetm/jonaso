@@ -1,22 +1,12 @@
-"use client"
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
+import React from "react"
 
-import { navigate } from 'gatsby'
-import React, { createContext } from "react"
-import { useContext } from 'react'
-const LinkContext = createContext(null)
+// Static port: the menu items are plain links now (was gatsby navigate()).
 
-
-function Link({name, folder, shortname=null}) {
-  const ctx = useContext(LinkContext)
-  // console.log('checkval', name, shortname, ctx.generator)
+function Link({name, folder, active, shortname=null}) {
   return (
-      <a 
-        folder={folder}
-        className={"item" + (ctx.generator === name ? ' active' : '')}
-        onClick={ctx.handleMenuClick}
-        onKeyDown={ctx.handleMenuClick}
+      <a
+        href={`/art/${folder}/`}
+        className={"item" + (active ? ' active' : '')}
       >
         {shortname ? shortname : name}
       </a>
@@ -25,11 +15,6 @@ function Link({name, folder, shortname=null}) {
 
 
 export default function ArtHeader({generator, byline, totalCount}) {
-  const handleMenuClick = (e) => {
-    e.preventDefault()
-    const folder = e.target.getAttribute('folder')
-    navigate(`/art/${folder}/`)
-  }
   return (
     <div>
       <h1>{generator}</h1>
@@ -48,22 +33,15 @@ export default function ArtHeader({generator, byline, totalCount}) {
 
       <section style={{textAlign:'center', marginBottom:'2em'}}>
         <div className="ui fluid pointing secondary six item menu">
-          <LinkContext.Provider
-            value={{
-              handleMenuClick,
-              generator,
-            }}
-          >
-            <Link name="Midjourney" folder="midjourney" />
-            <Link name="DALL-E" folder="dalle" />
-            <Link name="Stable Diffusion" folder="stablediffusion" />
-            {/*
-            <Link name="Redteam" folder="redteam" />
-            */}
-            <Link name="Latent Diffusion" folder="latent-diffusion" />
-            <Link name="VQGAN-CLIP" folder="vqganclip" />
-            <Link name="Misc. Text-To-Image Systems" folder="misc" shortname="Misc." />
-          </LinkContext.Provider>
+          <Link name="Midjourney" folder="midjourney" active={generator === 'Midjourney'} />
+          <Link name="DALL-E" folder="dalle" active={generator === 'DALL-E'} />
+          <Link name="Stable Diffusion" folder="stablediffusion" active={generator === 'Stable Diffusion'} />
+          {/*
+          <Link name="Redteam" folder="redteam" active={generator === 'Redteam'} />
+          */}
+          <Link name="Latent Diffusion" folder="latent-diffusion" active={generator === 'Latent Diffusion'} />
+          <Link name="VQGAN-CLIP" folder="vqganclip" active={generator === 'VQGAN-CLIP'} />
+          <Link name="Misc. Text-To-Image Systems" folder="misc" shortname="Misc." active={generator === 'Misc. Text-To-Image Systems'} />
         </div>
       </section>
     </div>

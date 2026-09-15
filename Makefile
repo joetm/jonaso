@@ -48,6 +48,9 @@ pre-build:
 	cd stat_aggregator; \
 		PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome ./scholar-citations.py
 
+	# before the astro build, so the build picks up fresh manifests from ./static
+	make process-artworks
+
 
 fetch-pcs:
 	# PCS fetching
@@ -72,6 +75,8 @@ rename-artworks:
 # 	rm -rf ./public/portfolio/webpack.config.js
 
 post-build:
+	# the astro build empties ./public, so recreate the dirs this target writes into
+	mkdir -p public/cv public/static
 	# move cv
 	mv academic-cv/cv.pdf "public/cv/oppenlaender-cv.pdf"
 	mv academic-cv/resume.pdf "public/cv/resume.pdf"
@@ -112,8 +117,6 @@ post-build:
 	mv ./src/bibliography/publications.json ./public/static/publications.json
 	# copy fetched PCS data
 	cp ./stat_aggregator/peer-reviews.json ./public/peer-reviews.json
-
-	make process-artworks
 
 	# make copy-portfolio
 
@@ -228,5 +231,9 @@ invalidate:
 
 publish:
 	# push to s3
-	aws s3 sync --delete ./public/ s3://jonaso.de
+	# the astro build re-copies ./static into ./public with fresh mtimes, so the
+	# artworks are excluded here and synced from ./static, where processImages.py
+	# leaves existing files untouched and aws can skip them
+	aws s3 sync --delete --exclude "artworks/*" ./public/ s3://jonaso.de
+	aws s3 sync --delete ./static/artworks/ s3://jonaso.de/artworks/
 

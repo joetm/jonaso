@@ -1,0 +1,15 @@
+---
+import '../../masonry-static.css'
+
+import Layout from '../../layouts/Layout.astro'
+import ArtHeader from '../../components/ArtHeader.jsx'
+import StaticMasonry from '../../components/StaticMasonry.jsx'
+import images from '../../../.data-snapshot/artworks-json/webp-stablediffusion.json'
+---
+
+<Layout title="jonaso.de" style="padding-bottom: 0">
+  <ArtHeader generator="Stable Diffusion" totalCount={images.length} />
+  <Fragment slot="wide">
+    <StaticMasonry images={images} />
+  </Fragment>
+</Layout>

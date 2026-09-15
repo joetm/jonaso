@@ -1,0 +1,35 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import PubGraph from '../../components/islands/PubGraph.jsx'
+import ReadingList from '../../views/research/reading.jsx'
+import { graphDocs } from '../../views/research/reading-data'
+---
+
+<Layout title="Reading // jonaso.de" canonical="https://www.jonaso.de/reading/">
+  <div class="ui container">
+    <PubGraph client:visible docs={graphDocs} />
+  </div>
+  <ReadingList />
+</Layout>
+
+<script>
+  // copy-filename buttons in the prerendered table (was React state + handlers)
+  document.querySelectorAll<HTMLElement>('.copy-filename').forEach((el) => {
+    const copy = async () => {
+      try {
+        await navigator.clipboard.writeText(el.dataset.filename || '')
+        const svg = el.querySelector('svg')
+        if (svg) {
+          svg.setAttribute('fill', '#2E8B57')
+          setTimeout(() => svg.setAttribute('fill', 'currentColor'), 2500)
+        }
+      } catch (err) {
+        console.error('Error copying text to clipboard', err)
+      }
+    }
+    el.addEventListener('click', copy)
+    el.addEventListener('keydown', (e) => {
+      if ((e as KeyboardEvent).key === 'Enter' || (e as KeyboardEvent).key === ' ') copy()
+    })
+  })
+</script>
