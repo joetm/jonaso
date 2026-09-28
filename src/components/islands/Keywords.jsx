@@ -66,8 +66,10 @@ export default function Keywords({ initial = [] }) {
 
   return (
     <div className="ui container">
-      <div className="clear">
-          <div onClick={zoomOut} style={{cursor: 'pointer', visibility: isZoomed ? 'visible' : 'hidden', float: 'left', fontSize: 'initial', marginRight:'1em'}}>
+      {/* back button in normal flow (a floated, zero-height row gets overlapped
+          by the recharts wrapper, which then swallows the clicks) */}
+      <div style={{display: 'flex', justifyContent: 'flex-end', alignItems: 'center', minHeight: '2em', marginBottom: '.5em'}}>
+          <div onClick={zoomOut} style={{cursor: 'pointer', visibility: isZoomed ? 'visible' : 'hidden', fontSize: 'initial'}}>
               <i aria-hidden="true" className="left circular arrow icon clickable"></i>
               {
                 activeLevel > 2 &&
@@ -76,7 +78,7 @@ export default function Keywords({ initial = [] }) {
               <span>{displaydata['label']}</span>
           </div>
       </div>
-      <div className="clear">
+      <div>
         <ResponsiveContainer width="100%" height={displayheight}>
               <BarChart
                 layout="vertical"

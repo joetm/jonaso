@@ -6,7 +6,7 @@
     "dev": "yarn develop",
     "develop": "astro dev --open",
     "clean": "rimraf .astro .data-snapshot",
-    "invalidate": "aws cloudfront create-invalidation --distribution-id E1F8XE39H6VFRU --paths \"/*\"",
+    "invalidate": "f() { aws cloudfront create-invalidation --distribution-id E1F8XE39H6VFRU --paths \"${1:-/*}\"; }; f",
     "build": "make pre-build && astro build && make post-build && make publish && yarn push",
     "push": "git add -A && git commit && git push",
     "serve": "astro preview",
