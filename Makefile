@@ -118,6 +118,9 @@ post-build:
 	# copy fetched PCS data
 	cp ./stat_aggregator/peer-reviews.json ./public/peer-reviews.json
 
+	# give unchanged output its previous mtime so `aws s3 sync` skips it
+	python3 restore-mtimes.py
+
 	# make copy-portfolio
 
 process-artworks:
