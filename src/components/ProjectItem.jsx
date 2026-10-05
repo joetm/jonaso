@@ -9,7 +9,6 @@ export default function ProjectItem({item, i}) {
   return (
     <div role="list" className="ui list" key={`projectitem_${i}`}>
       <div role="listitem" className="item">
-        <i aria-hidden="true" className="newspaper icon"></i>
         <div className="content" style={{textDecoration: item.status === 'canceled' ? 'line-through' : 'inherit'}}>
           {
             theurl ?
