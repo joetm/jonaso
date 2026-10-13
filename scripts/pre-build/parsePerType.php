@@ -32,7 +32,7 @@ $rows = $finder->query("//*[contains(@class, '$classname')]");
 
 
 // load the details json
-$string = file_get_contents("./public/static/references-detail.json");
+$string = file_get_contents("./static/static/references-detail.json");
 $json = json_decode($string, true);
 // var_dump($json);
 
@@ -69,7 +69,7 @@ foreach ($rows as $bibitem) {
         }
 }
 
-$fp = fopen('public/static/references-type.json', 'w');
+$fp = fopen('static/static/references-type.json', 'w');
 fwrite($fp, json_encode($references, JSON_PRETTY_PRINT));
 fclose($fp);
 

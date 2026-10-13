@@ -7,39 +7,10 @@ import { fileURLToPath } from 'node:url'
 const root = path.dirname(fileURLToPath(import.meta.url))
 
 // ---------------------------------------------------------------------------
-// Data snapshot
-//
-// outDir is ./public (the Makefile post-build and `make publish` depend on it),
-// and Astro empties outDir at the start of every build. But several pages
-// prerender from JSON that lives in ./public (written there by `make post-build`
-// of the PREVIOUS build and committed to the repo). This config file runs before
-// the build touches outDir, so we snapshot those files to .data-snapshot/ and
-// pages import them from there.
-// ---------------------------------------------------------------------------
-const SNAPSHOT_DIR = path.join(root, '.data-snapshot')
-
-function snapshotJsonDir(fromRel, toRel) {
-  const from = path.join(root, fromRel)
-  const to = path.join(SNAPSHOT_DIR, toRel)
-  if (!fs.existsSync(from)) return
-  fs.mkdirSync(to, { recursive: true })
-  for (const f of fs.readdirSync(from)) {
-    if (f.endsWith('.json')) fs.copyFileSync(path.join(from, f), path.join(to, f))
-  }
-}
-
-fs.rmSync(SNAPSHOT_DIR, { recursive: true, force: true })
-snapshotJsonDir('public/static', 'static')
-// the artwork manifests live in ./static (written by scripts/pre-build/processImages.py), which
-// the build never empties — snapshotted anyway so all prev-build data imports
-// go through .data-snapshot/ uniformly
-snapshotJsonDir('static/artworks/json', 'artworks-json')
-
-// ---------------------------------------------------------------------------
 // Dev-only static serving
 //
 // In production, ./public is the deploy root, so committed files (artwork
-// images, PDFs, previous-build JSON) are simply there. In dev, publicDir is
+// images, PDFs, generated JSON) are simply there. In dev, publicDir is
 // ./static, so serve ./public as a fallback. Also resolves extensionless
 // directory URLs in ./static (e.g. /research/ontology -> index.html), which
 // the old gatsby-node.js dev middleware did.

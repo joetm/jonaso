@@ -1,6 +1,6 @@
 import React from "react"
 import CitationMetrics from "../components/CitationMetrics"
-import { referencesDetail as pubs } from "../data/prev-build"
+import { referencesDetail as pubs } from "../data/build-data"
 import cits from "../../stat_aggregator/publications-citations.json"
 
 // was two client-side fetches (react-query + useEffect); now build-time

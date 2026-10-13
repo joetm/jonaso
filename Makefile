@@ -27,7 +27,25 @@ docentship:
 	cd stat_aggregator; \
 		./docentship-bibtojson.py
 
-	mv ./stat_aggregator/docentship.json ./public/static/
+	mv ./stat_aggregator/docentship.json ./static/static/
+
+publications-data:
+	# publication data for the site, written to ./static/static (copied to
+	# ./public/static by the astro build), so pages render from the current .bib
+	mkdir -p static/static
+	pandoc-citeproc --bib2json ./src/bibliography/publications.bib > ./src/bibliography/publications.json
+	python3 scripts/pre-build/fix-publications-json.py
+	mv ./src/bibliography/publications.json ./static/static/
+	cp ./src/bibliography/publications.bib ./static/static/
+	# html bibliography (publications.html, publications_bib.html) -> json
+	BSTINPUTS=scripts/pre-build: bibtex2html -q -noheader -nofooter -nf website "website" --style "SIGCHI-Reference-Format-MOD" "src/bibliography/publications.bib"
+	php scripts/pre-build/parse.php
+	mv ./references.json ./static/static/
+	python3 scripts/pre-build/pyparse.py
+	php scripts/pre-build/parsePerType.php
+	rm publications.html
+	mv ./publications_bib.html ./static/static/
+	make docentship
 
 pre-build:
 	# academic-cv folder exists?
@@ -36,9 +54,7 @@ pre-build:
 	make fetch-pcs
 	make replace-cv
 
-	# make bib-json
-	pandoc-citeproc --bib2json ./src/bibliography/publications.bib > ./src/bibliography/publications.json
-	python3 scripts/pre-build/fix-publications-json.py
+	make publications-data
 
 	make build-cv
 
@@ -84,37 +100,11 @@ post-build:
 	# TODO # mv academic-cv/out.pdf "public/cv/cv-jonas-oppenlaender-`date '+%Y.%m.%d'`.pdf"
 	rm -rf academic-cv
 
-	# make refs
-	# _dir="$(pwd)/src/bibliography"
-	# create bibliography html
-	# --style "SIGCHI-Reference-Format"
-	# -- style "ACM-Reference-Format"
-	BSTINPUTS=scripts/post-build: bibtex2html -q -noheader -nofooter -nf website "website" --style "SIGCHI-Reference-Format-MOD" "src/bibliography/publications.bib"
-	# convert html to json
-	php scripts/post-build/parse.php
-	# move json file to public folder
-	mv "./references.json" ./public/static/
-	# copy bib file to public folder
-	cp "src/bibliography/publications.bib" ./public/static/
-	# create detailed references json
-	python3 scripts/post-build/pyparse.py
-	# move json file to public folder
-	# mv ./references-detail.json ./public/static/
-	php scripts/post-build/parsePerType.php
-	# move json file to public folder
-	# mv ./references-type.json ./public/static/
-	rm publications.html
-	# move bib.html file to public folder
-	mv ./publications_bib.html ./public/static/
-
-	make docentship
-
 	# move other files
 	cp ./src/travel.json ./public/
 	cp ./src/projects.json ./public/static/
 	cp ./src/news.json ./public/
 	# cp -rf ./src/img/artworks ./public/static/
-	mv ./src/bibliography/publications.json ./public/static/publications.json
 	# copy fetched PCS data
 	cp ./stat_aggregator/peer-reviews.json ./public/peer-reviews.json
 

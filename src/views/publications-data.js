@@ -1,6 +1,6 @@
 // Build-time shaping of the publication data (was fetched + processed
 // client-side in the old Gatsby page).
-import { references as refsRaw, referencesType as refDetailRaw } from "../data/prev-build"
+import { references as refsRaw, referencesType as refDetailRaw } from "../data/build-data"
 import citationsRaw from "../../stat_aggregator/publications-citations.json"
 
 // bibtex2html renders a bib `note` as its own line ("\nHonorable mention.\n").

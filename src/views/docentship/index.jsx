@@ -3,7 +3,7 @@ import 'semantic-ui-css/components/progress.min.css'
 
 import React from "react"
 import { noMarginGrid } from "../../common"
-import { docentship as allRefs } from "../../data/prev-build"
+import { docentship as allRefs } from "../../data/build-data"
 
 // was a client-side fetch of docentship.json; now resolved at build time
 const references = allRefs.filter(o => 'docentship' in o)

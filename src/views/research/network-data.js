@@ -1,6 +1,6 @@
 // Build-time construction of the collaboration graph (was fetched +
 // computed client-side on /research/network).
-import { publications } from "../../data/prev-build"
+import { publications } from "../../data/build-data"
 
 function buildAuthorname(a) {
   let authorname = a.given + ' ' + (a['dropping-particle'] ? a['dropping-particle'] + ' ' : '') + a.family
