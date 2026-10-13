@@ -17,5 +17,5 @@ def bib_to_json(bib_filename, json_filename):
 
     print(f'written {json_filename}')
 
-bib_to_json('../src/bibliography/publications.bib', './docentship.json')
+bib_to_json('../../src/bibliography/publications.bib', '../../static/static/docentship.json')
 

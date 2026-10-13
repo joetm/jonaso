@@ -2,32 +2,32 @@ ifndef VERBOSE
 .SILENT:
 endif
 
-.PHONY: tests dist public
+.PHONY: tests dist public build deploy
 
 default:
 	##
 	##  Makefile for jonaso.de
 	##
-	##   make pre-build		pre-build actions
-	##   make post-build	post build actions
-	##   make fetch-cv		get the latex cv from overleaf/github and build it
-	##   make dev			run the development version of the site
-	##   make refs			build the publication list from .bib file
-	##   make cv			build the cv pdf
-	##   make tests			run tests (TODO)
-	##   make push   		push to github
-	##   make publish  		push to s3
+	##   make build			pre-build + astro build + post-build (no upload)
+	##   make deploy		build, upload to s3 (make publish), commit + push to github (make push)
+	##   make pre-build		fetch cv + stats, generate data into ./static
+	##   make post-build	cv pdfs into ./public, restore mtimes for s3
+	##   make publications-data	regenerate the publication data from the .bib
+	##   make publish  		upload ./public to s3
+	##   make push   		commit + push to github
 	##
 
 build:
-	yarn build
+	$(MAKE) pre-build
+	npx astro build
+	$(MAKE) post-build
+
+deploy: build publish push
 
 docentship:
-	# missing fields! 	bib2xml ./src/bibliography/publications.bib > ./stat_aggregator/docentship.xml
-	cd stat_aggregator; \
+	# missing fields! 	bib2xml ./src/bibliography/publications.bib > ./scripts/stat_aggregator/docentship.xml
+	cd scripts/stat_aggregator; \
 		./docentship-bibtojson.py
-
-	mv ./stat_aggregator/docentship.json ./static/static/
 
 publications-data:
 	# publication data for the site, written to ./static/static (copied to
@@ -58,10 +58,10 @@ pre-build:
 
 	make build-cv
 
-	cd stat_aggregator; \
+	cd scripts/stat_aggregator; \
 		PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome ./scholar-stats.py
 
-	cd stat_aggregator; \
+	cd scripts/stat_aggregator; \
 		PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome ./scholar-citations.py
 
 	# before the astro build, so the build picks up fresh manifests from ./static
@@ -70,7 +70,7 @@ pre-build:
 
 fetch-pcs:
 	# PCS fetching
-	cd stat_aggregator; \
+	cd scripts/stat_aggregator; \
 		python3 fetch_PCS.py # $? -eq 0 || echo "failed PCS lookup (no internet?)"
 
 rename-artworks:
@@ -91,22 +91,14 @@ rename-artworks:
 # 	rm -rf ./public/portfolio/webpack.config.js
 
 post-build:
-	# the astro build empties ./public, so recreate the dirs this target writes into
-	mkdir -p public/cv public/static
+	# the astro build empties ./public, so recreate the dir this target writes into
+	mkdir -p public/cv
 	# move cv
 	mv academic-cv/cv.pdf "public/cv/oppenlaender-cv.pdf"
 	mv academic-cv/resume.pdf "public/cv/resume.pdf"
 	mv academic-cv/publications.pdf "public/cv/oppenlaender-publications.pdf"
 	# TODO # mv academic-cv/out.pdf "public/cv/cv-jonas-oppenlaender-`date '+%Y.%m.%d'`.pdf"
 	rm -rf academic-cv
-
-	# move other files
-	cp ./src/travel.json ./public/
-	cp ./src/projects.json ./public/static/
-	cp ./src/news.json ./public/
-	# cp -rf ./src/img/artworks ./public/static/
-	# copy fetched PCS data
-	cp ./stat_aggregator/peer-reviews.json ./public/peer-reviews.json
 
 	# give unchanged output its previous mtime so `aws s3 sync` skips it
 	python3 scripts/post-build/restore-mtimes.py
@@ -138,10 +130,6 @@ fetch-cv:
 	fi
 
 replace-cv:
-	# modify publication-list.tex to use the downloaded graph
-	cd academic-cv; \
-		sed 's|figures/publications.png|graph.png|g' publication-list.tex > publications.tex
-
 	# set the options in the CV
 	cd academic-cv; \
 		sed 's|\\excludefromprint{.*}||g' cv.tex | sponge cv.tex; \
@@ -194,6 +182,10 @@ replace-cv:
 		sed 's|\\definenewtoggle{showpublicationsummary}{false}|\\definenewtoggle{showpublicationsummary}{true}|g' publication-list.tex | sponge publication-list.tex; \
 		sed 's|\\definenewtoggle{showmanuscripts}{true}|\\definenewtoggle{showmanuscripts}{false}|g' publication-list.tex | sponge publication-list.tex
 
+	# publications.tex is what build-cv compiles: derive it from publication-list.tex
+	# only after the options above are set, and point it at the downloaded graph
+	cd academic-cv; \
+		sed 's|figures/publications.png|graph.png|g' publication-list.tex > publications.tex
 
 build-cv:
 	# build the publication list

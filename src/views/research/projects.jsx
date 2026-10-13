@@ -5,7 +5,7 @@ import React from "react"
 import { spacer } from "../../common.js"
 import ProjectItem from "../../components/ProjectItem"
 
-import projects from "../../projects.json"
+import projects from "../../../static/static/projects.json"
 
 
 const CustomImage = ({image}) => (

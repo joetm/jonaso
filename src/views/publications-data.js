@@ -1,13 +1,13 @@
 // Build-time shaping of the publication data (was fetched + processed
 // client-side in the old Gatsby page).
 import { references as refsRaw, referencesType as refDetailRaw } from "../data/build-data"
-import citationsRaw from "../../stat_aggregator/publications-citations.json"
+import citationsRaw from "../../scripts/stat_aggregator/publications-citations.json"
 
 // bibtex2html renders a bib `note` as its own line ("\nHonorable mention.\n").
 // Prefix award notes with a trophy icon (Semantic UI icon.min.css, already loaded).
 const AWARD_RE = /\n((?:Honou?rable mention|Best [^\n]*?(?:paper|award))[^\n]*?)\.?(?=\n)/gi
 function markAwards(html) {
-  return html.replace(AWARD_RE, '\n<span class="pub-award"><i aria-hidden="true" class="yellow trophy icon"></i>$1</span>')
+  return html.replace(AWARD_RE, '\n<span class="pub-award"><i aria-hidden="true" class="yellow trophy icon"></i>$1</span>.')
 }
 
 /**

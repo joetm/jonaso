@@ -1,7 +1,7 @@
 import React from "react"
 import CitationMetrics from "../components/CitationMetrics"
 import { referencesDetail as pubs } from "../data/build-data"
-import cits from "../../stat_aggregator/publications-citations.json"
+import cits from "../../scripts/stat_aggregator/publications-citations.json"
 
 // was two client-side fetches (react-query + useEffect); now build-time
 const data = pubs.map(x => x.jufo ? x.jufo : 0).reduce(( previousValue, currentValue ) => parseInt(previousValue, 10) + parseInt(currentValue, 10), 0)

@@ -59,11 +59,6 @@ export default defineConfig({
   },
   integrations: [react(), servePublicInDev()],
   vite: {
-    optimizeDeps: {
-      // the dep scanner crawls src/pages/_gatsby-legacy/** too; keep it from
-      // following `import "gatsby"` into gatsby's unparseable cache-dir
-      exclude: ['gatsby'],
-    },
     server: {
       watch: {
         // The repo carries ~125k data/output files (reading_list alone has
@@ -80,7 +75,6 @@ export default defineConfig({
           '**/libs/**',
           '**/dist-newstyle/**',
           '**/ENV/**',
-          '**/.data-snapshot/**',
           '**/bin/**',
         ],
       },

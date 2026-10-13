@@ -4,7 +4,7 @@ import 'semantic-ui-css/components/item.min.css'
 
 import React from "react"
 import cv from "../cv.json"
-import pcsreviews from "../../stat_aggregator/peer-reviews.json"
+import pcsreviews from "../../static/peer-reviews.json"
 
 
 const _PORTFOLIO_URL = 'https://komasurfer.com/portfolio/'
