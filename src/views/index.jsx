@@ -66,15 +66,6 @@ export default function Home() {
                   Macedonia, the United States, and Finland.
               </p>
 
-              <p style={{marginTop:'1rem'}}>
-                  <i className="arrow right icon"></i>
-                  Academic <a href="/cv/oppenlaender-cv.pdf">CV</a>
-                  {/*
-                  &nbsp;|&nbsp;
-                  <a href="/cv/resume.pdf">Resume</a>
-                  */}
-              </p>
-
               <div>
                 <h3 style={{textAlign:'left'}}>
                   News
@@ -132,6 +123,15 @@ export default function Home() {
                 <TravelRotary />
               </aside>
               */}
+
+              <p style={{marginTop:'1rem'}}>
+                  <i className="arrow right icon"></i>
+                  Academic <a href="/cv/oppenlaender-cv.pdf">CV</a>
+                  {/*
+                  &nbsp;|&nbsp;
+                  <a href="/cv/resume.pdf">Resume</a>
+                  */}
+              </p>
 
             </div>
           </div>

@@ -1,5 +1,6 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { Line, LineChart, CartesianGrid, Legend, ResponsiveContainer, XAxis, YAxis } from 'recharts'
+import { useGrowIn } from './useGrowIn'
 
 // Long-term interests timeline island. Receives its data at build time
 // (was a client-side fetch of topkeyword-timeline.json); the legend/line
@@ -45,6 +46,16 @@ export default function LTInterests({ graphdata }) {
   }
   const [ highlighted, setHighlighted ] = useState(null)
 
+  // tell the keyword bar chart (a separate island) which interest is
+  // highlighted, so it can darken the matching bar
+  useEffect(() => {
+    const name = highlighted ? graphdata.legend[highlighted] : null
+    window.dispatchEvent(new CustomEvent('interest-highlight', { detail: name }))
+  }, [highlighted])
+
+  // lines grow from the bottom, see useGrowIn
+  const grow = useGrowIn(graphdata.data, Object.keys(graphdata.legend))
+
   function formatXAxis(t) {
     const d = new Date(t * 1000)
     return `${d.getFullYear()}-${d.getMonth()}`
@@ -67,7 +78,8 @@ export default function LTInterests({ graphdata }) {
     <div style={{padding: '1rem 0 2rem 0'}}>
       <ResponsiveContainer width="100%" height={HEIGHT}>
         <LineChart
-          data={graphdata.data}
+          ref={grow.chartRef}
+          data={grow.data}
           width={730} height={250}
         >
             <CartesianGrid strokeDasharray="3 3" />
@@ -79,7 +91,7 @@ export default function LTInterests({ graphdata }) {
               tickCount={24}
             />
             <YAxis
-              domain={[0, 'dataMax']}
+              domain={[0, grow.yMax]}
             />
             <Legend
               formatter={(value, entry, index) => (<span style={{fontWeight: highlighted === value ? 'bold' : 'normal'}}>{graphdata.legend[value]}</span>)}
@@ -98,7 +110,7 @@ export default function LTInterests({ graphdata }) {
                     strokeDasharray={lines.dashing[e[0]]}
                     fill={lines.colors[e[0]]}
                     connectNulls={false}
-                    isAnimationActive={true}
+                    isAnimationActive={false}
                     onMouseOver={highlightLine}
                     onMouseOut={unselectLine}
                     dot={false}

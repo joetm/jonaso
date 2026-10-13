@@ -5,7 +5,7 @@ import 'semantic-ui-css/components/item.min.css'
 
 import React from "react"
 import { noMarginGrid } from "../common"
-import { references, referencesDetail, citations } from "./publications-data"
+import { references, referencesDetail, citations, citationGroups } from "./publications-data"
 
 // All three list views are prerendered; a small vanilla script in
 // publications.astro toggles them (was useState + client-side fetches).
@@ -160,30 +160,39 @@ export default function Publications() {
         </div>
 
         <div className="ui container" id="publications-cits" style={{display:'none'}}>
-
-          {
-            citations.map(c => {
-              const icostr = c.__html ? c.__html.indexOf('.pdf') === -1 ? 'file outline' : 'file alternate outline' : 'file outline'
-                return (
-                  <div className="ui grid" key={`${c.title}-${c.citations}`} style={noMarginGrid}>
-                      <div className="row">
-                        <div className="one wide column">
-                          <PubIcon icostr={icostr} />
+              {
+                citationGroups.map(group => {
+                  return (
+                    <div className="ui grid" key={group.label} style={noMarginGrid}>
+                        <div className="row">
+                          <h1>{group.label}</h1>
                         </div>
                         {
-                          c.__html ?
-                            <div className="thirteen wide column" dangerouslySetInnerHTML={c}></div>
-                          :
-                            <div className="thirteen wide column">{c.title}</div>
+                          group.entries.map((item, index) => {
+                            let html = item.__html.replace('Jonas Oppenlaender', '<strong>Jonas Oppenlaender</strong>')
+                            html = html.replace('Jonas Oppenländer', '<strong>Jonas Oppenländer</strong>')
+                            html = html.replace('--', '–')
+                            const icostr = html.indexOf('.pdf') === -1 ? 'file outline' : 'file alternate outline'
+                            return (
+                              <div className="row" key={index}>
+                                <div className="two wide column">
+                                  <PubIcon icostr={icostr} />
+                                </div>
+                                <div className="fourteen wide column">
+                                  <div className="item">
+                                    <div className="content">
+                                      <div className="header" dangerouslySetInnerHTML={{__html: html}}></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            )
+                          })
                         }
-                        <div className="two wide column">
-                          {c.citations.replace('*', '')}
-                        </div>
-                      </div>
-                  </div>
-              )
-            })
-          }
+                    </div>
+                  )
+                })
+              }
           <div className="spacer"></div>
         </div>
 
