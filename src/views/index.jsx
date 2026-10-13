@@ -34,7 +34,8 @@ export default function Home() {
                 ),
               a Postdoctoral Researcher at the <a href="https://www.oulu.fi/en/university/faculties-and-units/faculty-information-technology-and-electrical-engineering/center-for-ubiquitous-computing">Centre for Applied Computing</a>, University of Oulu.
 
-              I hold a Doctor Science (Technology) in Computer Science (with distinction) from the <a href="https://www.oulu.fi/" target="_blank" rel="noreferrer">University of Oulu</a>,
+              I hold the Title of Docent in Computer Science and Engineering – Creative Generative AI
+              and a Doctor Science (Technology) in Computer Science (with distinction) from the <a href="https://www.oulu.fi/" target="_blank" rel="noreferrer">University of Oulu</a>,
               a Master of Science in Computer Science (with distinction) at the <a href="https://www.southampton.ac.uk/" target="_blank" rel="noreferrer">University of Southampton</a>,
               and a Diplom-Wirtschaftsingenieur degree from <a href='https://www.tu-darmstadt.de/' target="_blank" rel="noreferrer">TU Darmstadt</a>.
               Prior to coming to the University of Oulu, I held academic positions at
