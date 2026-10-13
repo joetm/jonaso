@@ -36,7 +36,7 @@ export default function Home() {
 
               I hold the Title of Docent in Computer Science and Engineering – Creative Generative AI
               and a Doctor Science (Technology) in Computer Science (with distinction) from the <a href="https://www.oulu.fi/" target="_blank" rel="noreferrer">University of Oulu</a>,
-              a Master of Science in Computer Science (with distinction) at the <a href="https://www.southampton.ac.uk/" target="_blank" rel="noreferrer">University of Southampton</a>,
+              a Master of Science in Computer Science (with distinction) from the <a href="https://www.southampton.ac.uk/" target="_blank" rel="noreferrer">University of Southampton</a>,
               and a Diplom-Wirtschaftsingenieur degree from <a href='https://www.tu-darmstadt.de/' target="_blank" rel="noreferrer">TU Darmstadt</a>.
               Prior to coming to the University of Oulu, I held academic positions at
               Karlsruhe Institute of Technology,
@@ -79,6 +79,9 @@ export default function Home() {
                   News
                 </h3>
                 <ul>
+                  <li style={{paddingBottom:'.5rem'}}>
+                    I was awarded the Title of Docent in Computer Science and Engineering &ndash; Creative Generative AI by the <a href="https://www.oulu.fi/" target="_blank" rel="noreferrer">University of Oulu</a>.
+                  </li>
                   <li style={{paddingBottom:'.5rem'}}>
                     [Honorable Mention] Our paper <a href="https://default-images.github.io/" target="_blank"><i>&quot;An Exploration of Default Images in Text-to-Image Generation&quot;</i></a> has been presented at ACM CHI 2026.
                   </li>

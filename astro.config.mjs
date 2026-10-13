@@ -30,7 +30,7 @@ function snapshotJsonDir(fromRel, toRel) {
 
 fs.rmSync(SNAPSHOT_DIR, { recursive: true, force: true })
 snapshotJsonDir('public/static', 'static')
-// the artwork manifests live in ./static (written by processImages.py), which
+// the artwork manifests live in ./static (written by scripts/pre-build/processImages.py), which
 // the build never empties — snapshotted anyway so all prev-build data imports
 // go through .data-snapshot/ uniformly
 snapshotJsonDir('static/artworks/json', 'artworks-json')

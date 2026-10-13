@@ -14,9 +14,11 @@ import { graphdata } from '../views/publications-data'
 
 <style is:global>
   /* responsive icon sizing, was @artsy/fresnel: sm=large, md=huge, lg=big */
-  .pub-icon { font-size: 1.5em; }
-  @media (min-width: 768px) { .pub-icon { font-size: 4em; } }
-  @media (min-width: 990px) { .pub-icon { font-size: 2em; } }
+  /* i.icon.* to beat Semantic's i.icon{font-size:1em} */
+  i.icon.pub-icon { font-size: 1.5em; line-height: 1; vertical-align: middle; }
+  @media (min-width: 768px) { i.icon.pub-icon { font-size: 4em; } }
+  @media (min-width: 990px) { i.icon.pub-icon { font-size: 2em; } }
+  .pub-award { display: block; font-weight: bold; margin: .25em 0; }
 </style>
 
 <script>

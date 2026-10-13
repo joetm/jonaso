@@ -68,7 +68,7 @@ async function copyAndReturn(source, destination) {
           // if jonaso.de/publications is broken at the time of build, use a fallback graph
           try {
             await new Promise((resolve, reject) => {
-                fs.copyFile('graph-BAK.png', 'graph.png', (err) => {
+                fs.copyFile(__dirname + '/graph-BAK.png', 'graph.png', (err) => {
                     if (err) {
                         console.error('Error occurred:', err)
                         reject(err)

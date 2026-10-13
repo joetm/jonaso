@@ -38,7 +38,7 @@ pre-build:
 
 	# make bib-json
 	pandoc-citeproc --bib2json ./src/bibliography/publications.bib > ./src/bibliography/publications.json
-	python3 fix-publications-json.py
+	python3 scripts/pre-build/fix-publications-json.py
 
 	make build-cv
 
@@ -89,18 +89,18 @@ post-build:
 	# create bibliography html
 	# --style "SIGCHI-Reference-Format"
 	# -- style "ACM-Reference-Format"
-	bibtex2html -noheader -nofooter --style "SIGCHI-Reference-Format-MOD" "src/bibliography/publications.bib"
+	BSTINPUTS=scripts/post-build: bibtex2html -q -noheader -nofooter -nf website "website" --style "SIGCHI-Reference-Format-MOD" "src/bibliography/publications.bib"
 	# convert html to json
-	php ./parse.php
+	php scripts/post-build/parse.php
 	# move json file to public folder
 	mv "./references.json" ./public/static/
 	# copy bib file to public folder
 	cp "src/bibliography/publications.bib" ./public/static/
 	# create detailed references json
-	python3 ./pyparse.py
+	python3 scripts/post-build/pyparse.py
 	# move json file to public folder
 	# mv ./references-detail.json ./public/static/
-	php ./parsePerType.php
+	php scripts/post-build/parsePerType.php
 	# move json file to public folder
 	# mv ./references-type.json ./public/static/
 	rm publications.html
@@ -119,12 +119,12 @@ post-build:
 	cp ./stat_aggregator/peer-reviews.json ./public/peer-reviews.json
 
 	# give unchanged output its previous mtime so `aws s3 sync` skips it
-	python3 restore-mtimes.py
+	python3 scripts/post-build/restore-mtimes.py
 
 	# make copy-portfolio
 
 process-artworks:
-	python3 processImages.py
+	python3 scripts/pre-build/processImages.py
 	if [ -d "./artworks-json" ];then \
 		rm -rf ./artworks-json; \
 	fi
@@ -138,13 +138,13 @@ fetch-cv:
 	git clone --depth=1 git@github.com:joetm/academic-cv.git
 
 	# get an up-to-date graph of the publications from the homepage to use in the latex CV
-	PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome ./acquire-graph.js
+	PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome ./scripts/pre-build/acquire-graph.js
 
 	# TODO: the above currently fails (after Ubuntu upgrade)
 	if [ -f 'graph.png' ];then \
 		mv ./graph.png ./academic-cv/; \
 	else \
-	    cp ./graph-BAK.png ./academic-cv/; \
+	    cp ./scripts/pre-build/graph-BAK.png ./academic-cv/graph.png; \
 	fi
 
 replace-cv:
@@ -201,7 +201,7 @@ replace-cv:
 	# set the options in the publications list
 	cd academic-cv; \
 		sed 's|\\excludefromprint{.*}||g' publication-list.tex | sponge publication-list.tex; \
-		sed 's|\\definenewtoggle{showpublicationsummary}{false}|\\definenewtoggle{showpublicationsummary}{true}|g' publication-list.tex | sponge publication-list.tex
+		sed 's|\\definenewtoggle{showpublicationsummary}{false}|\\definenewtoggle{showpublicationsummary}{true}|g' publication-list.tex | sponge publication-list.tex; \
 		sed 's|\\definenewtoggle{showmanuscripts}{true}|\\definenewtoggle{showmanuscripts}{false}|g' publication-list.tex | sponge publication-list.tex
 
 
