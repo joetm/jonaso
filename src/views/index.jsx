@@ -36,7 +36,7 @@ export default function Home() {
               </p>
 
               <p>
-              I hold the Title of Docent in Computer Science and Engineering &ndash; <strong>Creative Generative AI</strong> and a Doctor of Science (Technology) in Computer Science (Human-Computer Interaction; with distinction) from the <a href="https://www.oulu.fi/" target="_blank" rel="noreferrer">University of Oulu</a>.
+              I hold the Title of Docent in Creative Generative AI (Computer Science and Engineering) and a Doctor of Science (Technology) in Computer Science (Human-Computer Interaction; with distinction) from the <a href="https://www.oulu.fi/" target="_blank" rel="noreferrer">University of Oulu</a>.
               I was awarded a Master of Science in Computer Science (with distinction) from the <a href="https://www.southampton.ac.uk/" target="_blank" rel="noreferrer">University of Southampton</a>,
               and a Diplom-Wirtschaftsingenieur degree from <a href='https://www.tu-darmstadt.de/' target="_blank" rel="noreferrer">TU Darmstadt</a>.
               Prior to coming to the University of Oulu, I held academic positions at
