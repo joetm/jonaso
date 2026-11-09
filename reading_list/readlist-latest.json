@@ -1,8 +1,866 @@
 {
-    "modified": 1791868783,
-    "unrecognized_overall": 1129,
+    "modified": 1794211826,
+    "unrecognized_overall": 1130,
     "unrecognized_overall_percent": 0.07,
     "documents": [
+        {
+            "title": "NEOLOGISM INOCULATION PROMPTING",
+            "year": 2026,
+            "authors": [
+                "David Demitri",
+                "Cameron Holmes"
+            ],
+            "filename": "2611.04260.pdf",
+            "recog": 1,
+            "modified": 1794211687,
+            "keywords": "AI Engineering > Prompt Engineering > Prompt Techniques > Inoculation Prompting > Neologism Inoculation Prompting",
+            "level": 5,
+            "priority": 2
+        },
+        {
+            "title": "I used AI to run 151 personalised 1- on-1 exams at University",
+            "year": 2026,
+            "authors": [
+                "Vassilis Kostakos"
+            ],
+            "filename": "I used AI to run 151 personalised 1-on-1 exams at University _ LinkedIn.pdf",
+            "recog": 1,
+            "modified": 1794211240,
+            "keywords": "AI Engineering > Agents, Autonomous Task Management > Applications > Education > Oral Exams",
+            "level": 5,
+            "priority": 3
+        },
+        {
+            "title": "LLMs can natively read & write neural network weights",
+            "year": 2026,
+            "authors": [
+                "Rikiya Takehi",
+                "Jayden Teoh",
+                "Alex Zhang",
+                "Omar Khattab"
+            ],
+            "filename": "Sparks of Weight-Space Programming_ LLMs can natively read & write neural network weights.pdf",
+            "recog": 1,
+            "modified": 1793970705,
+            "keywords": "Machine Learning > Weight Space Programming",
+            "level": 2,
+            "priority": 3
+        },
+        {
+            "title": "Prompting Against Persona Drift: Comparing Intervention Timing and Content in LLM-Simulated Conversations",
+            "year": 2026,
+            "authors": [
+                "Nicolas Leins",
+                "Jennifer Haase"
+            ],
+            "filename": "2609.24532.pdf",
+            "recog": 1,
+            "modified": 1793958696,
+            "keywords": "NLP > Applications > Simulation > Personas > Issues > Persona Drift",
+            "level": 6,
+            "priority": 1
+        },
+        {
+            "title": "Would you take a test to see if your life will be cut short? I did - and it changed me",
+            "year": 2026,
+            "authors": [
+                "Katie Doy",
+                "Emily Doughty",
+                "Sian Williams"
+            ],
+            "filename": "Would you take a test to see if your life will be cut short_ I did - and it changed me.pdf",
+            "recog": 1,
+            "modified": 1793882590,
+            "keywords": "Medical, Health, Drugs > Dementia",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "What Drives Representation Steering? A Mechanistic Case Study on Steering Refusal",
+            "year": 2026,
+            "authors": [
+                "Stephen Cheng",
+                "Sarah Wiegreffe",
+                "Dinesh Manocha"
+            ],
+            "filename": "2604.08524.pdf",
+            "recog": 1,
+            "modified": 1793616126,
+            "keywords": "AI > Explainable AI (XAI) > Interpretability > Mechanistic Interpretability > Representation Steering > Steering Refusal",
+            "level": 6,
+            "priority": 2
+        },
+        {
+            "title": "AI Models Can Provably Hide Arbitrary Capabilities",
+            "year": 2026,
+            "authors": [
+                "Andis Draguns",
+                "Sumeet Ramesh Motwani",
+                "Christian Schroeder"
+            ],
+            "filename": "2610.13928.pdf",
+            "recog": 1,
+            "modified": 1793615900,
+            "keywords": "NLP > Issues > Evaluation Awareness",
+            "level": 3,
+            "priority": 2
+        },
+        {
+            "title": "The Misleading Definition of Creativity Suggested by AI Must Be Kept out of the Classroom",
+            "year": 2026,
+            "authors": [
+                "Mark A. Runco"
+            ],
+            "filename": "education-15-01141.pdf",
+            "recog": 1,
+            "modified": 1793613549,
+            "keywords": "Creativity > Creative AI > Issues",
+            "level": 3,
+            "priority": 2
+        },
+        {
+            "title": "How AI is Reshaping Knowledge, and Not for the Better",
+            "year": 2026,
+            "authors": [
+                "JEPPE KLITGAARD STRICKER"
+            ],
+            "filename": "The Synthetic Knowledge Crisis.pdf",
+            "recog": 1,
+            "modified": 1793601939,
+            "keywords": "Future of Work > Issues > Synthetic Knowledge Crisis",
+            "level": 3,
+            "priority": 2
+        },
+        {
+            "title": "AI Article Reviews Dominate Human Peer Reviews at Their Best: Evidence and Policy Choices*",
+            "year": 2026,
+            "authors": [
+                "Gary King",
+                "Steven Worthington"
+            ],
+            "filename": "peerless.pdf",
+            "recog": 1,
+            "modified": 1793599107,
+            "keywords": "Peer Review > Issues > AI-Generated Peer Reviews",
+            "level": 3,
+            "priority": 3
+        },
+        {
+            "title": "Why is AI-generated language so hard to understand?",
+            "year": 2026,
+            "authors": [
+                "Thomas Hikaru Clark",
+                "Matias B. Martin",
+                "Kyle Mahowald"
+            ],
+            "filename": "2610.29162.pdf",
+            "recog": 1,
+            "modified": 1793552267,
+            "keywords": "Issues > AI-generated Articles > AI-generated Language",
+            "level": 3,
+            "priority": 3
+        },
+        {
+            "title": "Someone discovered an utterly absurd JavaScript obfuscation technique: by stuffing the code with a ton of function names related to biological weapons, poisons, and lethal doses, it causes AI to refuse analyzing the code due to safety restrictions.",
+            "year": 2026,
+            "authors": [],
+            "filename": "lifcc on X_ _\u6709\u4eba\u53d1\u73b0\u4e86\u4e00\u79cd\u975e\u5e38\u79bb\u8c31\u7684 JavaScript_ _ X.pdf",
+            "recog": 1,
+            "modified": 1793522504,
+            "keywords": "NLP > Issues > Code Obfuscation",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "The Scientific Research Taste Benchmark (SciTaste-Bench): A Multi-Disciplinary Benchmark for Assessing Large Language Models\u2019 Judgment of Research Taste in Scientific Papers",
+            "year": 2026,
+            "authors": [
+                "Xinyi Gao",
+                "Xiaogang Li",
+                "Jialu Nie",
+                "Yuting Fu",
+                "Jingye Xu",
+                "Xinyan Liu",
+                "Muxi Zheng",
+                "Xiao Zhou",
+                "Wenbo Li",
+                "Xuan Ren",
+                "Hu Wei",
+                "Bing Zhao"
+            ],
+            "filename": "2610.28653.pdf",
+            "recog": 1,
+            "modified": 1793428405,
+            "keywords": "Benchmarks, gold standards, datasets > Science > Scientific Taste > SciTaste-Bench",
+            "level": 4,
+            "priority": 3
+        },
+        {
+            "title": "No mic? Samsung TVs may hijack your soundbar to listen in, researcher claims - Notebookcheck News",
+            "year": 2026,
+            "authors": [
+                "Anubhav Sharma"
+            ],
+            "filename": "No mic_ Samsung TVs may hijack your soundbar to listen in, researcher claims - Notebookcheck News.pdf",
+            "recog": 1,
+            "modified": 1793428300,
+            "keywords": "Privacy > Spy TVs",
+            "level": 2,
+            "priority": 1
+        },
+        {
+            "title": "Is the arXiv Apocalypse upon us? A break in preprint growth coincident with agentic AI",
+            "year": 2026,
+            "authors": [
+                "Carlo R. Contaldi"
+            ],
+            "filename": "2610.34449.pdf",
+            "recog": 1,
+            "modified": 1793428171,
+            "keywords": "Issues > AI-generated Articles > arXiv Apocalypse",
+            "level": 3,
+            "priority": 3
+        },
+        {
+            "title": "Industry Job Search Retrospective",
+            "year": 2026,
+            "authors": [],
+            "filename": "Industry Job Search Retrospective _ Kevin Feng.pdf",
+            "recog": 1,
+            "modified": 1793373716,
+            "keywords": "Design, HCI, UI, UX > Issues > HCI Jobs",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "Instant Software Factories",
+            "year": "N/A",
+            "authors": [
+                "Wenxin Jiang",
+                "Mikola Lysenko"
+            ],
+            "filename": "2610.36254.pdf",
+            "recog": 1,
+            "modified": 1793260695,
+            "keywords": "Machine Learning > Generative Deep Learning > Applications > Disposable Software, Disposable Apps, Just-in-Time Apps > Instant Software Factories",
+            "level": 5,
+            "priority": 2
+        },
+        {
+            "title": "Quantifying and Mitigating Default Behaviors in Text-to-Image Models",
+            "year": 2026,
+            "authors": [
+                "Royi Rassin",
+                "Aviv Slobodkin",
+                "Shauli Ravfogel",
+                "Yanai Elazar",
+                "Yoav Goldberg"
+            ],
+            "filename": "2026.findings-emnlp.1596.pdf",
+            "recog": 1,
+            "modified": 1793259344,
+            "keywords": "Machine Learning > Generative Deep Learning > Issues > Default Behavior > GRADE",
+            "level": 5,
+            "priority": 3
+        },
+        {
+            "title": "An Entangled Pedagogy: Looking Beyond the Pedagogy\u2014Technology Dichotomy",
+            "year": 2026,
+            "authors": [],
+            "filename": "s42438-022-00302-7.pdf",
+            "recog": 1,
+            "modified": 1793092006,
+            "keywords": "NLP > Applications > Education",
+            "level": 3,
+            "priority": 2
+        },
+        {
+            "title": "Anthropic Education Report:\u00a0How educators use Claude",
+            "year": 2026,
+            "authors": [],
+            "filename": "Education Report_ How educators use Claude _ Anthropic.pdf",
+            "recog": 1,
+            "modified": 1793090348,
+            "keywords": "NLP > Applications > Education",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "General scales unlock AI evaluation with explanatory and predictive power",
+            "year": 2026,
+            "authors": [
+                "Lexin Zhou",
+                "Lorenzo Pacchiardi",
+                "Fernando Mart\u00ednez-Plumed",
+                "Katherine M. Collins",
+                "Yael Moros-Daval",
+                "Seraphina Zhang",
+                "Qinlin Zhao",
+                "Yitian Huang",
+                "Luning Sun",
+                "Jonathan E. Prunty",
+                "Zongqian Li",
+                "Pablo S\u00e1nchez-Garc\u00eda",
+                "Kexin Jiang-Chen",
+                "Pablo A. M. Casares",
+                "Jiyun Zu",
+                "John Burden",
+                "Behzad Mehrbakhsh",
+                "David Stillwell",
+                "Manuel Cebrian",
+                "Jindong Wang",
+                "Peter Henderson",
+                "Sherry Tongshuang Wu",
+                "Patrick C. Kyllonen",
+                "Lucy Cheke",
+                "Xing Xie",
+                "Jos\u00e9 Hern\u00e1ndez-Orallo"
+            ],
+            "filename": "s41586-026-10303-2.pdf",
+            "recog": 1,
+            "modified": 1793086944,
+            "keywords": "Benchmarks, gold standards, datasets > Agents > Safety > General Scales",
+            "level": 4,
+            "priority": 2
+        },
+        {
+            "title": "When AI Takes the Couch: Psychometric Jailbreaks Reveal Internal Conflict in Frontier Models",
+            "year": 2026,
+            "authors": [
+                "Afshin Khadangi",
+                "Amir Sartipi",
+                "Igor Tchappi",
+                "Gilbert Fridgen"
+            ],
+            "filename": "2512.04124.pdf",
+            "recog": 1,
+            "modified": 1793086211,
+            "keywords": "AI > Issues > Model Welfare > Psychoanalysis",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "Into the Unknown: Benchmarking AI agents on open scientific research problems",
+            "year": 2026,
+            "authors": [
+                "Seungone Kim",
+                "Jiayi Geng",
+                "Young-Jun Lee",
+                "Bo Liu",
+                "Juyoung Suk",
+                "Nicholas Lubbers",
+                "Mitchell Wood",
+                "Marcus Noack",
+                "Yong-Xin Yao",
+                "Yuan Shi",
+                "Roxana Bujack",
+                "Cristina Garcia Cardona",
+                "Austin Rodriguez",
+                "Ilon Joseph",
+                "Woojin Cho",
+                "Zora Zhiruo Wang",
+                "Chuanyang Jin",
+                "Ian Wu",
+                "Apurva Gandhi",
+                "Tianjian Li",
+                "Weiwei Sun",
+                "Dongyeop Kang",
+                "Jay Shin",
+                "Akari Asai",
+                "Graham Neubig",
+                "Sean Welleck"
+            ],
+            "filename": "2610.19159.pdf",
+            "recog": 1,
+            "modified": 1792926233,
+            "keywords": "Benchmarks, gold standards, datasets > Science > Into the Unknown",
+            "level": 3,
+            "priority": 3
+        },
+        {
+            "title": "Large Language Models Often Know When They Are Being Evaluated",
+            "year": 2026,
+            "authors": [
+                "Joe Needham",
+                "Giles Edkins"
+            ],
+            "filename": "2505.23836.pdf",
+            "recog": 1,
+            "modified": 1792926177,
+            "keywords": "NLP > Issues > Evaluation Awareness",
+            "level": 3,
+            "priority": 3
+        },
+        {
+            "title": "Tools of the Trade: Planned Missing Data Designs for Research in Cognitive Development",
+            "year": 2026,
+            "authors": [
+                "Mijke Rhemtulla"
+            ],
+            "filename": "nihms530642.pdf",
+            "recog": 1,
+            "modified": 1792817339,
+            "keywords": "Research Methods > Statistics > Imputation > Planned Missing Data Designs (PMD)",
+            "level": 4,
+            "priority": 3
+        },
+        {
+            "title": "The real reasons US politicians are getting older",
+            "year": 2026,
+            "authors": [
+                "James FitzGerald"
+            ],
+            "filename": "The real reasons US politicians are getting older.pdf",
+            "recog": 1,
+            "modified": 1792731076,
+            "keywords": "Countries > United States > Issues > Gerontocracy",
+            "level": 4,
+            "priority": 0
+        },
+        {
+            "title": "Fairness in the Eye of the Beholder: How Gender Bias Alignment Influences Fairness Perceptions and Reliance in Human\u2013AI Teams",
+            "year": 2026,
+            "authors": [
+                "DOMENIQUE ZIPPERLING",
+                "LUCA DECK",
+                "JULIA ZELLER-LANZL",
+                "NIKLAS K\u00dcHL"
+            ],
+            "filename": "3858913.pdf",
+            "recog": 1,
+            "modified": 1792730929,
+            "keywords": "AI > Human-AI-Interaction, Human-Machine-Interaction > Collaboration > Human-Agent Teaming > Issues > Gender Bias",
+            "level": 6,
+            "priority": 0
+        },
+        {
+            "title": "FROM UNCERTAINTY TO ACTION: LEARNING TO STEER LLM AGENTS",
+            "year": 2026,
+            "authors": [
+                "STEER LLM AGENTS",
+                "Hanwen Li",
+                "Jinhao Duan",
+                "Guanhua Zhu",
+                "Junchi Lu",
+                "Bo Shen",
+                "Chenxi Yuan",
+                "Kaidi Xu"
+            ],
+            "filename": "2610.09115.pdf",
+            "recog": 1,
+            "modified": 1792649680,
+            "keywords": "AI Engineering > Agents, Autonomous Task Management > Agent Steering",
+            "level": 3,
+            "priority": 3
+        },
+        {
+            "title": "Wildfires have caused thick haze on the streets in Indonesia this month",
+            "year": 2026,
+            "authors": [
+                "Sarah Keith-Lucas"
+            ],
+            "filename": "Five ways El Ni\u00f1o is affecting the weather around the world - BBC Weather.pdf",
+            "recog": 1,
+            "modified": 1792561942,
+            "keywords": "Environment > Climate Change > El Ni\u00f1o",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Borneo burning: Life on the frontline of South East Asia's toxic haze",
+            "year": 2026,
+            "authors": [
+                "Liza Tambunan",
+                "Indonesia",
+                "Gavin Butler"
+            ],
+            "filename": "Borneo burning_ Life on the frontline of South East Asia's toxic haze.pdf",
+            "recog": 1,
+            "modified": 1792561743,
+            "keywords": "Environment > Wild Fires > Toxic Haze",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "Is a random human peer better than a highly supportive chatbot in reducing loneliness over time?",
+            "year": 2026,
+            "authors": [
+                "Ruo-Ning Li",
+                "Abhay Singh",
+                "Lyle Ungar",
+                "Fiona Kate Barlow"
+            ],
+            "filename": "1-s2.0-S0022103126000417-main.pdf",
+            "recog": 1,
+            "modified": 1792561395,
+            "keywords": "AI > Issues > AI Companions > Loneliness",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "Updating the Standard Definition of Creativity to Account for the Artificial Creativity of AI",
+            "year": 2026,
+            "authors": [
+                "Mark A. Runco"
+            ],
+            "filename": "Updating the Standard Definition of Creativity to Account for the Artificial Creativity of AI.pdf",
+            "recog": 1,
+            "modified": 1792509360,
+            "keywords": "Creativity > General, Theory > Standard Definition, Novel and Useful",
+            "level": 3,
+            "priority": 3
+        },
+        {
+            "title": "Platform Peers: The Little-Known Market for Peer Reviews",
+            "year": 2026,
+            "authors": [
+                "Amna Pottarath",
+                "Willem Halffman",
+                "Serge Horbach"
+            ],
+            "filename": "PaidPeerReview_AP_WH_SH_R1.pdf",
+            "recog": 1,
+            "modified": 1792509114,
+            "keywords": "Peer Review > Issues > Paid Peer Review",
+            "level": 3,
+            "priority": 2
+        },
+        {
+            "title": "The Nature of Design Practice and Implications for Interaction Design Research",
+            "year": 2026,
+            "authors": [],
+            "filename": "240-1426-4-PB.pdf",
+            "recog": 1,
+            "modified": 1792502628,
+            "keywords": "Design, HCI, UI, UX > Issues > Particular > Ultimate Particular",
+            "level": 4,
+            "priority": 2
+        },
+        {
+            "title": "Beyond Generalization: Research for the Very Particular",
+            "year": 2018,
+            "authors": [
+                "Olav W. Bertelsen",
+                "Susanne B\u00f8dker",
+                "Eva Eriksson",
+                "Stephen Hawking"
+            ],
+            "filename": "3289425.pdf",
+            "recog": 1,
+            "modified": 1792502269,
+            "keywords": "Design, HCI, UI, UX > Issues > Particular",
+            "level": 3,
+            "priority": 2
+        },
+        {
+            "title": "Anthropic bans \u2018abusive or cruel behavior\u2019 toward Claude",
+            "year": 2026,
+            "authors": [],
+            "filename": "Anthropic bans \u2018abusive or cruel behavior\u2019 toward Claude _ The Verge.pdf",
+            "recog": 1,
+            "modified": 1792425281,
+            "keywords": "AI > Issues > Model Welfare",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "{Access|Use|Sustain|_}-ability: Exploration and Quantification of a Linguistic Structure and Its Use in HCI",
+            "year": 2026,
+            "authors": [],
+            "filename": "2610.16206.pdf",
+            "recog": 1,
+            "modified": 1792399592,
+            "keywords": "Meta-Research > HCI > Abilities",
+            "level": 3,
+            "priority": 2
+        },
+        {
+            "title": "Beyond Beauty: Towards a Deeper Understanding of Aesthetics in HCI",
+            "year": 2026,
+            "authors": [
+                "Paul Haimes"
+            ],
+            "filename": "3411763.3450381.pdf",
+            "recog": 1,
+            "modified": 1792398436,
+            "keywords": "Aesthetics > HCI",
+            "level": 2,
+            "priority": 2
+        },
+        {
+            "title": "HAZARDOUS SOLVENTS PERSIST",
+            "year": 2026,
+            "authors": [],
+            "filename": "d41586-026-03005-2.pdf",
+            "recog": 1,
+            "modified": 1792310373,
+            "keywords": "Issues > AI-generated Requests",
+            "level": 2,
+            "priority": 1
+        },
+        {
+            "title": "iLands \u2014 The User-Generated Agent Network",
+            "year": 2026,
+            "authors": [
+                "Ulrika Mulberry",
+                "Zack Addy"
+            ],
+            "filename": "iLands \u2014 The User-Generated Agent Network.pdf",
+            "recog": 0,
+            "modified": 1792310035,
+            "keywords": "Issues > AI-generated Requests > iLands",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "HOW TO PREPARE FOR YOUR FIRST LECTURE",
+            "year": 2026,
+            "authors": [],
+            "filename": "d41586-026-02369-9.pdf",
+            "recog": 1,
+            "modified": 1792309688,
+            "keywords": "Career Advice > Lectures",
+            "level": 2,
+            "priority": 0
+        },
+        {
+            "title": "Paying for Too Many Tokens? Valid and Cost-Efficient Multimodal LLM Annotation with Simple Heuristics",
+            "year": 2026,
+            "authors": [
+                "Zhixi Zhu",
+                "Kristina Gligori\u0107"
+            ],
+            "filename": "2610.00809.pdf",
+            "recog": 1,
+            "modified": 1792297560,
+            "keywords": "NLP > Applications > Annotation > Video Annotation",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "Dissecting Submission Limit in Desk-Rejections: A Mathematical Analysis of Fairness in AI Conference Policies",
+            "year": 2026,
+            "authors": [
+                "Yuefan Cao",
+                "Xiaoyu Li",
+                "Yingyu Liang",
+                "Zhizhou Sha",
+                "Zhenmei Shi",
+                "Zhao Song",
+                "Jiahao Zhang"
+            ],
+            "filename": "4459_Dissecting_Submission_Lim.pdf",
+            "recog": 1,
+            "modified": 1792297466,
+            "keywords": "Conferences > Ai Conference Policies > Submission Limits",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "Wabi-sabi",
+            "year": 2026,
+            "authors": [],
+            "filename": "Wabi-sabi - Wikipedia.pdf",
+            "recog": 1,
+            "modified": 1792212856,
+            "keywords": "Countries > Japan > Wabi-sabi",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "Standard learning provenance taxonomy (SLPT): An open specification and JSON schema for learner \u2013 AI interaction records",
+            "year": 2026,
+            "authors": [
+                "Trond Arne Undheim",
+                "Qaiser Malik",
+                "Nada Hashmi"
+            ],
+            "filename": "1-s2.0-S2352711026006163-main.pdf",
+            "recog": 1,
+            "modified": 1792212801,
+            "keywords": "Machine Learning > Generative Deep Learning > Applications > Education > Standard Learning Provenance Taxonomy (SLPT)",
+            "level": 5,
+            "priority": 2
+        },
+        {
+            "title": "Governing Social Media as a Public Utility",
+            "year": 2026,
+            "authors": [
+                "Raffaele Fabio Ciriello"
+            ],
+            "filename": "3788880.pdf",
+            "recog": 1,
+            "modified": 1792132238,
+            "keywords": "Communities, Networks > Social Media > Public Utility",
+            "level": 3,
+            "priority": 1
+        },
+        {
+            "title": "Kode Vicious Pebbles on the Beach",
+            "year": 2026,
+            "authors": [
+                "George V. Neville-Neil"
+            ],
+            "filename": "3837871.pdf",
+            "recog": 1,
+            "modified": 1792132158,
+            "keywords": "Forschungsfragen, Proposal > Forschungsfragen, Research Questions > Pebbles on Beach",
+            "level": 3,
+            "priority": 0
+        },
+        {
+            "title": "AI giant Anthropic woos potential investors ahead of stock market debut",
+            "year": 2026,
+            "authors": [
+                "Tom Espiner"
+            ],
+            "filename": "AI giant Anthropic woos potential investors ahead of stock market debut.pdf",
+            "recog": 1,
+            "modified": 1792130928,
+            "keywords": "AI > Issues > Hype > IPO",
+            "level": 4,
+            "priority": 0
+        },
+        {
+            "title": "Beyond the Hype: The Efficiency- Throughput Gap with GitHub Copilot",
+            "year": 2026,
+            "authors": [],
+            "filename": "3797488.pdf",
+            "recog": 1,
+            "modified": 1792129997,
+            "keywords": "Future of Work > Issues > Productivity > Efficiency-Throughput Gap",
+            "level": 4,
+            "priority": 3
+        },
+        {
+            "title": "Tool-Call Dependency Structure is Linearly Decodable in LLM Agent Residual Streams",
+            "year": 2026,
+            "authors": [
+                "Tianda Sun",
+                "Dimitar Kazakov"
+            ],
+            "filename": "2605.25310.pdf",
+            "recog": 1,
+            "modified": 1792068983,
+            "keywords": "NLP > Language Models > Tools > Tool Calling",
+            "level": 4,
+            "priority": 3
+        },
+        {
+            "title": "AGENTS ARE SYSTEMS, NOT MODELS: RETHINKING AGENTIC EVALUATION",
+            "year": 2026,
+            "authors": [
+                "Luis Wiedmann",
+                "Leander Girrbach",
+                "Cordelia Schmid",
+                "Zeynep Akata"
+            ],
+            "filename": "2610.01618.pdf",
+            "recog": 1,
+            "modified": 1792066009,
+            "keywords": "AI Engineering > Agents, Autonomous Task Management > Evaluation",
+            "level": 3,
+            "priority": 3
+        },
+        {
+            "title": "Explaining CLIP Zero-shot Predictions Through Concepts",
+            "year": 2026,
+            "authors": [
+                "Onat Ozdemir",
+                "Anders Christensen",
+                "Stephan Alaniz",
+                "Zeynep Akata",
+                "Emre Akbas"
+            ],
+            "filename": "2603.28211.pdf",
+            "recog": 1,
+            "modified": 1792065901,
+            "keywords": "AI > Explainable AI (XAI) > Explainability > Concept-based Explanation",
+            "level": 4,
+            "priority": 3
+        },
+        {
+            "title": "Same Task, Different Circuits: Disentangling Modality-Specific Mechanisms in VLMs",
+            "year": 2026,
+            "authors": [
+                "Yaniv Nikankin",
+                "Dana Arad",
+                "Yossi Gandelsman",
+                "Yonatan Belinkov"
+            ],
+            "filename": "NeurIPS-2025-same-task-different-circuits-disentangling-modality-specific-mechanisms-in-vlms-Paper-Conference.pdf",
+            "recog": 1,
+            "modified": 1792057057,
+            "keywords": "AI > Explainable AI (XAI) > Interpretability > Mechanistic Interpretability > Modality-Specific Mechanisms",
+            "level": 5,
+            "priority": 3
+        },
+        {
+            "title": "\u2018Who is going to pay us when we\u2019re replaced by robots?\u2019 The Indian factory workers told to film themselves for AI",
+            "year": 2026,
+            "authors": [
+                "Anuj Behal"
+            ],
+            "filename": "\u2018Who is going to pay us when we\u2019re replaced by robots_\u2019 The Indian factory workers told to film themselves for AI _ Global development _ The Guardian.pdf",
+            "recog": 1,
+            "modified": 1791972866,
+            "keywords": "Crowdsourcing, Human Computation > Mobile Crowdsourcing > Spatial Crowdsourcing > Training Data Collection",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "Agentic BI fu\u0308r KMU in der Praxis: Ein Schweizer SaaS-Fall mit nao",
+            "year": 2026,
+            "authors": [],
+            "filename": "Agentic BI f\u00fcr KMU in der Praxis_ Ein Schweizer SaaS-Fall mit nao \u2013 Datapeople.pdf",
+            "recog": 1,
+            "modified": 1791967380,
+            "keywords": "AI Engineering > Agents, Autonomous Task Management > Applications > Business Intelligence",
+            "level": 4,
+            "priority": 1
+        },
+        {
+            "title": "SciSpends: an exploratory survey investigating nonreimbursed expenses in biological sciences",
+            "year": 2026,
+            "authors": [
+                "Brett Favaro",
+                "Edward Hind-Ozan"
+            ],
+            "filename": "scispends-an-exploratory-survey-investigating-nonreimbursed-expenses-in-biological-sciences.pdf",
+            "recog": 1,
+            "modified": 1791899400,
+            "keywords": "Issues > Expenses > SciSpends",
+            "level": 3,
+            "priority": 2
+        },
+        {
+            "title": "Do Scientists Pay to Be Scientists?",
+            "year": 2026,
+            "authors": [
+                "Scott Stern"
+            ],
+            "filename": "30046122.pdf",
+            "recog": 1,
+            "modified": 1791898830,
+            "keywords": "Issues > Expenses",
+            "level": 2,
+            "priority": 2
+        },
+        {
+            "title": "BetterBench: Assessing AI Benchmarks, Uncovering Issues, and Establishing Best Practices",
+            "year": 2026,
+            "authors": [
+                "Anka Reuel",
+                "Amelia Hardy",
+                "Mykel J. Kochenderfer"
+            ],
+            "filename": "2411.12990.pdf",
+            "recog": 1,
+            "modified": 1791873294,
+            "keywords": "Benchmarks, gold standards, datasets > NLP > Issues > BetterBench",
+            "level": 4,
+            "priority": 3
+        },
         {
             "title": "Users Continuance Intention of Using Generative AI for Generating Graphic Designs",
             "year": 2026,
@@ -807,994 +1665,6 @@
             "modified": 1789459949,
             "keywords": "NLP > Issues > Cognitive Surrender",
             "level": 3,
-            "priority": 3
-        },
-        {
-            "title": "The Future is for Everyone",
-            "year": 2026,
-            "authors": [],
-            "filename": "The Future is for Everyone.pdf",
-            "recog": 1,
-            "modified": 1789000395,
-            "keywords": "Future of Work > Automation, Technological Unemployment, Digitization > Meta > Pro-AI Manifesto",
-            "level": 4,
-            "priority": 1
-        },
-        {
-            "title": "Getting your hands dirty boosts your health within weeks",
-            "year": 2026,
-            "authors": [
-                "Becca Warner"
-            ],
-            "filename": "Getting your hands dirty boosts your health within weeks.pdf",
-            "recog": 1,
-            "modified": 1789000271,
-            "keywords": "Biology > Human Body > Bacteria > Dirty Hands",
-            "level": 4,
-            "priority": 1
-        },
-        {
-            "title": "Australians will be able to switch off social media algorithms under planned legislation",
-            "year": 2026,
-            "authors": [
-                "Simon Atkinson"
-            ],
-            "filename": "Australians will be able to switch off social media algorithms under planned legislation.pdf",
-            "recog": 1,
-            "modified": 1788835759,
-            "keywords": "Communities, Networks > Social Media > Issues > Algorithm",
-            "level": 4,
-            "priority": 1
-        },
-        {
-            "title": "The Vanishing Apprentice",
-            "year": 2026,
-            "authors": [],
-            "filename": "3830023.pdf",
-            "recog": 1,
-            "modified": 1788835306,
-            "keywords": "Future of Work > Software Development > Junior Software Developer > Apprentices, Apprenticeships",
-            "level": 4,
-            "priority": 3
-        },
-        {
-            "title": "Guide to a Successful Submission \u2013 CHI 2025",
-            "year": 2026,
-            "authors": [],
-            "filename": "Guide to a Successful Submission \u2013 CHI 2025.pdf",
-            "recog": 1,
-            "modified": 1788685996,
-            "keywords": "CHI > Writing",
-            "level": 2,
-            "priority": 3
-        },
-        {
-            "title": "Collective creativity in hybrid societies",
-            "year": 2026,
-            "authors": [
-                "Mason Youngblood",
-                "Katie Mudd",
-                "Manuel Anglada-Tort",
-                "Cameron Jones",
-                "Elena Miu",
-                "Diana Omigie",
-                "Margaret Schedel"
-            ],
-            "filename": "2609.02620.pdf",
-            "recog": 1,
-            "modified": 1788652119,
-            "keywords": "Collective Intelligence > Collective Creativity",
-            "level": 2,
-            "priority": 3
-        },
-        {
-            "title": "Neural Coding as Software Engineering Augmentation, Not Abdication",
-            "year": 2026,
-            "authors": [
-                "Somdip Dey"
-            ],
-            "filename": "3779310.pdf",
-            "recog": 1,
-            "modified": 1788502941,
-            "keywords": "AI > Human-AI-Interaction, Human-Machine-Interaction > Human Augmentation > Neural Coding, Essential Complexity, Accidental Complexity",
-            "level": 4,
-            "priority": 3
-        },
-        {
-            "title": "Structured Creativity Methods for Multi-Agent LLMs: Brainwriting Outperforms Disney and Double Diamond on LLM-Judged Originality",
-            "year": 2026,
-            "authors": [
-                "Jennifer Haase",
-                "Sebastian Pokutta"
-            ],
-            "filename": "7_paper.pdf",
-            "recog": 1,
-            "modified": 1788483701,
-            "keywords": "NLP > Applications > Ideation > Brainwriting",
-            "level": 4,
-            "priority": 2
-        },
-        {
-            "title": "Discovery by Dreaming: Cross-Domain Recombination in Artificial Memory",
-            "year": 2026,
-            "authors": [
-                "Oliver Zahn",
-                "Sapience Labs/CoreTx",
-                "James Evans",
-                "David Eagleman"
-            ],
-            "filename": "2607.16256.pdf",
-            "recog": 1,
-            "modified": 1788483545,
-            "keywords": "AI Engineering > Agents, Autonomous Task Management > Memory > Dreaming",
-            "level": 4,
-            "priority": 2
-        },
-        {
-            "title": "Propagation and preservation of AI- discovered problem-solving strategies in human culture",
-            "year": 2026,
-            "authors": [
-                "Levin Brinkmann",
-                "Thomas F. Eisenmann",
-                "Anne-Marie Nussberger",
-                "Maxime Derex",
-                "Sara Bonati",
-                "Valerii Chirkov",
-                "Iyad Rahwan"
-            ],
-            "filename": "s41467-026-76113-2.pdf",
-            "recog": 1,
-            "modified": 1788481896,
-            "keywords": "Machine Learning > Generative Deep Learning > Applications > Ideation > Idea Transmission, Idea Adoption",
-            "level": 5,
-            "priority": 3
-        },
-        {
-            "title": "AuDrA: An automated drawing assessment platform for evaluating creativity",
-            "year": 2026,
-            "authors": [],
-            "filename": "s13428-023-02258-3.pdf",
-            "recog": 1,
-            "modified": 1788426117,
-            "keywords": "Creativity > Creativity Measurement, Tests, Questionnaires > AuDrA",
-            "level": 3,
-            "priority": 3
-        },
-        {
-            "title": "SketchAgent: Language-Driven Sequential Sketch Generation",
-            "year": 2026,
-            "authors": [
-                "Yael Vinker",
-                "Tamar Rott Shaham",
-                "Kristine Zheng",
-                "Alex Zhao",
-                "Judith E Fan",
-                "Antonio Torralba"
-            ],
-            "filename": "2411.17673.pdf",
-            "recog": 1,
-            "modified": 1788395208,
-            "keywords": "NLP > Applications > Drawing Sketches > SketchAgent",
-            "level": 4,
-            "priority": 3
-        },
-        {
-            "title": "The Dynamics of Creative Ideation: Introducing a New Assessment Paradigm",
-            "year": 2026,
-            "authors": [
-                "Baptiste Barbot"
-            ],
-            "filename": "fpsyg-09-02529.pdf",
-            "recog": 1,
-            "modified": 1788395202,
-            "keywords": "Creativity > Creativity Measurement, Tests, Questionnaires > Multi-Trial Creative Ideation (MTCI)",
-            "level": 3,
-            "priority": 3
-        },
-        {
-            "title": "Scalable watermarking for identifying large language model outputs",
-            "year": 2026,
-            "authors": [
-                "Sumanth Dathathri",
-                "Abigail See",
-                "Sumedh Ghaisas",
-                "Po-Sen Huang",
-                "Rob McAdam",
-                "Johannes Welbl",
-                "Vandana Bachani",
-                "Alex Kaskasoli",
-                "Robert Stanforth",
-                "Tatiana Matejovicova",
-                "Jamie Hayes",
-                "Nidhi Vyas",
-                "Majd Al Merey",
-                "Jonah Brown-Cohen",
-                "Rudy Bunel",
-                "Borja Balle",
-                "Taylan Cemgil",
-                "Zahra Ahmed",
-                "Kitty Stacpoole",
-                "Ilia Shumailov",
-                "Ciprian Baetu",
-                "Sven Gowal",
-                "Pushmeet Kohli"
-            ],
-            "filename": "s41586-024-08025-4.pdf",
-            "recog": 1,
-            "modified": 1788307776,
-            "keywords": "Machine Learning > Generative Deep Learning > Issues > Watermarks > SynthID",
-            "level": 5,
-            "priority": 2
-        },
-        {
-            "title": "Bullshit Jobs",
-            "year": 2026,
-            "authors": [
-                "Bullshit Jobs",
-                "A Theory",
-                "David Graeber"
-            ],
-            "filename": "david-graeber-bullshit-jobs-1.pdf",
-            "recog": 1,
-            "modified": 1788144543,
-            "keywords": "Future of Work > Bullshit Jobs",
-            "level": 2,
-            "priority": 3
-        },
-        {
-            "title": "Ex-White House teleprompter operator ordered to pay $172,000 for Trump speech bets",
-            "year": 2026,
-            "authors": [
-                "Rorey Bosotti"
-            ],
-            "filename": "Ex-White House teleprompter operator ordered to pay $172,000 for Trump speech bets.pdf",
-            "recog": 1,
-            "modified": 1788044712,
-            "keywords": "Trump > Insider Trading",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "\"Yes I Am Reflecting on Reflecting!\" \u2013 Mapping Understandings, Practices, and Challenges in HCI Research Practices",
-            "year": 2026,
-            "authors": [
-                "Annika Kaltenhauser",
-                "Margarita Osipova",
-                "James Peter Arn\u00e9ra"
-            ],
-            "filename": "nordichi26-37.pdf",
-            "recog": 1,
-            "modified": 1788044320,
-            "keywords": "Meta-Research > Reflection",
-            "level": 2,
-            "priority": 1
-        },
-        {
-            "title": "Algorithmic Monocultures in Hiring",
-            "year": 2026,
-            "authors": [
-                "RISHI BOMMASANI",
-                "SARAH H. BANA",
-                "KATHLEEN A. CREEL",
-                "DAN JURAFSKY",
-                "PERCY LIANG"
-            ],
-            "filename": "2605.27371.pdf",
-            "recog": 1,
-            "modified": 1787994215,
-            "keywords": "Machine Learning > Issues > Bias, Discrimination > Algorithmic Hiring, Algorithmic Profiling",
-            "level": 4,
-            "priority": 3
-        },
-        {
-            "title": "Has the creativity of large-language models peaked? An analysis of inter- and intra-LLM variability",
-            "year": 2026,
-            "authors": [
-                "Jennifer Haase",
-                "Paul H.P. Hanel",
-                "Sebastian Pokutta"
-            ],
-            "filename": "1-s2.0-S2713374525000202-main.pdf",
-            "recog": 1,
-            "modified": 1787994145,
-            "keywords": "NLP > Evaluation > Creativity > Intra-model Variability",
-            "level": 4,
-            "priority": 3
-        },
-        {
-            "title": "Othello-GPT Does Not Have a World Model: Lessons for Attributing World Models to Neural Systems",
-            "year": 2026,
-            "authors": [
-                "John Morrison",
-                "Mouad Oulouali",
-                "Teo Maayan"
-            ],
-            "filename": "412_Othello_GPT_Does_Not_Have_.pdf",
-            "recog": 1,
-            "modified": 1787993074,
-            "keywords": "NLP > General, Theory > World Models > Emergent World Representations > Othello > Issues",
-            "level": 6,
-            "priority": 3
-        },
-        {
-            "title": "Artificial Hivemind: The Open-Ended Homogeneity of Language Models (and Beyond)",
-            "year": 2026,
-            "authors": [
-                "Liwei Jiang",
-                "Yuanjun Chai",
-                "Margaret Li",
-                "Mickel Liu",
-                "Raymond Fok",
-                "Nouha Dziri",
-                "Yulia Tsvetkov",
-                "Maarten Sap",
-                "Yejin Choi"
-            ],
-            "filename": "2331_Artificial_Hivemind_The_O.pdf",
-            "recog": 1,
-            "modified": 1787992953,
-            "keywords": "NLP > Issues > Homogeneity",
-            "level": 3,
-            "priority": 3
-        },
-        {
-            "title": "Is this Citation on Point?",
-            "year": 2026,
-            "authors": [
-                "Apurv Verma"
-            ],
-            "filename": "2608.12571.pdf",
-            "recog": 1,
-            "modified": 1787990246,
-            "keywords": "Citation, Referencing > Issues > AI-generated Citations, Hallucinated Citations > Citation Intent",
-            "level": 4,
-            "priority": 2
-        },
-        {
-            "title": "China probes use of formaldehyde to keep cabbages fresh",
-            "year": 2026,
-            "authors": [
-                "Laura Bicker"
-            ],
-            "filename": "China probes use of formaldehyde to keep cabbages fresh.pdf",
-            "recog": 1,
-            "modified": 1787881140,
-            "keywords": "Countries > China > Issues > Formaldehyde Cabbage",
-            "level": 4,
-            "priority": 0
-        },
-        {
-            "title": "A call for collective action on cyber\u00a0defense",
-            "year": 2026,
-            "authors": [],
-            "filename": "A call for collective action on cyber defense _ OpenAI.pdf",
-            "recog": 1,
-            "modified": 1787875032,
-            "keywords": "AI Engineering > Agents, Autonomous Task Management > Security",
-            "level": 3,
-            "priority": 2
-        },
-        {
-            "title": "Herdr is the runtime your coding agents live on \u2014 laptop, desktop, or a box you rent. It holds real terminals open so the work survives the lid closing, and gets you back in from anything with a keyboard",
-            "year": 2026,
-            "authors": [],
-            "filename": "Herdr_ the runtime coding agents run on.pdf",
-            "recog": 1,
-            "modified": 1787874096,
-            "keywords": "AI Engineering > Libraries, Tools > Herdr",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "Flakka: \u201cThe Zombie Drug\u201d A Medicolegal Concern: An Updated Review of \u03b1\u2010Pyrrolidinopentiophenone",
-            "year": 2026,
-            "authors": [
-                "Saad Bader Albishri",
-                "Abdulrahman Bandar Alotaibi",
-                "Faisal M. Alzoubaidi",
-                "Osama Said El\u2010Serafy"
-            ],
-            "filename": "flakka-the-zombie-drug-a-medicolegal-concern-an-updated.pdf",
-            "recog": 1,
-            "modified": 1787784523,
-            "keywords": "Medical, Health, Drugs > Illegal Drugs > Bath Salts > Flakka",
-            "level": 4,
-            "priority": 1
-        },
-        {
-            "title": "Dicklesworthstone/destructive_command_guard: The Destructive Command Guard",
-            "year": 2026,
-            "authors": [],
-            "filename": "Dicklesworthstone_destructive_command_guard_ The Destructive Command Guard (dcg) is for blocking dangerous git and shell commands from being executed by agents..pdf",
-            "recog": 1,
-            "modified": 1787652522,
-            "keywords": "AI Engineering > Agents, Autonomous Task Management > Issues > Security, Privacy > Destructive Command Guard",
-            "level": 5,
-            "priority": 1
-        },
-        {
-            "title": "How AI Ideas Affect the Creativity, Diversity, and Evolution of Human Ideas: Evidence From a Large, Dynamic Experiment",
-            "year": 2026,
-            "authors": [
-                "Joshua Ashkinaze",
-                "Julia Mendelsohn",
-                "Ceren Budak",
-                "Eric Gilbert"
-            ],
-            "filename": "3715928.3737481.pdf",
-            "recog": 1,
-            "modified": 1787273326,
-            "keywords": "Creativity > Process > 1 Idea Generation, Creativity Stimulation > AI-based Ideation",
-            "level": 4,
-            "priority": 2
-        },
-        {
-            "title": "The Value of Prompting Skills",
-            "year": 2026,
-            "authors": [
-                "Lara Fleck",
-                "Dominik Becker",
-                "Marie-Christine Fregin",
-                "Andries de Grip",
-                "Harald Pfeifer",
-                "Kathrin Weis"
-            ],
-            "filename": "dp18871.pdf",
-            "recog": 1,
-            "modified": 1787273071,
-            "keywords": "AI Engineering > Prompt Engineering > Value of Prompting",
-            "level": 3,
-            "priority": 3
-        },
-        {
-            "title": "Activation Steering in 2026: A Practitioner's Field Guide",
-            "year": 2026,
-            "authors": [
-                "ofHow SteeringWorks"
-            ],
-            "filename": "Activation Steering in 2026_ A Practitioner's Field Guide _ Subhadip Mitra.pdf",
-            "recog": 1,
-            "modified": 1787132842,
-            "keywords": "Machine Learning > Frameworks, Libraries > Pytorch > Activations > Activation Steering",
-            "level": 5,
-            "priority": 3
-        },
-        {
-            "title": "Position: EU AI Act\u2019s Research Exemptions Can Break the Publication Norms of Major AI Conferences",
-            "year": 2026,
-            "authors": [
-                "Alina Wernick",
-                "Kristof Meding"
-            ],
-            "filename": "2506.03218.pdf",
-            "recog": 1,
-            "modified": 1787128477,
-            "keywords": "AI > Issues > Governance, Regulation, Legislation > Regulation > EU AI Act, European Artificial Intelligence Act",
-            "level": 5,
-            "priority": 2
-        },
-        {
-            "title": "Personal Research Ontologies for Personal Open Science",
-            "year": 2026,
-            "authors": [
-                "Jonas Oppenlaender"
-            ],
-            "filename": "ci26-8.pdf",
-            "recog": 1,
-            "modified": 1787095284,
-            "keywords": "2026-06-15 Personal-Open-Science (CI26) > TAPS",
-            "level": 2,
-            "priority": 3
-        },
-        {
-            "title": "How Claude marks AI-generated content",
-            "year": 2026,
-            "authors": [],
-            "filename": "How Claude marks AI-generated content _ Claude Help Center.pdf",
-            "recog": 1,
-            "modified": 1786605526,
-            "keywords": "NLP > Issues > Detection > Watermarks",
-            "level": 4,
-            "priority": 2
-        },
-        {
-            "title": "Can AI agents conduct open-ended AI research? Early evidence from two case studies",
-            "year": 2026,
-            "authors": [
-                "Peter Kirgis",
-                "Sayash Kapoor",
-                "Andrew Schwartz",
-                "Stephan Rabanser",
-                "David Africa",
-                "Konstantinos Voudouris",
-                "Viet Nguyen",
-                "Toby Pilditch",
-                "Magda Dubois",
-                "Harry Coppock",
-                "Cozmin Ududec",
-                "Nitya Nadgir",
-                "Matilda Orona",
-                "Tilman Bayer",
-                "Derrick Chan-Sew",
-                "Yue Ling",
-                "Abhishek Shetty",
-                "Helen Toner",
-                "Gillian Hadfield",
-                "Seth Lazar",
-                "Steve Newman",
-                "Shoshannah Tekofsky",
-                "Rishi Bommasani",
-                "Arvind Narayanan"
-            ],
-            "filename": "2607.27191.pdf",
-            "recog": 1,
-            "modified": 1786506106,
-            "keywords": "Future Science > AI Scientists > Issues > Open-ended Research",
-            "level": 4,
-            "priority": 3
-        },
-        {
-            "title": "A Conceptual Framework for Personal Science",
-            "year": 2020,
-            "authors": [
-                "Suzanne McDonald",
-                "Gary Isaac Wolf",
-                "Martijn De Groot"
-            ],
-            "filename": "fcomp-02-00021.pdf",
-            "recog": 1,
-            "modified": 1786505710,
-            "keywords": "Open Science, e-Science, e-Research, Research Data > Personal Science",
-            "level": 2,
-            "priority": 3
-        },
-        {
-            "title": "Co-designing a wiki-based community knowledge management system for personal science",
-            "year": 2026,
-            "authors": [
-                "Katharina Kloppenborg",
-                "Mad Price Ball",
-                "Steven Jonas",
-                "Gary Isaac Wolf",
-                "Bastian Greshake Tzovaras"
-            ],
-            "filename": "rsos.240275.pdf",
-            "recog": 1,
-            "modified": 1786505680,
-            "keywords": "Open Science, e-Science, e-Research, Research Data > Personal Science",
-            "level": 2,
-            "priority": 3
-        },
-        {
-            "title": "Revibing Code from Papers: Reimplementing HCI Artifacts",
-            "year": 2026,
-            "authors": [
-                "Eytan Adar",
-                "Yoonjoo Lee",
-                "Weirui Peng"
-            ],
-            "filename": "2608.00450.pdf",
-            "recog": 1,
-            "modified": 1786505535,
-            "keywords": "NLP > Applications > Replication",
-            "level": 3,
-            "priority": 2
-        },
-        {
-            "title": "An Analytical Framework for Artificial Intelligence-Driven Interactive Art Installations",
-            "year": 2026,
-            "authors": [
-                "Sihwa Park",
-                "Je-ho Oh"
-            ],
-            "filename": "preprints202608.0341.v1.pdf",
-            "recog": 1,
-            "modified": 1786501705,
-            "keywords": "Machine Learning > Generative Deep Learning > Applications > Art > Art Installations",
-            "level": 5,
-            "priority": 1
-        },
-        {
-            "title": "MatrAIx: Simulating the World with 8.3 Billion Persona Agents",
-            "year": 2026,
-            "authors": [
-                "Xiaomin Li",
-                "Yuexing Hao",
-                "Jianheng Hou",
-                "Jintao Huang",
-                "Qianfeng Wen",
-                "Shirley Huang",
-                "Yifan Liu",
-                "Xiaoyi Liu",
-                "Yilan Fan",
-                "Yijun Wang",
-                "Koutian Wu",
-                "Ruoqi Gao",
-                "Muhammad Ahmed Mohsin",
-                "Jing Tang",
-                "Brihi Joshi",
-                "Heming Liu",
-                "Zheyuan Deng",
-                "Zonglin Di",
-                "Sankalp Jajee",
-                "Jiuyao Lu",
-                "Zhiwei Zhang",
-                "Saksham Kapoor",
-                "Ishan Gupta",
-                "Yunhan Zhao",
-                "Chanwoo Park",
-                "Yucheng Lu",
-                "Bing Hu",
-                "Weihang Xiao",
-                "Aravind Mohan",
-                "Hanwen Xing",
-                "Runyu Zhang",
-                "Mihir Kulshreshtha",
-                "Yuanda Xu",
-                "Qianyu Zhu",
-                "Dianzhuo Wang",
-                "Yuxin Xiao",
-                "Bowen Jiang",
-                "Yongye Su",
-                "Wenhao Chai",
-                "Zuxin Liu",
-                "Lawrence Yunliang Chen",
-                "Xuandong Zhao",
-                "Ethan Ye",
-                "Shivam Patel",
-                "Jason Xie",
-                "Alex Martin Richmond",
-                "Weixiang Ding",
-                "Emre Okcular",
-                "Diya Mathew",
-                "Ziheng Wang",
-                "Rana M. Shahroz Khan",
-                "Zhejian Peng",
-                "Fang Wu",
-                "Fan Nie",
-                "Xinyang Han",
-                "Yubin Kim",
-                "Jiawei Zhang",
-                "Zhenting Qi",
-                "Huangyuan Su",
-                "Xu Pan",
-                "Abinitha Gourabathina",
-                "Hyewon Jeong",
-                "Hemanth Neelgund Ramesh",
-                "Kimia Hamidieh",
-                "Zidi Xiong",
-                "Samuel Schmidgall",
-                "Pengrui Han",
-                "Yepeng Huang",
-                "Yongheng Wang",
-                "Bowen Yang",
-                "Alex Gu",
-                "Yuchu Wang",
-                "Akshay Paruchuri",
-                "Brenna Li",
-                "Hejie Cui",
-                "Jiayuan Ding",
-                "Chaosheng Dong",
-                "Jiahao Wang",
-                "Yixuan He",
-                "Chi Wang",
-                "Pamela Bhattacharya",
-                "Tianyi Peng",
-                "Paul Pu Liang",
-                "Mitchell Gordon",
-                "Yilun Du",
-                "Marinka Zitnik",
-                "James Zou",
-                "Prasanna Tambe",
-                "Philip Torr",
-                "Emily Fox",
-                "Asu Ozdaglar",
-                "Dawn Song"
-            ],
-            "filename": "2608.04205.pdf",
-            "recog": 1,
-            "modified": 1786501089,
-            "keywords": "NLP > Applications > Simulation > Generative Agents Simulation > Billion Agents > MatrAIx",
-            "level": 6,
-            "priority": 2
-        },
-        {
-            "title": "The Reality of an AI Implementation",
-            "year": 2026,
-            "authors": [],
-            "filename": "3821443.pdf",
-            "recog": 1,
-            "modified": 1786498413,
-            "keywords": "Web > Dashboards",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "The Weirdness of Agents",
-            "year": 2026,
-            "authors": [
-                "Vinton G. Cerf"
-            ],
-            "filename": "3830274.pdf",
-            "recog": 1,
-            "modified": 1786498332,
-            "keywords": "AI Engineering > Agents, Autonomous Task Management > Issues",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "Right Answer, Wrong Method: Shortcut Hacking Misleads the Evaluation of LLM Reasoning on Frontier Science Benchmarks",
-            "year": 2026,
-            "authors": [
-                "Xuan Ren",
-                "Weiqi Zhai",
-                "Tianle Pu",
-                "Yihua Zhu",
-                "Hu Wei",
-                "Bing Zhao"
-            ],
-            "filename": "2608.02442.pdf",
-            "recog": 1,
-            "modified": 1786238510,
-            "keywords": "Future Science > Issues > Solution Hacking",
-            "level": 3,
-            "priority": 2
-        },
-        {
-            "title": "Toward substitution with no regrets",
-            "year": 2026,
-            "authors": [
-                "Paul T. Anastas"
-            ],
-            "filename": "science.aaa0812.pdf",
-            "recog": 1,
-            "modified": 1786237678,
-            "keywords": "Environment > Plastics > BPA > Regrettable Substitution",
-            "level": 4,
-            "priority": 1
-        },
-        {
-            "title": "Beyond the Archive: Continuous Analytics for Lifelogging",
-            "year": 2026,
-            "authors": [
-                "Allie Tran",
-                "Luca Rossetto"
-            ],
-            "filename": "3810984.3817079.pdf",
-            "recog": 1,
-            "modified": 1786151126,
-            "keywords": "Quantified Self > Lifelogging > Lifelog Analytics",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "Introduction to the 9th Annual Lifelog Search Challenge, LSC\u201926",
-            "year": 2026,
-            "authors": [
-                "Allie Tran",
-                "Werner Bailer",
-                "Graham Healy",
-                "Steve Hodges",
-                "Bj\u00f6rn \u00de\u00f3r J\u00f3nsson",
-                "Wolfgang H\u00fcrst",
-                "Luca Rossetto",
-                "Klaus Schoeffmann",
-                "Minh-Triet Tran",
-                "Liting Zhou",
-                "Cathal Gurrin",
-                "Duc-Tien Dang-Nguyen"
-            ],
-            "filename": "3805622.3811234.pdf",
-            "recog": 1,
-            "modified": 1786150920,
-            "keywords": "Quantified Self > Lifelogging > Lifelog Search Challenge",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "Open Weights and American AI Leadership",
-            "year": 2026,
-            "authors": [],
-            "filename": "Open-Weights-and-American-AI-Leadership.pdf",
-            "recog": 1,
-            "modified": 1786064696,
-            "keywords": "Machine Learning > Issues > Open Source",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "Snapchat joins other platforms in the fight against 'AI slop'",
-            "year": 2026,
-            "authors": [
-                "Kali Hays"
-            ],
-            "filename": "Snapchat joins other platforms in the fight against 'AI slop'.pdf",
-            "recog": 1,
-            "modified": 1785972859,
-            "keywords": "AI > Issues > AI Slop",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "The secret codewords that scammers hate",
-            "year": 2026,
-            "authors": [
-                "Thomas Germain"
-            ],
-            "filename": "The secret codewords that scammers hate.pdf",
-            "recog": 1,
-            "modified": 1785972409,
-            "keywords": "Machine Learning > Generative Deep Learning > Applications > Deepfake Scams > Codewords",
-            "level": 5,
-            "priority": 1
-        },
-        {
-            "title": "Falling Behind Drives Unsafe Development in an Idealised AI Race Experiment",
-            "year": 2026,
-            "authors": [
-                "Elias Fern\u00e1ndez Domingos",
-                "Anh Han"
-            ],
-            "filename": "2607.26034.pdf",
-            "recog": 1,
-            "modified": 1785490968,
-            "keywords": "AI > State of AI > AI Race > Unsafe AI",
-            "level": 4,
-            "priority": 2
-        },
-        {
-            "title": "Prediction-powered inference",
-            "year": 2026,
-            "authors": [
-                "Anastasios N. Angelopoulos",
-                "Stephen Bates",
-                "Clara Fannjiang",
-                "Michael I. Jordan",
-                "Tijana Zrnic"
-            ],
-            "filename": "science.adi6000.pdf",
-            "recog": 1,
-            "modified": 1785294995,
-            "keywords": "Data > Synthetic Data > Prediction-powered Inference",
-            "level": 3,
-            "priority": 3
-        },
-        {
-            "title": "Italy was once a model of healthy eating - now it has a child obesity problem",
-            "year": 2026,
-            "authors": [
-                "Sofia Bettiza",
-                "Sonja Chiappetta"
-            ],
-            "filename": "Italy was once a model of healthy eating - now it has a child obesity problem.pdf",
-            "recog": 1,
-            "modified": 1785116690,
-            "keywords": "Obesity > Italy",
-            "level": 2,
-            "priority": 0
-        },
-        {
-            "title": "WeirdChat A catalog of unexpected Al behaviors, discovered automatically",
-            "year": 2026,
-            "authors": [
-                "Cassidy Laidlaw",
-                "Kaiying Hou",
-                "Daniel Johnson",
-                "Sarah Schwettmann",
-                "Jacob Steinhardt"
-            ],
-            "filename": "WeirdChat _ Transluce AI.pdf",
-            "recog": 1,
-            "modified": 1785029830,
-            "keywords": "NLP > Issues > Unexpected Behavior > WeirdChat",
-            "level": 4,
-            "priority": 2
-        },
-        {
-            "title": "Why are all LLMs Obsessed with Japanese Culture? On the Hidden Cultural and Regional Biases of LLMs",
-            "year": 2026,
-            "authors": [
-                "Joseba Fernandez de Landa",
-                "Carla Perez-Almendros",
-                "Jose Camacho-Collados"
-            ],
-            "filename": "2604.21751.pdf",
-            "recog": 1,
-            "modified": 1784935787,
-            "keywords": "NLP > Issues > Bias, Discrimination > Cultural and Regional Bias > Japanese Culture",
-            "level": 5,
-            "priority": 1
-        },
-        {
-            "title": "Abraham Accords",
-            "year": 2026,
-            "authors": [
-                "Abraham Accords"
-            ],
-            "filename": "Abraham Accords - Wikipedia.pdf",
-            "recog": 1,
-            "modified": 1784862390,
-            "keywords": "Countries > Israel > Abraham Accords",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "The global biogeography of passerine songs",
-            "year": 2026,
-            "authors": [
-                "Quentin Bacquel\u00e9",
-                "Jean- Yves Barnagaud",
-                "Cyrille Violle",
-                "Fr\u00e9d\u00e9ric Theunissen",
-                "Nicolas Mathevon"
-            ],
-            "filename": "science.aee6239.pdf",
-            "recog": 1,
-            "modified": 1784861968,
-            "keywords": "Animals > Animal Language > Birds",
-            "level": 3,
-            "priority": 1
-        },
-        {
-            "title": "Secrets of birdsongs' 'spectacular diversity' revealed",
-            "year": 2026,
-            "authors": [
-                "Victoria Gill",
-                "Vincent M\u00e9doc"
-            ],
-            "filename": "Secrets of birdsongs' 'spectacular diversity' revealed.pdf",
-            "recog": 1,
-            "modified": 1784861663,
-            "keywords": "Animals > Animal Language > Birds",
-            "level": 3,
-            "priority": 0
-        },
-        {
-            "title": "Performing Rigor: Reflexivity in HCI/CSCW",
-            "year": 2026,
-            "authors": [
-                "NORA MCDONALD",
-                "George Mason",
-                "JOHN S. SEBERGER",
-                "John S. Seberger"
-            ],
-            "filename": "3831595.pdf",
-            "recog": 1,
-            "modified": 1784773825,
-            "keywords": "Research Methods > Qualitative Research > Reflexivity > Generative Reflexivity > Inter-rater Reliability",
-            "level": 5,
-            "priority": 3
-        },
-        {
-            "title": "Towards autonomous medical artificial intelligence agents",
-            "year": 2026,
-            "authors": [
-                "Dyke Ferber",
-                "Lars Hilgers",
-                "Christiane H\u00f6per",
-                "Benedict Kinny-K\u00f6ster",
-                "Jan-Niklas Eckardt",
-                "Katharina Egger-Heidrich",
-                "Marius Bill",
-                "Martin M. K. Schneider",
-                "Jan Clusmann",
-                "Lejla Kadric",
-                "Marcel Oehme",
-                "Maximilian Mayrhofer-Schmid",
-                "Alexander Oeser",
-                "Georg W\u00f6lflein",
-                "Isabella C. Wiest",
-                "Jan Moritz Middeke",
-                "A. John Iafrate",
-                "Daniel Truhn",
-                "Dirk J\u00e4ger",
-                "Jakob Nikolas Kather"
-            ],
-            "filename": "s41586-026-10675-5.pdf",
-            "recog": 1,
-            "modified": 1784770976,
-            "keywords": "AI Engineering > Agents, Autonomous Task Management > Applications > Medical AI",
-            "level": 4,
             "priority": 3
         }
     ]
