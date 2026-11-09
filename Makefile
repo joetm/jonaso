@@ -38,7 +38,7 @@ publications-data:
 	mv ./src/bibliography/publications.json ./static/static/
 	cp ./src/bibliography/publications.bib ./static/static/
 	# html bibliography (publications.html, publications_bib.html) -> json
-	BSTINPUTS=scripts/pre-build: bibtex2html -q -noheader -nofooter -nf website "website" --style "SIGCHI-Reference-Format-MOD" "src/bibliography/publications.bib"
+	BSTINPUTS=scripts/pre-build: bibtex2html -q -noheader -nofooter -nf website "website" -doi-prefix "https://doi.org/" --style "SIGCHI-Reference-Format-MOD" "src/bibliography/publications.bib"
 	php scripts/pre-build/parse.php
 	mv ./references.json ./static/static/
 	python3 scripts/pre-build/pyparse.py

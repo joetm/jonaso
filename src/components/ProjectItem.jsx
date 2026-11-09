@@ -4,7 +4,7 @@ import { joinIfNotNull } from '../common'
 
 export default function ProjectItem({item, i}) {
   const { title, doi = null, url = null, month = null, year = null } = item
-  const theurl = doi ? `http://doi.org/${doi}` : url || null
+  const theurl = doi ? `https://doi.org/${doi}` : url || null
   const metadata = joinIfNotNull([item.note, item.conference, item.location])
   return (
     <div role="list" className="ui list" key={`projectitem_${i}`}>
