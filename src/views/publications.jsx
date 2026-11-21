@@ -1,11 +1,11 @@
 import 'semantic-ui-css/components/button.min.css'
 import 'semantic-ui-css/components/grid.min.css'
-import 'semantic-ui-css/components/icon.min.css'
 import 'semantic-ui-css/components/item.min.css'
 
 import React from "react"
 import { noMarginGrid } from "../common"
-import { references, referencesDetail, citations, citationGroups } from "./publications-data"
+import Icon from "../components/Icon.jsx"
+import { references, referencesDetail, citations, citationGroups, emphasize } from "./publications-data"
 
 // All three list views are prerendered; a small vanilla script in
 // publications.astro toggles them (was useState + client-side fetches).
@@ -23,7 +23,7 @@ const styles = {
 }
 
 const PubIcon = ({icostr}) => (
-  <i aria-hidden="true" className={`grey ${icostr} icon pub-icon`}></i>
+  <Icon name={icostr} className="grey pub-icon" />
 )
 
 
@@ -53,7 +53,7 @@ export default function Publications() {
         <div id="publicationButtons" style={styles.menu}>
           <div style={{float:'right',marginTop:'0.5em'}}>
             <a title="Download publications as pdf" href="/cv/oppenlaender-publications.pdf" target="_blank">
-              <i aria-hidden="true" className="file pdf outline large icon"></i>
+              <Icon name="file pdf outline" className="large" />
             </a>
           </div>
           <div className="ui buttons">
@@ -97,8 +97,7 @@ export default function Publications() {
                         </div>
                         {
                           referencesDetail[typ] && referencesDetail[typ].map((ref, index) => {
-                            let title = ref.title.replace('Jonas Oppenlaender', '<strong>Jonas Oppenlaender</strong>')
-                            title = title.replace('Jonas Oppenländer', '<strong>Jonas Oppenländer</strong>')
+                            const title = emphasize(ref.title)
                             const icostr = title.indexOf('.pdf') === -1 ? 'file outline' : 'file alternate outline'
                             return (
                               <div className="row" key={index}>
@@ -133,9 +132,7 @@ export default function Publications() {
                         </div>
                         {
                           references[year].map((item, index) => {
-                            let html = item.__html.replace('Jonas Oppenlaender', '<strong>Jonas Oppenlaender</strong>')
-                            html = html.replace('Jonas Oppenländer', '<strong>Jonas Oppenländer</strong>')
-                            html = html.replace('--', '–')
+                            const html = emphasize(item.__html)
                             const icostr = html.indexOf('.pdf') === -1 ? 'file outline' : 'file alternate outline'
                             return (
                               <div className="row" key={index}>
@@ -169,9 +166,7 @@ export default function Publications() {
                         </div>
                         {
                           group.entries.map((item, index) => {
-                            let html = item.__html.replace('Jonas Oppenlaender', '<strong>Jonas Oppenlaender</strong>')
-                            html = html.replace('Jonas Oppenländer', '<strong>Jonas Oppenländer</strong>')
-                            html = html.replace('--', '–')
+                            const html = emphasize(item.__html)
                             const icostr = html.indexOf('.pdf') === -1 ? 'file outline' : 'file alternate outline'
                             return (
                               <div className="row" key={index}>

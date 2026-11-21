@@ -5,14 +5,38 @@ body {
     font-size: 1.1rem;
 }
 
-/* zoom */
+/* Scaling (was `html { zoom: 1.33 }` above 768px).
+   Semantic sizes almost everything in rem/em, so scaling the root font size
+   enlarges the site the same way without zoom's side effects (broken
+   getBoundingClientRect/canvas maths in the chart islands, fighting the
+   user's own zoom). Percentages keep the user's browser font-size setting:
+   87.5% = Semantic's 14px; 116.375% = 14px x 1.33. */
 html {
-    zoom: 1.33;
+    font-size: 87.5%;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 769px) {
     html {
-        zoom: 1;
+        font-size: 116.375%;
+    }
+}
+
+/* page wrapper (Layout.astro): 1024px at Semantic's 14px root, i.e. it
+   scales with the root font size like the zoomed layout did */
+.site-wrapper {
+    margin: 0 auto;
+    clear: both;
+    max-width: 73.15rem;
+    padding-bottom: 5em;
+}
+
+/* Semantic's .ui.container has fixed px widths per breakpoint (723/933/1127px)
+   that were scaled by zoom and overflowed the wrapper. Inside the wrapper,
+   let containers fill it instead. */
+@media only screen and (min-width: 769px) {
+    .site-wrapper .ui.container {
+        width: auto;
+        max-width: 100%;
     }
 }
 /*
@@ -20,10 +44,6 @@ html {
     font-size: 1.1rem;
 }
 */
-
-#___gatsby {
-    padding-bottom: 2rem;
-}
 
 /*
 .ui.positive.button {
@@ -137,26 +157,6 @@ color: rgba(0,0,0,.87);
 
 .spacer {
     height: '5em';
-}
-
-.academicon {
-    line-height: 1;
-    vertical-align: middle;
-    font-size: 2em;
-    cursor: pointer;
-    opacity: .8;
-    transition: opacity .1s ease;
-    display: inline-block;
-    margin: 0 .25rem 0 0;
-    width: 1.18em;
-    height: 1em;
-    font-style: normal;
-    font-weight: 400;
-    text-decoration: inherit;
-    text-align: center;
-    speak: none;
-    backface-visibility: hidden;
-    color: #767676;
 }
 
 .influences-legend {

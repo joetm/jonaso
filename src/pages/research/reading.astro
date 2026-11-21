@@ -1,13 +1,34 @@
 ---
 import Layout from '../../layouts/Layout.astro'
-import PubGraph from '../../components/islands/PubGraph.jsx'
+import BarChart from '../../components/charts/BarChart.astro'
+import { countTicks } from '../../components/charts/ticks.js'
 import ReadingList from '../../views/research/reading.jsx'
 import { graphDocs } from '../../views/research/reading-data'
+
+// reading activity per day, prerendered (was a recharts island).
+// x axis: days since the first day, so gaps without reading stay visible.
+const DAY = 86400000
+const first = graphDocs.length ? graphDocs[0].day : 0
+const dayIndex = d => Math.round((d - first) / DAY)
+const lastIndex = graphDocs.length ? dayIndex(graphDocs[graphDocs.length - 1].day) : 0
+const pad = v => String(v).padStart(2, '0')
+const fmt = d => { const dt = new Date(d); return `${pad(dt.getMonth() + 1)}-${pad(dt.getDate())}` }
+const plural = n => `${n} publication${n === 1 ? '' : 's'}`
+const bars = graphDocs.map(g => ({ pos: dayIndex(g.day) + 0.5, value: g.num, key: String(g.day), title: `${fmt(g.day)}: ${plural(g.num)}` }))
+const { yMax, yTicks } = countTicks(Math.max(1, ...graphDocs.map(g => g.num)))
+// about a dozen date labels
+const tickEvery = Math.max(1, Math.ceil((lastIndex + 1) / 12))
+const xTicks = []
+for (let i = 0; i <= lastIndex; i += tickEvery) {
+  const d = new Date(first)
+  d.setDate(d.getDate() + i) // calendar days, safe across DST changes
+  xTicks.push({ pos: i + 0.5, label: fmt(d) })
+}
 ---
 
-<Layout title="Reading // jonaso.de" canonical="https://www.jonaso.de/reading/">
+<Layout title="Reading // jonaso.de">
   <div class="ui container">
-    <PubGraph client:visible docs={graphDocs} />
+    <BarChart label="Publications read per day" bars={bars} xMin={0} xMax={lastIndex + 1} yMax={yMax} yTicks={yTicks} xTicks={xTicks} color="#4183c4" />
   </div>
   <ReadingList />
 </Layout>

@@ -1,0 +1,54 @@
+/* Inline-SVG icons (src/components/Icon.jsx), sized and placed like
+   Semantic UI's icon-font <i class="icon">: a 1.18em x 1em box whose glyph
+   sits on the text baseline (font ascent 0.875em, descent 0.125em). */
+
+svg.icon {
+  display: inline-block;
+  width: 1.18em;
+  height: 1em;
+  margin: 0 .25rem 0 0;
+  vertical-align: -.125em;
+  fill: currentColor;
+  overflow: visible;
+}
+
+svg.icon.fitted { width: auto; margin: 0 !important; }
+
+svg.icon.large,
+svg.icon.big,
+svg.icon.huge { vertical-align: middle; }
+svg.icon.large { font-size: 1.5em; }
+svg.icon.big { font-size: 2em; }
+svg.icon.huge { font-size: 4em; }
+
+svg.icon.link { cursor: pointer; opacity: .8; transition: opacity .1s ease; }
+svg.icon.link:hover,
+a:hover > svg.icon.link,
+a:focus-visible > svg.icon.link { opacity: 1; }
+
+svg.icon.circular {
+  width: 2em;
+  height: 2em;
+  padding: .5em 0;
+  border-radius: 500em;
+  box-shadow: 0 0 0 .1em var(--icon-ring, rgba(0, 0, 0, .1)) inset;
+  vertical-align: middle;
+}
+
+svg.icon.grey { color: var(--icon-grey, #767676); }
+svg.icon.yellow { color: #fbbd08; }
+
+/* icon-only buttons (e.g. the name pronunciation) */
+.icon-button {
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  line-height: inherit;
+}
+.icon-button:focus-visible { outline: 2px solid var(--link, #4183c4); outline-offset: 2px; border-radius: 2px; }
+
+svg.icon[hidden] { display: none; }

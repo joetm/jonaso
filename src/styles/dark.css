@@ -1,0 +1,148 @@
+/* Dark mode, following the OS/browser setting (prefers-color-scheme).
+   Semantic UI hard-codes its light colours, so the components this site uses
+   are overridden here. Every rule is prefixed with :root so it wins over the
+   Semantic modules regardless of load order (page-only modules can load
+   after this file). Light-mode values of the shared variables are the
+   fallbacks used where they are read (icons.css, charts, countries map). */
+
+/* screen only: printouts stay dark-on-white */
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #18191a;
+    --surface: #222426;
+    --surface-2: #2c2e31;
+    --text: rgba(255, 255, 255, 0.87);
+    --text-strong: rgba(255, 255, 255, 0.95);
+    --muted: rgba(255, 255, 255, 0.6);
+    --border: rgba(255, 255, 255, 0.14);
+    --link: #74b4f0;
+    --link-hover: #a5cdf6;
+
+    --icon-grey: #a3a3a3;
+    --icon-ring: rgba(255, 255, 255, 0.2);
+    --chart-axis: #a8a8a8;
+    --chart-grid: #3a3c3f;
+    --chart-hover: rgba(255, 255, 255, 0.06);
+    --map-stroke: rgba(255, 255, 255, 0.28);
+    --map-stroke-hover: rgba(255, 255, 255, 0.8);
+  }
+
+  :root body {
+    background: var(--bg);
+    color: var(--text);
+  }
+  :root h1, :root h2, :root h3, :root h4, :root h5 { color: var(--text-strong); }
+  :root a { color: var(--link); }
+  :root a:hover { color: var(--link-hover); }
+  :root ::selection { background-color: #2b4a6e; color: #fff; }
+
+  /* menu (nav) */
+  :root .ui.menu {
+    background: var(--surface);
+    border-color: var(--border);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+  }
+  :root .ui.menu .item { color: var(--text); }
+  :root .ui.menu .item::before { background: var(--border); }
+  :root .ui.menu a.item:hover,
+  :root .ui.menu .active.item { background: var(--surface-2); color: var(--text-strong); }
+  :root .ui.pointing.menu .active.item::after,
+  :root .ui.pointing.menu .active.item:hover::after {
+    background-color: var(--surface-2);
+    border-color: var(--border);
+  }
+
+  /* dividers, divided grids */
+  :root .ui.divider:not(.vertical):not(.horizontal) {
+    border-top-color: var(--border);
+    border-bottom-color: rgba(255, 255, 255, 0.04);
+  }
+  :root .ui.divided.grid:not([class*="vertically divided"]) > .column:not(.row),
+  :root .ui.divided.grid:not([class*="vertically divided"]) > .row > .column,
+  :root .ui[class*="mobile reversed"].divided.grid:not([class*="vertically divided"]) > .column:first-child {
+    box-shadow: -1px 0 0 0 var(--border);
+  }
+
+  /* items (publication entries, CV, projects) */
+  :root .ui.items > .item > .content > .header,
+  :root .ui.items > .item > .content > a.header { color: var(--text); }
+  :root .ui.items > .item > .content > .description { color: var(--text); }
+  :root .ui.items > .item .meta,
+  :root .ui.items > .item .extra { color: var(--muted); }
+  :root .ui.list > .item .header,
+  :root .ui.list .list > .item .description,
+  :root .ui.list > .item .description { color: var(--text); }
+
+  /* buttons */
+  :root .ui.button {
+    background-color: var(--surface-2);
+    color: var(--text);
+  }
+  :root .ui.button:hover,
+  :root .ui.button:focus { background-color: #3a3d41; color: var(--text-strong); }
+  :root .ui.button:disabled,
+  :root .ui.buttons .disabled.button,
+  :root .ui.disabled.button { background-color: #26282a; color: var(--muted); }
+  :root .ui.buttons .or::before { background-color: var(--surface); color: var(--muted); }
+  :root .ui.basic.button,
+  :root .ui.basic.buttons .button {
+    background: transparent;
+    color: var(--text) !important;
+    box-shadow: 0 0 0 1px var(--border) inset;
+  }
+
+  /* segments, tables, labels, form controls */
+  /* Semantic's #fff surfaces are the page colour in light mode: same here */
+  :root .ui.segment {
+    background: var(--bg);
+    border-color: var(--border);
+    color: var(--text);
+  }
+  :root .ui.table {
+    background: var(--bg);
+    color: var(--text);
+    border-color: var(--border);
+  }
+  :root .ui.table thead th,
+  :root .ui.table tfoot th {
+    background: var(--surface-2);
+    color: var(--text-strong);
+    border-color: var(--border);
+  }
+  :root .ui.table td,
+  :root .ui.table tr td { border-top-color: var(--border); }
+  :root .ui.striped.table > tr:nth-child(2n),
+  :root .ui.striped.table tbody tr:nth-child(2n) { background-color: rgba(255, 255, 255, 0.03); }
+  :root .ui.checkbox label,
+  :root .ui.checkbox + label { color: var(--text); }
+  :root select,
+  :root .ui.selection.dropdown {
+    background: var(--surface);
+    color: var(--text);
+    border-color: var(--border);
+  }
+  :root .ui.statistic > .value,
+  :root .ui.statistic > .label,
+  :root .ui.statistics .statistic > .value,
+  :root .ui.statistics .statistic > .label { color: var(--text); }
+  :root .ui.progress { background: var(--surface-2); }
+
+  /* charts that are still client-side islands (recharts SVG) */
+  :root .recharts-cartesian-axis-tick-value { fill: var(--chart-axis); }
+  :root .recharts-cartesian-grid line { stroke: var(--chart-grid); }
+  :root .recharts-cartesian-axis-line,
+  :root .recharts-cartesian-axis-tick-line { stroke: var(--chart-axis); }
+  :root .recharts-default-tooltip {
+    background-color: var(--surface) !important;
+    border-color: var(--border) !important;
+  }
+  /* the timeline's near-black series (#101010) -> light grey */
+  :root .recharts-wrapper [stroke="#101010"] { stroke: #d8d8d8; }
+  :root .recharts-wrapper [fill="#101010"] { fill: #d8d8d8; }
+  :root .recharts-legend-item-text[style*="rgb(16, 16, 16)"],
+  :root .recharts-legend-item-text[style*="#101010"] { color: #d8d8d8 !important; }
+
+  /* images with white backgrounds sit a little softer on dark */
+  :root img:not([src$=".webp"]) { filter: brightness(0.92); }
+}

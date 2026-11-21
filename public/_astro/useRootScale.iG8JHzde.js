@@ -1,0 +1,1 @@
+import{r as t}from"./index.CRVkMWrY.js";function s(){const[o,r]=t.useState(1);return t.useEffect(()=>{const e=()=>r(parseFloat(getComputedStyle(document.documentElement).fontSize)/14||1);return e(),window.addEventListener("resize",e),()=>window.removeEventListener("resize",e)},[]),o}export{s as u};

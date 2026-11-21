@@ -1,16 +1,15 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-
-import 'semantic-ui-css/components/comment.min.css'
 import 'semantic-ui-css/components/grid.min.css'
-import 'semantic-ui-css/components/icon.min.css'
-import "../../libs/academicons/css/academicons.min.css"
 // import "../css/accordion.css"
 
 import React from "react"
+import Icon from "../components/Icon.jsx"
+import news from "../data/news.json"
+import { selectedPublications } from "./publications-data"
 
-// pronunciation audio: the icon is wired up by a small vanilla script in
+// pronunciation audio: the button is wired up by a small vanilla script in
 // src/pages/index.astro (was useState/useRef/useEffect + Audio here)
+// News: src/data/news.json (newest first). Selected publications: bib keys
+// in src/data/selected-publications.json.
 
 export default function Home() {
   return (
@@ -30,9 +29,15 @@ export default function Home() {
                {/* D.Sc. (Tech.), M.Sc., Dipl.-Wirtsch.-Ing., */}
                 {' '}
                 (
-                  <i id="pronounce" style={{cursor:'pointer'}} className="fitted assistive listening systems icon" title="How to pronounce Jonas Oppenländer"></i>
+                  <button type="button" id="pronounce" className="icon-button" title="How to pronounce Jonas Oppenländer" aria-label="How to pronounce Jonas Oppenländer">
+                    <Icon name="assistive listening systems" className="fitted" />
+                    <Icon name="volume up" className="fitted" hidden />
+                  </button>
                 ),
-              an Adjunct Professor (Docent) at the <a href="https://www.oulu.fi/en/university/faculties-and-units/faculty-information-technology-and-electrical-engineering/center-for-ubiquitous-computing">Centre for Applied Computing</a>, University of Oulu.
+              {/*a curiosity-driven computer scientist*/}
+              {' '}
+              an AI & Creativity Researcher
+              and an Adjunct Professor (Docent) at the <a href="https://www.oulu.fi/en/research-groups/centre-for-applied-computing">Centre for Applied Computing</a>, University of Oulu.
               </p>
 
               <p>
@@ -68,40 +73,27 @@ export default function Home() {
 
               <div>
                 <h3 style={{textAlign:'left'}}>
+                  Selected Publications
+                </h3>
+                <ul className="selected-pubs">
+                  {selectedPublications.map(p => (
+                    <li key={p.key} dangerouslySetInnerHTML={{__html: p.__html}}></li>
+                  ))}
+                </ul>
+                <p>
+                  <Icon name="arrow right" />
+                  <a href="/publications/">All publications</a>
+                </p>
+              </div>
+
+              <div>
+                <h3 style={{textAlign:'left'}}>
                   News
                 </h3>
                 <ul>
-                  <li style={{paddingBottom:'.5rem'}}>
-                    I was awarded the Title of Docent in Computer Science and Engineering &ndash; Creative Generative AI by the <a href="https://www.oulu.fi/" target="_blank" rel="noreferrer">University of Oulu</a> in Nov 2026.
-                  </li>
-                  <li style={{paddingBottom:'.5rem'}}>
-                    [Honorable Mention] Our paper <a href="https://default-images.github.io/" target="_blank"><i>&quot;An Exploration of Default Images in Text-to-Image Generation&quot;</i></a> has been presented at ACM CHI 2026.
-                  </li>
-                  <li style={{paddingBottom:'.5rem'}}>
-                    [Honorable Mention] Our paper <a href="https://arxiv.org/abs/2601.22394" target="_blank"><i>&quot;Conversational Inoculation to Enhance Resistance to Misinformation&quot;</i></a> has been presented at ACM CHI 2026.
-                  </li>
-                  <li style={{paddingBottom:'.5rem'}}>
-                    Our <a href="https://meta-hci.github.io/" target="_blank">Meta-HCI Meet-up</a> on Practising Reflection in HCI Research was accepted at ACM CHI '26.
-                  </li>
-                  <li style={{paddingBottom:'.5rem'}}>
-                    My late-breaking-work <i>&quot;StatCounter: A Longitudinal Study of a Portable Scholarly Metric Display&quot;</i> was published at ACM PerDis 2026.
-                  </li>
-                  <li style={{paddingBottom:'.5rem'}}>
-                    [Honorable Mention] Our paper <a href="https://dl.acm.org/doi/10.1145/3715928.3737467" target="_blank"><i>&quot;Quo Vadis, HCOMP?&quot;</i></a> was published at ACM Collective Intelligence 2025.
-                  </li>
-                  <li style={{paddingBottom:'.5rem'}}>
-                    My paper <i>&quot;Past, Present, and Future of Citation Practices in HCI&quot;</i> was accepted at ACM CHI 2025.
-                    [ <a href="https://dl.acm.org/doi/10.1145/3706598.3713556" target="_blank">Paper</a> | <a href="https://docs.google.com/presentation/d/1PNQzZWk6ogU75FnfeYFQP-Uyu7hhziGbbY1fN5Jzh-4/edit?usp=sharing" target="_blank">Presentation</a> ]
-                  </li>
-                  <li style={{paddingBottom:'.5rem'}}>
-                    Our paper <i>&quot;Keeping Score: A Quantitative Analysis of How the CHI Community Appreciates Its Milestones&quot;</i> was accepted at ACM CHI 2025.
-                    [ <a href="https://dl.acm.org/doi/10.1145/3706598.3713464" target="_blank">Paper</a> | <a href="https://docs.google.com/presentation/d/1-BjlqLd3Nsd8uleTeR9b0yfg_6IPrlGHtVrPOmoZYcU/edit?usp=sharing" target="_blank">Presentation</a> ]
-                  </li>
-                  <li>
-                    Our workshop <i>&quot;Meta-HCI: First Workshop on Meta-Research in HCI&quot;</i> will be held at ACM CHI 2025 on April 26 in Yokohama, Japan.
-                    {' '}
-                    <a href="https://meta-hci.github.io/" target="_blank">Join us!</a>
-                  </li>
+                  {news.map((item, i) => (
+                    <li key={i} style={{paddingBottom:'.5rem'}} dangerouslySetInnerHTML={{__html: item.html}}></li>
+                  ))}
                 </ul>
               </div>
 
@@ -125,7 +117,7 @@ export default function Home() {
               */}
 
               <p style={{marginTop:'1rem'}}>
-                  <i className="arrow right icon"></i>
+                  <Icon name="arrow right" />
                   Academic <a href="/cv/oppenlaender-cv.pdf">CV</a>
                   {/*
                   &nbsp;|&nbsp;
@@ -133,16 +125,21 @@ export default function Home() {
                   */}
               </p>
 
+              {/*
+              Japanese name: 高地 (Takachi)
+              Chinese name: 高民 (gāomín)
+              */}
+
             </div>
           </div>
         </div>
 
         <div className="ui divider"></div>
-          <a href="https://github.com/joetm" target="_blank" rel="noopener noreferrer">
-              <i style={{width:'36px',height:'30px'}} title="Jonas Oppenlaender on GitHub" aria-hidden="true" className="grey github square big link icon"></i>
+          <a href="https://github.com/joetm" target="_blank" rel="noopener noreferrer" title="Jonas Oppenlaender on GitHub">
+              <Icon name="github square" className="grey big link" label="Jonas Oppenlaender on GitHub" />
           </a>
-          <a href="https://scholar.google.com/citations?hl=de&user=ucO_QYQAAAAJ" target="_blank" rel="noopener noreferrer">
-              <i style={{width:'36px',height:'30px'}} title="Jonas Oppenlaender on Google Scholar" className="academicon ai ai-google-scholar-square ai-2x"></i>
+          <a href="https://scholar.google.com/citations?user=ucO_QYQAAAAJ" target="_blank" rel="noopener noreferrer" title="Jonas Oppenlaender on Google Scholar">
+              <Icon name="google scholar square" className="grey big link" label="Jonas Oppenlaender on Google Scholar" />
           </a>
       </div>
   )

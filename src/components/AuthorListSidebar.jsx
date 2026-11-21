@@ -4,6 +4,7 @@ import 'semantic-ui-css/components/segment.min.css'
 import 'semantic-ui-css/components/sidebar.min.css'
 
 import React from "react"
+import Icon from "./Icon.jsx"
 import { sortByKey, priocolors, roundInt } from "../common"
 
 
@@ -38,14 +39,12 @@ const Wrapper = {
   CoauthorWrapper: ({authorid, toggleCoauthors, coauthorToggleActive, closeSidebar}) => (
     <div className="ui segment wrapperBox">
       <div>
-        <i className="close icon"
-          role="button" aria-label="close"
-          tabIndex={0}
+        <button type="button" className="icon-button"
+          aria-label="Close sidebar"
           title="Close sidebar"
-          style={{float:'right', cursor:'pointer'}}
+          style={{float:'right'}}
           onClick={closeSidebar}
-          onKeyDown={closeSidebar}
-        ></i>
+        ><Icon name="close" /></button>
 
         {/* native checkbox styled by semantic-ui CSS (was semantic-ui-react) */}
         <div className="ui toggle checkbox">

@@ -1,7 +1,16 @@
 ---
 // Head/body skeleton. Pages that had no Layout wrapper in Gatsby (teaching,
 // index-chatgptquote) use this directly; Layout.astro builds on it.
-const { title = 'jonaso.de', description = '', canonical = null } = Astro.props
+//
+// canonical: computed from the page path by default. Pass a path or URL to
+// point at another page (e.g. an alias), or `false` to omit it (404).
+const { title = 'jonaso.de', description = '', canonical } = Astro.props
+
+const canonicalHref = canonical === false
+  ? null
+  : new URL(canonical ?? Astro.url.pathname, Astro.site).href
+      // format: 'directory' -> every page lives at a trailing-slash URL
+      .replace(/([^/])$/, '$1/')
 ---
 
 <html lang="en">
@@ -10,8 +19,10 @@ const { title = 'jonaso.de', description = '', canonical = null } = Astro.props
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>👤</text></svg>" />
-    {canonical && <link id="canonical" rel="canonical" href={canonical} />}
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    {canonicalHref && <link rel="canonical" href={canonicalHref} />}
     <slot name="head" />
   </head>
   <body>

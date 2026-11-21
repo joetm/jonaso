@@ -3,28 +3,27 @@ import Layout from '../layouts/Layout.astro'
 import Home from '../views/index.jsx'
 ---
 
-<Layout title="Jonas Oppenlaender" canonical="https://www.jonaso.de">
+<Layout title="Jonas Oppenlaender">
   <Fragment slot="head">
-    <link rel="preload" href="/img/research-areas-bubbles-creative-genAI.jpg" as="image" type="image/jpg" />
+    <link rel="preload" href="/img/research-areas-bubbles-creative-genAI.jpg" as="image" type="image/jpeg" />
   </Fragment>
   <Home />
 </Layout>
 
 <script>
-  // pronunciation audio for the icon in views/index.jsx (vanilla, no island)
-  const icon = document.getElementById('pronounce')
-  if (icon) {
+  // pronunciation audio for the button in views/index.jsx (vanilla, no island):
+  // shows the "volume up" icon while playing
+  const btn = document.getElementById('pronounce')
+  if (btn) {
+    const [listen, playing] = btn.querySelectorAll('svg')
     const audio = new Audio('/audio/speech_20230621150721178.mp3')
-    audio.addEventListener('play', () => {
-      icon.className = 'volume up icon'
-      icon.style.color = '#666666'
-      icon.style.cursor = ''
-    })
-    audio.addEventListener('ended', () => {
-      icon.className = 'fitted assistive listening systems icon'
-      icon.style.color = ''
-      icon.style.cursor = 'pointer'
-    })
-    icon.addEventListener('click', () => audio.play())
+    const setPlaying = (on: boolean) => {
+      listen.toggleAttribute('hidden', on)
+      playing.toggleAttribute('hidden', !on)
+      btn.style.color = on ? 'var(--muted, #666666)' : ''
+    }
+    audio.addEventListener('play', () => setPlaying(true))
+    audio.addEventListener('ended', () => setPlaying(false))
+    btn.addEventListener('click', () => audio.play())
   }
 </script>

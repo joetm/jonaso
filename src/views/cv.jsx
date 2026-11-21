@@ -1,8 +1,8 @@
 import 'semantic-ui-css/components/grid.min.css'
-import 'semantic-ui-css/components/icon.min.css'
 import 'semantic-ui-css/components/item.min.css'
 
 import React from "react"
+import Icon from "../components/Icon.jsx"
 import cv from "../cv.json"
 import pcsreviews from "../../static/peer-reviews.json"
 
@@ -103,7 +103,7 @@ export default function CV() {
       <div className="ui container print cv">
       <div style={{float:'right', marginTop:'0.5em'}}>
         <a title="Download cv as pdf" href="/cv/oppenlaender-cv.pdf" target="_blank">
-          <i aria-hidden="true" className="file pdf outline large icon"></i>
+          <Icon name="file pdf outline" className="large" />
         </a>
       </div>
       <h1 className="print-only">Jonas Oppenlaender</h1>

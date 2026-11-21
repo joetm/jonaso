@@ -1,9 +1,79 @@
 ---
+// World maps rendered to static SVG at build time: no JS on this page.
+// (Was react-svg-worldmap as a client:only island, ~230 KB of JS.)
+// Same country shapes (react-svg-worldmap's data) and the same Mercator
+// projection as before. Each country outline is emitted once in <defs> and
+// both maps reference it with <use>, so the geometry isn't duplicated.
+import { geoMercator, geoPath } from 'd3-geo'
+import geoModule from 'react-svg-worldmap/dist/countries.geo.js'
 import Layout from '../layouts/Layout.astro'
-import Countries from '../views/countries.jsx'
+
+import countries from '../countries.json'
+import countriesVisit from '../countries-visit.json'
+import countriesNoGo from '../countries-nogo.json'
+
+const geo = geoModule.default ?? geoModule
+
+// react-svg-worldmap's layout: default Mercator in a 960-wide frame, shifted
+// down 240 units; the map is 960 x 720 (heightRatio 3/4)
+const projection = geoMercator().translate([480, 250 + 240])
+const path = geoPath(projection)
+// 1 decimal is far below a pixel at any size this map is shown at
+const round = d => d.replace(/-?\d+\.\d+/g, n => String(Math.round(n * 10) / 10))
+
+const shapes = geo.features.map(f => ({
+  iso: f.I.toLowerCase(),
+  name: f.N,
+  d: round(path({ type: 'Feature', geometry: { type: 'MultiPolygon', coordinates: f.C } }) || ''),
+})).filter(s => s.d)
+
+const visited = new Set(countries.map(c => c.iso))
+const nogo = new Set(countriesNoGo.map(c => c.iso))
+const toVisit = new Set(countriesVisit.map(c => c.iso))
+
+// visited wins over no-go (as before)
+const firstMap = s =>
+  visited.has(s.iso) ? { cls: 'visited', tip: `${s.name} (visited)` }
+  : nogo.has(s.iso) ? { cls: 'nogo', tip: `${s.name} (no-go)` }
+  : { cls: '', tip: s.name }
+const secondMap = s => ({ cls: toVisit.has(s.iso) ? 'tovisit' : '', tip: s.name })
 ---
 
-<Layout title="jonaso.de">
-  {/* client:only — react-svg-worldmap's CJS build breaks under SSR */}
-  <Countries client:only="react" />
+<Layout title="Countries // jonaso.de">
+  <div class="ui container" style="text-align: center">
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        {shapes.map(s => <path id={`c-${s.iso}`} d={s.d} />)}
+      </defs>
+    </svg>
+
+    <h2>Countries visited ({countries.length}) and no-go ({countriesNoGo.length})</h2>
+    <svg class="worldmap" viewBox="0 0 960 720" role="img" aria-label={`World map: ${countries.length} countries visited (green) and ${countriesNoGo.length} no-go countries (red)`}>
+      {shapes.map(s => { const m = firstMap(s); return <use href={`#c-${s.iso}`} class={m.cls || undefined}><title>{m.tip}</title></use> })}
+    </svg>
+
+    <h2>Countries to visit</h2>
+    <svg class="worldmap" viewBox="0 0 960 720" role="img" aria-label={`World map: ${countriesVisit.length} countries to visit (blue)`}>
+      {shapes.map(s => { const m = secondMap(s); return <use href={`#c-${s.iso}`} class={m.cls || undefined}><title>{m.tip}</title></use> })}
+    </svg>
+  </div>
 </Layout>
+
+<style>
+  .worldmap {
+    display: block;
+    width: 100%;
+    max-width: 48rem;
+    height: auto;
+    margin: 0 auto 2rem;
+  }
+  .worldmap use {
+    fill: transparent;
+    stroke: var(--map-stroke, rgba(0, 0, 0, 0.2));
+    stroke-width: 1;
+  }
+  .worldmap use.visited { fill: rgba(0, 128, 0, 0.8); }
+  .worldmap use.nogo { fill: rgba(255, 0, 0, 0.8); }
+  .worldmap use.tovisit { fill: rgba(0, 0, 255, 0.8); }
+  .worldmap use:hover { stroke: var(--map-stroke-hover, rgba(0, 0, 0, 0.7)); }
+</style>

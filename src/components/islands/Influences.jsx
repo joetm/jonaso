@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import AuthorList from "../influencer"
+import Icon from "../Icon.jsx"
 
 // Research-influences island. The aggregated author list arrives as props
 // (build-time, see views/research/influences-data.js); the legend filter
@@ -30,7 +31,7 @@ export default function Influences({ influencer, researchAreas }) {
         {
           selectedLegend &&
             <button className="mini ui grey basic button" style={{float:'right'}} onClick={resetFilter}>
-              <i className="window close icon"></i>
+              <Icon name="window close" />
               Reset Filter
             </button>
         }

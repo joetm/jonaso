@@ -1,29 +1,50 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import PubBarChart from '../components/islands/PubBarChart.jsx'
+import BarChart from '../components/charts/BarChart.astro'
+import { countTicks } from '../components/charts/ticks.js'
 import Publications from '../views/publications.jsx'
 import { graphdata } from '../views/publications-data'
+
+// publications per year, prerendered (was a recharts island)
+const years = graphdata.refsByYear
+const plural = n => `${n} publication${n === 1 ? '' : 's'}`
+const bars = years.map((y, i) => ({
+  pos: i + 0.5,
+  value: y.num,
+  key: String(y.year),
+  title: `${y.year}: ${plural(y.num)}`,
+}))
+const { yMax, yTicks } = countTicks(Math.max(...years.map(y => y.num)))
+const xTicks = years.map((y, i) => ({ pos: i + 0.5, label: y.year }))
 ---
 
-<Layout title="Publications // jonaso.de" canonical="https://www.jonaso.de/publications/">
+<Layout title="Publications // jonaso.de">
   <div class="ui container">
-    <PubBarChart client:visible graphdata={graphdata} />
+    <BarChart
+      id="pub-chart"
+      label="Publications per year. Select a year to show only its publications."
+      bars={bars} xMin={0} xMax={years.length}
+      yMax={yMax} yTicks={yTicks} xTicks={xTicks}
+      valueLabels buttons
+    />
   </div>
   <Publications />
 </Layout>
 
 <style is:global>
   /* responsive icon sizing, was @artsy/fresnel: sm=large, md=huge, lg=big */
-  /* i.icon.* to beat Semantic's i.icon{font-size:1em} */
-  i.icon.pub-icon { font-size: 1.5em; line-height: 1; vertical-align: middle; }
-  @media (min-width: 768px) { i.icon.pub-icon { font-size: 4em; } }
-  @media (min-width: 990px) { i.icon.pub-icon { font-size: 2em; } }
+  svg.icon.pub-icon { font-size: 1.5em; vertical-align: middle; }
+  @media (min-width: 768px) { svg.icon.pub-icon { font-size: 4em; } }
+  @media (min-width: 990px) { svg.icon.pub-icon { font-size: 2em; } }
   .pub-award { font-weight: bold; white-space: nowrap; }
 </style>
 
 <script>
-  // toggle the three prerendered list views (was React state + fetches)
+  // Three prerendered list views (year/type/citations) and the year filter.
+  // Clicking a bar shows only that year; clicking it again shows all years.
   const SECTIONS = ['year', 'type', 'cits']
+  const chart = document.getElementById('pub-chart')
+  let selectedYear: string | null = null
 
   function show(which: string) {
     for (const k of SECTIONS) {
@@ -34,18 +55,29 @@ import { graphdata } from '../views/publications-data'
     }
   }
 
+  function filterYear(year: string | null) {
+    selectedYear = year
+    document.querySelectorAll<HTMLElement>('#publications-year [data-year]').forEach((el) => {
+      el.style.display = !year || el.dataset.year === year ? '' : 'none'
+    })
+    chart?.querySelectorAll<HTMLElement>('button.bc-col').forEach((b) => {
+      b.setAttribute('aria-pressed', String(b.dataset.key === year))
+    })
+    chart?.classList.toggle('has-selection', !!year)
+  }
+
   for (const k of SECTIONS) {
     document.getElementById('btn-' + k)?.addEventListener('click', () => {
       show(k)
-      if (k === 'year') (window as any).__pubsFilterYear?.(false)
+      filterYear(null)
     })
   }
 
-  // called by the chart island when a bar is clicked
-  ;(window as any).__pubsFilterYear = (y: number | false) => {
+  chart?.addEventListener('click', (e) => {
+    const bar = (e.target as HTMLElement).closest<HTMLElement>('button.bc-col')
+    if (!bar) return
+    const year = bar.dataset.key ?? null
     show('year')
-    document.querySelectorAll<HTMLElement>('#publications-year [data-year]').forEach((el) => {
-      el.style.display = !y || el.dataset.year === String(y) ? '' : 'none'
-    })
-  }
+    filterYear(selectedYear === year ? null : year)
+  })
 </script>

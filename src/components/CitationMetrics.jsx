@@ -103,38 +103,38 @@ export default function CitationMetrics({ citation_graph_data }) {
           <HIndexGraph citation_graph_data={citation_graph_data} />
         </div>
         <div style={{'flex':1,'width':'50%'}}>
-          <div style={{marginTop: '1rem'}} class="ui list">
-            <div class="item">
+          <div style={{marginTop: '1rem'}} className="ui list">
+            <div className="item">
               h-index: {hindex}
             </div>
-            <div class="item">
+            <div className="item">
               i10-index: {i10index}
             </div>
-            <div class="item">
+            <div className="item">
               m-index: {mIndex}
             </div>
-            <div class="item">
+            <div className="item">
               g-index: {gIndex}
             </div>
-            <div class="item">
+            <div className="item">
               e-index: {eIndex}
             </div>
-            <div class="item">
+            <div className="item">
               o-index: {oIndex}
             </div>
-            <div class="item">
+            <div className="item">
               RA-index: {RAindex}
             </div>
-            <div class="item">
+            <div className="item">
               W-index: {WIndex}
             </div>
-            <div class="item">
+            <div className="item">
               Self-Citation Test: {selfCitationTest}
             </div>
-            <div class="item">
+            <div className="item">
               Fi-Score: {selfCitationTest * 100}
             </div>
-            <div class="item">
+            <div className="item">
               Euclid Score: {euclidScore}
             </div>
           </div>

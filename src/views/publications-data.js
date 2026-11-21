@@ -2,12 +2,23 @@
 // client-side in the old Gatsby page).
 import { references as refsRaw, referencesType as refDetailRaw, referencesDetail as bibEntries } from "../data/build-data"
 import citationsRaw from "../../scripts/stat_aggregator/publications-citations.json"
+import selectedKeys from "../data/selected-publications.json"
+import { iconSvg } from "../components/Icon.jsx"
 
 // bibtex2html renders a bib `note` as its own line ("\nHonorable mention.\n").
-// Prefix award notes with a trophy icon (Semantic UI icon.min.css, already loaded).
+// Prefix award notes with a trophy icon (inline SVG, see components/Icon.jsx).
 const AWARD_RE = /\n((?:Honou?rable mention|Best [^\n]*?(?:paper|award))[^\n]*?)\.?(?=\n)/gi
+const TROPHY = iconSvg('trophy', 'yellow')
 function markAwards(html) {
-  return html.replace(AWARD_RE, '\n<span class="pub-award"><i aria-hidden="true" class="yellow trophy icon"></i>$1</span>.')
+  return html.replace(AWARD_RE, `\n<span class="pub-award">${TROPHY}$1</span>.`)
+}
+
+// Shared display tweaks for a formatted entry: bold own name, en dash.
+export function emphasize(html) {
+  return html
+    .replace('Jonas Oppenlaender', '<strong>Jonas Oppenlaender</strong>')
+    .replace('Jonas Oppenländer', '<strong>Jonas Oppenländer</strong>')
+    .replace('--', '–')
 }
 
 /**
@@ -117,3 +128,11 @@ export const graphdata = (() => {
   }
   return {refsByYear, tickArray}
 })()
+
+// Homepage "Selected publications": bib keys in src/data/selected-publications.json,
+// shown in that order. A key that no longer matches fails the build.
+export const selectedPublications = selectedKeys.map(key => {
+  const raw = refsRaw.find(r => r.includes(`publications_bib.html#${key}"`))
+  if (!raw) throw new Error(`selected-publications.json: no publication with bib key "${key}"`)
+  return {key, __html: emphasize(markAwards(raw.replace('publications_bib.html', '/static/publications_bib.html')))}
+})

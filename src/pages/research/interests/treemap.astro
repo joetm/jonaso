@@ -7,7 +7,7 @@ import keywordsRaw from '../../../../reading_list/keywords.json'
 const keywords = keywordsRaw.filter((kw) => kw.num > 19)
 ---
 
-<Layout title="Research Interests // jonaso.de" canonical="https://www.jonaso.de/interests/treemap/">
+<Layout title="Research Interests // jonaso.de">
   <div class="ui container">
     <TreeComponent client:load keywords={keywords} />
   </div>

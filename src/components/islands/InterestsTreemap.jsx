@@ -3,6 +3,7 @@ import 'semantic-ui-css/components/button.min.css'
 import React from "react"
 import { navigate } from '../../navigate'
 import { ResponsiveContainer, Treemap } from 'recharts'
+import Icon from '../Icon.jsx'
 
 // Treemap island. Level-1 keywords come prefiltered at build time via the
 // `keywords` prop; level 2 is still fetched on demand when a tile is clicked.
@@ -99,7 +100,7 @@ export default class TreeComponent extends React.Component {
             isZoomed &&
               <div style={{float: 'right', marginRight: '1em'}}>
                 <span style={{marginRight: '1em'}}>{breadcrumb}</span>
-                <i aria-hidden="true" onClick={this.zoomOut} className="left circular arrow icon"></i>
+                <button type="button" className="icon-button" title="Back" aria-label="Back" onClick={this.zoomOut}><Icon name="arrow left" className="circular" /></button>
               </div>
           }
 

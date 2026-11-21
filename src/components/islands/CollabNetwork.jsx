@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react"
 import ForceGraph2D from 'react-force-graph-2d'
+import { useRootScale } from './useRootScale'
 
 // client:only island — react-force-graph touches window at import time,
 // which is why the Gatsby build needed @loadable; here it simply never
@@ -8,6 +9,7 @@ import ForceGraph2D from 'react-force-graph-2d'
 export default function CollabNetwork({ nodes, edges }) {
   const [mincollabs, setMincollabs] = useState(1)
   const gContainer = useRef(null)
+  const k = useRootScale()
 
   function changeFilter(e) {
     setMincollabs(e.target.value)
@@ -38,7 +40,7 @@ export default function CollabNetwork({ nodes, edges }) {
             <ForceGraph2D
               graphData={graph}
               width={gContainer?.current?.offsetWidth}
-              height={600}
+              height={Math.round(600 * k)}
               backgroundColor="#FAFAFA"
               nodeAutoColorBy="group"
               linkWidth="val"

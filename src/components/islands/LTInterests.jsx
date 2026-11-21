@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { Line, LineChart, CartesianGrid, Legend, ResponsiveContainer, XAxis, YAxis } from 'recharts'
 import { useGrowIn } from './useGrowIn'
+import { useRootScale } from './useRootScale'
 
 // Long-term interests timeline island. Receives its data at build time
 // (was a client-side fetch of topkeyword-timeline.json); the legend/line
@@ -45,6 +46,7 @@ export default function LTInterests({ graphdata }) {
     'g': 2,
   }
   const [ highlighted, setHighlighted ] = useState(null)
+  const k = useRootScale()
 
   // tell the keyword bar chart (a separate island) which interest is
   // highlighted, so it can darken the matching bar
@@ -76,7 +78,7 @@ export default function LTInterests({ graphdata }) {
 
   return (
     <div style={{padding: '1rem 0 2rem 0'}}>
-      <ResponsiveContainer width="100%" height={HEIGHT}>
+      <ResponsiveContainer width="100%" height={HEIGHT * k}>
         <LineChart
           ref={grow.chartRef}
           data={grow.data}

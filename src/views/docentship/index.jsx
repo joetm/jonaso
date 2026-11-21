@@ -23,36 +23,36 @@ export default function Docentship() {
             <div className="ui container" id="docentship">
 
                   <div className="centered margin">
-                    <div class="ui progress" data-percent={progressPercent}>
-                      <div class="bar" style={{width: `${progressPercent}%`}}>
-                        <div class="progress">{progressPercent}%</div>
+                    <div className="ui progress" data-percent={progressPercent}>
+                      <div className="bar" style={{width: `${progressPercent}%`}}>
+                        <div className="progress">{progressPercent}%</div>
                       </div>
                     </div>
                   </div>
 
-                  <div class="ui centered grid margin" style={{margin: '2rem auto 2rem auto'}}>
-                    <div class="ui statistics middle">
-                      <div class="statistic">
-                        <div class="value">
+                  <div className="ui centered grid margin" style={{margin: '2rem auto 2rem auto'}}>
+                    <div className="ui statistics middle">
+                      <div className="statistic">
+                        <div className="value">
                           {references.length}
                         </div>
-                        <div class="label">
+                        <div className="label">
                           Candidate<br />Papers
                         </div>
                       </div>
-                      <div class="statistic">
-                        <div class="value">
+                      <div className="statistic">
+                        <div className="value">
                           {published.length}
                         </div>
-                        <div class="label">
+                        <div className="label">
                           Published
                         </div>
                       </div>
-                      <div class="statistic">
-                        <div class="value">
+                      <div className="statistic">
+                        <div className="value">
                           {firstAuthored.length}
                         </div>
-                        <div class="label">
+                        <div className="label">
                           First-authored
                         </div>
                       </div>

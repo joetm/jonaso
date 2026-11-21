@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from "react"
+import Icon from "../Icon.jsx"
+import { useRootScale } from "./useRootScale"
 import { Bar, BarChart, CartesianGrid, Cell, LabelList, ResponsiveContainer, XAxis, YAxis } from 'recharts'
 // import md5 from "md5"
 
 import 'semantic-ui-css/components/button.min.css'
-import 'semantic-ui-css/components/icon.min.css'
 
 // Keyword drill-down island. Level 1 comes prefiltered at build time via
 // the `initial` prop (was fetched on mount); deeper levels are still
@@ -34,6 +35,8 @@ export default function Keywords({ initial = [] }) {
   const [hovered, setHovered] = useState(null)
   const mouse = useRef(null)
   const chartBox = useRef(null)
+  // px sizes below follow the root font scale (see useRootScale)
+  const k = useRootScale()
 
   // After a zoom, new bars appear under a mouse that hasn't moved, so no
   // mouseenter fires: once they have animated in, check what's under the
@@ -97,21 +100,22 @@ export default function Keywords({ initial = [] }) {
     return null
   }
 
-  const displayheight = displaydata['data'].length * BARHEIGHT
+  const displayheight = displaydata['data'].length * BARHEIGHT * k
+  const labelsWidth = Math.round(LABELS_WIDTH * k)
 
   return (
     <div className="ui container">
       {/* back button in normal flow (a floated, zero-height row gets overlapped
           by the recharts wrapper, which then swallows the clicks) */}
       <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', minHeight: '2em', marginBottom: '.5em', fontSize: 'initial', visibility: isZoomed ? 'visible' : 'hidden'}}>
-          <div style={{paddingLeft: LABELS_WIDTH + CHART_MARGIN}}>
+          <div style={{paddingLeft: labelsWidth + CHART_MARGIN}}>
               {
                 activeLevel > 2 &&
                   <span>{data[activeLevel-1]['label']} &gt; </span>
               }
               <span>{displaydata['label']}</span>
           </div>
-          <i aria-hidden="true" title="Back" onClick={zoomOut} style={{cursor: 'pointer'}} className="left circular arrow icon clickable"></i>
+          <button type="button" className="icon-button" title="Back" aria-label="Back" onClick={zoomOut}><Icon name="arrow left" className="circular" /></button>
       </div>
       <div ref={chartBox} onMouseMove={e => { mouse.current = {x: e.clientX, y: e.clientY} }}>
         <ResponsiveContainer width="100%" height={displayheight}>
@@ -121,7 +125,7 @@ export default function Keywords({ initial = [] }) {
                 >
                   <CartesianGrid strokeDasharray="3 3" />
                   <XAxis type="number" dataKey="num" />
-                  <YAxis type="category" dataKey="name" width={LABELS_WIDTH} style={{fontSize: '.9rem'}} />
+                  <YAxis type="category" dataKey="name" width={labelsWidth} style={{fontSize: '.9rem'}} />
                   <Bar
                     dataKey="num"
                     fill={color}

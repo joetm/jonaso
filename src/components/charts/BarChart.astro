@@ -1,0 +1,141 @@
+---
+// Build-time bar chart: plain HTML/CSS, no JS, no chart library.
+// Replaces the recharts islands for the publications-per-year and
+// reading-activity charts. Positions are percentages, so it is fully
+// responsive; heights scale with the root font size.
+//
+// Props
+//   bars:    [{ pos, value, key, title }]  pos = bar centre in x units
+//   xMin, xMax: x domain (bars are laid out on it, e.g. [0, n] for n categories)
+//   barWidth: bar width in x units (0.8 = recharts' default 10% band gap)
+//   colWidth: width of the hover/click column in x units (default 1)
+//   yMax, yTicks: y domain top and gridline values
+//   xTicks:  [{ pos, label }]
+//   valueLabels: print each bar's value above it
+//   buttons: render each column as a <button data-key> (wire up with a script)
+//   color, height, id, label (accessible name of the chart)
+const {
+  bars, xMin, xMax, barWidth = 0.8, colWidth = 1, yMax, yTicks = [], xTicks = [],
+  valueLabels = false, buttons = false, color = '#8CE6A9', height = '10.7rem',
+  id, label,
+} = Astro.props
+
+const span = xMax - xMin
+const pct = v => `${+(v * 100).toFixed(3)}%`
+const xPct = x => pct((x - xMin) / span)
+const yPct = v => pct(Math.min(v, yMax) / yMax)
+const Col = buttons ? 'button' : 'div'
+---
+
+<figure class="barchart" id={id} style={`--bc-color: ${color}; --bc-height: ${height}`} aria-label={label} role={buttons ? 'group' : 'img'}>
+  <div class="bc-plot">
+    {yTicks.map(t => (
+      <div class="bc-grid" style={`bottom: ${yPct(t)}`} aria-hidden="true"><span class="bc-ytick">{t}</span></div>
+    ))}
+    {bars.map(b => (
+      <Col
+        class="bc-col"
+        style={`left: ${xPct(b.pos - colWidth / 2)}; width: ${pct(colWidth / span)}`}
+        title={b.title}
+        {...(buttons ? { type: 'button', 'data-key': b.key, 'aria-pressed': 'false', 'aria-label': b.title } : {})}
+      >
+        <span class="bc-bar" style={`height: ${yPct(b.value)}; width: ${pct(barWidth / colWidth)}`}>
+          {valueLabels && <span class="bc-val">{b.value}</span>}
+        </span>
+      </Col>
+    ))}
+  </div>
+  <div class="bc-xaxis" aria-hidden="true">
+    {xTicks.map(t => (
+      // labels at the very edges are aligned inwards so they don't overflow
+      <span class={'bc-xtick' + ((t.pos - xMin) / span > 0.94 ? ' bc-xtick-end' : '')} style={`left: ${xPct(t.pos)}`}>{t.label}</span>
+    ))}
+  </div>
+</figure>
+
+<style is:global>
+  .barchart {
+    --bc-axis: var(--chart-axis, #666);
+    --bc-grid: var(--chart-grid, #e4e4e4);
+    margin: 1.5em 0 1em;
+    padding-left: 2.2em; /* y tick labels */
+    font-size: 0.9em;
+    color: var(--bc-axis);
+  }
+  .bc-plot {
+    position: relative;
+    height: var(--bc-height);
+    border-left: 1px solid var(--bc-axis);
+    border-bottom: 1px solid var(--bc-axis);
+  }
+  .bc-grid {
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-top: 1px dashed var(--bc-grid);
+  }
+  .bc-ytick {
+    position: absolute;
+    right: 100%;
+    margin-right: 0.5em;
+    transform: translateY(-50%);
+    line-height: 1;
+  }
+  .bc-col {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    /* reset <button> */
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    font: inherit;
+    color: inherit;
+  }
+  button.bc-col { cursor: pointer; border-radius: 3px; }
+  button.bc-col:hover { background: var(--chart-hover, rgba(0, 0, 0, 0.04)); }
+  button.bc-col:focus-visible { outline: 2px solid var(--link, #4183c4); outline-offset: -2px; }
+  .bc-bar {
+    position: relative;
+    display: block;
+    background: var(--bc-color);
+    transform-origin: bottom;
+    animation: bc-grow 1s cubic-bezier(0.33, 1, 0.68, 1) both;
+    transition: opacity 0.15s ease;
+  }
+  .bc-val {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 0.15em;
+    line-height: 1;
+    animation: bc-fade 0.3s 0.9s both;
+  }
+  .barchart.has-selection button.bc-col:not([aria-pressed='true']) .bc-bar { opacity: 0.4; }
+  .bc-xaxis {
+    position: relative;
+    height: 1.6em;
+  }
+  .bc-xtick {
+    position: absolute;
+    top: 0.35em;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    line-height: 1;
+  }
+  .bc-xtick-end { transform: translateX(-100%); }
+  /* narrow screens: every other x label */
+  @media (max-width: 600px) {
+    .bc-xtick:nth-child(even) { visibility: hidden; }
+  }
+  @keyframes bc-grow { from { transform: scaleY(0); } }
+  @keyframes bc-fade { from { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) {
+    .bc-bar, .bc-val { animation: none; }
+  }
+</style>

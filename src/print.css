@@ -1,73 +1,84 @@
-.print {display: none;}
-
+/* CV layout tweaks (views/cv.jsx: <div class="ui container print cv">) */
 .cv .row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin-bottom: 1.5em;
 }
-.cv .leftCol {
-    flex: 1;
-    vertical-align: 'top';
-}
-.cv .mainCol {
-    flex: 3;
-    vertical-align: 'top';
-}
-.cv .rightCol {
-    flex: 1;
-    vertical-align: 'top';
-    text-align: 'right';
-}
-.cv .rowspan2 {
-  flex: '1 1 100%';
-}
-.cv .nonbold {
-    font-weight: 'normal';
-    font-size: '1em';
-}
-.cv .item {
 
-}
-
-
+/* Print styles, checked against the Astro markup:
+   - header = the nav (components/Nav.astro)
+   - #publicationButtons = the publications view switch (the year chart prints)
+   - .icon-button = icon-only controls (name pronunciation, chart back buttons)
+   - a[href$=".pdf"] > svg.icon = the "download as PDF" icons (CV, publications)
+   - dark mode is screen-only (styles/dark.css), so paper is always light */
 @media print {
 
-	/*
-	.cv .ui.items > .item {
-		margin: 0 0 0.5em 0;
+	@page {
+		margin: 1.5cm;
 	}
-	.row {
-		margin-bottom: 0;
-		margin-top:0;
-	}
-	*/
 
 	body {
 		font: 11pt "Times New Roman", Times, serif;
 		line-height: 1.3;
-	}
-
-	@page {
-		margin: 1.5cm;
+		background: #fff;
+		color: #000;
 	}
 
 	.print {
 		line-height: 1em;
 	}
 
-	.print-only {
-		display: inherit;
+	.noprint,
+	header,
+	footer,
+	#publicationButtons,
+	.spacer,
+	.icon-button,
+	a[href$=".pdf"] > svg.icon,
+	astro-dev-toolbar {
+		display: none !important;
 	}
 
-	.noprint {display: none;}
-
-	header, footer {
-		display: none;
+	.site-wrapper {
+		max-width: none;
+		padding-bottom: 0;
 	}
 
-	#publicationButtons, .spacer{
-		display: none;
+	a {
+		color: #000;
+		text-decoration: underline;
 	}
 
+	/* keep entries (publications, CV rows, news, projects) on one page */
+	.ui.grid > .row,
+	.ui.items > .item,
+	.selected-pubs > li,
+	li {
+		break-inside: avoid;
+	}
+
+	h1, h2, h3 {
+		break-after: avoid;
+	}
+
+	/* Semantic's responsive column widths ("four wide computer" ...) only
+	   apply to `screen`, so in print every CV column was full width and the
+	   CV became one long stack. Give print the desktop layout. */
+	.cv .ui.grid {
+		flex-wrap: nowrap;
+	}
+	.cv .ui.ui.grid > .column[class*="two wide computer"]:not(.row),
+	.cv .ui.ui.grid > .row > .column[class*="two wide computer"]:not(.row) { width: 12.5% !important; }
+	.cv .ui.ui.grid > .column[class*="four wide computer"]:not(.row),
+	.cv .ui.ui.grid > .row > .column[class*="four wide computer"]:not(.row) { width: 25% !important; }
+	.cv .ui.ui.grid > .column[class*="ten wide computer"]:not(.row),
+	.cv .ui.ui.grid > .row > .column[class*="ten wide computer"]:not(.row) { width: 62.5% !important; }
+	.cv .ui.ui.grid > .column[class*="twelve wide computer"]:not(.row),
+	.cv .ui.ui.grid > .row > .column[class*="twelve wide computer"]:not(.row) { width: 75% !important; }
+
+	/* charts and galleries: no hover/animation state */
+	.bc-bar, .bc-val {
+		animation: none !important;
+	}
 }
